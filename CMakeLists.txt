@@ -5,7 +5,6 @@ project(DefineUIProjectApp LANGUAGES CXX)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
 
-
 find_package(Qt6 COMPONENTS Gui Qml Quick)
 qt_add_executable(DefineUIProjectApp
     src/main.cpp
