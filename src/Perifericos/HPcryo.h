@@ -997,8 +997,8 @@ uint8 HPcryoGetTimeRestriction (cHPcryoTrtTimes *TimeRestricted, tHPcryoData *HP
 uint8 HPcryoIdle( uint8 holdVacum, tHPcryoData *HP, tPRFdata *PRF);
 cHPcryoIdleVacumStatus HPcryoIdleGetVacumStatus( tHPcryoData *HP, tPRFdata *PRF);
 
-///* COMUN A LOS ESTADOS TRT Y TST VAC */
-//uint8 HPcryoStop( uint8 holdVacum, tHPcryoData *HP, tPRFdata *PRF);
+/* COMUN A LOS ESTADOS TRT Y TST VAC */
+uint8 HPcryoStop( uint8 holdVacum, tHPcryoData *HP, tPRFdata *PRF);
 
 /* ESTADO TEST DE VACUM */
 uint8 HPcryoTestVacumStartDflt( cHPcryoTestVacumMode mode, cHPcryoTrtVacLvls vacLvl, uint8 useDfltAlarmCfg, tHPcryoData *HP, tPRFdata *PRF);

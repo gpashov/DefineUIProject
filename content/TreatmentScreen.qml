@@ -1,16 +1,21 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import DefineUIProject 1.0
+import define.enums 1.0
 
 Item {
     id: item1
     width: Constants.width
     height: Constants.height
 
+    Connections {
+        target: wdgWpr
+        onBodyZoomed: (zoomed) => { bodySilhouette.visible = !zoomed; BodyAreaZoomed.visible = zoomed }
+    }
+
     BodySilhouette {
         id: bodySilhouette
     }
-
 
     BodyAreaZoomed {
         id: bodyAreaZoomed
@@ -211,8 +216,50 @@ Item {
         colorIndicatorState: "State1"
         statusImageState: "HpNotConnected"
     }
-    InfoSwitch {
+
+    CustomSwitch {
         id: infoSwitch
+        x: 778
+        y: 352
+        onStateImageSource: "images/c282_InfoPress.png"
+        offStateImageSource: "images/c281_InfoRls.png"
+        onSwitchStateChanged: {
+            if (switchState) {
+                cbkWpr.butInfoZoneSelectedOn()
+            }
+            else {
+                cbkWpr.butInfoZoneSelectedOff()
+            }
+        }
+
+        Connections {
+            target: wdgWpr
+            onInfoSwitchVisibilityChanged: (newVisibility) => visible = newVisibility
+        }
+
+        Connections {
+            target: wdgWpr
+            onInfoSwitchEnabled: (enable) => enabled = enable
+        }
+    }
+
+    TwoStateButton {
+        id: returnButton
+        x: 189
+        y: 352
+        imageSourcePressed: "images/c156_RetrocesoPress.png"
+        imageSourceReleased: "images/c155_RetrocesoRls.png"
+        button.onPressed: cbkWpr.butPopUpReturn()
+
+        Connections {
+            target: wdgWpr
+            onReturnButtonVisibilityChanged: (newVisibility) => visible = newVisibility
+        }
+
+        Connections {
+            target: wdgWpr
+            onReturnButtonEnabled: (enable) => enabled = enable
+        }
     }
 
     ErrorPopups {
@@ -222,8 +269,6 @@ Item {
 
 
 
-/*##^##
-Designer {
-    D{i:0;formeditorZoom:0.5;height:768;width:1024}
-}
-##^##*/
+
+
+

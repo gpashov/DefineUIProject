@@ -6,7 +6,7 @@
 //#include "K70_GUI.h"
 #include "../Perifericos/HPcryo.h"
 #include "../Ticks/Ticks.h"
-//#include "../Error/gestionError.h"
+#include "../Error/gestionError.h"
 //#include "../Buzzer/Buzzer.h"
 #include "App.h"
 //#include "HAL_UART_2.h"
@@ -57,8 +57,6 @@ void AppGUIsetHPstatusFlags( cAppGUIstatusFlagshdlr RFID, cAppGUIstatusFlagshdlr
                              cAppGUIstatusFlagshdlr vacum, cAppGUIstatusFlagshdlr cooling,
                              uint8 HPindex);
 
-
-uint8 AppGUIIsPopupDisplayed( const cAppGUIwidgetIDlist widgetId );
 uint8 AppGUIisPopUpActive( void);
 uint8 AppGUIisRecommPopUpActive (void);
 uint8 AppGUIisTimePopUpActive (void);
@@ -581,15 +579,16 @@ void AppGUIhandleCtrlPanel( uint8 show, uint8 HPindex)
 
 void AppGUIhandleTrtZone( void)
 {
-    uint8 body = AppGUIdata.trtZoneHdlr.body;
-    uint8 area = AppGUIdata.trtZoneHdlr.selTrtArea;
+    cAppGUIbodys body = AppGUIdata.trtZoneHdlr.body;
+    cAppGUIfullBodyAreas area = AppGUIdata.trtZoneHdlr.selTrtArea;
 
     uint32 widID;
-    GUIstRect areaTS;
+//    GUIstRect areaTS;
     uint8 i, HPindex;
     uint16 xOn, yOn, xOff, yOff, imgOn, imgOff;
     uint32 errCode, wrnCode;
-    uint8 errMsg, wrnMsg;
+    errors_messages errMsg;
+    warning_messages wrnMsg;
 	
     uint8 isPopUp, isRFIDPopUp, isRecommPopUp, isTimePopUp, isVaccSmallPopUp;
 		
@@ -602,9 +601,9 @@ void AppGUIhandleTrtZone( void)
     isRFIDPopUp = AppGUIisRFIDPopUpActive();
 	
     /* Refrescamos visibilidad y habilitado en general */
-    GUIsetWidgetVisibility( imgFullBodyAndZoom, 1);
-    GUIsetWidgetEnable( imgFullBodyAndZoom, 1 && !isPopUp);
-			
+//    GUIsetWidgetVisibility( imgFullBodyAndZoom, 1);
+//    GUIsetWidgetEnable( imgFullBodyAndZoom, 1 && !isPopUp);
+
     /* Imagen de fondo según estemos en zoom o no */
     if( area != AppGUIfullBodyNO_AREA)
     {
@@ -612,42 +611,43 @@ void AppGUIhandleTrtZone( void)
         if( (AppGUIdata.trtZoneHdlr.selTrtDot != APP_GUI_NO_TRT_DOT_SELECTED) && !(isPopUp^(isRecommPopUp/*|isTimePopUp*/|isVaccSmallPopUp|isRFIDPopUp)))
         {
             //De esta forma ponemos visible el botón de info, pero solo se habilita si el popup activo es el de info
-            GUIsetWidgetVisibility( swPopUpRecommInfo, 1);
-            GUIsetWidgetEnable( swPopUpRecommInfo, (!isTimePopUp)&(!isVaccSmallPopUp)&(!isRFIDPopUp));
+            wdgWpr.GUIsetWidgetVisibility( swPopUpRecommInfo, 1);
+            wdgWpr.GUIsetWidgetEnable( swPopUpRecommInfo, (!isTimePopUp)&(!isVaccSmallPopUp)&(!isRFIDPopUp));
         }
         else
         {
             //En caso contrario deshabilitamos y ponemos invisible el botón de info
-            GUIsetWidgetVisibility( swPopUpRecommInfo, 0);
-            GUIsetWidgetEnable( swPopUpRecommInfo, 0);
+            wdgWpr.GUIsetWidgetVisibility( swPopUpRecommInfo, 0);
+            wdgWpr.GUIsetWidgetEnable( swPopUpRecommInfo, 0);
         }
         /* Estamos en zoom, ponemos la imagen de fondo según el area seleccionada */
-        GUIsetImgViewerImage( imgFullBodyAndZoom, APP_GUI_FULL_BODY_AREAS_DATA[body][area].IDimgZoom);
-        GUIsetImgViewerPosition( imgFullBodyAndZoom, APP_GUI_FULL_BODY_AREAS_DATA[body][area].imgZoomX,
-                                 APP_GUI_FULL_BODY_AREAS_DATA[body][area].imgZoomY);
-						
+//        GUIsetImgViewerImage( imgFullBodyAndZoom, APP_GUI_FULL_BODY_AREAS_DATA[body][area].IDimgZoom);
+        wdgWpr.bodyZoom(true);
+        wdgWpr.bodyGenderSelect(body);
+        wdgWpr.bodyAreaSelect(area);
+
         /* Ponemos el boton de return si no hay popUp ya que entonces el control lo tiene el popUp */
         if( isPopUp == 0)
         {
-            GUIsetWidgetVisibility( butPopUpReturn, 1);
-            GUIsetWidgetEnable( butPopUpReturn, 1);
+            wdgWpr.GUIsetWidgetVisibility( butPopUpReturn, 1);
+            wdgWpr.GUIsetWidgetEnable( butPopUpReturn, 1);
         }
         else if (AppGUIisRecommPopUpActive() || AppGUIisVacPopUpActive())
         {
-            GUIsetWidgetVisibility( butPopUpReturn, 0);
-            GUIsetWidgetEnable( butPopUpReturn, 0);
+            wdgWpr.GUIsetWidgetVisibility( butPopUpReturn, 0);
+            wdgWpr.GUIsetWidgetEnable( butPopUpReturn, 0);
         }
 		
-        /* Ocultamos los botones de full body area */
-        for( i = AppGUIfullBodyTorso; i < APP_GUI_NUM_FULL_BODY_AREAS; i++)
-        {
-            /* Obtenemos el ID del widget */
-            widID = APP_GUI_TRT_SCR_FULL_BODY_AREAS_WIDGETS[i];
+//        /* Ocultamos los botones de full body area */
+//        for( i = AppGUIfullBodyTorso; i < APP_GUI_NUM_FULL_BODY_AREAS; i++)
+//        {
+//            /* Obtenemos el ID del widget */
+//            widID = APP_GUI_TRT_SCR_FULL_BODY_AREAS_WIDGETS[i];
 			
-            /* Mostrar y habilitar */
-            GUIsetWidgetVisibility( widID, 0);
-            GUIsetWidgetEnable( widID, 0);
-        }
+//            /* Mostrar y habilitar */
+//            GUIsetWidgetVisibility( widID, 0);
+//            GUIsetWidgetEnable( widID, 0);
+//        }
 		
         /* Ocultamos las zonas seleccionadas en los HP según esten en el full body */
         for( i = 0; i < APP_GUI_MAXNUM_HP; i++)
@@ -656,8 +656,8 @@ void AppGUIhandleTrtZone( void)
             widID = APP_GUI_TRT_SCR_FULL_BODY_SELECTED_ZONE_WIDGETS[i];
 			
             /* Ocultamos */
-            GUIsetWidgetVisibility( widID, 0);
-            GUIsetWidgetEnable( widID, 0);
+            wdgWpr.GUIsetWidgetVisibility( widID, 0);
+//            wdgWpr.GUIsetWidgetEnable( widID, 0);
         }
 		
         /* Colocamos los puntos necesarios de seleccion de zona */
@@ -667,8 +667,8 @@ void AppGUIhandleTrtZone( void)
             widID = APP_GUI_TRT_SCR_DOT_ZONES_WIDGETS[i];
 			
             /* Mostramos y habilitamos el punto dependiendo de si es usado */
-            GUIsetWidgetVisibility( widID, APP_GUI_AREA_ZOOM_DOTS[body][area][i].isUsed);
-            GUIsetWidgetEnable( widID, APP_GUI_AREA_ZOOM_DOTS[body][area][i].isUsed && !isPopUp);
+//            wdgWpr.GUIsetWidgetVisibility( widID, APP_GUI_AREA_ZOOM_DOTS[body][area][i].isUsed);
+            wdgWpr.GUIsetWidgetEnable( widID, APP_GUI_AREA_ZOOM_DOTS[body][area][i].isUsed && !isPopUp);
 			
             /* Cambiamos las imagenes y las coordenadas si el punto es usado */
             if( APP_GUI_AREA_ZOOM_DOTS[body][area][i].isUsed)
@@ -681,68 +681,72 @@ void AppGUIhandleTrtZone( void)
                 { HPindex++;}
 				
                 /* El area de TS y la imagen es independiente de si esta vinculado a un HP o no */
-                areaTS.posx = APP_GUI_AREA_ZOOM_DOTS[body][area][i].TSrectX;
-                areaTS.posy = APP_GUI_AREA_ZOOM_DOTS[body][area][i].TSrectY;
-                areaTS.w = APP_GUI_AREA_ZOOM_DOTS[body][area][i].TSrectW;
-                areaTS.h = APP_GUI_AREA_ZOOM_DOTS[body][area][i].TSrectH;
-                GUIsetSwitchTscImg( widID, APP_GUI_AREA_ZOOM_DOTS[body][area][i].IDimgTS);
+//                areaTS.posx = APP_GUI_AREA_ZOOM_DOTS[body][area][i].TSrectX;
+//                areaTS.posy = APP_GUI_AREA_ZOOM_DOTS[body][area][i].TSrectY;
+//                areaTS.w = APP_GUI_AREA_ZOOM_DOTS[body][area][i].TSrectW;
+//                areaTS.h = APP_GUI_AREA_ZOOM_DOTS[body][area][i].TSrectH;
+//                GUIsetSwitchTscImg( widID, APP_GUI_AREA_ZOOM_DOTS[body][area][i].IDimgTS);
 				
                 /* Segun el resultado de la busqueda */
-                if( HPindex >= APP_GUI_MAXNUM_HP)
-                {
+//                if( HPindex >= APP_GUI_MAXNUM_HP)
+//                {
                     /* No lo tiene ningun HP seleccionado, colocamos las imagenes y coordenadas correspondientes */
-                    xOn = APP_GUI_AREA_ZOOM_DOTS[body][area][i].imgOnOffX;
-                    yOn = APP_GUI_AREA_ZOOM_DOTS[body][area][i].imgOnOffY;
-                    xOff = APP_GUI_AREA_ZOOM_DOTS[body][area][i].imgOnOffX;
-                    yOff = APP_GUI_AREA_ZOOM_DOTS[body][area][i].imgOnOffY;
-                    imgOn = APP_GUI_AREA_ZOOM_DOTS[body][area][i].IDimgOn;
-                    imgOff = APP_GUI_AREA_ZOOM_DOTS[body][area][i].IDimgOff;
-                }
-                else
-                {
+//                    xOn = APP_GUI_AREA_ZOOM_DOTS[body][area][i].imgOnOffX;
+//                    yOn = APP_GUI_AREA_ZOOM_DOTS[body][area][i].imgOnOffY;
+//                    xOff = APP_GUI_AREA_ZOOM_DOTS[body][area][i].imgOnOffX;
+//                    yOff = APP_GUI_AREA_ZOOM_DOTS[body][area][i].imgOnOffY;
+//                    imgOn = APP_GUI_AREA_ZOOM_DOTS[body][area][i].IDimgOn;
+//                    imgOff = APP_GUI_AREA_ZOOM_DOTS[body][area][i].IDimgOff;
+//                }
+//                else
+//                {
                     /* Si esta asociado a un HP, dependiendo de cual asignamos las imagenes */
-                    xOn = APP_GUI_AREA_ZOOM_DOTS[body][area][i].imgHPzoomOn_X;
-                    yOn = APP_GUI_AREA_ZOOM_DOTS[body][area][i].imgHPzoomOn_Y;
-                    xOff = APP_GUI_AREA_ZOOM_DOTS[body][area][i].imgHPzoomOff_X;
-                    yOff = APP_GUI_AREA_ZOOM_DOTS[body][area][i].imgHPzoomOff_Y;
-                    imgOn = APP_GUI_AREA_ZOOM_DOTS[body][area][i].IDimgHPzoomOn[HPindex];
-                    imgOff = APP_GUI_AREA_ZOOM_DOTS[body][area][i].IDimgHPzoomOff[HPindex];
-                }
+//                    xOn = APP_GUI_AREA_ZOOM_DOTS[body][area][i].imgHPzoomOn_X;
+//                    yOn = APP_GUI_AREA_ZOOM_DOTS[body][area][i].imgHPzoomOn_Y;
+//                    xOff = APP_GUI_AREA_ZOOM_DOTS[body][area][i].imgHPzoomOff_X;
+//                    yOff = APP_GUI_AREA_ZOOM_DOTS[body][area][i].imgHPzoomOff_Y;
+//                    imgOn = APP_GUI_AREA_ZOOM_DOTS[body][area][i].IDimgHPzoomOn[HPindex];
+//                    imgOff = APP_GUI_AREA_ZOOM_DOTS[body][area][i].IDimgHPzoomOff[HPindex];
+//                }
+
 				
                 /* Finalmente configuramos el widget */
-                GUIsetSwitchPosition( widID, xOn, yOn, xOff, yOff, xOn, yOn, xOff, yOff, areaTS);
-                GUIsetSwitchImg( widID, imgOn, imgOff, imgOn, imgOff);
+//                GUIsetSwitchPosition( widID, xOn, yOn, xOff, yOff, xOn, yOn, xOff, yOff, areaTS);
+//                GUIsetSwitchImg( widID, imgOn, imgOff, imgOn, imgOff);
+
+                wdgWpr.dotZoneAssignHp(i, (EAppGUI_HPsIDs)HPindex);
             }
         }
     }
     else
-    {
-        GUIsetWidgetVisibility( swPopUpRecommInfo, 0);
-        GUIsetWidgetEnable( swPopUpRecommInfo, 0);
+    { // Full body view
+        wdgWpr.GUIsetWidgetVisibility( swPopUpRecommInfo, 0);
+        wdgWpr.GUIsetWidgetEnable( swPopUpRecommInfo, 0);
 		
         /* No estamos en zoom, ponemos la imagen de fondo según el cuerpo */
-        GUIsetImgViewerImage( imgFullBodyAndZoom, APP_GUI_FULL_BODY_IMAGES[body].IDimg);
-        GUIsetImgViewerPosition( imgFullBodyAndZoom, APP_GUI_FULL_BODY_IMAGES[body].imgX,
-                                 APP_GUI_FULL_BODY_IMAGES[body].imgY);
-		
+//        GUIsetImgViewerImage( imgFullBodyAndZoom, APP_GUI_FULL_BODY_IMAGES[body].IDimg);
+//        GUIsetImgViewerPosition( imgFullBodyAndZoom, APP_GUI_FULL_BODY_IMAGES[body].imgX,
+//                                 APP_GUI_FULL_BODY_IMAGES[body].imgY);
+        wdgWpr.bodyZoom(false);
+
         /* Quitamos el boton de return si no ha sido activado el popup de RFID */
         if(!AppGUIisRFIDPopUpActive())
         {
-            GUIsetWidgetVisibility( butPopUpReturn, 0);
-            GUIsetWidgetEnable( butPopUpReturn, 0);
+            wdgWpr.GUIsetWidgetVisibility( butPopUpReturn, 0);
+            wdgWpr.GUIsetWidgetEnable( butPopUpReturn, 0);
         }
 		
         /* Ocultamos los puntos de seleccion de zona */
-        for( i = 0; i < APP_GUI_MAX_DOTS_PER_AREA; i++)
-        {
-            /* Obtenemos el ID del widget */
-            widID = APP_GUI_TRT_SCR_DOT_ZONES_WIDGETS[i];
+//        for( i = 0; i < APP_GUI_MAX_DOTS_PER_AREA; i++)
+//        {
+//            /* Obtenemos el ID del widget */
+//            widID = APP_GUI_TRT_SCR_DOT_ZONES_WIDGETS[i];
 			
-            /* Deshabilitamos el widget y lo deseleccionamos */
-            GUIsetWidgetVisibility( widID, 0);
-            GUIsetWidgetEnable( widID, 0);
-            GUIsetSwitchStatus( widID, 0);
-        }
+//            /* Deshabilitamos el widget y lo deseleccionamos */
+//            GUIsetWidgetVisibility( widID, 0);
+//            GUIsetWidgetEnable( widID, 0);
+//            GUIsetSwitchStatus( widID, 0);
+//        }
 				
         /* Mostramos y habilitamos los botones de seleccion de area */
         for( i = AppGUIfullBodyTorso; i < APP_GUI_NUM_FULL_BODY_AREAS; i++)
@@ -751,24 +755,24 @@ void AppGUIhandleTrtZone( void)
             widID = APP_GUI_TRT_SCR_FULL_BODY_AREAS_WIDGETS[i];
 			
             /* Mostrar y habilitar */
-            GUIsetWidgetVisibility( widID, 1);
-            GUIsetWidgetEnable( widID, 1 && !isPopUp);
+//            GUIsetWidgetVisibility( widID, 1);
+//            GUIsetWidgetEnable( widID, 1 && !isPopUp);
 			
             /* Asignamos imagen de press, la de release y la de TSCR */
-            GUIsetImgButton( widID, APP_GUI_FULL_BODY_AREAS_DATA[body][i].IDimgPrs, 1);
-            GUIsetImgButton( widID, APP_GUI_FULL_BODY_AREAS_DATA[body][i].IDimgRls, 0);
-            GUIsetTscImgButton( widID, APP_GUI_FULL_BODY_AREAS_DATA[body][i].IDimgTS);
+//            GUIsetImgButton( widID, APP_GUI_FULL_BODY_AREAS_DATA[body][i].IDimgPrs, 1);
+//            GUIsetImgButton( widID, APP_GUI_FULL_BODY_AREAS_DATA[body][i].IDimgRls, 0);
+//            GUIsetTscImgButton( widID, APP_GUI_FULL_BODY_AREAS_DATA[body][i].IDimgTS);
 			
             /* Asignamos las coordenadas de las imagenes y el area de TSCR */
-            areaTS.posx = APP_GUI_FULL_BODY_AREAS_DATA[body][i].imgTS_X;
-            areaTS.posy = APP_GUI_FULL_BODY_AREAS_DATA[body][i].imgTS_Y;
-            areaTS.w = APP_GUI_FULL_BODY_AREAS_DATA[body][i].TSrectW;
-            areaTS.h = APP_GUI_FULL_BODY_AREAS_DATA[body][i].TSrectH;
-            GUIsetButonPosition( widID, APP_GUI_FULL_BODY_AREAS_DATA[body][i].imgPrsX,
-                                 APP_GUI_FULL_BODY_AREAS_DATA[body][i].imgPrsY,
-                                 APP_GUI_FULL_BODY_AREAS_DATA[body][i].imgRlsX,
-                                 APP_GUI_FULL_BODY_AREAS_DATA[body][i].imgRlsY,
-                                 areaTS);
+//            areaTS.posx = APP_GUI_FULL_BODY_AREAS_DATA[body][i].imgTS_X;
+//            areaTS.posy = APP_GUI_FULL_BODY_AREAS_DATA[body][i].imgTS_Y;
+//            areaTS.w = APP_GUI_FULL_BODY_AREAS_DATA[body][i].TSrectW;
+//            areaTS.h = APP_GUI_FULL_BODY_AREAS_DATA[body][i].TSrectH;
+//            GUIsetButonPosition( widID, APP_GUI_FULL_BODY_AREAS_DATA[body][i].imgPrsX,
+//                                 APP_GUI_FULL_BODY_AREAS_DATA[body][i].imgPrsY,
+//                                 APP_GUI_FULL_BODY_AREAS_DATA[body][i].imgRlsX,
+//                                 APP_GUI_FULL_BODY_AREAS_DATA[body][i].imgRlsY,
+//                                 areaTS);
         }
 		
         /* Mostramos las zonas seleccionadas en los HP según esten en el full body */
@@ -782,21 +786,21 @@ void AppGUIhandleTrtZone( void)
                 AppGUIdata.slot[i].selTrtDot != APP_GUI_NO_TRT_DOT_SELECTED)
             {
                 /* Mostramos el widget */
-                GUIsetWidgetVisibility( widID, 1);
-                GUIsetWidgetEnable( widID, 1 && !isPopUp);
+                wdgWpr.GUIsetWidgetVisibility( widID, 1);
+//                GUIsetWidgetEnable( widID, 1 && !isPopUp);
 				
                 /* El HP tiene zona de tratamiento seleccionada, ponemos la imagen y coordenadas */
-                imgOn = APP_GUI_AREA_ZOOM_DOTS[body][AppGUIdata.slot[i].selTrtArea][AppGUIdata.slot[i].selTrtDot].IDimgHPbody[i];
+//                imgOn = APP_GUI_AREA_ZOOM_DOTS[body][AppGUIdata.slot[i].selTrtArea][AppGUIdata.slot[i].selTrtDot].IDimgHPbody[i];
                 xOn = APP_GUI_AREA_ZOOM_DOTS[body][AppGUIdata.slot[i].selTrtArea][AppGUIdata.slot[i].selTrtDot].imgHPbody_X;
                 yOn = APP_GUI_AREA_ZOOM_DOTS[body][AppGUIdata.slot[i].selTrtArea][AppGUIdata.slot[i].selTrtDot].imgHPbody_Y;
-                GUIsetImgViewerImage( widID, imgOn);
-                GUIsetImgViewerPosition( widID, xOn, yOn);
+//                GUIsetImgViewerImage( widID, imgOn);
+                wdgWpr.GUIsetImgViewerPosition( widID, xOn, yOn);
             }
             else
             {
                 /* Ocultamos el widget */
-                GUIsetWidgetVisibility( widID, 0);
-                GUIsetWidgetEnable( widID, 0);
+                wdgWpr.GUIsetWidgetVisibility( widID, 0);
+//                GUIsetWidgetEnable( widID, 0);
             }
         }
     }

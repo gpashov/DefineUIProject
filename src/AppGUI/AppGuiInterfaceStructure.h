@@ -36,11 +36,6 @@
 #define APP_GUI_TRT_SCR_CTRL_PNL_WID_WHEN_HIDE_NUM		1
 #define APP_GUI_TRT_SCR_CTRL_PNL_COLOUR_STATES_IMGS		2
 #define APP_GUI_TRT_SCR_POPUP_TST_VAC_SW_NUM			3
-#define APP_GUI_MAXNUM_HP								4		//Número máximo de manipulos
-#define APP_GUI_HP1_ID									0
-#define APP_GUI_HP2_ID									1
-#define APP_GUI_HP3_ID									2
-#define APP_GUI_HP4_ID									3
 #define APP_GUI_TRT_SCR_NUM_POPUPS						6
 #define APP_GUI_NUM_ERR_WIDGETS_WHEN_HP					5
 #define APP_GUI_NUM_ERR_WIDGETS_WHEN_UC					4
@@ -78,6 +73,17 @@
 namespace AppEnumsNs
 {
     Q_NAMESPACE
+
+    typedef enum EAppGUI_HPsIDs
+    {
+        APP_GUI_HP1_ID,
+        APP_GUI_HP2_ID,
+        APP_GUI_HP3_ID,
+        APP_GUI_HP4_ID,
+        APP_GUI_MAXNUM_HP		//Número máximo de manipulos
+    } cAppGUI_HPsIds;
+    Q_ENUM_NS(EAppGUI_HPsIDs)
+
     typedef enum EAppGUI_FATIGA_steps
     {
         CheckFilter,
@@ -350,7 +356,7 @@ namespace AppEnumsNs
         AppGUIfullBodyCuello,
         APP_GUI_NUM_FULL_BODY_AREAS,
     }cAppGUIfullBodyAreas;
-//    Q_ENUM_NS(EAppGUIfullBodyAreas)
+    Q_ENUM_NS(EAppGUIfullBodyAreas)
 
     typedef enum EAppGUIprsRls
     {
@@ -1710,29 +1716,11 @@ typedef struct
 
 typedef struct
 {
-	uint8 isUsed;
-	
-	uint16 imgOnOffX;
-	uint16 imgOnOffY;
-	uint16 IDimgOff;
-	uint16 IDimgOn;
-	uint16 IDimgTS;
-	uint16 TSrectX;
-	uint16 TSrectY;
-	uint16 TSrectW;
-	uint16 TSrectH;
-	
-	uint16 IDimgHPzoomOff[APP_GUI_MAXNUM_HP];
-	uint16 imgHPzoomOff_X;
-	uint16 imgHPzoomOff_Y;
-	
-	uint16 IDimgHPzoomOn[APP_GUI_MAXNUM_HP];
-	uint16 imgHPzoomOn_X;
-	uint16 imgHPzoomOn_Y;
-	
-	uint16 IDimgHPbody[APP_GUI_MAXNUM_HP];
+    uint8 isUsed;
+
 	uint16 imgHPbody_X;
 	uint16 imgHPbody_Y;
+
 	cAppGUItrtZones trtZone;
 }tAppGUIareaZoomDotsTableFields;
 
@@ -1768,9 +1756,9 @@ extern const uint8 APP_GUI_SLOT_DISTRIBUTION[APP_GUI_MAXNUM_HP];
 
 //extern const uint32 APP_GUI_TRT_SCR_CLEANUP_BCKGND_WIDGETS[APP_GUI_MAXNUM_HP];
 
-//extern const uint32 APP_GUI_TRT_SCR_DOT_ZONES_WIDGETS[APP_GUI_MAX_DOTS_PER_AREA];
-//extern const uint32 APP_GUI_TRT_SCR_FULL_BODY_AREAS_WIDGETS[APP_GUI_NUM_FULL_BODY_AREAS];
-//extern const uint32 APP_GUI_TRT_SCR_FULL_BODY_SELECTED_ZONE_WIDGETS[APP_GUI_MAXNUM_HP];
+extern const uint32 APP_GUI_TRT_SCR_DOT_ZONES_WIDGETS[APP_GUI_MAX_DOTS_PER_AREA];
+extern const uint32 APP_GUI_TRT_SCR_FULL_BODY_AREAS_WIDGETS[APP_GUI_NUM_FULL_BODY_AREAS];
+extern const uint32 APP_GUI_TRT_SCR_FULL_BODY_SELECTED_ZONE_WIDGETS[APP_GUI_MAXNUM_HP];
 
 //extern const uint32 APP_GUI_TRT_SCR_POPUP_COLOR_BAR_IMAGES[APP_GUI_MAXNUM_HP];
 //extern const uint32 APP_GUI_TRT_SCR_CLEANUP_IMAGES_WIDGETS[APP_GUI_MAXNUM_HP];
@@ -1834,7 +1822,7 @@ extern const uint32 APP_GUI_TRT_SCR_POPUP_WIDGET_LIST[APP_GUI_TRT_SCR_NUM_POPUPS
 
 //extern const tAppGUIfullBodyImagesTableFields APP_GUI_FULL_BODY_IMAGES[APP_GUI_NUM_BODYS];
 //extern const tAppGUIfullBodyAreasTableFields APP_GUI_FULL_BODY_AREAS_DATA[APP_GUI_NUM_BODYS][APP_GUI_NUM_FULL_BODY_AREAS];
-//extern const tAppGUIareaZoomDotsTableFields APP_GUI_AREA_ZOOM_DOTS[APP_GUI_NUM_BODYS][APP_GUI_NUM_FULL_BODY_AREAS][APP_GUI_MAX_DOTS_PER_AREA];
+extern const tAppGUIareaZoomDotsTableFields APP_GUI_AREA_ZOOM_DOTS[APP_GUI_NUM_BODYS][APP_GUI_NUM_FULL_BODY_AREAS][APP_GUI_MAX_DOTS_PER_AREA];
 
 //extern const uint8	APP_GUI_SCREEN_N_LAYERS[APP_GUI_NUM_SCREENS];
 //extern const uint32 APP_GUI_INTERFACE_WIDGETS[APP_GUI_NUM_WIDGETS][APP_GUI_WIDGETS_FEATURES];

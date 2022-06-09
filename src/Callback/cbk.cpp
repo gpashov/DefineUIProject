@@ -592,10 +592,8 @@ void CBKbutInfoZoneSelectedOnF()
 void CBKbutInfoZoneSelectedOffF()
 {
     uint8 HPindex;
-    stWidget *popUp;
 
-    popUp = GUIgetWidget( popUpRecomm);
-    if ( popUp->enable != 0)		AppGUIhandleRecommendationpopUp( 0, AppGUIdata.trtZoneHdlr.selTrtDot, AppGUIdata.trtZoneHdlr.selTrtArea);
+    if ( AppGUIIsPopupDisplayed(popUpRecomm) != 0)		AppGUIhandleRecommendationpopUp( 0, AppGUIdata.trtZoneHdlr.selTrtDot, AppGUIdata.trtZoneHdlr.selTrtArea);
 	
     for( HPindex=0;HPindex<APP_GUI_MAXNUM_HP;HPindex++)	AppGUIhandleCtrlPanel(AppGUIdata.slot[HPindex].isCtrlPnlShow, HPindex);
     AppGUIhandleTrtZone();
@@ -809,7 +807,7 @@ void CBKpopUpDisplayedF( void *widget, bool visible )
     }
 }
 
-void CBKbutPopUpReturnF( void *widget)
+void CBKbutPopUpReturnF()
 {
 //	uint8 HPindex;
 //	stWidget *popUp;

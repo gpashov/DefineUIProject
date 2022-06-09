@@ -160,7 +160,7 @@ void CallbackWrapper::popUpVisibleChanged( EAppGUIwidgetIDlist widgetId, bool vi
 
 void CallbackWrapper::butPopUpReturn()
 {
-
+    CBKbutPopUpReturnF();
 }
 
 void CallbackWrapper::butReuseRFIDlabel()

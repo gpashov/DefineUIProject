@@ -496,6 +496,77 @@ Item {
         }
     ]
 
+    Connections {
+        target: wdgWpr
+        onDotZoneEnabled: (id, enable) => {
+                              switch(id) {
+                                  case AppEnumsNs.swDotZone0: dot1.enabled = enable; break;
+                                  case AppEnumsNs.swDotZone1: dot2.enabled = enable; break;
+                                  case AppEnumsNs.swDotZone2: dot3.enabled = enable; break;
+                                  case AppEnumsNs.swDotZone3: dot4.enabled = enable; break;
+                                  case AppEnumsNs.swDotZone4: dot5.enabled = enable; break;
+                                  case AppEnumsNs.swDotZone5: dot6.enabled = enable; break;
+                                  case AppEnumsNs.swDotZone6: dot7.enabled = enable; break;
+                                  case AppEnumsNs.swDotZone7: dot8.enabled = enable; break;
+                                  case AppEnumsNs.swDotZone8: dot9.enabled = enable; break;
+                                  case AppEnumsNs.swDotZone9: dot10.enabled = enable; break;
+                                  case AppEnumsNs.swDotZone10: dot11.enabled = enable; break;
+                                  case AppEnumsNs.swDotZone11: dot12.enabled = enable; break;
+                                  case AppEnumsNs.swDotZone12: dot13.enabled = enable; break;
+                                  case AppEnumsNs.swDotZone13: dot14.enabled = enable; break;
+                                  case AppEnumsNs.swDotZone14: dot15.enabled = enable; break;
+                                  default: break;
+                              }
+                          }
+    }
+
+    Connections {
+        target: wdgWpr
+        onDotZoneHpAssigned: (dot, hpIndex) => {
+                             switch(dot) {
+                                     case 0: dot1.hpAssigned = hpIndex; break;
+                                     case 1: dot2.hpAssigned = hpIndex; break;
+                                     case 2: dot3.hpAssigned = hpIndex; break;
+                                     case 3: dot4.hpAssigned = hpIndex; break;
+                                     case 4: dot5.hpAssigned = hpIndex; break;
+                                     case 5: dot6.hpAssigned = hpIndex; break;
+                                     case 6: dot7.hpAssigned = hpIndex; break;
+                                     case 7: dot8.hpAssigned = hpIndex; break;
+                                     case 8: dot9.hpAssigned = hpIndex; break;
+                                     case 9: dot10.hpAssigned = hpIndex; break;
+                                     case 10: dot11.hpAssigned = hpIndex; break;
+                                     case 11: dot12.hpAssigned = hpIndex; break;
+                                     case 12: dot13.hpAssigned = hpIndex; break;
+                                     case 13: dot14.hpAssigned = hpIndex; break;
+                                     case 14: dot15.hpAssigned = hpIndex; break;
+                                     default: break;
+                                 }
+                             }
+    }
+
+    Connections {
+        target: wdgWpr
+        onDotZoneSelected: (dot, isSelected) => {
+                             switch(dot) {
+                                     case 0: dot1.selected = isSelected; break;
+                                     case 1: dot2.selected = isSelected; break;
+                                     case 2: dot3.selected = isSelected; break;
+                                     case 3: dot4.selected = isSelected; break;
+                                     case 4: dot5.selected = isSelected; break;
+                                     case 5: dot6.selected = isSelected; break;
+                                     case 6: dot7.selected = isSelected; break;
+                                     case 7: dot8.selected = isSelected; break;
+                                     case 8: dot9.selected = isSelected; break;
+                                     case 9: dot10.selected = isSelected; break;
+                                     case 10: dot11.selected = isSelected; break;
+                                     case 11: dot12.selected = isSelected; break;
+                                     case 12: dot13.selected = isSelected; break;
+                                     case 13: dot14.selected = isSelected; break;
+                                     case 14: dot15.selected = isSelected; break;
+                                     default: break;
+                                 }
+                             }
+    }
 }
 
 

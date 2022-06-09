@@ -1,9 +1,14 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import DefineUIProject 1.0
+import define.enums 1.0
 
 Item {
     id: name
+    property bool selected: false
+    property int hpAssigned: AppEnumsNs.APP_GUI_MAXNUM_HP // no HP assigned
+    onSelectedChanged: updateImage()
+    onHpAssignedChanged: updateImage()
 
     Image {
         id: unselectedUnassignedDotImg
@@ -94,22 +99,6 @@ Item {
     }
     states: [
         State {
-            name: "UnselectedUnassignedState"
-
-            PropertyChanges {
-                target: unselectedUnassignedDotImg
-                visible: true
-            }
-        },
-        State {
-            name: "SelectedUnassignedState"
-
-            PropertyChanges {
-                target: selectedUnassignedDotImg
-                visible: true
-            }
-        },
-        State {
             name: "UnselectedAssignedToHp1State"
 
             PropertyChanges {
@@ -138,6 +127,14 @@ Item {
 
             PropertyChanges {
                 target: unselectedAssignedToHp4Img
+                visible: true
+            }
+        },
+        State {
+            name: "UnselectedUnassignedState"
+
+            PropertyChanges {
+                target: unselectedUnassignedDotImg
                 visible: true
             }
         },
@@ -172,13 +169,44 @@ Item {
                 target: selectedAssignedToHp4Img
                 visible: true
             }
+        },
+        State {
+            name: "SelectedUnassignedState"
+
+            PropertyChanges {
+                target: selectedUnassignedDotImg
+                visible: true
+            }
         }
     ]
+
+    function updateImage() {
+        if (selected) {
+            switch(hpAssigned) {
+            case AppEnumsNs.APP_GUI_HP1_ID: state = "SelectedAssignedToHp1State"; break;
+            case AppEnumsNs.APP_GUI_HP2_ID: state = "SelectedAssignedToHp2State"; break;
+            case AppEnumsNs.APP_GUI_HP3_ID: state = "SelectedAssignedToHp3State"; break;
+            case AppEnumsNs.APP_GUI_HP4_ID: state = "SelectedAssignedToHp4State"; break;
+            case AppEnumsNs.APP_GUI_MAXNUM_HP: state = "SelectedUnassignedState"; break;
+            default: break;
+            }
+        }
+        else {
+            switch(hpAssigned) {
+            case AppEnumsNs.APP_GUI_HP1_ID: state = "UnselectedAssignedToHp1State"; break;
+            case AppEnumsNs.APP_GUI_HP2_ID: state = "UnselectedAssignedToHp2State"; break;
+            case AppEnumsNs.APP_GUI_HP3_ID: state = "UnselectedAssignedToHp3State"; break;
+            case AppEnumsNs.APP_GUI_HP4_ID: state = "UnselectedAssignedToHp4State"; break;
+            case AppEnumsNs.APP_GUI_MAXNUM_HP: state = "UnselectedUnassignedState"; break;
+            default: break;
+            }
+        }
+    }
 }
 
 
 /*##^##
 Designer {
-    D{i:0;height:41;width:41}
+    D{i:0;height:0;width:0}
 }
 ##^##*/

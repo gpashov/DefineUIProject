@@ -1,6 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import DefineUIProject 1.0
+
 Item {
     id: item1
     width: Constants.width
@@ -179,6 +180,30 @@ Item {
             }
         }
     ]
+
+    Connections {
+        target: wdgWpr
+        onTrtDotFullBodyVisibilityChanged: (hpIndex, newVisibility) => {
+                                            switch(hpIndex) {
+                                                   case AppEnumsNs.APP_GUI_HP1_ID: dotZoneHP1.visible = newVisibility; break;
+                                                   case AppEnumsNs.APP_GUI_HP2_ID: dotZoneHP2.visible = newVisibility; break;
+                                                   case AppEnumsNs.APP_GUI_HP3_ID: dotZoneHP3.visible = newVisibility; break;
+                                                   case AppEnumsNs.APP_GUI_HP4_ID: dotZoneHP4.visible = newVisibility; break;
+                                               }
+                                           }
+    }
+
+    Connections {
+        target: wdgWpr
+        onTrtDotFullBodyPositionChanged: (hpIndex, posX, posY) => {
+                                            switch(hpIndex) {
+                                                   case AppEnumsNs.APP_GUI_HP1_ID: dotZoneHP1.x = posX; dotZoneHP1.y = posY; break;
+                                                   case AppEnumsNs.APP_GUI_HP2_ID: dotZoneHP2.x = posX; dotZoneHP2.y = posY; break;
+                                                   case AppEnumsNs.APP_GUI_HP3_ID: dotZoneHP3.x = posX; dotZoneHP3.y = posY; break;
+                                                   case AppEnumsNs.APP_GUI_HP4_ID: dotZoneHP4.x = posX; dotZoneHP4.y = posY; break;
+                                               }
+                                           }
+    }
 
 }
 

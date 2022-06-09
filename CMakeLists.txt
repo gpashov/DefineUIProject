@@ -31,6 +31,8 @@ qt_add_executable(DefineUIProjectApp
     src/UART/UART.cpp
     src/Ticks/Ticks.h
     src/Ticks/Ticks.cpp
+    src/Error/gestionError.h
+    src/Error/gestionError.cpp
     src/Expansora/Expansora.h
     src/Expansora/Expansora.cpp
     src/Buzzer/Buzzer.h

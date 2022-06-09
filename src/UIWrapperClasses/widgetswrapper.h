@@ -24,13 +24,32 @@ public:
 
     void changeScreen(EAppGUIscreen screenId);
 
+    // Treatment area selection functions
+    void bodyZoom(bool zoomed);
+    void bodyGenderSelect(EAppGUIbodys gender);
+    void bodyAreaSelect(EAppGUIfullBodyAreas area);
+    void dotZoneAssignHp(uint8 dot, EAppGUI_HPsIDs hpIndex);
+    void dotZoneSelect(uint8 dot, bool isSelected);
+
     // Widgets update functions. Used by the application
     void GUIsetNumViewerNum(uint32 id, double num, uint8 dec);
     void GUIsetSwitchStatus( uint32 id, uint8 OnOff);
+    uint16 GUIsetWidgetVisibility(uint32 id,uint8 vis);
+    uint16 GUIsetWidgetEnable(uint32 id,uint8 enable);
+    void GUIsetImgViewerPosition(uint32 id,uint16 posx,uint16 posy);
 
 
 signals:
     void changeScreenSignal(EAppGUIscreen screenId);
+
+    // Widgets visibility signals
+
+    void infoSwitchVisibilityChanged(bool newVisibility);
+    void returnButtonVisibilityChanged(bool newVisibility);
+
+    // Widgets enabled signals
+    void infoSwitchEnabled(bool enable);
+    void returnButtonEnabled(bool enable);
 
     // Text widgets update signals
     void calcNumberChanged(QString text);
@@ -42,6 +61,20 @@ signals:
     // Main menu
     void mainMenuOpened(bool menuOpened);
     void mainMenuEnabled(bool menuEnabled);
+
+    // Body areas
+    void bodyZoomed(bool zoomed);
+    void bodyGenderSelected(EAppGUIbodys gender);
+    void bodyAreaSelected(EAppGUIfullBodyAreas area);
+
+    // Dot zones full body
+    void trtDotFullBodyVisibilityChanged(EAppGUI_HPsIDs hpIndex, bool newVisibility);
+    void trtDotFullBodyPositionChanged(EAppGUI_HPsIDs hpIndex, uint32 posX, uint32 posY);
+
+    // Zoomed body dots
+    void dotZoneEnabled(uint32 id, bool enable);
+    void dotZoneHpAssigned(uint8 dot, EAppGUI_HPsIDs hpIndex);
+    void dotZoneSelected(uint8 dot, bool isSelected);
 
 private:
     void float_to_string(double f, char r[], uint8 dec);

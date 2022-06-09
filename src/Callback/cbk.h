@@ -114,7 +114,7 @@ void CBKswDotZoneOnF( void *widget);
 void CBKswDotZoneOffF( void *widget);
 //void CBKbutPopUpOKF( void *widget);
 void CBKpopUpDisplayedF( void *widget, bool visible );
-void CBKbutPopUpReturnF( void *widget);
+void CBKbutPopUpReturnF();
 void CBKbutReuseRFIDlabelF ( void *widget);
 void CBKbutPopUpTimeValueF( void *widget);
 void CBKbutPopUpTstVacManualF( void *widget);
