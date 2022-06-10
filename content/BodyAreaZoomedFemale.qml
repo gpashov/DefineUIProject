@@ -1,6 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import DefineUIProject 1.0
+import define.enums 1.0
 
 Item {
     id: item1
@@ -495,6 +496,22 @@ Item {
             }
         }
     ]
+
+    Connections {
+        target: wdgWpr
+        onBodyAreaSelected: (area) => {
+                                console.log("female     body ")
+                                switch(area) {
+                                    case AppEnumsNs.AppGUIfullBodyTorso: state = "torsoState"; break;
+                                    case AppEnumsNs.AppGUIfullBodyPiernas: state = "torsoState"; break;
+                                    case AppEnumsNs.AppGUIfullBodyEspalda: state = "torsoState"; break;
+                                    case AppEnumsNs.AppGUIfullBodyPiernasMuslo: state = "torsoState"; break;
+                                    case AppEnumsNs.AppGUIfullBodyBrazos: state = "torsoState"; break;
+                                    case AppEnumsNs.AppGUIfullBodyCuello: state = "torsoState"; break;
+                                    default: break;
+                                }
+                            }
+    }
 
     Connections {
         target: wdgWpr

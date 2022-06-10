@@ -137,9 +137,19 @@ void CallbackWrapper::butShowCtrlPnl()
 
 }
 
-void CallbackWrapper::butFullBodyArea()
+void CallbackWrapper::butFullBodyArea(EAppGUIfullBodyAreas bodyArea)
 {
+    switch(bodyArea) {
+    case AppGUIfullBodyTorso: argWidget.id = butFullBodyTorso; break;
+    case AppGUIfullBodyPiernas: argWidget.id = butFullBodyPiernas; break;
+    case AppGUIfullBodyEspalda: argWidget.id = butFullBodyEspalda; break;
+    case AppGUIfullBodyPiernasMuslo: argWidget.id = butFullBodyPiernaMuslo; break;
+    case AppGUIfullBodyBrazos: argWidget.id = butFullBodyBrazos; break;
+    case AppGUIfullBodyCuello: argWidget.id = butFullBodyCuello; break;
+    default: argWidget.id = APP_GUI_NUM_WIDGETS; break;
+    }
 
+    CBKbutFullBodyAreaF(&argWidget);
 }
 
 void CallbackWrapper::swDotZoneOn()

@@ -13,6 +13,17 @@ Item {
         onBodyZoomed: (zoomed) => { bodySilhouette.visible = !zoomed; BodyAreaZoomed.visible = zoomed }
     }
 
+    Connections {
+        target: wdgWpr
+        onBodyGenderSelected: (gender) => {
+                                  switch(gender) {
+                                      case AppEnumsNs.AppGUIbodyMale: bodySilhouette.state = "maleState"; break;
+                                      case AppEnumsNs.AppGUIbodyFemale: bodySilhouette.state = "femaleState"; break;
+                                      default: break;
+                                  }
+                              }
+    }
+
     BodySilhouette {
         id: bodySilhouette
     }

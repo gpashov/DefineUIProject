@@ -735,19 +735,19 @@ void CBKbutShowCtrlPnlF( void *widget)
 
 void CBKbutFullBodyAreaF( void *widget)
 {
-//	uint8 i;
+    uint8 i;
 	
-//	/* Casteamos al tipo widget */
-//	stWidget *w = ( stWidget *)widget;
+    /* Casteamos al tipo widget */
+    stWidget *w = ( stWidget *)widget;
 	
-//	/* Guardamos el área de tratamiento seleccionada */
-//	i = AppGUIfullBodyTorso;
-//	while( i < APP_GUI_NUM_FULL_BODY_AREAS && APP_GUI_TRT_SCR_FULL_BODY_AREAS_WIDGETS[i] != w->id){ i++;}
-//	if( i >= APP_GUI_NUM_FULL_BODY_AREAS){ AppGUIdata.trtZoneHdlr.selTrtArea = AppGUIfullBodyNO_AREA;}
-//	else{ AppGUIdata.trtZoneHdlr.selTrtArea = i;}
+    /* Guardamos el área de tratamiento seleccionada */
+    i = AppGUIfullBodyTorso;
+    while( i < APP_GUI_NUM_FULL_BODY_AREAS && APP_GUI_TRT_SCR_FULL_BODY_AREAS_WIDGETS[i] != w->id){ i++;}
+    if( i >= APP_GUI_NUM_FULL_BODY_AREAS){ AppGUIdata.trtZoneHdlr.selTrtArea = AppGUIfullBodyNO_AREA;}
+    else{ AppGUIdata.trtZoneHdlr.selTrtArea = (cAppGUIfullBodyAreas)i;}
 		
-//	/* Refrescamos la zona de selección de tratamiento */
-//	AppGUIhandleTrtZone();
+    /* Refrescamos la zona de selección de tratamiento */
+    AppGUIhandleTrtZone();
 }
 
 void CBKswDotZoneOnF( void *widget)

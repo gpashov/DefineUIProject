@@ -31,7 +31,7 @@ public:
     Q_INVOKABLE void butModelImage();
     Q_INVOKABLE void butHideCtrlPnl();
     Q_INVOKABLE void butShowCtrlPnl();
-    Q_INVOKABLE void butFullBodyArea();
+    Q_INVOKABLE void butFullBodyArea(EAppGUIfullBodyAreas bodyArea);
     Q_INVOKABLE void swDotZoneOn();
     Q_INVOKABLE void swDotZoneOff();
     //Q_INVOKABLE void CBKbutPopUpOK();

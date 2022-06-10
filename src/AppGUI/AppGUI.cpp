@@ -728,6 +728,7 @@ void AppGUIhandleTrtZone( void)
 //        GUIsetImgViewerPosition( imgFullBodyAndZoom, APP_GUI_FULL_BODY_IMAGES[body].imgX,
 //                                 APP_GUI_FULL_BODY_IMAGES[body].imgY);
         wdgWpr.bodyZoom(false);
+        wdgWpr.bodyGenderSelect(body);
 
         /* Quitamos el boton de return si no ha sido activado el popup de RFID */
         if(!AppGUIisRFIDPopUpActive())

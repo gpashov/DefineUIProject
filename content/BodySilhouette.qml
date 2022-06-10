@@ -1,6 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import DefineUIProject 1.0
+import define.enums 1.0
 
 Item {
     id: item1
@@ -20,6 +21,7 @@ Item {
         x: 363
         y: 266
         indicatorImageSource: "images/c113_BotonTorsoPressMujer.png"
+        onPressed: cbkWpr.butFullBodyArea(AppEnumsNs.AppGUIfullBodyTorso)
     }
 
     CustomRadioButton {
@@ -27,6 +29,7 @@ Item {
         x: 363
         y: 378
         indicatorImageSource: "images/c115_BotonPiernasRlsMujer.png"
+        onPressed: cbkWpr.butFullBodyArea(AppEnumsNs.AppGUIfullBodyPierna)
     }
 
     CustomRadioButton {
@@ -34,6 +37,7 @@ Item {
         x: 533
         y: 256
         indicatorImageSource: "images/c118_BotonBrazosRlsMujer.png"
+        onPressed: cbkWpr.butFullBodyArea(AppEnumsNs.AppGUIfullBodyBrazos)
     }
 
     // This must be on top of the 'arms' button to work properly because they overlap
@@ -42,6 +46,7 @@ Item {
         x: 564
         y: 260
         indicatorImageSource: "images/c121_BotonEspaldaRlsMujer.png"
+        onPressed: cbkWpr.butFullBodyArea(AppEnumsNs.AppGUIfullBodyEspalda)
     }
 
     CustomRadioButton {
@@ -49,6 +54,7 @@ Item {
         x: 554
         y: 387
         indicatorImageSource: "images/c124_BotonPiernaMusloRlsMujer.png"
+        onPressed: cbkWpr.butFullBodyArea(AppEnumsNs.AppGUIfullBodyPiernasMuslo)
     }
 
     CustomRadioButton {
@@ -56,6 +62,7 @@ Item {
         x: 401
         y: 215
         indicatorImageSource: "images/c127_BotonCuelloRlsMujer.png"
+        onPressed: cbkWpr.butFullBodyArea(AppEnumsNs.AppGUIfullBodyCuello)
     }
 
     Image {
@@ -207,8 +214,4 @@ Item {
 
 }
 
-/*##^##
-Designer {
-    D{i:0;formeditorZoom:1.25;height:768;width:1024}
-}
-##^##*/
+
