@@ -1,10 +1,11 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
+import DefineUIProject 1.0
 
 Item {
     id: item1
-    width: 1920
-    height: 1080
+    width: Constants.width
+    height: Constants.height
 
     CustomRadioButton {
         id: langFrenchButton
@@ -184,6 +185,6 @@ Item {
 
 /*##^##
 Designer {
-    D{i:0;formeditorZoom:0.33}
+    D{i:0;height:1080;width:1920}
 }
 ##^##*/
