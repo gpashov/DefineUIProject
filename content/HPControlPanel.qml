@@ -5,7 +5,8 @@ Item {
     id: item1
     width: backgraoundImage.width
     height: backgraoundImage.height
-    property alias statusImageState: statusImage.state
+    property alias item1State: item1.state
+    property alias statusImageState: statusImageLeft.state
     property alias colorIndicatorState: colorIndicator.state
     state: "opened"
     property alias backgraoundImageSource: backgraoundImage.source
@@ -55,10 +56,18 @@ Item {
     }
 
     HPLeftStatusImage {
-        id: statusImage
+        id: statusImageLeft
         x: 151
         y: 194
         anchors.verticalCenterOffset: 0
+    }
+
+    HPRightStatusImage {
+        id: statusImageRight
+        x: statusImageLeft.x
+        y: statusImageLeft.y
+        state: statusImageLeft.state
+        visible: !statusImageLeft.visible
     }
 
     Image {
@@ -125,6 +134,7 @@ Item {
         x: 209
         y: 45
     }
+
 
 
 
@@ -209,6 +219,11 @@ Item {
                 x: -138
                 y: 43
                 state: "RightState"
+            }
+
+            PropertyChanges {
+                target: statusImageLeft
+                visible: false
             }
         },
         State {
@@ -364,6 +379,11 @@ Item {
                 x: -138
                 y: 222
                 state: "RightState"
+            }
+
+            PropertyChanges {
+                target: statusImageLeft
+                visible: false
             }
         }
     ]

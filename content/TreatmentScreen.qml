@@ -32,7 +32,7 @@ Item {
         id: bodyAreaZoomed
         areaState: 1
         genderState: "maleState"
-        visible: false
+        visible: !bodySilhouette.visible
     }
 
     Image {
@@ -260,7 +260,7 @@ Item {
         y: 352
         imageSourcePressed: "images/c156_RetrocesoPress.png"
         imageSourceReleased: "images/c155_RetrocesoRls.png"
-        button.onPressed: cbkWpr.butPopUpReturn()
+        button.onReleased: cbkWpr.butPopUpReturn()
 
         Connections {
             target: wdgWpr

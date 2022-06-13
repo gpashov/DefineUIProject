@@ -515,14 +515,13 @@ Item {
     Connections {
         target: wdgWpr
         onBodyAreaSelected: (area) => {
-                                console.log("male     body ")
                                 switch(area) {
                                     case AppEnumsNs.AppGUIfullBodyTorso: state = "torsoState"; break;
-                                    case AppEnumsNs.AppGUIfullBodyPiernas: state = "torsoState"; break;
-                                    case AppEnumsNs.AppGUIfullBodyEspalda: state = "torsoState"; break;
-                                    case AppEnumsNs.AppGUIfullBodyPiernasMuslo: state = "torsoState"; break;
-                                    case AppEnumsNs.AppGUIfullBodyBrazos: state = "torsoState"; break;
-                                    case AppEnumsNs.AppGUIfullBodyCuello: state = "torsoState"; break;
+                                    case AppEnumsNs.AppGUIfullBodyPiernas: state = "legsState"; break;
+                                    case AppEnumsNs.AppGUIfullBodyEspalda: state = "backState"; break;
+                                    case AppEnumsNs.AppGUIfullBodyPiernasMuslo: state = "legsThighsoState"; break;
+                                    case AppEnumsNs.AppGUIfullBodyBrazos: state = "armsState"; break;
+                                    case AppEnumsNs.AppGUIfullBodyCuello: state = "neckState"; break;
                                     default: break;
                                 }
                             }

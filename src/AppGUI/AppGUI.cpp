@@ -60,7 +60,6 @@ void AppGUIsetHPstatusFlags( cAppGUIstatusFlagshdlr RFID, cAppGUIstatusFlagshdlr
 uint8 AppGUIisPopUpActive( void);
 uint8 AppGUIisRecommPopUpActive (void);
 uint8 AppGUIisTimePopUpActive (void);
-uint8 AppGUIisRFIDPopUpActive (void);
 uint8 AppGUIisVacPopUpActive (void);
 uint8 AppGUIisVacSmallPopUpActive (void);
 uint8 AppGUIisCleanUpPopUpActive( uint8 HPindex);
@@ -327,254 +326,254 @@ void AppGUIhandleCtrlPanel( uint8 show, uint8 HPindex)
 //        if (AppGUIisHPaDoubleDummy( HP, PRF)){	GUIsetWidgetEnable( butShowControlPanelHP1 + HPindex, 0);}
     }
 	
-//    /* Si toca mostrar gestionamos según el estado de diversas variables, si toca ocultar ya esta todo
-//     * OK con lo anterior */
-//    if( show)
-//    {
-//        /* Obtenemos si el HP esta en tratamiento */
-//        isTrtRunning = AppGUIisTrtRunning( HPindex, NULL);
+    /* Si toca mostrar gestionamos según el estado de diversas variables, si toca ocultar ya esta todo
+     * OK con lo anterior */
+    if( show)
+    {
+        /* Obtenemos si el HP esta en tratamiento */
+        isTrtRunning = AppGUIisTrtRunning( HPindex, NULL);
 		
-//        /* Gestión del botón con la imagen del HP para ejecutar el vinculo a la zona de trt y
-//         * el visot de modelo de HP en texto */
-//        HPconnected = AppGUIisHPconnected( HPindex, &model);
-//        if( HPconnected)
-//        {
-//            if (AppGUIisInitRunning(HPindex)){ AppGUIconnectingHP (HPindex, &imgPrsID, &imgRlsID, &imgModelText);}
-//            else
-//            {
-//                /* Cuando hay HP conectado mostramos la imagen de éste en press y release o bien mostramos
-//                 * la imagen de modo AutoKO o bien mostramos la imagen de recolocar HP por resucciones */
-//                if( AppGUIdata.slot[HPindex].showVacumRetryRqstUsrToMoveHP)
-//                {
-//                    if(AppGUIdata.slot[HPindex].alarmVacumRetryRqstUsrToMoveHP == 0)	//Si se ha recomendado una recolocación y no se ha lanzado la alarma
-//                    {
-//                        BUZZ_Configure(1, 100, PATRO_SO_FINAL_TRT );	//V7750 - Lanzamos la alarma sonora
-//                        AppGUIdata.slot[HPindex].alarmVacumRetryRqstUsrToMoveHP = 1;	//Indicamos que la alarma ya ha sonado
-//                    }
-//                    imgPrsID = c430_HPalarmaResucciones;
-//                    imgRlsID = c430_HPalarmaResucciones;
+        /* Gestión del botón con la imagen del HP para ejecutar el vinculo a la zona de trt y
+         * el visot de modelo de HP en texto */
+        HPconnected = AppGUIisHPconnected( HPindex, &model);
+        if( HPconnected)
+        {
+            if (AppGUIisInitRunning(HPindex)){ AppGUIconnectingHP (HPindex, &imgPrsID, &imgRlsID, &imgModelText);}
+            else
+            {
+                /* Cuando hay HP conectado mostramos la imagen de éste en press y release o bien mostramos
+                 * la imagen de modo AutoKO o bien mostramos la imagen de recolocar HP por resucciones */
+                if( AppGUIdata.slot[HPindex].showVacumRetryRqstUsrToMoveHP)
+                {
+                    if(AppGUIdata.slot[HPindex].alarmVacumRetryRqstUsrToMoveHP == 0)	//Si se ha recomendado una recolocación y no se ha lanzado la alarma
+                    {
+                        BUZZ_Configure(1, 100, PATRO_SO_FINAL_TRT );	//V7750 - Lanzamos la alarma sonora
+                        AppGUIdata.slot[HPindex].alarmVacumRetryRqstUsrToMoveHP = 1;	//Indicamos que la alarma ya ha sonado
+                    }
+                    imgPrsID = c430_HPalarmaResucciones;
+                    imgRlsID = c430_HPalarmaResucciones;
 					
-//                }
-//                else if( AppGUIdata.slot[HPindex].showAutoKO)
-//                {
-//                    imgPrsID = c438_HPalarmaPlicainsuficiente;
-//                    imgRlsID = c438_HPalarmaPlicainsuficiente;
-//                }
-//                else
-//                {
-//                    imgPrsID = APP_GUI_TRT_SCR_BUT_MODEL_IMG_SIDE_FROM_SLOT_IMG[AppGUIprs][HPindex][model];
-//                    imgRlsID = APP_GUI_TRT_SCR_BUT_MODEL_IMG_SIDE_FROM_SLOT_IMG[AppGUIrls][HPindex][model];
-//                }
+                }
+                else if( AppGUIdata.slot[HPindex].showAutoKO)
+                {
+                    imgPrsID = c438_HPalarmaPlicainsuficiente;
+                    imgRlsID = c438_HPalarmaPlicainsuficiente;
+                }
+                else
+                {
+                    imgPrsID = APP_GUI_TRT_SCR_BUT_MODEL_IMG_SIDE_FROM_SLOT_IMG[AppGUIprs][HPindex][model];
+                    imgRlsID = APP_GUI_TRT_SCR_BUT_MODEL_IMG_SIDE_FROM_SLOT_IMG[AppGUIrls][HPindex][model];
+                }
 				
-//                /* Habilitamos y obtenemos la imagen del texto del modelo*/
-//                GUIsetWidgetEnable(	APP_GUI_TRT_SCR_BUT_MODEL_IMG_WIDGETS[HPindex],
-//                                    (!AppGUIisHPaDoubleDummy( HP, PRF) && (!isPopUp) &&
-//                                    (AppGUIdata.trtZoneHdlr.selTrtArea != AppGUIfullBodyNO_AREA) &&
-//                                    (AppGUIdata.trtZoneHdlr.selTrtDot != APP_GUI_NO_TRT_DOT_SELECTED) &&
-//                                    !isTrtRunning));
-//                imgModelText = APP_GUI_TRT_SCR_HP_MODEL_TEXT_IMG[HPindex][model];
-//            }
+                /* Habilitamos y obtenemos la imagen del texto del modelo*/
+                GUIsetWidgetEnable(	APP_GUI_TRT_SCR_BUT_MODEL_IMG_WIDGETS[HPindex],
+                                    (!AppGUIisHPaDoubleDummy( HP, PRF) && (!isPopUp) &&
+                                    (AppGUIdata.trtZoneHdlr.selTrtArea != AppGUIfullBodyNO_AREA) &&
+                                    (AppGUIdata.trtZoneHdlr.selTrtDot != APP_GUI_NO_TRT_DOT_SELECTED) &&
+                                    !isTrtRunning));
+                imgModelText = APP_GUI_TRT_SCR_HP_MODEL_TEXT_IMG[HPindex][model];
+            }
 			
-//            //Habilitamos el boton de auto/manual
-//            GUIsetWidgetEnable( APP_GUI_TRT_SCR_BUT_MODE_TRT_WIDGETS[HPindex], (HPcryoIsAutoModeAvaible(HP, PRF) && !isTrtRunning && (!isPopUp)));
-//        }
-//        else
-//        {
-//            /* Si no hay HP conectado mostramos la imagen del conector en press y release, deshabilitamos y
-//             * ponemos la imagen transparente para el texto del modelo */
-//            imgPrsID = APP_GUI_TRT_SCR_BUT_MODE_IMG_NO_HP_IMG[HPindex];
-//            imgRlsID = APP_GUI_TRT_SCR_BUT_MODE_IMG_NO_HP_IMG[HPindex];
-//            GUIsetWidgetEnable( APP_GUI_TRT_SCR_BUT_MODEL_IMG_WIDGETS[HPindex], 0);
-//            imgModelText = c233_ImgPixelBlanco;
-//            GUIsetWidgetEnable( APP_GUI_TRT_SCR_BUT_MODE_TRT_WIDGETS[HPindex], 0);
-//        }
+            //Habilitamos el boton de auto/manual
+            GUIsetWidgetEnable( APP_GUI_TRT_SCR_BUT_MODE_TRT_WIDGETS[HPindex], (HPcryoIsAutoModeAvaible(HP, PRF) && !isTrtRunning && (!isPopUp)));
+        }
+        else
+        {
+            /* Si no hay HP conectado mostramos la imagen del conector en press y release, deshabilitamos y
+             * ponemos la imagen transparente para el texto del modelo */
+            imgPrsID = APP_GUI_TRT_SCR_BUT_MODE_IMG_NO_HP_IMG[HPindex];
+            imgRlsID = APP_GUI_TRT_SCR_BUT_MODE_IMG_NO_HP_IMG[HPindex];
+            GUIsetWidgetEnable( APP_GUI_TRT_SCR_BUT_MODEL_IMG_WIDGETS[HPindex], 0);
+            imgModelText = c233_ImgPixelBlanco;
+            GUIsetWidgetEnable( APP_GUI_TRT_SCR_BUT_MODE_TRT_WIDGETS[HPindex], 0);
+        }
 		
-//        /* - Ponemos las imagenes del boton */
-//        GUIsetImgButton( APP_GUI_TRT_SCR_BUT_MODEL_IMG_WIDGETS[HPindex], imgPrsID, 1);
-//        GUIsetImgButton( APP_GUI_TRT_SCR_BUT_MODEL_IMG_WIDGETS[HPindex], imgRlsID, 0);
+        /* - Ponemos las imagenes del boton */
+        GUIsetImgButton( APP_GUI_TRT_SCR_BUT_MODEL_IMG_WIDGETS[HPindex], imgPrsID, 1);
+        GUIsetImgButton( APP_GUI_TRT_SCR_BUT_MODEL_IMG_WIDGETS[HPindex], imgRlsID, 0);
 		
-//        /* - Ponemos el modelo de manípulo en texto */
-//        GUIsetImgViewerImage( APP_GUI_TRT_SCR_HP_MODEL_TEXT_WIDGETS[HPindex], imgModelText);
+        /* - Ponemos el modelo de manípulo en texto */
+        GUIsetImgViewerImage( APP_GUI_TRT_SCR_HP_MODEL_TEXT_WIDGETS[HPindex], imgModelText);
 				
-//        /* Gestion grafica del switch modo AUTO/MANUAL */
-//#ifdef APP_SW_VER_AUTO_ENABLE
-//        if (AppGUIdata.slot[HPindex].TrtMode == HP_CRYO_TRT_MODE_MANUAL)
-//        {
-//            GUIsetImgButton( APP_GUI_TRT_SCR_BUT_MODE_TRT_WIDGETS[HPindex], c045_BotonAutoRls, 1);
-//            GUIsetImgButton( APP_GUI_TRT_SCR_BUT_MODE_TRT_WIDGETS[HPindex], c045_BotonAutoRls, 0);
-//        }
-//        else if (AppGUIdata.slot[HPindex].TrtMode == HP_CRYO_TRT_MODE_AUTO)
-//        {
-//            GUIsetImgButton( APP_GUI_TRT_SCR_BUT_MODE_TRT_WIDGETS[HPindex], c044_BotonAutoPress, 1);
-//            GUIsetImgButton( APP_GUI_TRT_SCR_BUT_MODE_TRT_WIDGETS[HPindex], c044_BotonAutoPress, 0);
-//        }
-//#else
-//        GUIsetWidgetEnable( APP_GUI_TRT_SCR_BUT_MODE_TRT_WIDGETS[HPindex], 0);
-//        GUIsetWidgetVisibility( APP_GUI_TRT_SCR_BUT_MODE_TRT_WIDGETS[HPindex], 0);
-//#endif
+        /* Gestion grafica del switch modo AUTO/MANUAL */
+#ifdef APP_SW_VER_AUTO_ENABLE
+        if (AppGUIdata.slot[HPindex].TrtMode == HP_CRYO_TRT_MODE_MANUAL)
+        {
+            GUIsetImgButton( APP_GUI_TRT_SCR_BUT_MODE_TRT_WIDGETS[HPindex], c045_BotonAutoRls, 1);
+            GUIsetImgButton( APP_GUI_TRT_SCR_BUT_MODE_TRT_WIDGETS[HPindex], c045_BotonAutoRls, 0);
+        }
+        else if (AppGUIdata.slot[HPindex].TrtMode == HP_CRYO_TRT_MODE_AUTO)
+        {
+            GUIsetImgButton( APP_GUI_TRT_SCR_BUT_MODE_TRT_WIDGETS[HPindex], c044_BotonAutoPress, 1);
+            GUIsetImgButton( APP_GUI_TRT_SCR_BUT_MODE_TRT_WIDGETS[HPindex], c044_BotonAutoPress, 0);
+        }
+#else
+        GUIsetWidgetEnable( APP_GUI_TRT_SCR_BUT_MODE_TRT_WIDGETS[HPindex], 0);
+        GUIsetWidgetVisibility( APP_GUI_TRT_SCR_BUT_MODE_TRT_WIDGETS[HPindex], 0);
+#endif
 		
-//        /* Gestión del visor de tiempo y el boton de selección de tiempo */
-//        //selected = ( AppGUIdata.slot[HPindex].selTime != APP_GUI_NO_TIME_SELECTED);
-//        GUIsetWidgetVisibility( APP_GUI_TRT_SCR_BUT_SEL_TIME_WIDGETS[HPindex], !HPconnected || AppGUIisInitRunning(HPindex) ||(AppGUIdata.slot[HPindex].selTrtArea == APP_GUI_NUM_FULL_BODY_AREAS) || (AppGUIdata.slot[HPindex].selTrtDot == APP_GUI_NO_TRT_DOT_SELECTED));
-//        GUIsetWidgetVisibility( APP_GUI_TRT_SCR_NUM_VWR_TIME_WIDGETS[HPindex], HPconnected && !AppGUIisInitRunning(HPindex) && (AppGUIdata.slot[HPindex].selTrtArea != APP_GUI_NUM_FULL_BODY_AREAS) && (AppGUIdata.slot[HPindex].selTrtDot != APP_GUI_NO_TRT_DOT_SELECTED));
-//        GUIsetWidgetEnable( APP_GUI_TRT_SCR_NUM_VWR_TIME_WIDGETS[HPindex], HPconnected  && !isPopUp && !AppGUIisHPaDoubleDummy( HP, PRF));
+        /* Gestión del visor de tiempo y el boton de selección de tiempo */
+        //selected = ( AppGUIdata.slot[HPindex].selTime != APP_GUI_NO_TIME_SELECTED);
+        GUIsetWidgetVisibility( APP_GUI_TRT_SCR_BUT_SEL_TIME_WIDGETS[HPindex], !HPconnected || AppGUIisInitRunning(HPindex) ||(AppGUIdata.slot[HPindex].selTrtArea == APP_GUI_NUM_FULL_BODY_AREAS) || (AppGUIdata.slot[HPindex].selTrtDot == APP_GUI_NO_TRT_DOT_SELECTED));
+        GUIsetWidgetVisibility( APP_GUI_TRT_SCR_NUM_VWR_TIME_WIDGETS[HPindex], HPconnected && !AppGUIisInitRunning(HPindex) && (AppGUIdata.slot[HPindex].selTrtArea != APP_GUI_NUM_FULL_BODY_AREAS) && (AppGUIdata.slot[HPindex].selTrtDot != APP_GUI_NO_TRT_DOT_SELECTED));
+        GUIsetWidgetEnable( APP_GUI_TRT_SCR_NUM_VWR_TIME_WIDGETS[HPindex], HPconnected  && !isPopUp && !AppGUIisHPaDoubleDummy( HP, PRF));
 		
-//        if (( !AppGUIisInitRunning(HPindex) && HPconnected && !isTrtRunning && (AppGUIdata.slot[HPindex].selTrtArea != APP_GUI_NUM_FULL_BODY_AREAS) && (AppGUIdata.slot[HPindex].selTrtDot != APP_GUI_NO_TRT_DOT_SELECTED)))
-//        {
-//            AppGUIapplyTimeRestriction( HPindex, HP, PRF);
-//            AppGUIdata.slot[HPindex].trtTime = AppGUIsecondsToClock( HP_CRYO_TIME_LIST[AppGUIdata.slot[HPindex].selTime]);
-//        }
+        if (( !AppGUIisInitRunning(HPindex) && HPconnected && !isTrtRunning && (AppGUIdata.slot[HPindex].selTrtArea != APP_GUI_NUM_FULL_BODY_AREAS) && (AppGUIdata.slot[HPindex].selTrtDot != APP_GUI_NO_TRT_DOT_SELECTED)))
+        {
+            AppGUIapplyTimeRestriction( HPindex, HP, PRF);
+            AppGUIdata.slot[HPindex].trtTime = AppGUIsecondsToClock( HP_CRYO_TIME_LIST[AppGUIdata.slot[HPindex].selTime]);
+        }
 		
-//        if (isTrtRunning)
-//        {
-//            GUIsetWidthNumVwr(APP_GUI_TRT_SCR_NUM_VWR_TIME_WIDGETS[HPindex],108);					//Al iniciarse el tratamiento, ya no se podrá seleccionar el tiempo, así que se quita la flecha y se centran los digitos
-//            GUIsetImgNumVwr(APP_GUI_TRT_SCR_NUM_VWR_TIME_WIDGETS[HPindex],c047_FondoNumVwrBlanco);
+        if (isTrtRunning)
+        {
+            GUIsetWidthNumVwr(APP_GUI_TRT_SCR_NUM_VWR_TIME_WIDGETS[HPindex],108);					//Al iniciarse el tratamiento, ya no se podrá seleccionar el tiempo, así que se quita la flecha y se centran los digitos
+            GUIsetImgNumVwr(APP_GUI_TRT_SCR_NUM_VWR_TIME_WIDGETS[HPindex],c047_FondoNumVwrBlanco);
 			
-//            /*Al iniciar el tratamiento mostramos el visor de la cuenta de las resucciones*/
-//            GUIsetWidgetVisibility(APP_GUI_TRT_SCR_NUM_VWE_RESUCCTIONS_NUM_WIDGETS[HPindex], HPcryoGetTRTplusThree(HP, PRF));
-//            if(AppGUIdata.slot[HPindex].trtTime != 0){	GUIsetNumViewerNum(APP_GUI_TRT_SCR_NUM_VWE_RESUCCTIONS_NUM_WIDGETS[HPindex], AppGUIsecondsToClock(HPcryoGetTRTplusThreeTime(HP, PRF)/1000), 0);	}	//V7776
-//        }
-//        else
-//        {	GUIsetWidgetVisibility(APP_GUI_TRT_SCR_NUM_VWE_RESUCCTIONS_NUM_WIDGETS[HPindex], 0);	}
+            /*Al iniciar el tratamiento mostramos el visor de la cuenta de las resucciones*/
+            GUIsetWidgetVisibility(APP_GUI_TRT_SCR_NUM_VWE_RESUCCTIONS_NUM_WIDGETS[HPindex], HPcryoGetTRTplusThree(HP, PRF));
+            if(AppGUIdata.slot[HPindex].trtTime != 0){	GUIsetNumViewerNum(APP_GUI_TRT_SCR_NUM_VWE_RESUCCTIONS_NUM_WIDGETS[HPindex], AppGUIsecondsToClock(HPcryoGetTRTplusThreeTime(HP, PRF)/1000), 0);	}	//V7776
+        }
+        else
+        {	GUIsetWidgetVisibility(APP_GUI_TRT_SCR_NUM_VWE_RESUCCTIONS_NUM_WIDGETS[HPindex], 0);	}
 		
-//        if(AppGUIdata.slot[HPindex].VwrTemperatureOrTime == 0)
-//        {
-//            //GUIsetWidthNumVwr(APP_GUI_TRT_SCR_NUM_VWR_TIME_WIDGETS[HPindex],118);
-//            GUIsetNumViewerNum(APP_GUI_TRT_SCR_NUM_VWR_TIME_WIDGETS[HPindex], AppGUIdata.slot[HPindex].trtTime, 2);
-//        }
-//        else
-//        {
-//            //GUIsetWidthNumVwr(APP_GUI_TRT_SCR_NUM_VWR_TIME_WIDGETS[HPindex],108);
-//            GUIsetNumViewerNum(APP_GUI_TRT_SCR_NUM_VWR_TIME_WIDGETS[HPindex], AppGUIdata.slot[HPindex].TempHP, 1);
-//        }
+        if(AppGUIdata.slot[HPindex].VwrTemperatureOrTime == 0)
+        {
+            //GUIsetWidthNumVwr(APP_GUI_TRT_SCR_NUM_VWR_TIME_WIDGETS[HPindex],118);
+            GUIsetNumViewerNum(APP_GUI_TRT_SCR_NUM_VWR_TIME_WIDGETS[HPindex], AppGUIdata.slot[HPindex].trtTime, 2);
+        }
+        else
+        {
+            //GUIsetWidthNumVwr(APP_GUI_TRT_SCR_NUM_VWR_TIME_WIDGETS[HPindex],108);
+            GUIsetNumViewerNum(APP_GUI_TRT_SCR_NUM_VWR_TIME_WIDGETS[HPindex], AppGUIdata.slot[HPindex].TempHP, 1);
+        }
 		
-//        /* Gestión de los flags indicadores */
-//        for( i = 0; i < APP_GUI_MAX_BLINK_INDICATORS; i++)
-//        {
-//            GUIsetWidgetVisibility( APP_GUI_TRT_SCR_BLINK_INDICATORS_WIDGETS[HPindex][i],
-//                                    AppGUIdata.slot[HPindex].statusFlagsOnOff[i]);
-//        }
+        /* Gestión de los flags indicadores */
+        for( i = 0; i < APP_GUI_MAX_BLINK_INDICATORS; i++)
+        {
+            GUIsetWidgetVisibility( APP_GUI_TRT_SCR_BLINK_INDICATORS_WIDGETS[HPindex][i],
+                                    AppGUIdata.slot[HPindex].statusFlagsOnOff[i]);
+        }
 		
 		
-//        /* - Gestión del boton de test de vacum , el boton de play y el de time - */
-//        butPlayStatus = App_GUI_Play_but_Off;
-//        if (HPindex == 1 || HPindex == 3)	butVaccStatus = App_GUI_Vac_but_Off_Right;
-//        else	butVaccStatus = App_GUI_Vac_but_Off_Left;
-//        butTimeStatus = App_GUI_Time_but_Off;
+        /* - Gestión del boton de test de vacum , el boton de play y el de time - */
+        butPlayStatus = App_GUI_Play_but_Off;
+        if (HPindex == 1 || HPindex == 3)	butVaccStatus = App_GUI_Vac_but_Off_Right;
+        else	butVaccStatus = App_GUI_Vac_but_Off_Left;
+        butTimeStatus = App_GUI_Time_but_Off;
 		
-//        // Si ya hay asignado al manipulo una zona de tratamiento
-//        if( AppGUIdata.slot[HPindex].selTrtArea != APP_GUI_NUM_FULL_BODY_AREAS &&
-//            AppGUIdata.slot[HPindex].selTrtDot != APP_GUI_NO_TRT_DOT_SELECTED)
-//        {
-//            butTimeStatus = App_GUI_Time_but_On;
-//            if (HPindex == 1 || HPindex == 3)	butVaccStatus = App_GUI_Vac_but_On_Right;
-//            else	butVaccStatus = App_GUI_Vac_but_On_Left;
-//        }
-//        // Si ya tiene el tiempo seleccionado
-//        if ( AppGUIdata.slot[HPindex].selTime != APP_GUI_NO_TIME_SELECTED)
-//        {
-//            butPlayStatus = App_GUI_Play_but_On;
-//        }
+        // Si ya hay asignado al manipulo una zona de tratamiento
+        if( AppGUIdata.slot[HPindex].selTrtArea != APP_GUI_NUM_FULL_BODY_AREAS &&
+            AppGUIdata.slot[HPindex].selTrtDot != APP_GUI_NO_TRT_DOT_SELECTED)
+        {
+            butTimeStatus = App_GUI_Time_but_On;
+            if (HPindex == 1 || HPindex == 3)	butVaccStatus = App_GUI_Vac_but_On_Right;
+            else	butVaccStatus = App_GUI_Vac_but_On_Left;
+        }
+        // Si ya tiene el tiempo seleccionado
+        if ( AppGUIdata.slot[HPindex].selTime != APP_GUI_NO_TIME_SELECTED)
+        {
+            butPlayStatus = App_GUI_Play_but_On;
+        }
 		
-//        if ((AppGUIdata.slot[HPindex].TrtMode == HP_CRYO_TRT_MODE_AUTO) && (AppGUIdata.slot[HPindex].TstVacuumModeScss != HP_CRYO_TEST_VACUUM_AUTO_DONE_SUCCESS))
-//        {
-//            butPlayStatus = App_GUI_Play_but_Off;
-//        }
-//        // Si se está inicializando el HP
-//        // o si no está conectado el HP
-//        // o si no hay ningún area seleccionada
-//        // o si no hay ningún punto seleccionado
-//        if ( AppGUIisInitRunning(HPindex) || !AppGUIisHPconnected( HPindex, &model) ||
-//            AppGUIdata.slot[HPindex].selTrtArea == APP_GUI_NUM_FULL_BODY_AREAS || AppGUIdata.slot[HPindex].selTrtDot == APP_GUI_NO_TRT_DOT_SELECTED)
-//        {
-//            butPlayStatus = App_GUI_Play_but_Off;
-//            if (HPindex == 1 || HPindex == 3)	butVaccStatus = App_GUI_Vac_but_Off_Right;
-//            else	butVaccStatus = App_GUI_Vac_but_Off_Left;
-//            butTimeStatus = App_GUI_Time_but_Off;
-//        }
-//        // Si hay un tratamiento en curso
-//        if ( isTrtRunning)
-//        {
-//            /*if (!isRFIDPopUp && !isVaccSmallPopUp)*/	butPlayStatus = App_GUI_Play_but_TRT_running;
-//            if (HPindex == 1 || HPindex == 3)	butVaccStatus = App_GUI_Vac_but_Off_Right;
-//            else	butVaccStatus = App_GUI_Vac_but_Off_Left;
-//            butTimeStatus = App_GUI_Time_but_Off;
-//        }
-//        // Si en tratamiento se puede reintentar el vacuum
-//        if (( isTrtRunning) && ( HPcryoTrtVacumRetryAvailable( HP, PRF))/* && !isRFIDPopUp && !isVaccSmallPopUp*/)
-//        {
-//            butPlayStatus = App_GUI_Play_but_TRT_cancel;
-//        }
-//        // Si en tratamiento se puede reajustar el vacuum
-//        if (( isTrtRunning) && (HPcryoTrtAdjustVacumAvailable( HP, PRF))/* && !isVaccSmallPopUp && !isRFIDPopUp*/)
-//        {
-//            if (HPindex == 1 || HPindex == 3)	butVaccStatus = App_GUI_Vac_but_VacAjust_Right;
-//            else	butVaccStatus = App_GUI_Vac_but_VacAjust_Left;
-//        }
-//        //Si no tiene permitida la selección de tiempo
-//        if (HPcryoGetFromSlot( APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
-//        {
-//            if (!AppGUIopenTimePopupPermission(HPindex, HP, PRF)){	butTimeStatus = App_GUI_Time_but_Off;	}
-//        }
-//        // Si hay algún PopUp activado
-//        if ( isPopUp)
-//        {
-//            butPlayStatus = App_GUI_Play_but_disabled;
-//            butVaccStatus = App_GUI_Vac_but_disabled;
-//            butTimeStatus = App_GUI_Time_but_disabled;
-//        }
-//        // Si el popup de vacuum está activo
-//        // y es del propio HP
-//        if (AppGUIdata.tstVacHdlr.HPindex == HPindex)
-//        {
-//            if (AppGUIisVacSmallPopUpActive())
-//            {
-//                if (HPindex == 1 || HPindex == 3)	butVaccStatus = App_GUI_Vac_but_VacAjust_Right;
-//                else	butVaccStatus = App_GUI_Vac_but_VacAjust_Left;
-//            }
-//            else if (AppGUIisVacPopUpActive())
-//            {
-//                if (HPindex == 1 || HPindex == 3)	butVaccStatus = App_GUI_Vac_but_On_Right;
-//                else	butVaccStatus = App_GUI_Vac_but_On_Left;
-//            }
-//        }
-//        // Si el popup de tiempo está activo
-//        // y es del propio HP
-//        if ((AppGUIisTimePopUpActive()) && AppGUIdata.timeHdlr.HPindex == HPindex)
-//        {
-//            butTimeStatus = App_GUI_Time_but_On;
-//        }
-//        // Si hay manipulo conectado y es un Double Dummy
-//        if (HPcryoGetFromSlot( APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
-//        {
-//            if (AppGUIisHPaDoubleDummy( HP, PRF))
-//            {
-//                butPlayStatus = App_GUI_Play_but_Off;
-//                if (HPindex == 1 || HPindex == 3)	butVaccStatus = App_GUI_Vac_but_Off_Right;
-//                else	butVaccStatus = App_GUI_Vac_but_Off_Left;
-//                butTimeStatus = App_GUI_Time_but_Off;
-//            }
-//        }
+        if ((AppGUIdata.slot[HPindex].TrtMode == HP_CRYO_TRT_MODE_AUTO) && (AppGUIdata.slot[HPindex].TstVacuumModeScss != HP_CRYO_TEST_VACUUM_AUTO_DONE_SUCCESS))
+        {
+            butPlayStatus = App_GUI_Play_but_Off;
+        }
+        // Si se está inicializando el HP
+        // o si no está conectado el HP
+        // o si no hay ningún area seleccionada
+        // o si no hay ningún punto seleccionado
+        if ( AppGUIisInitRunning(HPindex) || !AppGUIisHPconnected( HPindex, &model) ||
+            AppGUIdata.slot[HPindex].selTrtArea == APP_GUI_NUM_FULL_BODY_AREAS || AppGUIdata.slot[HPindex].selTrtDot == APP_GUI_NO_TRT_DOT_SELECTED)
+        {
+            butPlayStatus = App_GUI_Play_but_Off;
+            if (HPindex == 1 || HPindex == 3)	butVaccStatus = App_GUI_Vac_but_Off_Right;
+            else	butVaccStatus = App_GUI_Vac_but_Off_Left;
+            butTimeStatus = App_GUI_Time_but_Off;
+        }
+        // Si hay un tratamiento en curso
+        if ( isTrtRunning)
+        {
+            /*if (!isRFIDPopUp && !isVaccSmallPopUp)*/	butPlayStatus = App_GUI_Play_but_TRT_running;
+            if (HPindex == 1 || HPindex == 3)	butVaccStatus = App_GUI_Vac_but_Off_Right;
+            else	butVaccStatus = App_GUI_Vac_but_Off_Left;
+            butTimeStatus = App_GUI_Time_but_Off;
+        }
+        // Si en tratamiento se puede reintentar el vacuum
+        if (( isTrtRunning) && ( HPcryoTrtVacumRetryAvailable( HP, PRF))/* && !isRFIDPopUp && !isVaccSmallPopUp*/)
+        {
+            butPlayStatus = App_GUI_Play_but_TRT_cancel;
+        }
+        // Si en tratamiento se puede reajustar el vacuum
+        if (( isTrtRunning) && (HPcryoTrtAdjustVacumAvailable( HP, PRF))/* && !isVaccSmallPopUp && !isRFIDPopUp*/)
+        {
+            if (HPindex == 1 || HPindex == 3)	butVaccStatus = App_GUI_Vac_but_VacAjust_Right;
+            else	butVaccStatus = App_GUI_Vac_but_VacAjust_Left;
+        }
+        //Si no tiene permitida la selección de tiempo
+        if (HPcryoGetFromSlot( (cPRFslot)APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
+        {
+            if (!AppGUIopenTimePopupPermission(HPindex, HP, PRF)){	butTimeStatus = App_GUI_Time_but_Off;	}
+        }
+        // Si hay algún PopUp activado
+        if ( isPopUp)
+        {
+            butPlayStatus = App_GUI_Play_but_disabled;
+            butVaccStatus = App_GUI_Vac_but_disabled;
+            butTimeStatus = App_GUI_Time_but_disabled;
+        }
+        // Si el popup de vacuum está activo
+        // y es del propio HP
+        if (AppGUIdata.tstVacHdlr.HPindex == HPindex)
+        {
+            if (AppGUIisVacSmallPopUpActive())
+            {
+                if (HPindex == 1 || HPindex == 3)	butVaccStatus = App_GUI_Vac_but_VacAjust_Right;
+                else	butVaccStatus = App_GUI_Vac_but_VacAjust_Left;
+            }
+            else if (AppGUIisVacPopUpActive())
+            {
+                if (HPindex == 1 || HPindex == 3)	butVaccStatus = App_GUI_Vac_but_On_Right;
+                else	butVaccStatus = App_GUI_Vac_but_On_Left;
+            }
+        }
+        // Si el popup de tiempo está activo
+        // y es del propio HP
+        if ((AppGUIisTimePopUpActive()) && AppGUIdata.timeHdlr.HPindex == HPindex)
+        {
+            butTimeStatus = App_GUI_Time_but_On;
+        }
+        // Si hay manipulo conectado y es un Double Dummy
+        if (HPcryoGetFromSlot( (cPRFslot)APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
+        {
+            if (AppGUIisHPaDoubleDummy( HP, PRF))
+            {
+                butPlayStatus = App_GUI_Play_but_Off;
+                if (HPindex == 1 || HPindex == 3)	butVaccStatus = App_GUI_Vac_but_Off_Right;
+                else	butVaccStatus = App_GUI_Vac_but_Off_Left;
+                butTimeStatus = App_GUI_Time_but_Off;
+            }
+        }
 		
-//        /* - Ponemos la imagen de los botones correspondientes */
-//        AppGUIbuttonManagement (App_GUI_but_Play, butPlayStatus, HPindex);
-//        AppGUIbuttonManagement (App_GUI_but_Vacc, butVaccStatus, HPindex);
-//        AppGUIbuttonManagement (App_GUI_but_Time, butTimeStatus, HPindex);
-//#ifdef APP_SW_VER_SHOW_TEMPERATURES
-//        GUIsetWidgetEnable ( APP_GUI_TRT_SCR_BUT_CHNG_TIME_TO_TEMP_WIDGETS[HPindex], ((isTrtRunning)&(EXP_UCtempViewer ())));
-//#else
-//        GUIsetWidgetEnable ( APP_GUI_TRT_SCR_BUT_CHNG_TIME_TO_TEMP_WIDGETS[HPindex], 0);
-//#endif
+        /* - Ponemos la imagen de los botones correspondientes */
+        AppGUIbuttonManagement (App_GUI_but_Play, butPlayStatus, HPindex);
+        AppGUIbuttonManagement (App_GUI_but_Vacc, butVaccStatus, HPindex);
+        AppGUIbuttonManagement (App_GUI_but_Time, butTimeStatus, HPindex);
+#ifdef APP_SW_VER_SHOW_TEMPERATURES
+        GUIsetWidgetEnable ( APP_GUI_TRT_SCR_BUT_CHNG_TIME_TO_TEMP_WIDGETS[HPindex], ((isTrtRunning)&(EXP_UCtempViewer ())));
+#else
+        GUIsetWidgetEnable ( APP_GUI_TRT_SCR_BUT_CHNG_TIME_TO_TEMP_WIDGETS[HPindex], 0);
+#endif
 
-//        //AppGUIpanelCtrlColourBlink();
+        //AppGUIpanelCtrlColourBlink();
 
-//        /* Gestión de los botones de recogida del panel si tenemos el main menu activado, puesto
-//         * que los tapa debemos deshabilitar los 2 inferiores si el menu esta desplegado */
-//        if( HPindex == 0 || HPindex == 1)
-//        { GUIsetWidgetEnable( butHideControlPanelHP1 + HPindex, !isPopUp); } //GUARRADA PDTE
-//        else
-//        { GUIsetWidgetEnable( butHideControlPanelHP1 + HPindex, !AppGUIdata.mainMenuHdlr.isUp && !isPopUp);}
-//    }
+        /* Gestión de los botones de recogida del panel si tenemos el main menu activado, puesto
+         * que los tapa debemos deshabilitar los 2 inferiores si el menu esta desplegado */
+        if( HPindex == 0 || HPindex == 1)
+        { GUIsetWidgetEnable( butHideControlPanelHP1 + HPindex, !isPopUp); } //GUARRADA PDTE
+        else
+        { GUIsetWidgetEnable( butHideControlPanelHP1 + HPindex, !AppGUIdata.mainMenuHdlr.isUp && !isPopUp);}
+    }
 }
 
 void AppGUIhandleTrtZone( void)
@@ -749,13 +748,13 @@ void AppGUIhandleTrtZone( void)
 //            GUIsetSwitchStatus( widID, 0);
 //        }
 				
-        /* Mostramos y habilitamos los botones de seleccion de area */
-        for( i = AppGUIfullBodyTorso; i < APP_GUI_NUM_FULL_BODY_AREAS; i++)
-        {
-            /* Obtenemos el ID del widget */
-            widID = APP_GUI_TRT_SCR_FULL_BODY_AREAS_WIDGETS[i];
+//        /* Mostramos y habilitamos los botones de seleccion de area */
+//        for( i = AppGUIfullBodyTorso; i < APP_GUI_NUM_FULL_BODY_AREAS; i++)
+//        {
+//            /* Obtenemos el ID del widget */
+//            widID = APP_GUI_TRT_SCR_FULL_BODY_AREAS_WIDGETS[i];
 			
-            /* Mostrar y habilitar */
+//            /* Mostrar y habilitar */
 //            GUIsetWidgetVisibility( widID, 1);
 //            GUIsetWidgetEnable( widID, 1 && !isPopUp);
 			
@@ -774,7 +773,7 @@ void AppGUIhandleTrtZone( void)
 //                                 APP_GUI_FULL_BODY_AREAS_DATA[body][i].imgRlsX,
 //                                 APP_GUI_FULL_BODY_AREAS_DATA[body][i].imgRlsY,
 //                                 areaTS);
-        }
+//        }
 		
         /* Mostramos las zonas seleccionadas en los HP según esten en el full body */
         for( i = 0; i < APP_GUI_MAXNUM_HP; i++)
@@ -2932,13 +2931,13 @@ uint8 AppGUIopenTimePopupPermission( uint8 HPindex, tHPcryoData *HP, tPRFdata *P
 
 uint8 AppGUIisHPaDoubleDummy( tHPcryoData *HP, tPRFdata *PRF)		//Se comprueba si hay un manipulo double conectado, devolviendo cual es el primario y el secundario
 {																	//Y devuelve si el manipulo que se ha pasado es el secundario o no
-//	uint8 DoubleMainSlot;
-//	uint8 DoubleOffSlot;
+    uint8 DoubleMainSlot;
+    uint8 DoubleOffSlot;
 	
-//	if( HPcryoDoubleGetSlots( &DoubleMainSlot, &DoubleOffSlot, HP, PRF))
-//	{
-//		if( DoubleOffSlot == PRF->IDperifHW)	return 1;
-//	}
+    if( HPcryoDoubleGetSlots( &DoubleMainSlot, &DoubleOffSlot, HP, PRF))
+    {
+        if( DoubleOffSlot == PRF->IDperifHW)	return 1;
+    }
     return 0;
 }
 

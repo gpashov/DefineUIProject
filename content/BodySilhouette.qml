@@ -29,7 +29,7 @@ Item {
         x: 363
         y: 378
         indicatorImageSource: "images/c115_BotonPiernasRlsMujer.png"
-        onPressed: cbkWpr.butFullBodyArea(AppEnumsNs.AppGUIfullBodyPierna)
+        onPressed: cbkWpr.butFullBodyArea(AppEnumsNs.AppGUIfullBodyPiernas)
     }
 
     CustomRadioButton {

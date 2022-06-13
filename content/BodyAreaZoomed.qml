@@ -29,13 +29,11 @@ Item {
 
     BodyAreaZoomedMale {
         id: bodyAreaMale
-        visible: false
         state: states[areaState].name
     }
 
     BodyAreaZoomedFemale {
         id: bodyAreaFemale
-        visible: false
         state: states[areaState].name
     }
     states: [
@@ -60,8 +58,4 @@ Item {
 
 }
 
-/*##^##
-Designer {
-    D{i:0;height:768;width:1024}
-}
-##^##*/
+

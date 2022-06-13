@@ -809,63 +809,63 @@ void CBKpopUpDisplayedF( void *widget, bool visible )
 
 void CBKbutPopUpReturnF()
 {
-//	uint8 HPindex;
-//	stWidget *popUp;
-//	uint8 isPopUp = 0;
-//	tHPcryoData *HP;
-//	tPRFdata *PRF;
+    uint8 HPindex;
+    stWidget *popUp;
+    uint8 isPopUp = 0;
+    tHPcryoData *HP;
+    tPRFdata *PRF;
 	
-//	/* El comportamiento depende de que popUp esta activo o si ninguno lo esta entender que es el zoom de la
-//	 * zona de tratamiento */
-//	/* -- PopUp's tiempo, test vacum y RFID se desactivan */
-//	popUp = GUIgetWidget( popUpRFID);
+    /* El comportamiento depende de que popUp esta activo o si ninguno lo esta entender que es el zoom de la
+     * zona de tratamiento */
+    /* -- PopUp's tiempo, test vacum y RFID se desactivan */
+//    popUp = GUIgetWidget( popUpRFID);
+    if( AppGUIisRFIDPopUpActive() )
+    {
+        /* Paramos el tratamiento en curso */
+        if( HPcryoGetFromSlot( (cPRFslot)APP_GUI_SLOT_DISTRIBUTION[AppGUIdata.RFIDhdlr.HPindex], &HP, &PRF))
+        { HPcryoStop( 1, HP, PRF);}
+		
+        /* Quitamos el popUp */
+        AppGUIhandleRFIDpopUp( 0, AppGUIdata.RFIDhdlr.HPindex); isPopUp = 1;
+        RFID_free();
+    }
+//	popUp = GUIgetWidget( popUpTime);
+//	if( popUp->enable){ AppGUIhandleTimePopUp( 0, AppGUIdata.timeHdlr.HPindex); isPopUp = 1;}
+//	popUp = GUIgetWidget( popUpTstVac);
 //	if( popUp->enable)
 //	{
-//		/* Paramos el tratamiento en curso */
-//		if( HPcryoGetFromSlot( APP_GUI_SLOT_DISTRIBUTION[AppGUIdata.RFIDhdlr.HPindex], &HP, &PRF))
-//		{ HPcryoStop( 1, HP, PRF);}
-		
-//		/* Quitamos el popUp */
-//		AppGUIhandleRFIDpopUp( 0, AppGUIdata.RFIDhdlr.HPindex); isPopUp = 1;
-//		RFID_free();
-//	}
-////	popUp = GUIgetWidget( popUpTime);
-////	if( popUp->enable){ AppGUIhandleTimePopUp( 0, AppGUIdata.timeHdlr.HPindex); isPopUp = 1;}
-////	popUp = GUIgetWidget( popUpTstVac);
-////	if( popUp->enable)
-////	{
-////		/* Si hay test de vacum en marcha lo paramos, si es tratamiento lo mantenemos */
-////		if( HPcryoGetFromSlot( APP_GUI_SLOT_DISTRIBUTION[AppGUIdata.tstVacHdlr.HPindex], &HP, &PRF))
-////		{
-////			if( HPcryoGetStatus( HP, PRF) == HP_CRYO_TEST_VACUM){ HPcryoStop( 1, HP, PRF);}
-////		}
-////
-////		/* Quitamos el PopUp */
-////		AppGUIhandleTstVacPopUp( 0, AppGUIdata.tstVacHdlr.HPindex); isPopUp = 1;
-////	}
-	
-//	/* Si no era ningun popUp entonces es la gestión de zonas de tratamiento para quitar el zoom */
-//	if( !isPopUp)
-//	{
-//		/* Indicamos que no hay nada seleccionado en la gestión de areas */
-//		AppGUIdata.trtZoneHdlr.selTrtDot = APP_GUI_NO_TRT_DOT_SELECTED;
-//		AppGUIdata.trtZoneHdlr.selTrtArea = AppGUIfullBodyNO_AREA;
-		
-//		/* Refrescamos la zona de selección de tratamiento */
-//		AppGUIhandleTrtZone();
-//	}
-	
-//	for( HPindex=0;HPindex<APP_GUI_MAXNUM_HP;HPindex++)
-//	{
-//		if (HPcryoGetFromSlot( APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
+//		/* Si hay test de vacum en marcha lo paramos, si es tratamiento lo mantenemos */
+//		if( HPcryoGetFromSlot( APP_GUI_SLOT_DISTRIBUTION[AppGUIdata.tstVacHdlr.HPindex], &HP, &PRF))
 //		{
-//			if ( (!AppGUIisInitRunning(HPindex)) && (AppGUIdata.slot[HPindex].selTrtArea != APP_GUI_NUM_FULL_BODY_AREAS) && (AppGUIdata.slot[HPindex].selTrtDot != APP_GUI_NO_TRT_DOT_SELECTED))
-//			{AppGUIapplyTimeRestriction(HPindex, HP, PRF);}
+//			if( HPcryoGetStatus( HP, PRF) == HP_CRYO_TEST_VACUM){ HPcryoStop( 1, HP, PRF);}
 //		}
-//		AppGUIhandleCtrlPanel(AppGUIdata.slot[HPindex].isCtrlPnlShow, HPindex);
+//
+//		/* Quitamos el PopUp */
+//		AppGUIhandleTstVacPopUp( 0, AppGUIdata.tstVacHdlr.HPindex); isPopUp = 1;
 //	}
-//	//Se revisan las zonas de tratamiento ya que también gestiona el botón de info (para que se quite al activar otro popup
-//	AppGUIhandleTrtZone();
+	
+    /* Si no era ningun popUp entonces es la gestión de zonas de tratamiento para quitar el zoom */
+    if( !isPopUp)
+    {
+        /* Indicamos que no hay nada seleccionado en la gestión de areas */
+        AppGUIdata.trtZoneHdlr.selTrtDot = APP_GUI_NO_TRT_DOT_SELECTED;
+        AppGUIdata.trtZoneHdlr.selTrtArea = AppGUIfullBodyNO_AREA;
+		
+        /* Refrescamos la zona de selección de tratamiento */
+        AppGUIhandleTrtZone();
+    }
+	
+    for( HPindex=0;HPindex<APP_GUI_MAXNUM_HP;HPindex++)
+    {
+        if (HPcryoGetFromSlot( (cPRFslot)APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
+        {
+            if ( (!AppGUIisInitRunning(HPindex)) && (AppGUIdata.slot[HPindex].selTrtArea != APP_GUI_NUM_FULL_BODY_AREAS) && (AppGUIdata.slot[HPindex].selTrtDot != APP_GUI_NO_TRT_DOT_SELECTED))
+            {AppGUIapplyTimeRestriction(HPindex, HP, PRF);}
+        }
+        AppGUIhandleCtrlPanel(AppGUIdata.slot[HPindex].isCtrlPnlShow, HPindex);
+    }
+    //Se revisan las zonas de tratamiento ya que también gestiona el botón de info (para que se quite al activar otro popup
+    AppGUIhandleTrtZone();
 }
 
 void CBKbutPopUpTimeValueF( void *widget)

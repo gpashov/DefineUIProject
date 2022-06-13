@@ -523,8 +523,8 @@ namespace AppEnumsNs
 
     /*** LISTADO DE IMAGENES Y WIDGETS ***/
     // Imágenes de la Interface
-    //typedef enum
-    //{
+//    typedef enum EAppGUIimageIDlist
+//    {
     //	a001_FondoLogoCooltechDefine,
     //	a002_CargaLogotipo1,
     //	a003_CargaLogotipo2,
@@ -1099,8 +1099,9 @@ namespace AppEnumsNs
     //	c609_Number_9_ResucInd,
     //	c610_GPRS_no_coverage,			//V7790 - GPRS coverage
 
-    //	APP_GUI_NUM_IMAGES
-    //}cAppGUIimageIDlist;
+//        APP_GUI_NUM_IMAGES
+//    }cAppGUIimageIDlist;
+//    Q_ENUM_NS(EAppGUIimageIDlist)
 
     // Widgets de la Interface
     typedef enum EAppGUIwidgetIDlist

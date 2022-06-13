@@ -217,6 +217,7 @@ void AppGUIhandleTstVacSMALLPopUp( uint8 show, uint8 HPindex);
 void AppGUIhandleRFIDpopUp( uint8 show, uint8 HPindex);
 void AppGUI_RFIDpopup_ReuseOption (uint8 option);
 uint8 AppGUIIsPopupDisplayed( const cAppGUIwidgetIDlist widgetId );
+uint8 AppGUIisRFIDPopUpActive (void);
 void AppGUIhandleMainMenu( uint8 show );
 void AppGUIclearData( void);
 void AppGUIclearSlotData( uint8 HPindex);
