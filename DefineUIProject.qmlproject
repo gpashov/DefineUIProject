@@ -85,4 +85,6 @@ Project {
     supportedLanguages: ["en"]
     primaryLanguage: "en"
 
+
+    mainUiFile: "content/HP2ImageButton.qml"
 }

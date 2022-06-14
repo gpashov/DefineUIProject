@@ -33,10 +33,13 @@ qt6_add_qml_module(content
         HPTimeRemaining.qml
         HPRightStatusImage.qml
         HPResucctionCount.qml
-        HPLeftStatusImage.qml
         HPControlPanel.qml
         HPColorIndicator.qml
         HpCleaning.qml
+        HP4ImageButton.qml
+        HP3ImageButton.qml
+        HP2ImageButton.qml
+        HP1ImageButton.qml
         GenderSelectButton.qml
         FatigueScreen.qml
         ErrorPopups.qml
@@ -47,8 +50,8 @@ qt6_add_qml_module(content
         CustomSwitch.qml
         CustomRadioButton.qml
         ConfigurationScreen.qml
-        CalcScreen.qml
         CleaningPanels.qml
+        CalcScreen.qml
         BodySilhouette.qml
         BodyAreaZoomedMale.qml
         BodyAreaZoomedFemale.qml

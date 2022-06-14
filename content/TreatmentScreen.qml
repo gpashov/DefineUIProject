@@ -52,6 +52,15 @@ Item {
                 showPanelButtonHp1Img.visible = true
             }
         }
+
+        Connections {
+            target: wdgWpr
+            onControlPanelHideButtonEnabled: (hpIndex, isEnabled) => {
+                                                 if (hpIndex === AppEnumsNs.APP_GUI_HP1_ID) {
+                                                     hidePanelHp1Button.enabled = isEnabled
+                                                 }
+                                             }
+        }
     }
 
     Image {
@@ -91,6 +100,15 @@ Item {
                 showPanelButtonHp2Img.visible = true
             }
         }
+
+        Connections {
+            target: wdgWpr
+            onControlPanelHideButtonEnabled: (hpIndex, isEnabled) => {
+                                                 if (hpIndex === AppEnumsNs.APP_GUI_HP2_ID) {
+                                                     hidePanelHp2Button.enabled = isEnabled
+                                                 }
+                                             }
+        }
     }
 
     Image {
@@ -129,6 +147,15 @@ Item {
                 hidePanelButtonHp3Img.visible = false
                 showPanelButtonHp3Img.visible = true
             }
+        }
+
+        Connections {
+            target: wdgWpr
+            onControlPanelHideButtonEnabled: (hpIndex, isEnabled) => {
+                                                 if (hpIndex === AppEnumsNs.APP_GUI_HP3_ID) {
+                                                     hidePanelHp3Button.enabled = isEnabled
+                                                 }
+                                             }
         }
     }
 
@@ -170,6 +197,15 @@ Item {
                 showPanelButtonHp4Img.visible = true
             }
         }
+
+        Connections {
+            target: wdgWpr
+            onControlPanelHideButtonEnabled: (hpIndex, isEnabled) => {
+                                                 if (hpIndex === AppEnumsNs.APP_GUI_HP4_ID) {
+                                                     hidePanelHp4Button.enabled = isEnabled
+                                                 }
+                                             }
+        }
     }
 
     Image {
@@ -198,7 +234,6 @@ Item {
         anchors.top: parent.top
         state: "hp1State"
         colorIndicatorState: "State1"
-        statusImageState: "HpNotConnected"
     }
 
     HPControlPanel {
@@ -207,7 +242,6 @@ Item {
         anchors.top: parent.top
         state: "hp2State"
         colorIndicatorState: "State2"
-        statusImageState: "HpNotConnected"
     }
 
     HPControlPanel {
@@ -216,7 +250,6 @@ Item {
         anchors.bottom: parent.bottom
         state: "hp3State"
         colorIndicatorState: "State2"
-        statusImageState: "HpNotConnected"
     }
 
     HPControlPanel {
@@ -225,7 +258,6 @@ Item {
         anchors.bottom: parent.bottom
         state: "hp4State"
         colorIndicatorState: "State1"
-        statusImageState: "HpNotConnected"
     }
 
     CustomSwitch {

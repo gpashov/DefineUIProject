@@ -36,25 +36,37 @@ public:
     void GUIsetSwitchStatus( uint32 id, uint8 OnOff);
     uint16 GUIsetWidgetVisibility(uint32 id,uint8 vis);
     uint16 GUIsetWidgetEnable(uint32 id,uint8 enable);
+    void GUIsetImgViewerImage(uint32 id,uint32 idImg);
     void GUIsetImgViewerPosition(uint32 id,uint16 posx,uint16 posy);
+    void GUIsetHpControlPanelImgButton(uint32 id,EAppGUIimageIDlist idImg);
+    void GUISetTreatmentTimerBackground(EAppGUI_HPsIDs hpIndex, bool isSelectable);
 
 
 signals:
-    void changeScreenSignal(EAppGUIscreen screenId);
+    void changeScreenSignal(AppEnumsNs::EAppGUIscreen screenId);
 
     // Widgets visibility signals
 
     void infoSwitchVisibilityChanged(bool newVisibility);
     void returnButtonVisibilityChanged(bool newVisibility);
+    void timeSelectButtonVisibilityChanged(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool newVisibility);
+    void timeRemainingVisibilityChanged(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool newVisibility);
 
     // Widgets enabled signals
     void infoSwitchEnabled(bool enable);
     void returnButtonEnabled(bool enable);
+    void hpImageButtonEnabled(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool enable);
+    void controlPanelHideButtonEnabled(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool isEnabled);
+
 
     // Text widgets update signals
     void calcNumberChanged(QString text);
     void confModelChanged(QString text);
     void confVersionChanged(QString text);
+
+    // Buttons images update signals
+    void hpControlPanelButtonImagesSet(AppEnumsNs::EAppGUI_HPsIDs hpIndex, AppEnumsNs::EAppGUIimageIDlist idImg);
+    void hpControlPanelModelTextSet(AppEnumsNs::EAppGUI_HPsIDs hpIndex, AppEnumsNs::EAppGUIimageIDlist idImg);
 
     // Switches update signals
 
@@ -64,17 +76,29 @@ signals:
 
     // Body areas
     void bodyZoomed(bool zoomed);
-    void bodyGenderSelected(EAppGUIbodys gender);
-    void bodyAreaSelected(EAppGUIfullBodyAreas area);
+    void bodyGenderSelected(AppEnumsNs::EAppGUIbodys gender);
+    void bodyAreaSelected(AppEnumsNs::EAppGUIfullBodyAreas area);
 
     // Dot zones full body
-    void trtDotFullBodyVisibilityChanged(EAppGUI_HPsIDs hpIndex, bool newVisibility);
-    void trtDotFullBodyPositionChanged(EAppGUI_HPsIDs hpIndex, uint32 posX, uint32 posY);
+    void trtDotFullBodyVisibilityChanged(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool newVisibility);
+    void trtDotFullBodyPositionChanged(AppEnumsNs::EAppGUI_HPsIDs hpIndex, uint32 posX, uint32 posY);
 
     // Zoomed body dots
     void dotZoneEnabled(uint32 id, bool enable);
-    void dotZoneHpAssigned(uint8 dot, EAppGUI_HPsIDs hpIndex);
+    void dotZoneHpAssigned(uint8 dot, AppEnumsNs::EAppGUI_HPsIDs hpIndex);
     void dotZoneSelected(uint8 dot, bool isSelected);
+
+    // Control panels widgets
+    void treatmentTimerSet(AppEnumsNs::EAppGUI_HPsIDs hpIndex, QString newTime);
+    void treatmentTimerBackgroundSet(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool isSelectable);
+    void temperatureButtonEnabled(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool isEnabled);
+    void resuctionCountVisibilityChanged(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool newVisibility);
+    void resuctionCountChanged(AppEnumsNs::EAppGUI_HPsIDs hpIndex, uint8 resuctionCount);
+    void indicatorRfidVisibilityChanged(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool newVisibility);
+    void indicatorButtonVisibilityChanged(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool newVisibility);
+    void indicatorVacuumVisibilityChanged(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool newVisibility);
+    void indicatorCoolingVisibilityChanged(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool newVisibility);
+
 
 private:
     void float_to_string(double f, char r[], uint8 dec);

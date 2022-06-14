@@ -386,7 +386,7 @@ typedef enum
 //extern const float HP_CRYO_CTRL_MIN_SNS_TEMP_LIST_VALUE[HP_CRYO_NUM_HP_MODELS];
 //extern const float HP_CRYO_DFLT_LIST_TRT_TEMP_WINDOW[HP_CRYO_NUM_HP_MODELS];
 //extern const float HP_CRYO_TRT_TEMP_SET_POINT_FEATURES[HP_CRYO_NUM_HP_MODELS][HP_CRYO_TEMPERATURE_FEATURES];
-//extern const uint32 HP_CRYO_TIME_LIST[HP_CRYO_MAX_TIME_LIST];
+extern const uint32 HP_CRYO_TIME_LIST[HP_CRYO_MAX_TIME_LIST];
 //extern const cHPcryoTrtTimes HP_CRYO_TIME_LIST_PER_HP[HP_CRYO_NUM_HP_MODELS][HP_CRYO_MAX_TIME_LIST];
 //extern const uint8 HP_CYRO_LABEL_REQUESTED[HP_CRYO_NUM_LABELS][HP_CRYO_RFID_LABEL_AND_HP_TABLE_ELEMENTS];
 
@@ -1086,8 +1086,8 @@ float HPcryoHPtemperature ( cPRFslot slot);
 
 //void HPcryoGetBit51 ( tHPcryoData *HP, tPRFdata *PRF);
 
-//uint8 HPcryoGetTRTplusThree ( tHPcryoData *HP, tPRFdata *PRF);
-//uint32 HPcryoGetTRTplusThreeTime ( tHPcryoData *HP, tPRFdata *PRF);
+uint8 HPcryoGetTRTplusThree ( tHPcryoData *HP, tPRFdata *PRF);
+uint32 HPcryoGetTRTplusThreeTime ( tHPcryoData *HP, tPRFdata *PRF);
 
 //extern uint32 RFID_time_ref[4];	//DEBUG	-	Control de tiempos modulo RFID
 //extern uint32 RFID_time_diff[4];	//DEBUG	-	Control de tiempos modulo RFID

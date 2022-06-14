@@ -1,12 +1,12 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
+import define.enums 1.0
 
 Item {
     id: item1
     width: backgraoundImage.width
     height: backgraoundImage.height
     property alias item1State: item1.state
-    property alias statusImageState: statusImageLeft.state
     property alias colorIndicatorState: colorIndicator.state
     state: "opened"
     property alias backgraoundImageSource: backgraoundImage.source
@@ -40,6 +40,15 @@ Item {
         imageSourceDisabled: "images/c050_RelojTemporizadorMarcaAgua.png"
     }
 
+    ThreeStateButton {
+        id: temperatureButton
+        x: 65
+        y: 123
+        imageSourcePressed: "images/c048_RelojTemporizadorPress.png"
+        imageSourceReleased: "images/c049_RelojTemporizadorRls.png"
+        imageSourceDisabled: "images/c050_RelojTemporizadorMarcaAgua.png"
+    }
+
     HPTimeRemaining {
         id: timeRemaining
         x: timerButton.x
@@ -55,19 +64,32 @@ Item {
         state: "State2"
     }
 
-    HPLeftStatusImage {
-        id: statusImageLeft
+    HP1ImageButton {
+        id: imageButtonHp1
         x: 151
         y: 194
-        anchors.verticalCenterOffset: 0
+        visible: false
     }
 
-    HPRightStatusImage {
-        id: statusImageRight
-        x: statusImageLeft.x
-        y: statusImageLeft.y
-        state: statusImageLeft.state
-        visible: !statusImageLeft.visible
+    HP2ImageButton {
+        id: imageButtonHp2
+        x: imageButtonHp1.x
+        y: imageButtonHp1.y
+        visible: false
+    }
+
+    HP3ImageButton {
+        id: imageButtonHp3
+        x: imageButtonHp1.x
+        y: imageButtonHp1.y
+        visible: false
+    }
+
+    HP4ImageButton {
+        id: imageButtonHp4
+        x: imageButtonHp1.x
+        y: imageButtonHp1.y
+        visible: false
     }
 
     Image {
@@ -120,11 +142,11 @@ Item {
         x: 122
         y: 196
         visible: false
-        state: "CurvedState"
+        state: hPTypeNameLeft.state
     }
 
     HPResucctionCount {
-        id: hpResucctionCount
+        id: hpResuctionCount
         x: 197
         y: 32
     }
@@ -159,6 +181,11 @@ Item {
                 target: popupTestVacuumSmall
                 state: "leftState"
             }
+
+            PropertyChanges {
+                target: imageButtonHp1
+                visible: true
+            }
         },
         State {
             name: "hp2State"
@@ -188,7 +215,7 @@ Item {
             }
 
             PropertyChanges {
-                target: statusImage
+                target: imageButtonHp1
                 x: 4
                 y: 194
             }
@@ -210,7 +237,7 @@ Item {
             }
 
             PropertyChanges {
-                target: hpResucctionCount
+                target: hpResuctionCount
                 x: 57
             }
 
@@ -222,8 +249,8 @@ Item {
             }
 
             PropertyChanges {
-                target: statusImageLeft
-                visible: false
+                target: imageButtonHp2
+                visible: true
             }
         },
         State {
@@ -285,12 +312,12 @@ Item {
             }
 
             PropertyChanges {
-                target: statusImage
+                target: imageButtonHp1
                 y: 11
             }
 
             PropertyChanges {
-                target: hpResucctionCount
+                target: hpResuctionCount
                 y: 270
             }
 
@@ -299,6 +326,11 @@ Item {
                 x: 210
                 y: 223
                 state: "leftState"
+            }
+
+            PropertyChanges {
+                target: imageButtonHp3
+                visible: true
             }
         },
         State {
@@ -363,13 +395,13 @@ Item {
             }
 
             PropertyChanges {
-                target: statusImage
+                target: imageButtonHp1
                 x: 4
                 y: 11
             }
 
             PropertyChanges {
-                target: hpResucctionCount
+                target: hpResuctionCount
                 x: 57
                 y: 270
             }
@@ -382,18 +414,200 @@ Item {
             }
 
             PropertyChanges {
-                target: statusImageLeft
-                visible: false
+                target: imageButtonHp4
+                visible: true
             }
         }
     ]
 
+    Connections {
+        target: wdgWpr
+        onHpControlPanelModelTextSet: (hpIndex, idImg) => {
+                                          var newState
+                                          switch (idImg) {
+                                              case AppEnumsNs.c066_NameCurvedHP_L:
+                                              case AppEnumsNs.c066_NameCurvedHP_R: newState = "CurvedState"; break;
+                                              case AppEnumsNs.c067_NameTightHP_L:
+                                              case AppEnumsNs.c067_NameTightHP_R: newState = "TightState"; break;
+                                              case AppEnumsNs.c068_NameStarightHP_L:
+                                              case AppEnumsNs.c068_NameStraightHP_R: newState = "StraightState"; break;
+                                              case AppEnumsNs.c069_NameTinyHP_L:
+                                              case AppEnumsNs.c069_NameTinyHP_R: newState = "TinyState"; break;
+                                              case AppEnumsNs.c070_NameTinyCurvedHP_L:
+                                              case AppEnumsNs.c070_NameTinyCurvedHP_R: newState = "TinyCurvedState"; break;
+                                              case AppEnumsNs.c071_NameDoubleHP_L:
+                                              case AppEnumsNs.c071_NameDoubleHP_R: newState = "DoubleState"; break;
+                                              case AppEnumsNs.c072_NameOvalHP_L:
+                                              case AppEnumsNs.c072_NameOvalHP_R: newState = "OvalState"; break;
+                                              case AppEnumsNs.c073_NameOvalCurvedHP_L:
+                                              case AppEnumsNs.c073_NameOvalCurvedHP_R: newState = "OvalCurvedState"; break;
+                                              case AppEnumsNs.c074_NameDeltaHP_L:
+                                              case AppEnumsNs.c074_NameDeltaHP_R: newState = "DeltaState"; break;
+                                              case AppEnumsNs.c233_ImgPixelBlanco:
+                                              default: newState = "BlankState"; break;
+                                          }
 
+                                          switch(hpIndex) {
+                                              case AppEnumsNs.APP_GUI_HP1_ID: if(state === "hp1State") { hPTypeNameLeft = newState; } break;
+                                              case AppEnumsNs.APP_GUI_HP2_ID: if(state === "hp2State") { hPTypeNameLeft = newState; } break;
+                                              case AppEnumsNs.APP_GUI_HP3_ID: if(state === "hp3State") { hPTypeNameLeft = newState; } break;
+                                              case AppEnumsNs.APP_GUI_HP4_ID: if(state === "hp4State") { hPTypeNameLeft = newState; } break;
+                                              default: break;
+                                          }
+                                      }
+    }
 
+    Connections {
+        target: wdgWpr
+        onTimeRemainingVisibilityChanged: (hpIndex, newVisibility) => {
+                                              switch(hpIndex) {
+                                                  case AppEnumsNs.APP_GUI_HP1_ID: if(state === "hp1State") { timeRemaining.visible = newVisibility; } break;
+                                                  case AppEnumsNs.APP_GUI_HP2_ID: if(state === "hp2State") { timeRemaining.visible = newVisibility; } break;
+                                                  case AppEnumsNs.APP_GUI_HP3_ID: if(state === "hp3State") { timeRemaining.visible = newVisibility; } break;
+                                                  case AppEnumsNs.APP_GUI_HP4_ID: if(state === "hp4State") { timeRemaining.visible = newVisibility; } break;
+                                                  default: break;
+                                              }
+                                          }
+    }
+
+    Connections {
+        target: wdgWpr
+        onTimeSelectButtonVisibilityChanged: (hpIndex, newVisibility) => {
+                                              switch(hpIndex) {
+                                                  case AppEnumsNs.APP_GUI_HP1_ID: if(state === "hp1State") { timerButton.visible = newVisibility; } break;
+                                                  case AppEnumsNs.APP_GUI_HP2_ID: if(state === "hp2State") { timerButton.visible = newVisibility; } break;
+                                                  case AppEnumsNs.APP_GUI_HP3_ID: if(state === "hp3State") { timerButton.visible = newVisibility; } break;
+                                                  case AppEnumsNs.APP_GUI_HP4_ID: if(state === "hp4State") { timerButton.visible = newVisibility; } break;
+                                                  default: break;
+                                              }
+                                          }
+    }
+
+    Connections {
+        target: wdgWpr
+        onTreatmentTimerBackgroundSet: (hpIndex, isSelectable) => {
+                                           var newState = "nonselectableState"
+                                           if (isSelectable === true) {
+                                               newState = "selectableState"
+                                           }
+
+                                           switch(hpIndex) {
+                                               case AppEnumsNs.APP_GUI_HP1_ID: if(state === "hp1State") { timeRemaining.state = newState; } break;
+                                               case AppEnumsNs.APP_GUI_HP2_ID: if(state === "hp2State") { timeRemaining.state = newState; } break;
+                                               case AppEnumsNs.APP_GUI_HP3_ID: if(state === "hp3State") { timeRemaining.state = newState; } break;
+                                               case AppEnumsNs.APP_GUI_HP4_ID: if(state === "hp4State") { timeRemaining.state = newState; } break;
+                                               default: break;
+                                           }
+                                       }
+    }
+
+    Connections {
+        target: wdgWpr
+        onTreatmentTimerSet: (hpIndex, newTime) => {
+                                     switch(hpIndex) {
+                                         case AppEnumsNs.APP_GUI_HP1_ID: if(state === "hp1State") { hpResuctionCount.text = newTime; } break;
+                                         case AppEnumsNs.APP_GUI_HP2_ID: if(state === "hp2State") { hpResuctionCount.text = newTime; } break;
+                                         case AppEnumsNs.APP_GUI_HP3_ID: if(state === "hp3State") { hpResuctionCount.text = newTime; } break;
+                                         case AppEnumsNs.APP_GUI_HP4_ID: if(state === "hp4State") { hpResuctionCount.text = newTime; } break;
+                                         default: break;
+                                     }
+                                 }
+    }
+
+    Connections {
+        target: wdgWpr
+        onResuctionCountVisibilityChanged: (hpIndex, newVisibility) => {
+                                     switch(hpIndex) {
+                                         case AppEnumsNs.APP_GUI_HP1_ID: if(state === "hp1State") { hpResuctionCount.visible = newVisibility; } break;
+                                         case AppEnumsNs.APP_GUI_HP2_ID: if(state === "hp2State") { hpResuctionCount.visible = newVisibility; } break;
+                                         case AppEnumsNs.APP_GUI_HP3_ID: if(state === "hp3State") { hpResuctionCount.visible = newVisibility; } break;
+                                         case AppEnumsNs.APP_GUI_HP4_ID: if(state === "hp4State") { hpResuctionCount.visible = newVisibility; } break;
+                                         default: break;
+                                     }
+                                 }
+    }
+
+    Connections {
+        target: wdgWpr
+        onResuctionCountChanged: (hpIndex, resuctionCount) => {
+                                     switch(hpIndex) {
+                                         case AppEnumsNs.APP_GUI_HP1_ID: if(state === "hp1State") { hpResuctionCount.text = resuctionCount; } break;
+                                         case AppEnumsNs.APP_GUI_HP2_ID: if(state === "hp2State") { hpResuctionCount.text = resuctionCount; } break;
+                                         case AppEnumsNs.APP_GUI_HP3_ID: if(state === "hp3State") { hpResuctionCount.text = resuctionCount; } break;
+                                         case AppEnumsNs.APP_GUI_HP4_ID: if(state === "hp4State") { hpResuctionCount.text = resuctionCount; } break;
+                                         default: break;
+                                     }
+                                 }
+    }
+
+    Connections {
+        target: wdgWpr
+        onIndicatorRfidVisibilityChanged: (hpIndex, newVisibility) => {
+                                     switch(hpIndex) {
+                                         case AppEnumsNs.APP_GUI_HP1_ID: if(state === "hp1State") { indicatorRfid.visible = newVisibility; } break;
+                                         case AppEnumsNs.APP_GUI_HP2_ID: if(state === "hp2State") { indicatorRfid.visible = newVisibility; } break;
+                                         case AppEnumsNs.APP_GUI_HP3_ID: if(state === "hp3State") { indicatorRfid.visible = newVisibility; } break;
+                                         case AppEnumsNs.APP_GUI_HP4_ID: if(state === "hp4State") { indicatorRfid.visible = newVisibility; } break;
+                                         default: break;
+                                     }
+                                 }
+    }
+
+    Connections {
+        target: wdgWpr
+        onIndicatorButtonVisibilityChanged: (hpIndex, newVisibility) => {
+                                     switch(hpIndex) {
+                                         case AppEnumsNs.APP_GUI_HP1_ID: if(state === "hp1State") { indicatorButton.visible = newVisibility; } break;
+                                         case AppEnumsNs.APP_GUI_HP2_ID: if(state === "hp2State") { indicatorButton.visible = newVisibility; } break;
+                                         case AppEnumsNs.APP_GUI_HP3_ID: if(state === "hp3State") { indicatorButton.visible = newVisibility; } break;
+                                         case AppEnumsNs.APP_GUI_HP4_ID: if(state === "hp4State") { indicatorButton.visible = newVisibility; } break;
+                                         default: break;
+                                     }
+                                 }
+    }
+
+    Connections {
+        target: wdgWpr
+        onIndicatorVacuumVisibilityChanged: (hpIndex, newVisibility) => {
+                                     switch(hpIndex) {
+                                         case AppEnumsNs.APP_GUI_HP1_ID: if(state === "hp1State") { indicatorVacuum.visible = newVisibility; } break;
+                                         case AppEnumsNs.APP_GUI_HP2_ID: if(state === "hp2State") { indicatorVacuum.visible = newVisibility; } break;
+                                         case AppEnumsNs.APP_GUI_HP3_ID: if(state === "hp3State") { indicatorVacuum.visible = newVisibility; } break;
+                                         case AppEnumsNs.APP_GUI_HP4_ID: if(state === "hp4State") { indicatorVacuum.visible = newVisibility; } break;
+                                         default: break;
+                                     }
+                                 }
+    }
+
+    Connections {
+        target: wdgWpr
+        onIndicatorCoolingVisibilityChanged: (hpIndex, newVisibility) => {
+                                     switch(hpIndex) {
+                                         case AppEnumsNs.APP_GUI_HP1_ID: if(state === "hp1State") { indicatorCool.visible = newVisibility; } break;
+                                         case AppEnumsNs.APP_GUI_HP2_ID: if(state === "hp2State") { indicatorCool.visible = newVisibility; } break;
+                                         case AppEnumsNs.APP_GUI_HP3_ID: if(state === "hp3State") { indicatorCool.visible = newVisibility; } break;
+                                         case AppEnumsNs.APP_GUI_HP4_ID: if(state === "hp4State") { indicatorCool.visible = newVisibility; } break;
+                                         default: break;
+                                     }
+                                 }
+    }
+
+    Connections {
+        target: wdgWpr
+        onTemperatureButtonEnabled: (hpIndex, isEnabled) => {
+                                     switch(hpIndex) {
+                                         case AppEnumsNs.APP_GUI_HP1_ID: if(state === "hp1State") { temperatureButton.enabled = isEnabled; } break;
+                                         case AppEnumsNs.APP_GUI_HP2_ID: if(state === "hp2State") { temperatureButton.enabled = isEnabled; } break;
+                                         case AppEnumsNs.APP_GUI_HP3_ID: if(state === "hp3State") { temperatureButton.enabled = isEnabled; } break;
+                                         case AppEnumsNs.APP_GUI_HP4_ID: if(state === "hp4State") { temperatureButton.enabled = isEnabled; } break;
+                                         default: break;
+                                     }
+                                 }
+    }
 }
 
 /*##^##
 Designer {
-    D{i:0;formeditorZoom:1.66;height:338;width:287}
+    D{i:0;formeditorZoom:1.66;height:338;width:287}D{i:4;invisible:true}
 }
 ##^##*/

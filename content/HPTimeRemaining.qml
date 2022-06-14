@@ -2,12 +2,21 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 
 Item {
-    width: timeRemainingImg.width
-    height: timeRemainingImg.height
+    id: item1
+    width: trtRunningImg.width
+    height: trtRunningImg.height
 
     Image {
-        id: timeRemainingImg
+        id: trtRunningImg
         source: "images/c047_FondoTemporizador.png"
+        fillMode: Image.PreserveAspectFit
+    }
+
+    Image {
+        id: initialImg
+        x: 0
+        y: 0
+        source: "images/c047_FondoNumVwrBlanco.png"
         fillMode: Image.PreserveAspectFit
     }
 
@@ -24,12 +33,33 @@ Item {
         font.family: "Verdana"
     }
 
+    states: [
+        State {
+            name: "nonselectableState"
 
+            PropertyChanges {
+                target: trtRunningImg
+                visible: false
+            }
 
+            PropertyChanges {
+                target: timeRemainingTxt
+                x: 24
+            }
+        },
+        State {
+            name: "selectableState"
+
+            PropertyChanges {
+                target: initialImg
+                visible: false
+            }
+        }
+    ]
 }
 
 /*##^##
 Designer {
-    D{i:0;autoSize:true;height:480;width:640}
+    D{i:0;height:65;width:155}
 }
 ##^##*/

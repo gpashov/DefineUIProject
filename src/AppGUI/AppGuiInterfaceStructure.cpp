@@ -65,47 +65,47 @@ const uint8 APP_GUI_SLOT_DISTRIBUTION[APP_GUI_MAXNUM_HP] =
 
 ///* Tabla con los ID's de las imagenes de los HP orientados a derecha e izquierda segun
 // * el slot */
-//const uint32 APP_GUI_TRT_SCR_BUT_MODEL_IMG_SIDE_FROM_SLOT_IMG[APP_GUI_MAX_PRS_RLS][APP_GUI_MAXNUM_HP][HP_CRYO_NUM_HP_MODELS] =
-//{
-//	//Press
-//	{
-//		//Undefined, Curved, Tight, Straight, Tiny, Tiny Curved, Double, Oval, Oval Curved, Angled
-//		{ c233_ImgPixelBlanco, c093_ImgCurvedHP_R_Press, c095_ImgTightHP_R_Press, c097_ImgStrightHP_R_Press, c099_ImgTinyHP_R_Press, c101_ImgTinyCurvedHP_R_Press, c103_ImgDoubleHP_R_Press, c105_ImgOvalHP_R_Press, c107_ImgOvalCurvedHP_R_Press, c109_ImgAngledHP_R_Press},
-//		{ c233_ImgPixelBlanco, c094_ImgCurvedHP_L_Press, c096_ImgTightHP_L_Press, c098_ImgStrightHP_L_Press, c100_ImgTinyHP_L_Press, c102_ImgTinyCurvedHP_L_Press, c104_ImgDoubleHP_L_Press, c106_ImgOvalHP_L_Press, c108_ImgOvalCurvedHP_L_Press, c110_ImgAngledHP_L_Press},
-//		{ c233_ImgPixelBlanco, c093_ImgCurvedHP_R_Press, c095_ImgTightHP_R_Press, c097_ImgStrightHP_R_Press, c099_ImgTinyHP_R_Press, c101_ImgTinyCurvedHP_R_Press, c103_ImgDoubleHP_R_Press, c105_ImgOvalHP_R_Press, c107_ImgOvalCurvedHP_R_Press, c109_ImgAngledHP_R_Press},
-//		{ c233_ImgPixelBlanco, c094_ImgCurvedHP_L_Press, c096_ImgTightHP_L_Press, c098_ImgStrightHP_L_Press, c100_ImgTinyHP_L_Press, c102_ImgTinyCurvedHP_L_Press, c104_ImgDoubleHP_L_Press, c106_ImgOvalHP_L_Press, c108_ImgOvalCurvedHP_L_Press, c110_ImgAngledHP_L_Press}
-//	},
+const uint32 APP_GUI_TRT_SCR_BUT_MODEL_IMG_SIDE_FROM_SLOT_IMG[APP_GUI_MAX_PRS_RLS][APP_GUI_MAXNUM_HP][HP_CRYO_NUM_HP_MODELS] =
+{
+    //Press
+    {
+        //Undefined, Curved, Tight, Straight, Tiny, Tiny Curved, Double, Oval, Oval Curved, Angled
+        { c233_ImgPixelBlanco, c093_ImgCurvedHP_R_Press, c095_ImgTightHP_R_Press, c097_ImgStrightHP_R_Press, c099_ImgTinyHP_R_Press, c101_ImgTinyCurvedHP_R_Press, c103_ImgDoubleHP_R_Press, c105_ImgOvalHP_R_Press, c107_ImgOvalCurvedHP_R_Press, c109_ImgAngledHP_R_Press},
+        { c233_ImgPixelBlanco, c094_ImgCurvedHP_L_Press, c096_ImgTightHP_L_Press, c098_ImgStrightHP_L_Press, c100_ImgTinyHP_L_Press, c102_ImgTinyCurvedHP_L_Press, c104_ImgDoubleHP_L_Press, c106_ImgOvalHP_L_Press, c108_ImgOvalCurvedHP_L_Press, c110_ImgAngledHP_L_Press},
+        { c233_ImgPixelBlanco, c093_ImgCurvedHP_R_Press, c095_ImgTightHP_R_Press, c097_ImgStrightHP_R_Press, c099_ImgTinyHP_R_Press, c101_ImgTinyCurvedHP_R_Press, c103_ImgDoubleHP_R_Press, c105_ImgOvalHP_R_Press, c107_ImgOvalCurvedHP_R_Press, c109_ImgAngledHP_R_Press},
+        { c233_ImgPixelBlanco, c094_ImgCurvedHP_L_Press, c096_ImgTightHP_L_Press, c098_ImgStrightHP_L_Press, c100_ImgTinyHP_L_Press, c102_ImgTinyCurvedHP_L_Press, c104_ImgDoubleHP_L_Press, c106_ImgOvalHP_L_Press, c108_ImgOvalCurvedHP_L_Press, c110_ImgAngledHP_L_Press}
+    },
 	
-//	//Release
-//	{
-//		//Undefined, Curved, Tight, Straight, Tiny, Tiny Curved, Double, Oval, Oval Curved, Angled
-//		{ c233_ImgPixelBlanco, c075_ImgCurvedHP_R_Rls, c077_ImgTightHP_R_Rls, c079_ImgStrightHP_R_Rls, c081_ImgTinyHP_R_Rls, c083_ImgTinyCurvedHP_R_Rls, c085_ImgDoubleHP_R_Rls, c087_ImgOvalHP_R_Rls, c089_ImgOvalCurvedHP_R_Rls, c091_ImgAngledHP_R_Rls},
-//		{ c233_ImgPixelBlanco, c076_ImgCurvedHP_L_Rls, c078_ImgTightHP_L_Rls, c080_ImgStrightHP_L_Rls, c082_ImgTinyHP_L_Rls, c084_ImgTinyCurvedHP_L_Rls, c086_ImgDoubleHP_L_Rls, c088_ImgOvalHP_L_Rls, c090_ImgOvalCurvedHP_L_Rls, c092_ImgAngledHP_L_Rls},
-//		{ c233_ImgPixelBlanco, c075_ImgCurvedHP_R_Rls, c077_ImgTightHP_R_Rls, c079_ImgStrightHP_R_Rls, c081_ImgTinyHP_R_Rls, c083_ImgTinyCurvedHP_R_Rls, c085_ImgDoubleHP_R_Rls, c087_ImgOvalHP_R_Rls, c089_ImgOvalCurvedHP_R_Rls, c091_ImgAngledHP_R_Rls},
-//		{ c233_ImgPixelBlanco, c076_ImgCurvedHP_L_Rls, c078_ImgTightHP_L_Rls, c080_ImgStrightHP_L_Rls, c082_ImgTinyHP_L_Rls, c084_ImgTinyCurvedHP_L_Rls, c086_ImgDoubleHP_L_Rls, c088_ImgOvalHP_L_Rls, c090_ImgOvalCurvedHP_L_Rls, c092_ImgAngledHP_L_Rls}
-//	}
-//};
+    //Release
+    {
+        //Undefined, Curved, Tight, Straight, Tiny, Tiny Curved, Double, Oval, Oval Curved, Angled
+        { c233_ImgPixelBlanco, c075_ImgCurvedHP_R_Rls, c077_ImgTightHP_R_Rls, c079_ImgStrightHP_R_Rls, c081_ImgTinyHP_R_Rls, c083_ImgTinyCurvedHP_R_Rls, c085_ImgDoubleHP_R_Rls, c087_ImgOvalHP_R_Rls, c089_ImgOvalCurvedHP_R_Rls, c091_ImgAngledHP_R_Rls},
+        { c233_ImgPixelBlanco, c076_ImgCurvedHP_L_Rls, c078_ImgTightHP_L_Rls, c080_ImgStrightHP_L_Rls, c082_ImgTinyHP_L_Rls, c084_ImgTinyCurvedHP_L_Rls, c086_ImgDoubleHP_L_Rls, c088_ImgOvalHP_L_Rls, c090_ImgOvalCurvedHP_L_Rls, c092_ImgAngledHP_L_Rls},
+        { c233_ImgPixelBlanco, c075_ImgCurvedHP_R_Rls, c077_ImgTightHP_R_Rls, c079_ImgStrightHP_R_Rls, c081_ImgTinyHP_R_Rls, c083_ImgTinyCurvedHP_R_Rls, c085_ImgDoubleHP_R_Rls, c087_ImgOvalHP_R_Rls, c089_ImgOvalCurvedHP_R_Rls, c091_ImgAngledHP_R_Rls},
+        { c233_ImgPixelBlanco, c076_ImgCurvedHP_L_Rls, c078_ImgTightHP_L_Rls, c080_ImgStrightHP_L_Rls, c082_ImgTinyHP_L_Rls, c084_ImgTinyCurvedHP_L_Rls, c086_ImgDoubleHP_L_Rls, c088_ImgOvalHP_L_Rls, c090_ImgOvalCurvedHP_L_Rls, c092_ImgAngledHP_L_Rls}
+    }
+};
 
 //const uint32 APP_GUI_TRT_LIST_OF_IMG_HP_RECOMMENDED_PER_ZONE[HP_CRYO_NUM_HP_MODELS] =
 // {
 //		 APP_GUI_NUM_WIDGETS, imgPopUpRecommCurved, imgPopUpRecommTight, imgPopUpRecommStright, imgPopUpRecommTiny, imgPopUpRecommTinyCurved, imgPopUpRecommDouble, imgPopUpRecommOval, imgPopUpRecommOvalCurved, imgPopUpRecommAngled
 // };
 
-///* Tabla con las imagenes de los slots para los botones de HP del panel de control cuando no hay HP conectado */
-//const uint32 APP_GUI_TRT_SCR_BUT_MODE_IMG_NO_HP_IMG[APP_GUI_MAXNUM_HP] =
-//{
-//		c112_1_ZonaSeleccionadaHP1, c112_2_ZonaSeleccionadaHP2, c112_3_ZonaSeleccionadaHP3, c112_4_ZonaSeleccionadaHP4
-//};
+/* Tabla con las imagenes de los slots para los botones de HP del panel de control cuando no hay HP conectado */
+const uint32 APP_GUI_TRT_SCR_BUT_MODE_IMG_NO_HP_IMG[APP_GUI_MAXNUM_HP] =
+{
+        c112_1_ZonaSeleccionadaHP1, c112_2_ZonaSeleccionadaHP2, c112_3_ZonaSeleccionadaHP3, c112_4_ZonaSeleccionadaHP4
+};
 
-//const uint32 APP_GUI_TRT_SCR_BUT_MODEL_IMG_WIDGETS[APP_GUI_MAXNUM_HP] =
-//{
-//		butModelImageHP1, butModelImageHP2, butModelImageHP3, butModelImageHP4
-//};
+const uint32 APP_GUI_TRT_SCR_BUT_MODEL_IMG_WIDGETS[APP_GUI_MAXNUM_HP] =
+{
+        butModelImageHP1, butModelImageHP2, butModelImageHP3, butModelImageHP4
+};
 
-//const uint32 APP_GUI_TRT_SCR_BUT_MODE_TRT_WIDGETS[APP_GUI_MAXNUM_HP] =
-//{
-//		butSwtchModeAutoManualHP1, butSwtchModeAutoManualHP2, butSwtchModeAutoManualHP3, butSwtchModeAutoManualHP4
-//};
+const uint32 APP_GUI_TRT_SCR_BUT_MODE_TRT_WIDGETS[APP_GUI_MAXNUM_HP] =
+{
+        butSwtchModeAutoManualHP1, butSwtchModeAutoManualHP2, butSwtchModeAutoManualHP3, butSwtchModeAutoManualHP4
+};
 
 ///* Listado de widgets que componen el panel de control cuando esta mostrado y cuando esta oculto */
 //const uint32 APP_GUI_TRT_SCR_CTRL_PNL_WID_WHEN_SHOW[APP_GUI_MAXNUM_HP][APP_GUI_TRT_SCR_CTRL_PNL_WID_WHEN_SHOW_NUM] =
@@ -291,51 +291,51 @@ const uint32 APP_GUI_TRT_SCR_POPUP_TST_VAC_SW_LIST[HP_CRYO_VAC_LVL_NUM] =
 //		APP_GUI_NUM_WIDGETS, butPopUpTime50min, butPopUpTime70min,
 //};
 
-//const uint32 APP_GUI_TRT_SCR_BLINK_INDICATORS_WIDGETS[APP_GUI_MAXNUM_HP][APP_GUI_MAX_BLINK_INDICATORS] =
-//{
-//		{ imgCtrlPnlRFIDblinkHP1, imgCtrlPnlPulBlinkHP1, imgCtrlPnlVacBlinkHP1, imgCtrlPnlCoolingBlinkHP1}, //HP1
-//		{ imgCtrlPnlRFIDblinkHP2, imgCtrlPnlPulBlinkHP2, imgCtrlPnlVacBlinkHP2, imgCtrlPnlCoolingBlinkHP2}, //HP2
-//		{ imgCtrlPnlRFIDblinkHP3, imgCtrlPnlPulBlinkHP3, imgCtrlPnlVacBlinkHP3, imgCtrlPnlCoolingBlinkHP3}, //HP3
-//		{ imgCtrlPnlRFIDblinkHP4, imgCtrlPnlPulBlinkHP4, imgCtrlPnlVacBlinkHP4, imgCtrlPnlCoolingBlinkHP4}, //HP4
-//};
+const uint32 APP_GUI_TRT_SCR_BLINK_INDICATORS_WIDGETS[APP_GUI_MAXNUM_HP][APP_GUI_MAX_BLINK_INDICATORS] =
+{
+        { imgCtrlPnlRFIDblinkHP1, imgCtrlPnlPulBlinkHP1, imgCtrlPnlVacBlinkHP1, imgCtrlPnlCoolingBlinkHP1}, //HP1
+        { imgCtrlPnlRFIDblinkHP2, imgCtrlPnlPulBlinkHP2, imgCtrlPnlVacBlinkHP2, imgCtrlPnlCoolingBlinkHP2}, //HP2
+        { imgCtrlPnlRFIDblinkHP3, imgCtrlPnlPulBlinkHP3, imgCtrlPnlVacBlinkHP3, imgCtrlPnlCoolingBlinkHP3}, //HP3
+        { imgCtrlPnlRFIDblinkHP4, imgCtrlPnlPulBlinkHP4, imgCtrlPnlVacBlinkHP4, imgCtrlPnlCoolingBlinkHP4}, //HP4
+};
 
-//const uint32 APP_GUI_TRT_SCR_HP_MODEL_TEXT_IMG[APP_GUI_MAXNUM_HP][HP_CRYO_NUM_HP_MODELS] =
-//{
-//				//Undefined, Curved, Tight, Straight, Tiny, Tiny Curved, Double, Oval, Oval Curved, Angled
-//		/*HP1*/		{c233_ImgPixelBlanco, c066_NameCurvedHP_L, c067_NameTightHP_L, c068_NameStarightHP_L, c069_NameTinyHP_L,
-//					c070_NameTinyCurvedHP_L, c071_NameDoubleHP_L, c072_NameOvalHP_L, c073_NameOvalCurvedHP_L, c074_NameDeltaHP_L},
-//		/*HP2*/		{c233_ImgPixelBlanco, c066_NameCurvedHP_R, c067_NameTightHP_R, c068_NameStraightHP_R, c069_NameTinyHP_R,
-//					c070_NameTinyCurvedHP_R, c071_NameDoubleHP_R, c072_NameOvalHP_R, c073_NameOvalCurvedHP_R, c074_NameDeltaHP_R},
-//		/*HP3*/		{c233_ImgPixelBlanco, c066_NameCurvedHP_L, c067_NameTightHP_L, c068_NameStarightHP_L, c069_NameTinyHP_L,
-//					c070_NameTinyCurvedHP_L, c071_NameDoubleHP_L, c072_NameOvalHP_L, c073_NameOvalCurvedHP_L, c074_NameDeltaHP_L},
-//		/*HP4*/		{c233_ImgPixelBlanco, c066_NameCurvedHP_R, c067_NameTightHP_R, c068_NameStraightHP_R, c069_NameTinyHP_R,
-//					c070_NameTinyCurvedHP_R, c071_NameDoubleHP_R, c072_NameOvalHP_R, c073_NameOvalCurvedHP_R, c074_NameDeltaHP_R},
-//};
+const uint32 APP_GUI_TRT_SCR_HP_MODEL_TEXT_IMG[APP_GUI_MAXNUM_HP][HP_CRYO_NUM_HP_MODELS] =
+{
+                //Undefined, Curved, Tight, Straight, Tiny, Tiny Curved, Double, Oval, Oval Curved, Angled
+        /*HP1*/		{c233_ImgPixelBlanco, c066_NameCurvedHP_L, c067_NameTightHP_L, c068_NameStarightHP_L, c069_NameTinyHP_L,
+                    c070_NameTinyCurvedHP_L, c071_NameDoubleHP_L, c072_NameOvalHP_L, c073_NameOvalCurvedHP_L, c074_NameDeltaHP_L},
+        /*HP2*/		{c233_ImgPixelBlanco, c066_NameCurvedHP_R, c067_NameTightHP_R, c068_NameStraightHP_R, c069_NameTinyHP_R,
+                    c070_NameTinyCurvedHP_R, c071_NameDoubleHP_R, c072_NameOvalHP_R, c073_NameOvalCurvedHP_R, c074_NameDeltaHP_R},
+        /*HP3*/		{c233_ImgPixelBlanco, c066_NameCurvedHP_L, c067_NameTightHP_L, c068_NameStarightHP_L, c069_NameTinyHP_L,
+                    c070_NameTinyCurvedHP_L, c071_NameDoubleHP_L, c072_NameOvalHP_L, c073_NameOvalCurvedHP_L, c074_NameDeltaHP_L},
+        /*HP4*/		{c233_ImgPixelBlanco, c066_NameCurvedHP_R, c067_NameTightHP_R, c068_NameStraightHP_R, c069_NameTinyHP_R,
+                    c070_NameTinyCurvedHP_R, c071_NameDoubleHP_R, c072_NameOvalHP_R, c073_NameOvalCurvedHP_R, c074_NameDeltaHP_R},
+};
 
-//const uint32 APP_GUI_TRT_SCR_HP_MODEL_TEXT_WIDGETS[APP_GUI_MAXNUM_HP] =
-//{
-//		imgModelTextHP1, imgModelTextHP2, imgModelTextHP3, imgModelTextHP4
-//};
+const uint32 APP_GUI_TRT_SCR_HP_MODEL_TEXT_WIDGETS[APP_GUI_MAXNUM_HP] =
+{
+        imgModelTextHP1, imgModelTextHP2, imgModelTextHP3, imgModelTextHP4
+};
 
-//const uint32 APP_GUI_TRT_SCR_BUT_SEL_TIME_WIDGETS[APP_GUI_MAXNUM_HP] =
-//{
-//		butSelectTimeHP1, butSelectTimeHP2, butSelectTimeHP3, butSelectTimeHP4,
-//};
+const uint32 APP_GUI_TRT_SCR_BUT_SEL_TIME_WIDGETS[APP_GUI_MAXNUM_HP] =
+{
+        butSelectTimeHP1, butSelectTimeHP2, butSelectTimeHP3, butSelectTimeHP4,
+};
 
-//const uint32 APP_GUI_TRT_SCR_BUT_CHNG_TIME_TO_TEMP_WIDGETS[APP_GUI_MAXNUM_HP] =
-//{
-//		butVwrTemperatureHP1, butVwrTemperatureHP2, butVwrTemperatureHP3, butVwrTemperatureHP4
-//};
+const uint32 APP_GUI_TRT_SCR_BUT_CHNG_TIME_TO_TEMP_WIDGETS[APP_GUI_MAXNUM_HP] =
+{
+        butVwrTemperatureHP1, butVwrTemperatureHP2, butVwrTemperatureHP3, butVwrTemperatureHP4
+};
 
-//const uint32 APP_GUI_TRT_SCR_NUM_VWR_TIME_WIDGETS[APP_GUI_MAXNUM_HP] =
-//{
-//		numVwrTimeHP1, numVwrTimeHP2, numVwrTimeHP3, numVwrTimeHP4,
-//};
+const uint32 APP_GUI_TRT_SCR_NUM_VWR_TIME_WIDGETS[APP_GUI_MAXNUM_HP] =
+{
+        numVwrTimeHP1, numVwrTimeHP2, numVwrTimeHP3, numVwrTimeHP4,
+};
 
-//const uint32 APP_GUI_TRT_SCR_NUM_VWE_RESUCCTIONS_NUM_WIDGETS [APP_GUI_MAXNUM_HP] =
-//{
-//		numVwrResucctionCountHP1, numVwrResucctionCountHP2, numVwrResucctionCountHP3, numVwrResucctionCountHP4,
-//};
+const uint32 APP_GUI_TRT_SCR_NUM_VWE_RESUCCTIONS_NUM_WIDGETS [APP_GUI_MAXNUM_HP] =
+{
+        numVwrResucctionCountHP1, numVwrResucctionCountHP2, numVwrResucctionCountHP3, numVwrResucctionCountHP4,
+};
 
 //const uint32 APP_GUI_TRT_SCR_BUT_TIME_IMG[App_GUI_Max_Time_but_states][App_GUI_widget_Features] =
 //{

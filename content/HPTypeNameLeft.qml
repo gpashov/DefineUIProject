@@ -88,6 +88,9 @@ Item {
     }
     states: [
         State {
+            name: "BlankState"
+        },
+        State {
             name: "CurvedState"
 
             PropertyChanges {
@@ -164,6 +167,6 @@ Item {
 
 /*##^##
 Designer {
-    D{i:0;height:0;width:0}
+    D{i:0;height:37;width:102}
 }
 ##^##*/
