@@ -42,8 +42,8 @@ Item {
 
     ThreeStateButton {
         id: temperatureButton
-        x: 65
-        y: 123
+        x: timerButton.x
+        y: timerButton.y
         imageSourcePressed: "images/c048_RelojTemporizadorPress.png"
         imageSourceReleased: "images/c049_RelojTemporizadorRls.png"
         imageSourceDisabled: "images/c050_RelojTemporizadorMarcaAgua.png"
@@ -184,6 +184,8 @@ Item {
 
             PropertyChanges {
                 target: imageButtonHp1
+                x: 150
+                y: 193
                 visible: true
             }
         },
@@ -202,7 +204,7 @@ Item {
 
             PropertyChanges {
                 target: colorIndicator
-                x: -24
+                x: -25
                 y: 162
                 state1ImageSource: "images/c013_MenuTrtHP2_Aro1.png"
                 state2ImageSource: "images/c013_MenuTrtHP2_Aro2.png"
@@ -250,6 +252,7 @@ Item {
 
             PropertyChanges {
                 target: imageButtonHp2
+                x: 5
                 visible: true
             }
         },
@@ -330,6 +333,7 @@ Item {
 
             PropertyChanges {
                 target: imageButtonHp3
+                x: 152
                 visible: true
             }
         },
@@ -364,8 +368,8 @@ Item {
 
             PropertyChanges {
                 target: colorIndicator
-                x: -22
-                y: -10
+                x: -25
+                y: -13
                 state2ImageSource: "images/c029_MenuTrtHP4_Aro2.png"
                 state1ImageSource: "images/c029_MenuTrtHP4_Aro1.png"
             }
@@ -415,6 +419,7 @@ Item {
 
             PropertyChanges {
                 target: imageButtonHp4
+                x: 6
                 visible: true
             }
         }
@@ -448,10 +453,10 @@ Item {
                                           }
 
                                           switch(hpIndex) {
-                                              case AppEnumsNs.APP_GUI_HP1_ID: if(state === "hp1State") { hPTypeNameLeft = newState; } break;
-                                              case AppEnumsNs.APP_GUI_HP2_ID: if(state === "hp2State") { hPTypeNameLeft = newState; } break;
-                                              case AppEnumsNs.APP_GUI_HP3_ID: if(state === "hp3State") { hPTypeNameLeft = newState; } break;
-                                              case AppEnumsNs.APP_GUI_HP4_ID: if(state === "hp4State") { hPTypeNameLeft = newState; } break;
+                                              case AppEnumsNs.APP_GUI_HP1_ID: if(state === "hp1State") { hPTypeNameLeft.state = newState; } break;
+                                              case AppEnumsNs.APP_GUI_HP2_ID: if(state === "hp2State") { hPTypeNameLeft.state = newState; } break;
+                                              case AppEnumsNs.APP_GUI_HP3_ID: if(state === "hp3State") { hPTypeNameLeft.state = newState; } break;
+                                              case AppEnumsNs.APP_GUI_HP4_ID: if(state === "hp4State") { hPTypeNameLeft.state = newState; } break;
                                               default: break;
                                           }
                                       }
@@ -505,10 +510,10 @@ Item {
         target: wdgWpr
         onTreatmentTimerSet: (hpIndex, newTime) => {
                                      switch(hpIndex) {
-                                         case AppEnumsNs.APP_GUI_HP1_ID: if(state === "hp1State") { hpResuctionCount.text = newTime; } break;
-                                         case AppEnumsNs.APP_GUI_HP2_ID: if(state === "hp2State") { hpResuctionCount.text = newTime; } break;
-                                         case AppEnumsNs.APP_GUI_HP3_ID: if(state === "hp3State") { hpResuctionCount.text = newTime; } break;
-                                         case AppEnumsNs.APP_GUI_HP4_ID: if(state === "hp4State") { hpResuctionCount.text = newTime; } break;
+                                         case AppEnumsNs.APP_GUI_HP1_ID: if(state === "hp1State") { timeRemaining.time = newTime; } break;
+                                         case AppEnumsNs.APP_GUI_HP2_ID: if(state === "hp2State") { timeRemaining.time = newTime; } break;
+                                         case AppEnumsNs.APP_GUI_HP3_ID: if(state === "hp3State") { timeRemaining.time = newTime; } break;
+                                         case AppEnumsNs.APP_GUI_HP4_ID: if(state === "hp4State") { timeRemaining.time = newTime; } break;
                                          default: break;
                                      }
                                  }
@@ -531,10 +536,10 @@ Item {
         target: wdgWpr
         onResuctionCountChanged: (hpIndex, resuctionCount) => {
                                      switch(hpIndex) {
-                                         case AppEnumsNs.APP_GUI_HP1_ID: if(state === "hp1State") { hpResuctionCount.text = resuctionCount; } break;
-                                         case AppEnumsNs.APP_GUI_HP2_ID: if(state === "hp2State") { hpResuctionCount.text = resuctionCount; } break;
-                                         case AppEnumsNs.APP_GUI_HP3_ID: if(state === "hp3State") { hpResuctionCount.text = resuctionCount; } break;
-                                         case AppEnumsNs.APP_GUI_HP4_ID: if(state === "hp4State") { hpResuctionCount.text = resuctionCount; } break;
+                                         case AppEnumsNs.APP_GUI_HP1_ID: if(state === "hp1State") { hpResuctionCount.resucctionCount = resuctionCount; } break;
+                                         case AppEnumsNs.APP_GUI_HP2_ID: if(state === "hp2State") { hpResuctionCount.resucctionCount = resuctionCount; } break;
+                                         case AppEnumsNs.APP_GUI_HP3_ID: if(state === "hp3State") { hpResuctionCount.resucctionCount = resuctionCount; } break;
+                                         case AppEnumsNs.APP_GUI_HP4_ID: if(state === "hp4State") { hpResuctionCount.resucctionCount = resuctionCount; } break;
                                          default: break;
                                      }
                                  }
@@ -606,8 +611,6 @@ Item {
     }
 }
 
-/*##^##
-Designer {
-    D{i:0;formeditorZoom:1.66;height:338;width:287}D{i:4;invisible:true}
-}
-##^##*/
+
+
+

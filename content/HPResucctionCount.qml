@@ -3,6 +3,7 @@ import QtQuick.Controls 2.15
 Item {
     width: resuccionIndicadorBackgroundImg.width
     height: resuccionIndicadorBackgroundImg.height
+    property alias resucctionCount: hpResucctionCount.text
 
     Image {
         id: resuccionIndicadorBackgroundImg

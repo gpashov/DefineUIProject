@@ -5,6 +5,7 @@ Item {
     id: item1
     width: trtRunningImg.width
     height: trtRunningImg.height
+    property alias time: timeRemainingTxt.text
 
     Image {
         id: trtRunningImg
