@@ -1,5 +1,6 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
+import DefineUIProject 1.0
 import define.enums 1.0
 
 Item {
@@ -8,7 +9,6 @@ Item {
     height: backgraoundImage.height
     property alias item1State: item1.state
     property alias colorIndicatorState: colorIndicator.state
-    state: "opened"
     property alias backgraoundImageSource: backgraoundImage.source
 
     Image {
@@ -29,6 +29,15 @@ Item {
         y: 45
         imageSourceReleased: "images/c038_BotonPlayMarcaAgua.png"
         imageSourcePressed: "images/c036_BotonPlayPress.png"
+        button.onReleased: {
+            switch (parent.state) {
+            case "hp1State": console.log("1 btn released - index ", AppEnumsNs.APP_GUI_HP1_ID); cbkWpr.butCtrlPnlPlay(AppEnumsNs.APP_GUI_HP1_ID); break;
+            case "hp2State": console.log("2 btn released - index ", AppEnumsNs.APP_GUI_HP2_ID); cbkWpr.butCtrlPnlPlay(AppEnumsNs.APP_GUI_HP2_ID); break;
+            case "hp3State": console.log("3 btn released - index ", AppEnumsNs.APP_GUI_HP3_ID); cbkWpr.butCtrlPnlPlay(AppEnumsNs.APP_GUI_HP3_ID); break;
+            case "hp4State": console.log("4 btn released - index ", AppEnumsNs.APP_GUI_HP4_ID); cbkWpr.butCtrlPnlPlay(AppEnumsNs.APP_GUI_HP4_ID); break;
+            default: break;
+            }
+        }
     }
 
     ThreeStateButton {

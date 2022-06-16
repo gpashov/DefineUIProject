@@ -15,12 +15,9 @@ Rectangle {
     width: Constants.width
     height: Constants.height
     visible: true
-
     color: Constants.backgroundColor
-    property alias mainMenuWarningsButtonState: mainMenu.warningsButtonState
-    property alias systemWarningsPopupVisible: systemWarningsPopup.visible
-    state: "initialState" // TODO: initialize to loadingState
 
+    // TODO: initialize to loadingState
     Image {
         id: c001_FondoLogo
         source: "images/c001_FondoLogo.png"
@@ -197,6 +194,7 @@ Rectangle {
         x: 264
         y: 289
         visible: false
+        onVisibleChanged: mainMenu.warningsButtonState = visible ? true : false
     }
 }
 

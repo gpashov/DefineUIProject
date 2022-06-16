@@ -20,7 +20,7 @@ public:
     Q_INVOKABLE void butData();
     Q_INVOKABLE void butWarningOn ();
     Q_INVOKABLE void butWarningOff ();
-    Q_INVOKABLE void butCtrlPnlPlay();
+    Q_INVOKABLE void butCtrlPnlPlay(EAppGUI_HPsIDs hpId);
     Q_INVOKABLE void swCtrlPnlTstVacOn();
     Q_INVOKABLE void swCtrlPnlTstVacOff();
     Q_INVOKABLE void butSelectTime();

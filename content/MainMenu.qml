@@ -12,7 +12,7 @@ Item {
     property alias codesButtonState: codesButton.state
     property alias languagesButtonState: languagesButton.state
     property alias configurationButtonState: configurationButton.state
-    property alias warningsButtonState: warningsButton.state
+    property alias warningsButtonState: warningsButton.switchState
 
     Image {
         id: openMenuImage
@@ -37,7 +37,6 @@ Item {
         y: 90
         source: "images/b008_SwMenuRls.png"
         fillMode: Image.PreserveAspectFit
-
         Button {
             id: closedMenuButton
             anchors.fill: parent
@@ -95,16 +94,16 @@ Item {
         interactiveArea.onReleased: cbkWpr.butConfig()
     }
 
-    MainMenuButtonTemplate
+    CustomSwitch
     {
         id: warningsButton
         x: 439
         y: 63
-        buttonNormalSource: "images/b028_BotonAvisosMarcaAgua1.png"
-        buttonPressedSource: "images/b029_BotonAvisosPress.png"
-        buttonReleasedSource: "images/b030_BotonAvisosRls.png"
-        buttonInactiveSource: "images/b028_BotonAvisosMarcaAgua.png"
-        interactiveArea.onReleased: cbkWpr.butWarningOn() // TODO: implement call to butWarningOff
+        offStateImageSource: "images/b030_BotonAvisosRls.png"
+        onStateImageSource: "images/b029_BotonAvisosPress.png"
+        switchState: false
+        onOnAction: cbkWpr.butWarningOn()
+        onOffAction: cbkWpr.butWarningOff()
     }
 
     Image {

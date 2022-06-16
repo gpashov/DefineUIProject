@@ -1180,28 +1180,27 @@ void AppGUIhandleRecommendationpopUp( uint8 show, uint8 selTrtDot, cAppGUIfullBo
 
 void AppGUIhandleWarningPopUp( uint8 show)
 {
-//    /* Según si se quiere mostrar o no */
-//    if( show)
-//    {
-//        ERR_erase_NewWarningFlag();
-//        GUIactivePopUp(APP_GUI_AVISOS_POPUP_WIDGET_SCREENS[AppGUIdata.screen]);
+    /* Según si se quiere mostrar o no */
+    if( show)
+    {
+        ERR_erase_NewWarningFlag();
+        wdgWpr.GUIactiveWarningsPopUp();
 
-//        GUIsetWidgetVisibility( APP_GUI_AVISOS_WIDGETS[AppGUIdata.screen][App_GUI_Wng_Nivel_Agua_Bajo], AppGUIdata.AppGUI_WarningHandler.Flag_Wng_Nivel_Agua_Bajo);
-//        GUIsetWidgetVisibility( APP_GUI_AVISOS_WIDGETS[AppGUIdata.screen][App_GUI_Wng_Nivel_Agua_Medio], AppGUIdata.AppGUI_WarningHandler.Flag_Wng_Nivel_Agua_Medio);
-//        GUIsetWidgetVisibility( APP_GUI_AVISOS_WIDGETS[AppGUIdata.screen][App_GUI_Wng_Temp_Amb], AppGUIdata.AppGUI_WarningHandler.Flag_Wng_Temp_Amb);
-//        GUIsetWidgetVisibility( APP_GUI_AVISOS_WIDGETS[AppGUIdata.screen][App_GUI_Wng_RFID], AppGUIdata.AppGUI_WarningHandler.Flag_Wng_RFID);
-//        GUIsetWidgetVisibility( APP_GUI_AVISOS_WIDGETS[AppGUIdata.screen][App_GUI_Wng_RTC], AppGUIdata.AppGUI_WarningHandler.Flag_Wng_RTC);
-//        GUIsetWidgetVisibility( APP_GUI_AVISOS_WIDGETS[AppGUIdata.screen][App_GUI_Wng_Filtro_Aire], AppGUIdata.AppGUI_WarningHandler.Flag_Wng_Filtro_Aire);
-//    }
-//    else
-//    {
-//        GUIdisablePopUp(APP_GUI_AVISOS_POPUP_WIDGET_SCREENS[AppGUIdata.screen]);
+        wdgWpr.GUIWarningIconActivate( App_GUI_Wng_Nivel_Agua_Bajo, AppGUIdata.AppGUI_WarningHandler.Flag_Wng_Nivel_Agua_Bajo);
+        wdgWpr.GUIWarningIconActivate( App_GUI_Wng_Nivel_Agua_Medio, AppGUIdata.AppGUI_WarningHandler.Flag_Wng_Nivel_Agua_Medio);
+        wdgWpr.GUIWarningIconActivate( App_GUI_Wng_Temp_Amb, AppGUIdata.AppGUI_WarningHandler.Flag_Wng_Temp_Amb);
+        wdgWpr.GUIWarningIconActivate( App_GUI_Wng_RFID, AppGUIdata.AppGUI_WarningHandler.Flag_Wng_RFID);
+        wdgWpr.GUIWarningIconActivate( App_GUI_Wng_RTC, AppGUIdata.AppGUI_WarningHandler.Flag_Wng_RTC);
+        wdgWpr.GUIWarningIconActivate( App_GUI_Wng_Filtro_Aire, AppGUIdata.AppGUI_WarningHandler.Flag_Wng_Filtro_Aire);
+    }
+    else
+    {
+        wdgWpr.GUIdisableWarningsPopUp();
 //        /* Para bloquear el boton de idiomas*/
 //        AppGUIhandleMainMenu(AppGUIdata.mainMenuHdlr.isUp, AppGUIdata.screen);
-//    }
+    }
 	
 //    if (AppGUIdata.mainMenuHdlr.isUp) GUIsetWidgetEnable( APP_GUI_AVISOS_SWITCH_WIDGET_SCREENS[AppGUIdata.screen], 1);
-	
 }
 
 void AppGUIhandleMainMenu( uint8 show)
@@ -2766,7 +2765,7 @@ uint8 AppGUIisPopUpActive( void)
         if( AppGUIIsPopupDisplayed((cAppGUIwidgetIDlist)APP_GUI_TRT_SCR_POPUP_WIDGET_LIST[i]) != 0){ return 1;}
     }
 	
-//	/* Si llegamos aqui no hay ningun popUp activo */
+    /* Si llegamos aqui no hay ningun popUp activo */
     return 0;
 }
 

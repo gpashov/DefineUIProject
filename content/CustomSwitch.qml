@@ -5,10 +5,13 @@ Item {
     id: item1
     width: switchOffImg.width
     height: switchOffImg.height
+    state: "offState"
     property alias offStateImageSource: switchOffImg.source
     property alias onStateImageSource: switchOnImg.source
-    property bool switchState: false
+    property alias switchState: switchButton.switchState
 
+    signal onAction
+    signal offAction
 
     Image {
         id: switchOffImg
@@ -29,17 +32,28 @@ Item {
         width: switchOffImg.width
         height: switchOffImg.height
         opacity: 0
-        onReleased: switchState = !switchState
+        property bool switchState: false
+        onReleased: {
+            // Change switch state
+//            switchState = !switchState
+            // Execute switch action by emitting a signal
+            if (switchState == false /*true*/ ) {
+                onAction()
+            }
+            else {
+                offAction()
+            }
+        }
     }
 
     states: [
         State {
             name: "offState"
-            when: !item1.switchState
+            when: !switchButton.switchState
         },
         State {
             name: "onState"
-            when: item1.switchState
+            when: switchButton.switchState
 
             PropertyChanges {
                 target: switchOnImg
@@ -53,3 +67,9 @@ Item {
         }
     ]
 }
+
+/*##^##
+Designer {
+    D{i:0;height:86;width:86}
+}
+##^##*/

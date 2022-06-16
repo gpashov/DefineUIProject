@@ -80,11 +80,7 @@ Item {
         }
     ]
 
-    onVisibleChanged: cbkWpr.popUpVisibleChanged(AppEnumsNs.popUpTstVacSmall, visible)
+    onVisibleChanged: cbkWpr.popUpVisibleChanged(AppEnumsNs.popUpTstVacSmall, visible) // TODO There seems to be a problem. The enumerator value is always 0.
 }
 
-/*##^##
-Designer {
-    D{i:0;height:77;width:219}
-}
-##^##*/
+

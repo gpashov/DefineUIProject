@@ -141,7 +141,7 @@ namespace AppEnumsNs
 
         App_GUI_Num_Max_Avisos
     }cAppGUImachineWarnings;
-//    Q_ENUM_NS(EAppGUImachineWarnings)
+    Q_ENUM_NS(EAppGUImachineWarnings)
 
     typedef enum EApp_GUI_differentLanguages
     {

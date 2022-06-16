@@ -40,6 +40,9 @@ public:
     void GUIsetImgViewerPosition(uint32 id,uint16 posx,uint16 posy);
     void GUIsetHpControlPanelImgButton(uint32 id,EAppGUIimageIDlist idImg);
     void GUISetTreatmentTimerBackground(EAppGUI_HPsIDs hpIndex, bool isSelectable);
+    void GUIactiveWarningsPopUp();
+    void GUIdisableWarningsPopUp();
+    void GUIWarningIconActivate(EAppGUImachineWarnings warningId, bool isActive);
 
 
 signals:
@@ -59,16 +62,16 @@ signals:
     void controlPanelHideButtonEnabled(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool isEnabled);
 
 
-    // Text widgets update signals
+    // Calculator
     void calcNumberChanged(QString text);
+
+    // Configuration
     void confModelChanged(QString text);
     void confVersionChanged(QString text);
 
     // Buttons images update signals
     void hpControlPanelButtonImagesSet(AppEnumsNs::EAppGUI_HPsIDs hpIndex, AppEnumsNs::EAppGUIimageIDlist idImg);
     void hpControlPanelModelTextSet(AppEnumsNs::EAppGUI_HPsIDs hpIndex, AppEnumsNs::EAppGUIimageIDlist idImg);
-
-    // Switches update signals
 
     // Main menu
     void mainMenuOpened(bool menuOpened);
@@ -99,6 +102,9 @@ signals:
     void indicatorVacuumVisibilityChanged(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool newVisibility);
     void indicatorCoolingVisibilityChanged(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool newVisibility);
 
+    // Popups
+    void warningsPopupDisplayed(bool isDisplayed);
+    void warningActivated(AppEnumsNs::EAppGUImachineWarnings warningId, bool isActivated);
 
 private:
     void float_to_string(double f, char r[], uint8 dec);

@@ -1408,6 +1408,21 @@ void WidgetsWrapper::GUISetTreatmentTimerBackground(EAppGUI_HPsIDs hpIndex, bool
     emit treatmentTimerBackgroundSet(hpIndex, isSelectable);
 }
 
+void WidgetsWrapper::GUIactiveWarningsPopUp()
+{
+    emit warningsPopupDisplayed(true);
+}
+
+void WidgetsWrapper::GUIdisableWarningsPopUp()
+{
+    emit warningsPopupDisplayed(false);
+}
+
+void WidgetsWrapper::GUIWarningIconActivate(EAppGUImachineWarnings warningId, bool isActive)
+{
+    emit warningActivated(warningId, isActive);
+}
+
 QString WidgetsWrapper::calcNumber()
 {
     return calcNumberStr;

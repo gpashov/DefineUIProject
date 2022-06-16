@@ -74,17 +74,25 @@ void CallbackWrapper::butData()
 
 void CallbackWrapper::butWarningOn()
 {
-
+    CBKbutWarningOnF();
 }
 
 void CallbackWrapper::butWarningOff()
 {
-
+    CBKbutWarningOffF();
 }
 
-void CallbackWrapper::butCtrlPnlPlay()
+void CallbackWrapper::butCtrlPnlPlay(EAppGUI_HPsIDs hpId)
 {
+    switch(hpId) {
+    case APP_GUI_HP1_ID:argWidget.id = butCtrlPnlPlayHP1; break;
+    case APP_GUI_HP2_ID:argWidget.id = butCtrlPnlPlayHP2; break;
+    case APP_GUI_HP3_ID:argWidget.id = butCtrlPnlPlayHP3; break;
+    case APP_GUI_HP4_ID:argWidget.id = butCtrlPnlPlayHP4; break;
+    default: argWidget.id = APP_GUI_NUM_WIDGETS; break;
+    }
 
+    CBKbutCtrlPnlPlayF(&argWidget);
 }
 
 void CallbackWrapper::swCtrlPnlTstVacOn()

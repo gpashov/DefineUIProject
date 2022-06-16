@@ -231,79 +231,83 @@ void CBKbutDataF( void *widget)
 //	if( isOk == 0){ AppGUIchangeScreen( APP_GUI_LANGUAGES_SCREEN);}
 }
 
-void CBKbutWarningOnF ( void *widget)
+void CBKbutWarningOnF ()
 {
-//	stWidget *popUp;
+// TODO Check if the popup is hidden
+//    stWidget *popUp;
 
-//	popUp = GUIgetWidget( APP_GUI_AVISOS_POPUP_WIDGET_SCREENS[AppGUIdata.screen]);
-//	if( popUp->enable == 0)		AppGUIhandleWarningPopUp( 1);
+//    popUp = GUIgetWidget( APP_GUI_AVISOS_POPUP_WIDGET_SCREENS[AppGUIdata.screen]);
+//    if( popUp->enable == 0)
+        AppGUIhandleWarningPopUp( 1);
 }
 
-void CBKbutWarningOffF ( void *widget)
+void CBKbutWarningOffF ()
 {
-//	stWidget *popUp;
+// TODO Check if the popup is shown
+//    stWidget *popUp;
 
-//	popUp = GUIgetWidget( APP_GUI_AVISOS_POPUP_WIDGET_SCREENS[AppGUIdata.screen]);
-//	if ( popUp->enable != 0)	AppGUIhandleWarningPopUp( 0);
+//    popUp = GUIgetWidget( APP_GUI_AVISOS_POPUP_WIDGET_SCREENS[AppGUIdata.screen]);
+//    if ( popUp->enable != 0)
+        AppGUIhandleWarningPopUp( 0);
 }
 
 void CBKbutCtrlPnlPlayF( void *widget)
 {
-//	//RFID_time_ref[0] = TICKS_GetTicks();	//DEBUG	-	Tiempo de referencia desde el inicio de pulsar para RFID hasta el final del procedimiento
-//	//RFID_time_ref[1] = TICKS_GetTicks();	//DEBUG	-	Tiempo de referencia desde l inicio de pulsar para RFID hasta comienzo del proceso en el modulo RFID
+    //RFID_time_ref[0] = TICKS_GetTicks();	//DEBUG	-	Tiempo de referencia desde el inicio de pulsar para RFID hasta el final del procedimiento
+    //RFID_time_ref[1] = TICKS_GetTicks();	//DEBUG	-	Tiempo de referencia desde l inicio de pulsar para RFID hasta comienzo del proceso en el modulo RFID
 	
-//	uint8 HPindex;
-//	tHPcryoData *HP;
-//	tPRFdata *PRF;
+    uint8 HPindex;
+    tHPcryoData *HP;
+    tPRFdata *PRF;
 	
-//	/* Casteamos al tipo widget */
-//	stWidget *w = ( stWidget *)widget;
+    /* Casteamos al tipo widget */
+    stWidget *w = ( stWidget *)widget;
 	
-//	/* Obtenemos el indice del HP en función del widget */
-//	switch( w->id)
-//	{
-//		case butCtrlPnlPlayHP1: HPindex = 0; break;
-//		case butCtrlPnlPlayHP2: HPindex = 1; break;
-//		case butCtrlPnlPlayHP3: HPindex = 2; break;
-//		case butCtrlPnlPlayHP4: HPindex = 3; break;
-//		default: return;
-//	}
+    /* Obtenemos el indice del HP en función del widget */
+    switch( w->id)
+    {
+        case butCtrlPnlPlayHP1: HPindex = 0; break;
+        case butCtrlPnlPlayHP2: HPindex = 1; break;
+        case butCtrlPnlPlayHP3: HPindex = 2; break;
+        case butCtrlPnlPlayHP4: HPindex = 3; break;
+        default: return;
+    }
 	
-//	if (HPcryoGetFromSlot( APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
-//	{
-//		if ((AppGUIisTrtRunning( HPindex, NULL)) && (HPcryoTrtVacumRetryAvailable( HP, PRF)))
-//		{
-//			HPcryoStop(1, HP, PRF);
-//			AppGUIdata.slot[HPindex].VwrTemperatureOrTime = 0;
-//			return;
-//		}
-//	}
+    if (HPcryoGetFromSlot( (cPRFslot)APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
+    {
+        if ((AppGUIisTrtRunning( HPindex, NULL)) && (HPcryoTrtVacumRetryAvailable( HP, PRF)))
+        {
+            HPcryoStop(1, HP, PRF);
+            AppGUIdata.slot[HPindex].VwrTemperatureOrTime = 0;
+            return;
+        }
+    }
 	
-//	/* Lanzamos tratamiento si esta todo seleccionado correctamente y hay HP */
-//	if( HPcryoGetFromSlot( APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF) &&
-//		AppGUIdata.slot[HPindex].selTime != APP_GUI_NO_TIME_SELECTED &&
-//		AppGUIdata.slot[HPindex].selVacLvl != APP_GUI_NO_VAC_LVL_SELECTED &&
-//		AppGUIdata.slot[HPindex].selTrtDot != APP_GUI_NO_TRT_DOT_SELECTED &&
-//		AppGUIdata.slot[HPindex].selTrtArea != AppGUIfullBodyNO_AREA)
-//	{
-//		/* Hay manípulo y tiene tratamiento configurado */
+    /* Lanzamos tratamiento si esta todo seleccionado correctamente y hay HP */
+    if( HPcryoGetFromSlot( (cPRFslot)APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF) &&
+        AppGUIdata.slot[HPindex].selTime != APP_GUI_NO_TIME_SELECTED &&
+        AppGUIdata.slot[HPindex].selVacLvl != APP_GUI_NO_VAC_LVL_SELECTED &&
+        AppGUIdata.slot[HPindex].selTrtDot != APP_GUI_NO_TRT_DOT_SELECTED &&
+        AppGUIdata.slot[HPindex].selTrtArea != AppGUIfullBodyNO_AREA)
+    {
+        /* Hay manípulo y tiene tratamiento configurado */
 		
-//		HP->trt.TrtParameters.mode = AppGUIdata.slot[HPindex].TrtMode;
-//		HP->trt.TrtParameters.reqLabel = 1;
-//		HP->trt.TrtParameters.time = AppGUIdata.slot[HPindex].selTime;
-//		HP->trt.TrtParameters.useDfltAlarmCfg = 1;
-//		HP->trt.TrtParameters.vacLvl = AppGUIdata.slot[HPindex].selVacLvl;
+        HP->trt.TrtParameters.mode = AppGUIdata.slot[HPindex].TrtMode;
+        HP->trt.TrtParameters.reqLabel = 1;
+        HP->trt.TrtParameters.time = AppGUIdata.slot[HPindex].selTime;
+        HP->trt.TrtParameters.useDfltAlarmCfg = 1;
+        HP->trt.TrtParameters.vacLvl = AppGUIdata.slot[HPindex].selVacLvl;
 		
-//		HP->trt.TrtRequested = 1;
+        HP->trt.TrtRequested = 1;
 		
-////		HPcryoTrtStartDflt(	AppGUIdata.slot[HPindex].TrtMode,
-////							AppGUIdata.slot[HPindex].selTime,
-////							AppGUIdata.slot[HPindex].selVacLvl, 1, 1, HP, PRF);
-//	}
-//	else
-//	{
-//		/* Posible pitido indicando que no se ha podido iniciar */
-//	}
+//		HPcryoTrtStartDflt(	AppGUIdata.slot[HPindex].TrtMode,
+//							AppGUIdata.slot[HPindex].selTime,
+//							AppGUIdata.slot[HPindex].selVacLvl, 1, 1, HP, PRF);
+    }
+    else
+    {
+        /* Posible pitido indicando que no se ha podido iniciar */
+    }
 }
 
 void CBKswCtrlPnlTstVacOnF( void *widget)
