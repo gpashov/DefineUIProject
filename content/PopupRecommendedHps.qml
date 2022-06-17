@@ -1,6 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import DefineUIProject 1.0
+import define.enums 1.0
 
 Item {
     id: item1
@@ -96,7 +97,8 @@ Item {
         fillMode: Image.PreserveAspectFit
     }
 
-    onVisibleChanged: cbkWpr.popupVisibleChanged(AppEnumsNs.popUpRecomm, visible)
+    // TODO Problem: AppEnumsNs.popUpRecomm gives undefined value
+    onVisibleChanged: { cbkWpr.popupVisibleChanged(AppEnumsNs.popUpRecomm, visible); console.log("AppEnumsNs.popUpRecomm: ", AppEnumsNs.popUpRecomm) }
 }
 
 

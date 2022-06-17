@@ -764,6 +764,13 @@ uint16 WidgetsWrapper::GUIsetWidgetVisibility(uint32 id, uint8 vis)
 //    case imgVwrCPI,				//447
 
 //    case swFatigueFailBeep,
+
+    case imgInitScrNotificacion:
+    case imgTrtScrNotificacion:
+    case imgCalcScrNotificacion:
+    case imgCfgScrNotificacion:
+    case imgLanScrNotificacion: emit mainMenuWarningNotificationDisplayed(vis); break;
+
     default: /* Do nothing */ break;
     }
 
@@ -1361,6 +1368,10 @@ void WidgetsWrapper::GUIsetImgViewerImage(uint32 id, uint32 idImg)
     case imgModelTextHP2: emit hpControlPanelModelTextSet( AppEnumsNs::APP_GUI_HP2_ID, (EAppGUIimageIDlist)idImg ); break;
     case imgModelTextHP3: emit hpControlPanelModelTextSet( AppEnumsNs::APP_GUI_HP3_ID, (EAppGUIimageIDlist)idImg ); break;
     case imgModelTextHP4: emit hpControlPanelModelTextSet( AppEnumsNs::APP_GUI_HP4_ID, (EAppGUIimageIDlist)idImg ); break;
+    case imgColourCtrlPnlBckGndHP2: emit hpControlPanelColorSet(AppEnumsNs::APP_GUI_HP2_ID, (uint8)idImg); break;
+    case imgColourCtrlPnlBckGndHP1: emit hpControlPanelColorSet(AppEnumsNs::APP_GUI_HP1_ID, (uint8)idImg); break;
+    case imgColourCtrlPnlBckGndHP3: emit hpControlPanelColorSet(AppEnumsNs::APP_GUI_HP3_ID, (uint8)idImg); break;
+    case imgColourCtrlPnlBckGndHP4: emit hpControlPanelColorSet(AppEnumsNs::APP_GUI_HP4_ID, (uint8)idImg); break;
     default: break;
     }
 }

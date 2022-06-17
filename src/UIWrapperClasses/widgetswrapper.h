@@ -69,13 +69,10 @@ signals:
     void confModelChanged(QString text);
     void confVersionChanged(QString text);
 
-    // Buttons images update signals
-    void hpControlPanelButtonImagesSet(AppEnumsNs::EAppGUI_HPsIDs hpIndex, AppEnumsNs::EAppGUIimageIDlist idImg);
-    void hpControlPanelModelTextSet(AppEnumsNs::EAppGUI_HPsIDs hpIndex, AppEnumsNs::EAppGUIimageIDlist idImg);
-
     // Main menu
     void mainMenuOpened(bool menuOpened);
     void mainMenuEnabled(bool menuEnabled);
+    void mainMenuWarningNotificationDisplayed(bool isDisplayed);
 
     // Body areas
     void bodyZoomed(bool zoomed);
@@ -101,6 +98,9 @@ signals:
     void indicatorButtonVisibilityChanged(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool newVisibility);
     void indicatorVacuumVisibilityChanged(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool newVisibility);
     void indicatorCoolingVisibilityChanged(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool newVisibility);
+    void hpControlPanelButtonImagesSet(AppEnumsNs::EAppGUI_HPsIDs hpIndex, AppEnumsNs::EAppGUIimageIDlist idImg);
+    void hpControlPanelModelTextSet(AppEnumsNs::EAppGUI_HPsIDs hpIndex, AppEnumsNs::EAppGUIimageIDlist idImg);
+    void hpControlPanelColorSet(AppEnumsNs::EAppGUI_HPsIDs hpIndex, uint8 colorState);
 
     // Popups
     void warningsPopupDisplayed(bool isDisplayed);

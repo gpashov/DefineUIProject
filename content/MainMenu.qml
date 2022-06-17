@@ -110,6 +110,7 @@ Item {
         id: notificationImg
         x: 495
         y: 57
+        visible: false
         source: "images/b032_ImgNotificacion.png"
         fillMode: Image.PreserveAspectFit
     }
@@ -181,6 +182,11 @@ Item {
     Connections {
         target: wdgWpr
         onMainMenuOpened: (menuOpened) => state = menuOpened ? "openState" : "closedState"
+    }
+
+    Connections {
+        target: wdgWpr
+        onMainMenuWarningNotificationDisplayed: (isDisplayed) => notificationImg.visible = isDisplayed
     }
 }
 

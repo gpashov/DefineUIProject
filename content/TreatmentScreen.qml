@@ -233,7 +233,6 @@ Item {
         anchors.left: parent.left
         anchors.top: parent.top
         state: "hp1State"
-        colorIndicatorState: "State1"
     }
 
     HPControlPanel {
@@ -241,7 +240,6 @@ Item {
         anchors.right: parent.right
         anchors.top: parent.top
         state: "hp2State"
-        colorIndicatorState: "State2"
     }
 
     HPControlPanel {
@@ -249,7 +247,6 @@ Item {
         anchors.left: parent.left
         anchors.bottom: parent.bottom
         state: "hp3State"
-        colorIndicatorState: "State2"
     }
 
     HPControlPanel {
@@ -257,7 +254,6 @@ Item {
         anchors.right: parent.right
         anchors.bottom: parent.bottom
         state: "hp4State"
-        colorIndicatorState: "State1"
     }
 
     CustomSwitch {
@@ -316,8 +312,4 @@ Item {
 
 
 
-/*##^##
-Designer {
-    D{i:0;formeditorZoom:0.5}
-}
-##^##*/
+

@@ -7,9 +7,6 @@ Item {
     id: item1
     width: backgraoundImage.width
     height: backgraoundImage.height
-    property alias item1State: item1.state
-    property alias colorIndicatorState: colorIndicator.state
-    property alias backgraoundImageSource: backgraoundImage.source
 
     Image {
         id: backgraoundImage
@@ -31,10 +28,10 @@ Item {
         imageSourcePressed: "images/c036_BotonPlayPress.png"
         button.onReleased: {
             switch (parent.state) {
-            case "hp1State": console.log("1 btn released - index ", AppEnumsNs.APP_GUI_HP1_ID); cbkWpr.butCtrlPnlPlay(AppEnumsNs.APP_GUI_HP1_ID); break;
-            case "hp2State": console.log("2 btn released - index ", AppEnumsNs.APP_GUI_HP2_ID); cbkWpr.butCtrlPnlPlay(AppEnumsNs.APP_GUI_HP2_ID); break;
-            case "hp3State": console.log("3 btn released - index ", AppEnumsNs.APP_GUI_HP3_ID); cbkWpr.butCtrlPnlPlay(AppEnumsNs.APP_GUI_HP3_ID); break;
-            case "hp4State": console.log("4 btn released - index ", AppEnumsNs.APP_GUI_HP4_ID); cbkWpr.butCtrlPnlPlay(AppEnumsNs.APP_GUI_HP4_ID); break;
+            case "hp1State": cbkWpr.butCtrlPnlPlay(AppEnumsNs.APP_GUI_HP1_ID); break;
+            case "hp2State": cbkWpr.butCtrlPnlPlay(AppEnumsNs.APP_GUI_HP2_ID); break;
+            case "hp3State": cbkWpr.butCtrlPnlPlay(AppEnumsNs.APP_GUI_HP3_ID); break;
+            case "hp4State": cbkWpr.butCtrlPnlPlay(AppEnumsNs.APP_GUI_HP4_ID); break;
             default: break;
             }
         }
@@ -617,6 +614,19 @@ Item {
                                          default: break;
                                      }
                                  }
+    }
+
+    Connections {
+        target: wdgWpr
+        onHpControlPanelColorSet: (hpIndex, colorState) => {
+                                      switch(hpIndex) {
+                                          case AppEnumsNs.APP_GUI_HP1_ID: if(state === "hp1State") { colorIndicator.state = colorIndicator.states[colorState].name } break;
+                                          case AppEnumsNs.APP_GUI_HP2_ID: if(state === "hp2State") { colorIndicator.state = colorIndicator.states[colorState].name } break;
+                                          case AppEnumsNs.APP_GUI_HP3_ID: if(state === "hp3State") { colorIndicator.state = colorIndicator.states[colorState].name } break;
+                                          case AppEnumsNs.APP_GUI_HP4_ID: if(state === "hp4State") { colorIndicator.state = colorIndicator.states[colorState].name } break;
+                                          default: break;
+                                      }
+                                  }
     }
 }
 

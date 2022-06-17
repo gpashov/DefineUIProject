@@ -1,6 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import DefineUIProject 1.0
+import define.enums 1.0
 
 Item {
     width: Constants.width
@@ -56,7 +57,8 @@ Item {
         font.family: "Verdana"
     }
 
-    onVisibleChanged: popUpVisibleChanged(AppEnumsNs.popUpRFID, visible)
+    // TODO Problem: AppEnumsNs.popUpRFID gives undefined value
+    onVisibleChanged: { cbkWpr.popUpVisibleChanged(AppEnumsNs.popUpRFID, visible); console.log("AppEnumsNs.popUpRFID: ", AppEnumsNs.popUpRFID) }
 }
 
 /*##^##

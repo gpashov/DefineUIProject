@@ -1,5 +1,6 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
+import define.enums 1.0
 
 Item {
     width: time2SelImg.width
@@ -33,7 +34,8 @@ Item {
         imageSourceReleased: "images/c167_PopUpBoton70MinRls.png"
     }
 
-    onVisibleChanged: popUpVisibleChanged(AppEnumsNs.popUpTime, visible)
+    // TODO Problem: AppEnumsNs.popUpTime gives undefined value
+    onVisibleChanged: { cbkWpr.popUpVisibleChanged(AppEnumsNs.popUpTime, visible); console.log("AppEnumsNs.popUpTime: ", AppEnumsNs.popUpTime) }
 }
 
 /*##^##

@@ -1524,18 +1524,18 @@ uint8 AppGUIisTstVacRunning( uint8 HPindex, cHPcryoTestVacumStatus *status)
 
 uint8 AppGUIisHPconnected( uint8 HPindex, cHPcryoModels *model)
 {
-//    tPRFdata *PRF;
-//    tHPcryoData *HP;
+    tPRFdata *PRF;
+    tHPcryoData *HP;
 		
-//    /* Comprobamos si el slot indicado tiene un HP conectado */
-//    if( HPcryoGetFromSlot( APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
-//    {
-//        /* Hay HP, asignamos el modelo */
-//        if( model != NULL){ 	( *model) = HPcryoGetModel( HP, PRF);	}
+    /* Comprobamos si el slot indicado tiene un HP conectado */
+    if( HPcryoGetFromSlot( (cPRFslot)APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
+    {
+        /* Hay HP, asignamos el modelo */
+        if( model != NULL){ 	( *model) = HPcryoGetModel( HP, PRF);	}
 		
-//        /* Devolvemos cierto */
-//        return 1;
-//    }
+        /* Devolvemos cierto */
+        return 1;
+    }
 	
     /* Si llegamos aqui es que no hay HP */
     return 0;
@@ -2837,32 +2837,32 @@ uint8 AppGUIisWarningPopUpActive (void)		//Comprueba si el PopUp de avisos está 
 
 void AppGUIpanelCtrlColourBlink(void)
 {
-//	static uint8 ColourBlink = 0;
-//	static uint32 ColourBlinkTime = 0;
-//	uint8 HPindex, model;
+    static uint8 ColourBlink = 0;
+    static uint32 ColourBlinkTime = 0;
+    uint8 HPindex, model;
 	
-//	for(HPindex = 0; HPindex < APP_GUI_MAXNUM_HP; HPindex++)
-//	{
-//		if (TICKS_DiffTicks(ColourBlinkTime)>APP_GUI_MAX_TIME_BLINK_HP_CTRL_PANEL)
-//		{
-//			ColourBlink = !ColourBlink;
-//			ColourBlinkTime = TICKS_GetTicks();
-//		}
+    for(HPindex = 0; HPindex < APP_GUI_MAXNUM_HP; HPindex++)
+    {
+        if (TICKS_DiffTicks(ColourBlinkTime)>APP_GUI_MAX_TIME_BLINK_HP_CTRL_PANEL)
+        {
+            ColourBlink = !ColourBlink;
+            ColourBlinkTime = TICKS_GetTicks();
+        }
 		
-//		if( AppGUIdata.slot[HPindex].selTrtArea == AppGUIfullBodyNO_AREA &&
-//			AppGUIdata.slot[HPindex].selTrtDot == APP_GUI_NO_TRT_DOT_SELECTED &&
-//			AppGUIdata.trtZoneHdlr.selTrtArea != AppGUIfullBodyNO_AREA &&
-//			AppGUIdata.trtZoneHdlr.selTrtDot != APP_GUI_NO_TRT_DOT_SELECTED &&
-//			AppGUIisHPconnected( HPindex, &model) &&
-//			!AppGUIisInitRunning(HPindex))
-//		{
-//			GUIsetImgViewerImage(APP_GUI_TRT_SCR_CTRL_PNL_COLOUR_WIDGETS[HPindex], APP_GUI_TRT_SCR_CTRL_PNL_COLOUR_IMGS[HPindex][ColourBlink]);
-//		}
-//		else
-//		{
-//			GUIsetImgViewerImage(APP_GUI_TRT_SCR_CTRL_PNL_COLOUR_WIDGETS[HPindex], APP_GUI_TRT_SCR_CTRL_PNL_COLOUR_IMGS[HPindex][1]);
-//		}
-//	}
+        if( AppGUIdata.slot[HPindex].selTrtArea == AppGUIfullBodyNO_AREA &&
+            AppGUIdata.slot[HPindex].selTrtDot == APP_GUI_NO_TRT_DOT_SELECTED &&
+            AppGUIdata.trtZoneHdlr.selTrtArea != AppGUIfullBodyNO_AREA &&
+            AppGUIdata.trtZoneHdlr.selTrtDot != APP_GUI_NO_TRT_DOT_SELECTED &&
+            AppGUIisHPconnected( HPindex, (cHPcryoModels *)&model) &&
+            !AppGUIisInitRunning(HPindex))
+        {
+            wdgWpr.GUIsetImgViewerImage(APP_GUI_TRT_SCR_CTRL_PNL_COLOUR_WIDGETS[HPindex], ColourBlink);
+        }
+        else
+        {
+            wdgWpr.GUIsetImgViewerImage(APP_GUI_TRT_SCR_CTRL_PNL_COLOUR_WIDGETS[HPindex], 1);
+        }
+    }
 }
 
 void AppGUIapplyTimeRestriction( uint8 HPindex, tHPcryoData *HP, tPRFdata *PRF)
@@ -3057,9 +3057,9 @@ void AppGUIupdateWarningFlags(void)
 }
 void AppGUIwarningNotification (void)
 {
-//	GUIsetWidgetVisibility( APP_GUI_AVISOS_NOTIFICATIONS_WIDGETS_SCREENS[AppGUIdata.screen], ERR_get_NewWarningFlag());
-//	if(AppGUIdata.mainMenuHdlr.isUp){	GUIsetImgViewerPosition( APP_GUI_AVISOS_NOTIFICATIONS_WIDGETS_SCREENS[AppGUIdata.screen],APP_GUI_IMG_AVISO_PENDIENTE_COORD);	}
-//	else{	GUIsetImgViewerPosition( APP_GUI_AVISOS_NOTIFICATIONS_WIDGETS_SCREENS[AppGUIdata.screen],APP_GUI_IMG_AVISO_PENDIENTE2_COORD);	}
+    wdgWpr.GUIsetWidgetVisibility( APP_GUI_AVISOS_NOTIFICATIONS_WIDGETS_SCREENS[AppGUIdata.screen], ERR_get_NewWarningFlag());
+//    if(AppGUIdata.mainMenuHdlr.isUp){	GUIsetImgViewerPosition( APP_GUI_AVISOS_NOTIFICATIONS_WIDGETS_SCREENS[AppGUIdata.screen],APP_GUI_IMG_AVISO_PENDIENTE_COORD);	}
+//    else{	GUIsetImgViewerPosition( APP_GUI_AVISOS_NOTIFICATIONS_WIDGETS_SCREENS[AppGUIdata.screen],APP_GUI_IMG_AVISO_PENDIENTE2_COORD);	}
 }
 
 void AppGUIchangeMenuVwrTemperatureOrTime ( uint8 HPindex)

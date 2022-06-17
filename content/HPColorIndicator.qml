@@ -4,6 +4,7 @@ Item {
     id: item1
     property alias state1ImageSource: colorIndicator1.source
     property alias state2ImageSource: colorIndicator2.source
+    state: "State2"
 
     Image {
         id: colorIndicator1

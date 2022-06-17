@@ -1,6 +1,5 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
-import DefineUIProject 1.0
 import define.enums 1.0
 
 Item {
@@ -80,7 +79,8 @@ Item {
         }
     ]
 
-    onVisibleChanged: cbkWpr.popUpVisibleChanged(AppEnumsNs.popUpTstVacSmall, visible) // TODO There seems to be a problem. The enumerator value is always 0.
+    // TODO Problem: AppEnumsNs.popUpTstVacSmall gives undefined value
+    onVisibleChanged: { cbkWpr.popUpVisibleChanged(AppEnumsNs.popUpTstVacSmall, visible); console.log("AppEnumsNs.popUpTstVacSmall: ", AppEnumsNs.popUpTstVacSmall) }
 }
 
 

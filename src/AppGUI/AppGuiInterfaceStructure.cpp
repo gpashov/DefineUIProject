@@ -132,10 +132,10 @@ const uint32 APP_GUI_TRT_SCR_BUT_MODE_TRT_WIDGETS[APP_GUI_MAXNUM_HP] =
 //	{ butShowControlPanelHP4}	//HP4
 //};
 
-//const uint32 APP_GUI_TRT_SCR_CTRL_PNL_COLOUR_WIDGETS [APP_GUI_MAXNUM_HP] =
-//{
-//	 imgColourCtrlPnlBckGndHP1, imgColourCtrlPnlBckGndHP2, imgColourCtrlPnlBckGndHP3, imgColourCtrlPnlBckGndHP4
-//};
+const uint32 APP_GUI_TRT_SCR_CTRL_PNL_COLOUR_WIDGETS [APP_GUI_MAXNUM_HP] =
+{
+     imgColourCtrlPnlBckGndHP1, imgColourCtrlPnlBckGndHP2, imgColourCtrlPnlBckGndHP3, imgColourCtrlPnlBckGndHP4
+};
 
 //const uint32 APP_GUI_TRT_SCR_CTRL_PNL_COLOUR_IMGS [APP_GUI_MAXNUM_HP][APP_GUI_TRT_SCR_CTRL_PNL_COLOUR_STATES_IMGS] =
 //{
@@ -520,10 +520,10 @@ const uint32 APP_GUI_AVISOS_POPUP_WIDGET_SCREENS[APP_GUI_NUM_SCREENS] =
 //		APP_GUI_NUM_WIDGETS, swInitScrAvisos, swTrtScrAvisos,  swCalcScrAvisos, swCfgScrAvisos, swLanScrAvisos, APP_GUI_NUM_WIDGETS
 //};
 
-//const uint32 APP_GUI_AVISOS_NOTIFICATIONS_WIDGETS_SCREENS[APP_GUI_NUM_SCREENS] =
-//{
-//		APP_GUI_NUM_WIDGETS, imgInitScrNotificacion, imgTrtScrNotificacion, imgCalcScrNotificacion, imgCfgScrNotificacion, imgLanScrNotificacion, APP_GUI_NUM_WIDGETS
-//};
+const uint32 APP_GUI_AVISOS_NOTIFICATIONS_WIDGETS_SCREENS[APP_GUI_NUM_SCREENS] =
+{
+        APP_GUI_NUM_WIDGETS, imgInitScrNotificacion, imgTrtScrNotificacion, imgCalcScrNotificacion, imgCfgScrNotificacion, imgLanScrNotificacion, APP_GUI_NUM_WIDGETS
+};
 
 //const uint32 APP_GUI_SAT_ERRORES_NUMVWR_LIST[APP_GUI_SAT_ERRORES_PERIFS] =
 //{

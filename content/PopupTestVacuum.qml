@@ -1,5 +1,6 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
+import define.enums 1.0
 
 Item {
     id: item1
@@ -114,7 +115,8 @@ Item {
         imageSourcePressed: "images/c221_PopUpBotonAutoPress.png"
     }
 
-    onVisibleChanged: popUpVisibleChanged(AppEnumsNs.popUpTstVac, visible)
+    // TODO Problem: AppEnumsNs.popUpTstVac gives undefined value
+    onVisibleChanged: { cbkWpr.popUpVisibleChanged(AppEnumsNs.popUpTstVac, visible); console.log("AppEnumsNs.popUpTstVac: ", AppEnumsNs.popUpTstVac) }
 }
 
 /*##^##
