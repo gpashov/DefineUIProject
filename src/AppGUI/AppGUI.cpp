@@ -567,6 +567,7 @@ void AppGUIhandleCtrlPanel( uint8 show, uint8 HPindex)
 
         //AppGUIpanelCtrlColourBlink();
 
+        // TODO
         /* Gestión de los botones de recogida del panel si tenemos el main menu activado, puesto
          * que los tapa debemos deshabilitar los 2 inferiores si el menu esta desplegado */
         if( HPindex == 0 || HPindex == 1)
@@ -2942,51 +2943,50 @@ uint8 AppGUIisHPaDoubleDummy( tHPcryoData *HP, tPRFdata *PRF)		//Se comprueba si
 
 void AppGUIbuttonManagement (cAppGUIctrMenuBut button, uint8 butt_states, uint8 HPindex)
 {
-//	tPRFdata *PRF;
-//	tHPcryoData *HP;
+    tPRFdata *PRF;
+    tHPcryoData *HP;
 	
-//	HPcryoGetFromSlot( APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF);
+    HPcryoGetFromSlot( (cPRFslot)APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF);
 		
-//	switch ( button)		//En función del boton que me pasen como parametro
-//	{
-//		case App_GUI_but_Play:		//Se indexará a una tabla u otra, donde se selecciona en función del estado que pasen por parametro las imagenes de PRS, RLS y el estado de ENABLE/DISABLE
-//			if (butt_states == App_GUI_Play_but_disabled)	GUIsetWidgetEnable ( APP_GUI_TRT_SCR_BUT_PLAY_WIDGETS[HPindex], 0);
-//			else
-//			{
-//				GUIsetImgButton ( APP_GUI_TRT_SCR_BUT_PLAY_WIDGETS[HPindex], APP_GUI_TRT_SCR_BUT_PLAY_IMG[butt_states][App_GUI_widget_PRS_img], 1);
-//				GUIsetImgButton ( APP_GUI_TRT_SCR_BUT_PLAY_WIDGETS[HPindex], APP_GUI_TRT_SCR_BUT_PLAY_IMG[butt_states][App_GUI_widget_RLS_img], 0);
-//				GUIsetWidgetEnable ( APP_GUI_TRT_SCR_BUT_PLAY_WIDGETS[HPindex], APP_GUI_TRT_SCR_BUT_PLAY_IMG[butt_states][App_GUI_widget_ENABLE]);
-//			}
-//			break;
-//		case App_GUI_but_Vacc:
-//			if (butt_states == App_GUI_Vac_but_disabled)	GUIsetWidgetEnable ( APP_GUI_TRT_SCR_BUT_TSTVAC_WIDGETS[HPindex], 0);
-//			else
-//			{
-////				if(HP->trt.TrtParameters.mode == HP_CRYO_TRT_MODE_AUTO)	//V7760 - Si el modo de tratamiento es MANUAL siempre es nivel alto
-////				{
-////					AppGUIdata.slot[HPindex].selVacLvl = HP_CRYO_VAC_LVL_2;
-////				}
-//				GUIsetSwitchImg ( APP_GUI_TRT_SCR_BUT_TSTVAC_WIDGETS[HPindex],
-//								  APP_GUI_TRT_SCR_BUT_VAC_IMG[AppGUIdata.slot[HPindex].selVacLvl][butt_states][App_GUI_widget_PRS_img], APP_GUI_TRT_SCR_BUT_VAC_IMG[AppGUIdata.slot[HPindex].selVacLvl][butt_states][App_GUI_widget_RLS_img],
-//								  APP_GUI_TRT_SCR_BUT_VAC_IMG[AppGUIdata.slot[HPindex].selVacLvl][butt_states][App_GUI_widget_PRS_img], APP_GUI_TRT_SCR_BUT_VAC_IMG[AppGUIdata.slot[HPindex].selVacLvl][butt_states][App_GUI_widget_RLS_img]);
-////				GUIsetImgButton ( APP_GUI_TRT_SCR_BUT_TSTVAC_WIDGETS[HPindex], APP_GUI_TRT_SCR_BUT_VAC_IMG[AppGUIdata.slot[HPindex].selVacLvl][butt_states][App_GUI_widget_PRS_img], 1);
-////				GUIsetImgButton ( APP_GUI_TRT_SCR_BUT_TSTVAC_WIDGETS[HPindex], APP_GUI_TRT_SCR_BUT_VAC_IMG[AppGUIdata.slot[HPindex].selVacLvl][butt_states][App_GUI_widget_RLS_img], 0);
-//				GUIsetWidgetEnable ( APP_GUI_TRT_SCR_BUT_TSTVAC_WIDGETS[HPindex], APP_GUI_TRT_SCR_BUT_VAC_IMG[AppGUIdata.slot[HPindex].selVacLvl][butt_states][App_GUI_widget_ENABLE]);
-//			}
-//			break;
-//		case App_GUI_but_Time:
-//			if (butt_states == App_GUI_Time_but_disabled)	GUIsetWidgetEnable ( APP_GUI_TRT_SCR_BUT_SEL_TIME_WIDGETS[HPindex], 0);
-//			else
-//			{
-//				GUIsetImgButton ( APP_GUI_TRT_SCR_BUT_SEL_TIME_WIDGETS[HPindex], APP_GUI_TRT_SCR_BUT_TIME_IMG[butt_states][App_GUI_widget_PRS_img], 1);
-//				GUIsetImgButton ( APP_GUI_TRT_SCR_BUT_SEL_TIME_WIDGETS[HPindex], APP_GUI_TRT_SCR_BUT_TIME_IMG[butt_states][App_GUI_widget_RLS_img], 0);
-//				GUIsetWidgetEnable ( APP_GUI_TRT_SCR_BUT_SEL_TIME_WIDGETS[HPindex], APP_GUI_TRT_SCR_BUT_TIME_IMG[butt_states][App_GUI_widget_ENABLE]);
-//			}
-//			break;
-//		default:
-//			//ERROR
-//			break;
-//	}
+    switch ( button)		//En función del boton que me pasen como parametro
+    {
+        case App_GUI_but_Play:		//Se indexará a una tabla u otra, donde se selecciona en función del estado que pasen por parametro las imagenes de PRS, RLS y el estado de ENABLE/DISABLE
+            if (butt_states == App_GUI_Play_but_disabled)	wdgWpr.GUIsetWidgetEnable ( APP_GUI_TRT_SCR_BUT_PLAY_WIDGETS[HPindex], 0);
+            else
+            {
+                wdgWpr.GUIUpdatePlayButton((EAppGUI_HPsIDs)HPindex, (EAppGUIPlayButStates)butt_states);
+//                GUIsetImgButton ( APP_GUI_TRT_SCR_BUT_PLAY_WIDGETS[HPindex], APP_GUI_TRT_SCR_BUT_PLAY_IMG[butt_states][App_GUI_widget_PRS_img], 1);
+//                GUIsetImgButton ( APP_GUI_TRT_SCR_BUT_PLAY_WIDGETS[HPindex], APP_GUI_TRT_SCR_BUT_PLAY_IMG[butt_states][App_GUI_widget_RLS_img], 0);
+                wdgWpr.GUIsetWidgetEnable ( APP_GUI_TRT_SCR_BUT_PLAY_WIDGETS[HPindex], APP_GUI_TRT_SCR_BUT_PLAY_IMG[butt_states][App_GUI_widget_ENABLE]);
+            }
+            break;
+        case App_GUI_but_Vacc:
+            if (butt_states == App_GUI_Vac_but_disabled)	wdgWpr.GUIsetWidgetEnable ( APP_GUI_TRT_SCR_BUT_TSTVAC_WIDGETS[HPindex], 0);
+            else
+            {
+
+                wdgWpr.GUIUpdateVacuumButton( (EAppGUI_HPsIDs)HPindex, (EAppGUIVacButStates)butt_states );
+
+//                GUIsetSwitchImg ( APP_GUI_TRT_SCR_BUT_TSTVAC_WIDGETS[HPindex],
+//                                  APP_GUI_TRT_SCR_BUT_VAC_IMG[AppGUIdata.slot[HPindex].selVacLvl][butt_states][App_GUI_widget_PRS_img], APP_GUI_TRT_SCR_BUT_VAC_IMG[AppGUIdata.slot[HPindex].selVacLvl][butt_states][App_GUI_widget_RLS_img],
+//                                  APP_GUI_TRT_SCR_BUT_VAC_IMG[AppGUIdata.slot[HPindex].selVacLvl][butt_states][App_GUI_widget_PRS_img], APP_GUI_TRT_SCR_BUT_VAC_IMG[AppGUIdata.slot[HPindex].selVacLvl][butt_states][App_GUI_widget_RLS_img]);
+                wdgWpr.GUIsetWidgetEnable ( APP_GUI_TRT_SCR_BUT_TSTVAC_WIDGETS[HPindex], APP_GUI_TRT_SCR_BUT_VAC_IMG[AppGUIdata.slot[HPindex].selVacLvl][butt_states][App_GUI_widget_ENABLE]);
+            }
+            break;
+        case App_GUI_but_Time:
+            if (butt_states == App_GUI_Time_but_disabled)	wdgWpr.GUIsetWidgetEnable ( APP_GUI_TRT_SCR_BUT_SEL_TIME_WIDGETS[HPindex], 0);
+            else
+            {
+                wdgWpr.GUIUpdateTimeButton((EAppGUI_HPsIDs)HPindex, (EAppGUITimeButStates)butt_states);
+//                GUIsetImgButton ( APP_GUI_TRT_SCR_BUT_SEL_TIME_WIDGETS[HPindex], APP_GUI_TRT_SCR_BUT_TIME_IMG[butt_states][App_GUI_widget_PRS_img], 1);
+//                GUIsetImgButton ( APP_GUI_TRT_SCR_BUT_SEL_TIME_WIDGETS[HPindex], APP_GUI_TRT_SCR_BUT_TIME_IMG[butt_states][App_GUI_widget_RLS_img], 0);
+                wdgWpr.GUIsetWidgetEnable ( APP_GUI_TRT_SCR_BUT_SEL_TIME_WIDGETS[HPindex], APP_GUI_TRT_SCR_BUT_TIME_IMG[butt_states][App_GUI_widget_ENABLE]);
+            }
+            break;
+        default:
+            //ERROR
+            break;
+    }
 }
 
 

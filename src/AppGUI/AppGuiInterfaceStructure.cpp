@@ -337,62 +337,62 @@ const uint32 APP_GUI_TRT_SCR_NUM_VWE_RESUCCTIONS_NUM_WIDGETS [APP_GUI_MAXNUM_HP]
         numVwrResucctionCountHP1, numVwrResucctionCountHP2, numVwrResucctionCountHP3, numVwrResucctionCountHP4,
 };
 
-//const uint32 APP_GUI_TRT_SCR_BUT_TIME_IMG[App_GUI_Max_Time_but_states][App_GUI_widget_Features] =
-//{
-//					/*	IMG_PRESS							IMG_RLS								ENABLE	*/
-//		/*Time_OFF*/	{c050_RelojTemporizadorMarcaAgua, 	c050_RelojTemporizadorMarcaAgua, 	0},
-//		/*Time_ON*/		{c048_RelojTemporizadorPress, 		c049_RelojTemporizadorRls, 			1}
-//};
+const uint32 APP_GUI_TRT_SCR_BUT_TIME_IMG[App_GUI_Max_Time_but_states][App_GUI_widget_Features] =
+{
+                    /*	IMG_PRESS							IMG_RLS								ENABLE	*/
+        /*Time_OFF*/	{c050_RelojTemporizadorMarcaAgua, 	c050_RelojTemporizadorMarcaAgua, 	0},
+        /*Time_ON*/		{c048_RelojTemporizadorPress, 		c049_RelojTemporizadorRls, 			1}
+};
 
-//const uint32 APP_GUI_TRT_SCR_BUT_PLAY_WIDGETS[APP_GUI_MAXNUM_HP] =
-//{
-//		butCtrlPnlPlayHP1, butCtrlPnlPlayHP2, butCtrlPnlPlayHP3, butCtrlPnlPlayHP4
-//};
+const uint32 APP_GUI_TRT_SCR_BUT_PLAY_WIDGETS[APP_GUI_MAXNUM_HP] =
+{
+        butCtrlPnlPlayHP1, butCtrlPnlPlayHP2, butCtrlPnlPlayHP3, butCtrlPnlPlayHP4
+};
 
-//const uint32 APP_GUI_TRT_SCR_BUT_PLAY_IMG[App_GUI_Max_Play_but_states][App_GUI_widget_Features] =
-//{
-//					/*	IMG_PRESS					IMG_RLS						ENABLE	*/
-//	/*Play_OFF*/		{c038_BotonPlayMarcaAgua, 	c038_BotonPlayMarcaAgua,	0},
-//	/*Play_ON*/			{c035_BotonPlayPress, 		c037_BotonPlayRls, 			1},
-//	/*Play_TRT_running*/{c036_BotonPlayPress, 		c036_BotonPlayPress, 		0},
-//	/*Play_TRT_cancel*/	{c033_BotonStopPress, 		c034_BotonStopRls, 			1}
-//};
+const uint32 APP_GUI_TRT_SCR_BUT_PLAY_IMG[App_GUI_Max_Play_but_states][App_GUI_widget_Features] =
+{
+                    /*	IMG_PRESS					IMG_RLS						ENABLE	*/
+    /*Play_OFF*/		{c038_BotonPlayMarcaAgua, 	c038_BotonPlayMarcaAgua,	0},
+    /*Play_ON*/			{c035_BotonPlayPress, 		c037_BotonPlayRls, 			1},
+    /*Play_TRT_running*/{c036_BotonPlayPress, 		c036_BotonPlayPress, 		0},
+    /*Play_TRT_cancel*/	{c033_BotonStopPress, 		c034_BotonStopRls, 			1}
+};
 
-//const uint32 APP_GUI_TRT_SCR_BUT_TSTVAC_WIDGETS[APP_GUI_MAXNUM_HP] =
-//{
-//		swCtrlPnlTstVacHP1, swCtrlPnlTstVacHP2, swCtrlPnlTstVacHP3, swCtrlPnlTstVacHP4
-//};
+const uint32 APP_GUI_TRT_SCR_BUT_TSTVAC_WIDGETS[APP_GUI_MAXNUM_HP] =
+{
+        swCtrlPnlTstVacHP1, swCtrlPnlTstVacHP2, swCtrlPnlTstVacHP3, swCtrlPnlTstVacHP4
+};
 
-//const uint32 APP_GUI_TRT_SCR_BUT_VAC_IMG[HP_CRYO_VAC_LVL_NUM][App_GUI_Max_Vac_but_states][App_GUI_widget_Features] =
-//{
-//		/*Nivel Vac 1*/
-//		{					/*(PRS, 							RLS, 								ENABLE)*/
-//			/*OFF_L*/		{c042_BotonVacuum1MarcaAguaLeft, 	c042_BotonVacuum1MarcaAguaLeft, 	0},
-//			/*OFF_R*/		{c042_BotonVacuum1MarcaAguaRight, 	c042_BotonVacuum1MarcaAguaRight, 	0},
-//			/*ON_L*/		{c040_BotonVacuum1PressLeft, 		c041_BotonVacuum1RlsLeft, 			1},
-//			/*ON_R*/		{c040_BotonVacuum1PressRight, 		c041_BotonVacuum1RlsRight, 			1},
-//			/*VacAdjustL*/	{c352_BotonVacuum1PressArrowLeft, 	c353_BotonVacuum1RlsArrowLeft, 		1},
-//			/*VacAdjustR*/	{c352_BotonVacuum1PressArrowRight, 	c353_BotonVacuum1RlsArrowRight, 	1}
-//		},
-//		/*Nivel Vac 2*/
-//		{					/*(PRS, 							RLS, 								ENABLE)*/
-//			/*OFF_L*/		{c042_BotonVacuum2MarcaAguaLeft, 	c042_BotonVacuum2MarcaAguaLeft, 	0},
-//			/*OFF_R*/		{c042_BotonVacuum2MarcaAguaRight, 	c042_BotonVacuum2MarcaAguaRight, 	0},
-//			/*ON_L*/		{c040_BotonVacuum2PressLeft, 		c041_BotonVacuum2RlsLeft, 			1},
-//			/*ON_R*/		{c040_BotonVacuum2PressRight, 		c041_BotonVacuum2RlsRight, 			1},
-//			/*VacAdjustL*/	{c352_BotonVacuum2PressArrowLeft, 	c353_BotonVacuum2RlsArrowLeft, 		1},
-//			/*VacAdjustR*/	{c352_BotonVacuum2PressArrowRight, 	c353_BotonVacuum2RlsArrowRight, 	1}
-//		},
-//		/*Nivel Vac 3*/
-//		{					/*(PRS, 							RLS, 								ENABLE)*/
-//			/*OFF_L*/		{c042_BotonVacuum3MarcaAguaLeft,	c042_BotonVacuum3MarcaAguaLeft, 	0},
-//			/*OFF_R*/		{c042_BotonVacuum3MarcaAguaRight,	c042_BotonVacuum3MarcaAguaRight, 	0},
-//			/*ON_L*/		{c040_BotonVacuum3PressLeft, 		c041_BotonVacuum3RlsLeft, 			1},
-//			/*ON_R*/		{c040_BotonVacuum3PressRight, 		c041_BotonVacuum3RlsRight, 			1},
-//			/*VacAdjustL*/	{c352_BotonVacuum3PressArrowLeft, 	c353_BotonVacuum3RlsArrowLeft, 		1},
-//			/*VacAdjustR*/	{c352_BotonVacuum3PressArrowRight, 	c353_BotonVacuum3RlsArrowRight, 	1}
-//		}
-//};
+const uint32 APP_GUI_TRT_SCR_BUT_VAC_IMG[HP_CRYO_VAC_LVL_NUM][App_GUI_Max_Vac_but_states][App_GUI_widget_Features] =
+{
+        /*Nivel Vac 1*/
+        {					/*(PRS, 							RLS, 								ENABLE)*/
+            /*OFF_L*/		{c042_BotonVacuum1MarcaAguaLeft, 	c042_BotonVacuum1MarcaAguaLeft, 	0},
+            /*OFF_R*/		{c042_BotonVacuum1MarcaAguaRight, 	c042_BotonVacuum1MarcaAguaRight, 	0},
+            /*ON_L*/		{c040_BotonVacuum1PressLeft, 		c041_BotonVacuum1RlsLeft, 			1},
+            /*ON_R*/		{c040_BotonVacuum1PressRight, 		c041_BotonVacuum1RlsRight, 			1},
+            /*VacAdjustL*/	{c352_BotonVacuum1PressArrowLeft, 	c353_BotonVacuum1RlsArrowLeft, 		1},
+            /*VacAdjustR*/	{c352_BotonVacuum1PressArrowRight, 	c353_BotonVacuum1RlsArrowRight, 	1}
+        },
+        /*Nivel Vac 2*/
+        {					/*(PRS, 							RLS, 								ENABLE)*/
+            /*OFF_L*/		{c042_BotonVacuum2MarcaAguaLeft, 	c042_BotonVacuum2MarcaAguaLeft, 	0},
+            /*OFF_R*/		{c042_BotonVacuum2MarcaAguaRight, 	c042_BotonVacuum2MarcaAguaRight, 	0},
+            /*ON_L*/		{c040_BotonVacuum2PressLeft, 		c041_BotonVacuum2RlsLeft, 			1},
+            /*ON_R*/		{c040_BotonVacuum2PressRight, 		c041_BotonVacuum2RlsRight, 			1},
+            /*VacAdjustL*/	{c352_BotonVacuum2PressArrowLeft, 	c353_BotonVacuum2RlsArrowLeft, 		1},
+            /*VacAdjustR*/	{c352_BotonVacuum2PressArrowRight, 	c353_BotonVacuum2RlsArrowRight, 	1}
+        },
+        /*Nivel Vac 3*/
+        {					/*(PRS, 							RLS, 								ENABLE)*/
+            /*OFF_L*/		{c042_BotonVacuum3MarcaAguaLeft,	c042_BotonVacuum3MarcaAguaLeft, 	0},
+            /*OFF_R*/		{c042_BotonVacuum3MarcaAguaRight,	c042_BotonVacuum3MarcaAguaRight, 	0},
+            /*ON_L*/		{c040_BotonVacuum3PressLeft, 		c041_BotonVacuum3RlsLeft, 			1},
+            /*ON_R*/		{c040_BotonVacuum3PressRight, 		c041_BotonVacuum3RlsRight, 			1},
+            /*VacAdjustL*/	{c352_BotonVacuum3PressArrowLeft, 	c353_BotonVacuum3RlsArrowLeft, 		1},
+            /*VacAdjustR*/	{c352_BotonVacuum3PressArrowRight, 	c353_BotonVacuum3RlsArrowRight, 	1}
+        }
+};
 
 ///* Cambios de imagenes en diversos widgets */
 ///* - */

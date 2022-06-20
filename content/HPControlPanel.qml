@@ -20,12 +20,10 @@ Item {
         y: 45
     }
 
-    TwoStateButton {
+    HpPlayButton {
         id: playButton
         x: 65
         y: 45
-        imageSourceReleased: "images/c038_BotonPlayMarcaAgua.png"
-        imageSourcePressed: "images/c036_BotonPlayPress.png"
         button.onReleased: {
             switch (parent.state) {
             case "hp1State": cbkWpr.butCtrlPnlPlay(AppEnumsNs.APP_GUI_HP1_ID); break;
@@ -37,13 +35,19 @@ Item {
         }
     }
 
-    ThreeStateButton {
+    HpTimerButton {
         id: timerButton
         x: 65
         y: 123
-        imageSourcePressed: "images/c048_RelojTemporizadorPress.png"
-        imageSourceReleased: "images/c049_RelojTemporizadorRls.png"
-        imageSourceDisabled: "images/c050_RelojTemporizadorMarcaAgua.png"
+        button.onReleased: {
+            switch (parent.state) {
+            case "hp1State": cbkWpr.butSelectTime(AppEnumsNs.APP_GUI_HP1_ID); break;
+            case "hp2State": cbkWpr.butSelectTime(AppEnumsNs.APP_GUI_HP2_ID); break;
+            case "hp3State": cbkWpr.butSelectTime(AppEnumsNs.APP_GUI_HP3_ID); break;
+            case "hp4State": cbkWpr.butSelectTime(AppEnumsNs.APP_GUI_HP4_ID); break;
+            default: break;
+            }
+        }
     }
 
     ThreeStateButton {
@@ -611,6 +615,84 @@ Item {
                                          case AppEnumsNs.APP_GUI_HP2_ID: if(state === "hp2State") { temperatureButton.enabled = isEnabled; } break;
                                          case AppEnumsNs.APP_GUI_HP3_ID: if(state === "hp3State") { temperatureButton.enabled = isEnabled; } break;
                                          case AppEnumsNs.APP_GUI_HP4_ID: if(state === "hp4State") { temperatureButton.enabled = isEnabled; } break;
+                                         default: break;
+                                     }
+                                 }
+    }
+
+    Connections {
+        target: wdgWpr
+        onControlPanelVacuumButtonEnabled: (hpIndex, isEnabled) => {
+                                     switch(hpIndex) {
+                                         case AppEnumsNs.APP_GUI_HP1_ID: if(state === "hp1State") { vacuumButton.enabled = isEnabled; } break;
+                                         case AppEnumsNs.APP_GUI_HP2_ID: if(state === "hp2State") { vacuumButton.enabled = isEnabled; } break;
+                                         case AppEnumsNs.APP_GUI_HP3_ID: if(state === "hp3State") { vacuumButton.enabled = isEnabled; } break;
+                                         case AppEnumsNs.APP_GUI_HP4_ID: if(state === "hp4State") { vacuumButton.enabled = isEnabled; } break;
+                                         default: break;
+                                     }
+                                 }
+    }
+
+    Connections {
+        target: wdgWpr
+        onControlPanelPlayButtonEnabled: (hpIndex, isEnabled) => {
+                                     switch(hpIndex) {
+                                         case AppEnumsNs.APP_GUI_HP1_ID: if(state === "hp1State") { playButton.enabled = isEnabled; } break;
+                                         case AppEnumsNs.APP_GUI_HP2_ID: if(state === "hp2State") { playButton.enabled = isEnabled; } break;
+                                         case AppEnumsNs.APP_GUI_HP3_ID: if(state === "hp3State") { playButton.enabled = isEnabled; } break;
+                                         case AppEnumsNs.APP_GUI_HP4_ID: if(state === "hp4State") { playButton.enabled = isEnabled; } break;
+                                         default: break;
+                                     }
+                                 }
+    }
+
+    Connections {
+        target: wdgWpr
+        onControlPanelTimeButtonEnabled: (hpIndex, isEnabled) => {
+                                     switch(hpIndex) {
+                                         case AppEnumsNs.APP_GUI_HP1_ID: if(state === "hp1State") { timerButton.enabled = isEnabled; } break;
+                                         case AppEnumsNs.APP_GUI_HP2_ID: if(state === "hp2State") { timerButton.enabled = isEnabled; } break;
+                                         case AppEnumsNs.APP_GUI_HP3_ID: if(state === "hp3State") { timerButton.enabled = isEnabled; } break;
+                                         case AppEnumsNs.APP_GUI_HP4_ID: if(state === "hp4State") { timerButton.enabled = isEnabled; } break;
+                                         default: break;
+                                     }
+                                 }
+    }
+
+    Connections {
+        target: wdgWpr
+        onVacuumButtonUpdated: (HPindex, butt_states) => {
+                                     switch(HPindex) {
+                                         case AppEnumsNs.APP_GUI_HP1_ID: if(state === "hp1State") { vacuumButton.state = vacuumButton.states[butt_states].name; } break;
+                                         case AppEnumsNs.APP_GUI_HP2_ID: if(state === "hp2State") { vacuumButton.state = vacuumButton.states[butt_states].name; } break;
+                                         case AppEnumsNs.APP_GUI_HP3_ID: if(state === "hp3State") { vacuumButton.state = vacuumButton.states[butt_states].name; } break;
+                                         case AppEnumsNs.APP_GUI_HP4_ID: if(state === "hp4State") { vacuumButton.state = vacuumButton.states[butt_states].name; } break;
+                                         default: break;
+                                     }
+                                 }
+    }
+
+    Connections {
+        target: wdgWpr
+        onPlayButtonUpdated: (HPindex, butt_states) => {
+                                     switch(HPindex) {
+                                         case AppEnumsNs.APP_GUI_HP1_ID: if(state === "hp1State") { playButton.state = playButton.states[butt_states].name; } break;
+                                         case AppEnumsNs.APP_GUI_HP2_ID: if(state === "hp2State") { playButton.state = playButton.states[butt_states].name; } break;
+                                         case AppEnumsNs.APP_GUI_HP3_ID: if(state === "hp3State") { playButton.state = playButton.states[butt_states].name; } break;
+                                         case AppEnumsNs.APP_GUI_HP4_ID: if(state === "hp4State") { playButton.state = playButton.states[butt_states].name; } break;
+                                         default: break;
+                                     }
+                                 }
+    }
+
+    Connections {
+        target: wdgWpr
+        onTimeButtonUpdated: (HPindex, butt_states) => {
+                                     switch(HPindex) {
+                                         case AppEnumsNs.APP_GUI_HP1_ID: if(state === "hp1State") { timerButton.state = timerButton.states[butt_states].name; } break;
+                                         case AppEnumsNs.APP_GUI_HP2_ID: if(state === "hp2State") { timerButton.state = timerButton.states[butt_states].name; } break;
+                                         case AppEnumsNs.APP_GUI_HP3_ID: if(state === "hp3State") { timerButton.state = timerButton.states[butt_states].name; } break;
+                                         case AppEnumsNs.APP_GUI_HP4_ID: if(state === "hp4State") { timerButton.state = timerButton.states[butt_states].name; } break;
                                          default: break;
                                      }
                                  }

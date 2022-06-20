@@ -32,6 +32,7 @@ public:
     void dotZoneSelect(uint8 dot, bool isSelected);
 
     // Widgets update functions. Used by the application
+
     void GUIsetNumViewerNum(uint32 id, double num, uint8 dec);
     void GUIsetSwitchStatus( uint32 id, uint8 OnOff);
     uint16 GUIsetWidgetVisibility(uint32 id,uint8 vis);
@@ -43,7 +44,9 @@ public:
     void GUIactiveWarningsPopUp();
     void GUIdisableWarningsPopUp();
     void GUIWarningIconActivate(EAppGUImachineWarnings warningId, bool isActive);
-
+    void GUIUpdateVacuumButton(EAppGUI_HPsIDs HPindex, EAppGUIVacButStates butt_states);
+    void GUIUpdatePlayButton(EAppGUI_HPsIDs HPindex, EAppGUIPlayButStates butt_states);
+    void GUIUpdateTimeButton(EAppGUI_HPsIDs HPindex, EAppGUITimeButStates butt_states);
 
 signals:
     void changeScreenSignal(AppEnumsNs::EAppGUIscreen screenId);
@@ -60,6 +63,9 @@ signals:
     void returnButtonEnabled(bool enable);
     void hpImageButtonEnabled(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool enable);
     void controlPanelHideButtonEnabled(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool isEnabled);
+    void controlPanelVacuumButtonEnabled(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool isEnabled);
+    void controlPanelPlayButtonEnabled(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool isEnabled);
+    void controlPanelTimeButtonEnabled(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool isEnabled);
 
 
     // Calculator
@@ -101,6 +107,9 @@ signals:
     void hpControlPanelButtonImagesSet(AppEnumsNs::EAppGUI_HPsIDs hpIndex, AppEnumsNs::EAppGUIimageIDlist idImg);
     void hpControlPanelModelTextSet(AppEnumsNs::EAppGUI_HPsIDs hpIndex, AppEnumsNs::EAppGUIimageIDlist idImg);
     void hpControlPanelColorSet(AppEnumsNs::EAppGUI_HPsIDs hpIndex, uint8 colorState);
+    void vacuumButtonUpdated(AppEnumsNs::EAppGUI_HPsIDs HPindex, AppEnumsNs::EAppGUIVacButStates butt_states);
+    void playButtonUpdated(AppEnumsNs::EAppGUI_HPsIDs HPindex, AppEnumsNs::EAppGUIPlayButStates butt_states);
+    void timeButtonUpdated(AppEnumsNs::EAppGUI_HPsIDs HPindex, AppEnumsNs::EAppGUITimeButStates butt_states);
 
     // Popups
     void warningsPopupDisplayed(bool isDisplayed);

@@ -475,56 +475,56 @@ void CBKswCtrlPnlTstVacOffF( void *widget)
 
 void CBKbutSelectTimeF( void *widget)
 {
-//	uint8 HPindex;
-//	tHPcryoData *HP;
-//	tPRFdata *PRF;
-//	stWidget *popUp;
+    uint8 HPindex;
+    tHPcryoData *HP;
+    tPRFdata *PRF;
+    stWidget *popUp;
 	
-//	/* Casteamos al tipo widget */
-//	stWidget *w = ( stWidget *)widget;
+    /* Casteamos al tipo widget */
+    stWidget *w = ( stWidget *)widget;
 	
-//	/* Obtenemos el indice del HP en función del widget */
-//	switch( w->id)
-//	{
-//		case butSelectTimeHP1: HPindex = 0; break;
-//		case butSelectTimeHP2: HPindex = 1; break;
-//		case butSelectTimeHP3: HPindex = 2; break;
-//		case butSelectTimeHP4: HPindex = 3; break;
-//		default: return;
-//	}
-//	if( HPcryoGetFromSlot( APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
-//	{
-//		if ( AppGUIopenTimePopupPermission( HPindex, HP, PRF))
-//		{
-//			/* Comprobamos que hay HP y tiene trt configurado para activar el popUp y que el
-//			 * PopUp no esta ya activo */
-//			popUp = GUIgetWidget( popUpTime);
-//			if( popUp->enable == 0 &&
-//				AppGUIdata.slot[HPindex].selTrtDot != APP_GUI_NO_TRT_DOT_SELECTED &&
-//				AppGUIdata.slot[HPindex].selTrtArea != AppGUIfullBodyNO_AREA)
-//			{
-//				/* Guardamos el HP que ha activado el popUp */
-//				AppGUIdata.timeHdlr.HPindex = HPindex;
+    /* Obtenemos el indice del HP en función del widget */
+    switch( w->id)
+    {
+        case butSelectTimeHP1: HPindex = 0; break;
+        case butSelectTimeHP2: HPindex = 1; break;
+        case butSelectTimeHP3: HPindex = 2; break;
+        case butSelectTimeHP4: HPindex = 3; break;
+        default: return;
+    }
+    if( HPcryoGetFromSlot( (cPRFslot)APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
+    {
+        if ( AppGUIopenTimePopupPermission( HPindex, HP, PRF))
+        {
+            /* Comprobamos que hay HP y tiene trt configurado para activar el popUp y que el
+             * PopUp no esta ya activo */
+//            popUp = GUIgetWidget( popUpTime);
+            if( AppGUIIsPopupDisplayed(popUpTime) == 0 &&
+                AppGUIdata.slot[HPindex].selTrtDot != APP_GUI_NO_TRT_DOT_SELECTED &&
+                AppGUIdata.slot[HPindex].selTrtArea != AppGUIfullBodyNO_AREA)
+            {
+                /* Guardamos el HP que ha activado el popUp */
+                AppGUIdata.timeHdlr.HPindex = HPindex;
 				
-//				/* Asignamos el tiempo actualmente asignado a este HP */
-//				AppGUIdata.timeHdlr.selTime = AppGUIdata.slot[HPindex].selTime;
+                /* Asignamos el tiempo actualmente asignado a este HP */
+                AppGUIdata.timeHdlr.selTime = AppGUIdata.slot[HPindex].selTime;
 				
-//				/* Activamos el PopUp del tiempo */
-//				AppGUIhandleTimePopUp( 1, HPindex);
-//			}
-//			else
-//			{
-//				AppGUIhandleTimePopUp( 0, HPindex);
-//				/* Posible pitido indicando que no se ha podido iniciar */
-//			}
-//		}
-//	}
+                /* Activamos el PopUp del tiempo */
+                AppGUIhandleTimePopUp( 1, HPindex);
+            }
+            else
+            {
+                AppGUIhandleTimePopUp( 0, HPindex);
+                /* Posible pitido indicando que no se ha podido iniciar */
+            }
+        }
+    }
 
-//	//Se revisan los 4 paneles de control de los manipulos
-//	for( HPindex=0;HPindex<APP_GUI_MAXNUM_HP;HPindex++)	AppGUIhandleCtrlPanel(AppGUIdata.slot[HPindex].isCtrlPnlShow, HPindex);
+    //Se revisan los 4 paneles de control de los manipulos
+    for( HPindex=0;HPindex<APP_GUI_MAXNUM_HP;HPindex++)	AppGUIhandleCtrlPanel(AppGUIdata.slot[HPindex].isCtrlPnlShow, HPindex);
 	
-//	//Se revisan las zonas de tratamiento ya que también gestiona el botón de info (para que se quite al activar otro popup
-//	AppGUIhandleTrtZone();
+    //Se revisan las zonas de tratamiento ya que también gestiona el botón de info (para que se quite al activar otro popup
+    AppGUIhandleTrtZone();
 }
 
 void CBKbutTemperatureVwrF ( void *widget)

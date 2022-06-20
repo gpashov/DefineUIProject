@@ -243,7 +243,7 @@ namespace AppEnumsNs
 
         App_GUI_Max_Play_but_states
     }cAppGUIPlayButStates;
-//    Q_ENUM_NS(EAppGUIPlayButStates)
+    Q_ENUM_NS(EAppGUIPlayButStates)
 
     typedef enum EAppGUIVacButStates
     {
@@ -257,7 +257,7 @@ namespace AppEnumsNs
 
         App_GUI_Max_Vac_but_states
     }cAppGUIVacButStates;
-//    Q_ENUM_NS(EAppGUIVacButStates)
+    Q_ENUM_NS(EAppGUIVacButStates)
 
     typedef enum EAppGUITimeButStates
     {
@@ -267,7 +267,7 @@ namespace AppEnumsNs
 
         App_GUI_Max_Time_but_states
     }cAppGUITimeButStates;
-//    Q_ENUM_NS(EAppGUITimeButStates)
+    Q_ENUM_NS(EAppGUITimeButStates)
 
 //    typedef enum EAppGUIwidgetCoordinates
 //    {
@@ -1792,11 +1792,11 @@ extern const uint32 APP_GUI_TRT_SCR_BUT_SEL_TIME_WIDGETS[APP_GUI_MAXNUM_HP];
 extern const uint32 APP_GUI_TRT_SCR_BUT_CHNG_TIME_TO_TEMP_WIDGETS[APP_GUI_MAXNUM_HP];
 extern const uint32 APP_GUI_TRT_SCR_NUM_VWR_TIME_WIDGETS[APP_GUI_MAXNUM_HP];
 extern const uint32 APP_GUI_TRT_SCR_NUM_VWE_RESUCCTIONS_NUM_WIDGETS [APP_GUI_MAXNUM_HP];
-//extern const uint32 APP_GUI_TRT_SCR_BUT_TIME_IMG[App_GUI_Max_Time_but_states][App_GUI_widget_Features];
-//extern const uint32 APP_GUI_TRT_SCR_BUT_PLAY_WIDGETS[APP_GUI_MAXNUM_HP];
-//extern const uint32 APP_GUI_TRT_SCR_BUT_PLAY_IMG[App_GUI_Max_Play_but_states][App_GUI_widget_Features];
-//extern const uint32 APP_GUI_TRT_SCR_BUT_TSTVAC_WIDGETS[APP_GUI_MAXNUM_HP];
-//extern const uint32 APP_GUI_TRT_SCR_BUT_VAC_IMG[HP_CRYO_VAC_LVL_NUM][App_GUI_Max_Vac_but_states][App_GUI_widget_Features];
+extern const uint32 APP_GUI_TRT_SCR_BUT_TIME_IMG[App_GUI_Max_Time_but_states][App_GUI_widget_Features];
+extern const uint32 APP_GUI_TRT_SCR_BUT_PLAY_WIDGETS[APP_GUI_MAXNUM_HP];
+extern const uint32 APP_GUI_TRT_SCR_BUT_PLAY_IMG[App_GUI_Max_Play_but_states][App_GUI_widget_Features];
+extern const uint32 APP_GUI_TRT_SCR_BUT_TSTVAC_WIDGETS[APP_GUI_MAXNUM_HP];
+extern const uint32 APP_GUI_TRT_SCR_BUT_VAC_IMG[HP_CRYO_VAC_LVL_NUM][App_GUI_Max_Vac_but_states][App_GUI_widget_Features];
                                                        
 //extern const uint32 APP_GUI_POPUP_RFID_WIDGET_LIST[APP_GUI_POPUP_RFID_WIDGET_LIST_NUM];
 //extern const uint32 APP_GUI_TRT_SCR_POPUP_RFID_LABELS_IMGS [HP_CRYO_NUM_LABELS];

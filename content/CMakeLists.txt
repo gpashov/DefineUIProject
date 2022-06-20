@@ -31,8 +31,10 @@ qt6_add_qml_module(content
         HPTypeNameRight.qml
         HPTypeNameLeft.qml
         HPTimeRemaining.qml
+        HpTimerButton.qml
         HPRightStatusImage.qml
         HPResucctionCount.qml
+        HpPlayButton.qml
         HPControlPanel.qml
         HPColorIndicator.qml
         HpCleaning.qml
@@ -184,17 +186,12 @@ qt6_add_qml_module(content
         images/c357_BotonAlarmaCentralOkPress.png
         images/c356_BotonAlarmaCentralOkRls.png
         images/c355_signoalarma.png
-        images/c354_BotonVacuum3MarcaAguaArrowLeft.png
-        images/c354_BotonVacuum2MarcaAguaArrowLeft.png
-        images/c354_BotonVacuum1MarcaAguaArrowLeft.png
-        images/c353_FlechaVacuumRight.png
         images/c353_BotonVacuum3RlsArrowRight.png
         images/c353_BotonVacuum3RlsArrowLeft.png
         images/c353_BotonVacuum2RlsArrowRight.png
         images/c353_BotonVacuum2RlsArrowLeft.png
         images/c353_BotonVacuum1RlsArrowRight.png
         images/c353_BotonVacuum1RlsArrowLeft.png
-        images/c352_FlechaVacuumLeft.png
         images/c352_BotonVacuum3PressArrowRight.png
         images/c352_BotonVacuum3PressArrowLeft.png
         images/c352_BotonVacuum2PressArrowRight.png

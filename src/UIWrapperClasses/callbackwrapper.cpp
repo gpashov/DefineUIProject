@@ -105,9 +105,17 @@ void CallbackWrapper::swCtrlPnlTstVacOff()
 
 }
 
-void CallbackWrapper::butSelectTime()
+void CallbackWrapper::butSelectTime(EAppGUI_HPsIDs hpId)
 {
+    switch(hpId) {
+    case APP_GUI_HP1_ID:argWidget.id = butSelectTimeHP1; break;
+    case APP_GUI_HP2_ID:argWidget.id = butSelectTimeHP2; break;
+    case APP_GUI_HP3_ID:argWidget.id = butSelectTimeHP3; break;
+    case APP_GUI_HP4_ID:argWidget.id = butSelectTimeHP4; break;
+    default: argWidget.id = APP_GUI_NUM_WIDGETS; break;
+    }
 
+    CBKbutSelectTimeF(&argWidget);
 }
 
 void CallbackWrapper::butTemperatureVwr()

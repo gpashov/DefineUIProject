@@ -851,15 +851,15 @@ uint16 WidgetsWrapper::GUIsetWidgetEnable(uint32 id, uint8 enable)
 //    case imgCtrlPnlCoolingBlinkHP3,
 //    case imgCtrlPnlCoolingBlinkHP4,
 
-//    //Botones del panel de control de PLAY y Test Vacum
-//    case butCtrlPnlPlayHP1,
-//    case butCtrlPnlPlayHP2,
-//    case butCtrlPnlPlayHP3,
-//    case butCtrlPnlPlayHP4,
-//    case swCtrlPnlTstVacHP1,
-//    case swCtrlPnlTstVacHP2,
-//    case swCtrlPnlTstVacHP3,
-//    case swCtrlPnlTstVacHP4,
+    //Botones del panel de control de PLAY y Test Vacum
+    case butCtrlPnlPlayHP1: emit controlPanelPlayButtonEnabled(APP_GUI_HP1_ID, enable); break;
+    case butCtrlPnlPlayHP2: emit controlPanelPlayButtonEnabled(APP_GUI_HP2_ID, enable); break;
+    case butCtrlPnlPlayHP3: emit controlPanelPlayButtonEnabled(APP_GUI_HP3_ID, enable); break;
+    case butCtrlPnlPlayHP4: emit controlPanelPlayButtonEnabled(APP_GUI_HP1_ID, enable); break;
+    case swCtrlPnlTstVacHP1: emit controlPanelVacuumButtonEnabled(APP_GUI_HP1_ID, enable); break;
+    case swCtrlPnlTstVacHP2: emit controlPanelVacuumButtonEnabled(APP_GUI_HP2_ID, enable); break;
+    case swCtrlPnlTstVacHP3: emit controlPanelVacuumButtonEnabled(APP_GUI_HP3_ID, enable); break;
+    case swCtrlPnlTstVacHP4: emit controlPanelVacuumButtonEnabled(APP_GUI_HP1_ID, enable); break;
 
 //    //Botones (switch) que permite seleccionar modo de tratamiento AUTO o MANUAL
 //    case butSwtchModeAutoManualHP1,
@@ -872,10 +872,10 @@ uint16 WidgetsWrapper::GUIsetWidgetEnable(uint32 id, uint8 enable)
 //    case numVwrTimeHP2
 //    case numVwrTimeHP3
 //    case numVwrTimeHP4
-//    case butSelectTimeHP1,
-//    case butSelectTimeHP2,
-//    case butSelectTimeHP3,
-//    case butSelectTimeHP4,
+    case butSelectTimeHP1: emit controlPanelTimeButtonEnabled(APP_GUI_HP1_ID, enable); break;
+    case butSelectTimeHP2: emit controlPanelTimeButtonEnabled(APP_GUI_HP3_ID, enable); break;
+    case butSelectTimeHP3: emit controlPanelTimeButtonEnabled(APP_GUI_HP2_ID, enable); break;
+    case butSelectTimeHP4: emit controlPanelTimeButtonEnabled(APP_GUI_HP1_ID, enable); break;
     case butVwrTemperatureHP1: emit temperatureButtonEnabled(APP_GUI_HP1_ID, enable); break;
     case butVwrTemperatureHP2: emit temperatureButtonEnabled(APP_GUI_HP2_ID, enable); break;
     case butVwrTemperatureHP3: emit temperatureButtonEnabled(APP_GUI_HP3_ID, enable); break;
@@ -1432,6 +1432,21 @@ void WidgetsWrapper::GUIdisableWarningsPopUp()
 void WidgetsWrapper::GUIWarningIconActivate(EAppGUImachineWarnings warningId, bool isActive)
 {
     emit warningActivated(warningId, isActive);
+}
+
+void WidgetsWrapper::GUIUpdateVacuumButton( EAppGUI_HPsIDs HPindex, EAppGUIVacButStates butt_states )
+{
+    emit vacuumButtonUpdated(HPindex, butt_states);
+}
+
+void WidgetsWrapper::GUIUpdatePlayButton(EAppGUI_HPsIDs HPindex, EAppGUIPlayButStates butt_states)
+{
+    emit playButtonUpdated(HPindex, butt_states);
+}
+
+void WidgetsWrapper::GUIUpdateTimeButton(EAppGUI_HPsIDs HPindex, EAppGUITimeButStates butt_states)
+{
+    emit timeButtonUpdated(HPindex, butt_states);
 }
 
 QString WidgetsWrapper::calcNumber()

@@ -23,7 +23,7 @@ public:
     Q_INVOKABLE void butCtrlPnlPlay(EAppGUI_HPsIDs hpId);
     Q_INVOKABLE void swCtrlPnlTstVacOn();
     Q_INVOKABLE void swCtrlPnlTstVacOff();
-    Q_INVOKABLE void butSelectTime();
+    Q_INVOKABLE void butSelectTime(EAppGUI_HPsIDs hpId);
     Q_INVOKABLE void butTemperatureVwr ();
     Q_INVOKABLE void butTRTmodeAutoManual ();
     Q_INVOKABLE void butInfoZoneSelectedOn ();
