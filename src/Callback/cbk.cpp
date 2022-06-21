@@ -529,22 +529,22 @@ void CBKbutSelectTimeF( void *widget)
 
 void CBKbutTemperatureVwrF ( void *widget)
 {
-//	uint8 HPindex;
+    uint8 HPindex;
 	
-//	/* Casteamos al tipo widget */
-//	stWidget *w = ( stWidget *)widget;
+    /* Casteamos al tipo widget */
+    stWidget *w = ( stWidget *)widget;
 	
-//	/* Obtenemos el indice del HP en función del widget */
-//	switch( w->id)
-//	{
-//		case butVwrTemperatureHP1: HPindex = 0; break;
-//		case butVwrTemperatureHP2: HPindex = 1; break;
-//		case butVwrTemperatureHP3: HPindex = 2; break;
-//		case butVwrTemperatureHP4: HPindex = 3; break;
-//		default: return;
-//	}
+    /* Obtenemos el indice del HP en función del widget */
+    switch( w->id)
+    {
+        case butVwrTemperatureHP1: HPindex = 0; break;
+        case butVwrTemperatureHP2: HPindex = 1; break;
+        case butVwrTemperatureHP3: HPindex = 2; break;
+        case butVwrTemperatureHP4: HPindex = 3; break;
+        default: return;
+    }
 	
-//	AppGUIchangeMenuVwrTemperatureOrTime ( HPindex);
+    AppGUIchangeMenuVwrTemperatureOrTime ( HPindex);
 }
 
 void CBKbutTRTmodeAutoManualF ( void *widget)
@@ -605,88 +605,88 @@ void CBKbutInfoZoneSelectedOffF()
 
 void CBKbutModelImageF( void *widget)
 {
-//	uint8 HPindex;
-//	uint8 otherHPindex, isOtherHPworking, found;
-//	tHPcryoData *HP;
-//	tPRFdata *PRF;
+    uint8 HPindex;
+    uint8 otherHPindex, isOtherHPworking, found;
+    tHPcryoData *HP;
+    tPRFdata *PRF;
 	
-//	/* Casteamos al tipo widget */
-//	stWidget *w = ( stWidget *)widget;
+    /* Casteamos al tipo widget */
+    stWidget *w = ( stWidget *)widget;
 	
-//	/* Obtenemos el indice del HP en función del widget */
-//	switch( w->id)
-//	{
-//		case butModelImageHP1: HPindex = 0; break;
-//		case butModelImageHP2: HPindex = 1; break;
-//		case butModelImageHP3: HPindex = 2; break;
-//		case butModelImageHP4: HPindex = 3; break;
-//		default: return;
-//	}
+    /* Obtenemos el indice del HP en función del widget */
+    switch( w->id)
+    {
+        case butModelImageHP1: HPindex = 0; break;
+        case butModelImageHP2: HPindex = 1; break;
+        case butModelImageHP3: HPindex = 2; break;
+        case butModelImageHP4: HPindex = 3; break;
+        default: return;
+    }
 	
-//	/* Comprobamos si algun HP tiene esta zona */
-//	otherHPindex = 0;
-//	found = 0;
-//	isOtherHPworking = 0;
-//	while( otherHPindex < APP_GUI_MAXNUM_HP && !found)
-//	{
-//		/* Comprobamos si tiene la zona seleccionada y no es el mismo HP que
-//		 * ha llamado a la función  */
-//		if( AppGUIdata.slot[otherHPindex].selTrtDot == AppGUIdata.trtZoneHdlr.selTrtDot &&
-//			AppGUIdata.slot[otherHPindex].selTrtArea == AppGUIdata.trtZoneHdlr.selTrtArea &&
-//			HPindex != otherHPindex)
-//		{
-//			/* Hemos encontrado un HP que ya tiene seleccionada esta zona de tratamiento */
-//			found = 1;
+    /* Comprobamos si algun HP tiene esta zona */
+    otherHPindex = 0;
+    found = 0;
+    isOtherHPworking = 0;
+    while( otherHPindex < APP_GUI_MAXNUM_HP && !found)
+    {
+        /* Comprobamos si tiene la zona seleccionada y no es el mismo HP que
+         * ha llamado a la función  */
+        if( AppGUIdata.slot[otherHPindex].selTrtDot == AppGUIdata.trtZoneHdlr.selTrtDot &&
+            AppGUIdata.slot[otherHPindex].selTrtArea == AppGUIdata.trtZoneHdlr.selTrtArea &&
+            HPindex != otherHPindex)
+        {
+            /* Hemos encontrado un HP que ya tiene seleccionada esta zona de tratamiento */
+            found = 1;
 			
-//			/* comprobamos si esta en tratamiento */
-//			isOtherHPworking = AppGUIisTrtRunning( otherHPindex, NULL);
-//		}
-//		else
-//		{
-//			otherHPindex++;
-//		}
-//	}
+            /* comprobamos si esta en tratamiento */
+            isOtherHPworking = AppGUIisTrtRunning( otherHPindex, NULL);
+        }
+        else
+        {
+            otherHPindex++;
+        }
+    }
 	
-//	/* Comprobamos que hay HP conectado y que tenemos un DOT de tratamiento seleccionado
-//	 * asi como una area de full body seleccionada y que no hay otro HP en tratamiento
-//	 * con esta zona ya seleccionada y que el propio HP no esta en tratamiento */
-//	if( HPcryoGetFromSlot( APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF) &&
-//		AppGUIdata.trtZoneHdlr.selTrtDot != APP_GUI_NO_TRT_DOT_SELECTED &&
-//		AppGUIdata.trtZoneHdlr.selTrtArea != AppGUIfullBodyNO_AREA &&
-//		!isOtherHPworking && !AppGUIisTrtRunning( HPindex, NULL))
-//	{
-//		/* Guardamos configuracion en el slot adecuado */
-//		if( AppGUIdata.slot[HPindex].selTrtDot != AppGUIdata.trtZoneHdlr.selTrtDot ||
-//			AppGUIdata.slot[HPindex].selTrtArea != AppGUIdata.trtZoneHdlr.selTrtArea)
-//		{
-//			/* Hay manípulo y tenemos area y zona seleccionados en el interface. Reseteamos y
-//			 * luego asignamos la nueva zona */
-//			AppGUIclearSlotData( HPindex);
+    /* Comprobamos que hay HP conectado y que tenemos un DOT de tratamiento seleccionado
+     * asi como una area de full body seleccionada y que no hay otro HP en tratamiento
+     * con esta zona ya seleccionada y que el propio HP no esta en tratamiento */
+    if( HPcryoGetFromSlot( (cPRFslot)APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF) &&
+        AppGUIdata.trtZoneHdlr.selTrtDot != APP_GUI_NO_TRT_DOT_SELECTED &&
+        AppGUIdata.trtZoneHdlr.selTrtArea != AppGUIfullBodyNO_AREA &&
+        !isOtherHPworking && !AppGUIisTrtRunning( HPindex, NULL))
+    {
+        /* Guardamos configuracion en el slot adecuado */
+        if( AppGUIdata.slot[HPindex].selTrtDot != AppGUIdata.trtZoneHdlr.selTrtDot ||
+            AppGUIdata.slot[HPindex].selTrtArea != AppGUIdata.trtZoneHdlr.selTrtArea)
+        {
+            /* Hay manípulo y tenemos area y zona seleccionados en el interface. Reseteamos y
+             * luego asignamos la nueva zona */
+            AppGUIclearSlotData( HPindex);
 					
-//			/* No es la misma zona de tratamiento, la asignamos */
-//			AppGUIdata.slot[HPindex].selTrtDot = AppGUIdata.trtZoneHdlr.selTrtDot;
-//			AppGUIdata.slot[HPindex].selTrtArea = AppGUIdata.trtZoneHdlr.selTrtArea;
+            /* No es la misma zona de tratamiento, la asignamos */
+            AppGUIdata.slot[HPindex].selTrtDot = AppGUIdata.trtZoneHdlr.selTrtDot;
+            AppGUIdata.slot[HPindex].selTrtArea = AppGUIdata.trtZoneHdlr.selTrtArea;
 			
-//			/* Si hay otro HP con la zona seleccionada reseteamos sus
-//			 * variables de control de slot */
-//			if( found){ AppGUIclearSlotData( otherHPindex);}
-//		}
-//		else
-//		{
-//			/* Es la misma zona de tratamiento, reseteamos */
-//			AppGUIclearSlotData( HPindex);
-//		}
+            /* Si hay otro HP con la zona seleccionada reseteamos sus
+             * variables de control de slot */
+            if( found){ AppGUIclearSlotData( otherHPindex);}
+        }
+        else
+        {
+            /* Es la misma zona de tratamiento, reseteamos */
+            AppGUIclearSlotData( HPindex);
+        }
 		
-//		/* Refrescamos la zona de seleccion de tratamiento */
-//		AppGUIhandleTrtZone();
-//		/* Se llama a la funcion que actualiza la configuración del panel de control personal de cada manipulo, de esta forma el glitch de los 45 min del Tiny y Tiny Curved se soluciona */
-////		AppGUIhandleCtrlPanel(AppGUIdata.slot[HPindex].isCtrlPnlShow, HPindex);
-////		if( found) AppGUIhandleCtrlPanel(AppGUIdata.slot[otherHPindex].isCtrlPnlShow, otherHPindex);
-//	}
-//	else
-//	{
-//		/* Posible pitido indicando que no se ha podido iniciar */
-//	}
+        /* Refrescamos la zona de seleccion de tratamiento */
+        AppGUIhandleTrtZone();
+        /* Se llama a la funcion que actualiza la configuración del panel de control personal de cada manipulo, de esta forma el glitch de los 45 min del Tiny y Tiny Curved se soluciona */
+//		AppGUIhandleCtrlPanel(AppGUIdata.slot[HPindex].isCtrlPnlShow, HPindex);
+//		if( found) AppGUIhandleCtrlPanel(AppGUIdata.slot[otherHPindex].isCtrlPnlShow, otherHPindex);
+    }
+    else
+    {
+        /* Posible pitido indicando que no se ha podido iniciar */
+    }
 }
 
 void CBKbutHideCtrlPnlF( void *widget)
@@ -756,43 +756,43 @@ void CBKbutFullBodyAreaF( void *widget)
 
 void CBKswDotZoneOnF( void *widget)
 {
-//	uint8 i;
+    uint8 i;
 	
-//	/* Casteamos al tipo widget */
-//	stWidget *w = ( stWidget *)widget;
+    /* Casteamos al tipo widget */
+    stWidget *w = ( stWidget *)widget;
 	
-//	/* Guardamos el área de tratamiento seleccionada */
-//	i = 0;
-//	while( i < APP_GUI_MAX_DOTS_PER_AREA && APP_GUI_TRT_SCR_DOT_ZONES_WIDGETS[i] != w->id){ i++;}
-//	if( i >= APP_GUI_MAX_DOTS_PER_AREA){ AppGUIdata.trtZoneHdlr.selTrtDot = APP_GUI_NO_TRT_DOT_SELECTED;}
-//	else{ AppGUIdata.trtZoneHdlr.selTrtDot = i;}
+    /* Guardamos el área de tratamiento seleccionada */
+    i = 0;
+    while( i < APP_GUI_MAX_DOTS_PER_AREA && APP_GUI_TRT_SCR_DOT_ZONES_WIDGETS[i] != w->id){ i++;}
+    if( i >= APP_GUI_MAX_DOTS_PER_AREA){ AppGUIdata.trtZoneHdlr.selTrtDot = APP_GUI_NO_TRT_DOT_SELECTED;}
+    else{ AppGUIdata.trtZoneHdlr.selTrtDot = i;}
 	
-//	for( i = 0; i < APP_GUI_MAX_DOTS_PER_AREA; i++)
-//	{
-//		/* Todos los switches que no sean el que ha llamado a estado OFF */
-//		if( APP_GUI_TRT_SCR_DOT_ZONES_WIDGETS[i] != w->id)
-//		{
-//			GUIsetSwitchStatus( APP_GUI_TRT_SCR_DOT_ZONES_WIDGETS[i], 0);
-//		}
-//	}
+    for( i = 0; i < APP_GUI_MAX_DOTS_PER_AREA; i++)
+    {
+        /* Todos los switches que no sean el que ha llamado a estado OFF */
+        if( APP_GUI_TRT_SCR_DOT_ZONES_WIDGETS[i] != w->id)
+        {
+            wdgWpr.GUIsetSwitchStatus( APP_GUI_TRT_SCR_DOT_ZONES_WIDGETS[i], 0);
+        }
+    }
 	
-//	/* Refrescamos la zona de selección de tratamiento */
-//	AppGUIhandleTrtZone();
+    /* Refrescamos la zona de selección de tratamiento */
+    AppGUIhandleTrtZone();
 }
 
 void CBKswDotZoneOffF( void *widget)
 {
-//	/* Casteamos al tipo widget */
-//	stWidget *w = ( stWidget *)widget;
+    /* Casteamos al tipo widget */
+    stWidget *w = ( stWidget *)widget;
 	
-//	/* Si es el "dot" actualmente seleccionado lo descartamos */
-//	if( APP_GUI_TRT_SCR_DOT_ZONES_WIDGETS[AppGUIdata.trtZoneHdlr.selTrtDot] == w->id)
-//	{
-//		AppGUIdata.trtZoneHdlr.selTrtDot = APP_GUI_NO_TRT_DOT_SELECTED;
-//	}
+    /* Si es el "dot" actualmente seleccionado lo descartamos */
+    if( APP_GUI_TRT_SCR_DOT_ZONES_WIDGETS[AppGUIdata.trtZoneHdlr.selTrtDot] == w->id)
+    {
+        AppGUIdata.trtZoneHdlr.selTrtDot = APP_GUI_NO_TRT_DOT_SELECTED;
+    }
 
-//	/* Refrescamos la zona de selección de tratamiento */
-//	AppGUIhandleTrtZone();
+    /* Refrescamos la zona de selección de tratamiento */
+    AppGUIhandleTrtZone();
 }
 
 void CBKpopUpDisplayedF( void *widget, bool visible )

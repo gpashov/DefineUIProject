@@ -10,6 +10,7 @@ Item {
         id: imageButton
         imageSourcePressed: "images/c112_2_ZonaSeleccionadaHP2.png"
         imageSourceReleased: "images/c112_2_ZonaSeleccionadaHP2.png"
+        onRelease: cbkWpr.butModelImage(AppEnumsNs.APP_GUI_HP2_ID)
     }
 
     states: [

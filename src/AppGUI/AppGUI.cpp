@@ -1480,21 +1480,21 @@ void AppGUIhandleCleanUpPopUps( uint8 show, uint8 HPindex)
 
 uint8 AppGUIisTrtRunning( uint8 HPindex, cHPcryoTreatmentStatus *status)
 {
-//    tPRFdata *PRF;
-//    tHPcryoData *HP;
+    tPRFdata *PRF;
+    tHPcryoData *HP;
 	
-//    /* Comprobamos si el HP indicado esta en tratamiento y si lo está devolvemos el status */
-//    if( HPcryoGetFromSlot( APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
-//    {
-//        /* Hay HP, vamos a ver si esta en tratamiento */
-//        if( HPcryoGetStatus( HP, PRF) == HP_CRYO_TREATMENT)
-//        {
-//            /* Esta en tratamiento, devolvemos cierto y guardamos el estado de tratamiento si el
-//             * puntero pasado no es NULL */
-//            if( status != NULL){ ( *status) = HPcryoTrtStatus( HP, PRF);}
-//            return 1;
-//        }
-//    }
+    /* Comprobamos si el HP indicado esta en tratamiento y si lo está devolvemos el status */
+    if( HPcryoGetFromSlot( (cPRFslot)APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
+    {
+        /* Hay HP, vamos a ver si esta en tratamiento */
+        if( HPcryoGetStatus( HP, PRF) == HP_CRYO_TREATMENT)
+        {
+            /* Esta en tratamiento, devolvemos cierto y guardamos el estado de tratamiento si el
+             * puntero pasado no es NULL */
+            if( status != NULL){ ( *status) = HPcryoTrtStatus( HP, PRF);}
+            return 1;
+        }
+    }
 	
     /* Si llegamos aqui es que no esta en tratamiento */
     return 0;
@@ -3064,10 +3064,10 @@ void AppGUIwarningNotification (void)
 
 void AppGUIchangeMenuVwrTemperatureOrTime ( uint8 HPindex)
 {
-//	if(AppGUIdata.slot[HPindex].VwrTemperatureOrTime == 0)
-//	{	AppGUIdata.slot[HPindex].VwrTemperatureOrTime = 1;	}
-//	else
-//	{	AppGUIdata.slot[HPindex].VwrTemperatureOrTime = 0;	}
+    if(AppGUIdata.slot[HPindex].VwrTemperatureOrTime == 0)
+    {	AppGUIdata.slot[HPindex].VwrTemperatureOrTime = 1;	}
+    else
+    {	AppGUIdata.slot[HPindex].VwrTemperatureOrTime = 0;	}
 }
 
 void AppGUI_RFIDpopup_ReuseOption (uint8 option)
