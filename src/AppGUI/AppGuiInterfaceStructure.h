@@ -521,6 +521,7 @@ namespace AppEnumsNs
 
     }cAppGUItrtAgrupacionZones;
 
+
     /*** LISTADO DE IMAGENES Y WIDGETS ***/
     // Imágenes de la Interface
     typedef enum EAppGUIimageIDlist
@@ -1106,6 +1107,7 @@ namespace AppEnumsNs
     // Widgets de la Interface
     typedef enum EAppGUIwidgetIDlist
     {
+
         //PANTALLA DE CARGA
         imgLoadScrBckGnd,
         imgLoadAnim1,

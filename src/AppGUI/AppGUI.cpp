@@ -689,7 +689,7 @@ void AppGUIhandleTrtZone( void)
                 /* Segun el resultado de la busqueda */
 //                if( HPindex >= APP_GUI_MAXNUM_HP)
 //                {
-                    /* No lo tiene ningun HP seleccionado, colocamos las imagenes y coordenadas correspondientes */
+                    /* No lo tiene ningun HP asociado, colocamos las imagenes y coordenadas correspondientes */
 //                    xOn = APP_GUI_AREA_ZOOM_DOTS[body][area][i].imgOnOffX;
 //                    yOn = APP_GUI_AREA_ZOOM_DOTS[body][area][i].imgOnOffY;
 //                    xOff = APP_GUI_AREA_ZOOM_DOTS[body][area][i].imgOnOffX;

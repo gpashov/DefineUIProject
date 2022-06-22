@@ -1,10 +1,12 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import DefineUIProject 1.0
-import define.enums 1.0
+//import define.enums 1.0
 
 Item {
     id: name
+    readonly property int widgetIndexMax: AppEnumsNs.APP_GUI_NUM_WIDGETS
+    property int dotWidgetIndex: widgetIndexMax
     property bool selected: false
     property int hpAssigned: AppEnumsNs.APP_GUI_MAXNUM_HP // no HP assigned
     onSelectedChanged: updateImage()
@@ -97,6 +99,36 @@ Item {
         source: "images/c163_ZonaSeleccionadaHP4_seleccionado.png"
         fillMode: Image.PreserveAspectFit
     }
+
+    Button {
+        id: button
+        width: unselectedUnassignedDotImg.paintedWidth
+        height: unselectedUnassignedDotImg.paintedHeight
+        opacity: 0
+        text: "Button"
+        onReleased: {
+            switch(dotWidgetIndex) {
+            case AppEnumsNs.swDotZone0 : break;
+            case AppEnumsNs.swDotZone1 : break;
+            case AppEnumsNs.swDotZone2 : break;
+            case AppEnumsNs.swDotZone3 : break;
+            case AppEnumsNs.swDotZone4 : break;
+            case AppEnumsNs.swDotZone5 : break;
+            case AppEnumsNs.swDotZone6 : break;
+            case AppEnumsNs.swDotZone7 : break;
+            case AppEnumsNs.swDotZone8 : break;
+            case AppEnumsNs.swDotZone9 : break;
+            case AppEnumsNs.swDotZone10: break;
+            case AppEnumsNs.swDotZone11: break;
+            case AppEnumsNs.swDotZone12: break;
+            case AppEnumsNs.swDotZone13: break;
+            case AppEnumsNs.swDotZone14: break;
+            default: break;
+            }
+        }
+    }
+
+
     states: [
         State {
             name: "UnselectedAssignedToHp1State"
@@ -205,8 +237,6 @@ Item {
 }
 
 
-/*##^##
-Designer {
-    D{i:0;height:0;width:0}
-}
-##^##*/
+
+
+

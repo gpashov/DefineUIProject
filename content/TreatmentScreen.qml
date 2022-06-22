@@ -10,7 +10,7 @@ Item {
 
     Connections {
         target: wdgWpr
-        onBodyZoomed: (zoomed) => { bodySilhouette.visible = !zoomed; BodyAreaZoomed.visible = zoomed }
+        onBodyZoomed: (zoomed) => { console.log("zoomed: ", zoomed); bodySilhouette.visible = !zoomed; bodyAreaZoomed.visible = zoomed }
     }
 
     Connections {

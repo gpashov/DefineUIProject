@@ -10,7 +10,7 @@ Item {
         id: twoStateButton
         imageSourcePressed: "images/c112_3_ZonaSeleccionadaHP3.png"
         imageSourceReleased: "images/c112_3_ZonaSeleccionadaHP3.png"
-        onRelease: cbkWpr.butModelImage(AppEnumsNs.APP_GUI_HP3_ID)
+        button.onReleased: cbkWpr.butModelImage(AppEnumsNs.APP_GUI_HP3_ID)
     }
 
     states: [

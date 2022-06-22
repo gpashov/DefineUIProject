@@ -66,6 +66,7 @@ Item {
         id: dot1
         visible: false
         state: states[0].name
+        dotWidgetIndex: AppEnumsNs.swDotZone0
     }
 
     ZoomDot {
@@ -74,6 +75,7 @@ Item {
         y: 0
         visible: false
         state: states[0].name
+        dotWidgetIndex: AppEnumsNs.swDotZone1
     }
 
     ZoomDot {
@@ -82,6 +84,7 @@ Item {
         y: 0
         visible: false
         state: states[0].name
+        dotWidgetIndex: AppEnumsNs.swDotZone2
     }
 
     ZoomDot {
@@ -90,6 +93,7 @@ Item {
         y: 0
         visible: false
         state: states[0].name
+        dotWidgetIndex: AppEnumsNs.swDotZone3
     }
 
     ZoomDot {
@@ -98,6 +102,7 @@ Item {
         y: 0
         visible: false
         state: states[0].name
+        dotWidgetIndex: AppEnumsNs.swDotZone4
     }
 
     ZoomDot {
@@ -106,6 +111,7 @@ Item {
         y: 0
         visible: false
         state: states[0].name
+        dotWidgetIndex: AppEnumsNs.swDotZone5
     }
 
     ZoomDot {
@@ -114,6 +120,7 @@ Item {
         y: 0
         visible: false
         state: states[0].name
+        dotWidgetIndex: AppEnumsNs.swDotZone6
     }
 
     ZoomDot {
@@ -122,6 +129,7 @@ Item {
         y: 0
         visible: false
         state: states[0].name
+        dotWidgetIndex: AppEnumsNs.swDotZone7
     }
 
     ZoomDot {
@@ -130,6 +138,7 @@ Item {
         y: 0
         visible: false
         state: states[0].name
+        dotWidgetIndex: AppEnumsNs.swDotZone8
     }
 
     ZoomDot {
@@ -138,6 +147,7 @@ Item {
         y: 0
         visible: false
         state: states[0].name
+        dotWidgetIndex: AppEnumsNs.swDotZone9
     }
 
     ZoomDot {
@@ -146,6 +156,7 @@ Item {
         y: 0
         visible: false
         state: states[0].name
+        dotWidgetIndex: AppEnumsNs.swDotZone10
     }
 
     ZoomDot {
@@ -154,6 +165,7 @@ Item {
         y: 0
         visible: false
         state: states[0].name
+        dotWidgetIndex: AppEnumsNs.swDotZone11
     }
 
     ZoomDot {
@@ -162,6 +174,7 @@ Item {
         y: 0
         visible: false
         state: states[0].name
+        dotWidgetIndex: AppEnumsNs.swDotZone12
     }
 
     ZoomDot {
@@ -170,6 +183,7 @@ Item {
         y: 0
         visible: false
         state: states[0].name
+        dotWidgetIndex: AppEnumsNs.swDotZone13
     }
 
     ZoomDot {
@@ -178,6 +192,7 @@ Item {
         y: 0
         visible: false
         state: states[0].name
+        dotWidgetIndex: AppEnumsNs.swDotZone14
     }
     states: [
         State {
