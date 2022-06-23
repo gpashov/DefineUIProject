@@ -61,8 +61,10 @@ Item {
     onVisibleChanged: { cbkWpr.popUpVisibleChanged(AppEnumsNs.popUpRFID, visible); console.log("AppEnumsNs.popUpRFID: ", AppEnumsNs.popUpRFID) }
 }
 
+
+
 /*##^##
 Designer {
-    D{i:0;formeditorZoom:0.75}
+    D{i:0;formeditorZoom:0.33;height:0;width:0}
 }
 ##^##*/

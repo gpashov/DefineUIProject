@@ -26,12 +26,12 @@ void WidgetsWrapper::bodyAreaSelect(EAppGUIfullBodyAreas area)
     emit bodyAreaSelected(area);
 }
 
-void WidgetsWrapper::dotZoneAssignHp(uint8 dot, EAppGUI_HPsIDs hpIndex)
+void WidgetsWrapper::dotZoneAssignHp(EAppGUIwidgetIDlist dot, EAppGUI_HPsIDs hpIndex)
 {
     emit dotZoneHpAssigned(dot, hpIndex);
 }
 
-void WidgetsWrapper::dotZoneSelect(uint8 dot, bool isSelected)
+void WidgetsWrapper::dotZoneSelect(EAppGUIwidgetIDlist dot, bool isSelected)
 {
     emit dotZoneSelected(dot, isSelected);
 }
@@ -395,15 +395,15 @@ uint16 WidgetsWrapper::GUIsetWidgetVisibility(uint32 id, uint8 vis)
     case swPopUpRecommInfo: emit infoSwitchVisibilityChanged(vis); break;
 //    case popUpRecomm,
 //    case imgPopUpRecommbckGnd,
-//    case imgPopUpRecommCurved,
-//    case imgPopUpRecommTight,
-//    case imgPopUpRecommStright,
-//    case imgPopUpRecommTiny,
-//    case imgPopUpRecommTinyCurved,
-//    case imgPopUpRecommDouble,
-//    case imgPopUpRecommOval,
-//    case imgPopUpRecommOvalCurved,
-//    case imgPopUpRecommAngled,
+    case imgPopUpRecommCurved:
+    case imgPopUpRecommTight:
+    case imgPopUpRecommStright:
+    case imgPopUpRecommTiny:
+    case imgPopUpRecommTinyCurved:
+    case imgPopUpRecommDouble:
+    case imgPopUpRecommOval:
+    case imgPopUpRecommOvalCurved:
+    case imgPopUpRecommAngled: emit suggestedHpWatermarkDisplayed((EAppGUIwidgetIDlist)id, vis); break;
 
 //    //Menu Principal
 //    case butTrtScrShowMainMenu,
@@ -1432,6 +1432,26 @@ void WidgetsWrapper::GUIdisableWarningsPopUp()
 void WidgetsWrapper::GUIWarningIconActivate(EAppGUImachineWarnings warningId, bool isActive)
 {
     emit warningActivated(warningId, isActive);
+}
+
+void WidgetsWrapper::GUIactivePopUp(EAppGUIwidgetIDlist popupWidgetId)
+{
+    switch (popupWidgetId) {
+    case popUpRecomm: emit recommendedHpsPopupActivated(true); break;
+    case popUpRFID: emit rfidPopupActivated(true); break;
+    case popUpTstVac: emit testVacuumPopupActivated(true); break;
+    default: break;
+    }
+}
+
+void WidgetsWrapper::GUIdisablePopUp(EAppGUIwidgetIDlist popupWidgetId)
+{
+    switch (popupWidgetId) {
+    case popUpRecomm: emit recommendedHpsPopupActivated(false); break;
+    case popUpRFID: emit rfidPopupActivated(false); break;
+    case popUpTstVac: emit testVacuumPopupActivated(false); break;
+    default: break;
+    }
 }
 
 QString WidgetsWrapper::calcNumber()

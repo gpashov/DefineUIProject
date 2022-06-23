@@ -1,15 +1,16 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
+import DefineUIProject
 
 Item {
     id: item1
-    width: popupColorHp1Img.width
-    height: popupColorHp1Img.height
+    width: Constants.width
+    height: Constants.height
 
     Image {
         id: popupColorHp1Img
-        x: 0
-        y: 0
+        x: 323
+        y: 573
         visible: false
         source: "images/c216_PopUpManipHP1.png"
         fillMode: Image.PreserveAspectFit
@@ -17,8 +18,8 @@ Item {
 
     Image {
         id: popupColorHp2Img
-        x: 0
-        y: 0
+        x: popupColorHp1Img.x
+        y: popupColorHp1Img.y
         visible: false
         source: "images/c217_PopUpManipHP2.png"
         fillMode: Image.PreserveAspectFit
@@ -26,8 +27,8 @@ Item {
 
     Image {
         id: popupColorHp3Img
-        x: 0
-        y: 0
+        x: popupColorHp1Img.x
+        y: popupColorHp1Img.y
         visible: false
         source: "images/c218_PopUpManipHP3.png"
         fillMode: Image.PreserveAspectFit
@@ -35,8 +36,8 @@ Item {
 
     Image {
         id: popupColorHp4Img
-        x: 0
-        y: 0
+        x: popupColorHp1Img.x
+        y: popupColorHp1Img.y
         visible: false
         source: "images/c219_PopUpManipHP4.png"
         fillMode: Image.PreserveAspectFit

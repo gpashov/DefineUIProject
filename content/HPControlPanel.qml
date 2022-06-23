@@ -171,6 +171,7 @@ Item {
         id: popupTestVacuumSmall
         x: 209
         y: 45
+        visible: false
     }
 
 

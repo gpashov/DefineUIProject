@@ -1,7 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import DefineUIProject 1.0
-//import define.enums 1.0
+import define.enums 1.0
 
 Item {
     id: name
@@ -106,26 +106,7 @@ Item {
         height: unselectedUnassignedDotImg.paintedHeight
         opacity: 0
         text: "Button"
-        onReleased: {
-            switch(dotWidgetIndex) {
-            case AppEnumsNs.swDotZone0 : break;
-            case AppEnumsNs.swDotZone1 : break;
-            case AppEnumsNs.swDotZone2 : break;
-            case AppEnumsNs.swDotZone3 : break;
-            case AppEnumsNs.swDotZone4 : break;
-            case AppEnumsNs.swDotZone5 : break;
-            case AppEnumsNs.swDotZone6 : break;
-            case AppEnumsNs.swDotZone7 : break;
-            case AppEnumsNs.swDotZone8 : break;
-            case AppEnumsNs.swDotZone9 : break;
-            case AppEnumsNs.swDotZone10: break;
-            case AppEnumsNs.swDotZone11: break;
-            case AppEnumsNs.swDotZone12: break;
-            case AppEnumsNs.swDotZone13: break;
-            case AppEnumsNs.swDotZone14: break;
-            default: break;
-            }
-        }
+        onReleased: if (selected == false) { cbkWpr.swDotZoneOn(dotWidgetIndex) } else { cbkWpr.swDotZoneOff(dotWidgetIndex) }
     }
 
 

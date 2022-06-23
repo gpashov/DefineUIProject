@@ -32,8 +32,8 @@ public:
     Q_INVOKABLE void butHideCtrlPnl();
     Q_INVOKABLE void butShowCtrlPnl();
     Q_INVOKABLE void butFullBodyArea(EAppGUIfullBodyAreas bodyArea);
-    Q_INVOKABLE void swDotZoneOn();
-    Q_INVOKABLE void swDotZoneOff();
+    Q_INVOKABLE void swDotZoneOn(EAppGUIwidgetIDlist widgetId);
+    Q_INVOKABLE void swDotZoneOff(EAppGUIwidgetIDlist widgetId);
     //Q_INVOKABLE void CBKbutPopUpOK();
     Q_INVOKABLE void popUpVisibleChanged( EAppGUIwidgetIDlist widgetId, bool visible );
     Q_INVOKABLE void butPopUpReturn();

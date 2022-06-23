@@ -301,9 +301,49 @@ Item {
         }
     }
 
+    PopupRecommendedHps {
+        id: popupRecommendedHps
+        visible: false
+
+        Connections {
+            target: wdgWpr
+            onRecommendedHpsPopupActivated: (isActivated) => visible = isActivated
+        }
+    }
+
+    PopupRfid {
+        id: popupRfid
+        visible: false
+
+        Connections {
+            target: wdgWpr
+            onRfidPopupActivated: (isActivated) => visible = isActivated
+        }
+    }
+
+    PopupTestVacuum {
+        id: popupTestVacuum
+        visible: false
+
+        Connections {
+            target: wdgWpr
+            onTestVacuumPopupActivated: (isActivated) => visible = isActivated
+        }
+    }
+
+    PopupHpColorBar {
+        id: popupHpColorBar
+        visible: true
+    }
+
     ErrorPopups {
         id: errorPopups
     }
+
+
+
+
+
 }
 
 

@@ -176,14 +176,16 @@ void CallbackWrapper::butFullBodyArea(EAppGUIfullBodyAreas bodyArea)
     CBKbutFullBodyAreaF(&argWidget);
 }
 
-void CallbackWrapper::swDotZoneOn()
+void CallbackWrapper::swDotZoneOn(EAppGUIwidgetIDlist widgetId)
 {
-
+    argWidget.id = widgetId;
+    CBKswDotZoneOnF(&argWidget);
 }
 
-void CallbackWrapper::swDotZoneOff()
+void CallbackWrapper::swDotZoneOff(EAppGUIwidgetIDlist widgetId)
 {
-
+    argWidget.id = widgetId;
+    CBKswDotZoneOffF(&argWidget);
 }
 
 void CallbackWrapper::popUpVisibleChanged( EAppGUIwidgetIDlist widgetId, bool visible )
