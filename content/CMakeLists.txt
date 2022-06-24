@@ -9,7 +9,6 @@ qt6_add_qml_module(content
     VERSION 1.0
     QML_FILES
         ZoomDot.qml
-        VacuumButton.qml
         TwoStateButton.qml
         TreatmentScreen.qml
         ThreeStateButton.qml
@@ -28,6 +27,7 @@ qt6_add_qml_module(content
         LanguagesScreen.qml
         InitialScreen.qml
         InfoSwitch.qml
+        HpVacuumButton.qml
         HPTypeNameRight.qml
         HPTypeNameLeft.qml
         HPTimeRemaining.qml

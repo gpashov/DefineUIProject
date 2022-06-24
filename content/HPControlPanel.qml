@@ -14,7 +14,7 @@ Item {
         fillMode: Image.PreserveAspectFit
     }
 
-    VacuumButton {
+    HpVacuumButton {
         id: vacuumButton
         x: 146
         y: 45
