@@ -5,6 +5,8 @@ import define.enums 1.0
 
 Item {
     id: name
+    readonly property int widgetIndexMax: AppEnumsNs.APP_GUI_NUM_WIDGETS
+    property int dotWidgetIndex: widgetIndexMax
     property bool selected: false
     property int hpAssigned: AppEnumsNs.APP_GUI_MAXNUM_HP // no HP assigned
     onSelectedChanged: updateImage()
@@ -97,6 +99,17 @@ Item {
         source: "images/c163_ZonaSeleccionadaHP4_seleccionado.png"
         fillMode: Image.PreserveAspectFit
     }
+
+    Button {
+        id: button
+        width: unselectedUnassignedDotImg.paintedWidth
+        height: unselectedUnassignedDotImg.paintedHeight
+        opacity: 0
+        text: "Button"
+        onReleased: if (selected == false) { cbkWpr.swDotZoneOn(dotWidgetIndex) } else { cbkWpr.swDotZoneOff(dotWidgetIndex) }
+    }
+
+
     states: [
         State {
             name: "UnselectedAssignedToHp1State"
@@ -205,8 +218,6 @@ Item {
 }
 
 
-/*##^##
-Designer {
-    D{i:0;height:0;width:0}
-}
-##^##*/
+
+
+

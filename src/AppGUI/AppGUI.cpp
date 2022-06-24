@@ -690,7 +690,7 @@ void AppGUIhandleTrtZone( void)
                 /* Segun el resultado de la busqueda */
 //                if( HPindex >= APP_GUI_MAXNUM_HP)
 //                {
-                    /* No lo tiene ningun HP seleccionado, colocamos las imagenes y coordenadas correspondientes */
+                    /* No lo tiene ningun HP asociado, colocamos las imagenes y coordenadas correspondientes */
 //                    xOn = APP_GUI_AREA_ZOOM_DOTS[body][area][i].imgOnOffX;
 //                    yOn = APP_GUI_AREA_ZOOM_DOTS[body][area][i].imgOnOffY;
 //                    xOff = APP_GUI_AREA_ZOOM_DOTS[body][area][i].imgOnOffX;
@@ -714,7 +714,7 @@ void AppGUIhandleTrtZone( void)
 //                GUIsetSwitchPosition( widID, xOn, yOn, xOff, yOff, xOn, yOn, xOff, yOff, areaTS);
 //                GUIsetSwitchImg( widID, imgOn, imgOff, imgOn, imgOff);
 
-                wdgWpr.dotZoneAssignHp(i, (EAppGUI_HPsIDs)HPindex);
+                wdgWpr.dotZoneAssignHp((EAppGUIwidgetIDlist)i, (EAppGUI_HPsIDs)HPindex);
             }
         }
     }
@@ -1153,30 +1153,30 @@ void AppGUIhandleRFIDpopUp( uint8 show, uint8 HPindex)
 
 void AppGUIhandleRecommendationpopUp( uint8 show, uint8 selTrtDot, cAppGUIfullBodyAreas selTrtArea)
 {
-//    uint8 i;
+    uint8 i;
 	
-//    /* Según si se quiere mostrar o no */
-//    if( show)
-//    {
-//        /* Activar el popUp */
-//        GUIactivePopUp( popUpRecomm);
+    /* Según si se quiere mostrar o no */
+    if( show)
+    {
+        /* Activar el popUp */
+        wdgWpr.GUIactivePopUp( popUpRecomm);
 		
-//        for (i = 0; i < HP_CRYO_NUM_HP_MODELS; i++)	{	GUIsetWidgetVisibility( APP_GUI_TRT_LIST_OF_IMG_HP_RECOMMENDED_PER_ZONE[i], APP_GUI_HP_RECOMMENDED_PER_ZONE[i][selTrtArea][selTrtDot]);	}
-//    }
-//    else
-//    {
-//        /* Desactivamos el popUp */
-//        GUIdisablePopUp( popUpRecomm);
+        for (i = 0; i < HP_CRYO_NUM_HP_MODELS; i++)	{	wdgWpr.GUIsetWidgetVisibility( APP_GUI_TRT_LIST_OF_IMG_HP_RECOMMENDED_PER_ZONE[i], APP_GUI_HP_RECOMMENDED_PER_ZONE[i][selTrtArea][selTrtDot]);	}
+    }
+    else
+    {
+        /* Desactivamos el popUp */
+        wdgWpr.GUIdisablePopUp( popUpRecomm);
 		
-//        //for (i = HP_CRYO_MODEL_CURVED; i < HP_CRYO_NUM_HP_MODELS; i++){		GUIsetWidgetVisibility( APP_GUI_TRT_LIST_OF_IMG_HP_RECOMMENDED_PER_ZONE[i], 0 );	}
+        //for (i = HP_CRYO_MODEL_CURVED; i < HP_CRYO_NUM_HP_MODELS; i++){		GUIsetWidgetVisibility( APP_GUI_TRT_LIST_OF_IMG_HP_RECOMMENDED_PER_ZONE[i], 0 );	}
 		
-//        /* Si la gestión de zona de tratamiento esta en zoom tenemos un glitch de un refresco en
-//         * el que el boton "Return" desaparece ya que el popUp lo deshabilita al quitarse pero
-//         * el handle de la zona de tratamiento lo volvera a poner. Para evitar esto ponemos el estado
-//         * del boton de return a visible y habilitado si la zona de tratamiento esta en zoom. Lo mas facil es
-//         * forzar un update de la zona */
-////		AppGUIhandleTrtZone();
-//    }
+        /* Si la gestión de zona de tratamiento esta en zoom tenemos un glitch de un refresco en
+         * el que el boton "Return" desaparece ya que el popUp lo deshabilita al quitarse pero
+         * el handle de la zona de tratamiento lo volvera a poner. Para evitar esto ponemos el estado
+         * del boton de return a visible y habilitado si la zona de tratamiento esta en zoom. Lo mas facil es
+         * forzar un update de la zona */
+//		AppGUIhandleTrtZone();
+    }
 }
 
 void AppGUIhandleWarningPopUp( uint8 show)
@@ -1481,21 +1481,21 @@ void AppGUIhandleCleanUpPopUps( uint8 show, uint8 HPindex)
 
 uint8 AppGUIisTrtRunning( uint8 HPindex, cHPcryoTreatmentStatus *status)
 {
-//    tPRFdata *PRF;
-//    tHPcryoData *HP;
+    tPRFdata *PRF;
+    tHPcryoData *HP;
 	
-//    /* Comprobamos si el HP indicado esta en tratamiento y si lo está devolvemos el status */
-//    if( HPcryoGetFromSlot( APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
-//    {
-//        /* Hay HP, vamos a ver si esta en tratamiento */
-//        if( HPcryoGetStatus( HP, PRF) == HP_CRYO_TREATMENT)
-//        {
-//            /* Esta en tratamiento, devolvemos cierto y guardamos el estado de tratamiento si el
-//             * puntero pasado no es NULL */
-//            if( status != NULL){ ( *status) = HPcryoTrtStatus( HP, PRF);}
-//            return 1;
-//        }
-//    }
+    /* Comprobamos si el HP indicado esta en tratamiento y si lo está devolvemos el status */
+    if( HPcryoGetFromSlot( (cPRFslot)APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
+    {
+        /* Hay HP, vamos a ver si esta en tratamiento */
+        if( HPcryoGetStatus( HP, PRF) == HP_CRYO_TREATMENT)
+        {
+            /* Esta en tratamiento, devolvemos cierto y guardamos el estado de tratamiento si el
+             * puntero pasado no es NULL */
+            if( status != NULL){ ( *status) = HPcryoTrtStatus( HP, PRF);}
+            return 1;
+        }
+    }
 	
     /* Si llegamos aqui es que no esta en tratamiento */
     return 0;
@@ -3064,10 +3064,10 @@ void AppGUIwarningNotification (void)
 
 void AppGUIchangeMenuVwrTemperatureOrTime ( uint8 HPindex)
 {
-//	if(AppGUIdata.slot[HPindex].VwrTemperatureOrTime == 0)
-//	{	AppGUIdata.slot[HPindex].VwrTemperatureOrTime = 1;	}
-//	else
-//	{	AppGUIdata.slot[HPindex].VwrTemperatureOrTime = 0;	}
+    if(AppGUIdata.slot[HPindex].VwrTemperatureOrTime == 0)
+    {	AppGUIdata.slot[HPindex].VwrTemperatureOrTime = 1;	}
+    else
+    {	AppGUIdata.slot[HPindex].VwrTemperatureOrTime = 0;	}
 }
 
 void AppGUI_RFIDpopup_ReuseOption (uint8 option)

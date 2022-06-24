@@ -10,6 +10,7 @@ Item {
         id: imageButton
         imageSourcePressed: "images/c112_1_ZonaSeleccionadaHP1.png"
         imageSourceReleased: "images/c112_1_ZonaSeleccionadaHP1.png"
+        button.onReleased: cbkWpr.butModelImage(AppEnumsNs.APP_GUI_HP1_ID)
     }
 
     states: [
@@ -160,8 +161,4 @@ Item {
     }
 }
 
-/*##^##
-Designer {
-    D{i:0;height:0;width:0}
-}
-##^##*/
+

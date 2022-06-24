@@ -57,6 +57,16 @@ Item {
         imageSourcePressed: "images/c048_RelojTemporizadorPress.png"
         imageSourceReleased: "images/c049_RelojTemporizadorRls.png"
         imageSourceDisabled: "images/c050_RelojTemporizadorMarcaAgua.png"
+
+        button.onReleased: {
+            switch (parent.state) {
+            case "hp1State": cbkWpr.butTemperatureVwr(AppEnumsNs.APP_GUI_HP1_ID); break;
+            case "hp2State": cbkWpr.butTemperatureVwr(AppEnumsNs.APP_GUI_HP2_ID); break;
+            case "hp3State": cbkWpr.butTemperatureVwr(AppEnumsNs.APP_GUI_HP3_ID); break;
+            case "hp4State": cbkWpr.butTemperatureVwr(AppEnumsNs.APP_GUI_HP4_ID); break;
+            default: break;
+            }
+        }
     }
 
     HPTimeRemaining {
@@ -165,6 +175,7 @@ Item {
         id: popupTestVacuumSmall
         x: 209
         y: 45
+        visible: false
     }
 
 

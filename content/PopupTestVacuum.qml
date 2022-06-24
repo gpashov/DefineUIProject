@@ -1,45 +1,49 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
+import DefineUIProject
 import define.enums 1.0
 
 Item {
     id: item1
+    width: Constants.width
+    height: Constants.height
+
     Image {
         id: c170_PopUpImagenSuccion
-        x: 0
-        y: 0
+        x: 323
+        y: 184
         source: "images/c170_PopUpImagenSuccion.png"
         fillMode: Image.PreserveAspectFit
     }
 
     Image {
         id: c337_PopupBotonsuccion1Rls
-        x: 35
-        y: 291
+        x: 358
+        y: 475
         source: "images/c337_PopupBotonsuccion1Rls.png"
         fillMode: Image.PreserveAspectFit
     }
 
     Image {
         id: c339_PopupBotonsuccion2Rls
-        x: 35
-        y: 226
+        x: c337_PopupBotonsuccion1Rls.x
+        y: 410
         source: "images/c339_PopupBotonsuccion2Rls.png"
         fillMode: Image.PreserveAspectFit
     }
 
     Image {
         id: c341_PopupBotonsuccion3Rls
-        x: 35
-        y: 155
+        x: c337_PopupBotonsuccion1Rls.x
+        y: 339
         source: "images/c341_PopupBotonsuccion3Rls.png"
         fillMode: Image.PreserveAspectFit
     }
 
     Image {
         id: c222_PopUpIndmanoPress
-        x: 183
-        y: 67
+        x: 506
+        y: 251
         source: "images/c222_PopUpIndmanoPress.png"
         fillMode: Image.PreserveAspectFit
     }
@@ -54,63 +58,63 @@ Item {
 
     TwoStateButton {
         id: testVacuumLvl1Button
-        x: 140
-        y: 172
+        x: 463
+        y: 489
         imageSourcePressed: "images/c177_PopUpBotonTestPress.png"
         imageSourceReleased: "images/c176_PopUpBotonTestRls.png"
     }
 
     TwoStateButton {
         id: testVacuumLvl2Button
-        x: 140
-        y: 238
+        x: testVacuumLvl1Button.x
+        y: 422
         imageSourcePressed: "images/c177_PopUpBotonTestPress.png"
         imageSourceReleased: "images/c176_PopUpBotonTestRls.png"
     }
 
     TwoStateButton {
         id: testVacuumLvl3Button
-        x: 140
-        y: 305
+        x: testVacuumLvl1Button.x
+        y: 356
         imageSourcePressed: "images/c177_PopUpBotonTestPress.png"
         imageSourceReleased: "images/c176_PopUpBotonTestRls.png"
     }
 
     TwoStateButton {
         id: testVacuumLvl1Switch
-        x: 260
-        y: 168
+        x: 582
+        y: 486
         imageSourcePressed: "images/c180_PopupBotonActivarPress"
         imageSourceReleased: "images/c179_PopupBotonActivarRls"
     }
 
     TwoStateButton {
         id: testVacuumLvl2Switch
-        x: 260
-        y: 237
+        x: testVacuumLvl1Switch.x
+        y: 421
         imageSourcePressed: "images/c180_PopupBotonActivarPress"
         imageSourceReleased: "images/c179_PopupBotonActivarRls"
     }
 
     TwoStateButton {
         id: testVacuumLvl3Switch
-        x: 260
-        y: 302
+        x: testVacuumLvl1Switch.x
+        y: 352
         imageSourcePressed: "images/c180_PopupBotonActivarPress"
         imageSourceReleased: "images/c179_PopupBotonActivarRls"
     }
 
     PopupHpColorBar {
         id: popupHpColorBar
-        x: -1
-        y: 389
+        x: 0
+        y: 0
         state: "hp1State"
     }
 
     TwoStateButton {
         id: twoStateButton
-        x: 134
-        y: 347
+        x: 457
+        y: 531
         imageSourceReleased: "images/c220_PopUpBotonAuto.png"
         imageSourcePressed: "images/c221_PopUpBotonAutoPress.png"
     }
@@ -119,8 +123,10 @@ Item {
     onVisibleChanged: { cbkWpr.popUpVisibleChanged(AppEnumsNs.popUpTstVac, visible); console.log("AppEnumsNs.popUpTstVac: ", AppEnumsNs.popUpTstVac) }
 }
 
+
+
 /*##^##
 Designer {
-    D{i:0;autoSize:true;formeditorZoom:0.66;height:480;width:640}
+    D{i:0;formeditorZoom:0.5;height:0;width:0}
 }
 ##^##*/

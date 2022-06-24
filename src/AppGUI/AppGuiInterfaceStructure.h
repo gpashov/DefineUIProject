@@ -521,6 +521,7 @@ namespace AppEnumsNs
 
     }cAppGUItrtAgrupacionZones;
 
+
     /*** LISTADO DE IMAGENES Y WIDGETS ***/
     // Imágenes de la Interface
     typedef enum EAppGUIimageIDlist
@@ -1106,6 +1107,7 @@ namespace AppEnumsNs
     // Widgets de la Interface
     typedef enum EAppGUIwidgetIDlist
     {
+
         //PANTALLA DE CARGA
         imgLoadScrBckGnd,
         imgLoadAnim1,
@@ -1832,8 +1834,8 @@ extern const tAppGUIareaZoomDotsTableFields APP_GUI_AREA_ZOOM_DOTS[APP_GUI_NUM_B
 
 extern const cAppGUItrtAgrupacionZones APP_GUI_TRT_ZONES_GROUP_ASSOCIATION[APP_GUI_NUM_FULL_BODY_AREAS][APP_GUI_MAX_DOTS_PER_AREA];
 
-//extern const uint8 APP_GUI_HP_RECOMMENDED_PER_ZONE[HP_CRYO_NUM_HP_MODELS][APP_GUI_NUM_FULL_BODY_AREAS][APP_GUI_MAX_DOTS_PER_AREA];
-//extern const uint32 APP_GUI_TRT_LIST_OF_IMG_HP_RECOMMENDED_PER_ZONE[HP_CRYO_NUM_HP_MODELS];
+extern const uint8 APP_GUI_HP_RECOMMENDED_PER_ZONE[HP_CRYO_NUM_HP_MODELS][APP_GUI_NUM_FULL_BODY_AREAS][APP_GUI_MAX_DOTS_PER_AREA];
+extern const uint32 APP_GUI_TRT_LIST_OF_IMG_HP_RECOMMENDED_PER_ZONE[HP_CRYO_NUM_HP_MODELS];
 
 //extern const uint32 APP_GUI_LANG_SW_WIDGET_LANG_LIST[App_GUI_Different_Languages];
 

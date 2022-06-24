@@ -86,10 +86,10 @@ const uint32 APP_GUI_TRT_SCR_BUT_MODEL_IMG_SIDE_FROM_SLOT_IMG[APP_GUI_MAX_PRS_RL
     }
 };
 
-//const uint32 APP_GUI_TRT_LIST_OF_IMG_HP_RECOMMENDED_PER_ZONE[HP_CRYO_NUM_HP_MODELS] =
-// {
-//		 APP_GUI_NUM_WIDGETS, imgPopUpRecommCurved, imgPopUpRecommTight, imgPopUpRecommStright, imgPopUpRecommTiny, imgPopUpRecommTinyCurved, imgPopUpRecommDouble, imgPopUpRecommOval, imgPopUpRecommOvalCurved, imgPopUpRecommAngled
-// };
+const uint32 APP_GUI_TRT_LIST_OF_IMG_HP_RECOMMENDED_PER_ZONE[HP_CRYO_NUM_HP_MODELS] =
+ {
+         APP_GUI_NUM_WIDGETS, imgPopUpRecommCurved, imgPopUpRecommTight, imgPopUpRecommStright, imgPopUpRecommTiny, imgPopUpRecommTinyCurved, imgPopUpRecommDouble, imgPopUpRecommOval, imgPopUpRecommOvalCurved, imgPopUpRecommAngled
+ };
 
 /* Tabla con las imagenes de los slots para los botones de HP del panel de control cuando no hay HP conectado */
 const uint32 APP_GUI_TRT_SCR_BUT_MODE_IMG_NO_HP_IMG[APP_GUI_MAXNUM_HP] =
@@ -571,68 +571,68 @@ const cAppGUItrtAgrupacionZones APP_GUI_TRT_ZONES_GROUP_ASSOCIATION[APP_GUI_NUM_
         NoGrupo, NoGrupo, NoGrupo, NoGrupo, NoGrupo, NoGrupo, NoGrupo, NoGrupo, NoGrupo, NoGrupo, NoGrupo, NoGrupo},
 };
 
-///* Un '1' indica que ha de mostrarse el aplicador con marca de agua en la recomendación, es decir que no se recomienda ese aplicador para esa zona*/
-//const uint8 APP_GUI_HP_RECOMMENDED_PER_ZONE[HP_CRYO_NUM_HP_MODELS][APP_GUI_NUM_FULL_BODY_AREAS][APP_GUI_MAX_DOTS_PER_AREA] =
-//{
-//		//UNDEFINED
-//		{	{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-//			{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
-//		},
-//		//CURVED
-//		{	//NO_AREA						//TORSO							//PIERNAS						//ESPALDA
-//			{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,0,0,0,1,0,0,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,0,0,0,0,1,1,1,1,1,1,1,1,1},
-//			//PIERNAS_TRASERA				//BRAZOS						//CUELLO
-//			{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}
-//		},
-//		//TIGHT
-//		{	//NO_AREA						//TORSO							//PIERNAS						//ESPALDA
-//			{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,0,0,0,0,0,0,0,0,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,0,0,0,0,1,1,1,1,1,1,1,1,1},
-//			//PIERNAS_TRASERA				//BRAZOS						//CUELLO
-//			{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{0,0,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}
-//		},
-//		//STRIGHT
-//		{	//NO_AREA						//TORSO							//PIERNAS						//ESPALDA
-//			{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,0,0,0,0,0,0,1,1,1,1,1},{1,1,0,0,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,0,0,1,1,1,1,1,1,1,1,1},
-//			//PIERNAS_TRASERA				//BRAZOS						//CUELLO
-//			{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{0,0,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}
-//		},
-//		//TINY
-//		{	//NO_AREA						//TORSO							//PIERNAS						//ESPALDA
-//			{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{0,0,0,0,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,0,0,0,0,1,1,1,1,1,1,1},{0,0,0,0,1,1,1,1,1,1,1,1,1,1,1},
-//			//PIERNAS_TRASERA				//BRAZOS						//CUELLO
-//			{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{0,0,0,1,1,1,1,1,1,1,1,1,1,1,1}
-//		},
-//		//TINY CURVED
-//		{	//NO_AREA						//TORSO							//PIERNAS						//ESPALDA
-//			{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{0,0,0,0,1,1,1,1,1,1,1,1,1,0,0},{1,1,1,1,0,0,0,0,1,1,1,1,1,1,1},{0,0,0,0,1,1,1,1,1,1,1,1,1,1,1},
-//			//PIERNAS_TRASERA				//BRAZOS						//CUELLO
-//			{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{0,1,1,1,1,1,1,1,1,1,1,1,1,1,1}
-//		},
-//		//DOUBLE
-//		{	//NO_AREA						//TORSO							//PIERNAS						//ESPALDA
-//			{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,0,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
-//			//PIERNAS_TRASERA				//BRAZOS						//CUELLO
-//			{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}
-//		},
-//		//OVAL
-//		{	//NO_AREA						//TORSO							//PIERNAS						//ESPALDA
-//			{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,0,1,1,0,0,1,1},{0,0,0,0,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,0,0,1,1,1,1,1,1,1,1,1},
-//			//PIERNAS_TRASERA				//BRAZOS						//CUELLO
-//			{1,1,0,0,0,0,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}
-//		},
-//		//OVAL CURVED
-//		{	//NO_AREA						//TORSO							//PIERNAS						//ESPALDA
-//			{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,0,1,1,0,0,1,1},{0,0,0,0,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,0,0,1,1,1,1,1,1,1,1,1},
-//			//PIERNAS_TRASERA				//BRAZOS						//CUELLO
-//			{0,0,0,0,0,0,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}
-//		},
-//		//ANGLED
-//		{	//NO_AREA						//TORSO							//PIERNAS						//ESPALDA
-//			{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,0,1,1,0,0},{0,0,0,0,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
-//			//PIERNAS_TRASERA				//BRAZOS						//CUELLO
-//			{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}
-//		},
-//};
+/* Un '1' indica que ha de mostrarse el aplicador con marca de agua en la recomendación, es decir que no se recomienda ese aplicador para esa zona*/
+const uint8 APP_GUI_HP_RECOMMENDED_PER_ZONE[HP_CRYO_NUM_HP_MODELS][APP_GUI_NUM_FULL_BODY_AREAS][APP_GUI_MAX_DOTS_PER_AREA] =
+{
+        //UNDEFINED
+        {	{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+            {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+        },
+        //CURVED
+        {	//NO_AREA						//TORSO							//PIERNAS						//ESPALDA
+            {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,0,0,0,1,0,0,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,0,0,0,0,1,1,1,1,1,1,1,1,1},
+            //PIERNAS_TRASERA				//BRAZOS						//CUELLO
+            {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}
+        },
+        //TIGHT
+        {	//NO_AREA						//TORSO							//PIERNAS						//ESPALDA
+            {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,0,0,0,0,0,0,0,0,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,0,0,0,0,1,1,1,1,1,1,1,1,1},
+            //PIERNAS_TRASERA				//BRAZOS						//CUELLO
+            {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{0,0,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}
+        },
+        //STRIGHT
+        {	//NO_AREA						//TORSO							//PIERNAS						//ESPALDA
+            {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,0,0,0,0,0,0,1,1,1,1,1},{1,1,0,0,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,0,0,1,1,1,1,1,1,1,1,1},
+            //PIERNAS_TRASERA				//BRAZOS						//CUELLO
+            {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{0,0,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}
+        },
+        //TINY
+        {	//NO_AREA						//TORSO							//PIERNAS						//ESPALDA
+            {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{0,0,0,0,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,0,0,0,0,1,1,1,1,1,1,1},{0,0,0,0,1,1,1,1,1,1,1,1,1,1,1},
+            //PIERNAS_TRASERA				//BRAZOS						//CUELLO
+            {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{0,0,0,1,1,1,1,1,1,1,1,1,1,1,1}
+        },
+        //TINY CURVED
+        {	//NO_AREA						//TORSO							//PIERNAS						//ESPALDA
+            {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{0,0,0,0,1,1,1,1,1,1,1,1,1,0,0},{1,1,1,1,0,0,0,0,1,1,1,1,1,1,1},{0,0,0,0,1,1,1,1,1,1,1,1,1,1,1},
+            //PIERNAS_TRASERA				//BRAZOS						//CUELLO
+            {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{0,1,1,1,1,1,1,1,1,1,1,1,1,1,1}
+        },
+        //DOUBLE
+        {	//NO_AREA						//TORSO							//PIERNAS						//ESPALDA
+            {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,0,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+            //PIERNAS_TRASERA				//BRAZOS						//CUELLO
+            {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}
+        },
+        //OVAL
+        {	//NO_AREA						//TORSO							//PIERNAS						//ESPALDA
+            {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,0,1,1,0,0,1,1},{0,0,0,0,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,0,0,1,1,1,1,1,1,1,1,1},
+            //PIERNAS_TRASERA				//BRAZOS						//CUELLO
+            {1,1,0,0,0,0,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}
+        },
+        //OVAL CURVED
+        {	//NO_AREA						//TORSO							//PIERNAS						//ESPALDA
+            {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,0,1,1,0,0,1,1},{0,0,0,0,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,0,0,1,1,1,1,1,1,1,1,1},
+            //PIERNAS_TRASERA				//BRAZOS						//CUELLO
+            {0,0,0,0,0,0,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}
+        },
+        //ANGLED
+        {	//NO_AREA						//TORSO							//PIERNAS						//ESPALDA
+            {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,0,1,1,0,0},{0,0,0,0,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+            //PIERNAS_TRASERA				//BRAZOS						//CUELLO
+            {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}
+        },
+};
 
 ///* Tablas para la gestión de las areas de selección */
 //const tAppGUIfullBodyImagesTableFields APP_GUI_FULL_BODY_IMAGES[APP_GUI_NUM_BODYS] =

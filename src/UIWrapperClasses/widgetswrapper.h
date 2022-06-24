@@ -28,11 +28,10 @@ public:
     void bodyZoom(bool zoomed);
     void bodyGenderSelect(EAppGUIbodys gender);
     void bodyAreaSelect(EAppGUIfullBodyAreas area);
-    void dotZoneAssignHp(uint8 dot, EAppGUI_HPsIDs hpIndex);
-    void dotZoneSelect(uint8 dot, bool isSelected);
+    void dotZoneAssignHp(EAppGUIwidgetIDlist dot, EAppGUI_HPsIDs hpIndex);
+    void dotZoneSelect(EAppGUIwidgetIDlist dot, bool isSelected);
 
     // Widgets update functions. Used by the application
-
     void GUIsetNumViewerNum(uint32 id, double num, uint8 dec);
     void GUIsetSwitchStatus( uint32 id, uint8 OnOff);
     uint16 GUIsetWidgetVisibility(uint32 id,uint8 vis);
@@ -47,6 +46,8 @@ public:
     void GUIUpdateVacuumButton(EAppGUI_HPsIDs HPindex, EAppGUIVacButStates butt_states);
     void GUIUpdatePlayButton(EAppGUI_HPsIDs HPindex, EAppGUIPlayButStates butt_states);
     void GUIUpdateTimeButton(EAppGUI_HPsIDs HPindex, EAppGUITimeButStates butt_states);
+    void GUIactivePopUp(EAppGUIwidgetIDlist popupWidgetId);
+    void GUIdisablePopUp(EAppGUIwidgetIDlist popupWidgetId);
 
 signals:
     void changeScreenSignal(AppEnumsNs::EAppGUIscreen screenId);
@@ -91,8 +92,8 @@ signals:
 
     // Zoomed body dots
     void dotZoneEnabled(uint32 id, bool enable);
-    void dotZoneHpAssigned(uint8 dot, AppEnumsNs::EAppGUI_HPsIDs hpIndex);
-    void dotZoneSelected(uint8 dot, bool isSelected);
+    void dotZoneHpAssigned(AppEnumsNs::EAppGUIwidgetIDlist dot, AppEnumsNs::EAppGUI_HPsIDs hpIndex);
+    void dotZoneSelected(AppEnumsNs::EAppGUIwidgetIDlist dot, bool isSelected);
 
     // Control panels widgets
     void treatmentTimerSet(AppEnumsNs::EAppGUI_HPsIDs hpIndex, QString newTime);
@@ -114,6 +115,10 @@ signals:
     // Popups
     void warningsPopupDisplayed(bool isDisplayed);
     void warningActivated(AppEnumsNs::EAppGUImachineWarnings warningId, bool isActivated);
+    void recommendedHpsPopupActivated(bool isActivated);
+    void suggestedHpWatermarkDisplayed(EAppGUIwidgetIDlist typeWidgetId, bool isDispalyed);
+    void rfidPopupActivated(bool isActivated);
+    void testVacuumPopupActivated(bool isActivated);
 
 private:
     void float_to_string(double f, char r[], uint8 dec);

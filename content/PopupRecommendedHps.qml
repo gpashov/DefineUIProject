@@ -7,15 +7,15 @@ Item {
     id: item1
     width: Constants.width
     height: Constants.height
-    property alias tinyCurvedVisible: watermarkTinyCurvedImg.visible
-    property alias tinyVisible: watermarkTinyImg.visible
-    property alias angledVisible: watermarkAngledImg.visible
-    property alias straightVisible: watermarkStraightImg.visible
-    property alias ovalCurvedVisible: watermarkOvalCurvedImg.visible
-    property alias tightVisible: watermarkTightImg.visible
-    property alias doubleVisible: watermarkDoubleImg.visible
-    property alias ovalVisible: watermarkOvalImg.visible
-    property alias curvedVisible: watermarkCurvedImg.visible
+//    property alias tinyCurvedVisible: watermarkTinyCurvedImg.visible
+//    property alias tinyVisible: watermarkTinyImg.visible
+//    property alias angledVisible: watermarkAngledImg.visible
+//    property alias straightVisible: watermarkStraightImg.visible
+//    property alias ovalCurvedVisible: watermarkOvalCurvedImg.visible
+//    property alias tightVisible: watermarkTightImg.visible
+//    property alias doubleVisible: watermarkDoubleImg.visible
+//    property alias ovalVisible: watermarkOvalImg.visible
+//    property alias curvedVisible: watermarkCurvedImg.visible
 
     Image {
         id: recommendedHpBackgroundImg
@@ -97,14 +97,34 @@ Item {
         fillMode: Image.PreserveAspectFit
     }
 
+    Connections {
+        target: wdgWpr
+        onSuggestedHpWatermarkDisplayed: (typeWidgetId, isDispalyed) => {
+                                             switch(typeWidgetId) {
+                                             case AppEnumsNs.imgPopUpRecommCurved: watermarkCurvedImg.visible = isDispalyed; break;
+                                             case AppEnumsNs.imgPopUpRecommTight: watermarkTightImg.visible = isDispalyed; break;
+                                             case AppEnumsNs.imgPopUpRecommStright: watermarkStraightImg.visible = isDispalyed; break;
+                                             case AppEnumsNs.imgPopUpRecommTiny: watermarkTinyImg.visible = isDispalyed; break;
+                                             case AppEnumsNs.imgPopUpRecommTinyCurved: watermarkTinyCurvedImg.visible = isDispalyed; break;
+                                             case AppEnumsNs.imgPopUpRecommDouble: watermarkDoubleImg.visible = isDispalyed; break;
+                                             case AppEnumsNs.imgPopUpRecommOval: watermarkOvalImg.visible = isDispalyed; break;
+                                             case AppEnumsNs.imgPopUpRecommOvalCurved: watermarkOvalCurvedImg.visible = isDispalyed; break;
+                                             case AppEnumsNs.imgPopUpRecommAngled: watermarkAngledImg.visible = isDispalyed; break;
+                                             default: break;
+                                             }
+        }
+    }
+
     // TODO Problem: AppEnumsNs.popUpRecomm gives undefined value
     onVisibleChanged: { cbkWpr.popupVisibleChanged(AppEnumsNs.popUpRecomm, visible); console.log("AppEnumsNs.popUpRecomm: ", AppEnumsNs.popUpRecomm) }
 }
 
 
 
+
+
 /*##^##
 Designer {
-    D{i:0;formeditorZoom:0.5}
+    D{i:0;height:0;width:0}
 }
 ##^##*/

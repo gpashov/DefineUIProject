@@ -118,9 +118,17 @@ void CallbackWrapper::butSelectTime(EAppGUI_HPsIDs hpId)
     CBKbutSelectTimeF(&argWidget);
 }
 
-void CallbackWrapper::butTemperatureVwr()
+void CallbackWrapper::butTemperatureVwr(EAppGUI_HPsIDs hpId)
 {
+    switch(hpId) {
+    case APP_GUI_HP1_ID:argWidget.id = butVwrTemperatureHP1; break;
+    case APP_GUI_HP2_ID:argWidget.id = butVwrTemperatureHP2; break;
+    case APP_GUI_HP3_ID:argWidget.id = butVwrTemperatureHP3; break;
+    case APP_GUI_HP4_ID:argWidget.id = butVwrTemperatureHP4; break;
+    default: argWidget.id = APP_GUI_NUM_WIDGETS; break;
+    }
 
+    CBKbutTemperatureVwrF(&argWidget);
 }
 
 void CallbackWrapper::butTRTmodeAutoManual()
@@ -138,9 +146,17 @@ void CallbackWrapper::butInfoZoneSelectedOff()
     CBKbutInfoZoneSelectedOffF();
 }
 
-void CallbackWrapper::butModelImage()
+void CallbackWrapper::butModelImage(EAppGUI_HPsIDs hpId)
 {
+    switch(hpId) {
+    case APP_GUI_HP1_ID:argWidget.id = butModelImageHP1; break;
+    case APP_GUI_HP2_ID:argWidget.id = butModelImageHP2; break;
+    case APP_GUI_HP3_ID:argWidget.id = butModelImageHP3; break;
+    case APP_GUI_HP4_ID:argWidget.id = butModelImageHP4; break;
+    default: argWidget.id = APP_GUI_NUM_WIDGETS; break;
+    }
 
+    CBKbutModelImageF(&argWidget);
 }
 
 void CallbackWrapper::butHideCtrlPnl()
@@ -168,14 +184,16 @@ void CallbackWrapper::butFullBodyArea(EAppGUIfullBodyAreas bodyArea)
     CBKbutFullBodyAreaF(&argWidget);
 }
 
-void CallbackWrapper::swDotZoneOn()
+void CallbackWrapper::swDotZoneOn(EAppGUIwidgetIDlist widgetId)
 {
-
+    argWidget.id = widgetId;
+    CBKswDotZoneOnF(&argWidget);
 }
 
-void CallbackWrapper::swDotZoneOff()
+void CallbackWrapper::swDotZoneOff(EAppGUIwidgetIDlist widgetId)
 {
-
+    argWidget.id = widgetId;
+    CBKswDotZoneOffF(&argWidget);
 }
 
 void CallbackWrapper::popUpVisibleChanged( EAppGUIwidgetIDlist widgetId, bool visible )
