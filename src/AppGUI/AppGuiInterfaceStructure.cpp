@@ -363,36 +363,36 @@ const uint32 APP_GUI_TRT_SCR_BUT_TSTVAC_WIDGETS[APP_GUI_MAXNUM_HP] =
         SwCtrlPnlTstVacHP1, SwCtrlPnlTstVacHP2, SwCtrlPnlTstVacHP3, SwCtrlPnlTstVacHP4
 };
 
-const uint32 APP_GUI_TRT_SCR_BUT_VAC_IMG[HP_CRYO_VAC_LVL_NUM][App_GUI_Max_Vac_but_states][App_GUI_widget_Features] =
-{
-        /*Nivel Vac 1*/
-        {					/*(PRS, 							RLS, 								ENABLE)*/
-            /*OFF_L*/		{C042_BotonVacuum1MarcaAguaLeft, 	C042_BotonVacuum1MarcaAguaLeft, 	0},
-            /*OFF_R*/		{C042_BotonVacuum1MarcaAguaRight, 	C042_BotonVacuum1MarcaAguaRight, 	0},
-            /*ON_L*/		{C040_BotonVacuum1PressLeft, 		C041_BotonVacuum1RlsLeft, 			1},
-            /*ON_R*/		{C040_BotonVacuum1PressRight, 		C041_BotonVacuum1RlsRight, 			1},
-            /*VacAdjustL*/	{C352_BotonVacuum1PressArrowLeft, 	C353_BotonVacuum1RlsArrowLeft, 		1},
-            /*VacAdjustR*/	{C352_BotonVacuum1PressArrowRight, 	C353_BotonVacuum1RlsArrowRight, 	1}
-        },
-        /*Nivel Vac 2*/
-        {					/*(PRS, 							RLS, 								ENABLE)*/
-            /*OFF_L*/		{C042_BotonVacuum2MarcaAguaLeft, 	C042_BotonVacuum2MarcaAguaLeft, 	0},
-            /*OFF_R*/		{C042_BotonVacuum2MarcaAguaRight, 	C042_BotonVacuum2MarcaAguaRight, 	0},
-            /*ON_L*/		{C040_BotonVacuum2PressLeft, 		C041_BotonVacuum2RlsLeft, 			1},
-            /*ON_R*/		{C040_BotonVacuum2PressRight, 		C041_BotonVacuum2RlsRight, 			1},
-            /*VacAdjustL*/	{C352_BotonVacuum2PressArrowLeft, 	C353_BotonVacuum2RlsArrowLeft, 		1},
-            /*VacAdjustR*/	{C352_BotonVacuum2PressArrowRight, 	C353_BotonVacuum2RlsArrowRight, 	1}
-        },
-        /*Nivel Vac 3*/
-        {					/*(PRS, 							RLS, 								ENABLE)*/
-            /*OFF_L*/		{C042_BotonVacuum3MarcaAguaLeft,	C042_BotonVacuum3MarcaAguaLeft, 	0},
-            /*OFF_R*/		{C042_BotonVacuum3MarcaAguaRight,	C042_BotonVacuum3MarcaAguaRight, 	0},
-            /*ON_L*/		{C040_BotonVacuum3PressLeft, 		C041_BotonVacuum3RlsLeft, 			1},
-            /*ON_R*/		{C040_BotonVacuum3PressRight, 		C041_BotonVacuum3RlsRight, 			1},
-            /*VacAdjustL*/	{C352_BotonVacuum3PressArrowLeft, 	C353_BotonVacuum3RlsArrowLeft, 		1},
-            /*VacAdjustR*/	{C352_BotonVacuum3PressArrowRight, 	C353_BotonVacuum3RlsArrowRight, 	1}
-        }
-};
+//const uint32 APP_GUI_TRT_SCR_BUT_VAC_IMG[HP_CRYO_VAC_LVL_NUM][App_GUI_Max_Vac_but_states][App_GUI_widget_Features] =
+//{
+//        /*Nivel Vac 1*/
+//        {					/*(PRS, 							RLS, 								ENABLE)*/
+//            /*OFF_L*/		{C042_BotonVacuum1MarcaAguaLeft, 	C042_BotonVacuum1MarcaAguaLeft, 	0},
+//            /*OFF_R*/		{C042_BotonVacuum1MarcaAguaRight, 	C042_BotonVacuum1MarcaAguaRight, 	0},
+//            /*ON_L*/		{C040_BotonVacuum1PressLeft, 		C041_BotonVacuum1RlsLeft, 			1},
+//            /*ON_R*/		{C040_BotonVacuum1PressRight, 		C041_BotonVacuum1RlsRight, 			1},
+//            /*VacAdjustL*/	{C352_BotonVacuum1PressArrowLeft, 	C353_BotonVacuum1RlsArrowLeft, 		1},
+//            /*VacAdjustR*/	{C352_BotonVacuum1PressArrowRight, 	C353_BotonVacuum1RlsArrowRight, 	1}
+//        },
+//        /*Nivel Vac 2*/
+//        {					/*(PRS, 							RLS, 								ENABLE)*/
+//            /*OFF_L*/		{C042_BotonVacuum2MarcaAguaLeft, 	C042_BotonVacuum2MarcaAguaLeft, 	0},
+//            /*OFF_R*/		{C042_BotonVacuum2MarcaAguaRight, 	C042_BotonVacuum2MarcaAguaRight, 	0},
+//            /*ON_L*/		{C040_BotonVacuum2PressLeft, 		C041_BotonVacuum2RlsLeft, 			1},
+//            /*ON_R*/		{C040_BotonVacuum2PressRight, 		C041_BotonVacuum2RlsRight, 			1},
+//            /*VacAdjustL*/	{C352_BotonVacuum2PressArrowLeft, 	C353_BotonVacuum2RlsArrowLeft, 		1},
+//            /*VacAdjustR*/	{C352_BotonVacuum2PressArrowRight, 	C353_BotonVacuum2RlsArrowRight, 	1}
+//        },
+//        /*Nivel Vac 3*/
+//        {					/*(PRS, 							RLS, 								ENABLE)*/
+//            /*OFF_L*/		{C042_BotonVacuum3MarcaAguaLeft,	C042_BotonVacuum3MarcaAguaLeft, 	0},
+//            /*OFF_R*/		{C042_BotonVacuum3MarcaAguaRight,	C042_BotonVacuum3MarcaAguaRight, 	0},
+//            /*ON_L*/		{C040_BotonVacuum3PressLeft, 		C041_BotonVacuum3RlsLeft, 			1},
+//            /*ON_R*/		{C040_BotonVacuum3PressRight, 		C041_BotonVacuum3RlsRight, 			1},
+//            /*VacAdjustL*/	{C352_BotonVacuum3PressArrowLeft, 	C353_BotonVacuum3RlsArrowLeft, 		1},
+//            /*VacAdjustR*/	{C352_BotonVacuum3PressArrowRight, 	C353_BotonVacuum3RlsArrowRight, 	1}
+//        }
+//};
 
 ///* Cambios de imagenes en diversos widgets */
 ///* - */

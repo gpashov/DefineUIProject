@@ -1434,9 +1434,9 @@ void WidgetsWrapper::GUIWarningIconActivate(EAppGUImachineWarnings warningId, bo
     emit warningActivated(warningId, isActive);
 }
 
-void WidgetsWrapper::GUIUpdateVacuumButton( EAppGUI_HPsIDs HPindex, EAppGUIVacButStates butt_states )
+void WidgetsWrapper::GUIUpdateVacuumButton( EAppGUI_HPsIDs HPindex, EAppGUIVacButStates butt_states, int vacuumLevel )
 {
-    emit vacuumButtonUpdated(HPindex, butt_states);
+    emit vacuumButtonUpdated(HPindex, butt_states, vacuumLevel);
 }
 
 void WidgetsWrapper::GUIUpdatePlayButton(EAppGUI_HPsIDs HPindex, EAppGUIPlayButStates butt_states)

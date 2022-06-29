@@ -209,6 +209,11 @@ Item {
                 y: 193
                 visible: true
             }
+
+            PropertyChanges {
+                target: vacuumButton
+                positionIsRight: false
+            }
         },
         State {
             name: "hp2State"
@@ -252,6 +257,7 @@ Item {
                 target: vacuumButton
                 x: 70
                 y: 44
+                positionIsRight: true
             }
 
             PropertyChanges {
@@ -322,6 +328,7 @@ Item {
             PropertyChanges {
                 target: vacuumButton
                 y: 223
+                positionIsRight: false
             }
 
             PropertyChanges {
@@ -405,6 +412,7 @@ Item {
                 target: vacuumButton
                 x: 70
                 y: 223
+                positionIsRight: true
             }
 
             PropertyChanges {
@@ -672,12 +680,12 @@ Item {
 
     Connections {
         target: wdgWpr
-        onVacuumButtonUpdated: (HPindex, butt_states) => {
+        onVacuumButtonUpdated: (HPindex, butt_state, vacuumLevel) => {
                                      switch(HPindex) {
-                                         case AppEnumsNs.APP_GUI_HP1_ID: if(state === "hp1State") { vacuumButton.state = vacuumButton.states[butt_states].name; } break;
-                                         case AppEnumsNs.APP_GUI_HP2_ID: if(state === "hp2State") { vacuumButton.state = vacuumButton.states[butt_states].name; } break;
-                                         case AppEnumsNs.APP_GUI_HP3_ID: if(state === "hp3State") { vacuumButton.state = vacuumButton.states[butt_states].name; } break;
-                                         case AppEnumsNs.APP_GUI_HP4_ID: if(state === "hp4State") { vacuumButton.state = vacuumButton.states[butt_states].name; } break;
+                                         case AppEnumsNs.APP_GUI_HP1_ID: if(state === "hp1State") { vacuumButton.buttonState = butt_state; vacuumButton.vacuumLevel = vacuumLevel } break;
+                                         case AppEnumsNs.APP_GUI_HP2_ID: if(state === "hp2State") { vacuumButton.buttonState = butt_state; vacuumButton.vacuumLevel = vacuumLevel } break;
+                                         case AppEnumsNs.APP_GUI_HP3_ID: if(state === "hp3State") { vacuumButton.buttonState = butt_state; vacuumButton.vacuumLevel = vacuumLevel } break;
+                                         case AppEnumsNs.APP_GUI_HP4_ID: if(state === "hp4State") { vacuumButton.buttonState = butt_state; vacuumButton.vacuumLevel = vacuumLevel } break;
                                          default: break;
                                      }
                                  }
@@ -685,12 +693,12 @@ Item {
 
     Connections {
         target: wdgWpr
-        onPlayButtonUpdated: (HPindex, butt_states) => {
+        onPlayButtonUpdated: (HPindex, butt_state) => {
                                      switch(HPindex) {
-                                         case AppEnumsNs.APP_GUI_HP1_ID: if(state === "hp1State") { playButton.state = playButton.states[butt_states].name; } break;
-                                         case AppEnumsNs.APP_GUI_HP2_ID: if(state === "hp2State") { playButton.state = playButton.states[butt_states].name; } break;
-                                         case AppEnumsNs.APP_GUI_HP3_ID: if(state === "hp3State") { playButton.state = playButton.states[butt_states].name; } break;
-                                         case AppEnumsNs.APP_GUI_HP4_ID: if(state === "hp4State") { playButton.state = playButton.states[butt_states].name; } break;
+                                         case AppEnumsNs.APP_GUI_HP1_ID: if(state === "hp1State") { playButton.state = playButton.states[butt_state].name; } break;
+                                         case AppEnumsNs.APP_GUI_HP2_ID: if(state === "hp2State") { playButton.state = playButton.states[butt_state].name; } break;
+                                         case AppEnumsNs.APP_GUI_HP3_ID: if(state === "hp3State") { playButton.state = playButton.states[butt_state].name; } break;
+                                         case AppEnumsNs.APP_GUI_HP4_ID: if(state === "hp4State") { playButton.state = playButton.states[butt_state].name; } break;
                                          default: break;
                                      }
                                  }
@@ -698,12 +706,12 @@ Item {
 
     Connections {
         target: wdgWpr
-        onTimeButtonUpdated: (HPindex, butt_states) => {
+        onTimeButtonUpdated: (HPindex, butt_state) => {
                                      switch(HPindex) {
-                                         case AppEnumsNs.APP_GUI_HP1_ID: if(state === "hp1State") { timerButton.state = timerButton.states[butt_states].name; } break;
-                                         case AppEnumsNs.APP_GUI_HP2_ID: if(state === "hp2State") { timerButton.state = timerButton.states[butt_states].name; } break;
-                                         case AppEnumsNs.APP_GUI_HP3_ID: if(state === "hp3State") { timerButton.state = timerButton.states[butt_states].name; } break;
-                                         case AppEnumsNs.APP_GUI_HP4_ID: if(state === "hp4State") { timerButton.state = timerButton.states[butt_states].name; } break;
+                                         case AppEnumsNs.APP_GUI_HP1_ID: if(state === "hp1State") { timerButton.state = timerButton.states[butt_state].name; } break;
+                                         case AppEnumsNs.APP_GUI_HP2_ID: if(state === "hp2State") { timerButton.state = timerButton.states[butt_state].name; } break;
+                                         case AppEnumsNs.APP_GUI_HP3_ID: if(state === "hp3State") { timerButton.state = timerButton.states[butt_state].name; } break;
+                                         case AppEnumsNs.APP_GUI_HP4_ID: if(state === "hp4State") { timerButton.state = timerButton.states[butt_state].name; } break;
                                          default: break;
                                      }
                                  }

@@ -457,8 +457,7 @@ void AppGUIhandleCtrlPanel( uint8 show, uint8 HPindex)
 		
         /* - Gestión del boton de test de vacum , el boton de play y el de time - */
         butPlayStatus = App_GUI_Play_but_Off;
-        if (HPindex == 1 || HPindex == 3)	butVaccStatus = App_GUI_Vac_but_Off_Right;
-        else	butVaccStatus = App_GUI_Vac_but_Off_Left;
+        butVaccStatus = App_GUI_Vac_but_Off;
         butTimeStatus = App_GUI_Time_but_Off;
 		
         // Si ya hay asignado al manipulo una zona de tratamiento
@@ -466,8 +465,7 @@ void AppGUIhandleCtrlPanel( uint8 show, uint8 HPindex)
             AppGUIdata.slot[HPindex].selTrtDot != APP_GUI_NO_TRT_DOT_SELECTED)
         {
             butTimeStatus = App_GUI_Time_but_On;
-            if (HPindex == 1 || HPindex == 3)	butVaccStatus = App_GUI_Vac_but_On_Right;
-            else	butVaccStatus = App_GUI_Vac_but_On_Left;
+            butVaccStatus = App_GUI_Vac_but_On;
         }
         // Si ya tiene el tiempo seleccionado
         if ( AppGUIdata.slot[HPindex].selTime != APP_GUI_NO_TIME_SELECTED)
@@ -487,16 +485,14 @@ void AppGUIhandleCtrlPanel( uint8 show, uint8 HPindex)
             AppGUIdata.slot[HPindex].selTrtArea == APP_GUI_NUM_FULL_BODY_AREAS || AppGUIdata.slot[HPindex].selTrtDot == APP_GUI_NO_TRT_DOT_SELECTED)
         {
             butPlayStatus = App_GUI_Play_but_Off;
-            if (HPindex == 1 || HPindex == 3)	butVaccStatus = App_GUI_Vac_but_Off_Right;
-            else	butVaccStatus = App_GUI_Vac_but_Off_Left;
+            butVaccStatus = App_GUI_Vac_but_Off;
             butTimeStatus = App_GUI_Time_but_Off;
         }
         // Si hay un tratamiento en curso
         if ( isTrtRunning)
         {
             /*if (!isRFIDPopUp && !isVaccSmallPopUp)*/	butPlayStatus = App_GUI_Play_but_TRT_running;
-            if (HPindex == 1 || HPindex == 3)	butVaccStatus = App_GUI_Vac_but_Off_Right;
-            else	butVaccStatus = App_GUI_Vac_but_Off_Left;
+            butVaccStatus = App_GUI_Vac_but_Off;
             butTimeStatus = App_GUI_Time_but_Off;
         }
         // Si en tratamiento se puede reintentar el vacuum
@@ -507,8 +503,7 @@ void AppGUIhandleCtrlPanel( uint8 show, uint8 HPindex)
         // Si en tratamiento se puede reajustar el vacuum
         if (( isTrtRunning) && (HPcryoTrtAdjustVacumAvailable( HP, PRF))/* && !isVaccSmallPopUp && !isRFIDPopUp*/)
         {
-            if (HPindex == 1 || HPindex == 3)	butVaccStatus = App_GUI_Vac_but_VacAjust_Right;
-            else	butVaccStatus = App_GUI_Vac_but_VacAjust_Left;
+            butVaccStatus = App_GUI_Vac_but_VacAjust;
         }
         //Si no tiene permitida la selección de tiempo
         if (HPcryoGetFromSlot( (cPRFslot)APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
@@ -528,13 +523,11 @@ void AppGUIhandleCtrlPanel( uint8 show, uint8 HPindex)
         {
             if (AppGUIisVacSmallPopUpActive())
             {
-                if (HPindex == 1 || HPindex == 3)	butVaccStatus = App_GUI_Vac_but_VacAjust_Right;
-                else	butVaccStatus = App_GUI_Vac_but_VacAjust_Left;
+                butVaccStatus = App_GUI_Vac_but_VacAjust;
             }
             else if (AppGUIisVacPopUpActive())
             {
-                if (HPindex == 1 || HPindex == 3)	butVaccStatus = App_GUI_Vac_but_On_Right;
-                else	butVaccStatus = App_GUI_Vac_but_On_Left;
+                butVaccStatus = App_GUI_Vac_but_On;
             }
         }
         // Si el popup de tiempo está activo
@@ -549,8 +542,7 @@ void AppGUIhandleCtrlPanel( uint8 show, uint8 HPindex)
             if (AppGUIisHPaDoubleDummy( HP, PRF))
             {
                 butPlayStatus = App_GUI_Play_but_Off;
-                if (HPindex == 1 || HPindex == 3)	butVaccStatus = App_GUI_Vac_but_Off_Right;
-                else	butVaccStatus = App_GUI_Vac_but_Off_Left;
+                butVaccStatus = App_GUI_Vac_but_Off;
                 butTimeStatus = App_GUI_Time_but_Off;
             }
         }
@@ -2961,17 +2953,17 @@ void AppGUIbuttonManagement (cAppGUIctrMenuBut button, uint8 butt_states, uint8 
             }
             break;
         case App_GUI_but_Vacc:
-            if (butt_states == App_GUI_Vac_but_disabled)	wdgWpr.GUIsetWidgetEnable ( APP_GUI_TRT_SCR_BUT_TSTVAC_WIDGETS[HPindex], 0);
-            else
-            {
+//            if (butt_states == App_GUI_Vac_but_disabled)	wdgWpr.GUIsetWidgetEnable ( APP_GUI_TRT_SCR_BUT_TSTVAC_WIDGETS[HPindex], 0);
+//            else
+//            {
 
-                wdgWpr.GUIUpdateVacuumButton( (EAppGUI_HPsIDs)HPindex, (EAppGUIVacButStates)butt_states );
+                wdgWpr.GUIUpdateVacuumButton( (EAppGUI_HPsIDs)HPindex, (EAppGUIVacButStates)butt_states, AppGUIdata.slot[HPindex].selVacLvl );
 
 //                GUIsetSwitchImg ( APP_GUI_TRT_SCR_BUT_TSTVAC_WIDGETS[HPindex],
 //                                  APP_GUI_TRT_SCR_BUT_VAC_IMG[AppGUIdata.slot[HPindex].selVacLvl][butt_states][App_GUI_widget_PRS_img], APP_GUI_TRT_SCR_BUT_VAC_IMG[AppGUIdata.slot[HPindex].selVacLvl][butt_states][App_GUI_widget_RLS_img],
 //                                  APP_GUI_TRT_SCR_BUT_VAC_IMG[AppGUIdata.slot[HPindex].selVacLvl][butt_states][App_GUI_widget_PRS_img], APP_GUI_TRT_SCR_BUT_VAC_IMG[AppGUIdata.slot[HPindex].selVacLvl][butt_states][App_GUI_widget_RLS_img]);
-                wdgWpr.GUIsetWidgetEnable ( APP_GUI_TRT_SCR_BUT_TSTVAC_WIDGETS[HPindex], APP_GUI_TRT_SCR_BUT_VAC_IMG[AppGUIdata.slot[HPindex].selVacLvl][butt_states][App_GUI_widget_ENABLE]);
-            }
+//                wdgWpr.GUIsetWidgetEnable ( APP_GUI_TRT_SCR_BUT_TSTVAC_WIDGETS[HPindex], APP_GUI_TRT_SCR_BUT_VAC_IMG[AppGUIdata.slot[HPindex].selVacLvl][butt_states][App_GUI_widget_ENABLE]);
+//            }
             break;
         case App_GUI_but_Time:
             if (butt_states == App_GUI_Time_but_disabled)	wdgWpr.GUIsetWidgetEnable ( APP_GUI_TRT_SCR_BUT_SEL_TIME_WIDGETS[HPindex], 0);

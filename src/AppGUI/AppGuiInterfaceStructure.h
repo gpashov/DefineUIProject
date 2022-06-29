@@ -247,12 +247,9 @@ namespace AppEnumsNs
 
     typedef enum EAppGUIVacButStates
     {
-        App_GUI_Vac_but_Off_Left,
-        App_GUI_Vac_but_Off_Right,
-        App_GUI_Vac_but_On_Left,
-        App_GUI_Vac_but_On_Right,
-        App_GUI_Vac_but_VacAjust_Left,
-        App_GUI_Vac_but_VacAjust_Right,
+        App_GUI_Vac_but_Off,
+        App_GUI_Vac_but_On,
+        App_GUI_Vac_but_VacAjust,
         App_GUI_Vac_but_disabled,
 
         App_GUI_Max_Vac_but_states
