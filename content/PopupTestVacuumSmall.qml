@@ -79,8 +79,7 @@ Item {
         }
     ]
 
-    // TODO Problem: AppEnumsNs.popUpTstVacSmall gives undefined value
-    onVisibleChanged: { cbkWpr.popUpVisibleChanged(AppEnumsNs.popUpTstVacSmall, visible); console.log("AppEnumsNs.popUpTstVacSmall: ", AppEnumsNs.popUpTstVacSmall) }
+    onVisibleChanged: cbkWpr.popUpVisibleChanged(AppEnumsNs.PopUpTstVacSmall, visible)
 }
 
 

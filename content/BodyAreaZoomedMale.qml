@@ -69,7 +69,7 @@ Item {
         y: 0
         visible: false
         state: states[0].name
-        dotWidgetIndex: AppEnumsNs.swDotZone0
+        dotWidgetIndex: AppEnumsNs.SwDotZone0
     }
 
     ZoomDot {
@@ -78,7 +78,7 @@ Item {
         y: 0
         visible: false
         state: states[0].name
-        dotWidgetIndex: AppEnumsNs.swDotZone1
+        dotWidgetIndex: AppEnumsNs.SwDotZone1
     }
 
     ZoomDot {
@@ -87,7 +87,7 @@ Item {
         y: 0
         visible: false
         state: states[0].name
-        dotWidgetIndex: AppEnumsNs.swDotZone2
+        dotWidgetIndex: AppEnumsNs.SwDotZone2
     }
 
     ZoomDot {
@@ -96,7 +96,7 @@ Item {
         y: 0
         visible: false
         state: states[0].name
-        dotWidgetIndex: AppEnumsNs.swDotZone3
+        dotWidgetIndex: AppEnumsNs.SwDotZone3
     }
 
     ZoomDot {
@@ -105,7 +105,7 @@ Item {
         y: 0
         visible: false
         state: states[0].name
-        dotWidgetIndex: AppEnumsNs.swDotZone4
+        dotWidgetIndex: AppEnumsNs.SwDotZone4
     }
 
     ZoomDot {
@@ -114,7 +114,7 @@ Item {
         y: 0
         visible: false
         state: states[0].name
-        dotWidgetIndex: AppEnumsNs.swDotZone5
+        dotWidgetIndex: AppEnumsNs.SwDotZone5
     }
 
     ZoomDot {
@@ -123,7 +123,7 @@ Item {
         y: 0
         visible: false
         state: states[0].name
-        dotWidgetIndex: AppEnumsNs.swDotZone6
+        dotWidgetIndex: AppEnumsNs.SwDotZone6
     }
 
     ZoomDot {
@@ -132,7 +132,7 @@ Item {
         y: 0
         visible: false
         state: states[0].name
-        dotWidgetIndex: AppEnumsNs.swDotZone7
+        dotWidgetIndex: AppEnumsNs.SwDotZone7
     }
 
     ZoomDot {
@@ -141,7 +141,7 @@ Item {
         y: 0
         visible: false
         state: states[0].name
-        dotWidgetIndex: AppEnumsNs.swDotZone8
+        dotWidgetIndex: AppEnumsNs.SwDotZone8
     }
 
     ZoomDot {
@@ -150,7 +150,7 @@ Item {
         y: 0
         visible: false
         state: states[0].name
-        dotWidgetIndex: AppEnumsNs.swDotZone9
+        dotWidgetIndex: AppEnumsNs.SwDotZone9
     }
 
     ZoomDot {
@@ -159,7 +159,7 @@ Item {
         y: 0
         visible: false
         state: states[0].name
-        dotWidgetIndex: AppEnumsNs.swDotZone10
+        dotWidgetIndex: AppEnumsNs.SwDotZone10
     }
 
     ZoomDot {
@@ -168,7 +168,7 @@ Item {
         y: 0
         visible: false
         state: states[0].name
-        dotWidgetIndex: AppEnumsNs.swDotZone11
+        dotWidgetIndex: AppEnumsNs.SwDotZone11
     }
 
     ZoomDot {
@@ -177,7 +177,7 @@ Item {
         y: 0
         visible: false
         state: states[0].name
-        dotWidgetIndex: AppEnumsNs.swDotZone12
+        dotWidgetIndex: AppEnumsNs.SwDotZone12
     }
 
     ZoomDot {
@@ -186,7 +186,7 @@ Item {
         y: 0
         visible: false
         state: states[0].name
-        dotWidgetIndex: AppEnumsNs.swDotZone13
+        dotWidgetIndex: AppEnumsNs.SwDotZone13
     }
 
     ZoomDot {
@@ -195,7 +195,7 @@ Item {
         y: 0
         visible: false
         state: states[0].name
-        dotWidgetIndex: AppEnumsNs.swDotZone14
+        dotWidgetIndex: AppEnumsNs.SwDotZone14
     }
     states: [
         State {
@@ -546,21 +546,21 @@ Item {
         target: wdgWpr
         onDotZoneEnabled: (id, enable) => {
                               switch(id) {
-                                  case AppEnumsNs.swDotZone0: dot1.enabled = enable; break;
-                                  case AppEnumsNs.swDotZone1: dot2.enabled = enable; break;
-                                  case AppEnumsNs.swDotZone2: dot3.enabled = enable; break;
-                                  case AppEnumsNs.swDotZone3: dot4.enabled = enable; break;
-                                  case AppEnumsNs.swDotZone4: dot5.enabled = enable; break;
-                                  case AppEnumsNs.swDotZone5: dot6.enabled = enable; break;
-                                  case AppEnumsNs.swDotZone6: dot7.enabled = enable; break;
-                                  case AppEnumsNs.swDotZone7: dot8.enabled = enable; break;
-                                  case AppEnumsNs.swDotZone8: dot9.enabled = enable; break;
-                                  case AppEnumsNs.swDotZone9: dot10.enabled = enable; break;
-                                  case AppEnumsNs.swDotZone10: dot11.enabled = enable; break;
-                                  case AppEnumsNs.swDotZone11: dot12.enabled = enable; break;
-                                  case AppEnumsNs.swDotZone12: dot13.enabled = enable; break;
-                                  case AppEnumsNs.swDotZone13: dot14.enabled = enable; break;
-                                  case AppEnumsNs.swDotZone14: dot15.enabled = enable; break;
+                                  case AppEnumsNs.SwDotZone0: dot1.enabled = enable; break;
+                                  case AppEnumsNs.SwDotZone1: dot2.enabled = enable; break;
+                                  case AppEnumsNs.SwDotZone2: dot3.enabled = enable; break;
+                                  case AppEnumsNs.SwDotZone3: dot4.enabled = enable; break;
+                                  case AppEnumsNs.SwDotZone4: dot5.enabled = enable; break;
+                                  case AppEnumsNs.SwDotZone5: dot6.enabled = enable; break;
+                                  case AppEnumsNs.SwDotZone6: dot7.enabled = enable; break;
+                                  case AppEnumsNs.SwDotZone7: dot8.enabled = enable; break;
+                                  case AppEnumsNs.SwDotZone8: dot9.enabled = enable; break;
+                                  case AppEnumsNs.SwDotZone9: dot10.enabled = enable; break;
+                                  case AppEnumsNs.SwDotZone10: dot11.enabled = enable; break;
+                                  case AppEnumsNs.SwDotZone11: dot12.enabled = enable; break;
+                                  case AppEnumsNs.SwDotZone12: dot13.enabled = enable; break;
+                                  case AppEnumsNs.SwDotZone13: dot14.enabled = enable; break;
+                                  case AppEnumsNs.SwDotZone14: dot15.enabled = enable; break;
                                   default: break;
                               }
                           }
@@ -570,21 +570,21 @@ Item {
         target: wdgWpr
         onDotZoneHpAssigned: (dot, hpIndex) => {
                              switch(dot) {
-                                     case AppEnumsNs.swDotZone0: dot1.hpAssigned = hpIndex; break;
-                                     case AppEnumsNs.swDotZone1: dot2.hpAssigned = hpIndex; break;
-                                     case AppEnumsNs.swDotZone2: dot3.hpAssigned = hpIndex; break;
-                                     case AppEnumsNs.swDotZone3: dot4.hpAssigned = hpIndex; break;
-                                     case AppEnumsNs.swDotZone4: dot5.hpAssigned = hpIndex; break;
-                                     case AppEnumsNs.swDotZone5: dot6.hpAssigned = hpIndex; break;
-                                     case AppEnumsNs.swDotZone6: dot7.hpAssigned = hpIndex; break;
-                                     case AppEnumsNs.swDotZone7: dot8.hpAssigned = hpIndex; break;
-                                     case AppEnumsNs.swDotZone8: dot9.hpAssigned = hpIndex; break;
-                                     case AppEnumsNs.swDotZone9: dot10.hpAssigned = hpIndex; break;
-                                     case AppEnumsNs.swDotZone10: dot11.hpAssigned = hpIndex; break;
-                                     case AppEnumsNs.swDotZone11: dot12.hpAssigned = hpIndex; break;
-                                     case AppEnumsNs.swDotZone12: dot13.hpAssigned = hpIndex; break;
-                                     case AppEnumsNs.swDotZone13: dot14.hpAssigned = hpIndex; break;
-                                     case AppEnumsNs.swDotZone14: dot15.hpAssigned = hpIndex; break;
+                                     case AppEnumsNs.SwDotZone0: dot1.hpAssigned = hpIndex; break;
+                                     case AppEnumsNs.SwDotZone1: dot2.hpAssigned = hpIndex; break;
+                                     case AppEnumsNs.SwDotZone2: dot3.hpAssigned = hpIndex; break;
+                                     case AppEnumsNs.SwDotZone3: dot4.hpAssigned = hpIndex; break;
+                                     case AppEnumsNs.SwDotZone4: dot5.hpAssigned = hpIndex; break;
+                                     case AppEnumsNs.SwDotZone5: dot6.hpAssigned = hpIndex; break;
+                                     case AppEnumsNs.SwDotZone6: dot7.hpAssigned = hpIndex; break;
+                                     case AppEnumsNs.SwDotZone7: dot8.hpAssigned = hpIndex; break;
+                                     case AppEnumsNs.SwDotZone8: dot9.hpAssigned = hpIndex; break;
+                                     case AppEnumsNs.SwDotZone9: dot10.hpAssigned = hpIndex; break;
+                                     case AppEnumsNs.SwDotZone10: dot11.hpAssigned = hpIndex; break;
+                                     case AppEnumsNs.SwDotZone11: dot12.hpAssigned = hpIndex; break;
+                                     case AppEnumsNs.SwDotZone12: dot13.hpAssigned = hpIndex; break;
+                                     case AppEnumsNs.SwDotZone13: dot14.hpAssigned = hpIndex; break;
+                                     case AppEnumsNs.SwDotZone14: dot15.hpAssigned = hpIndex; break;
                                      default: break;
                                  }
                              }
@@ -594,21 +594,21 @@ Item {
         target: wdgWpr
         onDotZoneSelected: (dot, isSelected) => {
                              switch(dot) {
-                                     case AppEnumsNs.swDotZone0: dot1.selected = isSelected; break;
-                                     case AppEnumsNs.swDotZone1: dot2.selected = isSelected; break;
-                                     case AppEnumsNs.swDotZone2: dot3.selected = isSelected; break;
-                                     case AppEnumsNs.swDotZone3: dot4.selected = isSelected; break;
-                                     case AppEnumsNs.swDotZone4: dot5.selected = isSelected; break;
-                                     case AppEnumsNs.swDotZone5: dot6.selected = isSelected; break;
-                                     case AppEnumsNs.swDotZone6: dot7.selected = isSelected; break;
-                                     case AppEnumsNs.swDotZone7: dot8.selected = isSelected; break;
-                                     case AppEnumsNs.swDotZone8: dot9.selected = isSelected; break;
-                                     case AppEnumsNs.swDotZone9: dot10.selected = isSelected; break;
-                                     case AppEnumsNs.swDotZone10: dot11.selected = isSelected; break;
-                                     case AppEnumsNs.swDotZone11: dot12.selected = isSelected; break;
-                                     case AppEnumsNs.swDotZone12: dot13.selected = isSelected; break;
-                                     case AppEnumsNs.swDotZone13: dot14.selected = isSelected; break;
-                                     case AppEnumsNs.swDotZone14: dot15.selected = isSelected; break;
+                                     case AppEnumsNs.SwDotZone0: dot1.selected = isSelected; break;
+                                     case AppEnumsNs.SwDotZone1: dot2.selected = isSelected; break;
+                                     case AppEnumsNs.SwDotZone2: dot3.selected = isSelected; break;
+                                     case AppEnumsNs.SwDotZone3: dot4.selected = isSelected; break;
+                                     case AppEnumsNs.SwDotZone4: dot5.selected = isSelected; break;
+                                     case AppEnumsNs.SwDotZone5: dot6.selected = isSelected; break;
+                                     case AppEnumsNs.SwDotZone6: dot7.selected = isSelected; break;
+                                     case AppEnumsNs.SwDotZone7: dot8.selected = isSelected; break;
+                                     case AppEnumsNs.SwDotZone8: dot9.selected = isSelected; break;
+                                     case AppEnumsNs.SwDotZone9: dot10.selected = isSelected; break;
+                                     case AppEnumsNs.SwDotZone10: dot11.selected = isSelected; break;
+                                     case AppEnumsNs.SwDotZone11: dot12.selected = isSelected; break;
+                                     case AppEnumsNs.SwDotZone12: dot13.selected = isSelected; break;
+                                     case AppEnumsNs.SwDotZone13: dot14.selected = isSelected; break;
+                                     case AppEnumsNs.SwDotZone14: dot15.selected = isSelected; break;
                                      default: break;
                                  }
                              }

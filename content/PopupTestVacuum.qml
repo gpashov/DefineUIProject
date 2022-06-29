@@ -119,8 +119,7 @@ Item {
         imageSourcePressed: "images/c221_PopUpBotonAutoPress.png"
     }
 
-    // TODO Problem: AppEnumsNs.popUpTstVac gives undefined value
-    onVisibleChanged: { cbkWpr.popUpVisibleChanged(AppEnumsNs.popUpTstVac, visible); console.log("AppEnumsNs.popUpTstVac: ", AppEnumsNs.popUpTstVac) }
+    onVisibleChanged: cbkWpr.popUpVisibleChanged(AppEnumsNs.PopUpTstVac, visible)
 }
 
 

@@ -20,11 +20,11 @@ void CallbackWrapper::dummy()
 void CallbackWrapper::butGenderSelect(EAppGUIbodys gender)
 {
     if (gender == AppGUIbodyFemale) {
-        argWidget.id = butSelectWoman;
+        argWidget.id = ButSelectWoman;
     }
     else
     {
-        argWidget.id = butSelectMan;
+        argWidget.id = ButSelectMan;
     }
     CBKbutGenderSelectF(&argWidget);
 }
@@ -51,19 +51,19 @@ void CallbackWrapper::butMainMenuHide()
 
 void CallbackWrapper::butHome()
 {
-    argWidget.id = butTrtScrHome;
+    argWidget.id = ButTrtScrHome;
     CBKbutHomeF(&argWidget);
 }
 
 void CallbackWrapper::butConfig()
 {
-    argWidget.id = butTrtScrCfg;
+    argWidget.id = ButTrtScrCfg;
     CBKbutConfigF(&argWidget);
 }
 
 void CallbackWrapper::butCalc()
 {
-    argWidget.id = butTrtScrCalc;
+    argWidget.id = ButTrtScrCalc;
     CBKbutCalcF(&argWidget);
 }
 
@@ -85,10 +85,10 @@ void CallbackWrapper::butWarningOff()
 void CallbackWrapper::butCtrlPnlPlay(EAppGUI_HPsIDs hpId)
 {
     switch(hpId) {
-    case APP_GUI_HP1_ID:argWidget.id = butCtrlPnlPlayHP1; break;
-    case APP_GUI_HP2_ID:argWidget.id = butCtrlPnlPlayHP2; break;
-    case APP_GUI_HP3_ID:argWidget.id = butCtrlPnlPlayHP3; break;
-    case APP_GUI_HP4_ID:argWidget.id = butCtrlPnlPlayHP4; break;
+    case APP_GUI_HP1_ID:argWidget.id = ButCtrlPnlPlayHP1; break;
+    case APP_GUI_HP2_ID:argWidget.id = ButCtrlPnlPlayHP2; break;
+    case APP_GUI_HP3_ID:argWidget.id = ButCtrlPnlPlayHP3; break;
+    case APP_GUI_HP4_ID:argWidget.id = ButCtrlPnlPlayHP4; break;
     default: argWidget.id = APP_GUI_NUM_WIDGETS; break;
     }
 
@@ -108,10 +108,10 @@ void CallbackWrapper::swCtrlPnlTstVacOff()
 void CallbackWrapper::butSelectTime(EAppGUI_HPsIDs hpId)
 {
     switch(hpId) {
-    case APP_GUI_HP1_ID:argWidget.id = butSelectTimeHP1; break;
-    case APP_GUI_HP2_ID:argWidget.id = butSelectTimeHP2; break;
-    case APP_GUI_HP3_ID:argWidget.id = butSelectTimeHP3; break;
-    case APP_GUI_HP4_ID:argWidget.id = butSelectTimeHP4; break;
+    case APP_GUI_HP1_ID:argWidget.id = ButSelectTimeHP1; break;
+    case APP_GUI_HP2_ID:argWidget.id = ButSelectTimeHP2; break;
+    case APP_GUI_HP3_ID:argWidget.id = ButSelectTimeHP3; break;
+    case APP_GUI_HP4_ID:argWidget.id = ButSelectTimeHP4; break;
     default: argWidget.id = APP_GUI_NUM_WIDGETS; break;
     }
 
@@ -121,10 +121,10 @@ void CallbackWrapper::butSelectTime(EAppGUI_HPsIDs hpId)
 void CallbackWrapper::butTemperatureVwr(EAppGUI_HPsIDs hpId)
 {
     switch(hpId) {
-    case APP_GUI_HP1_ID:argWidget.id = butVwrTemperatureHP1; break;
-    case APP_GUI_HP2_ID:argWidget.id = butVwrTemperatureHP2; break;
-    case APP_GUI_HP3_ID:argWidget.id = butVwrTemperatureHP3; break;
-    case APP_GUI_HP4_ID:argWidget.id = butVwrTemperatureHP4; break;
+    case APP_GUI_HP1_ID:argWidget.id = ButVwrTemperatureHP1; break;
+    case APP_GUI_HP2_ID:argWidget.id = ButVwrTemperatureHP2; break;
+    case APP_GUI_HP3_ID:argWidget.id = ButVwrTemperatureHP3; break;
+    case APP_GUI_HP4_ID:argWidget.id = ButVwrTemperatureHP4; break;
     default: argWidget.id = APP_GUI_NUM_WIDGETS; break;
     }
 
@@ -149,10 +149,10 @@ void CallbackWrapper::butInfoZoneSelectedOff()
 void CallbackWrapper::butModelImage(EAppGUI_HPsIDs hpId)
 {
     switch(hpId) {
-    case APP_GUI_HP1_ID:argWidget.id = butModelImageHP1; break;
-    case APP_GUI_HP2_ID:argWidget.id = butModelImageHP2; break;
-    case APP_GUI_HP3_ID:argWidget.id = butModelImageHP3; break;
-    case APP_GUI_HP4_ID:argWidget.id = butModelImageHP4; break;
+    case APP_GUI_HP1_ID:argWidget.id = ButModelImageHP1; break;
+    case APP_GUI_HP2_ID:argWidget.id = ButModelImageHP2; break;
+    case APP_GUI_HP3_ID:argWidget.id = ButModelImageHP3; break;
+    case APP_GUI_HP4_ID:argWidget.id = ButModelImageHP4; break;
     default: argWidget.id = APP_GUI_NUM_WIDGETS; break;
     }
 
@@ -172,12 +172,12 @@ void CallbackWrapper::butShowCtrlPnl()
 void CallbackWrapper::butFullBodyArea(EAppGUIfullBodyAreas bodyArea)
 {
     switch(bodyArea) {
-    case AppGUIfullBodyTorso: argWidget.id = butFullBodyTorso; break;
-    case AppGUIfullBodyPiernas: argWidget.id = butFullBodyPiernas; break;
-    case AppGUIfullBodyEspalda: argWidget.id = butFullBodyEspalda; break;
-    case AppGUIfullBodyPiernasMuslo: argWidget.id = butFullBodyPiernaMuslo; break;
-    case AppGUIfullBodyBrazos: argWidget.id = butFullBodyBrazos; break;
-    case AppGUIfullBodyCuello: argWidget.id = butFullBodyCuello; break;
+    case AppGUIfullBodyTorso: argWidget.id = ButFullBodyTorso; break;
+    case AppGUIfullBodyPiernas: argWidget.id = ButFullBodyPiernas; break;
+    case AppGUIfullBodyEspalda: argWidget.id = ButFullBodyEspalda; break;
+    case AppGUIfullBodyPiernasMuslo: argWidget.id = ButFullBodyPiernaMuslo; break;
+    case AppGUIfullBodyBrazos: argWidget.id = ButFullBodyBrazos; break;
+    case AppGUIfullBodyCuello: argWidget.id = ButFullBodyCuello; break;
     default: argWidget.id = APP_GUI_NUM_WIDGETS; break;
     }
 
@@ -251,16 +251,16 @@ void CallbackWrapper::buttonNumCalc(uint8 calcNumber)
 {
     switch(calcNumber)
     {
-    case 0: argWidget.id = butNum0Calc; break;
-    case 1: argWidget.id = butNum1Calc; break;
-    case 2: argWidget.id = butNum2Calc; break;
-    case 3: argWidget.id = butNum3Calc; break;
-    case 4: argWidget.id = butNum4Calc; break;
-    case 5: argWidget.id = butNum5Calc; break;
-    case 6: argWidget.id = butNum6Calc; break;
-    case 7: argWidget.id = butNum7Calc; break;
-    case 8: argWidget.id = butNum8Calc; break;
-    case 9: argWidget.id = butNum9Calc; break;
+    case 0: argWidget.id = ButNum0Calc; break;
+    case 1: argWidget.id = ButNum1Calc; break;
+    case 2: argWidget.id = ButNum2Calc; break;
+    case 3: argWidget.id = ButNum3Calc; break;
+    case 4: argWidget.id = ButNum4Calc; break;
+    case 5: argWidget.id = ButNum5Calc; break;
+    case 6: argWidget.id = ButNum6Calc; break;
+    case 7: argWidget.id = ButNum7Calc; break;
+    case 8: argWidget.id = ButNum8Calc; break;
+    case 9: argWidget.id = ButNum9Calc; break;
     default: return; break;
     }
 
@@ -269,13 +269,13 @@ void CallbackWrapper::buttonNumCalc(uint8 calcNumber)
 
 void CallbackWrapper::buttonEnterCalc()
 {
-    argWidget.id = butEnterCalc;
+    argWidget.id = ButEnterCalc;
     CBKbutEnterCalcF(&argWidget);
 }
 
 void CallbackWrapper::buttonCECalc()
 {
-    argWidget.id = butCECalc;
+    argWidget.id = ButCECalc;
     CBKbutCECalcF(&argWidget);
 }
 

@@ -110,8 +110,8 @@ void CBKbutGenderSelectF( void *widget)
     stWidget *w = ( stWidget *)widget;
 	
     /* Puede ser el boton de hombre o de mujer. Averiguamos quien es y asignamos a la variable body */
-    if( w->id == butSelectWoman){ AppGUIdata.trtZoneHdlr.body = AppGUIbodyFemale;}
-    else if( w->id == butSelectMan){ AppGUIdata.trtZoneHdlr.body = AppGUIbodyMale;}
+    if( w->id == ButSelectWoman){ AppGUIdata.trtZoneHdlr.body = AppGUIbodyFemale;}
+    else if( w->id == ButSelectMan){ AppGUIdata.trtZoneHdlr.body = AppGUIbodyMale;}
 
     /* Pasamos a la pantalla de tratamiento */
 //	if((EXP_UC_get_Country() != App_GUI_Sin_pais) || (AppGUIdata.CalcHandler.FlagSkipLangSelection))
@@ -266,10 +266,10 @@ void CBKbutCtrlPnlPlayF( void *widget)
     /* Obtenemos el indice del HP en función del widget */
     switch( w->id)
     {
-        case butCtrlPnlPlayHP1: HPindex = 0; break;
-        case butCtrlPnlPlayHP2: HPindex = 1; break;
-        case butCtrlPnlPlayHP3: HPindex = 2; break;
-        case butCtrlPnlPlayHP4: HPindex = 3; break;
+        case ButCtrlPnlPlayHP1: HPindex = 0; break;
+        case ButCtrlPnlPlayHP2: HPindex = 1; break;
+        case ButCtrlPnlPlayHP3: HPindex = 2; break;
+        case ButCtrlPnlPlayHP4: HPindex = 3; break;
         default: return;
     }
 	
@@ -323,10 +323,10 @@ void CBKswCtrlPnlTstVacOnF( void *widget)
 //	/* Obtenemos el indice del HP en función del widget */
 //	switch( w->id)
 //	{
-//		case swCtrlPnlTstVacHP1: HPindex = 0; break;
-//		case swCtrlPnlTstVacHP2: HPindex = 1; break;
-//		case swCtrlPnlTstVacHP3: HPindex = 2; break;
-//		case swCtrlPnlTstVacHP4: HPindex = 3; break;
+//		case SwCtrlPnlTstVacHP1: HPindex = 0; break;
+//		case SwCtrlPnlTstVacHP2: HPindex = 1; break;
+//		case SwCtrlPnlTstVacHP3: HPindex = 2; break;
+//		case SwCtrlPnlTstVacHP4: HPindex = 3; break;
 //		default: return;
 //	}
 	
@@ -334,7 +334,7 @@ void CBKswCtrlPnlTstVacOnF( void *widget)
 	
 //	if (( AppGUIisTrtRunning( HPindex, NULL)) &&  (HPcryoTrtAdjustVacumAvailable( HP, PRF)))
 //	{
-//		popUp = GUIgetWidget( popUpTstVacSmall);
+//		popUp = GUIgetWidget( PopUpTstVacSmall);
 //		if( HPcryoGetFromSlot( APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF) &&
 //			popUp->enable == 0 &&
 //			AppGUIdata.slot[HPindex].selTrtDot != APP_GUI_NO_TRT_DOT_SELECTED &&
@@ -361,7 +361,7 @@ void CBKswCtrlPnlTstVacOnF( void *widget)
 //	{
 //		/* Comprobamos que hay HP y tiene trt configurado para activar el popUp y que el
 //		 * PopUp no esta ya activo */
-//		popUp = GUIgetWidget( popUpTstVac);
+//		popUp = GUIgetWidget( PopUpTstVac);
 //		if( HPcryoGetFromSlot( APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF) &&
 //			popUp->enable == 0 &&
 //			AppGUIdata.slot[HPindex].selTrtDot != APP_GUI_NO_TRT_DOT_SELECTED &&
@@ -398,7 +398,7 @@ void CBKswCtrlPnlTstVacOffF( void *widget)
 //	tHPcryoData *HP;
 	
 //	/* -- PopUp de test de vacum */
-//	popUp = GUIgetWidget( popUpTstVac);
+//	popUp = GUIgetWidget( PopUpTstVac);
 //	if( popUp->enable)
 //	{
 //		/* Es el popUp de test de vacum, tenemos que asignar el nivel seleccionado si esta testeado */
@@ -451,7 +451,7 @@ void CBKswCtrlPnlTstVacOffF( void *widget)
 //		AppGUIhandleTstVacPopUp( 0, AppGUIdata.tstVacHdlr.HPindex);
 //	}
 	
-//	popUp = GUIgetWidget( popUpTstVacSmall);
+//	popUp = GUIgetWidget( PopUpTstVacSmall);
 //	if(popUp->enable)
 //	{
 //		AppGUIhandleTstVacSMALLPopUp( 0, AppGUIdata.tstVacHdlr.HPindex);
@@ -486,10 +486,10 @@ void CBKbutSelectTimeF( void *widget)
     /* Obtenemos el indice del HP en función del widget */
     switch( w->id)
     {
-        case butSelectTimeHP1: HPindex = 0; break;
-        case butSelectTimeHP2: HPindex = 1; break;
-        case butSelectTimeHP3: HPindex = 2; break;
-        case butSelectTimeHP4: HPindex = 3; break;
+        case ButSelectTimeHP1: HPindex = 0; break;
+        case ButSelectTimeHP2: HPindex = 1; break;
+        case ButSelectTimeHP3: HPindex = 2; break;
+        case ButSelectTimeHP4: HPindex = 3; break;
         default: return;
     }
     if( HPcryoGetFromSlot( (cPRFslot)APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
@@ -498,8 +498,8 @@ void CBKbutSelectTimeF( void *widget)
         {
             /* Comprobamos que hay HP y tiene trt configurado para activar el popUp y que el
              * PopUp no esta ya activo */
-//            popUp = GUIgetWidget( popUpTime);
-            if( AppGUIIsPopupDisplayed(popUpTime) == 0 &&
+//            popUp = GUIgetWidget( PopUpTime);
+            if( AppGUIIsPopupDisplayed(PopUpTime) == 0 &&
                 AppGUIdata.slot[HPindex].selTrtDot != APP_GUI_NO_TRT_DOT_SELECTED &&
                 AppGUIdata.slot[HPindex].selTrtArea != AppGUIfullBodyNO_AREA)
             {
@@ -537,10 +537,10 @@ void CBKbutTemperatureVwrF ( void *widget)
     /* Obtenemos el indice del HP en función del widget */
     switch( w->id)
     {
-        case butVwrTemperatureHP1: HPindex = 0; break;
-        case butVwrTemperatureHP2: HPindex = 1; break;
-        case butVwrTemperatureHP3: HPindex = 2; break;
-        case butVwrTemperatureHP4: HPindex = 3; break;
+        case ButVwrTemperatureHP1: HPindex = 0; break;
+        case ButVwrTemperatureHP2: HPindex = 1; break;
+        case ButVwrTemperatureHP3: HPindex = 2; break;
+        case ButVwrTemperatureHP4: HPindex = 3; break;
         default: return;
     }
 	
@@ -559,10 +559,10 @@ void CBKbutTRTmodeAutoManualF ( void *widget)
 //	/* Obtenemos el indice del HP en función del widget */
 //	switch( w->id)
 //	{
-//		case butSwtchModeAutoManualHP1: HPindex = 0; break;
-//		case butSwtchModeAutoManualHP2: HPindex = 1; break;
-//		case butSwtchModeAutoManualHP3: HPindex = 2; break;
-//		case butSwtchModeAutoManualHP4: HPindex = 3; break;
+//		case ButSwtchModeAutoManualHP1: HPindex = 0; break;
+//		case ButSwtchModeAutoManualHP2: HPindex = 1; break;
+//		case ButSwtchModeAutoManualHP3: HPindex = 2; break;
+//		case ButSwtchModeAutoManualHP4: HPindex = 3; break;
 //		default: return;
 //	}
 //	if (HPcryoGetFromSlot( APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
@@ -587,7 +587,7 @@ void CBKbutInfoZoneSelectedOnF()
     uint8 HPindex;
     stWidget *popUp;
 
-    if( AppGUIIsPopupDisplayed(popUpRecomm) == 0)		AppGUIhandleRecommendationpopUp( 1, AppGUIdata.trtZoneHdlr.selTrtDot, AppGUIdata.trtZoneHdlr.selTrtArea);
+    if( AppGUIIsPopupDisplayed(PopUpRecomm) == 0)		AppGUIhandleRecommendationpopUp( 1, AppGUIdata.trtZoneHdlr.selTrtDot, AppGUIdata.trtZoneHdlr.selTrtArea);
 	
     for( HPindex=0;HPindex<APP_GUI_MAXNUM_HP;HPindex++)	AppGUIhandleCtrlPanel(AppGUIdata.slot[HPindex].isCtrlPnlShow, HPindex);
     AppGUIhandleTrtZone();
@@ -597,7 +597,7 @@ void CBKbutInfoZoneSelectedOffF()
 {
     uint8 HPindex;
 
-    if ( AppGUIIsPopupDisplayed(popUpRecomm) != 0)		AppGUIhandleRecommendationpopUp( 0, AppGUIdata.trtZoneHdlr.selTrtDot, AppGUIdata.trtZoneHdlr.selTrtArea);
+    if ( AppGUIIsPopupDisplayed(PopUpRecomm) != 0)		AppGUIhandleRecommendationpopUp( 0, AppGUIdata.trtZoneHdlr.selTrtDot, AppGUIdata.trtZoneHdlr.selTrtArea);
 	
     for( HPindex=0;HPindex<APP_GUI_MAXNUM_HP;HPindex++)	AppGUIhandleCtrlPanel(AppGUIdata.slot[HPindex].isCtrlPnlShow, HPindex);
     AppGUIhandleTrtZone();
@@ -616,10 +616,10 @@ void CBKbutModelImageF( void *widget)
     /* Obtenemos el indice del HP en función del widget */
     switch( w->id)
     {
-        case butModelImageHP1: HPindex = 0; break;
-        case butModelImageHP2: HPindex = 1; break;
-        case butModelImageHP3: HPindex = 2; break;
-        case butModelImageHP4: HPindex = 3; break;
+        case ButModelImageHP1: HPindex = 0; break;
+        case ButModelImageHP2: HPindex = 1; break;
+        case ButModelImageHP3: HPindex = 2; break;
+        case ButModelImageHP4: HPindex = 3; break;
         default: return;
     }
 	
@@ -699,10 +699,10 @@ void CBKbutHideCtrlPnlF( void *widget)
 //	/* Obtenemos el indice del HP en función del widget */
 //	switch( w->id)
 //	{
-//		case butHideControlPanelHP1: HPindex = 0; break;
-//		case butHideControlPanelHP2: HPindex = 1; break;
-//		case butHideControlPanelHP3: HPindex = 2; break;
-//		case butHideControlPanelHP4: HPindex = 3; break;
+//		case ButHideControlPanelHP1: HPindex = 0; break;
+//		case ButHideControlPanelHP2: HPindex = 1; break;
+//		case ButHideControlPanelHP3: HPindex = 2; break;
+//		case ButHideControlPanelHP4: HPindex = 3; break;
 //		default: return;
 //	}
 	
@@ -822,7 +822,7 @@ void CBKbutPopUpReturnF()
     /* El comportamiento depende de que popUp esta activo o si ninguno lo esta entender que es el zoom de la
      * zona de tratamiento */
     /* -- PopUp's tiempo, test vacum y RFID se desactivan */
-//    popUp = GUIgetWidget( popUpRFID);
+//    popUp = GUIgetWidget( PopUpRFID);
     if( AppGUIisRFIDPopUpActive() )
     {
         /* Paramos el tratamiento en curso */
@@ -833,9 +833,9 @@ void CBKbutPopUpReturnF()
         AppGUIhandleRFIDpopUp( 0, AppGUIdata.RFIDhdlr.HPindex); isPopUp = 1;
         RFID_free();
     }
-//	popUp = GUIgetWidget( popUpTime);
+//	popUp = GUIgetWidget( PopUpTime);
 //	if( popUp->enable){ AppGUIhandleTimePopUp( 0, AppGUIdata.timeHdlr.HPindex); isPopUp = 1;}
-//	popUp = GUIgetWidget( popUpTstVac);
+//	popUp = GUIgetWidget( PopUpTstVac);
 //	if( popUp->enable)
 //	{
 //		/* Si hay test de vacum en marcha lo paramos, si es tratamiento lo mantenemos */
@@ -1105,16 +1105,16 @@ void CBKbutNumCalcF( void *widget)
 	
     switch(w->id)
     {
-        case butNum0Calc:	numIn = 0; if(AppGUIdata.CalcHandler.numDigitsIn==0){return;} break;
-        case butNum1Calc:	numIn = 1; break;
-        case butNum2Calc:	numIn = 2; break;
-        case butNum3Calc:	numIn = 3; break;
-        case butNum4Calc:	numIn = 4; break;
-        case butNum5Calc:	numIn = 5; break;
-        case butNum6Calc:	numIn = 6; break;
-        case butNum7Calc:	numIn = 7; break;
-        case butNum8Calc:	numIn = 8; break;
-        case butNum9Calc:	numIn = 9; break;
+        case ButNum0Calc:	numIn = 0; if(AppGUIdata.CalcHandler.numDigitsIn==0){return;} break;
+        case ButNum1Calc:	numIn = 1; break;
+        case ButNum2Calc:	numIn = 2; break;
+        case ButNum3Calc:	numIn = 3; break;
+        case ButNum4Calc:	numIn = 4; break;
+        case ButNum5Calc:	numIn = 5; break;
+        case ButNum6Calc:	numIn = 6; break;
+        case ButNum7Calc:	numIn = 7; break;
+        case ButNum8Calc:	numIn = 8; break;
+        case ButNum9Calc:	numIn = 9; break;
         default: return;
     }
 	
@@ -1124,7 +1124,7 @@ void CBKbutNumCalcF( void *widget)
         AppGUIdata.CalcHandler.CalcCode = (AppGUIdata.CalcHandler.CalcCode*10)+(float)(numIn);
     }
 	
-    wdgWpr.GUIsetNumViewerNum( numVwrPantallaCalc, AppGUIdata.CalcHandler.CalcCode, 0);
+    wdgWpr.GUIsetNumViewerNum( NumVwrPantallaCalc, AppGUIdata.CalcHandler.CalcCode, 0);
 }
 
 void CBKbutEnterCalcF( void *widget)
@@ -1369,7 +1369,7 @@ void CBKbutCECalcF( void *widget)
     /* Cerrar electrovalvula */
     EXP_UChandleVentEV( 0);
 	
-    wdgWpr.GUIsetNumViewerNum( numVwrPantallaCalc, AppGUIdata.CalcHandler.CalcCode, 0);
+    wdgWpr.GUIsetNumViewerNum( NumVwrPantallaCalc, AppGUIdata.CalcHandler.CalcCode, 0);
 }
 
 void CBKbutSoftUpdateCfgF ( void *widget)
@@ -1613,10 +1613,10 @@ void CBKbutSATnextPageF ( void *widget)
 //		default:	break;
 //	}
 	
-//	GUIsetSwitchStatus(swVacuum, AppGUIdata.SATHandler.VacuumSwitch[HPindex]);
-//	GUIsetSwitchStatus(swFrio, AppGUIdata.SATHandler.FrioSwitch[HPindex]);
-//	GUIsetSwitchStatus(swTestLed, AppGUIdata.SATHandler.TestLedSwitch[HPindex]);
-//	GUIsetSwitchStatus(swTestLedRGB, AppGUIdata.SATHandler.TestLedRGBSwitch[HPindex]);
+//	GUIsetSwitchStatus(SwVacuum, AppGUIdata.SATHandler.VacuumSwitch[HPindex]);
+//	GUIsetSwitchStatus(SwFrio, AppGUIdata.SATHandler.FrioSwitch[HPindex]);
+//	GUIsetSwitchStatus(SwTestLed, AppGUIdata.SATHandler.TestLedSwitch[HPindex]);
+//	GUIsetSwitchStatus(SwTestLedRGB, AppGUIdata.SATHandler.TestLedRGBSwitch[HPindex]);
 }
 
 void CBKbutSATprevPageF ( void *widget)
@@ -1635,10 +1635,10 @@ void CBKbutSATprevPageF ( void *widget)
 //		default:	break;
 //	}
 	
-//	GUIsetSwitchStatus(swVacuum, AppGUIdata.SATHandler.VacuumSwitch[HPindex]);
-//	GUIsetSwitchStatus(swFrio, AppGUIdata.SATHandler.FrioSwitch[HPindex]);
-//	GUIsetSwitchStatus(swTestLed, AppGUIdata.SATHandler.TestLedSwitch[HPindex]);
-//	GUIsetSwitchStatus(swTestLedRGB, AppGUIdata.SATHandler.TestLedRGBSwitch[HPindex]);
+//	GUIsetSwitchStatus(SwVacuum, AppGUIdata.SATHandler.VacuumSwitch[HPindex]);
+//	GUIsetSwitchStatus(SwFrio, AppGUIdata.SATHandler.FrioSwitch[HPindex]);
+//	GUIsetSwitchStatus(SwTestLed, AppGUIdata.SATHandler.TestLedSwitch[HPindex]);
+//	GUIsetSwitchStatus(SwTestLedRGB, AppGUIdata.SATHandler.TestLedRGBSwitch[HPindex]);
 }
 
 void CBKswSATVacOnF ( void *widget)
@@ -1656,7 +1656,7 @@ void CBKswSATVacOnF ( void *widget)
 //	}
 //	AppGUIdata.SATHandler.VacuumSwitch[HPindex] = 1;
 //	AppGUIdata.SATHandler.FrioSwitch[HPindex] = 0;
-//	GUIsetSwitchStatus(swFrio, AppGUIdata.SATHandler.FrioSwitch[HPindex]);
+//	GUIsetSwitchStatus(SwFrio, AppGUIdata.SATHandler.FrioSwitch[HPindex]);
 	
 //	if(HPcryoGetFromSlot(HPindex+1, &HP, &PRF)){	HPcryoSATcoolingTestStop(HP, PRF);	}
 }
@@ -1692,7 +1692,7 @@ void CBKswSATFrioOnF ( void *widget)
 //	}
 //	AppGUIdata.SATHandler.VacuumSwitch[HPindex] = 0;
 //	AppGUIdata.SATHandler.FrioSwitch[HPindex] = 1;
-//	GUIsetSwitchStatus(swVacuum, AppGUIdata.SATHandler.VacuumSwitch[HPindex]);
+//	GUIsetSwitchStatus(SwVacuum, AppGUIdata.SATHandler.VacuumSwitch[HPindex]);
 	
 //	if(HPcryoGetFromSlot(HPindex+1, &HP, &PRF)){	HPcryoSATvacumTestStop(HP, PRF);	}
 }

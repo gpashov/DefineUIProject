@@ -451,25 +451,25 @@ Item {
         onHpControlPanelModelTextSet: (hpIndex, idImg) => {
                                           var newState
                                           switch (idImg) {
-                                              case AppEnumsNs.c066_NameCurvedHP_L:
-                                              case AppEnumsNs.c066_NameCurvedHP_R: newState = "CurvedState"; break;
-                                              case AppEnumsNs.c067_NameTightHP_L:
-                                              case AppEnumsNs.c067_NameTightHP_R: newState = "TightState"; break;
-                                              case AppEnumsNs.c068_NameStarightHP_L:
-                                              case AppEnumsNs.c068_NameStraightHP_R: newState = "StraightState"; break;
-                                              case AppEnumsNs.c069_NameTinyHP_L:
-                                              case AppEnumsNs.c069_NameTinyHP_R: newState = "TinyState"; break;
-                                              case AppEnumsNs.c070_NameTinyCurvedHP_L:
-                                              case AppEnumsNs.c070_NameTinyCurvedHP_R: newState = "TinyCurvedState"; break;
-                                              case AppEnumsNs.c071_NameDoubleHP_L:
-                                              case AppEnumsNs.c071_NameDoubleHP_R: newState = "DoubleState"; break;
-                                              case AppEnumsNs.c072_NameOvalHP_L:
-                                              case AppEnumsNs.c072_NameOvalHP_R: newState = "OvalState"; break;
-                                              case AppEnumsNs.c073_NameOvalCurvedHP_L:
-                                              case AppEnumsNs.c073_NameOvalCurvedHP_R: newState = "OvalCurvedState"; break;
-                                              case AppEnumsNs.c074_NameDeltaHP_L:
-                                              case AppEnumsNs.c074_NameDeltaHP_R: newState = "DeltaState"; break;
-                                              case AppEnumsNs.c233_ImgPixelBlanco:
+                                              case AppEnumsNs.C066_NameCurvedHP_L:
+                                              case AppEnumsNs.C066_NameCurvedHP_R: newState = "CurvedState"; break;
+                                              case AppEnumsNs.C067_NameTightHP_L:
+                                              case AppEnumsNs.C067_NameTightHP_R: newState = "TightState"; break;
+                                              case AppEnumsNs.C068_NameStarightHP_L:
+                                              case AppEnumsNs.C068_NameStraightHP_R: newState = "StraightState"; break;
+                                              case AppEnumsNs.C069_NameTinyHP_L:
+                                              case AppEnumsNs.C069_NameTinyHP_R: newState = "TinyState"; break;
+                                              case AppEnumsNs.C070_NameTinyCurvedHP_L:
+                                              case AppEnumsNs.C070_NameTinyCurvedHP_R: newState = "TinyCurvedState"; break;
+                                              case AppEnumsNs.C071_NameDoubleHP_L:
+                                              case AppEnumsNs.C071_NameDoubleHP_R: newState = "DoubleState"; break;
+                                              case AppEnumsNs.C072_NameOvalHP_L:
+                                              case AppEnumsNs.C072_NameOvalHP_R: newState = "OvalState"; break;
+                                              case AppEnumsNs.C073_NameOvalCurvedHP_L:
+                                              case AppEnumsNs.C073_NameOvalCurvedHP_R: newState = "OvalCurvedState"; break;
+                                              case AppEnumsNs.C074_NameDeltaHP_L:
+                                              case AppEnumsNs.C074_NameDeltaHP_R: newState = "DeltaState"; break;
+                                              case AppEnumsNs.C233_ImgPixelBlanco:
                                               default: newState = "BlankState"; break;
                                           }
 

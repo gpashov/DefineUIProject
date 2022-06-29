@@ -101,22 +101,21 @@ Item {
         target: wdgWpr
         onSuggestedHpWatermarkDisplayed: (typeWidgetId, isDispalyed) => {
                                              switch(typeWidgetId) {
-                                             case AppEnumsNs.imgPopUpRecommCurved: watermarkCurvedImg.visible = isDispalyed; break;
-                                             case AppEnumsNs.imgPopUpRecommTight: watermarkTightImg.visible = isDispalyed; break;
-                                             case AppEnumsNs.imgPopUpRecommStright: watermarkStraightImg.visible = isDispalyed; break;
-                                             case AppEnumsNs.imgPopUpRecommTiny: watermarkTinyImg.visible = isDispalyed; break;
-                                             case AppEnumsNs.imgPopUpRecommTinyCurved: watermarkTinyCurvedImg.visible = isDispalyed; break;
-                                             case AppEnumsNs.imgPopUpRecommDouble: watermarkDoubleImg.visible = isDispalyed; break;
-                                             case AppEnumsNs.imgPopUpRecommOval: watermarkOvalImg.visible = isDispalyed; break;
-                                             case AppEnumsNs.imgPopUpRecommOvalCurved: watermarkOvalCurvedImg.visible = isDispalyed; break;
-                                             case AppEnumsNs.imgPopUpRecommAngled: watermarkAngledImg.visible = isDispalyed; break;
+                                             case AppEnumsNs.ImgPopUpRecommCurved: watermarkCurvedImg.visible = isDispalyed; break;
+                                             case AppEnumsNs.ImgPopUpRecommTight: watermarkTightImg.visible = isDispalyed; break;
+                                             case AppEnumsNs.ImgPopUpRecommStright: watermarkStraightImg.visible = isDispalyed; break;
+                                             case AppEnumsNs.ImgPopUpRecommTiny: watermarkTinyImg.visible = isDispalyed; break;
+                                             case AppEnumsNs.ImgPopUpRecommTinyCurved: watermarkTinyCurvedImg.visible = isDispalyed; break;
+                                             case AppEnumsNs.ImgPopUpRecommDouble: watermarkDoubleImg.visible = isDispalyed; break;
+                                             case AppEnumsNs.ImgPopUpRecommOval: watermarkOvalImg.visible = isDispalyed; break;
+                                             case AppEnumsNs.ImgPopUpRecommOvalCurved: watermarkOvalCurvedImg.visible = isDispalyed; break;
+                                             case AppEnumsNs.ImgPopUpRecommAngled: watermarkAngledImg.visible = isDispalyed; break;
                                              default: break;
                                              }
         }
     }
 
-    // TODO Problem: AppEnumsNs.popUpRecomm gives undefined value
-    onVisibleChanged: { cbkWpr.popupVisibleChanged(AppEnumsNs.popUpRecomm, visible); console.log("AppEnumsNs.popUpRecomm: ", AppEnumsNs.popUpRecomm) }
+    onVisibleChanged: cbkWpr.popupVisibleChanged(AppEnumsNs.PopUpRecomm, visible)
 }
 
 

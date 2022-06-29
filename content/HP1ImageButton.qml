@@ -123,28 +123,28 @@ Item {
         onHpControlPanelButtonImagesSet: (hpIndex, idImg) => {
                                             if (hpIndex === AppEnumsNs.APP_GUI_HP1_ID) {
                                                  switch (idImg) {
-                                                     case AppEnumsNs.c093_ImgCurvedHP_R_Press:
-                                                     case AppEnumsNs.c094_ImgCurvedHP_L_Press: state = "hpModelCurvedState"; break;
-                                                     case AppEnumsNs.c095_ImgTightHP_R_Press:
-                                                     case AppEnumsNs.c096_ImgTightHP_L_Press: state = "hpModelTightState"; break;
-                                                     case AppEnumsNs.c097_ImgStrightHP_R_Press:
-                                                     case AppEnumsNs.c098_ImgStrightHP_L_Press: state = "hpModelStraightState"; break;
-                                                     case AppEnumsNs.c099_ImgTinyHP_R_Press:
-                                                     case AppEnumsNs.c100_ImgTinyHP_L_Press: state = "hpModelTinyState"; break;
-                                                     case AppEnumsNs.c101_ImgTinyCurvedHP_R_Press:
-                                                     case AppEnumsNs.c102_ImgTinyCurvedHP_L_Press: state = "hpModelTinyCurvedState"; break;
-                                                     case AppEnumsNs.c103_ImgDoubleHP_R_Press:
-                                                     case AppEnumsNs.c104_ImgDoubleHP_L_Press: state = "hpModelDoubleState"; break;
-                                                     case AppEnumsNs.c105_ImgOvalHP_R_Press:
-                                                     case AppEnumsNs.c106_ImgOvalHP_L_Press: state = "hpModelOvalState"; break;
-                                                     case AppEnumsNs.c107_ImgOvalCurvedHP_R_Press:
-                                                     case AppEnumsNs.c108_ImgOvalCurvedHP_L_Press: state = "hpModelOvalCurvedState"; break;
-                                                     case AppEnumsNs.c109_ImgAngledHP_R_Press:
-                                                     case AppEnumsNs.c110_ImgAngledHP_L_Press: state = "hpModelAngledState"; break;
+                                                     case AppEnumsNs.C093_ImgCurvedHP_R_Press:
+                                                     case AppEnumsNs.C094_ImgCurvedHP_L_Press: state = "hpModelCurvedState"; break;
+                                                     case AppEnumsNs.C095_ImgTightHP_R_Press:
+                                                     case AppEnumsNs.C096_ImgTightHP_L_Press: state = "hpModelTightState"; break;
+                                                     case AppEnumsNs.C097_ImgStrightHP_R_Press:
+                                                     case AppEnumsNs.C098_ImgStrightHP_L_Press: state = "hpModelStraightState"; break;
+                                                     case AppEnumsNs.C099_ImgTinyHP_R_Press:
+                                                     case AppEnumsNs.C100_ImgTinyHP_L_Press: state = "hpModelTinyState"; break;
+                                                     case AppEnumsNs.C101_ImgTinyCurvedHP_R_Press:
+                                                     case AppEnumsNs.C102_ImgTinyCurvedHP_L_Press: state = "hpModelTinyCurvedState"; break;
+                                                     case AppEnumsNs.C103_ImgDoubleHP_R_Press:
+                                                     case AppEnumsNs.C104_ImgDoubleHP_L_Press: state = "hpModelDoubleState"; break;
+                                                     case AppEnumsNs.C105_ImgOvalHP_R_Press:
+                                                     case AppEnumsNs.C106_ImgOvalHP_L_Press: state = "hpModelOvalState"; break;
+                                                     case AppEnumsNs.C107_ImgOvalCurvedHP_R_Press:
+                                                     case AppEnumsNs.C108_ImgOvalCurvedHP_L_Press: state = "hpModelOvalCurvedState"; break;
+                                                     case AppEnumsNs.C109_ImgAngledHP_R_Press:
+                                                     case AppEnumsNs.C110_ImgAngledHP_L_Press: state = "hpModelAngledState"; break;
 
-                                                     case AppEnumsNs.c430_HPalarmaResucciones: state = "WarningRepositionHp"; break;
-                                                     case AppEnumsNs.c438_HPalarmaPlicainsuficiente: state = "WarningInsufficientPlica"; break;
-                                                     case AppEnumsNs.c233_ImgPixelBlanco:
+                                                     case AppEnumsNs.C430_HPalarmaResucciones: state = "WarningRepositionHp"; break;
+                                                     case AppEnumsNs.C438_HPalarmaPlicainsuficiente: state = "WarningInsufficientPlica"; break;
+                                                     case AppEnumsNs.C233_ImgPixelBlanco:
                                                      default: state = "HpNotConnected"; break;
                                                  }
                                              }

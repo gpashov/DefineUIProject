@@ -34,8 +34,7 @@ Item {
         imageSourceReleased: "images/c167_PopUpBoton70MinRls.png"
     }
 
-    // TODO Problem: AppEnumsNs.popUpTime gives undefined value
-    onVisibleChanged: { cbkWpr.popUpVisibleChanged(AppEnumsNs.popUpTime, visible); console.log("AppEnumsNs.popUpTime: ", AppEnumsNs.popUpTime) }
+    onVisibleChanged: cbkWpr.popUpVisibleChanged(AppEnumsNs.PopUpTime, visible)
 }
 
 /*##^##

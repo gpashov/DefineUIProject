@@ -100,16 +100,16 @@ void AppGUIinit()
 //    GUIconfigInterface(APP_GUI_INTERFACE_WIDGETS, (uint8)APP_GUI_NUM_SCREENS, (uint32)APP_GUI_NUM_WIDGETS, (uint8*)APP_GUI_SCREEN_N_LAYERS);
 	
     //Configuramos las listas de widgets a usar por los PopUps
-//    GUIsetPopUpWidgets(popUpTime, APP_GUI_POPUP_TIME_WIDGET_LIST, NULL);
-//    GUIsetPopUpWidgets(popUpTstVac, APP_GUI_POPUP_TST_VAC_WIDGET_LIST, NULL);
-//    GUIsetPopUpWidgets(popUpRFID, APP_GUI_POPUP_RFID_WIDGET_LIST, NULL);
-//    GUIsetPopUpWidgets(popUpRecomm, APP_GUI_POPUP_RECOMMENDATION_WIDGET_LIST, NULL);
-//    GUIsetPopUpWidgets(popUpTstVacSmall, APP_GUI_POPUP_TST_VAC_SMALL_WIDGET_LIST, NULL);
-//    GUIsetPopUpWidgets(popupInitScrAvisos, APP_GUI_POPUP_AVISOS_INIT_SCRN_WIDGET_LIST, NULL);
-//    GUIsetPopUpWidgets(popupTrtScrAvisos, APP_GUI_POPUP_AVISOS_TRT_SCRN_WIDGET_LIST, NULL);
-//    GUIsetPopUpWidgets(popupCalcScrAvisos, APP_GUI_POPUP_AVISOS_CALC_SCRN_WIDGET_LIST, NULL);
-//    GUIsetPopUpWidgets(popupCfgScrAvisos, APP_GUI_POPUP_AVISOS_CFG_SCRN_WIDGET_LIST, NULL);
-//    GUIsetPopUpWidgets(popupLanScrAvisos, APP_GUI_POPUP_AVISOS_LAN_SCRN_WIDGET_LIST, NULL);
+//    GUIsetPopUpWidgets(PopUpTime, APP_GUI_POPUP_TIME_WIDGET_LIST, NULL);
+//    GUIsetPopUpWidgets(PopUpTstVac, APP_GUI_POPUP_TST_VAC_WIDGET_LIST, NULL);
+//    GUIsetPopUpWidgets(PopUpRFID, APP_GUI_POPUP_RFID_WIDGET_LIST, NULL);
+//    GUIsetPopUpWidgets(PopUpRecomm, APP_GUI_POPUP_RECOMMENDATION_WIDGET_LIST, NULL);
+//    GUIsetPopUpWidgets(PopUpTstVacSmall, APP_GUI_POPUP_TST_VAC_SMALL_WIDGET_LIST, NULL);
+//    GUIsetPopUpWidgets(PopupInitScrAvisos, APP_GUI_POPUP_AVISOS_INIT_SCRN_WIDGET_LIST, NULL);
+//    GUIsetPopUpWidgets(PopupTrtScrAvisos, APP_GUI_POPUP_AVISOS_TRT_SCRN_WIDGET_LIST, NULL);
+//    GUIsetPopUpWidgets(PopupCalcScrAvisos, APP_GUI_POPUP_AVISOS_CALC_SCRN_WIDGET_LIST, NULL);
+//    GUIsetPopUpWidgets(PopupCfgScrAvisos, APP_GUI_POPUP_AVISOS_CFG_SCRN_WIDGET_LIST, NULL);
+//    GUIsetPopUpWidgets(PopupLanScrAvisos, APP_GUI_POPUP_AVISOS_LAN_SCRN_WIDGET_LIST, NULL);
 //    GUIsetPopUpWidgets(PopupErrorSAT, APP_GUI_POPUP_ERRORES_SAT_WIDGET_LIST, NULL);
 	
     /* Finalmente pasamos a la pantalla de LOAD */
@@ -138,16 +138,16 @@ void AppGUIinit_reconfig (void)
     AppGUIdata.AppGUI_WarningHandler.Flag_Wng_Filtro_Aire = 0;
 	
     //Configuramos las listas de widgets a usar por los PopUps
-//    GUIsetPopUpWidgets(popUpTime, APP_GUI_POPUP_TIME_WIDGET_LIST, NULL);
-//    GUIsetPopUpWidgets(popUpTstVac, APP_GUI_POPUP_TST_VAC_WIDGET_LIST, NULL);
-//    GUIsetPopUpWidgets(popUpRFID, APP_GUI_POPUP_RFID_WIDGET_LIST, NULL);
-//    GUIsetPopUpWidgets(popUpRecomm, APP_GUI_POPUP_RECOMMENDATION_WIDGET_LIST, NULL);
-//    GUIsetPopUpWidgets(popUpTstVacSmall, APP_GUI_POPUP_TST_VAC_SMALL_WIDGET_LIST, NULL);
-//    GUIsetPopUpWidgets(popupInitScrAvisos, APP_GUI_POPUP_AVISOS_INIT_SCRN_WIDGET_LIST, NULL);
-//    GUIsetPopUpWidgets(popupTrtScrAvisos, APP_GUI_POPUP_AVISOS_TRT_SCRN_WIDGET_LIST, NULL);
-//    GUIsetPopUpWidgets(popupCalcScrAvisos, APP_GUI_POPUP_AVISOS_CALC_SCRN_WIDGET_LIST, NULL);
-//    GUIsetPopUpWidgets(popupCfgScrAvisos, APP_GUI_POPUP_AVISOS_CFG_SCRN_WIDGET_LIST, NULL);
-//    GUIsetPopUpWidgets(popupLanScrAvisos, APP_GUI_POPUP_AVISOS_LAN_SCRN_WIDGET_LIST, NULL);
+//    GUIsetPopUpWidgets(PopUpTime, APP_GUI_POPUP_TIME_WIDGET_LIST, NULL);
+//    GUIsetPopUpWidgets(PopUpTstVac, APP_GUI_POPUP_TST_VAC_WIDGET_LIST, NULL);
+//    GUIsetPopUpWidgets(PopUpRFID, APP_GUI_POPUP_RFID_WIDGET_LIST, NULL);
+//    GUIsetPopUpWidgets(PopUpRecomm, APP_GUI_POPUP_RECOMMENDATION_WIDGET_LIST, NULL);
+//    GUIsetPopUpWidgets(PopUpTstVacSmall, APP_GUI_POPUP_TST_VAC_SMALL_WIDGET_LIST, NULL);
+//    GUIsetPopUpWidgets(PopupInitScrAvisos, APP_GUI_POPUP_AVISOS_INIT_SCRN_WIDGET_LIST, NULL);
+//    GUIsetPopUpWidgets(PopupTrtScrAvisos, APP_GUI_POPUP_AVISOS_TRT_SCRN_WIDGET_LIST, NULL);
+//    GUIsetPopUpWidgets(PopupCalcScrAvisos, APP_GUI_POPUP_AVISOS_CALC_SCRN_WIDGET_LIST, NULL);
+//    GUIsetPopUpWidgets(PopupCfgScrAvisos, APP_GUI_POPUP_AVISOS_CFG_SCRN_WIDGET_LIST, NULL);
+//    GUIsetPopUpWidgets(PopupLanScrAvisos, APP_GUI_POPUP_AVISOS_LAN_SCRN_WIDGET_LIST, NULL);
 //    GUIsetPopUpWidgets(PopupErrorSAT, APP_GUI_POPUP_ERRORES_SAT_WIDGET_LIST, NULL);
 	
 //    for(i=0;i<APP_GUI_TRT_SCR_NUM_POPUPS;i++){	GUIdisablePopUp( APP_GUI_TRT_SCR_POPUP_WIDGET_LIST[i]);	}
@@ -350,13 +350,13 @@ void AppGUIhandleCtrlPanel( uint8 show, uint8 HPindex)
                         BUZZ_Configure(1, 100, PATRO_SO_FINAL_TRT );	//V7750 - Lanzamos la alarma sonora
                         AppGUIdata.slot[HPindex].alarmVacumRetryRqstUsrToMoveHP = 1;	//Indicamos que la alarma ya ha sonado
                     }
-                    imgPrsID = c430_HPalarmaResucciones;
+                    imgPrsID = C430_HPalarmaResucciones;
 //                    imgRlsID = c430_HPalarmaResucciones;
 					
                 }
                 else if( AppGUIdata.slot[HPindex].showAutoKO)
                 {
-                    imgPrsID = c438_HPalarmaPlicainsuficiente;
+                    imgPrsID = C438_HPalarmaPlicainsuficiente;
 //                    imgRlsID = c438_HPalarmaPlicainsuficiente;
                 }
                 else
@@ -384,7 +384,7 @@ void AppGUIhandleCtrlPanel( uint8 show, uint8 HPindex)
             imgPrsID = APP_GUI_TRT_SCR_BUT_MODE_IMG_NO_HP_IMG[HPindex];
 //            imgRlsID = APP_GUI_TRT_SCR_BUT_MODE_IMG_NO_HP_IMG[HPindex];
 // TODO            GUIsetWidgetEnable( APP_GUI_TRT_SCR_BUT_MODEL_IMG_WIDGETS[HPindex], 0);
-            imgModelText = c233_ImgPixelBlanco;
+            imgModelText = C233_ImgPixelBlanco;
 // TODO            GUIsetWidgetEnable( APP_GUI_TRT_SCR_BUT_MODE_TRT_WIDGETS[HPindex], 0);
         }
 		
@@ -571,9 +571,9 @@ void AppGUIhandleCtrlPanel( uint8 show, uint8 HPindex)
         /* Gestión de los botones de recogida del panel si tenemos el main menu activado, puesto
          * que los tapa debemos deshabilitar los 2 inferiores si el menu esta desplegado */
         if( HPindex == 0 || HPindex == 1)
-        { wdgWpr.GUIsetWidgetEnable( butHideControlPanelHP1 + HPindex, !isPopUp); } //GUARRADA PDTE
+        { wdgWpr.GUIsetWidgetEnable( ButHideControlPanelHP1 + HPindex, !isPopUp); } //GUARRADA PDTE
         else
-        { wdgWpr.GUIsetWidgetEnable( butHideControlPanelHP1 + HPindex, !AppGUIdata.mainMenuHdlr.isUp && !isPopUp);}
+        { wdgWpr.GUIsetWidgetEnable( ButHideControlPanelHP1 + HPindex, !AppGUIdata.mainMenuHdlr.isUp && !isPopUp);}
     }
 }
 
@@ -611,14 +611,14 @@ void AppGUIhandleTrtZone( void)
         if( (AppGUIdata.trtZoneHdlr.selTrtDot != APP_GUI_NO_TRT_DOT_SELECTED) && !(isPopUp^(isRecommPopUp/*|isTimePopUp*/|isVaccSmallPopUp|isRFIDPopUp)))
         {
             //De esta forma ponemos visible el botón de info, pero solo se habilita si el popup activo es el de info
-            wdgWpr.GUIsetWidgetVisibility( swPopUpRecommInfo, 1);
-            wdgWpr.GUIsetWidgetEnable( swPopUpRecommInfo, (!isTimePopUp)&(!isVaccSmallPopUp)&(!isRFIDPopUp));
+            wdgWpr.GUIsetWidgetVisibility( SwPopUpRecommInfo, 1);
+            wdgWpr.GUIsetWidgetEnable( SwPopUpRecommInfo, (!isTimePopUp)&(!isVaccSmallPopUp)&(!isRFIDPopUp));
         }
         else
         {
             //En caso contrario deshabilitamos y ponemos invisible el botón de info
-            wdgWpr.GUIsetWidgetVisibility( swPopUpRecommInfo, 0);
-            wdgWpr.GUIsetWidgetEnable( swPopUpRecommInfo, 0);
+            wdgWpr.GUIsetWidgetVisibility( SwPopUpRecommInfo, 0);
+            wdgWpr.GUIsetWidgetEnable( SwPopUpRecommInfo, 0);
         }
         /* Estamos en zoom, ponemos la imagen de fondo según el area seleccionada */
 //        GUIsetImgViewerImage( imgFullBodyAndZoom, APP_GUI_FULL_BODY_AREAS_DATA[body][area].IDimgZoom);
@@ -629,13 +629,13 @@ void AppGUIhandleTrtZone( void)
         /* Ponemos el boton de return si no hay popUp ya que entonces el control lo tiene el popUp */
         if( isPopUp == 0)
         {
-            wdgWpr.GUIsetWidgetVisibility( butPopUpReturn, 1);
-            wdgWpr.GUIsetWidgetEnable( butPopUpReturn, 1);
+            wdgWpr.GUIsetWidgetVisibility( ButPopUpReturn, 1);
+            wdgWpr.GUIsetWidgetEnable( ButPopUpReturn, 1);
         }
         else if (AppGUIisRecommPopUpActive() || AppGUIisVacPopUpActive())
         {
-            wdgWpr.GUIsetWidgetVisibility( butPopUpReturn, 0);
-            wdgWpr.GUIsetWidgetEnable( butPopUpReturn, 0);
+            wdgWpr.GUIsetWidgetVisibility( ButPopUpReturn, 0);
+            wdgWpr.GUIsetWidgetEnable( ButPopUpReturn, 0);
         }
 		
 //        /* Ocultamos los botones de full body area */
@@ -720,8 +720,8 @@ void AppGUIhandleTrtZone( void)
     }
     else
     { // Full body view
-        wdgWpr.GUIsetWidgetVisibility( swPopUpRecommInfo, 0);
-        wdgWpr.GUIsetWidgetEnable( swPopUpRecommInfo, 0);
+        wdgWpr.GUIsetWidgetVisibility( SwPopUpRecommInfo, 0);
+        wdgWpr.GUIsetWidgetEnable( SwPopUpRecommInfo, 0);
 		
         /* No estamos en zoom, ponemos la imagen de fondo según el cuerpo */
 //        GUIsetImgViewerImage( imgFullBodyAndZoom, APP_GUI_FULL_BODY_IMAGES[body].IDimg);
@@ -733,8 +733,8 @@ void AppGUIhandleTrtZone( void)
         /* Quitamos el boton de return si no ha sido activado el popup de RFID */
         if(!AppGUIisRFIDPopUpActive())
         {
-            wdgWpr.GUIsetWidgetVisibility( butPopUpReturn, 0);
-            wdgWpr.GUIsetWidgetEnable( butPopUpReturn, 0);
+            wdgWpr.GUIsetWidgetVisibility( ButPopUpReturn, 0);
+            wdgWpr.GUIsetWidgetEnable( ButPopUpReturn, 0);
         }
 		
         /* Ocultamos los puntos de seleccion de zona */
@@ -821,7 +821,7 @@ void AppGUIhandleTimePopUp( uint8 show, uint8 HPindex)
 //    if( show)
 //    {
 //        /* Activar el popUp */
-//        GUIactivePopUp( popUpTime);
+//        GUIactivePopUp( PopUpTime);
 		
 //        /* Configuramos el estado de los switches de seleccion si es la primera vez */
 //        if( AppGUIdata.slot[HPindex].selTime == APP_GUI_NO_TIME_SELECTED)
@@ -893,7 +893,7 @@ void AppGUIhandleTimePopUp( uint8 show, uint8 HPindex)
 //    else
 //    {
 //        /* Desactivamos el popUp */
-//        GUIdisablePopUp( popUpTime);
+//        GUIdisablePopUp( PopUpTime);
 		
 //        //Quitamos la visibilidad y deshabilitamos los widgets
 //        GUIsetWidgetVisibility( butPopUpTime50min, 0);
@@ -928,7 +928,7 @@ void AppGUIhandleTstVacPopUp( uint8 show, uint8 HPindex)
 //    if( show)
 //    {
 //        /* Activar el popUp */
-//        GUIactivePopUp( popUpTstVac);
+//        GUIactivePopUp( PopUpTstVac);
 
 //        /* Configuramos el estado de los switches de seleccion y sus imagenes según se haya realizado ya el
 //         * test o no. tambien los deshabilitamos si hay un test de vacum en marcha para el HP en cuestion */
@@ -982,9 +982,9 @@ void AppGUIhandleTstVacPopUp( uint8 show, uint8 HPindex)
 //        GUIsetWidgetEnable( butPopUpTstVacManualLowLvl, !(AppGUIdata.tstVacHdlr.waitingUserStart | AppGUIdata.tstVacHdlr.waitingUserEnd));
 //        GUIsetWidgetEnable( butPopUpTstVacManualMidLvl, !(AppGUIdata.tstVacHdlr.waitingUserStart | AppGUIdata.tstVacHdlr.waitingUserEnd));
 //        GUIsetWidgetEnable( butPopUpTstVacManualHighLvl, !(AppGUIdata.tstVacHdlr.waitingUserStart | AppGUIdata.tstVacHdlr.waitingUserEnd));
-//        GUIsetWidgetEnable( swPopUpTstVacLowLvl, (!(AppGUIdata.tstVacHdlr.waitingUserStart | AppGUIdata.tstVacHdlr.waitingUserEnd) && (AppGUIdata.slot[HPindex].TrtMode == HP_CRYO_TRT_MODE_MANUAL)));
-//        GUIsetWidgetEnable( swPopUpTstVacMidLvl, (!(AppGUIdata.tstVacHdlr.waitingUserStart | AppGUIdata.tstVacHdlr.waitingUserEnd) && (AppGUIdata.slot[HPindex].TrtMode == HP_CRYO_TRT_MODE_MANUAL)));
-//        GUIsetWidgetEnable( swPopUpTstVacHighLvl, ( !(AppGUIdata.tstVacHdlr.waitingUserStart | AppGUIdata.tstVacHdlr.waitingUserEnd) && (AppGUIdata.slot[HPindex].TrtMode == HP_CRYO_TRT_MODE_MANUAL)));
+//        GUIsetWidgetEnable( SwPopUpTstVacLowLvl, (!(AppGUIdata.tstVacHdlr.waitingUserStart | AppGUIdata.tstVacHdlr.waitingUserEnd) && (AppGUIdata.slot[HPindex].TrtMode == HP_CRYO_TRT_MODE_MANUAL)));
+//        GUIsetWidgetEnable( SwPopUpTstVacMidLvl, (!(AppGUIdata.tstVacHdlr.waitingUserStart | AppGUIdata.tstVacHdlr.waitingUserEnd) && (AppGUIdata.slot[HPindex].TrtMode == HP_CRYO_TRT_MODE_MANUAL)));
+//        GUIsetWidgetEnable( SwPopUpTstVacHighLvl, ( !(AppGUIdata.tstVacHdlr.waitingUserStart | AppGUIdata.tstVacHdlr.waitingUserEnd) && (AppGUIdata.slot[HPindex].TrtMode == HP_CRYO_TRT_MODE_MANUAL)));
 //        GUIsetWidgetEnable( APP_GUI_TRT_SCR_BUT_TSTVAC_WIDGETS[HPindex], !(AppGUIdata.tstVacHdlr.waitingUserStart | AppGUIdata.tstVacHdlr.waitingUserEnd));
 //        GUIsetWidgetEnable( butPopUpTstVacAuto, (!(AppGUIdata.tstVacHdlr.waitingUserStart | AppGUIdata.tstVacHdlr.waitingUserEnd) && HPcryoIsAutoModeAvaible( HP, PRF)));
 		
@@ -999,7 +999,7 @@ void AppGUIhandleTstVacPopUp( uint8 show, uint8 HPindex)
 //    else
 //    {
 //        /* Desactivamos el popUp */
-//        GUIdisablePopUp( popUpTstVac);
+//        GUIdisablePopUp( PopUpTstVac);
 		
 //        /* Indicamos que la próxima vez que se llame a esta función para activar el popUp
 //         * será la primera vez del caso "show" para esa aparición */
@@ -1060,7 +1060,7 @@ void AppGUIhandleTstVacSMALLPopUp( uint8 show, uint8 HPindex)
 //                                APP_GUI_POPUP_TST_VAC_SMALL_COORDINATES_PER_HP[HPindex][AppGUI_VacLevelSelector][Coordinate_Y]);
 		
 //        /* Activar el popUp */
-//        GUIactivePopUp( popUpTstVacSmall);
+//        GUIactivePopUp( PopUpTstVacSmall);
 		
 //        GUIsetImgButton(butPopUpTstVacSmallLowLvl, APP_GUI_POPUP_TST_VAC_SMALL_BUT_IMAGES[HP_CRYO_VAC_LVL_0][AppGUIdata.tstVacHdlr.selVacLvl==HP_CRYO_VAC_LVL_0], 0);
 //        GUIsetWidgetVisibility( butPopUpTstVacSmallLowLvl, 1);	//Se ponen los widgets visibles
@@ -1077,7 +1077,7 @@ void AppGUIhandleTstVacSMALLPopUp( uint8 show, uint8 HPindex)
 //    else
 //    {
 //        /* Desactivamos el popUp */
-//        GUIdisablePopUp( popUpTstVacSmall);
+//        GUIdisablePopUp( PopUpTstVacSmall);
 		
 //        //Quitamos la visibilidad y deshabilitamos los widgets
 //        GUIsetWidgetVisibility( butPopUpTstVacSmallLowLvl, 0);
@@ -1102,7 +1102,7 @@ void AppGUIhandleRFIDpopUp( uint8 show, uint8 HPindex)
 //    if( show)
 //    {
 //        /* Activar el popUp */
-//        GUIactivePopUp( popUpRFID);
+//        GUIactivePopUp( PopUpRFID);
 		
 //        /* Poner en la barra de color de HP la imagen adecuada */
 //        GUIsetImgViewerImage( imgPopUpHPcolorBar, APP_GUI_TRT_SCR_POPUP_COLOR_BAR_IMAGES[HPindex]);
@@ -1123,13 +1123,13 @@ void AppGUIhandleRFIDpopUp( uint8 show, uint8 HPindex)
 		
 //        if(AppGUIdata.RFIDhdlr.show_reuse_option)
 //        {
-//            GUIsetWidgetVisibility( numVwrPopUpRFIDrestTime, EXP_UCreuseLabelAllow(PRF->IDperifHW));
-//            GUIsetNumViewerNum( numVwrPopUpRFIDrestTime, AppGUIsecondsToClock(EXP_UCreuseLabelTRTtime(PRF->IDperifHW)), 2);
+//            GUIsetWidgetVisibility( NumVwrPopUpRFIDrestTime, EXP_UCreuseLabelAllow(PRF->IDperifHW));
+//            GUIsetNumViewerNum( NumVwrPopUpRFIDrestTime, AppGUIsecondsToClock(EXP_UCreuseLabelTRTtime(PRF->IDperifHW)), 2);
 //            GUIsetWidgetEnable( butPopUpRFIDreuseLabel, EXP_UCreuseLabelAllow(PRF->IDperifHW));
 //        }
 //        else
 //        {
-//            GUIsetWidgetVisibility( numVwrPopUpRFIDrestTime, 0);
+//            GUIsetWidgetVisibility( NumVwrPopUpRFIDrestTime, 0);
 //            GUIsetWidgetEnable( butPopUpRFIDreuseLabel, 0);
 //        }
 			
@@ -1137,10 +1137,10 @@ void AppGUIhandleRFIDpopUp( uint8 show, uint8 HPindex)
 //    else
 //    {
 //        /* Desactivamos el popUp */
-//        GUIdisablePopUp( popUpRFID);
+//        GUIdisablePopUp( PopUpRFID);
 //        if(HPcryoGetFromSlot( APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF)){	HP->trt.RFID_read_label = RFID_NO_LABEL;	}
 //        AppGUIdata.RFIDhdlr.show_reuse_option = 0;
-//        GUIsetWidgetVisibility( numVwrPopUpRFIDrestTime, 0);
+//        GUIsetWidgetVisibility( NumVwrPopUpRFIDrestTime, 0);
 //        GUIsetWidgetEnable( butPopUpRFIDreuseLabel, 0);
 //        /* Si la gestión de zona de tratamiento esta en zoom tenemos un glitch de un refresco en
 //         * el que el boton "Return" desaparece ya que el popUp lo deshabilita al quitarse pero
@@ -1159,14 +1159,14 @@ void AppGUIhandleRecommendationpopUp( uint8 show, uint8 selTrtDot, cAppGUIfullBo
     if( show)
     {
         /* Activar el popUp */
-        wdgWpr.GUIactivePopUp( popUpRecomm);
+        wdgWpr.GUIactivePopUp( PopUpRecomm);
 		
         for (i = 0; i < HP_CRYO_NUM_HP_MODELS; i++)	{	wdgWpr.GUIsetWidgetVisibility( APP_GUI_TRT_LIST_OF_IMG_HP_RECOMMENDED_PER_ZONE[i], APP_GUI_HP_RECOMMENDED_PER_ZONE[i][selTrtArea][selTrtDot]);	}
     }
     else
     {
         /* Desactivamos el popUp */
-        wdgWpr.GUIdisablePopUp( popUpRecomm);
+        wdgWpr.GUIdisablePopUp( PopUpRecomm);
 		
         //for (i = HP_CRYO_MODEL_CURVED; i < HP_CRYO_NUM_HP_MODELS; i++){		GUIsetWidgetVisibility( APP_GUI_TRT_LIST_OF_IMG_HP_RECOMMENDED_PER_ZONE[i], 0 );	}
 		
@@ -1220,7 +1220,7 @@ void AppGUIhandleMainMenu( uint8 show)
     /* Indicamos el estado del menu principal */
     AppGUIdata.mainMenuHdlr.isUp = show;
 	
-// TODO    if(isPopUp && AppGUIisWarningPopUpActive())	GUIsetWidgetEnable( swTrtScrAvisos, 1);
+// TODO    if(isPopUp && AppGUIisWarningPopUpActive())	GUIsetWidgetEnable( SwTrtScrAvisos, 1);
 }
 
 void AppGUIclearData( void)
@@ -1394,7 +1394,7 @@ void AppGUIhandleErrPopUps( void)
 //    /* Para la maquina no deshabilitamos nada mas */
 	
 //    /* Ponemos el codigo de error */
-//    GUIsetNumViewerNum( numVwrPopUpErrUC, (float)errCode, 0);
+//    GUIsetNumViewerNum( NumVwrPopUpErrUC, (float)errCode, 0);
 	
 //    /* Ponemos el mensaje de error */
 //    GUIsetImgViewerImage( imgPopUpErrMsgUC, APP_GUI_TRT_SCR_HP_ERR_MSG_IMAGES[errMsg]);
@@ -1800,7 +1800,7 @@ void AppGUItrtScrUpdate( void)
                             AppGUIsetHPstatusFlags( APP_GUI_FLG_BLINK, APP_GUI_FLG_OFF, APP_GUI_FLG_OFF, APP_GUI_FLG_OFF, HPindex);
 							
                             /* Levantamos el popUp si no esta ya activado */
-                            if (AppGUIIsPopupDisplayed(popUpRFID) != 0)
+                            if (AppGUIIsPopupDisplayed(PopUpRFID) != 0)
                             {
                                 /* Guardamos el HP que ha activado el popUp */
                                 AppGUIdata.RFIDhdlr.HPindex = HPindex;
@@ -1930,19 +1930,19 @@ void AppGUItrtScrUpdate( void)
     }
 	
     /* Actualizamos el popUp de tiempo segun este activado o no */
-//	AppGUIhandleTimePopUp( (( AppGUIIsPopupDisplayed(popUpTime) != 0) && (AppGUIisHPconnected( AppGUIdata.timeHdlr.HPindex, &modelHP))), AppGUIdata.timeHdlr.HPindex);
+//	AppGUIhandleTimePopUp( (( AppGUIIsPopupDisplayed(PopUpTime) != 0) && (AppGUIisHPconnected( AppGUIdata.timeHdlr.HPindex, &modelHP))), AppGUIdata.timeHdlr.HPindex);
 
     /* Actualizamos el popUp de RFID segun este activado o no */
     HPcryoGetFromSlot((cPRFslot)APP_GUI_SLOT_DISTRIBUTION[AppGUIdata.RFIDhdlr.HPindex], &HP, &PRF);
-    AppGUIhandleRFIDpopUp( (( AppGUIIsPopupDisplayed(popUpRFID) != 0) && (AppGUIisHPconnected( AppGUIdata.RFIDhdlr.HPindex, &modelHP)) /*&& (HPcryoTrtStatus(HP, PRF) == HP_CRYO_TREATMENT_RUN_WAITING_RFID)*/), AppGUIdata.RFIDhdlr.HPindex); //V7760 comentado el waiting RFID
+    AppGUIhandleRFIDpopUp( (( AppGUIIsPopupDisplayed(PopUpRFID) != 0) && (AppGUIisHPconnected( AppGUIdata.RFIDhdlr.HPindex, &modelHP)) /*&& (HPcryoTrtStatus(HP, PRF) == HP_CRYO_TREATMENT_RUN_WAITING_RFID)*/), AppGUIdata.RFIDhdlr.HPindex); //V7760 comentado el waiting RFID
 
     /* Actualizamos el popUp de test vacum segun este activado o no */
-    AppGUIhandleTstVacPopUp( (( AppGUIIsPopupDisplayed(popUpTstVac) != 0) && (AppGUIisHPconnected( AppGUIdata.tstVacHdlr.HPindex, &modelHP))), AppGUIdata.tstVacHdlr.HPindex);
+    AppGUIhandleTstVacPopUp( (( AppGUIIsPopupDisplayed(PopUpTstVac) != 0) && (AppGUIisHPconnected( AppGUIdata.tstVacHdlr.HPindex, &modelHP))), AppGUIdata.tstVacHdlr.HPindex);
 
-    AppGUIhandleTstVacSMALLPopUp( (( AppGUIIsPopupDisplayed(popUpTstVacSmall) != 0) && (AppGUIisHPconnected( AppGUIdata.tstVacHdlr.HPindex, &modelHP))), AppGUIdata.tstVacHdlr.HPindex);
+    AppGUIhandleTstVacSMALLPopUp( (( AppGUIIsPopupDisplayed(PopUpTstVacSmall) != 0) && (AppGUIisHPconnected( AppGUIdata.tstVacHdlr.HPindex, &modelHP))), AppGUIdata.tstVacHdlr.HPindex);
 
     /* Actualizamos el popUp de recomendaciónes según esté activado o no*/
-    AppGUIhandleRecommendationpopUp( ( AppGUIIsPopupDisplayed(popUpRecomm) != 0), AppGUIdata.trtZoneHdlr.selTrtDot, AppGUIdata.trtZoneHdlr.selTrtArea);
+    AppGUIhandleRecommendationpopUp( ( AppGUIIsPopupDisplayed(PopUpRecomm) != 0), AppGUIdata.trtZoneHdlr.selTrtDot, AppGUIdata.trtZoneHdlr.selTrtArea);
 	
     /* Actualizamos el popUp de Avisos según esté activado o no*/
     AppGUIhandleWarningPopUp( AppGUIIsPopupDisplayed((cAppGUIwidgetIDlist)APP_GUI_AVISOS_POPUP_WIDGET_SCREENS[AppGUIdata.screen]) != 0);
@@ -1987,7 +1987,7 @@ void AppGUIcalcScrInit( void)
     wdgWpr.changeScreen(APP_GUI_CALCULATOR_SCREEN);
 
     // Initialize the calculator value
-    wdgWpr.GUIsetNumViewerNum( numVwrPantallaCalc, AppGUIdata.CalcHandler.CalcCode, 0);
+    wdgWpr.GUIsetNumViewerNum( NumVwrPantallaCalc, AppGUIdata.CalcHandler.CalcCode, 0);
     AppGUIwarningNotification();
 
     AppGUIhandleWarningPopUp( 0);
@@ -2031,7 +2031,7 @@ void AppGUIcalcScrUpdate( void)
 //        AppGUI_RTC_time = AppGUI_RTC_time + (AppGUI_RTC_TIME_and_DATE.Minute*100);
 //        AppGUI_RTC_time = AppGUI_RTC_time + (AppGUI_RTC_TIME_and_DATE.Hour*10000);
 		
-//        GUIsetNumViewerNum( numVwrPantallaCalc, (float)AppGUI_RTC_time, 0);			//Se representa el tiempo en el visor numerico de la calculadora
+//        GUIsetNumViewerNum( NumVwrPantallaCalc, (float)AppGUI_RTC_time, 0);			//Se representa el tiempo en el visor numerico de la calculadora
 //    }
 //    if(AppGUIdata.CalcHandler.RTC_date_flag == 1)		//En caso de haberse introducido el código para la lectura de la fecha del RTD
 //    {
@@ -2041,7 +2041,7 @@ void AppGUIcalcScrUpdate( void)
 //        AppGUI_RTC_date = AppGUI_RTC_date + (AppGUI_RTC_TIME_and_DATE.Month*100);
 //        AppGUI_RTC_date = AppGUI_RTC_date + (AppGUI_RTC_TIME_and_DATE.Day*10000);
 		
-//        GUIsetNumViewerNum( numVwrPantallaCalc, (float)AppGUI_RTC_date, 0);			//Se representa la fecha en el visor numerico de la calculadora
+//        GUIsetNumViewerNum( NumVwrPantallaCalc, (float)AppGUI_RTC_date, 0);			//Se representa la fecha en el visor numerico de la calculadora
 //    }
 //    if(AppGUIdata.CalcHandler.FillingWater_flag == 1)
 //    {
@@ -2073,8 +2073,8 @@ void AppGUIcfgScrInit( void)
     AppGUIwarningNotification();
 	
     AppGUIdata.CfgHandler.FillingWater_flag = 0;
-    wdgWpr.GUIsetNumViewerNum( numVwrModeloMaqCfg, 1234567890.0, 0);
-    wdgWpr.GUIsetNumViewerNum( numVwrVersionSoftwareCfg, APP_SW_VERSION, 3);
+    wdgWpr.GUIsetNumViewerNum( NumVwrModeloMaqCfg, 1234567890.0, 0);
+    wdgWpr.GUIsetNumViewerNum( NumVwrVersionSoftwareCfg, APP_SW_VERSION, 3);
     AppGUIdata.CfgHandler.BootAnimationImg = App_GUI_CfgScr_FW_loading_0;
     AppGUIdata.CfgHandler.Boot_animation_tout = 0;
 	
@@ -2082,14 +2082,14 @@ void AppGUIcfgScrInit( void)
     AppGUIhandleMainMenu( 0 );
 	
     /* Identificamos como ha de estar el boton del visor de resucciones */
-    //GUIsetSwitchStatus( swCfgResuctionViewer, 0/*EXP_UCresuctionsViewer()*/);
+    //GUIsetSwitchStatus( SwCfgResuctionViewer, 0/*EXP_UCresuctionsViewer()*/);
 	
     /* Identificamos como ha d estar el boton del visor de temperaturas */
 #ifdef APP_SW_VER_SHOW_TEMPERATURES
-    GUIsetSwitchStatus( swCfgTemperatureViewer, EXP_UCtempViewer ());
+    GUIsetSwitchStatus( SwCfgTemperatureViewer, EXP_UCtempViewer ());
 #else
-    //GUIsetWidgetEnable(swCfgTemperatureViewer,0);
-    //GUIsetWidgetVisibility(swCfgTemperatureViewer,0);
+    //GUIsetWidgetEnable(SwCfgTemperatureViewer,0);
+    //GUIsetWidgetVisibility(SwCfgTemperatureViewer,0);
 #endif
 }
 void AppGUIcfgScrUpdate( void)
@@ -2170,7 +2170,7 @@ void AppGUIcfgScrUpdate( void)
 //    }
 
 //    /* Ajustar el estado del interruptor al valor registrado en memoria */
-//    //GUIsetSwitchStatus( swCfgResuctionViewer, EXP_UCresuctionsViewer());
+//    //GUIsetSwitchStatus( SwCfgResuctionViewer, EXP_UCresuctionsViewer());
 
 	
 //    /*Incluir la gestión de la limpieza para los distintos aplicadores*/
@@ -2227,13 +2227,13 @@ void AppGUIfat0ScrInit( void)
     AppGUIdata.screen = APP_GUI_FATIGUE_SCREEN;
     wdgWpr.changeScreen(APP_GUI_FATIGUE_SCREEN);
 	
-// TODO    GUIsetNumViewerNum( numVwrFatigaTime, 0.0, 2);
+// TODO    GUIsetNumViewerNum( NumVwrFatigaTime, 0.0, 2);
 // TODO
-// TODO    GUIsetNumViewerNum( numVwrErrFatiga1, 0.0 , 0);
-// TODO    GUIsetNumViewerNum( numVwrErrFatiga2, 0.0 , 0);
-// TODO    GUIsetNumViewerNum( numVwrErrFatiga3, 0.0 , 0);
-// TODO    GUIsetNumViewerNum( numVwrErrFatiga4, 0.0 , 0);
-// TODO    GUIsetNumViewerNum( numVwrErrFatiga5, 0.0 , 0);
+// TODO    GUIsetNumViewerNum( NumVwrErrFatiga1, 0.0 , 0);
+// TODO    GUIsetNumViewerNum( NumVwrErrFatiga2, 0.0 , 0);
+// TODO    GUIsetNumViewerNum( NumVwrErrFatiga3, 0.0 , 0);
+// TODO    GUIsetNumViewerNum( NumVwrErrFatiga4, 0.0 , 0);
+// TODO    GUIsetNumViewerNum( NumVwrErrFatiga5, 0.0 , 0);
 // TODO
 // TODO    GUIsetImgViewerImage(imgStep1status,c149_ZonaAplicacionManipPuntoSelected);
 // TODO    GUIsetImgViewerImage(imgStep2status,c149_ZonaAplicacionManipPuntoSelected);
@@ -2254,8 +2254,8 @@ void AppGUIfat0ScrInit( void)
 // TODO    ERR_clear(Maq);		ERR_reset_perif(Maq);
 	
     AppGUIdata.fatigue_fail = 0;
-// TODO    GUIsetSwitchImg( swFatigueFailBeep, b028_BotonAvisosMarcaAgua, b028_BotonAvisosMarcaAgua, b028_BotonAvisosMarcaAgua, b028_BotonAvisosMarcaAgua);
-// TODO    GUIsetWidgetEnable(swFatigueFailBeep,AppGUIdata.fatigue_fail);
+// TODO    GUIsetSwitchImg( SwFatigueFailBeep, b028_BotonAvisosMarcaAgua, b028_BotonAvisosMarcaAgua, b028_BotonAvisosMarcaAgua, b028_BotonAvisosMarcaAgua);
+// TODO    GUIsetWidgetEnable(SwFatigueFailBeep,AppGUIdata.fatigue_fail);
 }
 
 void AppGUIfat0ScrUpdate( void)
@@ -2286,9 +2286,9 @@ void AppGUIfat0ScrUpdate( void)
 //	}
 	
 //	/*Gestion del boton de silencio para quitar el pitido tras fallar la fatiga*/
-//	GUIsetWidgetEnable(swFatigueFailBeep,AppGUIdata.fatigue_fail);
-//	if(AppGUIdata.fatigue_fail){	GUIsetSwitchImg( swFatigueFailBeep, b030_BotonAvisosRls, b030_BotonAvisosRls, b029_BotonAvisosPress, b029_BotonAvisosPress);	}
-//	else{	GUIsetSwitchImg( swFatigueFailBeep, b028_BotonAvisosMarcaAgua, b028_BotonAvisosMarcaAgua, b028_BotonAvisosMarcaAgua, b028_BotonAvisosMarcaAgua);	}
+//	GUIsetWidgetEnable(SwFatigueFailBeep,AppGUIdata.fatigue_fail);
+//	if(AppGUIdata.fatigue_fail){	GUIsetSwitchImg( SwFatigueFailBeep, b030_BotonAvisosRls, b030_BotonAvisosRls, b029_BotonAvisosPress, b029_BotonAvisosPress);	}
+//	else{	GUIsetSwitchImg( SwFatigueFailBeep, b028_BotonAvisosMarcaAgua, b028_BotonAvisosMarcaAgua, b028_BotonAvisosMarcaAgua, b028_BotonAvisosMarcaAgua);	}
 	
 //	switch (EXP_UCfatigaStatus())
 //	{
@@ -2342,7 +2342,7 @@ void AppGUIfat0ScrUpdate( void)
 //			GUIsetImgViewerImage(APP_GUI_FAT_STATUS_5_HP_WIDGETS[(PRF_HW_SLOT3-1)],c151_ZonaAplicacionManipPuntoHP1);
 //			GUIsetImgViewerImage(APP_GUI_FAT_STATUS_5_HP_WIDGETS[(PRF_HW_SLOT4-1)],c151_ZonaAplicacionManipPuntoHP1);
 			
-//			GUIsetNumViewerNum( numVwrFatigaTime, AppGUIsecondsToClock((EXPdata.UC.FatigaTime/1000)), 2);			//Tiempo que lleva el tratamiento de test
+//			GUIsetNumViewerNum( NumVwrFatigaTime, AppGUIsecondsToClock((EXPdata.UC.FatigaTime/1000)), 2);			//Tiempo que lleva el tratamiento de test
 			
 //			/*Recogemos los valores que tenemos entre el 85-90% del tratamiento de test*/		/*QUIZAS DEBA IR EN EL MODULO DE LA EXPANSORA TODO LO DE ALMACENAR LOS DATOS PARA PRESENTARLOS AL FINAL DE LA FATIGA*/
 //			if((Fatigue_time > (0.85*EXP_UC_FATIGA_TRT_TEST_TIME)) && (Fatigue_time < (0.9*EXP_UC_FATIGA_TRT_TEST_TIME)))
@@ -2378,21 +2378,21 @@ void AppGUIfat0ScrUpdate( void)
 //	}
 	
 //	//Valores ofrecidos por pantalla, gestión del valor y el color del fondo en caso de haber finalizado la fatiga
-//	GUIsetNumViewerNum( numVwrTempAmb, envTemp, 1);			GUIsetImgNumVwr(numVwrTempAmb, APP_GUI_FAT_VALUE_STATUS[EXP_UCfatigaCheckValue(FAT_VAL_envTemp, envTemp)]);
-//	GUIsetNumViewerNum( numVwrTempBomba, pumpTemp, 1);		GUIsetImgNumVwr(numVwrTempBomba, APP_GUI_FAT_VALUE_STATUS[EXP_UCfatigaCheckValue(FAT_VAL_pumpTemp, pumpTemp)]);
-//	GUIsetNumViewerNum( numVwrTempRetorno, retTemp, 1);		GUIsetImgNumVwr(numVwrTempRetorno, APP_GUI_FAT_VALUE_STATUS[EXP_UCfatigaCheckValue(FAT_VAL_retTemp, retTemp)]);
-//	GUIsetNumViewerNum( numVwrCaudalRetorno, retFlow, 1);	GUIsetImgNumVwr(numVwrCaudalRetorno, APP_GUI_FAT_VALUE_STATUS[EXP_UCfatigaCheckValue(FAT_VAL_retFlow, retFlow)]);
-//	GUIsetNumViewerNum( numVwrVtobera, Vtob, 0);			GUIsetImgNumVwr(numVwrVtobera, APP_GUI_FAT_VALUE_STATUS[EXP_UCfatigaCheckValue(FAT_VAL_Vtob, Vtob)]);
-//	GUIsetNumViewerNum( numVwrRth, Rth, 3);					GUIsetImgNumVwr(numVwrRth, APP_GUI_FAT_VALUE_STATUS[EXP_UCfatigaCheckValue(FAT_VAL_Rth, Rth)]);
-//	GUIsetNumViewerNum( numVwrCPI, CPI, 1);					GUIsetImgNumVwr(numVwrCPI, APP_GUI_FAT_VALUE_STATUS[EXP_UCfatigaCheckValue(FAT_VAL_CPI, CPI)]);
-//	GUIsetNumViewerNum( numVwrCaudalRetornoHP1, CaudalRetornoHP1 , 2);		GUIsetImgNumVwr(numVwrCaudalRetornoHP1, APP_GUI_FAT_VALUE_STATUS[EXP_UCfatigaCheckValue(FAT_VAL_CaudalHP1, CaudalRetornoHP1)]);
-//	GUIsetNumViewerNum( numVwrCaudalRetornoHP2, CaudalRetornoHP2 , 2);		GUIsetImgNumVwr(numVwrCaudalRetornoHP2, APP_GUI_FAT_VALUE_STATUS[EXP_UCfatigaCheckValue(FAT_VAL_CaudalHP2, CaudalRetornoHP2)]);
-//	GUIsetNumViewerNum( numVwrCaudalRetornoHP3, CaudalRetornoHP3 , 2);		GUIsetImgNumVwr(numVwrCaudalRetornoHP3, APP_GUI_FAT_VALUE_STATUS[EXP_UCfatigaCheckValue(FAT_VAL_CaudalHP3, CaudalRetornoHP3)]);
-//	GUIsetNumViewerNum( numVwrCaudalRetornoHP4, CaudalRetornoHP4 , 2);		GUIsetImgNumVwr(numVwrCaudalRetornoHP4, APP_GUI_FAT_VALUE_STATUS[EXP_UCfatigaCheckValue(FAT_VAL_CaudalHP4, CaudalRetornoHP4)]);
-//	GUIsetNumViewerNum( numVwrVacuumHP1, PresionHP1, 1);		GUIsetImgNumVwr(numVwrVacuumHP1, APP_GUI_FAT_VALUE_STATUS[EXP_UCfatigaCheckValue(FAT_VAL_PresionHP1, PresionHP1)]);
-//	GUIsetNumViewerNum( numVwrVacuumHP2, PresionHP2, 1);		GUIsetImgNumVwr(numVwrVacuumHP2, APP_GUI_FAT_VALUE_STATUS[EXP_UCfatigaCheckValue(FAT_VAL_PresionHP2, PresionHP2)]);
-//	GUIsetNumViewerNum( numVwrVacuumHP3, PresionHP3, 1);		GUIsetImgNumVwr(numVwrVacuumHP3, APP_GUI_FAT_VALUE_STATUS[EXP_UCfatigaCheckValue(FAT_VAL_PresionHP3, PresionHP3)]);
-//	GUIsetNumViewerNum( numVwrVacuumHP4, PresionHP4, 1);		GUIsetImgNumVwr(numVwrVacuumHP4, APP_GUI_FAT_VALUE_STATUS[EXP_UCfatigaCheckValue(FAT_VAL_PresionHP4, PresionHP4)]);
+//	GUIsetNumViewerNum( NumVwrTempAmb, envTemp, 1);			GUIsetImgNumVwr(NumVwrTempAmb, APP_GUI_FAT_VALUE_STATUS[EXP_UCfatigaCheckValue(FAT_VAL_envTemp, envTemp)]);
+//	GUIsetNumViewerNum( NumVwrTempBomba, pumpTemp, 1);		GUIsetImgNumVwr(NumVwrTempBomba, APP_GUI_FAT_VALUE_STATUS[EXP_UCfatigaCheckValue(FAT_VAL_pumpTemp, pumpTemp)]);
+//	GUIsetNumViewerNum( NumVwrTempRetorno, retTemp, 1);		GUIsetImgNumVwr(NumVwrTempRetorno, APP_GUI_FAT_VALUE_STATUS[EXP_UCfatigaCheckValue(FAT_VAL_retTemp, retTemp)]);
+//	GUIsetNumViewerNum( NumVwrCaudalRetorno, retFlow, 1);	GUIsetImgNumVwr(NumVwrCaudalRetorno, APP_GUI_FAT_VALUE_STATUS[EXP_UCfatigaCheckValue(FAT_VAL_retFlow, retFlow)]);
+//	GUIsetNumViewerNum( NumVwrVtobera, Vtob, 0);			GUIsetImgNumVwr(NumVwrVtobera, APP_GUI_FAT_VALUE_STATUS[EXP_UCfatigaCheckValue(FAT_VAL_Vtob, Vtob)]);
+//	GUIsetNumViewerNum( NumVwrRth, Rth, 3);					GUIsetImgNumVwr(NumVwrRth, APP_GUI_FAT_VALUE_STATUS[EXP_UCfatigaCheckValue(FAT_VAL_Rth, Rth)]);
+//	GUIsetNumViewerNum( NumVwrCPI, CPI, 1);					GUIsetImgNumVwr(NumVwrCPI, APP_GUI_FAT_VALUE_STATUS[EXP_UCfatigaCheckValue(FAT_VAL_CPI, CPI)]);
+//	GUIsetNumViewerNum( NumVwrCaudalRetornoHP1, CaudalRetornoHP1 , 2);		GUIsetImgNumVwr(NumVwrCaudalRetornoHP1, APP_GUI_FAT_VALUE_STATUS[EXP_UCfatigaCheckValue(FAT_VAL_CaudalHP1, CaudalRetornoHP1)]);
+//	GUIsetNumViewerNum( NumVwrCaudalRetornoHP2, CaudalRetornoHP2 , 2);		GUIsetImgNumVwr(NumVwrCaudalRetornoHP2, APP_GUI_FAT_VALUE_STATUS[EXP_UCfatigaCheckValue(FAT_VAL_CaudalHP2, CaudalRetornoHP2)]);
+//	GUIsetNumViewerNum( NumVwrCaudalRetornoHP3, CaudalRetornoHP3 , 2);		GUIsetImgNumVwr(NumVwrCaudalRetornoHP3, APP_GUI_FAT_VALUE_STATUS[EXP_UCfatigaCheckValue(FAT_VAL_CaudalHP3, CaudalRetornoHP3)]);
+//	GUIsetNumViewerNum( NumVwrCaudalRetornoHP4, CaudalRetornoHP4 , 2);		GUIsetImgNumVwr(NumVwrCaudalRetornoHP4, APP_GUI_FAT_VALUE_STATUS[EXP_UCfatigaCheckValue(FAT_VAL_CaudalHP4, CaudalRetornoHP4)]);
+//	GUIsetNumViewerNum( NumVwrVacuumHP1, PresionHP1, 1);		GUIsetImgNumVwr(NumVwrVacuumHP1, APP_GUI_FAT_VALUE_STATUS[EXP_UCfatigaCheckValue(FAT_VAL_PresionHP1, PresionHP1)]);
+//	GUIsetNumViewerNum( NumVwrVacuumHP2, PresionHP2, 1);		GUIsetImgNumVwr(NumVwrVacuumHP2, APP_GUI_FAT_VALUE_STATUS[EXP_UCfatigaCheckValue(FAT_VAL_PresionHP2, PresionHP2)]);
+//	GUIsetNumViewerNum( NumVwrVacuumHP3, PresionHP3, 1);		GUIsetImgNumVwr(NumVwrVacuumHP3, APP_GUI_FAT_VALUE_STATUS[EXP_UCfatigaCheckValue(FAT_VAL_PresionHP3, PresionHP3)]);
+//	GUIsetNumViewerNum( NumVwrVacuumHP4, PresionHP4, 1);		GUIsetImgNumVwr(NumVwrVacuumHP4, APP_GUI_FAT_VALUE_STATUS[EXP_UCfatigaCheckValue(FAT_VAL_PresionHP4, PresionHP4)]);
 	
 //	/*Se revisan los fallos posibles en los distintos manipulos y en la maquina*/
 //	for(i=Manip1;i<=Maq;i++)
@@ -2400,9 +2400,9 @@ void AppGUIfat0ScrUpdate( void)
 //		if(err_code[i] == 0)
 //		{
 //			err_code[i] = EXP_UCfatigaErrUpdate(i);
-//			if (err_code[i] != 0){	GUIsetNumViewerNum( numVwrErrFatiga1+(i-1), err_code[i] , 0);	/*GUIsetImgNumVwr(numVwrErrFatiga1+(i-1), c463_FondoNumVwrErrorRojo);*/	}
+//			if (err_code[i] != 0){	GUIsetNumViewerNum( NumVwrErrFatiga1+(i-1), err_code[i] , 0);	/*GUIsetImgNumVwr(NumVwrErrFatiga1+(i-1), c463_FondoNumVwrErrorRojo);*/	}
 //		}
-//		GUIsetImgNumVwr(numVwrErrFatiga1+(i-1), APP_GUI_FAT_VALUE_STATUS[EXP_UCfatigaCheckValue(FAT_VAL_ErrorHP1+(i-1), (float)err_code[i])]);
+//		GUIsetImgNumVwr(NumVwrErrFatiga1+(i-1), APP_GUI_FAT_VALUE_STATUS[EXP_UCfatigaCheckValue(FAT_VAL_ErrorHP1+(i-1), (float)err_code[i])]);
 //	}
 }
 
@@ -2426,15 +2426,15 @@ void AppGUIsatScrInit( void)
 	
 // TODO    GUIdisablePopUp( PopupErrorSAT);
 	
-// TODO    GUIsetSwitchStatus(swVacuum,0);
-// TODO    GUIsetSwitchStatus(swFrio,0);
-// TODO    GUIsetSwitchStatus(swTestLed,0);
-// TODO    GUIsetSwitchStatus(swTestLedRGB,0);
+// TODO    GUIsetSwitchStatus(SwVacuum,0);
+// TODO    GUIsetSwitchStatus(SwFrio,0);
+// TODO    GUIsetSwitchStatus(SwTestLed,0);
+// TODO    GUIsetSwitchStatus(SwTestLedRGB,0);
     AppGUIdata.SATHandler.RFIDSwitch = 0;
     AppGUIdata.SATHandler.Page = HP1_Page;
     AppGUIdata.SATHandler.PageNum = AppGUIdata.SATHandler.Page + APP_GUI_SAT_SCREEN_NUMVWR_MAX_PAGES;
 // TODO    GUIsetWidgetEnable(butPrevPagSATscreen,0);
-// TODO    GUIsetNumViewerNum( numVwrPaginaSATscreen, AppGUIdata.SATHandler.PageNum, 1);
+// TODO    GUIsetNumViewerNum( NumVwrPaginaSATscreen, AppGUIdata.SATHandler.PageNum, 1);
 }
 
 void AppGUIsatScrUpdate( void)
@@ -2455,7 +2455,7 @@ void AppGUIsatScrUpdate( void)
 //	//stWidget *popUp;
 
 //	//Pone el número correspondiente a la página de SAT donde nos encontramos
-//	GUIsetNumViewerNum( numVwrPaginaSATscreen, AppGUIdata.SATHandler.PageNum, 1);
+//	GUIsetNumViewerNum( NumVwrPaginaSATscreen, AppGUIdata.SATHandler.PageNum, 1);
 	
 //	//Habilita/deshabilita los botones de siguiente o anterior página
 //	if(AppGUIdata.SATHandler.Page == HP1_Page)	GUIsetWidgetEnable(butPrevPagSATscreen,0);
@@ -2505,10 +2505,10 @@ void AppGUIsatScrUpdate( void)
 //			else{	HPconnected = 0;	}
 //			break;
 //		case MachinePage:
-//			GUIsetWidgetEnable(swVacuum,0);		GUIsetSwitchStatus(swVacuum,0);
-//			GUIsetWidgetEnable(swFrio,0);		GUIsetSwitchStatus(swFrio,0);
-//			GUIsetWidgetEnable(swTestLed,0);	GUIsetSwitchStatus(swTestLed,0);
-//			GUIsetWidgetEnable(swTestLedRGB,0);	GUIsetSwitchStatus(swTestLedRGB,0);
+//			GUIsetWidgetEnable(SwVacuum,0);		GUIsetSwitchStatus(SwVacuum,0);
+//			GUIsetWidgetEnable(SwFrio,0);		GUIsetSwitchStatus(SwFrio,0);
+//			GUIsetWidgetEnable(SwTestLed,0);	GUIsetSwitchStatus(SwTestLed,0);
+//			GUIsetWidgetEnable(SwTestLedRGB,0);	GUIsetSwitchStatus(SwTestLedRGB,0);
 			
 //			GUIsetNumViewerNum( APP_GUI_SAT_NUMVWR_WIDGET_LIST[0], EXPdata.UC.commonData1.fields.returnTemp, 1);
 //			GUIsetNumViewerNum( APP_GUI_SAT_NUMVWR_WIDGET_LIST[1], EXPdata.UC.commonData1.fields.pumpOutTemp, 1);
@@ -2541,10 +2541,10 @@ void AppGUIsatScrUpdate( void)
 //			GUIsetNumViewerNum( APP_GUI_SAT_NUMVWR_WIDGET_LIST[27], Label_Read[1], 0);
 //			break;
 //		case HP_Commands_Page:
-//			GUIsetWidgetEnable(swVacuum,0);		GUIsetSwitchStatus(swVacuum,0);
-//			GUIsetWidgetEnable(swFrio,0);		GUIsetSwitchStatus(swFrio,0);
-//			GUIsetWidgetEnable(swTestLed,0);	GUIsetSwitchStatus(swTestLed,0);
-//			GUIsetWidgetEnable(swTestLedRGB,0);	GUIsetSwitchStatus(swTestLedRGB,0);
+//			GUIsetWidgetEnable(SwVacuum,0);		GUIsetSwitchStatus(SwVacuum,0);
+//			GUIsetWidgetEnable(SwFrio,0);		GUIsetSwitchStatus(SwFrio,0);
+//			GUIsetWidgetEnable(SwTestLed,0);	GUIsetSwitchStatus(SwTestLed,0);
+//			GUIsetWidgetEnable(SwTestLedRGB,0);	GUIsetSwitchStatus(SwTestLedRGB,0);
 
 //			GUIsetNumViewerNum( APP_GUI_SAT_NUMVWR_WIDGET_LIST[0], EXPdata.perif[1].data.fields.model, 0);
 //			GUIsetNumViewerNum( APP_GUI_SAT_NUMVWR_WIDGET_LIST[1], EXPdata.perif[1].data.fields.version, 0);
@@ -2580,10 +2580,10 @@ void AppGUIsatScrUpdate( void)
 
 //			break;
 //		case MachineDefPage:
-//			GUIsetWidgetEnable(swVacuum,0);		GUIsetSwitchStatus(swVacuum,0);
-//			GUIsetWidgetEnable(swFrio,0);		GUIsetSwitchStatus(swFrio,0);
-//			GUIsetWidgetEnable(swTestLed,0);	GUIsetSwitchStatus(swTestLed,0);
-//			GUIsetWidgetEnable(swTestLedRGB,0);	GUIsetSwitchStatus(swTestLedRGB,0);
+//			GUIsetWidgetEnable(SwVacuum,0);		GUIsetSwitchStatus(SwVacuum,0);
+//			GUIsetWidgetEnable(SwFrio,0);		GUIsetSwitchStatus(SwFrio,0);
+//			GUIsetWidgetEnable(SwTestLed,0);	GUIsetSwitchStatus(SwTestLed,0);
+//			GUIsetWidgetEnable(SwTestLedRGB,0);	GUIsetSwitchStatus(SwTestLedRGB,0);
 			
 //			GUIsetNumViewerNum( APP_GUI_SAT_NUMVWR_WIDGET_LIST[0], EXPdata.header.fields.board_definition.u8FWVers, 0);
 //			GUIsetNumViewerNum( APP_GUI_SAT_NUMVWR_WIDGET_LIST[1], EXPdata.UC.PCBlvlDetector.hdr.fields.board_definition.u8FWVers, 0);
@@ -2625,15 +2625,15 @@ void AppGUIsatScrUpdate( void)
 //	{
 //		if (HPconnected)
 //		{
-//			GUIsetWidgetEnable(swVacuum,1);
-//			GUIsetWidgetEnable(swFrio,1);
-//			GUIsetWidgetEnable(swTestLed,1);
-//			GUIsetWidgetEnable(swTestLedRGB,1);
+//			GUIsetWidgetEnable(SwVacuum,1);
+//			GUIsetWidgetEnable(SwFrio,1);
+//			GUIsetWidgetEnable(SwTestLed,1);
+//			GUIsetWidgetEnable(SwTestLedRGB,1);
 			
 //			/* Test del LED de la plica */
 //			if(HPcryoIsAutoModeAvaible(HP, PRF))
 //			{
-//				GUIsetWidgetEnable(swTestLed,1);
+//				GUIsetWidgetEnable(SwTestLed,1);
 //				if (AppGUIdata.SATHandler.TestLedSwitch[HPindex])
 //				{
 //					HP->frames.mainIn.data.enable_plica = 1;
@@ -2644,7 +2644,7 @@ void AppGUIsatScrUpdate( void)
 //				}
 //				else{	HP->frames.mainIn.data.enable_plica = 0;	GUIsetWidgetVisibility(imgTestLedStatus, 0);	HPcryoSATbodyFillSensorTestStop( HP, PRF);	}
 //			}
-//			else{	GUIsetWidgetEnable(swTestLed,0);	GUIsetWidgetVisibility(imgTestLedStatus, 0);}
+//			else{	GUIsetWidgetEnable(SwTestLed,0);	GUIsetWidgetVisibility(imgTestLedStatus, 0);}
 		
 //			HPcryoGetBit51 (HP, PRF);
 			
@@ -2682,10 +2682,10 @@ void AppGUIsatScrUpdate( void)
 //		}
 //		else
 //		{
-//			GUIsetWidgetEnable(swVacuum,0);		GUIsetSwitchStatus(swVacuum,0);
-//			GUIsetWidgetEnable(swFrio,0);		GUIsetSwitchStatus(swFrio,0);
-//			GUIsetWidgetEnable(swTestLed,0);	GUIsetSwitchStatus(swTestLed,0);
-//			GUIsetWidgetEnable(swTestLedRGB,0);	GUIsetSwitchStatus(swTestLedRGB,0);
+//			GUIsetWidgetEnable(SwVacuum,0);		GUIsetSwitchStatus(SwVacuum,0);
+//			GUIsetWidgetEnable(SwFrio,0);		GUIsetSwitchStatus(SwFrio,0);
+//			GUIsetWidgetEnable(SwTestLed,0);	GUIsetSwitchStatus(SwTestLed,0);
+//			GUIsetWidgetEnable(SwTestLedRGB,0);	GUIsetSwitchStatus(SwTestLedRGB,0);
 //			GUIsetWidgetVisibility(imgTestLedStatus, 0);
 			
 //			for (i=0;i<APP_GUI_SAT_MAX_NUMVWR;i++)	GUIsetNumViewerNum( APP_GUI_SAT_NUMVWR_WIDGET_LIST[i], 0, 0);
@@ -2772,27 +2772,27 @@ uint8 AppGUIisPopUpActive( void)
 
 uint8 AppGUIisRecommPopUpActive (void)		//Comprueba si el PopUp de recomendaciones está activo
 {
-    return AppGUIIsPopupDisplayed(popUpRecomm);
+    return AppGUIIsPopupDisplayed(PopUpRecomm);
 }
 
 uint8 AppGUIisTimePopUpActive (void)		//Comprueba si el PopUp de tiempo está activo
 {
-    return AppGUIIsPopupDisplayed(popUpTime);
+    return AppGUIIsPopupDisplayed(PopUpTime);
 }
 
 uint8 AppGUIisVacPopUpActive (void)	//Comprueba si el PopUp de Vacc pequeño está activo
 {
-    return AppGUIIsPopupDisplayed(popUpTstVac);
+    return AppGUIIsPopupDisplayed(PopUpTstVac);
 }
 
 uint8 AppGUIisVacSmallPopUpActive (void)	//Comprueba si el PopUp de Vacc pequeño está activo
 {
-    return AppGUIIsPopupDisplayed(popUpTstVacSmall);
+    return AppGUIIsPopupDisplayed(PopUpTstVacSmall);
 }
 
 uint8 AppGUIisRFIDPopUpActive (void)		//Comprueba si el PopUp de RFID está activo
 {
-    return AppGUIIsPopupDisplayed(popUpRFID);
+    return AppGUIIsPopupDisplayed(PopUpRFID);
 }
 
 uint8 AppGUIisCleanUpPopUpActive( uint8 HPindex)
@@ -2830,7 +2830,7 @@ uint8 AppGUIisWarningPopUpActive (void)		//Comprueba si el PopUp de avisos está 
 {
 //	stWidget *popUp;
 	
-//	popUp = GUIgetWidget( popupTrtScrAvisos);
+//	popUp = GUIgetWidget( PopupTrtScrAvisos);
 //	if( popUp->enable != 0){ return 1;}
 	
     return 0;

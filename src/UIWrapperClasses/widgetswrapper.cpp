@@ -44,90 +44,90 @@ void WidgetsWrapper::GUIsetNumViewerNum(uint32 id, double num, uint8 dec)
 
     switch(id)
     {
-    case numVwrTimeHP1: emit treatmentTimerSet(APP_GUI_HP1_ID, prova); break;
-    case numVwrTimeHP2: emit treatmentTimerSet(APP_GUI_HP2_ID, prova); break;
-    case numVwrTimeHP3: emit treatmentTimerSet(APP_GUI_HP3_ID, prova); break;
-    case numVwrTimeHP4: emit treatmentTimerSet(APP_GUI_HP4_ID, prova); break;
-    case numVwrResucctionCountHP1: emit resuctionCountChanged(APP_GUI_HP1_ID, num); break;
-    case numVwrResucctionCountHP2: emit resuctionCountChanged(APP_GUI_HP2_ID, num); break;
-    case numVwrResucctionCountHP3: emit resuctionCountChanged(APP_GUI_HP3_ID, num); break;
-    case numVwrResucctionCountHP4: emit resuctionCountChanged(APP_GUI_HP4_ID, num); break;
-    case numVwrPopUpRFIDrestTime: break;
-    case numVwrPopUpErrHP1: break;
-    case numVwrPopUpErrHP2: break;
-    case numVwrPopUpErrHP3: break;
-    case numVwrPopUpErrHP4: break;
-    case numVwrPopUpErrUC: break;
-    case numVwrPopUpErrTRTtimeHP1: break;
-    case numVwrPopUpErrTRTtimeHP2: break;
-    case numVwrPopUpErrTRTtimeHP3: break;
-    case numVwrPopUpErrTRTtimeHP4: break;
-    case numVwrPopUpCleanHP1: break;
-    case numVwrPopUpCleanHP2: break;
-    case numVwrPopUpCleanHP3: break;
-    case numVwrPopUpCleanHP4: break;
-    case numVwrPopUpCleanNumCancelHP1: break;
-    case numVwrPopUpCleanNumCancelHP2: break;
-    case numVwrPopUpCleanNumCancelHP3: break;
-    case numVwrPopUpCleanNumCancelHP4: break;
-    case numVwrPantallaCalc:        setCalcNumber(qstr); break;
-    case numVwrModeloMaqCfg:        setConfModel(qstr); break;
-    case numVwrVersionSoftwareCfg:  setConfVersion(qstr); break;
-    case numVwrPaginaSATscreen: break;
-    case numVwr1: break;
-    case numVwr2: break;
-    case numVwr3: break;
-    case numVwr4: break;
-    case numVwr5: break;
-    case numVwr6: break;
-    case numVwr7: break;
-    case numVwr8: break;
-    case numVwr9: break;
-    case numVwr10: break;
-    case numVwr11: break;
-    case numVwr12: break;
-    case numVwr13: break;
-    case numVwr14: break;
-    case numVwr15: break;
-    case numVwr16: break;
-    case numVwr17: break;
-    case numVwr18: break;
-    case numVwr19: break;
-    case numVwr20: break;
-    case numVwr21: break;
-    case numVwr22: break;
-    case numVwr23: break;
-    case numVwr24: break;
-    case numVwr25: break;
-    case numVwr26: break;
-    case numVwr27: break;
-    case numVwr28: break;
-    case numVwrError1: break;
-    case numVwrError2: break;
-    case numVwrError3: break;
-    case numVwrError4: break;
-    case numVwrError5: break;
-    case numVwrTempAmb: break;
-    case numVwrTempBomba: break;
-    case numVwrTempRetorno: break;
-    case numVwrCaudalRetorno: break;
-    case numVwrVtobera: break;
-    case numVwrRth: break;
-    case numVwrCPI: break;
-    case numVwrCaudalRetornoHP1: break;
-    case numVwrCaudalRetornoHP2: break;
-    case numVwrCaudalRetornoHP3: break;
-    case numVwrCaudalRetornoHP4: break;
-    case numVwrVacuumHP1: break;
-    case numVwrVacuumHP2: break;
-    case numVwrVacuumHP3: break;
-    case numVwrVacuumHP4: break;
-    case numVwrFatigaTime: break;
-    case numVwrErrFatiga1: break;
-    case numVwrErrFatiga2: break;
-    case numVwrErrFatiga3: break;
-    case numVwrErrFatiga4: break;
-    case numVwrErrFatiga5: break;
+    case NumVwrTimeHP1: emit treatmentTimerSet(APP_GUI_HP1_ID, prova); break;
+    case NumVwrTimeHP2: emit treatmentTimerSet(APP_GUI_HP2_ID, prova); break;
+    case NumVwrTimeHP3: emit treatmentTimerSet(APP_GUI_HP3_ID, prova); break;
+    case NumVwrTimeHP4: emit treatmentTimerSet(APP_GUI_HP4_ID, prova); break;
+    case NumVwrResucctionCountHP1: emit resuctionCountChanged(APP_GUI_HP1_ID, num); break;
+    case NumVwrResucctionCountHP2: emit resuctionCountChanged(APP_GUI_HP2_ID, num); break;
+    case NumVwrResucctionCountHP3: emit resuctionCountChanged(APP_GUI_HP3_ID, num); break;
+    case NumVwrResucctionCountHP4: emit resuctionCountChanged(APP_GUI_HP4_ID, num); break;
+    case NumVwrPopUpRFIDrestTime: break;
+    case NumVwrPopUpErrHP1: break;
+    case NumVwrPopUpErrHP2: break;
+    case NumVwrPopUpErrHP3: break;
+    case NumVwrPopUpErrHP4: break;
+    case NumVwrPopUpErrUC: break;
+    case NumVwrPopUpErrTRTtimeHP1: break;
+    case NumVwrPopUpErrTRTtimeHP2: break;
+    case NumVwrPopUpErrTRTtimeHP3: break;
+    case NumVwrPopUpErrTRTtimeHP4: break;
+    case NumVwrPopUpCleanHP1: break;
+    case NumVwrPopUpCleanHP2: break;
+    case NumVwrPopUpCleanHP3: break;
+    case NumVwrPopUpCleanHP4: break;
+    case NumVwrPopUpCleanNumCancelHP1: break;
+    case NumVwrPopUpCleanNumCancelHP2: break;
+    case NumVwrPopUpCleanNumCancelHP3: break;
+    case NumVwrPopUpCleanNumCancelHP4: break;
+    case NumVwrPantallaCalc:        setCalcNumber(qstr); break;
+    case NumVwrModeloMaqCfg:        setConfModel(qstr); break;
+    case NumVwrVersionSoftwareCfg:  setConfVersion(qstr); break;
+    case NumVwrPaginaSATscreen: break;
+    case NumVwr1: break;
+    case NumVwr2: break;
+    case NumVwr3: break;
+    case NumVwr4: break;
+    case NumVwr5: break;
+    case NumVwr6: break;
+    case NumVwr7: break;
+    case NumVwr8: break;
+    case NumVwr9: break;
+    case NumVwr10: break;
+    case NumVwr11: break;
+    case NumVwr12: break;
+    case NumVwr13: break;
+    case NumVwr14: break;
+    case NumVwr15: break;
+    case NumVwr16: break;
+    case NumVwr17: break;
+    case NumVwr18: break;
+    case NumVwr19: break;
+    case NumVwr20: break;
+    case NumVwr21: break;
+    case NumVwr22: break;
+    case NumVwr23: break;
+    case NumVwr24: break;
+    case NumVwr25: break;
+    case NumVwr26: break;
+    case NumVwr27: break;
+    case NumVwr28: break;
+    case NumVwrError1: break;
+    case NumVwrError2: break;
+    case NumVwrError3: break;
+    case NumVwrError4: break;
+    case NumVwrError5: break;
+    case NumVwrTempAmb: break;
+    case NumVwrTempBomba: break;
+    case NumVwrTempRetorno: break;
+    case NumVwrCaudalRetorno: break;
+    case NumVwrVtobera: break;
+    case NumVwrRth: break;
+    case NumVwrCPI: break;
+    case NumVwrCaudalRetornoHP1: break;
+    case NumVwrCaudalRetornoHP2: break;
+    case NumVwrCaudalRetornoHP3: break;
+    case NumVwrCaudalRetornoHP4: break;
+    case NumVwrVacuumHP1: break;
+    case NumVwrVacuumHP2: break;
+    case NumVwrVacuumHP3: break;
+    case NumVwrVacuumHP4: break;
+    case NumVwrFatigaTime: break;
+    case NumVwrErrFatiga1: break;
+    case NumVwrErrFatiga2: break;
+    case NumVwrErrFatiga3: break;
+    case NumVwrErrFatiga4: break;
+    case NumVwrErrFatiga5: break;
     default: /* Do nothing. */ break;
     }
 }
@@ -135,53 +135,53 @@ void WidgetsWrapper::GUIsetNumViewerNum(uint32 id, double num, uint8 dec)
 void WidgetsWrapper::GUIsetSwitchStatus(uint32 id, uint8 OnOff)
 {
     switch (id) {
-    case swInitScrAvisos: break;
-    case swCtrlPnlTstVacHP1: break;
-    case swCtrlPnlTstVacHP2: break;
-    case swCtrlPnlTstVacHP3: break;
-    case swCtrlPnlTstVacHP4: break;
-    case swDotZone0: break;
-    case swDotZone1: break;
-    case swDotZone2: break;
-    case swDotZone3: break;
-    case swDotZone4: break;
-    case swDotZone5: break;
-    case swDotZone6: break;
-    case swDotZone7: break;
-    case swDotZone8: break;
-    case swDotZone9: break;
-    case swDotZone10: break;
-    case swDotZone11: break;
-    case swDotZone12: break;
-    case swDotZone13: break;
-    case swDotZone14: break;
-    case swPopUpTstVacLowLvl: break;
-    case swPopUpTstVacMidLvl: break;
-    case swPopUpTstVacHighLvl: break;
-    case swPopUpRecommInfo: break;
-    case swTrtScrAvisos: break;
-    case swCalcScrAvisos: break;
-    case swCfgResuctionViewer: break;
-    case swCfgTemperatureViewer: break;
-    case swCfgScrAvisos: break;
-    case swLanFrances: break;
-    case swLanCastellano: break;
-    case swLanIngles: break;
-    case swLanItaliano: break;
-    case swLanAleman: break;
-    case swLanPolaco: break;
-    case swLanRuso: break;
-    case swLanPortugues: break;
-    case swLanChino: break;
-    case swLanJapones: break;
-    case swLanCoreano: break;
-    case swLanScrAvisos: break;
-    case swVacuum: break;
-    case swFrio: break;
-    case swRFID: break;
-    case swTestLed: break;
-    case swTestLedRGB: break;
-    case swFatigueFailBeep: break;
+    case SwInitScrAvisos: break;
+    case SwCtrlPnlTstVacHP1: break;
+    case SwCtrlPnlTstVacHP2: break;
+    case SwCtrlPnlTstVacHP3: break;
+    case SwCtrlPnlTstVacHP4: break;
+    case SwDotZone0: break;
+    case SwDotZone1: break;
+    case SwDotZone2: break;
+    case SwDotZone3: break;
+    case SwDotZone4: break;
+    case SwDotZone5: break;
+    case SwDotZone6: break;
+    case SwDotZone7: break;
+    case SwDotZone8: break;
+    case SwDotZone9: break;
+    case SwDotZone10: break;
+    case SwDotZone11: break;
+    case SwDotZone12: break;
+    case SwDotZone13: break;
+    case SwDotZone14: break;
+    case SwPopUpTstVacLowLvl: break;
+    case SwPopUpTstVacMidLvl: break;
+    case SwPopUpTstVacHighLvl: break;
+    case SwPopUpRecommInfo: break;
+    case SwTrtScrAvisos: break;
+    case SwCalcScrAvisos: break;
+    case SwCfgResuctionViewer: break;
+    case SwCfgTemperatureViewer: break;
+    case SwCfgScrAvisos: break;
+    case SwLanFrances: break;
+    case SwLanCastellano: break;
+    case SwLanIngles: break;
+    case SwLanItaliano: break;
+    case SwLanAleman: break;
+    case SwLanPolaco: break;
+    case SwLanRuso: break;
+    case SwLanPortugues: break;
+    case SwLanChino: break;
+    case SwLanJapones: break;
+    case SwLanCoreano: break;
+    case SwLanScrAvisos: break;
+    case SwVacuum: break;
+    case SwFrio: break;
+    case SwRFID: break;
+    case SwTestLed: break;
+    case SwTestLedRGB: break;
+    case SwFatigueFailBeep: break;
     default: /* Do nothing */ break;
     }
 }
@@ -190,8 +190,8 @@ uint16 WidgetsWrapper::GUIsetWidgetVisibility(uint32 id, uint8 vis)
 {
     switch(id) {
     //PANTALLA DE CARGA
-//    case imgLoadScrBckGnd,
-//    case imgLoadAnim1,
+//    case ImgLoadScrBckGnd,
+//    case ImgLoadAnim1,
 //    case imgLoadAnim2,
 //    case imgLoadAnim3,
 //    case imgLoadAnim4,
@@ -202,8 +202,8 @@ uint16 WidgetsWrapper::GUIsetWidgetVisibility(uint32 id, uint8 vis)
 
 //    //PANTALLA DE INICIO
 //    case imgInitScrBckGnd,
-//    case butSelectWoman,
-//    case butSelectMan,
+//    case ButSelectWoman,
+//    case ButSelectMan,
 //    case imgInitGPRScoverage,		//V7790
 
 //    //Menu principal
@@ -214,9 +214,9 @@ uint16 WidgetsWrapper::GUIsetWidgetVisibility(uint32 id, uint8 vis)
 //    case butInitScrCalc,
 //    case butInitScrData,
 
-//    case swInitScrAvisos,
-//    case imgInitScrNotificacion,
-//    case popupInitScrAvisos,
+//    case SwInitScrAvisos,
+//    case ImgInitScrNotificacion,
+//    case PopupInitScrAvisos,
 //    case imgPopUpInitScrAvisoBckGND,
 //    case imgPopUpInitScrAvisoNivelAguaBajo,
 //    case imgPopUpInitScrAvisoNivelAguaMedio,
@@ -237,130 +237,130 @@ uint16 WidgetsWrapper::GUIsetWidgetVisibility(uint32 id, uint8 vis)
 //    case imgCtrlPnlBckGndHP4,
 
 //    //Colores fondos de los paneles de control
-//    case imgColourCtrlPnlBckGndHP1,
-//    case imgColourCtrlPnlBckGndHP2,
-//    case imgColourCtrlPnlBckGndHP3,
-//    case imgColourCtrlPnlBckGndHP4,
+//    case ImgColourCtrlPnlBckGndHP1,
+//    case ImgColourCtrlPnlBckGndHP2,
+//    case ImgColourCtrlPnlBckGndHP3,
+//    case ImgColourCtrlPnlBckGndHP4,
 
     //Indicadores de accion del HP cuando activos, los inactivos forman parte del fondo
-    case imgCtrlPnlRFIDblinkHP1: emit indicatorRfidVisibilityChanged(APP_GUI_HP1_ID, vis); break;
-    case imgCtrlPnlRFIDblinkHP2: emit indicatorRfidVisibilityChanged(APP_GUI_HP2_ID, vis); break;
-    case imgCtrlPnlRFIDblinkHP3: emit indicatorRfidVisibilityChanged(APP_GUI_HP3_ID, vis); break;
-    case imgCtrlPnlRFIDblinkHP4: emit indicatorRfidVisibilityChanged(APP_GUI_HP1_ID, vis); break;
-    case imgCtrlPnlPulBlinkHP1: emit indicatorButtonVisibilityChanged(APP_GUI_HP1_ID, vis); break;
-    case imgCtrlPnlPulBlinkHP2: emit indicatorButtonVisibilityChanged(APP_GUI_HP2_ID, vis); break;
-    case imgCtrlPnlPulBlinkHP3: emit indicatorButtonVisibilityChanged(APP_GUI_HP3_ID, vis); break;
-    case imgCtrlPnlPulBlinkHP4: emit indicatorButtonVisibilityChanged(APP_GUI_HP1_ID, vis); break;
-    case imgCtrlPnlVacBlinkHP1: emit indicatorVacuumVisibilityChanged(APP_GUI_HP1_ID, vis); break;
-    case imgCtrlPnlVacBlinkHP2: emit indicatorVacuumVisibilityChanged(APP_GUI_HP2_ID, vis); break;
-    case imgCtrlPnlVacBlinkHP3: emit indicatorVacuumVisibilityChanged(APP_GUI_HP3_ID, vis); break;
-    case imgCtrlPnlVacBlinkHP4: emit indicatorVacuumVisibilityChanged(APP_GUI_HP1_ID, vis); break;
-    case imgCtrlPnlCoolingBlinkHP1: emit indicatorCoolingVisibilityChanged(APP_GUI_HP1_ID, vis); break;
-    case imgCtrlPnlCoolingBlinkHP2: emit indicatorCoolingVisibilityChanged(APP_GUI_HP2_ID, vis); break;
-    case imgCtrlPnlCoolingBlinkHP3: emit indicatorCoolingVisibilityChanged(APP_GUI_HP3_ID, vis); break;
-    case imgCtrlPnlCoolingBlinkHP4: emit indicatorCoolingVisibilityChanged(APP_GUI_HP1_ID, vis); break;
+    case ImgCtrlPnlRFIDblinkHP1: emit indicatorRfidVisibilityChanged(APP_GUI_HP1_ID, vis); break;
+    case ImgCtrlPnlRFIDblinkHP2: emit indicatorRfidVisibilityChanged(APP_GUI_HP2_ID, vis); break;
+    case ImgCtrlPnlRFIDblinkHP3: emit indicatorRfidVisibilityChanged(APP_GUI_HP3_ID, vis); break;
+    case ImgCtrlPnlRFIDblinkHP4: emit indicatorRfidVisibilityChanged(APP_GUI_HP1_ID, vis); break;
+    case ImgCtrlPnlPulBlinkHP1: emit indicatorButtonVisibilityChanged(APP_GUI_HP1_ID, vis); break;
+    case ImgCtrlPnlPulBlinkHP2: emit indicatorButtonVisibilityChanged(APP_GUI_HP2_ID, vis); break;
+    case ImgCtrlPnlPulBlinkHP3: emit indicatorButtonVisibilityChanged(APP_GUI_HP3_ID, vis); break;
+    case ImgCtrlPnlPulBlinkHP4: emit indicatorButtonVisibilityChanged(APP_GUI_HP1_ID, vis); break;
+    case ImgCtrlPnlVacBlinkHP1: emit indicatorVacuumVisibilityChanged(APP_GUI_HP1_ID, vis); break;
+    case ImgCtrlPnlVacBlinkHP2: emit indicatorVacuumVisibilityChanged(APP_GUI_HP2_ID, vis); break;
+    case ImgCtrlPnlVacBlinkHP3: emit indicatorVacuumVisibilityChanged(APP_GUI_HP3_ID, vis); break;
+    case ImgCtrlPnlVacBlinkHP4: emit indicatorVacuumVisibilityChanged(APP_GUI_HP1_ID, vis); break;
+    case ImgCtrlPnlCoolingBlinkHP1: emit indicatorCoolingVisibilityChanged(APP_GUI_HP1_ID, vis); break;
+    case ImgCtrlPnlCoolingBlinkHP2: emit indicatorCoolingVisibilityChanged(APP_GUI_HP2_ID, vis); break;
+    case ImgCtrlPnlCoolingBlinkHP3: emit indicatorCoolingVisibilityChanged(APP_GUI_HP3_ID, vis); break;
+    case ImgCtrlPnlCoolingBlinkHP4: emit indicatorCoolingVisibilityChanged(APP_GUI_HP1_ID, vis); break;
 
 //    //Botones del panel de control de PLAY y Test Vacum
-//    case butCtrlPnlPlayHP1,
-//    case butCtrlPnlPlayHP2,
-//    case butCtrlPnlPlayHP3,
-//    case butCtrlPnlPlayHP4,
-//    case swCtrlPnlTstVacHP1,
-//    case swCtrlPnlTstVacHP2,
-//    case swCtrlPnlTstVacHP3,
-//    case swCtrlPnlTstVacHP4,
+//    case ButCtrlPnlPlayHP1,
+//    case ButCtrlPnlPlayHP2,
+//    case ButCtrlPnlPlayHP3,
+//    case ButCtrlPnlPlayHP4,
+//    case SwCtrlPnlTstVacHP1,
+//    case SwCtrlPnlTstVacHP2,
+//    case SwCtrlPnlTstVacHP3,
+//    case SwCtrlPnlTstVacHP4,
 
 //    //Botones (switch) que permite seleccionar modo de tratamiento AUTO o MANUAL
-//    case butSwtchModeAutoManualHP1,
-//    case butSwtchModeAutoManualHP2,
-//    case butSwtchModeAutoManualHP3,
-//    case butSwtchModeAutoManualHP4,
+//    case ButSwtchModeAutoManualHP1,
+//    case ButSwtchModeAutoManualHP2,
+//    case ButSwtchModeAutoManualHP3,
+//    case ButSwtchModeAutoManualHP4,
 
     //Visores de tiempo restante de trt y boton de seleccion de tiempo
-    case numVwrTimeHP1: emit timeRemainingVisibilityChanged(APP_GUI_HP1_ID, vis); break;
-    case numVwrTimeHP2: emit timeRemainingVisibilityChanged(APP_GUI_HP2_ID, vis); break;
-    case numVwrTimeHP3: emit timeRemainingVisibilityChanged(APP_GUI_HP3_ID, vis); break;
-    case numVwrTimeHP4: emit timeRemainingVisibilityChanged(APP_GUI_HP1_ID, vis); break;
-    case butSelectTimeHP1: emit timeSelectButtonVisibilityChanged(APP_GUI_HP1_ID, vis); break;
-    case butSelectTimeHP2: emit timeSelectButtonVisibilityChanged(APP_GUI_HP2_ID, vis); break;
-    case butSelectTimeHP3: emit timeSelectButtonVisibilityChanged(APP_GUI_HP3_ID, vis); break;
-    case butSelectTimeHP4: emit timeSelectButtonVisibilityChanged(APP_GUI_HP4_ID, vis); break;
-//    case butVwrTemperatureHP1,
-//    case butVwrTemperatureHP2,
-//    case butVwrTemperatureHP3,
-//    case butVwrTemperatureHP4,
+    case NumVwrTimeHP1: emit timeRemainingVisibilityChanged(APP_GUI_HP1_ID, vis); break;
+    case NumVwrTimeHP2: emit timeRemainingVisibilityChanged(APP_GUI_HP2_ID, vis); break;
+    case NumVwrTimeHP3: emit timeRemainingVisibilityChanged(APP_GUI_HP3_ID, vis); break;
+    case NumVwrTimeHP4: emit timeRemainingVisibilityChanged(APP_GUI_HP1_ID, vis); break;
+    case ButSelectTimeHP1: emit timeSelectButtonVisibilityChanged(APP_GUI_HP1_ID, vis); break;
+    case ButSelectTimeHP2: emit timeSelectButtonVisibilityChanged(APP_GUI_HP2_ID, vis); break;
+    case ButSelectTimeHP3: emit timeSelectButtonVisibilityChanged(APP_GUI_HP3_ID, vis); break;
+    case ButSelectTimeHP4: emit timeSelectButtonVisibilityChanged(APP_GUI_HP4_ID, vis); break;
+//    case ButVwrTemperatureHP1,
+//    case ButVwrTemperatureHP2,
+//    case ButVwrTemperatureHP3,
+//    case ButVwrTemperatureHP4,
 
     //Visor numerico para contabilizar resucciones
-    case numVwrResucctionCountHP1: emit resuctionCountVisibilityChanged(APP_GUI_HP1_ID, vis); break;
-    case numVwrResucctionCountHP2: emit resuctionCountVisibilityChanged(APP_GUI_HP2_ID, vis); break;
-    case numVwrResucctionCountHP3: emit resuctionCountVisibilityChanged(APP_GUI_HP3_ID, vis); break;
-    case numVwrResucctionCountHP4: emit resuctionCountVisibilityChanged(APP_GUI_HP4_ID, vis); break;
+    case NumVwrResucctionCountHP1: emit resuctionCountVisibilityChanged(APP_GUI_HP1_ID, vis); break;
+    case NumVwrResucctionCountHP2: emit resuctionCountVisibilityChanged(APP_GUI_HP2_ID, vis); break;
+    case NumVwrResucctionCountHP3: emit resuctionCountVisibilityChanged(APP_GUI_HP3_ID, vis); break;
+    case NumVwrResucctionCountHP4: emit resuctionCountVisibilityChanged(APP_GUI_HP4_ID, vis); break;
 
 //    //Boton con la imagen e imagen con el texto del modelo
-//    case imgModelTextHP1,
-//    case imgModelTextHP2,
-//    case imgModelTextHP3,
-//    case imgModelTextHP4,
-//    case butModelImageHP1,
-//    case butModelImageHP2,
-//    case butModelImageHP3,
-//    case butModelImageHP4,
+//    case ImgModelTextHP1,
+//    case ImgModelTextHP2,
+//    case ImgModelTextHP3,
+//    case ImgModelTextHP4,
+//    case ButModelImageHP1,
+//    case ButModelImageHP2,
+//    case ButModelImageHP3,
+//    case ButModelImageHP4,
 
 //    //Botonoes de recogida y despliegue del panel de control
-//    case butHideControlPanelHP1,
-//    case butHideControlPanelHP2,
-//    case butHideControlPanelHP3,
-//    case butHideControlPanelHP4,
+//    case ButHideControlPanelHP1,
+//    case ButHideControlPanelHP2,
+//    case ButHideControlPanelHP3,
+//    case ButHideControlPanelHP4,
 //    case butShowControlPanelHP1,
 //    case butShowControlPanelHP2,
 //    case butShowControlPanelHP3,
 //    case butShowControlPanelHP4,
 
 //    //Botones de selección de Full body
-//    case butFullBodyTorso,
-//    case butFullBodyPiernas,
-//    case butFullBodyBrazos,
-//    case butFullBodyEspalda,
-//    case butFullBodyPiernaMuslo,
-//    case butFullBodyCuello,
+//    case ButFullBodyTorso,
+//    case ButFullBodyPiernas,
+//    case ButFullBodyBrazos,
+//    case ButFullBodyEspalda,
+//    case ButFullBodyPiernaMuslo,
+//    case ButFullBodyCuello,
 
 //    //Puntos seleccion de zona de tratamiento cuando zoom
-//    case swDotZone0,
-//    case swDotZone1,
-//    case swDotZone2,
-//    case swDotZone3,
-//    case swDotZone4,
-//    case swDotZone5,
-//    case swDotZone6,
-//    case swDotZone7,
-//    case swDotZone8,
-//    case swDotZone9,
-//    case swDotZone10,
-//    case swDotZone11,
-//    case swDotZone12,
-//    case swDotZone13,
-//    case swDotZone14,
+//    case SwDotZone0,
+//    case SwDotZone1,
+//    case SwDotZone2,
+//    case SwDotZone3,
+//    case SwDotZone4,
+//    case SwDotZone5,
+//    case SwDotZone6,
+//    case SwDotZone7,
+//    case SwDotZone8,
+//    case SwDotZone9,
+//    case SwDotZone10,
+//    case SwDotZone11,
+//    case SwDotZone12,
+//    case SwDotZone13,
+//    case SwDotZone14,
 
     //Punto seleccionado para tratamiento con ese HP a mostrar en full body
-    case imgSelectedTrtZoneHP1: trtDotFullBodyVisibilityChanged(APP_GUI_HP1_ID, vis); break;
-    case imgSelectedTrtZoneHP2: trtDotFullBodyVisibilityChanged(APP_GUI_HP2_ID, vis); break;
-    case imgSelectedTrtZoneHP3: trtDotFullBodyVisibilityChanged(APP_GUI_HP3_ID, vis); break;
-    case imgSelectedTrtZoneHP4: trtDotFullBodyVisibilityChanged(APP_GUI_HP4_ID, vis); break;
+    case ImgSelectedTrtZoneHP1: trtDotFullBodyVisibilityChanged(APP_GUI_HP1_ID, vis); break;
+    case ImgSelectedTrtZoneHP2: trtDotFullBodyVisibilityChanged(APP_GUI_HP2_ID, vis); break;
+    case ImgSelectedTrtZoneHP3: trtDotFullBodyVisibilityChanged(APP_GUI_HP3_ID, vis); break;
+    case ImgSelectedTrtZoneHP4: trtDotFullBodyVisibilityChanged(APP_GUI_HP4_ID, vis); break;
 
 //    //POPUP's
 //    //Common
-    case butPopUpReturn: emit returnButtonVisibilityChanged(vis); break;
+    case ButPopUpReturn: emit returnButtonVisibilityChanged(vis); break;
 //    case imgPopUpHPcolorBar,
 
 //    //PopUp Time widgets
-//    case popUpTime,
+//    case PopUpTime,
 //    case butPopUpTime50min,
 //    case butPopUpTime70min,
 //    case imgPopUpTime1sel,
 //    case imgPopUpTime2sel,
 
 //    //PopUp Test Vacum widgets
-//    case popUpTstVac,
+//    case PopUpTstVac,
 //    case imgPopUpTstVacBckGnd,
 //    case imgPopUpTstVacLowLvl,
 //    case imgPopUpTstVacMidLvl,
@@ -371,51 +371,51 @@ uint16 WidgetsWrapper::GUIsetWidgetVisibility(uint32 id, uint8 vis)
 //    case butPopUpTstVacManualMidLvl,
 //    case butPopUpTstVacManualHighLvl,
 //    case butPopUpTstVacAuto,
-//    case swPopUpTstVacLowLvl,
-//    case swPopUpTstVacMidLvl,
-//    case swPopUpTstVacHighLvl,
+//    case SwPopUpTstVacLowLvl,
+//    case SwPopUpTstVacMidLvl,
+//    case SwPopUpTstVacHighLvl,
 //    case imgPopUpTstVacAUTOstatus,
 
 //    //PopUp Test Vacuum 2 widgets
-//    case popUpTstVacSmall,
+//    case PopUpTstVacSmall,
 //    case imgPopUpVacSelBck,
 //    case butPopUpTstVacSmallLowLvl,
 //    case butPopUpTstVacSmallMedLvl,
 //    case butPopUpTstVacSmallHighLvl,
 
 //    //PopUp RFID widgets
-//    case popUpRFID,
+//    case PopUpRFID,
 //    case imgPopUpRFIDbckGnd,
 //    case imgPopUpRFIDlabel,
 //    case imgPopUpRFIDresult,
 //    case butPopUpRFIDreuseLabel,
-//    case numVwrPopUpRFIDrestTime,
+//    case NumVwrPopUpRFIDrestTime,
 
 //    //PopUp Recommendation widgets
-    case swPopUpRecommInfo: emit infoSwitchVisibilityChanged(vis); break;
-//    case popUpRecomm,
+    case SwPopUpRecommInfo: emit infoSwitchVisibilityChanged(vis); break;
+//    case PopUpRecomm,
 //    case imgPopUpRecommbckGnd,
-    case imgPopUpRecommCurved:
-    case imgPopUpRecommTight:
-    case imgPopUpRecommStright:
-    case imgPopUpRecommTiny:
-    case imgPopUpRecommTinyCurved:
-    case imgPopUpRecommDouble:
-    case imgPopUpRecommOval:
-    case imgPopUpRecommOvalCurved:
-    case imgPopUpRecommAngled: emit suggestedHpWatermarkDisplayed((EAppGUIwidgetIDlist)id, vis); break;
+    case ImgPopUpRecommCurved:
+    case ImgPopUpRecommTight:
+    case ImgPopUpRecommStright:
+    case ImgPopUpRecommTiny:
+    case ImgPopUpRecommTinyCurved:
+    case ImgPopUpRecommDouble:
+    case ImgPopUpRecommOval:
+    case ImgPopUpRecommOvalCurved:
+    case ImgPopUpRecommAngled: emit suggestedHpWatermarkDisplayed((EAppGUIwidgetIDlist)id, vis); break;
 
 //    //Menu Principal
 //    case butTrtScrShowMainMenu,
 //    case butTrtScrHideMainMenu,
-//    case butTrtScrHome,
-//    case butTrtScrCfg,
-//    case butTrtScrCalc,
+//    case ButTrtScrHome,
+//    case ButTrtScrCfg,
+//    case ButTrtScrCalc,
 //    case butTrtScrData,
 
-//    case swTrtScrAvisos,
-//    case imgTrtScrNotificacion,
-//    case popupTrtScrAvisos,
+//    case SwTrtScrAvisos,
+//    case ImgTrtScrNotificacion,
+//    case PopupTrtScrAvisos,
 //    case imgPopUpTrtScrAvisoBckGND,
 //    case imgPopUpTrtScrAvisoNivelAguaBajo,
 //    case imgPopUpTrtScrAvisoNivelAguaMedio,
@@ -430,11 +430,11 @@ uint16 WidgetsWrapper::GUIsetWidgetVisibility(uint32 id, uint8 vis)
 //    case imgPopUpErrBckGndHP3,
 //    case imgPopUpErrBckGndHP4,
 //    case imgPopUpErrBckGndUC,
-//    case numVwrPopUpErrHP1,
-//    case numVwrPopUpErrHP2,
-//    case numVwrPopUpErrHP3,
-//    case numVwrPopUpErrHP4,
-//    case numVwrPopUpErrUC,
+//    case NumVwrPopUpErrHP1,
+//    case NumVwrPopUpErrHP2,
+//    case NumVwrPopUpErrHP3,
+//    case NumVwrPopUpErrHP4,
+//    case NumVwrPopUpErrUC,
 //    case imgPopUpErrMsgHP1,
 //    case imgPopUpErrMsgHP2,
 //    case imgPopUpErrMsgHP3,
@@ -445,20 +445,20 @@ uint16 WidgetsWrapper::GUIsetWidgetVisibility(uint32 id, uint8 vis)
 //    case butPopUpErrOkHP3,
 //    case butPopUpErrOkHP4,
 //    case butPopUpErrOkUC,
-//    case numVwrPopUpErrTRTtimeHP1,
-//    case numVwrPopUpErrTRTtimeHP2,
-//    case numVwrPopUpErrTRTtimeHP3,
-//    case numVwrPopUpErrTRTtimeHP4,
+//    case NumVwrPopUpErrTRTtimeHP1,
+//    case NumVwrPopUpErrTRTtimeHP2,
+//    case NumVwrPopUpErrTRTtimeHP3,
+//    case NumVwrPopUpErrTRTtimeHP4,
 
 //    //PopUp's CleanUp
 //    case imgPopUpCleanBckGndHP1,
 //    case imgPopUpCleanBckGndHP2,
 //    case imgPopUpCleanBckGndHP3,
 //    case imgPopUpCleanBckGndHP4,
-//    case numVwrPopUpCleanHP1,
-//    case numVwrPopUpCleanHP2,
-//    case numVwrPopUpCleanHP3,
-//    case numVwrPopUpCleanHP4,
+//    case NumVwrPopUpCleanHP1,
+//    case NumVwrPopUpCleanHP2,
+//    case NumVwrPopUpCleanHP3,
+//    case NumVwrPopUpCleanHP4,
 //    case butPopUpCleanHP1,
 //    case butPopUpCleanHP2,
 //    case butPopUpCleanHP3,
@@ -479,30 +479,30 @@ uint16 WidgetsWrapper::GUIsetWidgetVisibility(uint32 id, uint8 vis)
 //    case butPopUpCleanCancelHP2,
 //    case butPopUpCleanCancelHP3,
 //    case butPopUpCleanCancelHP4,
-//    case numVwrPopUpCleanNumCancelHP1,
-//    case numVwrPopUpCleanNumCancelHP2,
-//    case numVwrPopUpCleanNumCancelHP3,
-//    case numVwrPopUpCleanNumCancelHP4,
+//    case NumVwrPopUpCleanNumCancelHP1,
+//    case NumVwrPopUpCleanNumCancelHP2,
+//    case NumVwrPopUpCleanNumCancelHP3,
+//    case NumVwrPopUpCleanNumCancelHP4,
 
 
 //    //Pantalla de la calculadora
 //    case imgFondoCalcScreen,
 //    case imgCuerpoCalc,
-//    case numVwrPantallaCalc,
-//    case butNum0Calc,
-//    case butNum1Calc,
-//    case butNum2Calc,
-//    case butNum3Calc,
-//    case butNum4Calc,
-//    case butNum5Calc,
-//    case butNum6Calc,
-//    case butNum7Calc,
-//    case butNum8Calc,
-//    case butNum9Calc,
+//    case NumVwrPantallaCalc,
+//    case ButNum0Calc,
+//    case ButNum1Calc,
+//    case ButNum2Calc,
+//    case ButNum3Calc,
+//    case ButNum4Calc,
+//    case ButNum5Calc,
+//    case ButNum6Calc,
+//    case ButNum7Calc,
+//    case ButNum8Calc,
+//    case ButNum9Calc,
 //    case butMasCalc,
 //    case butMenosCalc,
-//    case butEnterCalc,
-//    case butCECalc,
+//    case ButEnterCalc,
+//    case ButCECalc,
 //    case butComaCalc,
 
 //    //Menu principal - calculadora
@@ -513,9 +513,9 @@ uint16 WidgetsWrapper::GUIsetWidgetVisibility(uint32 id, uint8 vis)
 //    case imgCalcScrCalc,
 //    case butCalcScrData,
 
-//    case swCalcScrAvisos,
-//    case imgCalcScrNotificacion,
-//    case popupCalcScrAvisos,
+//    case SwCalcScrAvisos,
+//    case ImgCalcScrNotificacion,
+//    case PopupCalcScrAvisos,
 //    case imgPopUpCalcScrAvisoBckGND,
 //    case imgPopUpCalcScrAvisoNivelAguaBajo,
 //    case imgPopUpCalcScrAvisoNivelAguaMedio,
@@ -529,11 +529,11 @@ uint16 WidgetsWrapper::GUIsetWidgetVisibility(uint32 id, uint8 vis)
 //    case imgVentanaCfgCastellano,
 //    case butCfgActualizarSoftware,
 //    case imgSoftwareProgressionUpdateBar,
-//    case numVwrModeloMaqCfg,
-//    case numVwrVersionSoftwareCfg,
+//    case NumVwrModeloMaqCfg,
+//    case NumVwrVersionSoftwareCfg,
 //    case butCfgRecargaCoolant,
-//    case swCfgResuctionViewer,
-//    case swCfgTemperatureViewer,
+//    case SwCfgResuctionViewer,
+//    case SwCfgTemperatureViewer,
 //    case butCfgCleanUpHP1,
 //    case butCfgCleanUpHP2,
 //    case butCfgCleanUpHP3,
@@ -549,9 +549,9 @@ uint16 WidgetsWrapper::GUIsetWidgetVisibility(uint32 id, uint8 vis)
 //    case butCfgScrCalc,
 //    case butCfgScrData,
 
-//    case swCfgScrAvisos,
-//    case imgCfgScrNotificacion,
-//    case popupCfgScrAvisos,
+//    case SwCfgScrAvisos,
+//    case ImgCfgScrNotificacion,
+//    case PopupCfgScrAvisos,
 //    case imgPopUpCfgScrAvisoBckGND,
 //    case imgPopUpCfgScrAvisoNivelAguaBajo,
 //    case imgPopUpCfgScrAvisoNivelAguaMedio,
@@ -563,17 +563,17 @@ uint16 WidgetsWrapper::GUIsetWidgetVisibility(uint32 id, uint8 vis)
 //    //Pantalla de idiomas
 //    case imgFondoLanScreen,
 
-//    case swLanFrances,
-//    case swLanCastellano,
-//    case swLanIngles,
-//    case swLanItaliano,
-//    case swLanAleman,
-//    case swLanPolaco,
-//    case swLanRuso,
-//    case swLanPortugues,
-//    case swLanChino,
-//    case swLanJapones,
-//    case swLanCoreano,
+//    case SwLanFrances,
+//    case SwLanCastellano,
+//    case SwLanIngles,
+//    case SwLanItaliano,
+//    case SwLanAleman,
+//    case SwLanPolaco,
+//    case SwLanRuso,
+//    case SwLanPortugues,
+//    case SwLanChino,
+//    case SwLanJapones,
+//    case SwLanCoreano,
 
 //    //Menu principal - idiomas
 //    case butLanScrShowMainMenu,
@@ -583,9 +583,9 @@ uint16 WidgetsWrapper::GUIsetWidgetVisibility(uint32 id, uint8 vis)
 //    case butLanScrCalc,
 //    case imgLanScrData,
 
-//    case swLanScrAvisos,
-//    case imgLanScrNotificacion,
-//    case popupLanScrAvisos,
+//    case SwLanScrAvisos,
+//    case ImgLanScrNotificacion,
+//    case PopupLanScrAvisos,
 //    case imgPopUpLanScrAvisoBckGND,
 //    case imgPopUpLanScrAvisoNivelAguaBajo,
 //    case imgPopUpLanScrAvisoNivelAguaMedio,
@@ -598,7 +598,7 @@ uint16 WidgetsWrapper::GUIsetWidgetVisibility(uint32 id, uint8 vis)
 //    case imgFondoSATscreen,
 //    case butHomeSATscreen,
 
-//    case numVwrPaginaSATscreen,
+//    case NumVwrPaginaSATscreen,
 //    case butNextPagSATscreen,
 //    case butPrevPagSATscreen,
 
@@ -650,34 +650,34 @@ uint16 WidgetsWrapper::GUIsetWidgetVisibility(uint32 id, uint8 vis)
 //    case imgVwr28_1,
 //    case imgVwr28_2,
 
-//    case numVwr1,
-//    case numVwr2,
-//    case numVwr3,
-//    case numVwr4,
-//    case numVwr5,
-//    case numVwr6,
-//    case numVwr7,
-//    case numVwr8,
-//    case numVwr9,
-//    case numVwr10,
-//    case numVwr11,
-//    case numVwr12,
-//    case numVwr13,
-//    case numVwr14,
-//    case numVwr15,
-//    case numVwr16,
-//    case numVwr17,
-//    case numVwr18,
-//    case numVwr19,
-//    case numVwr20,
-//    case numVwr21,
-//    case numVwr22,
-//    case numVwr23,
-//    case numVwr24,
-//    case numVwr25,
-//    case numVwr26,
-//    case numVwr27,
-//    case numVwr28,
+//    case NumVwr1,
+//    case NumVwr2,
+//    case NumVwr3,
+//    case NumVwr4,
+//    case NumVwr5,
+//    case NumVwr6,
+//    case NumVwr7,
+//    case NumVwr8,
+//    case NumVwr9,
+//    case NumVwr10,
+//    case NumVwr11,
+//    case NumVwr12,
+//    case NumVwr13,
+//    case NumVwr14,
+//    case NumVwr15,
+//    case NumVwr16,
+//    case NumVwr17,
+//    case NumVwr18,
+//    case NumVwr19,
+//    case NumVwr20,
+//    case NumVwr21,
+//    case NumVwr22,
+//    case NumVwr23,
+//    case NumVwr24,
+//    case NumVwr25,
+//    case NumVwr26,
+//    case NumVwr27,
+//    case NumVwr28,
 
 //    case imgVacuum,
 //    case imgFrio,
@@ -685,19 +685,19 @@ uint16 WidgetsWrapper::GUIsetWidgetVisibility(uint32 id, uint8 vis)
 //    case imgTestLed,
 //    case imgTestLedStatus,
 //    case imgTestLedRGD,
-//    case swVacuum,
-//    case swFrio,
-//    case swRFID,
-//    case swTestLed,
-//    case swTestLedRGB,
+//    case SwVacuum,
+//    case SwFrio,
+//    case SwRFID,
+//    case SwTestLed,
+//    case SwTestLedRGB,
 
 //    case PopupErrorSAT,
 //    case imgVwrFondoErrorSAT,
-//    case numVwrError1,
-//    case numVwrError2,
-//    case numVwrError3,
-//    case numVwrError4,
-//    case numVwrError5,
+//    case NumVwrError1,
+//    case NumVwrError2,
+//    case NumVwrError3,
+//    case NumVwrError4,
+//    case NumVwrError5,
 //    case butOkerr,
 
 //    //Pantalla de FATIGA
@@ -725,27 +725,27 @@ uint16 WidgetsWrapper::GUIsetWidgetVisibility(uint32 id, uint8 vis)
 //    case imgStep7,
 //    case imgStep7status,
 
-//    case numVwrTempAmb,
-//    case numVwrTempBomba,
-//    case numVwrTempRetorno,
-//    case numVwrCaudalRetorno,
-//    case numVwrVtobera,
-//    case numVwrRth,
-//    case numVwrCPI,
-//    case numVwrCaudalRetornoHP1,
-//    case numVwrCaudalRetornoHP2,
-//    case numVwrCaudalRetornoHP3,
-//    case numVwrCaudalRetornoHP4,
-//    case numVwrVacuumHP1,
-//    case numVwrVacuumHP2,
-//    case numVwrVacuumHP3,
-//    case numVwrVacuumHP4,
-//    case numVwrFatigaTime,
-//    case numVwrErrFatiga1,
-//    case numVwrErrFatiga2,
-//    case numVwrErrFatiga3,
-//    case numVwrErrFatiga4,
-//    case numVwrErrFatiga5,
+//    case NumVwrTempAmb,
+//    case NumVwrTempBomba,
+//    case NumVwrTempRetorno,
+//    case NumVwrCaudalRetorno,
+//    case NumVwrVtobera,
+//    case NumVwrRth,
+//    case NumVwrCPI,
+//    case NumVwrCaudalRetornoHP1,
+//    case NumVwrCaudalRetornoHP2,
+//    case NumVwrCaudalRetornoHP3,
+//    case NumVwrCaudalRetornoHP4,
+//    case NumVwrVacuumHP1,
+//    case NumVwrVacuumHP2,
+//    case NumVwrVacuumHP3,
+//    case NumVwrVacuumHP4,
+//    case NumVwrFatigaTime,
+//    case NumVwrErrFatiga1,
+//    case NumVwrErrFatiga2,
+//    case NumVwrErrFatiga3,
+//    case NumVwrErrFatiga4,
+//    case NumVwrErrFatiga5,
 
 //    case imgVwrVAC1,
 //    case imgVwrVAC2,
@@ -763,13 +763,13 @@ uint16 WidgetsWrapper::GUIsetWidgetVisibility(uint32 id, uint8 vis)
 //    case imgVwrRth,
 //    case imgVwrCPI,				//447
 
-//    case swFatigueFailBeep,
+//    case SwFatigueFailBeep,
 
-    case imgInitScrNotificacion:
-    case imgTrtScrNotificacion:
-    case imgCalcScrNotificacion:
-    case imgCfgScrNotificacion:
-    case imgLanScrNotificacion: emit mainMenuWarningNotificationDisplayed(vis); break;
+    case ImgInitScrNotificacion:
+    case ImgTrtScrNotificacion:
+    case ImgCalcScrNotificacion:
+    case ImgCfgScrNotificacion:
+    case ImgLanScrNotificacion: emit mainMenuWarningNotificationDisplayed(vis); break;
 
     default: /* Do nothing */ break;
     }
@@ -781,8 +781,8 @@ uint16 WidgetsWrapper::GUIsetWidgetEnable(uint32 id, uint8 enable)
 {
     switch(id) {
     //PANTALLA DE CARGA
-//    case imgLoadScrBckGnd,
-//    case imgLoadAnim1,
+//    case ImgLoadScrBckGnd,
+//    case ImgLoadAnim1,
 //    case imgLoadAnim2,
 //    case imgLoadAnim3,
 //    case imgLoadAnim4,
@@ -793,8 +793,8 @@ uint16 WidgetsWrapper::GUIsetWidgetEnable(uint32 id, uint8 enable)
 
 //    //PANTALLA DE INICIO
 //    case imgInitScrBckGnd,
-//    case butSelectWoman,
-//    case butSelectMan,
+//    case ButSelectWoman,
+//    case ButSelectMan,
 //    case imgInitGPRScoverage,		//V7790
 
 //    //Menu principal
@@ -805,9 +805,9 @@ uint16 WidgetsWrapper::GUIsetWidgetEnable(uint32 id, uint8 enable)
 //    case butInitScrCalc,
 //    case butInitScrData,
 
-//    case swInitScrAvisos,
-//    case imgInitScrNotificacion,
-//    case popupInitScrAvisos,
+//    case SwInitScrAvisos,
+//    case ImgInitScrNotificacion,
+//    case PopupInitScrAvisos,
 //    case imgPopUpInitScrAvisoBckGND,
 //    case imgPopUpInitScrAvisoNivelAguaBajo,
 //    case imgPopUpInitScrAvisoNivelAguaMedio,
@@ -828,130 +828,130 @@ uint16 WidgetsWrapper::GUIsetWidgetEnable(uint32 id, uint8 enable)
 //    case imgCtrlPnlBckGndHP4,
 
 //    //Colores fondos de los paneles de control
-//    case imgColourCtrlPnlBckGndHP1,
-//    case imgColourCtrlPnlBckGndHP2,
-//    case imgColourCtrlPnlBckGndHP3,
-//    case imgColourCtrlPnlBckGndHP4,
+//    case ImgColourCtrlPnlBckGndHP1,
+//    case ImgColourCtrlPnlBckGndHP2,
+//    case ImgColourCtrlPnlBckGndHP3,
+//    case ImgColourCtrlPnlBckGndHP4,
 
 //    //Indicadores de accion del HP cuando activos, los inactivos forman parte del fondo
-//    case imgCtrlPnlRFIDblinkHP1,
-//    case imgCtrlPnlRFIDblinkHP2,
-//    case imgCtrlPnlRFIDblinkHP3,
-//    case imgCtrlPnlRFIDblinkHP4,
-//    case imgCtrlPnlPulBlinkHP1,
-//    case imgCtrlPnlPulBlinkHP2,
-//    case imgCtrlPnlPulBlinkHP3,
-//    case imgCtrlPnlPulBlinkHP4,
-//    case imgCtrlPnlVacBlinkHP1,
-//    case imgCtrlPnlVacBlinkHP2,
-//    case imgCtrlPnlVacBlinkHP3,
-//    case imgCtrlPnlVacBlinkHP4,
-//    case imgCtrlPnlCoolingBlinkHP1,
-//    case imgCtrlPnlCoolingBlinkHP2,
-//    case imgCtrlPnlCoolingBlinkHP3,
-//    case imgCtrlPnlCoolingBlinkHP4,
+//    case ImgCtrlPnlRFIDblinkHP1,
+//    case ImgCtrlPnlRFIDblinkHP2,
+//    case ImgCtrlPnlRFIDblinkHP3,
+//    case ImgCtrlPnlRFIDblinkHP4,
+//    case ImgCtrlPnlPulBlinkHP1,
+//    case ImgCtrlPnlPulBlinkHP2,
+//    case ImgCtrlPnlPulBlinkHP3,
+//    case ImgCtrlPnlPulBlinkHP4,
+//    case ImgCtrlPnlVacBlinkHP1,
+//    case ImgCtrlPnlVacBlinkHP2,
+//    case ImgCtrlPnlVacBlinkHP3,
+//    case ImgCtrlPnlVacBlinkHP4,
+//    case ImgCtrlPnlCoolingBlinkHP1,
+//    case ImgCtrlPnlCoolingBlinkHP2,
+//    case ImgCtrlPnlCoolingBlinkHP3,
+//    case ImgCtrlPnlCoolingBlinkHP4,
 
     //Botones del panel de control de PLAY y Test Vacum
-    case butCtrlPnlPlayHP1: emit controlPanelPlayButtonEnabled(APP_GUI_HP1_ID, enable); break;
-    case butCtrlPnlPlayHP2: emit controlPanelPlayButtonEnabled(APP_GUI_HP2_ID, enable); break;
-    case butCtrlPnlPlayHP3: emit controlPanelPlayButtonEnabled(APP_GUI_HP3_ID, enable); break;
-    case butCtrlPnlPlayHP4: emit controlPanelPlayButtonEnabled(APP_GUI_HP1_ID, enable); break;
-    case swCtrlPnlTstVacHP1: emit controlPanelVacuumButtonEnabled(APP_GUI_HP1_ID, enable); break;
-    case swCtrlPnlTstVacHP2: emit controlPanelVacuumButtonEnabled(APP_GUI_HP2_ID, enable); break;
-    case swCtrlPnlTstVacHP3: emit controlPanelVacuumButtonEnabled(APP_GUI_HP3_ID, enable); break;
-    case swCtrlPnlTstVacHP4: emit controlPanelVacuumButtonEnabled(APP_GUI_HP1_ID, enable); break;
+    case ButCtrlPnlPlayHP1: emit controlPanelPlayButtonEnabled(APP_GUI_HP1_ID, enable); break;
+    case ButCtrlPnlPlayHP2: emit controlPanelPlayButtonEnabled(APP_GUI_HP2_ID, enable); break;
+    case ButCtrlPnlPlayHP3: emit controlPanelPlayButtonEnabled(APP_GUI_HP3_ID, enable); break;
+    case ButCtrlPnlPlayHP4: emit controlPanelPlayButtonEnabled(APP_GUI_HP1_ID, enable); break;
+    case SwCtrlPnlTstVacHP1: emit controlPanelVacuumButtonEnabled(APP_GUI_HP1_ID, enable); break;
+    case SwCtrlPnlTstVacHP2: emit controlPanelVacuumButtonEnabled(APP_GUI_HP2_ID, enable); break;
+    case SwCtrlPnlTstVacHP3: emit controlPanelVacuumButtonEnabled(APP_GUI_HP3_ID, enable); break;
+    case SwCtrlPnlTstVacHP4: emit controlPanelVacuumButtonEnabled(APP_GUI_HP1_ID, enable); break;
 
 //    //Botones (switch) que permite seleccionar modo de tratamiento AUTO o MANUAL
-//    case butSwtchModeAutoManualHP1,
-//    case butSwtchModeAutoManualHP2,
-//    case butSwtchModeAutoManualHP3,
-//    case butSwtchModeAutoManualHP4,
+//    case ButSwtchModeAutoManualHP1,
+//    case ButSwtchModeAutoManualHP2,
+//    case ButSwtchModeAutoManualHP3,
+//    case ButSwtchModeAutoManualHP4,
 
 //    //Visores de tiempo restante de trt y boton de seleccion de tiempo
-//    case numVwrTimeHP1
-//    case numVwrTimeHP2
-//    case numVwrTimeHP3
-//    case numVwrTimeHP4
-    case butSelectTimeHP1: emit controlPanelTimeButtonEnabled(APP_GUI_HP1_ID, enable); break;
-    case butSelectTimeHP2: emit controlPanelTimeButtonEnabled(APP_GUI_HP3_ID, enable); break;
-    case butSelectTimeHP3: emit controlPanelTimeButtonEnabled(APP_GUI_HP2_ID, enable); break;
-    case butSelectTimeHP4: emit controlPanelTimeButtonEnabled(APP_GUI_HP1_ID, enable); break;
-    case butVwrTemperatureHP1: emit temperatureButtonEnabled(APP_GUI_HP1_ID, enable); break;
-    case butVwrTemperatureHP2: emit temperatureButtonEnabled(APP_GUI_HP2_ID, enable); break;
-    case butVwrTemperatureHP3: emit temperatureButtonEnabled(APP_GUI_HP3_ID, enable); break;
-    case butVwrTemperatureHP4: emit temperatureButtonEnabled(APP_GUI_HP1_ID, enable); break;
+//    case NumVwrTimeHP1
+//    case NumVwrTimeHP2
+//    case NumVwrTimeHP3
+//    case NumVwrTimeHP4
+    case ButSelectTimeHP1: emit controlPanelTimeButtonEnabled(APP_GUI_HP1_ID, enable); break;
+    case ButSelectTimeHP2: emit controlPanelTimeButtonEnabled(APP_GUI_HP3_ID, enable); break;
+    case ButSelectTimeHP3: emit controlPanelTimeButtonEnabled(APP_GUI_HP2_ID, enable); break;
+    case ButSelectTimeHP4: emit controlPanelTimeButtonEnabled(APP_GUI_HP1_ID, enable); break;
+    case ButVwrTemperatureHP1: emit temperatureButtonEnabled(APP_GUI_HP1_ID, enable); break;
+    case ButVwrTemperatureHP2: emit temperatureButtonEnabled(APP_GUI_HP2_ID, enable); break;
+    case ButVwrTemperatureHP3: emit temperatureButtonEnabled(APP_GUI_HP3_ID, enable); break;
+    case ButVwrTemperatureHP4: emit temperatureButtonEnabled(APP_GUI_HP1_ID, enable); break;
 
 //    //Visor numerico para contabilizar resucciones
-//    case numVwrResucctionCountHP1,
-//    case numVwrResucctionCountHP2,
-//    case numVwrResucctionCountHP3,
-//    case numVwrResucctionCountHP4,
+//    case NumVwrResucctionCountHP1,
+//    case NumVwrResucctionCountHP2,
+//    case NumVwrResucctionCountHP3,
+//    case NumVwrResucctionCountHP4,
 
 //    //Boton con la imagen e imagen con el texto del modelo
-//    case imgModelTextHP1,
-//    case imgModelTextHP2,
-//    case imgModelTextHP3,
-//    case imgModelTextHP4,
-    case butModelImageHP1: emit hpImageButtonEnabled(APP_GUI_HP1_ID, enable); break;
-    case butModelImageHP2: emit hpImageButtonEnabled(APP_GUI_HP2_ID, enable); break;
-    case butModelImageHP3: emit hpImageButtonEnabled(APP_GUI_HP3_ID, enable); break;
-    case butModelImageHP4: emit hpImageButtonEnabled(APP_GUI_HP1_ID, enable); break;
+//    case ImgModelTextHP1,
+//    case ImgModelTextHP2,
+//    case ImgModelTextHP3,
+//    case ImgModelTextHP4,
+    case ButModelImageHP1: emit hpImageButtonEnabled(APP_GUI_HP1_ID, enable); break;
+    case ButModelImageHP2: emit hpImageButtonEnabled(APP_GUI_HP2_ID, enable); break;
+    case ButModelImageHP3: emit hpImageButtonEnabled(APP_GUI_HP3_ID, enable); break;
+    case ButModelImageHP4: emit hpImageButtonEnabled(APP_GUI_HP1_ID, enable); break;
 
     //Botonoes de recogida y despliegue del panel de control
-    case butHideControlPanelHP1: emit controlPanelHideButtonEnabled(APP_GUI_HP1_ID, enable); break;
-    case butHideControlPanelHP2: emit controlPanelHideButtonEnabled(APP_GUI_HP2_ID, enable); break;
-    case butHideControlPanelHP3: emit controlPanelHideButtonEnabled(APP_GUI_HP3_ID, enable); break;
-    case butHideControlPanelHP4: emit controlPanelHideButtonEnabled(APP_GUI_HP1_ID, enable); break;
+    case ButHideControlPanelHP1: emit controlPanelHideButtonEnabled(APP_GUI_HP1_ID, enable); break;
+    case ButHideControlPanelHP2: emit controlPanelHideButtonEnabled(APP_GUI_HP2_ID, enable); break;
+    case ButHideControlPanelHP3: emit controlPanelHideButtonEnabled(APP_GUI_HP3_ID, enable); break;
+    case ButHideControlPanelHP4: emit controlPanelHideButtonEnabled(APP_GUI_HP1_ID, enable); break;
 //    case butShowControlPanelHP1,
 //    case butShowControlPanelHP2,
 //    case butShowControlPanelHP3,
 //    case butShowControlPanelHP4,
 
 //    //Botones de selección de Full body
-//    case butFullBodyTorso,
-//    case butFullBodyPiernas,
-//    case butFullBodyBrazos,
-//    case butFullBodyEspalda,
-//    case butFullBodyPiernaMuslo,
-//    case butFullBodyCuello,
+//    case ButFullBodyTorso,
+//    case ButFullBodyPiernas,
+//    case ButFullBodyBrazos,
+//    case ButFullBodyEspalda,
+//    case ButFullBodyPiernaMuslo,
+//    case ButFullBodyCuello,
 
     //Puntos seleccion de zona de tratamiento cuando zoom
-    case swDotZone0:
-    case swDotZone1:
-    case swDotZone2:
-    case swDotZone3:
-    case swDotZone4:
-    case swDotZone5:
-    case swDotZone6:
-    case swDotZone7:
-    case swDotZone8:
-    case swDotZone9:
-    case swDotZone10:
-    case swDotZone11:
-    case swDotZone12:
-    case swDotZone13:
-    case swDotZone14: emit dotZoneEnabled((EAppGUIwidgetIDlist)id, enable); break;
+    case SwDotZone0:
+    case SwDotZone1:
+    case SwDotZone2:
+    case SwDotZone3:
+    case SwDotZone4:
+    case SwDotZone5:
+    case SwDotZone6:
+    case SwDotZone7:
+    case SwDotZone8:
+    case SwDotZone9:
+    case SwDotZone10:
+    case SwDotZone11:
+    case SwDotZone12:
+    case SwDotZone13:
+    case SwDotZone14: emit dotZoneEnabled((EAppGUIwidgetIDlist)id, enable); break;
 
 //    //Punto seleccionado para tratamiento con ese HP a mostrar en full body
-//    case imgSelectedTrtZoneHP1,
-//    case imgSelectedTrtZoneHP2,
-//    case imgSelectedTrtZoneHP3,
-//    case imgSelectedTrtZoneHP4,
+//    case ImgSelectedTrtZoneHP1,
+//    case ImgSelectedTrtZoneHP2,
+//    case ImgSelectedTrtZoneHP3,
+//    case ImgSelectedTrtZoneHP4,
 
 //    //POPUP's
 //    //Common
-    case butPopUpReturn: emit returnButtonEnabled(enable); break;
+    case ButPopUpReturn: emit returnButtonEnabled(enable); break;
 //    case imgPopUpHPcolorBar,
 
 //    //PopUp Time widgets
-//    case popUpTime,
+//    case PopUpTime,
 //    case butPopUpTime50min,
 //    case butPopUpTime70min,
 //    case imgPopUpTime1sel,
 //    case imgPopUpTime2sel,
 
 //    //PopUp Test Vacum widgets
-//    case popUpTstVac,
+//    case PopUpTstVac,
 //    case imgPopUpTstVacBckGnd,
 //    case imgPopUpTstVacLowLvl,
 //    case imgPopUpTstVacMidLvl,
@@ -962,51 +962,51 @@ uint16 WidgetsWrapper::GUIsetWidgetEnable(uint32 id, uint8 enable)
 //    case butPopUpTstVacManualMidLvl,
 //    case butPopUpTstVacManualHighLvl,
 //    case butPopUpTstVacAuto,
-//    case swPopUpTstVacLowLvl,
-//    case swPopUpTstVacMidLvl,
-//    case swPopUpTstVacHighLvl,
+//    case SwPopUpTstVacLowLvl,
+//    case SwPopUpTstVacMidLvl,
+//    case SwPopUpTstVacHighLvl,
 //    case imgPopUpTstVacAUTOstatus,
 
 //    //PopUp Test Vacuum 2 widgets
-//    case popUpTstVacSmall,
+//    case PopUpTstVacSmall,
 //    case imgPopUpVacSelBck,
 //    case butPopUpTstVacSmallLowLvl,
 //    case butPopUpTstVacSmallMedLvl,
 //    case butPopUpTstVacSmallHighLvl,
 
 //    //PopUp RFID widgets
-//    case popUpRFID,
+//    case PopUpRFID,
 //    case imgPopUpRFIDbckGnd,
 //    case imgPopUpRFIDlabel,
 //    case imgPopUpRFIDresult,
 //    case butPopUpRFIDreuseLabel,
-//    case numVwrPopUpRFIDrestTime,
+//    case NumVwrPopUpRFIDrestTime,
 
 //    //PopUp Recommendation widgets
-    case swPopUpRecommInfo: emit infoSwitchEnabled(enable); break;
-//    case popUpRecomm,
+    case SwPopUpRecommInfo: emit infoSwitchEnabled(enable); break;
+//    case PopUpRecomm,
 //    case imgPopUpRecommbckGnd,
-//    case imgPopUpRecommCurved,
-//    case imgPopUpRecommTight,
-//    case imgPopUpRecommStright,
-//    case imgPopUpRecommTiny,
-//    case imgPopUpRecommTinyCurved,
-//    case imgPopUpRecommDouble,
-//    case imgPopUpRecommOval,
-//    case imgPopUpRecommOvalCurved,
-//    case imgPopUpRecommAngled,
+//    case ImgPopUpRecommCurved,
+//    case ImgPopUpRecommTight,
+//    case ImgPopUpRecommStright,
+//    case ImgPopUpRecommTiny,
+//    case ImgPopUpRecommTinyCurved,
+//    case ImgPopUpRecommDouble,
+//    case ImgPopUpRecommOval,
+//    case ImgPopUpRecommOvalCurved,
+//    case ImgPopUpRecommAngled,
 
 //    //Menu Principal
 //    case butTrtScrShowMainMenu,
 //    case butTrtScrHideMainMenu,
-//    case butTrtScrHome,
-//    case butTrtScrCfg,
-//    case butTrtScrCalc,
+//    case ButTrtScrHome,
+//    case ButTrtScrCfg,
+//    case ButTrtScrCalc,
 //    case butTrtScrData,
 
-//    case swTrtScrAvisos,
-//    case imgTrtScrNotificacion,
-//    case popupTrtScrAvisos,
+//    case SwTrtScrAvisos,
+//    case ImgTrtScrNotificacion,
+//    case PopupTrtScrAvisos,
 //    case imgPopUpTrtScrAvisoBckGND,
 //    case imgPopUpTrtScrAvisoNivelAguaBajo,
 //    case imgPopUpTrtScrAvisoNivelAguaMedio,
@@ -1021,11 +1021,11 @@ uint16 WidgetsWrapper::GUIsetWidgetEnable(uint32 id, uint8 enable)
 //    case imgPopUpErrBckGndHP3,
 //    case imgPopUpErrBckGndHP4,
 //    case imgPopUpErrBckGndUC,
-//    case numVwrPopUpErrHP1,
-//    case numVwrPopUpErrHP2,
-//    case numVwrPopUpErrHP3,
-//    case numVwrPopUpErrHP4,
-//    case numVwrPopUpErrUC,
+//    case NumVwrPopUpErrHP1,
+//    case NumVwrPopUpErrHP2,
+//    case NumVwrPopUpErrHP3,
+//    case NumVwrPopUpErrHP4,
+//    case NumVwrPopUpErrUC,
 //    case imgPopUpErrMsgHP1,
 //    case imgPopUpErrMsgHP2,
 //    case imgPopUpErrMsgHP3,
@@ -1036,20 +1036,20 @@ uint16 WidgetsWrapper::GUIsetWidgetEnable(uint32 id, uint8 enable)
 //    case butPopUpErrOkHP3,
 //    case butPopUpErrOkHP4,
 //    case butPopUpErrOkUC,
-//    case numVwrPopUpErrTRTtimeHP1,
-//    case numVwrPopUpErrTRTtimeHP2,
-//    case numVwrPopUpErrTRTtimeHP3,
-//    case numVwrPopUpErrTRTtimeHP4,
+//    case NumVwrPopUpErrTRTtimeHP1,
+//    case NumVwrPopUpErrTRTtimeHP2,
+//    case NumVwrPopUpErrTRTtimeHP3,
+//    case NumVwrPopUpErrTRTtimeHP4,
 
 //    //PopUp's CleanUp
 //    case imgPopUpCleanBckGndHP1,
 //    case imgPopUpCleanBckGndHP2,
 //    case imgPopUpCleanBckGndHP3,
 //    case imgPopUpCleanBckGndHP4,
-//    case numVwrPopUpCleanHP1,
-//    case numVwrPopUpCleanHP2,
-//    case numVwrPopUpCleanHP3,
-//    case numVwrPopUpCleanHP4,
+//    case NumVwrPopUpCleanHP1,
+//    case NumVwrPopUpCleanHP2,
+//    case NumVwrPopUpCleanHP3,
+//    case NumVwrPopUpCleanHP4,
 //    case butPopUpCleanHP1,
 //    case butPopUpCleanHP2,
 //    case butPopUpCleanHP3,
@@ -1070,30 +1070,30 @@ uint16 WidgetsWrapper::GUIsetWidgetEnable(uint32 id, uint8 enable)
 //    case butPopUpCleanCancelHP2,
 //    case butPopUpCleanCancelHP3,
 //    case butPopUpCleanCancelHP4,
-//    case numVwrPopUpCleanNumCancelHP1,
-//    case numVwrPopUpCleanNumCancelHP2,
-//    case numVwrPopUpCleanNumCancelHP3,
-//    case numVwrPopUpCleanNumCancelHP4,
+//    case NumVwrPopUpCleanNumCancelHP1,
+//    case NumVwrPopUpCleanNumCancelHP2,
+//    case NumVwrPopUpCleanNumCancelHP3,
+//    case NumVwrPopUpCleanNumCancelHP4,
 
 
 //    //Pantalla de la calculadora
 //    case imgFondoCalcScreen,
 //    case imgCuerpoCalc,
-//    case numVwrPantallaCalc,
-//    case butNum0Calc,
-//    case butNum1Calc,
-//    case butNum2Calc,
-//    case butNum3Calc,
-//    case butNum4Calc,
-//    case butNum5Calc,
-//    case butNum6Calc,
-//    case butNum7Calc,
-//    case butNum8Calc,
-//    case butNum9Calc,
+//    case NumVwrPantallaCalc,
+//    case ButNum0Calc,
+//    case ButNum1Calc,
+//    case ButNum2Calc,
+//    case ButNum3Calc,
+//    case ButNum4Calc,
+//    case ButNum5Calc,
+//    case ButNum6Calc,
+//    case ButNum7Calc,
+//    case ButNum8Calc,
+//    case ButNum9Calc,
 //    case butMasCalc,
 //    case butMenosCalc,
-//    case butEnterCalc,
-//    case butCECalc,
+//    case ButEnterCalc,
+//    case ButCECalc,
 //    case butComaCalc,
 
 //    //Menu principal - calculadora
@@ -1104,9 +1104,9 @@ uint16 WidgetsWrapper::GUIsetWidgetEnable(uint32 id, uint8 enable)
 //    case imgCalcScrCalc,
 //    case butCalcScrData,
 
-//    case swCalcScrAvisos,
-//    case imgCalcScrNotificacion,
-//    case popupCalcScrAvisos,
+//    case SwCalcScrAvisos,
+//    case ImgCalcScrNotificacion,
+//    case PopupCalcScrAvisos,
 //    case imgPopUpCalcScrAvisoBckGND,
 //    case imgPopUpCalcScrAvisoNivelAguaBajo,
 //    case imgPopUpCalcScrAvisoNivelAguaMedio,
@@ -1120,11 +1120,11 @@ uint16 WidgetsWrapper::GUIsetWidgetEnable(uint32 id, uint8 enable)
 //    case imgVentanaCfgCastellano,
 //    case butCfgActualizarSoftware,
 //    case imgSoftwareProgressionUpdateBar,
-//    case numVwrModeloMaqCfg,
-//    case numVwrVersionSoftwareCfg,
+//    case NumVwrModeloMaqCfg,
+//    case NumVwrVersionSoftwareCfg,
 //    case butCfgRecargaCoolant,
-//    case swCfgResuctionViewer,
-//    case swCfgTemperatureViewer,
+//    case SwCfgResuctionViewer,
+//    case SwCfgTemperatureViewer,
 //    case butCfgCleanUpHP1,
 //    case butCfgCleanUpHP2,
 //    case butCfgCleanUpHP3,
@@ -1140,9 +1140,9 @@ uint16 WidgetsWrapper::GUIsetWidgetEnable(uint32 id, uint8 enable)
 //    case butCfgScrCalc,
 //    case butCfgScrData,
 
-//    case swCfgScrAvisos,
-//    case imgCfgScrNotificacion,
-//    case popupCfgScrAvisos,
+//    case SwCfgScrAvisos,
+//    case ImgCfgScrNotificacion,
+//    case PopupCfgScrAvisos,
 //    case imgPopUpCfgScrAvisoBckGND,
 //    case imgPopUpCfgScrAvisoNivelAguaBajo,
 //    case imgPopUpCfgScrAvisoNivelAguaMedio,
@@ -1154,17 +1154,17 @@ uint16 WidgetsWrapper::GUIsetWidgetEnable(uint32 id, uint8 enable)
 //    //Pantalla de idiomas
 //    case imgFondoLanScreen,
 
-//    case swLanFrances,
-//    case swLanCastellano,
-//    case swLanIngles,
-//    case swLanItaliano,
-//    case swLanAleman,
-//    case swLanPolaco,
-//    case swLanRuso,
-//    case swLanPortugues,
-//    case swLanChino,
-//    case swLanJapones,
-//    case swLanCoreano,
+//    case SwLanFrances,
+//    case SwLanCastellano,
+//    case SwLanIngles,
+//    case SwLanItaliano,
+//    case SwLanAleman,
+//    case SwLanPolaco,
+//    case SwLanRuso,
+//    case SwLanPortugues,
+//    case SwLanChino,
+//    case SwLanJapones,
+//    case SwLanCoreano,
 
 //    //Menu principal - idiomas
 //    case butLanScrShowMainMenu,
@@ -1174,9 +1174,9 @@ uint16 WidgetsWrapper::GUIsetWidgetEnable(uint32 id, uint8 enable)
 //    case butLanScrCalc,
 //    case imgLanScrData,
 
-//    case swLanScrAvisos,
-//    case imgLanScrNotificacion,
-//    case popupLanScrAvisos,
+//    case SwLanScrAvisos,
+//    case ImgLanScrNotificacion,
+//    case PopupLanScrAvisos,
 //    case imgPopUpLanScrAvisoBckGND,
 //    case imgPopUpLanScrAvisoNivelAguaBajo,
 //    case imgPopUpLanScrAvisoNivelAguaMedio,
@@ -1189,7 +1189,7 @@ uint16 WidgetsWrapper::GUIsetWidgetEnable(uint32 id, uint8 enable)
 //    case imgFondoSATscreen,
 //    case butHomeSATscreen,
 
-//    case numVwrPaginaSATscreen,
+//    case NumVwrPaginaSATscreen,
 //    case butNextPagSATscreen,
 //    case butPrevPagSATscreen,
 
@@ -1241,34 +1241,34 @@ uint16 WidgetsWrapper::GUIsetWidgetEnable(uint32 id, uint8 enable)
 //    case imgVwr28_1,
 //    case imgVwr28_2,
 
-//    case numVwr1,
-//    case numVwr2,
-//    case numVwr3,
-//    case numVwr4,
-//    case numVwr5,
-//    case numVwr6,
-//    case numVwr7,
-//    case numVwr8,
-//    case numVwr9,
-//    case numVwr10,
-//    case numVwr11,
-//    case numVwr12,
-//    case numVwr13,
-//    case numVwr14,
-//    case numVwr15,
-//    case numVwr16,
-//    case numVwr17,
-//    case numVwr18,
-//    case numVwr19,
-//    case numVwr20,
-//    case numVwr21,
-//    case numVwr22,
-//    case numVwr23,
-//    case numVwr24,
-//    case numVwr25,
-//    case numVwr26,
-//    case numVwr27,
-//    case numVwr28,
+//    case NumVwr1,
+//    case NumVwr2,
+//    case NumVwr3,
+//    case NumVwr4,
+//    case NumVwr5,
+//    case NumVwr6,
+//    case NumVwr7,
+//    case NumVwr8,
+//    case NumVwr9,
+//    case NumVwr10,
+//    case NumVwr11,
+//    case NumVwr12,
+//    case NumVwr13,
+//    case NumVwr14,
+//    case NumVwr15,
+//    case NumVwr16,
+//    case NumVwr17,
+//    case NumVwr18,
+//    case NumVwr19,
+//    case NumVwr20,
+//    case NumVwr21,
+//    case NumVwr22,
+//    case NumVwr23,
+//    case NumVwr24,
+//    case NumVwr25,
+//    case NumVwr26,
+//    case NumVwr27,
+//    case NumVwr28,
 
 //    case imgVacuum,
 //    case imgFrio,
@@ -1276,19 +1276,19 @@ uint16 WidgetsWrapper::GUIsetWidgetEnable(uint32 id, uint8 enable)
 //    case imgTestLed,
 //    case imgTestLedStatus,
 //    case imgTestLedRGD,
-//    case swVacuum,
-//    case swFrio,
-//    case swRFID,
-//    case swTestLed,
-//    case swTestLedRGB,
+//    case SwVacuum,
+//    case SwFrio,
+//    case SwRFID,
+//    case SwTestLed,
+//    case SwTestLedRGB,
 
 //    case PopupErrorSAT,
 //    case imgVwrFondoErrorSAT,
-//    case numVwrError1,
-//    case numVwrError2,
-//    case numVwrError3,
-//    case numVwrError4,
-//    case numVwrError5,
+//    case NumVwrError1,
+//    case NumVwrError2,
+//    case NumVwrError3,
+//    case NumVwrError4,
+//    case NumVwrError5,
 //    case butOkerr,
 
 //    //Pantalla de FATIGA
@@ -1316,27 +1316,27 @@ uint16 WidgetsWrapper::GUIsetWidgetEnable(uint32 id, uint8 enable)
 //    case imgStep7,
 //    case imgStep7status,
 
-//    case numVwrTempAmb,
-//    case numVwrTempBomba,
-//    case numVwrTempRetorno,
-//    case numVwrCaudalRetorno,
-//    case numVwrVtobera,
-//    case numVwrRth,
-//    case numVwrCPI,
-//    case numVwrCaudalRetornoHP1,
-//    case numVwrCaudalRetornoHP2,
-//    case numVwrCaudalRetornoHP3,
-//    case numVwrCaudalRetornoHP4,
-//    case numVwrVacuumHP1,
-//    case numVwrVacuumHP2,
-//    case numVwrVacuumHP3,
-//    case numVwrVacuumHP4,
-//    case numVwrFatigaTime,
-//    case numVwrErrFatiga1,
-//    case numVwrErrFatiga2,
-//    case numVwrErrFatiga3,
-//    case numVwrErrFatiga4,
-//    case numVwrErrFatiga5,
+//    case NumVwrTempAmb,
+//    case NumVwrTempBomba,
+//    case NumVwrTempRetorno,
+//    case NumVwrCaudalRetorno,
+//    case NumVwrVtobera,
+//    case NumVwrRth,
+//    case NumVwrCPI,
+//    case NumVwrCaudalRetornoHP1,
+//    case NumVwrCaudalRetornoHP2,
+//    case NumVwrCaudalRetornoHP3,
+//    case NumVwrCaudalRetornoHP4,
+//    case NumVwrVacuumHP1,
+//    case NumVwrVacuumHP2,
+//    case NumVwrVacuumHP3,
+//    case NumVwrVacuumHP4,
+//    case NumVwrFatigaTime,
+//    case NumVwrErrFatiga1,
+//    case NumVwrErrFatiga2,
+//    case NumVwrErrFatiga3,
+//    case NumVwrErrFatiga4,
+//    case NumVwrErrFatiga5,
 
 //    case imgVwrVAC1,
 //    case imgVwrVAC2,
@@ -1354,7 +1354,7 @@ uint16 WidgetsWrapper::GUIsetWidgetEnable(uint32 id, uint8 enable)
 //    case imgVwrRth,
 //    case imgVwrCPI,				//447
 
-//    case swFatigueFailBeep,
+//    case SwFatigueFailBeep,
     default: /* Do nothing */ break;
     }
 
@@ -1364,14 +1364,14 @@ uint16 WidgetsWrapper::GUIsetWidgetEnable(uint32 id, uint8 enable)
 void WidgetsWrapper::GUIsetImgViewerImage(uint32 id, uint32 idImg)
 {
     switch (id) {
-    case imgModelTextHP1: emit hpControlPanelModelTextSet( AppEnumsNs::APP_GUI_HP1_ID, (EAppGUIimageIDlist)idImg ); break;
-    case imgModelTextHP2: emit hpControlPanelModelTextSet( AppEnumsNs::APP_GUI_HP2_ID, (EAppGUIimageIDlist)idImg ); break;
-    case imgModelTextHP3: emit hpControlPanelModelTextSet( AppEnumsNs::APP_GUI_HP3_ID, (EAppGUIimageIDlist)idImg ); break;
-    case imgModelTextHP4: emit hpControlPanelModelTextSet( AppEnumsNs::APP_GUI_HP4_ID, (EAppGUIimageIDlist)idImg ); break;
-    case imgColourCtrlPnlBckGndHP2: emit hpControlPanelColorSet(AppEnumsNs::APP_GUI_HP2_ID, (uint8)idImg); break;
-    case imgColourCtrlPnlBckGndHP1: emit hpControlPanelColorSet(AppEnumsNs::APP_GUI_HP1_ID, (uint8)idImg); break;
-    case imgColourCtrlPnlBckGndHP3: emit hpControlPanelColorSet(AppEnumsNs::APP_GUI_HP3_ID, (uint8)idImg); break;
-    case imgColourCtrlPnlBckGndHP4: emit hpControlPanelColorSet(AppEnumsNs::APP_GUI_HP4_ID, (uint8)idImg); break;
+    case ImgModelTextHP1: emit hpControlPanelModelTextSet( AppEnumsNs::APP_GUI_HP1_ID, (EAppGUIimageIDlist)idImg ); break;
+    case ImgModelTextHP2: emit hpControlPanelModelTextSet( AppEnumsNs::APP_GUI_HP2_ID, (EAppGUIimageIDlist)idImg ); break;
+    case ImgModelTextHP3: emit hpControlPanelModelTextSet( AppEnumsNs::APP_GUI_HP3_ID, (EAppGUIimageIDlist)idImg ); break;
+    case ImgModelTextHP4: emit hpControlPanelModelTextSet( AppEnumsNs::APP_GUI_HP4_ID, (EAppGUIimageIDlist)idImg ); break;
+    case ImgColourCtrlPnlBckGndHP2: emit hpControlPanelColorSet(AppEnumsNs::APP_GUI_HP2_ID, (uint8)idImg); break;
+    case ImgColourCtrlPnlBckGndHP1: emit hpControlPanelColorSet(AppEnumsNs::APP_GUI_HP1_ID, (uint8)idImg); break;
+    case ImgColourCtrlPnlBckGndHP3: emit hpControlPanelColorSet(AppEnumsNs::APP_GUI_HP3_ID, (uint8)idImg); break;
+    case ImgColourCtrlPnlBckGndHP4: emit hpControlPanelColorSet(AppEnumsNs::APP_GUI_HP4_ID, (uint8)idImg); break;
     default: break;
     }
 }
@@ -1381,10 +1381,10 @@ void WidgetsWrapper::GUIsetImgViewerPosition(uint32 id, uint16 posx, uint16 posy
     EAppGUI_HPsIDs hpIndex = APP_GUI_MAXNUM_HP;
 
     switch(id) {
-    case imgSelectedTrtZoneHP1: hpIndex = AppEnumsNs::APP_GUI_HP1_ID; break;
-    case imgSelectedTrtZoneHP2: hpIndex = AppEnumsNs::APP_GUI_HP2_ID; break;
-    case imgSelectedTrtZoneHP3: hpIndex = AppEnumsNs::APP_GUI_HP3_ID; break;
-    case imgSelectedTrtZoneHP4: hpIndex = AppEnumsNs::APP_GUI_HP4_ID; break;
+    case ImgSelectedTrtZoneHP1: hpIndex = AppEnumsNs::APP_GUI_HP1_ID; break;
+    case ImgSelectedTrtZoneHP2: hpIndex = AppEnumsNs::APP_GUI_HP2_ID; break;
+    case ImgSelectedTrtZoneHP3: hpIndex = AppEnumsNs::APP_GUI_HP3_ID; break;
+    case ImgSelectedTrtZoneHP4: hpIndex = AppEnumsNs::APP_GUI_HP4_ID; break;
     default: break;
     }
 
@@ -1396,16 +1396,16 @@ void WidgetsWrapper::GUIsetHpControlPanelImgButton(uint32 id, EAppGUIimageIDlist
     EAppGUI_HPsIDs hpIndex = APP_GUI_MAXNUM_HP;
 
     switch (id) {
-    case butModelImageHP1:
+    case ButModelImageHP1:
         hpIndex = AppEnumsNs::APP_GUI_HP1_ID;
         break;
-    case butModelImageHP2:
+    case ButModelImageHP2:
         hpIndex = AppEnumsNs::APP_GUI_HP2_ID;
         break;
-    case butModelImageHP3:
+    case ButModelImageHP3:
         hpIndex = AppEnumsNs::APP_GUI_HP3_ID;
         break;
-    case butModelImageHP4:
+    case ButModelImageHP4:
         hpIndex = AppEnumsNs::APP_GUI_HP4_ID;
         break;
     default: break;
@@ -1452,9 +1452,9 @@ void WidgetsWrapper::GUIUpdateTimeButton(EAppGUI_HPsIDs HPindex, EAppGUITimeButS
 void WidgetsWrapper::GUIactivePopUp(EAppGUIwidgetIDlist popupWidgetId)
 {
     switch (popupWidgetId) {
-    case popUpRecomm: emit recommendedHpsPopupActivated(true); break;
-    case popUpRFID: emit rfidPopupActivated(true); break;
-    case popUpTstVac: emit testVacuumPopupActivated(true); break;
+    case PopUpRecomm: emit recommendedHpsPopupActivated(true); break;
+    case PopUpRFID: emit rfidPopupActivated(true); break;
+    case PopUpTstVac: emit testVacuumPopupActivated(true); break;
     default: break;
     }
 }
@@ -1462,9 +1462,9 @@ void WidgetsWrapper::GUIactivePopUp(EAppGUIwidgetIDlist popupWidgetId)
 void WidgetsWrapper::GUIdisablePopUp(EAppGUIwidgetIDlist popupWidgetId)
 {
     switch (popupWidgetId) {
-    case popUpRecomm: emit recommendedHpsPopupActivated(false); break;
-    case popUpRFID: emit rfidPopupActivated(false); break;
-    case popUpTstVac: emit testVacuumPopupActivated(false); break;
+    case PopUpRecomm: emit recommendedHpsPopupActivated(false); break;
+    case PopUpRFID: emit rfidPopupActivated(false); break;
+    case PopUpTstVac: emit testVacuumPopupActivated(false); break;
     default: break;
     }
 }

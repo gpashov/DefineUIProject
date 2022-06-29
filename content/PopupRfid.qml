@@ -57,8 +57,7 @@ Item {
         font.family: "Verdana"
     }
 
-    // TODO Problem: AppEnumsNs.popUpRFID gives undefined value
-    onVisibleChanged: { cbkWpr.popUpVisibleChanged(AppEnumsNs.popUpRFID, visible); console.log("AppEnumsNs.popUpRFID: ", AppEnumsNs.popUpRFID) }
+    onVisibleChanged: cbkWpr.popUpVisibleChanged(AppEnumsNs.PopUpRFID, visible)
 }
 
 

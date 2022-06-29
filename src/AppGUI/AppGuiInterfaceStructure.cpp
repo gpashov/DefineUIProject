@@ -15,11 +15,11 @@
 //const uint32 APP_GUI_MAIN_MENU_WID_WHEN_SHOW[APP_GUI_NUM_SCREENS][APP_GUI_MAIN_MENU_WID_WHEN_SHOW_NUM] =
 //{
 //	{ APP_GUI_NUM_WIDGETS, APP_GUI_NUM_WIDGETS, APP_GUI_NUM_WIDGETS, APP_GUI_NUM_WIDGETS, APP_GUI_NUM_WIDGETS, APP_GUI_NUM_WIDGETS},	//Pantalla carga
-//	{ butInitScrHideMainMenu, imgInitScrHome, butInitScrCfg, butInitScrCalc, butInitScrData, swInitScrAvisos},							//Pantalla inicio
-//	{ butTrtScrHideMainMenu, butTrtScrHome, butTrtScrCfg, butTrtScrCalc, butTrtScrData, swTrtScrAvisos},								//Pantalla tratamiento
-//	{ butCalcScrHideMainMenu, butCalcScrHome, butCalcScrCfg, imgCalcScrCalc, butCalcScrData, swCalcScrAvisos},							//Pantalla calculadora
-//	{ butCfgScrHideMainMenu, butCfgScrHome, imgCfgScrCfg, butCfgScrCalc, butCfgScrData, swCfgScrAvisos},								//Pantalla configuracion
-//	{ butLanScrHideMainMenu, butLanScrHome, butLanScrCfg, butLanScrCalc, imgLanScrData, swLanScrAvisos},								//Pantalla idiomas
+//	{ butInitScrHideMainMenu, imgInitScrHome, butInitScrCfg, butInitScrCalc, butInitScrData, SwInitScrAvisos},							//Pantalla inicio
+//	{ butTrtScrHideMainMenu, ButTrtScrHome, ButTrtScrCfg, ButTrtScrCalc, butTrtScrData, SwTrtScrAvisos},								//Pantalla tratamiento
+//	{ butCalcScrHideMainMenu, butCalcScrHome, butCalcScrCfg, imgCalcScrCalc, butCalcScrData, SwCalcScrAvisos},							//Pantalla calculadora
+//	{ butCfgScrHideMainMenu, butCfgScrHome, imgCfgScrCfg, butCfgScrCalc, butCfgScrData, SwCfgScrAvisos},								//Pantalla configuracion
+//	{ butLanScrHideMainMenu, butLanScrHome, butLanScrCfg, butLanScrCalc, imgLanScrData, SwLanScrAvisos},								//Pantalla idiomas
 //	{ APP_GUI_NUM_WIDGETS, APP_GUI_NUM_WIDGETS, APP_GUI_NUM_WIDGETS, APP_GUI_NUM_WIDGETS, APP_GUI_NUM_WIDGETS, APP_GUI_NUM_WIDGETS},	//Pantalla SAT
 //	{ APP_GUI_NUM_WIDGETS, APP_GUI_NUM_WIDGETS, APP_GUI_NUM_WIDGETS, APP_GUI_NUM_WIDGETS, APP_GUI_NUM_WIDGETS, APP_GUI_NUM_WIDGETS}		//Pantalla FATIGA
 //};
@@ -40,7 +40,7 @@
 ///* Vector con las imagenes de la animación de la pantalla LOAD */
 //const uint32 APP_GUI_LOAD_SCR_ANIM_IMG_LIST[APP_GUI_LOAD_SCR_ANIM_IMG_NUM] =
 //{
-//		imgLoadAnim1, imgLoadAnim2, imgLoadAnim3, imgLoadAnim4,
+//		ImgLoadAnim1, imgLoadAnim2, imgLoadAnim3, imgLoadAnim4,
 //		imgLoadAnim5, imgLoadAnim6, imgLoadAnim7, imgLoadAnim8
 //};
 
@@ -70,58 +70,58 @@ const uint32 APP_GUI_TRT_SCR_BUT_MODEL_IMG_SIDE_FROM_SLOT_IMG[APP_GUI_MAX_PRS_RL
     //Press
     {
         //Undefined, Curved, Tight, Straight, Tiny, Tiny Curved, Double, Oval, Oval Curved, Angled
-        { c233_ImgPixelBlanco, c093_ImgCurvedHP_R_Press, c095_ImgTightHP_R_Press, c097_ImgStrightHP_R_Press, c099_ImgTinyHP_R_Press, c101_ImgTinyCurvedHP_R_Press, c103_ImgDoubleHP_R_Press, c105_ImgOvalHP_R_Press, c107_ImgOvalCurvedHP_R_Press, c109_ImgAngledHP_R_Press},
-        { c233_ImgPixelBlanco, c094_ImgCurvedHP_L_Press, c096_ImgTightHP_L_Press, c098_ImgStrightHP_L_Press, c100_ImgTinyHP_L_Press, c102_ImgTinyCurvedHP_L_Press, c104_ImgDoubleHP_L_Press, c106_ImgOvalHP_L_Press, c108_ImgOvalCurvedHP_L_Press, c110_ImgAngledHP_L_Press},
-        { c233_ImgPixelBlanco, c093_ImgCurvedHP_R_Press, c095_ImgTightHP_R_Press, c097_ImgStrightHP_R_Press, c099_ImgTinyHP_R_Press, c101_ImgTinyCurvedHP_R_Press, c103_ImgDoubleHP_R_Press, c105_ImgOvalHP_R_Press, c107_ImgOvalCurvedHP_R_Press, c109_ImgAngledHP_R_Press},
-        { c233_ImgPixelBlanco, c094_ImgCurvedHP_L_Press, c096_ImgTightHP_L_Press, c098_ImgStrightHP_L_Press, c100_ImgTinyHP_L_Press, c102_ImgTinyCurvedHP_L_Press, c104_ImgDoubleHP_L_Press, c106_ImgOvalHP_L_Press, c108_ImgOvalCurvedHP_L_Press, c110_ImgAngledHP_L_Press}
+        { C233_ImgPixelBlanco, C093_ImgCurvedHP_R_Press, C095_ImgTightHP_R_Press, C097_ImgStrightHP_R_Press, C099_ImgTinyHP_R_Press, C101_ImgTinyCurvedHP_R_Press, C103_ImgDoubleHP_R_Press, C105_ImgOvalHP_R_Press, C107_ImgOvalCurvedHP_R_Press, C109_ImgAngledHP_R_Press},
+        { C233_ImgPixelBlanco, C094_ImgCurvedHP_L_Press, C096_ImgTightHP_L_Press, C098_ImgStrightHP_L_Press, C100_ImgTinyHP_L_Press, C102_ImgTinyCurvedHP_L_Press, C104_ImgDoubleHP_L_Press, C106_ImgOvalHP_L_Press, C108_ImgOvalCurvedHP_L_Press, C110_ImgAngledHP_L_Press},
+        { C233_ImgPixelBlanco, C093_ImgCurvedHP_R_Press, C095_ImgTightHP_R_Press, C097_ImgStrightHP_R_Press, C099_ImgTinyHP_R_Press, C101_ImgTinyCurvedHP_R_Press, C103_ImgDoubleHP_R_Press, C105_ImgOvalHP_R_Press, C107_ImgOvalCurvedHP_R_Press, C109_ImgAngledHP_R_Press},
+        { C233_ImgPixelBlanco, C094_ImgCurvedHP_L_Press, C096_ImgTightHP_L_Press, C098_ImgStrightHP_L_Press, C100_ImgTinyHP_L_Press, C102_ImgTinyCurvedHP_L_Press, C104_ImgDoubleHP_L_Press, C106_ImgOvalHP_L_Press, C108_ImgOvalCurvedHP_L_Press, C110_ImgAngledHP_L_Press}
     },
 	
     //Release
     {
         //Undefined, Curved, Tight, Straight, Tiny, Tiny Curved, Double, Oval, Oval Curved, Angled
-        { c233_ImgPixelBlanco, c075_ImgCurvedHP_R_Rls, c077_ImgTightHP_R_Rls, c079_ImgStrightHP_R_Rls, c081_ImgTinyHP_R_Rls, c083_ImgTinyCurvedHP_R_Rls, c085_ImgDoubleHP_R_Rls, c087_ImgOvalHP_R_Rls, c089_ImgOvalCurvedHP_R_Rls, c091_ImgAngledHP_R_Rls},
-        { c233_ImgPixelBlanco, c076_ImgCurvedHP_L_Rls, c078_ImgTightHP_L_Rls, c080_ImgStrightHP_L_Rls, c082_ImgTinyHP_L_Rls, c084_ImgTinyCurvedHP_L_Rls, c086_ImgDoubleHP_L_Rls, c088_ImgOvalHP_L_Rls, c090_ImgOvalCurvedHP_L_Rls, c092_ImgAngledHP_L_Rls},
-        { c233_ImgPixelBlanco, c075_ImgCurvedHP_R_Rls, c077_ImgTightHP_R_Rls, c079_ImgStrightHP_R_Rls, c081_ImgTinyHP_R_Rls, c083_ImgTinyCurvedHP_R_Rls, c085_ImgDoubleHP_R_Rls, c087_ImgOvalHP_R_Rls, c089_ImgOvalCurvedHP_R_Rls, c091_ImgAngledHP_R_Rls},
-        { c233_ImgPixelBlanco, c076_ImgCurvedHP_L_Rls, c078_ImgTightHP_L_Rls, c080_ImgStrightHP_L_Rls, c082_ImgTinyHP_L_Rls, c084_ImgTinyCurvedHP_L_Rls, c086_ImgDoubleHP_L_Rls, c088_ImgOvalHP_L_Rls, c090_ImgOvalCurvedHP_L_Rls, c092_ImgAngledHP_L_Rls}
+        { C233_ImgPixelBlanco, C075_ImgCurvedHP_R_Rls, C077_ImgTightHP_R_Rls, C079_ImgStrightHP_R_Rls, C081_ImgTinyHP_R_Rls, C083_ImgTinyCurvedHP_R_Rls, C085_ImgDoubleHP_R_Rls, C087_ImgOvalHP_R_Rls, C089_ImgOvalCurvedHP_R_Rls, C091_ImgAngledHP_R_Rls},
+        { C233_ImgPixelBlanco, C076_ImgCurvedHP_L_Rls, C078_ImgTightHP_L_Rls, C080_ImgStrightHP_L_Rls, C082_ImgTinyHP_L_Rls, C084_ImgTinyCurvedHP_L_Rls, C086_ImgDoubleHP_L_Rls, C088_ImgOvalHP_L_Rls, C090_ImgOvalCurvedHP_L_Rls, C092_ImgAngledHP_L_Rls},
+        { C233_ImgPixelBlanco, C075_ImgCurvedHP_R_Rls, C077_ImgTightHP_R_Rls, C079_ImgStrightHP_R_Rls, C081_ImgTinyHP_R_Rls, C083_ImgTinyCurvedHP_R_Rls, C085_ImgDoubleHP_R_Rls, C087_ImgOvalHP_R_Rls, C089_ImgOvalCurvedHP_R_Rls, C091_ImgAngledHP_R_Rls},
+        { C233_ImgPixelBlanco, C076_ImgCurvedHP_L_Rls, C078_ImgTightHP_L_Rls, C080_ImgStrightHP_L_Rls, C082_ImgTinyHP_L_Rls, C084_ImgTinyCurvedHP_L_Rls, C086_ImgDoubleHP_L_Rls, C088_ImgOvalHP_L_Rls, C090_ImgOvalCurvedHP_L_Rls, C092_ImgAngledHP_L_Rls}
     }
 };
 
 const uint32 APP_GUI_TRT_LIST_OF_IMG_HP_RECOMMENDED_PER_ZONE[HP_CRYO_NUM_HP_MODELS] =
  {
-         APP_GUI_NUM_WIDGETS, imgPopUpRecommCurved, imgPopUpRecommTight, imgPopUpRecommStright, imgPopUpRecommTiny, imgPopUpRecommTinyCurved, imgPopUpRecommDouble, imgPopUpRecommOval, imgPopUpRecommOvalCurved, imgPopUpRecommAngled
+         APP_GUI_NUM_WIDGETS, ImgPopUpRecommCurved, ImgPopUpRecommTight, ImgPopUpRecommStright, ImgPopUpRecommTiny, ImgPopUpRecommTinyCurved, ImgPopUpRecommDouble, ImgPopUpRecommOval, ImgPopUpRecommOvalCurved, ImgPopUpRecommAngled
  };
 
 /* Tabla con las imagenes de los slots para los botones de HP del panel de control cuando no hay HP conectado */
 const uint32 APP_GUI_TRT_SCR_BUT_MODE_IMG_NO_HP_IMG[APP_GUI_MAXNUM_HP] =
 {
-        c112_1_ZonaSeleccionadaHP1, c112_2_ZonaSeleccionadaHP2, c112_3_ZonaSeleccionadaHP3, c112_4_ZonaSeleccionadaHP4
+        C112_1_ZonaSeleccionadaHP1, C112_2_ZonaSeleccionadaHP2, C112_3_ZonaSeleccionadaHP3, C112_4_ZonaSeleccionadaHP4
 };
 
 const uint32 APP_GUI_TRT_SCR_BUT_MODEL_IMG_WIDGETS[APP_GUI_MAXNUM_HP] =
 {
-        butModelImageHP1, butModelImageHP2, butModelImageHP3, butModelImageHP4
+        ButModelImageHP1, ButModelImageHP2, ButModelImageHP3, ButModelImageHP4
 };
 
 const uint32 APP_GUI_TRT_SCR_BUT_MODE_TRT_WIDGETS[APP_GUI_MAXNUM_HP] =
 {
-        butSwtchModeAutoManualHP1, butSwtchModeAutoManualHP2, butSwtchModeAutoManualHP3, butSwtchModeAutoManualHP4
+        ButSwtchModeAutoManualHP1, ButSwtchModeAutoManualHP2, ButSwtchModeAutoManualHP3, ButSwtchModeAutoManualHP4
 };
 
 ///* Listado de widgets que componen el panel de control cuando esta mostrado y cuando esta oculto */
 //const uint32 APP_GUI_TRT_SCR_CTRL_PNL_WID_WHEN_SHOW[APP_GUI_MAXNUM_HP][APP_GUI_TRT_SCR_CTRL_PNL_WID_WHEN_SHOW_NUM] =
 //{
-//	{ imgCtrlPnlBckGndHP1, imgCtrlPnlRFIDblinkHP1, imgCtrlPnlPulBlinkHP1, imgCtrlPnlVacBlinkHP1, imgCtrlPnlCoolingBlinkHP1,
-//	  butCtrlPnlPlayHP1, swCtrlPnlTstVacHP1, butSwtchModeAutoManualHP1, numVwrTimeHP1, butSelectTimeHP1,
-//	  imgModelTextHP1, butModelImageHP1, butHideControlPanelHP1, imgColourCtrlPnlBckGndHP1, numVwrResucctionCountHP1},	//HP1
-//	{ imgCtrlPnlBckGndHP2, imgCtrlPnlRFIDblinkHP2, imgCtrlPnlPulBlinkHP2, imgCtrlPnlVacBlinkHP2, imgCtrlPnlCoolingBlinkHP2,
-//	  butCtrlPnlPlayHP2, swCtrlPnlTstVacHP2, butSwtchModeAutoManualHP2, numVwrTimeHP2, butSelectTimeHP2,
-//	  imgModelTextHP2, butModelImageHP2, butHideControlPanelHP2, imgColourCtrlPnlBckGndHP2, numVwrResucctionCountHP2},	//HP2
-//	{ imgCtrlPnlBckGndHP3, imgCtrlPnlRFIDblinkHP3, imgCtrlPnlPulBlinkHP3, imgCtrlPnlVacBlinkHP3, imgCtrlPnlCoolingBlinkHP3,
-//	  butCtrlPnlPlayHP3, swCtrlPnlTstVacHP3, butSwtchModeAutoManualHP3, numVwrTimeHP3, butSelectTimeHP3,
-//	  imgModelTextHP3, butModelImageHP3, butHideControlPanelHP3, imgColourCtrlPnlBckGndHP3, numVwrResucctionCountHP3},	//HP3
-//	{ imgCtrlPnlBckGndHP4, imgCtrlPnlRFIDblinkHP4, imgCtrlPnlPulBlinkHP4, imgCtrlPnlVacBlinkHP4, imgCtrlPnlCoolingBlinkHP4,
-//	  butCtrlPnlPlayHP4, swCtrlPnlTstVacHP4, butSwtchModeAutoManualHP4, numVwrTimeHP4, butSelectTimeHP4,
-//	  imgModelTextHP4, butModelImageHP4, butHideControlPanelHP4, imgColourCtrlPnlBckGndHP4, numVwrResucctionCountHP4}	//HP4
+//	{ imgCtrlPnlBckGndHP1, ImgCtrlPnlRFIDblinkHP1, ImgCtrlPnlPulBlinkHP1, ImgCtrlPnlVacBlinkHP1, ImgCtrlPnlCoolingBlinkHP1,
+//	  ButCtrlPnlPlayHP1, SwCtrlPnlTstVacHP1, ButSwtchModeAutoManualHP1, NumVwrTimeHP1, ButSelectTimeHP1,
+//	  ImgModelTextHP1, ButModelImageHP1, ButHideControlPanelHP1, ImgColourCtrlPnlBckGndHP1, NumVwrResucctionCountHP1},	//HP1
+//	{ imgCtrlPnlBckGndHP2, ImgCtrlPnlRFIDblinkHP2, ImgCtrlPnlPulBlinkHP2, ImgCtrlPnlVacBlinkHP2, ImgCtrlPnlCoolingBlinkHP2,
+//	  ButCtrlPnlPlayHP2, SwCtrlPnlTstVacHP2, ButSwtchModeAutoManualHP2, NumVwrTimeHP2, ButSelectTimeHP2,
+//	  ImgModelTextHP2, ButModelImageHP2, ButHideControlPanelHP2, ImgColourCtrlPnlBckGndHP2, NumVwrResucctionCountHP2},	//HP2
+//	{ imgCtrlPnlBckGndHP3, ImgCtrlPnlRFIDblinkHP3, ImgCtrlPnlPulBlinkHP3, ImgCtrlPnlVacBlinkHP3, ImgCtrlPnlCoolingBlinkHP3,
+//	  ButCtrlPnlPlayHP3, SwCtrlPnlTstVacHP3, ButSwtchModeAutoManualHP3, NumVwrTimeHP3, ButSelectTimeHP3,
+//	  ImgModelTextHP3, ButModelImageHP3, ButHideControlPanelHP3, ImgColourCtrlPnlBckGndHP3, NumVwrResucctionCountHP3},	//HP3
+//	{ imgCtrlPnlBckGndHP4, ImgCtrlPnlRFIDblinkHP4, ImgCtrlPnlPulBlinkHP4, ImgCtrlPnlVacBlinkHP4, ImgCtrlPnlCoolingBlinkHP4,
+//	  ButCtrlPnlPlayHP4, SwCtrlPnlTstVacHP4, ButSwtchModeAutoManualHP4, NumVwrTimeHP4, ButSelectTimeHP4,
+//	  ImgModelTextHP4, ButModelImageHP4, ButHideControlPanelHP4, ImgColourCtrlPnlBckGndHP4, NumVwrResucctionCountHP4}	//HP4
 //};
 
 //const uint32 APP_GUI_TRT_SCR_CTRL_PNL_WID_WHEN_HIDE[APP_GUI_MAXNUM_HP][APP_GUI_TRT_SCR_CTRL_PNL_WID_WHEN_HIDE_NUM] =
@@ -134,7 +134,7 @@ const uint32 APP_GUI_TRT_SCR_BUT_MODE_TRT_WIDGETS[APP_GUI_MAXNUM_HP] =
 
 const uint32 APP_GUI_TRT_SCR_CTRL_PNL_COLOUR_WIDGETS [APP_GUI_MAXNUM_HP] =
 {
-     imgColourCtrlPnlBckGndHP1, imgColourCtrlPnlBckGndHP2, imgColourCtrlPnlBckGndHP3, imgColourCtrlPnlBckGndHP4
+     ImgColourCtrlPnlBckGndHP1, ImgColourCtrlPnlBckGndHP2, ImgColourCtrlPnlBckGndHP3, ImgColourCtrlPnlBckGndHP4
 };
 
 //const uint32 APP_GUI_TRT_SCR_CTRL_PNL_COLOUR_IMGS [APP_GUI_MAXNUM_HP][APP_GUI_TRT_SCR_CTRL_PNL_COLOUR_STATES_IMGS] =
@@ -149,10 +149,10 @@ const uint32 APP_GUI_TRT_SCR_CTRL_PNL_COLOUR_WIDGETS [APP_GUI_MAXNUM_HP] =
 // * panel de control */
 //const uint32 APP_GUI_TRT_SCR_HP_ERR_WIDGETS[APP_GUI_MAXNUM_HP][APP_GUI_NUM_ERR_WIDGETS_WHEN_HP] =
 //{
-//		{ imgPopUpErrBckGndHP1, numVwrPopUpErrHP1, imgPopUpErrMsgHP1, butPopUpErrOkHP1, numVwrPopUpErrTRTtimeHP1},
-//		{ imgPopUpErrBckGndHP2, numVwrPopUpErrHP2, imgPopUpErrMsgHP2, butPopUpErrOkHP2, numVwrPopUpErrTRTtimeHP2},
-//		{ imgPopUpErrBckGndHP3, numVwrPopUpErrHP3, imgPopUpErrMsgHP3, butPopUpErrOkHP3, numVwrPopUpErrTRTtimeHP3},
-//		{ imgPopUpErrBckGndHP4, numVwrPopUpErrHP4, imgPopUpErrMsgHP4, butPopUpErrOkHP4, numVwrPopUpErrTRTtimeHP4}
+//		{ imgPopUpErrBckGndHP1, NumVwrPopUpErrHP1, imgPopUpErrMsgHP1, butPopUpErrOkHP1, NumVwrPopUpErrTRTtimeHP1},
+//		{ imgPopUpErrBckGndHP2, NumVwrPopUpErrHP2, imgPopUpErrMsgHP2, butPopUpErrOkHP2, NumVwrPopUpErrTRTtimeHP2},
+//		{ imgPopUpErrBckGndHP3, NumVwrPopUpErrHP3, imgPopUpErrMsgHP3, butPopUpErrOkHP3, NumVwrPopUpErrTRTtimeHP3},
+//		{ imgPopUpErrBckGndHP4, NumVwrPopUpErrHP4, imgPopUpErrMsgHP4, butPopUpErrOkHP4, NumVwrPopUpErrTRTtimeHP4}
 //};
 
 //const uint32 APP_GUI_TRT_SCR_HP_ERR_MSG_IMAGES[Err_msg_max] =
@@ -169,7 +169,7 @@ const uint32 APP_GUI_TRT_SCR_CTRL_PNL_COLOUR_WIDGETS [APP_GUI_MAXNUM_HP] =
 
 //const uint32 APP_GUI_TRT_SCR_UC_ERR_WIDGETS[APP_GUI_NUM_ERR_WIDGETS_WHEN_UC] =
 //{
-//		imgPopUpErrBckGndUC, numVwrPopUpErrUC, imgPopUpErrMsgUC, butPopUpErrOkUC
+//		imgPopUpErrBckGndUC, NumVwrPopUpErrUC, imgPopUpErrMsgUC, butPopUpErrOkUC
 //};
 
 //const uint32 APP_GUI_TRT_SCR_UC_ERR_MSG_IMAGES[Err_msg_max] =		//No se está empleando
@@ -190,7 +190,7 @@ const uint32 APP_GUI_TRT_SCR_CTRL_PNL_COLOUR_WIDGETS [APP_GUI_MAXNUM_HP] =
 
 //const uint32 APP_GUI_TRT_SCR_CLEANUP_NUM_VIEWER_WIDGETS[APP_GUI_MAXNUM_HP] =
 //{
-//		numVwrPopUpCleanHP1, numVwrPopUpCleanHP2, numVwrPopUpCleanHP3, numVwrPopUpCleanHP4
+//		NumVwrPopUpCleanHP1, NumVwrPopUpCleanHP2, NumVwrPopUpCleanHP3, NumVwrPopUpCleanHP4
 //};
 
 //const uint32 APP_GUI_TRT_SCR_CLEANUP_BUTTON_YES_WIDGETS[APP_GUI_MAXNUM_HP] =
@@ -215,7 +215,7 @@ const uint32 APP_GUI_TRT_SCR_CTRL_PNL_COLOUR_WIDGETS [APP_GUI_MAXNUM_HP] =
 
 //const uint32 APP_GUI_TRT_SCR_CLEANUP_NUMVWR_CANCELLED_TIMES_WIDGET[APP_GUI_MAXNUM_HP] =
 //{
-//		numVwrPopUpCleanNumCancelHP1, numVwrPopUpCleanNumCancelHP2, numVwrPopUpCleanNumCancelHP3, numVwrPopUpCleanNumCancelHP4
+//		NumVwrPopUpCleanNumCancelHP1, NumVwrPopUpCleanNumCancelHP2, NumVwrPopUpCleanNumCancelHP3, NumVwrPopUpCleanNumCancelHP4
 //};
 
 //const uint32 APP_GUI_TRT_SCR_CLEANUP_STATUS_IMAGES[APP_GUI_CLEAN_UP_N_STATUS] =
@@ -239,26 +239,26 @@ const uint32 APP_GUI_TRT_SCR_CTRL_PNL_COLOUR_WIDGETS [APP_GUI_MAXNUM_HP] =
 /* Vector con los widgets para representar los puntos "DOTS" de zona seleccionable */
 const uint32 APP_GUI_TRT_SCR_DOT_ZONES_WIDGETS[APP_GUI_MAX_DOTS_PER_AREA] =
 {
-        swDotZone0, swDotZone1, swDotZone2, swDotZone3, swDotZone4, swDotZone5, swDotZone6,
-        swDotZone7, swDotZone8, swDotZone9, swDotZone10, swDotZone11, swDotZone12, swDotZone13, swDotZone14
+        SwDotZone0, SwDotZone1, SwDotZone2, SwDotZone3, SwDotZone4, SwDotZone5, SwDotZone6,
+        SwDotZone7, SwDotZone8, SwDotZone9, SwDotZone10, SwDotZone11, SwDotZone12, SwDotZone13, SwDotZone14
 };
 
 /* Vector con los widgets de los botones de area en full body */
 const uint32 APP_GUI_TRT_SCR_FULL_BODY_AREAS_WIDGETS[APP_GUI_NUM_FULL_BODY_AREAS] =
 {
         APP_GUI_NUM_WIDGETS,	//AppGUIfullBodyNO_AREA,
-        butFullBodyTorso, 		//AppGUIfullBodyTorso,
-        butFullBodyPiernas, 	//AppGUIfullBodyPiernas,
-        butFullBodyEspalda,		//AppGUIfullBodyEspalda,
-        butFullBodyPiernaMuslo,	//AppGUIfullBodyPiernasMuslo,
-        butFullBodyBrazos,		//AppGUIfullBodyBrazos,butFullBodyBrazos
-        butFullBodyCuello		//AppGUIfullBodyCuello,
+        ButFullBodyTorso, 		//AppGUIfullBodyTorso,
+        ButFullBodyPiernas, 	//AppGUIfullBodyPiernas,
+        ButFullBodyEspalda,		//AppGUIfullBodyEspalda,
+        ButFullBodyPiernaMuslo,	//AppGUIfullBodyPiernasMuslo,
+        ButFullBodyBrazos,		//AppGUIfullBodyBrazos,ButFullBodyBrazos
+        ButFullBodyCuello		//AppGUIfullBodyCuello,
 };
 
 /* Vectir con los widgets de los indicadores de zona seleccionada en full body */
 const uint32 APP_GUI_TRT_SCR_FULL_BODY_SELECTED_ZONE_WIDGETS[APP_GUI_MAXNUM_HP] =
 {
-        imgSelectedTrtZoneHP1, imgSelectedTrtZoneHP2, imgSelectedTrtZoneHP3, imgSelectedTrtZoneHP4
+        ImgSelectedTrtZoneHP1, ImgSelectedTrtZoneHP2, ImgSelectedTrtZoneHP3, ImgSelectedTrtZoneHP4
 };
 
 //const uint32 APP_GUI_TRT_SCR_POPUP_COLOR_BAR_IMAGES[APP_GUI_MAXNUM_HP] =
@@ -276,7 +276,7 @@ const uint32 APP_GUI_TRT_SCR_FULL_BODY_SELECTED_ZONE_WIDGETS[APP_GUI_MAXNUM_HP] 
 const uint32 APP_GUI_TRT_SCR_POPUP_TST_VAC_SW_LIST[HP_CRYO_VAC_LVL_NUM] =
 {
         //lvl0, lvl1, lvl2
-        swPopUpTstVacLowLvl, swPopUpTstVacMidLvl, swPopUpTstVacHighLvl
+        SwPopUpTstVacLowLvl, SwPopUpTstVacMidLvl, SwPopUpTstVacHighLvl
 };
 
 //const uint32 APP_GUI_TRT_SCR_POPUP_TST_VAC_IMG_LIST[HP_CRYO_VAC_LVL_NUM] =
@@ -293,104 +293,104 @@ const uint32 APP_GUI_TRT_SCR_POPUP_TST_VAC_SW_LIST[HP_CRYO_VAC_LVL_NUM] =
 
 const uint32 APP_GUI_TRT_SCR_BLINK_INDICATORS_WIDGETS[APP_GUI_MAXNUM_HP][APP_GUI_MAX_BLINK_INDICATORS] =
 {
-        { imgCtrlPnlRFIDblinkHP1, imgCtrlPnlPulBlinkHP1, imgCtrlPnlVacBlinkHP1, imgCtrlPnlCoolingBlinkHP1}, //HP1
-        { imgCtrlPnlRFIDblinkHP2, imgCtrlPnlPulBlinkHP2, imgCtrlPnlVacBlinkHP2, imgCtrlPnlCoolingBlinkHP2}, //HP2
-        { imgCtrlPnlRFIDblinkHP3, imgCtrlPnlPulBlinkHP3, imgCtrlPnlVacBlinkHP3, imgCtrlPnlCoolingBlinkHP3}, //HP3
-        { imgCtrlPnlRFIDblinkHP4, imgCtrlPnlPulBlinkHP4, imgCtrlPnlVacBlinkHP4, imgCtrlPnlCoolingBlinkHP4}, //HP4
+        { ImgCtrlPnlRFIDblinkHP1, ImgCtrlPnlPulBlinkHP1, ImgCtrlPnlVacBlinkHP1, ImgCtrlPnlCoolingBlinkHP1}, //HP1
+        { ImgCtrlPnlRFIDblinkHP2, ImgCtrlPnlPulBlinkHP2, ImgCtrlPnlVacBlinkHP2, ImgCtrlPnlCoolingBlinkHP2}, //HP2
+        { ImgCtrlPnlRFIDblinkHP3, ImgCtrlPnlPulBlinkHP3, ImgCtrlPnlVacBlinkHP3, ImgCtrlPnlCoolingBlinkHP3}, //HP3
+        { ImgCtrlPnlRFIDblinkHP4, ImgCtrlPnlPulBlinkHP4, ImgCtrlPnlVacBlinkHP4, ImgCtrlPnlCoolingBlinkHP4}, //HP4
 };
 
 const uint32 APP_GUI_TRT_SCR_HP_MODEL_TEXT_IMG[APP_GUI_MAXNUM_HP][HP_CRYO_NUM_HP_MODELS] =
 {
                 //Undefined, Curved, Tight, Straight, Tiny, Tiny Curved, Double, Oval, Oval Curved, Angled
-        /*HP1*/		{c233_ImgPixelBlanco, c066_NameCurvedHP_L, c067_NameTightHP_L, c068_NameStarightHP_L, c069_NameTinyHP_L,
-                    c070_NameTinyCurvedHP_L, c071_NameDoubleHP_L, c072_NameOvalHP_L, c073_NameOvalCurvedHP_L, c074_NameDeltaHP_L},
-        /*HP2*/		{c233_ImgPixelBlanco, c066_NameCurvedHP_R, c067_NameTightHP_R, c068_NameStraightHP_R, c069_NameTinyHP_R,
-                    c070_NameTinyCurvedHP_R, c071_NameDoubleHP_R, c072_NameOvalHP_R, c073_NameOvalCurvedHP_R, c074_NameDeltaHP_R},
-        /*HP3*/		{c233_ImgPixelBlanco, c066_NameCurvedHP_L, c067_NameTightHP_L, c068_NameStarightHP_L, c069_NameTinyHP_L,
-                    c070_NameTinyCurvedHP_L, c071_NameDoubleHP_L, c072_NameOvalHP_L, c073_NameOvalCurvedHP_L, c074_NameDeltaHP_L},
-        /*HP4*/		{c233_ImgPixelBlanco, c066_NameCurvedHP_R, c067_NameTightHP_R, c068_NameStraightHP_R, c069_NameTinyHP_R,
-                    c070_NameTinyCurvedHP_R, c071_NameDoubleHP_R, c072_NameOvalHP_R, c073_NameOvalCurvedHP_R, c074_NameDeltaHP_R},
+        /*HP1*/		{C233_ImgPixelBlanco, C066_NameCurvedHP_L, C067_NameTightHP_L, C068_NameStarightHP_L, C069_NameTinyHP_L,
+                    C070_NameTinyCurvedHP_L, C071_NameDoubleHP_L, C072_NameOvalHP_L, C073_NameOvalCurvedHP_L, C074_NameDeltaHP_L},
+        /*HP2*/		{C233_ImgPixelBlanco, C066_NameCurvedHP_R, C067_NameTightHP_R, C068_NameStraightHP_R, C069_NameTinyHP_R,
+                    C070_NameTinyCurvedHP_R, C071_NameDoubleHP_R, C072_NameOvalHP_R, C073_NameOvalCurvedHP_R, C074_NameDeltaHP_R},
+        /*HP3*/		{C233_ImgPixelBlanco, C066_NameCurvedHP_L, C067_NameTightHP_L, C068_NameStarightHP_L, C069_NameTinyHP_L,
+                    C070_NameTinyCurvedHP_L, C071_NameDoubleHP_L, C072_NameOvalHP_L, C073_NameOvalCurvedHP_L, C074_NameDeltaHP_L},
+        /*HP4*/		{C233_ImgPixelBlanco, C066_NameCurvedHP_R, C067_NameTightHP_R, C068_NameStraightHP_R, C069_NameTinyHP_R,
+                    C070_NameTinyCurvedHP_R, C071_NameDoubleHP_R, C072_NameOvalHP_R, C073_NameOvalCurvedHP_R, C074_NameDeltaHP_R},
 };
 
 const uint32 APP_GUI_TRT_SCR_HP_MODEL_TEXT_WIDGETS[APP_GUI_MAXNUM_HP] =
 {
-        imgModelTextHP1, imgModelTextHP2, imgModelTextHP3, imgModelTextHP4
+        ImgModelTextHP1, ImgModelTextHP2, ImgModelTextHP3, ImgModelTextHP4
 };
 
 const uint32 APP_GUI_TRT_SCR_BUT_SEL_TIME_WIDGETS[APP_GUI_MAXNUM_HP] =
 {
-        butSelectTimeHP1, butSelectTimeHP2, butSelectTimeHP3, butSelectTimeHP4,
+        ButSelectTimeHP1, ButSelectTimeHP2, ButSelectTimeHP3, ButSelectTimeHP4,
 };
 
 const uint32 APP_GUI_TRT_SCR_BUT_CHNG_TIME_TO_TEMP_WIDGETS[APP_GUI_MAXNUM_HP] =
 {
-        butVwrTemperatureHP1, butVwrTemperatureHP2, butVwrTemperatureHP3, butVwrTemperatureHP4
+        ButVwrTemperatureHP1, ButVwrTemperatureHP2, ButVwrTemperatureHP3, ButVwrTemperatureHP4
 };
 
 const uint32 APP_GUI_TRT_SCR_NUM_VWR_TIME_WIDGETS[APP_GUI_MAXNUM_HP] =
 {
-        numVwrTimeHP1, numVwrTimeHP2, numVwrTimeHP3, numVwrTimeHP4,
+        NumVwrTimeHP1, NumVwrTimeHP2, NumVwrTimeHP3, NumVwrTimeHP4,
 };
 
 const uint32 APP_GUI_TRT_SCR_NUM_VWE_RESUCCTIONS_NUM_WIDGETS [APP_GUI_MAXNUM_HP] =
 {
-        numVwrResucctionCountHP1, numVwrResucctionCountHP2, numVwrResucctionCountHP3, numVwrResucctionCountHP4,
+        NumVwrResucctionCountHP1, NumVwrResucctionCountHP2, NumVwrResucctionCountHP3, NumVwrResucctionCountHP4,
 };
 
 const uint32 APP_GUI_TRT_SCR_BUT_TIME_IMG[App_GUI_Max_Time_but_states][App_GUI_widget_Features] =
 {
                     /*	IMG_PRESS							IMG_RLS								ENABLE	*/
-        /*Time_OFF*/	{c050_RelojTemporizadorMarcaAgua, 	c050_RelojTemporizadorMarcaAgua, 	0},
-        /*Time_ON*/		{c048_RelojTemporizadorPress, 		c049_RelojTemporizadorRls, 			1}
+        /*Time_OFF*/	{C050_RelojTemporizadorMarcaAgua, 	C050_RelojTemporizadorMarcaAgua, 	0},
+        /*Time_ON*/		{C048_RelojTemporizadorPress, 		C049_RelojTemporizadorRls, 			1}
 };
 
 const uint32 APP_GUI_TRT_SCR_BUT_PLAY_WIDGETS[APP_GUI_MAXNUM_HP] =
 {
-        butCtrlPnlPlayHP1, butCtrlPnlPlayHP2, butCtrlPnlPlayHP3, butCtrlPnlPlayHP4
+        ButCtrlPnlPlayHP1, ButCtrlPnlPlayHP2, ButCtrlPnlPlayHP3, ButCtrlPnlPlayHP4
 };
 
 const uint32 APP_GUI_TRT_SCR_BUT_PLAY_IMG[App_GUI_Max_Play_but_states][App_GUI_widget_Features] =
 {
                     /*	IMG_PRESS					IMG_RLS						ENABLE	*/
-    /*Play_OFF*/		{c038_BotonPlayMarcaAgua, 	c038_BotonPlayMarcaAgua,	0},
-    /*Play_ON*/			{c035_BotonPlayPress, 		c037_BotonPlayRls, 			1},
-    /*Play_TRT_running*/{c036_BotonPlayPress, 		c036_BotonPlayPress, 		0},
-    /*Play_TRT_cancel*/	{c033_BotonStopPress, 		c034_BotonStopRls, 			1}
+    /*Play_OFF*/		{C038_BotonPlayMarcaAgua, 	C038_BotonPlayMarcaAgua,	0},
+    /*Play_ON*/			{C035_BotonPlayPress, 		C037_BotonPlayRls, 			1},
+    /*Play_TRT_running*/{C036_BotonPlayPress, 		C036_BotonPlayPress, 		0},
+    /*Play_TRT_cancel*/	{C033_BotonStopPress, 		C034_BotonStopRls, 			1}
 };
 
 const uint32 APP_GUI_TRT_SCR_BUT_TSTVAC_WIDGETS[APP_GUI_MAXNUM_HP] =
 {
-        swCtrlPnlTstVacHP1, swCtrlPnlTstVacHP2, swCtrlPnlTstVacHP3, swCtrlPnlTstVacHP4
+        SwCtrlPnlTstVacHP1, SwCtrlPnlTstVacHP2, SwCtrlPnlTstVacHP3, SwCtrlPnlTstVacHP4
 };
 
 const uint32 APP_GUI_TRT_SCR_BUT_VAC_IMG[HP_CRYO_VAC_LVL_NUM][App_GUI_Max_Vac_but_states][App_GUI_widget_Features] =
 {
         /*Nivel Vac 1*/
         {					/*(PRS, 							RLS, 								ENABLE)*/
-            /*OFF_L*/		{c042_BotonVacuum1MarcaAguaLeft, 	c042_BotonVacuum1MarcaAguaLeft, 	0},
-            /*OFF_R*/		{c042_BotonVacuum1MarcaAguaRight, 	c042_BotonVacuum1MarcaAguaRight, 	0},
-            /*ON_L*/		{c040_BotonVacuum1PressLeft, 		c041_BotonVacuum1RlsLeft, 			1},
-            /*ON_R*/		{c040_BotonVacuum1PressRight, 		c041_BotonVacuum1RlsRight, 			1},
-            /*VacAdjustL*/	{c352_BotonVacuum1PressArrowLeft, 	c353_BotonVacuum1RlsArrowLeft, 		1},
-            /*VacAdjustR*/	{c352_BotonVacuum1PressArrowRight, 	c353_BotonVacuum1RlsArrowRight, 	1}
+            /*OFF_L*/		{C042_BotonVacuum1MarcaAguaLeft, 	C042_BotonVacuum1MarcaAguaLeft, 	0},
+            /*OFF_R*/		{C042_BotonVacuum1MarcaAguaRight, 	C042_BotonVacuum1MarcaAguaRight, 	0},
+            /*ON_L*/		{C040_BotonVacuum1PressLeft, 		C041_BotonVacuum1RlsLeft, 			1},
+            /*ON_R*/		{C040_BotonVacuum1PressRight, 		C041_BotonVacuum1RlsRight, 			1},
+            /*VacAdjustL*/	{C352_BotonVacuum1PressArrowLeft, 	C353_BotonVacuum1RlsArrowLeft, 		1},
+            /*VacAdjustR*/	{C352_BotonVacuum1PressArrowRight, 	C353_BotonVacuum1RlsArrowRight, 	1}
         },
         /*Nivel Vac 2*/
         {					/*(PRS, 							RLS, 								ENABLE)*/
-            /*OFF_L*/		{c042_BotonVacuum2MarcaAguaLeft, 	c042_BotonVacuum2MarcaAguaLeft, 	0},
-            /*OFF_R*/		{c042_BotonVacuum2MarcaAguaRight, 	c042_BotonVacuum2MarcaAguaRight, 	0},
-            /*ON_L*/		{c040_BotonVacuum2PressLeft, 		c041_BotonVacuum2RlsLeft, 			1},
-            /*ON_R*/		{c040_BotonVacuum2PressRight, 		c041_BotonVacuum2RlsRight, 			1},
-            /*VacAdjustL*/	{c352_BotonVacuum2PressArrowLeft, 	c353_BotonVacuum2RlsArrowLeft, 		1},
-            /*VacAdjustR*/	{c352_BotonVacuum2PressArrowRight, 	c353_BotonVacuum2RlsArrowRight, 	1}
+            /*OFF_L*/		{C042_BotonVacuum2MarcaAguaLeft, 	C042_BotonVacuum2MarcaAguaLeft, 	0},
+            /*OFF_R*/		{C042_BotonVacuum2MarcaAguaRight, 	C042_BotonVacuum2MarcaAguaRight, 	0},
+            /*ON_L*/		{C040_BotonVacuum2PressLeft, 		C041_BotonVacuum2RlsLeft, 			1},
+            /*ON_R*/		{C040_BotonVacuum2PressRight, 		C041_BotonVacuum2RlsRight, 			1},
+            /*VacAdjustL*/	{C352_BotonVacuum2PressArrowLeft, 	C353_BotonVacuum2RlsArrowLeft, 		1},
+            /*VacAdjustR*/	{C352_BotonVacuum2PressArrowRight, 	C353_BotonVacuum2RlsArrowRight, 	1}
         },
         /*Nivel Vac 3*/
         {					/*(PRS, 							RLS, 								ENABLE)*/
-            /*OFF_L*/		{c042_BotonVacuum3MarcaAguaLeft,	c042_BotonVacuum3MarcaAguaLeft, 	0},
-            /*OFF_R*/		{c042_BotonVacuum3MarcaAguaRight,	c042_BotonVacuum3MarcaAguaRight, 	0},
-            /*ON_L*/		{c040_BotonVacuum3PressLeft, 		c041_BotonVacuum3RlsLeft, 			1},
-            /*ON_R*/		{c040_BotonVacuum3PressRight, 		c041_BotonVacuum3RlsRight, 			1},
-            /*VacAdjustL*/	{c352_BotonVacuum3PressArrowLeft, 	c353_BotonVacuum3RlsArrowLeft, 		1},
-            /*VacAdjustR*/	{c352_BotonVacuum3PressArrowRight, 	c353_BotonVacuum3RlsArrowRight, 	1}
+            /*OFF_L*/		{C042_BotonVacuum3MarcaAguaLeft,	C042_BotonVacuum3MarcaAguaLeft, 	0},
+            /*OFF_R*/		{C042_BotonVacuum3MarcaAguaRight,	C042_BotonVacuum3MarcaAguaRight, 	0},
+            /*ON_L*/		{C040_BotonVacuum3PressLeft, 		C041_BotonVacuum3RlsLeft, 			1},
+            /*ON_R*/		{C040_BotonVacuum3PressRight, 		C041_BotonVacuum3RlsRight, 			1},
+            /*VacAdjustL*/	{C352_BotonVacuum3PressArrowLeft, 	C353_BotonVacuum3RlsArrowLeft, 		1},
+            /*VacAdjustR*/	{C352_BotonVacuum3PressArrowRight, 	C353_BotonVacuum3RlsArrowRight, 	1}
         }
 };
 
@@ -404,7 +404,7 @@ const uint32 APP_GUI_TRT_SCR_BUT_VAC_IMG[HP_CRYO_VAC_LVL_NUM][App_GUI_Max_Vac_bu
 ///* - RFID */
 //const uint32 APP_GUI_POPUP_RFID_WIDGET_LIST[APP_GUI_POPUP_RFID_WIDGET_LIST_NUM] =
 //{
-//		imgPopUpRFIDbckGnd, butPopUpReturn, imgPopUpHPcolorBar, imgPopUpRFIDlabel, imgPopUpRFIDresult, butPopUpRFIDreuseLabel, numVwrPopUpRFIDrestTime
+//		imgPopUpRFIDbckGnd, ButPopUpReturn, imgPopUpHPcolorBar, imgPopUpRFIDlabel, imgPopUpRFIDresult, butPopUpRFIDreuseLabel, NumVwrPopUpRFIDrestTime
 //};
 
 //const uint32 APP_GUI_TRT_SCR_POPUP_RFID_LABELS_IMGS [HP_CRYO_NUM_LABELS] =
@@ -422,8 +422,8 @@ const uint32 APP_GUI_TRT_SCR_BUT_VAC_IMG[HP_CRYO_VAC_LVL_NUM][App_GUI_Max_Vac_bu
 //{
 //		imgPopUpTstVacBckGnd,imgPopUpTstVacLowLvl,imgPopUpTstVacMidLvl,imgPopUpTstVacHighLvl,
 //		imgPopUpTstVacPulHand,imgPopUpTstVacPulHandx2,butPopUpTstVacManualLowLvl,butPopUpTstVacManualMidLvl,butPopUpTstVacManualHighLvl,
-//		butPopUpTstVacAuto,	swPopUpTstVacLowLvl,swPopUpTstVacMidLvl,swPopUpTstVacHighLvl,
-//		butPopUpReturn, /*butPopUpOK,*/ imgPopUpHPcolorBar, imgPopUpTstVacAUTOstatus
+//		butPopUpTstVacAuto,	SwPopUpTstVacLowLvl,SwPopUpTstVacMidLvl,SwPopUpTstVacHighLvl,
+//		ButPopUpReturn, /*butPopUpOK,*/ imgPopUpHPcolorBar, imgPopUpTstVacAUTOstatus
 //};
 
 ///* - Test Vacum SMALL */
@@ -470,64 +470,64 @@ const uint32 APP_GUI_TRT_SCR_BUT_VAC_IMG[HP_CRYO_VAC_LVL_NUM][App_GUI_Max_Vac_bu
 ///* - Recommendation */
 //const uint32 APP_GUI_POPUP_RECOMMENDATION_WIDGET_LIST[APP_GUI_POPUP_RECOMMENDATION_WIDGET_LIST_NUM] =
 //{
-//		popUpRecomm, imgPopUpRecommbckGnd, imgPopUpRecommCurved, imgPopUpRecommTight, imgPopUpRecommStright, imgPopUpRecommTiny,
-//		imgPopUpRecommTinyCurved, imgPopUpRecommDouble, imgPopUpRecommOval, imgPopUpRecommOvalCurved, imgPopUpRecommAngled,
-//		//swPopUpRecommInfo
+//		PopUpRecomm, imgPopUpRecommbckGnd, ImgPopUpRecommCurved, ImgPopUpRecommTight, ImgPopUpRecommStright, ImgPopUpRecommTiny,
+//		ImgPopUpRecommTinyCurved, ImgPopUpRecommDouble, ImgPopUpRecommOval, ImgPopUpRecommOvalCurved, ImgPopUpRecommAngled,
+//		//SwPopUpRecommInfo
 //};
 
 //const uint32 APP_GUI_POPUP_AVISOS_INIT_SCRN_WIDGET_LIST[APP_GUI_POPUP_AVISOS_WIDGET_LIST_NUM] =
 //{
-//		popupInitScrAvisos, imgPopUpInitScrAvisoBckGND, imgPopUpInitScrAvisoNivelAguaBajo, imgPopUpInitScrAvisoNivelAguaMedio, imgPopUpInitScrAvisoTempAmb,
+//		PopupInitScrAvisos, imgPopUpInitScrAvisoBckGND, imgPopUpInitScrAvisoNivelAguaBajo, imgPopUpInitScrAvisoNivelAguaMedio, imgPopUpInitScrAvisoTempAmb,
 //		imgPopUpInitScrAvisoRFID, imgPopUpInitScrAvisoRTC, imgPopUpInitScrAvisoFiltroAire
 //};
 
 //const uint32 APP_GUI_POPUP_AVISOS_TRT_SCRN_WIDGET_LIST[APP_GUI_POPUP_AVISOS_WIDGET_LIST_NUM] =
 //{
-//		popupTrtScrAvisos, imgPopUpTrtScrAvisoBckGND, imgPopUpTrtScrAvisoNivelAguaBajo, imgPopUpTrtScrAvisoNivelAguaMedio, imgPopUpTrtScrAvisoTempAmb,
-//		imgPopUpTrtScrAvisoRFID, imgPopUpTrtScrAvisoRTC, imgPopUpTrtScrAvisoFiltroAire//, swTrtScrAvisos
+//		PopupTrtScrAvisos, imgPopUpTrtScrAvisoBckGND, imgPopUpTrtScrAvisoNivelAguaBajo, imgPopUpTrtScrAvisoNivelAguaMedio, imgPopUpTrtScrAvisoTempAmb,
+//		imgPopUpTrtScrAvisoRFID, imgPopUpTrtScrAvisoRTC, imgPopUpTrtScrAvisoFiltroAire//, SwTrtScrAvisos
 //};
 
 //const uint32 APP_GUI_POPUP_AVISOS_CALC_SCRN_WIDGET_LIST[APP_GUI_POPUP_AVISOS_WIDGET_LIST_NUM] =
 //{
-//		popupCalcScrAvisos, imgPopUpCalcScrAvisoBckGND, imgPopUpCalcScrAvisoNivelAguaBajo, imgPopUpCalcScrAvisoNivelAguaMedio, imgPopUpCalcScrAvisoTempAmb,
+//		PopupCalcScrAvisos, imgPopUpCalcScrAvisoBckGND, imgPopUpCalcScrAvisoNivelAguaBajo, imgPopUpCalcScrAvisoNivelAguaMedio, imgPopUpCalcScrAvisoTempAmb,
 //		imgPopUpCalcScrAvisoRFID, imgPopUpCalcScrAvisoRTC, imgPopUpCalcScrAvisoFiltroAire
 //};
 
 //const uint32 APP_GUI_POPUP_AVISOS_CFG_SCRN_WIDGET_LIST[APP_GUI_POPUP_AVISOS_WIDGET_LIST_NUM] =
 //{
-//		popupCfgScrAvisos, imgPopUpCfgScrAvisoBckGND, imgPopUpCfgScrAvisoNivelAguaBajo, imgPopUpCfgScrAvisoNivelAguaMedio, imgPopUpCfgScrAvisoTempAmb,
+//		PopupCfgScrAvisos, imgPopUpCfgScrAvisoBckGND, imgPopUpCfgScrAvisoNivelAguaBajo, imgPopUpCfgScrAvisoNivelAguaMedio, imgPopUpCfgScrAvisoTempAmb,
 //		imgPopUpCfgScrAvisoRFID, imgPopUpCfgScrAvisoRTC, imgPopUpCfgScrAvisoFiltroAire
 //};
 
 //const uint32 APP_GUI_POPUP_AVISOS_LAN_SCRN_WIDGET_LIST[APP_GUI_POPUP_AVISOS_WIDGET_LIST_NUM] =
 //{
-//		popupLanScrAvisos, imgPopUpLanScrAvisoBckGND, imgPopUpLanScrAvisoNivelAguaBajo, imgPopUpLanScrAvisoNivelAguaMedio, imgPopUpLanScrAvisoTempAmb,
+//		PopupLanScrAvisos, imgPopUpLanScrAvisoBckGND, imgPopUpLanScrAvisoNivelAguaBajo, imgPopUpLanScrAvisoNivelAguaMedio, imgPopUpLanScrAvisoTempAmb,
 //		imgPopUpLanScrAvisoRFID, imgPopUpLanScrAvisoRTC, imgPopUpLanScrAvisoFiltroAire
 //};
 
 //const uint32 APP_GUI_POPUP_ERRORES_SAT_WIDGET_LIST[APP_GUI_POPUP_ERRORES_SAT_WIDGET_LIST_NUM] =
 //{
-//		PopupErrorSAT, imgVwrFondoErrorSAT, numVwrError1, numVwrError2, numVwrError3, numVwrError4, numVwrError5, butOkerr
+//		PopupErrorSAT, imgVwrFondoErrorSAT, NumVwrError1, NumVwrError2, NumVwrError3, NumVwrError4, NumVwrError5, butOkerr
 //};
 
 const uint32 APP_GUI_AVISOS_POPUP_WIDGET_SCREENS[APP_GUI_NUM_SCREENS] =
 {
-        APP_GUI_NUM_WIDGETS, popupInitScrAvisos, popupTrtScrAvisos,popupCalcScrAvisos, popupCfgScrAvisos, popupLanScrAvisos, APP_GUI_NUM_WIDGETS
+        APP_GUI_NUM_WIDGETS, PopupInitScrAvisos, PopupTrtScrAvisos,PopupCalcScrAvisos, PopupCfgScrAvisos, PopupLanScrAvisos, APP_GUI_NUM_WIDGETS
 };
 
 //const uint32 APP_GUI_AVISOS_SWITCH_WIDGET_SCREENS[APP_GUI_NUM_SCREENS] =
 //{
-//		APP_GUI_NUM_WIDGETS, swInitScrAvisos, swTrtScrAvisos,  swCalcScrAvisos, swCfgScrAvisos, swLanScrAvisos, APP_GUI_NUM_WIDGETS
+//		APP_GUI_NUM_WIDGETS, SwInitScrAvisos, SwTrtScrAvisos,  SwCalcScrAvisos, SwCfgScrAvisos, SwLanScrAvisos, APP_GUI_NUM_WIDGETS
 //};
 
 const uint32 APP_GUI_AVISOS_NOTIFICATIONS_WIDGETS_SCREENS[APP_GUI_NUM_SCREENS] =
 {
-        APP_GUI_NUM_WIDGETS, imgInitScrNotificacion, imgTrtScrNotificacion, imgCalcScrNotificacion, imgCfgScrNotificacion, imgLanScrNotificacion, APP_GUI_NUM_WIDGETS
+        APP_GUI_NUM_WIDGETS, ImgInitScrNotificacion, ImgTrtScrNotificacion, ImgCalcScrNotificacion, ImgCfgScrNotificacion, ImgLanScrNotificacion, APP_GUI_NUM_WIDGETS
 };
 
 //const uint32 APP_GUI_SAT_ERRORES_NUMVWR_LIST[APP_GUI_SAT_ERRORES_PERIFS] =
 //{
-//		numVwrError1, numVwrError2, numVwrError3, numVwrError4, numVwrError5
+//		NumVwrError1, NumVwrError2, NumVwrError3, NumVwrError4, NumVwrError5
 //};
 
 //const uint32 APP_GUI_AVISOS_WIDGETS[APP_GUI_NUM_SCREENS][App_GUI_Num_Max_Avisos] =
@@ -544,7 +544,7 @@ const uint32 APP_GUI_AVISOS_NOTIFICATIONS_WIDGETS_SCREENS[APP_GUI_NUM_SCREENS] =
 
 const uint32 APP_GUI_TRT_SCR_POPUP_WIDGET_LIST[APP_GUI_TRT_SCR_NUM_POPUPS] =
 {
-        popUpTime, popUpTstVac, popUpRFID, popUpRecomm, popUpTstVacSmall, popupTrtScrAvisos
+        PopUpTime, PopUpTstVac, PopUpRFID, PopUpRecomm, PopUpTstVacSmall, PopupTrtScrAvisos
 };
 
 const cAppGUItrtAgrupacionZones APP_GUI_TRT_ZONES_GROUP_ASSOCIATION[APP_GUI_NUM_FULL_BODY_AREAS][APP_GUI_MAX_DOTS_PER_AREA] =
@@ -947,17 +947,17 @@ const tAppGUIareaZoomDotsTableFields APP_GUI_AREA_ZOOM_DOTS[APP_GUI_NUM_BODYS][A
 ///*Pantalla de Idiomas*/
 //const uint32 APP_GUI_LANG_SW_WIDGET_LANG_LIST[App_GUI_Different_Languages]=
 //{
-//		APP_GUI_NUM_WIDGETS, swLanFrances, swLanCastellano, swLanIngles, swLanItaliano, swLanAleman,
-//		 swLanPolaco, swLanRuso, swLanPortugues, swLanChino, swLanJapones, swLanCoreano
+//		APP_GUI_NUM_WIDGETS, SwLanFrances, SwLanCastellano, SwLanIngles, SwLanItaliano, SwLanAleman,
+//		 SwLanPolaco, SwLanRuso, SwLanPortugues, SwLanChino, SwLanJapones, SwLanCoreano
 //};
 
 ///*Pantalla de SAT*/
 //const uint32 APP_GUI_SAT_NUMVWR_WIDGET_LIST[APP_GUI_SAT_MAX_NUMVWR] =
 //{
-//		numVwr1, numVwr2, numVwr3, numVwr4, numVwr5, numVwr6, numVwr7,
-//		numVwr8, numVwr9, numVwr10, numVwr11, numVwr12, numVwr13, numVwr14,
-//		numVwr15, numVwr16, numVwr17, numVwr18, numVwr19, numVwr20, numVwr21,
-//		numVwr22, numVwr23, numVwr24, numVwr25, numVwr26, numVwr27, numVwr28
+//		NumVwr1, NumVwr2, NumVwr3, NumVwr4, NumVwr5, NumVwr6, NumVwr7,
+//		NumVwr8, NumVwr9, NumVwr10, NumVwr11, NumVwr12, NumVwr13, NumVwr14,
+//		NumVwr15, NumVwr16, NumVwr17, NumVwr18, NumVwr19, NumVwr20, NumVwr21,
+//		NumVwr22, NumVwr23, NumVwr24, NumVwr25, NumVwr26, NumVwr27, NumVwr28
 //};
 
 ///*Pantalla de Fatiga*/
@@ -978,24 +978,24 @@ const tAppGUIareaZoomDotsTableFields APP_GUI_AREA_ZOOM_DOTS[APP_GUI_NUM_BODYS][A
 
 //const uint32 APP_GUI_FAT_DIFF_NUM_VWR_VALUES[FatMaxValues] =
 //{
-//		numVwrVacuumHP1, numVwrVacuumHP2, numVwrVacuumHP3, numVwrVacuumHP4,
-//		numVwrCaudalRetornoHP1, numVwrCaudalRetornoHP2, numVwrCaudalRetornoHP3, numVwrCaudalRetornoHP4,
-//		numVwrRth, numVwrTempRetorno, numVwrCaudalRetorno, numVwrTempBomba, numVwrTempAmb, numVwrVtobera, numVwrCPI,
-//		numVwrErrFatiga1, numVwrErrFatiga2,numVwrErrFatiga3, numVwrErrFatiga4, numVwrErrFatiga5
+//		NumVwrVacuumHP1, NumVwrVacuumHP2, NumVwrVacuumHP3, NumVwrVacuumHP4,
+//		NumVwrCaudalRetornoHP1, NumVwrCaudalRetornoHP2, NumVwrCaudalRetornoHP3, NumVwrCaudalRetornoHP4,
+//		NumVwrRth, NumVwrTempRetorno, NumVwrCaudalRetorno, NumVwrTempBomba, NumVwrTempAmb, NumVwrVtobera, NumVwrCPI,
+//		NumVwrErrFatiga1, NumVwrErrFatiga2,NumVwrErrFatiga3, NumVwrErrFatiga4, NumVwrErrFatiga5
 //};
 
 tAppGUIPopUpDisplayed APP_GUI_POPUP_DISPLAYED_MAP[APP_GUI_POPUP_DISPLAYED_MAP_NUM] =
 {
-    { popupInitScrAvisos, false },
-    { popUpTime, false },
-    { popUpTstVac, false },
-    { popUpTstVacSmall, false },
-    { popUpRFID, false },
-    { popUpRecomm, false },
-    { popupTrtScrAvisos, false },
-    { popupCalcScrAvisos, false },
-    { popupCfgScrAvisos, false },
-    { popupLanScrAvisos, false }
+    { PopupInitScrAvisos, false },
+    { PopUpTime, false },
+    { PopUpTstVac, false },
+    { PopUpTstVacSmall, false },
+    { PopUpRFID, false },
+    { PopUpRecomm, false },
+    { PopupTrtScrAvisos, false },
+    { PopupCalcScrAvisos, false },
+    { PopupCfgScrAvisos, false },
+    { PopupLanScrAvisos, false }
 };
 
 ////V7790
@@ -1020,10 +1020,10 @@ tAppGUIPopUpDisplayed APP_GUI_POPUP_DISPLAYED_MAP[APP_GUI_POPUP_DISPLAYED_MAP_NU
 //const uint32 APP_GUI_INTERFACE_WIDGETS[APP_GUI_NUM_WIDGETS][APP_GUI_WIDGETS_FEATURES] =
 //{
 ////PANTALLA DE CARGA
-//		{ 		imgLoadScrBckGnd,APP_GUI_LOAD_SCREEN,APP_GUI_IMG_VWR_ID,1,1,1,APP_GUI_LAYER0,
+//		{ 		ImgLoadScrBckGnd,APP_GUI_LOAD_SCREEN,APP_GUI_IMG_VWR_ID,1,1,1,APP_GUI_LAYER0,
 //				a001_FondoLogoCooltechDefine,APP_GUI_IMG_FONDO_CARGA,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
-//		{		imgLoadAnim1,APP_GUI_LOAD_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER1,
+//		{		ImgLoadAnim1,APP_GUI_LOAD_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER1,
 //				a002_CargaLogotipo1,APP_GUI_IMG_CIRCULO_CARGA_1,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
 //		{		imgLoadAnim2,APP_GUI_LOAD_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER1,
@@ -1052,11 +1052,11 @@ tAppGUIPopUpDisplayed APP_GUI_POPUP_DISPLAYED_MAP[APP_GUI_POPUP_DISPLAYED_MAP_NU
 //		{		imgInitScrBckGnd,APP_GUI_INIT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,1,APP_GUI_LAYER0,
 //				b001_FondoLogoSiluetasHombreMujer,APP_GUI_IMG_FONDO_SILUETA_HOMBRE_MUJER,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
-//		{		butSelectWoman,APP_GUI_INIT_SCREEN,APP_GUI_BUT_ID,1,1,1,APP_GUI_LAYER1,
+//		{		ButSelectWoman,APP_GUI_INIT_SCREEN,APP_GUI_BUT_ID,1,1,1,APP_GUI_LAYER1,
 //				b002_BotonFemeninoPress,b003_BotonFemeninoRls,APP_GUI_BUT_FEMENINO_TSR_COORD,164,149,
 //				CBKdummy,CBKbutGenderSelect,CBKdummy,APP_GUI_BUT_FEMENINO_PRS_COORD,APP_GUI_BUT_FEMENINO_RLS_COORD,b004_TscBotonFemenino,
 //				0,0,0,0,0,0,0,0,0		},
-//		{		butSelectMan,APP_GUI_INIT_SCREEN,APP_GUI_BUT_ID,1,1,1,APP_GUI_LAYER1,
+//		{		ButSelectMan,APP_GUI_INIT_SCREEN,APP_GUI_BUT_ID,1,1,1,APP_GUI_LAYER1,
 //				b005_BotonMasculinoPress,b006_BotonMasculinoRls,APP_GUI_BUT_MASCULINO_TSR_COORD,166,149,
 //				CBKdummy,CBKbutGenderSelect,CBKdummy,APP_GUI_BUT_MASCULINO_PRS_COORD,APP_GUI_BUT_MASCULINO_RLS_COORD,b007_TscBotonMasculino,
 //				0,0,0,0,0,0,0,0,0		},
@@ -1090,16 +1090,16 @@ tAppGUIPopUpDisplayed APP_GUI_POPUP_DISPLAYED_MAP[APP_GUI_POPUP_DISPLAYED_MAP_NU
 		
 //		//avisos
 						
-//		{		swInitScrAvisos,APP_GUI_INIT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
+//		{		SwInitScrAvisos,APP_GUI_INIT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
 //				b029_BotonAvisosPress,b030_BotonAvisosRls,b029_BotonAvisosPress,b030_BotonAvisosRls,
 //				APP_GUI_BUT_AVISOS_GLOBAL_TSR_COORD, 62,62, CBKbutWarningOn, CBKbutWarningOff,APP_GUI_BUT_AVISOS_GLOBAL_PRS_COORD,
 //				APP_GUI_BUT_AVISOS_GLOBAL_PRS_COORD,APP_GUI_BUT_AVISOS_GLOBAL_PRS_COORD,APP_GUI_BUT_AVISOS_GLOBAL_PRS_COORD, b031_TscBotonAvisos,
 //				0,0,0,0},
-//		{		imgInitScrNotificacion,APP_GUI_INIT_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER3,
+//		{		ImgInitScrNotificacion,APP_GUI_INIT_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER3,
 //				b032_ImgNotificacion,APP_GUI_IMG_AVISO_PENDIENTE_COORD,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
 				
-//		{		popupInitScrAvisos,APP_GUI_INIT_SCREEN, APP_GUI_POPUP_ID ,1,0,0, APP_GUI_LAYER1,
+//		{		PopupInitScrAvisos,APP_GUI_INIT_SCREEN, APP_GUI_POPUP_ID ,1,0,0, APP_GUI_LAYER1,
 //				0, 0, APP_GUI_POPUP_AVISOS_WIDGET_LIST_NUM,0,APP_GUI_POPUP_DISABLE_ALL_WIDGETS,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
 
@@ -1151,98 +1151,98 @@ tAppGUIPopUpDisplayed APP_GUI_POPUP_DISPLAYED_MAP[APP_GUI_POPUP_DISPLAYED_MAP_NU
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 				
 //		//Colores fondos de los paneles de control de los HPs
-//		{	 	imgColourCtrlPnlBckGndHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER1,
+//		{	 	ImgColourCtrlPnlBckGndHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER1,
 //				c005_MenuTrtHP1_Aro2,APP_GUI_IMG_COLOR_MENU_HP_1,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-//		{	 	imgColourCtrlPnlBckGndHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER1,
+//		{	 	ImgColourCtrlPnlBckGndHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER1,
 //				c013_MenuTrtHP2_Aro2,APP_GUI_IMG_COLOR_MENU_HP_2,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-//		{	 	imgColourCtrlPnlBckGndHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER1,
+//		{	 	ImgColourCtrlPnlBckGndHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER1,
 //				c021_MenuTrtHP3_Aro2,APP_GUI_IMG_COLOR_MENU_HP_3,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-//		{	 	imgColourCtrlPnlBckGndHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER1,
+//		{	 	ImgColourCtrlPnlBckGndHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER1,
 //				c029_MenuTrtHP4_Aro2,APP_GUI_IMG_COLOR_MENU_HP_4,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 						
 //		//Indicador estado HP cuando activado. El fondo contiene la barra de desactivados
-//		{		imgCtrlPnlRFIDblinkHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER2,
+//		{		ImgCtrlPnlRFIDblinkHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER2,
 //				c183_IndicadorRFIDHP1Off,APP_GUI_IMG_INDICADOR_RFID_HP_1,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
-//		{		imgCtrlPnlRFIDblinkHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER2,
+//		{		ImgCtrlPnlRFIDblinkHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER2,
 //				c187_IndicadorRFIDHP2Off,APP_GUI_IMG_INDICADOR_RFID_HP_2,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
-//		{		imgCtrlPnlRFIDblinkHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER2,
+//		{		ImgCtrlPnlRFIDblinkHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER2,
 //				c191_IndicadorRFIDHP3Off,APP_GUI_IMG_INDICADOR_RFID_HP_3,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
-//		{		imgCtrlPnlRFIDblinkHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER2,
+//		{		ImgCtrlPnlRFIDblinkHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER2,
 //				c195_IndicadorRFIDHP4Off,APP_GUI_IMG_INDICADOR_RFID_HP_4,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
-//		{		imgCtrlPnlPulBlinkHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER2,
+//		{		ImgCtrlPnlPulBlinkHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER2,
 //				c184_IndicadorBotonHP1Off,APP_GUI_IMG_INDICADOR_BOTON_HP_1,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
-//		{		imgCtrlPnlPulBlinkHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER2,
+//		{		ImgCtrlPnlPulBlinkHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER2,
 //				c188_IndicadorBotonHP2Off,APP_GUI_IMG_INDICADOR_BOTON_HP_2,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
-//		{		imgCtrlPnlPulBlinkHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER2,
+//		{		ImgCtrlPnlPulBlinkHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER2,
 //				c192_IndicadorBotonHP3Off,APP_GUI_IMG_INDICADOR_BOTON_HP_3,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
-//		{		imgCtrlPnlPulBlinkHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER2,
+//		{		ImgCtrlPnlPulBlinkHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER2,
 //				c196_IndicadorBotonHP4Off,APP_GUI_IMG_INDICADOR_BOTON_HP_4,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
-//		{		imgCtrlPnlVacBlinkHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER2,
+//		{		ImgCtrlPnlVacBlinkHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER2,
 //				c185_IndicadorVacHP1Off,APP_GUI_IMG_INDICADOR_VAC_HP_1,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
-//		{		imgCtrlPnlVacBlinkHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER2,
+//		{		ImgCtrlPnlVacBlinkHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER2,
 //				c189_IndicadorVacHP2Off,APP_GUI_IMG_INDICADOR_VAC_HP_2,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
-//		{		imgCtrlPnlVacBlinkHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER2,
+//		{		ImgCtrlPnlVacBlinkHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER2,
 //			   	c193_IndicadorVacHP3Off,APP_GUI_IMG_INDICADOR_VAC_HP_3,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
-//		{		imgCtrlPnlVacBlinkHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER2,
+//		{		ImgCtrlPnlVacBlinkHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER2,
 //			   	c197_IndicadorVacHP4Off,APP_GUI_IMG_INDICADOR_VAC_HP_4,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
-//		{		imgCtrlPnlCoolingBlinkHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER2,
+//		{		ImgCtrlPnlCoolingBlinkHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER2,
 //				c186_IndicadorFrioHP1Off,APP_GUI_IMG_INDICADOR_FRIO_HP_1,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
-//		{		imgCtrlPnlCoolingBlinkHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER2,
+//		{		ImgCtrlPnlCoolingBlinkHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER2,
 //				c190_IndicadorFrioHP2Off,APP_GUI_IMG_INDICADOR_FRIO_HP_2,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
-//		{		imgCtrlPnlCoolingBlinkHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER2,
+//		{		ImgCtrlPnlCoolingBlinkHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER2,
 //				c194_IndicadorFrioHP3Off,APP_GUI_IMG_INDICADOR_FRIO_HP_3,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
-//		{		imgCtrlPnlCoolingBlinkHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER2,
+//		{		ImgCtrlPnlCoolingBlinkHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER2,
 //				c198_IndicadorFrioHP4Off,APP_GUI_IMG_INDICADOR_FRIO_HP_4,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
 
 //		//Botones del panel de control de PLAY y Test Vacum
-//		{		butCtrlPnlPlayHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER2,
+//		{		ButCtrlPnlPlayHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER2,
 //				c036_BotonPlayPress,c038_BotonPlayMarcaAgua,APP_GUI_BUT_PLAY_HP_1_TSR_COORD,55, 55,
 //				CBKdummy,CBKbutCtrlPnlPlay,CBKdummy,APP_GUI_BUT_PLAY_HP_1_PRS_COORD,APP_GUI_BUT_PLAY_HP_1_RLS_COORD,c039_TscBotonPlay,
 //				0,0,0,0,0,0,0,0,0		},
-//		{		butCtrlPnlPlayHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER2,
+//		{		ButCtrlPnlPlayHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER2,
 //				c036_BotonPlayPress,c038_BotonPlayMarcaAgua,APP_GUI_BUT_PLAY_HP_2_TSR_COORD,55, 55,
 //				CBKdummy,CBKbutCtrlPnlPlay,CBKdummy,APP_GUI_BUT_PLAY_HP_2_PRS_COORD,APP_GUI_BUT_PLAY_HP_2_RLS_COORD,c039_TscBotonPlay,
 //				0,0,0,0,0,0,0,0,0		},
-//		{		butCtrlPnlPlayHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER2,
+//		{		ButCtrlPnlPlayHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER2,
 //				c036_BotonPlayPress,c038_BotonPlayMarcaAgua,APP_GUI_BUT_PLAY_HP_3_TSR_COORD,55, 55,
 //				CBKdummy,CBKbutCtrlPnlPlay,CBKdummy,APP_GUI_BUT_PLAY_HP_3_PRS_COORD,APP_GUI_BUT_PLAY_HP_3_RLS_COORD,c039_TscBotonPlay,
 //				0,0,0,0,0,0,0,0,0		},
-//		{		butCtrlPnlPlayHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER2,
+//		{		ButCtrlPnlPlayHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER2,
 //				c036_BotonPlayPress,c038_BotonPlayMarcaAgua,APP_GUI_BUT_PLAY_HP_4_TSR_COORD,55, 55,
 //				CBKdummy,CBKbutCtrlPnlPlay,CBKdummy,APP_GUI_BUT_PLAY_HP_4_PRS_COORD,APP_GUI_BUT_PLAY_HP_4_RLS_COORD,c039_TscBotonPlay,
 //				0,0,0,0,0,0,0,0,0		},
 				
 
-//		{		swCtrlPnlTstVacHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
+//		{		SwCtrlPnlTstVacHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
 //				c040_BotonVacuum2PressLeft,c042_BotonVacuum3MarcaAguaLeft,c040_BotonVacuum2PressLeft,c041_BotonVacuum2RlsLeft,
 //				APP_GUI_BUT_VAC_HP_1_PRS_COORD, 55, 55, CBKswCtrlPnlTstVacOn, CBKswCtrlPnlTstVacOff, APP_GUI_BUT_VAC_HP_1_PRS_COORD, APP_GUI_BUT_VAC_HP_1_PRS_COORD, APP_GUI_BUT_VAC_HP_1_PRS_COORD, APP_GUI_BUT_VAC_HP_1_PRS_COORD, c043_TscBotonVacuum },
-//		{		swCtrlPnlTstVacHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
+//		{		SwCtrlPnlTstVacHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
 //				c040_BotonVacuum2PressRight,c042_BotonVacuum3MarcaAguaRight,c040_BotonVacuum2PressRight,c041_BotonVacuum2RlsRight,
 //				APP_GUI_BUT_VAC_HP_2_PRS_COORD, 55, 55, CBKswCtrlPnlTstVacOn, CBKswCtrlPnlTstVacOff,APP_GUI_BUT_VAC_HP_2_PRS_COORD,APP_GUI_BUT_VAC_HP_2_PRS_COORD,APP_GUI_BUT_VAC_HP_2_PRS_COORD,APP_GUI_BUT_VAC_HP_2_PRS_COORD, c043_TscBotonVacuum },
-//		{		swCtrlPnlTstVacHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
+//		{		SwCtrlPnlTstVacHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
 //				c040_BotonVacuum2PressLeft,c042_BotonVacuum3MarcaAguaLeft,c040_BotonVacuum2PressLeft,c041_BotonVacuum2RlsLeft,
 //				APP_GUI_BUT_VAC_HP_3_PRS_COORD, 55, 55, CBKswCtrlPnlTstVacOn, CBKswCtrlPnlTstVacOff, APP_GUI_BUT_VAC_HP_3_PRS_COORD,APP_GUI_BUT_VAC_HP_3_PRS_COORD,APP_GUI_BUT_VAC_HP_3_PRS_COORD,APP_GUI_BUT_VAC_HP_3_PRS_COORD, c043_TscBotonVacuum },
-//		{		swCtrlPnlTstVacHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
+//		{		SwCtrlPnlTstVacHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
 //				c040_BotonVacuum2PressRight,c042_BotonVacuum3MarcaAguaRight,c040_BotonVacuum2PressRight,c041_BotonVacuum2RlsRight,
 //				APP_GUI_BUT_VAC_HP_4_PRS_COORD, 55, 55, CBKswCtrlPnlTstVacOn, CBKswCtrlPnlTstVacOff, APP_GUI_BUT_VAC_HP_4_PRS_COORD,APP_GUI_BUT_VAC_HP_4_PRS_COORD,APP_GUI_BUT_VAC_HP_4_PRS_COORD,APP_GUI_BUT_VAC_HP_4_PRS_COORD, c043_TscBotonVacuum },
 				
@@ -1264,88 +1264,88 @@ tAppGUIPopUpDisplayed APP_GUI_POPUP_DISPLAYED_MAP[APP_GUI_POPUP_DISPLAYED_MAP_NU
 ////				0,0,0,0,0,0,0,0,0		},
 				
 //		//Switch de indicador de tratamiento AUTO o MANUAL
-//		{		butSwtchModeAutoManualHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,1,1,APP_GUI_LAYER2,
+//		{		ButSwtchModeAutoManualHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,1,1,APP_GUI_LAYER2,
 //				c045_BotonAutoRls,c045_BotonAutoRls,APP_GUI_BUT_TRT_AUTO_HP1_TSR_COORD,65,35,
 //				CBKbutTRTmodeAutoManual,CBKdummy,CBKdummy,APP_GUI_BUT_TRT_AUTO_HP1_PRS_COORD,APP_GUI_BUT_TRT_AUTO_HP1_RLS_COORD,c044_B_TscBotonAuto,
 //				0,0,0,0,0,0,0,0,0		},
-//		{		butSwtchModeAutoManualHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,1,1,APP_GUI_LAYER2,
+//		{		ButSwtchModeAutoManualHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,1,1,APP_GUI_LAYER2,
 //				c045_BotonAutoRls,c045_BotonAutoRls,APP_GUI_BUT_TRT_AUTO_HP2_TSR_COORD,65,35,
 //				CBKbutTRTmodeAutoManual,CBKdummy,CBKdummy,APP_GUI_BUT_TRT_AUTO_HP2_PRS_COORD,APP_GUI_BUT_TRT_AUTO_HP2_RLS_COORD,c044_B_TscBotonAuto,
 //				0,0,0,0,0,0,0,0,0		},
-//		{		butSwtchModeAutoManualHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,1,1,APP_GUI_LAYER2,
+//		{		ButSwtchModeAutoManualHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,1,1,APP_GUI_LAYER2,
 //				c045_BotonAutoRls,c045_BotonAutoRls,APP_GUI_BUT_TRT_AUTO_HP3_TSR_COORD,65,35,
 //				CBKbutTRTmodeAutoManual,CBKdummy,CBKdummy,APP_GUI_BUT_TRT_AUTO_HP3_PRS_COORD,APP_GUI_BUT_TRT_AUTO_HP3_RLS_COORD,c044_B_TscBotonAuto,
 //				0,0,0,0,0,0,0,0,0		},
-//		{		butSwtchModeAutoManualHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,1,1,APP_GUI_LAYER2,
+//		{		ButSwtchModeAutoManualHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,1,1,APP_GUI_LAYER2,
 //				c045_BotonAutoRls,c045_BotonAutoRls,APP_GUI_BUT_TRT_AUTO_HP4_TSR_COORD,65,35,
 //				CBKbutTRTmodeAutoManual,CBKdummy,CBKdummy,APP_GUI_BUT_TRT_AUTO_HP4_PRS_COORD,APP_GUI_BUT_TRT_AUTO_HP4_RLS_COORD,c044_B_TscBotonAuto,
 //				0,0,0,0,0,0,0,0,0		},
 		
 //		//Visores de tiempo restante de trt
-//		{		numVwrTimeHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER2,
+//		{		NumVwrTimeHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER2,
 //				APP_GUI_LAYER3,5,3,16,35,1,APP_GUI_NUM_FONDO_TEMPORIZADOR_HP_1,118,57,c047_FondoTemporizador,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c065_CaracterNegativo,c062_CaracterDosPuntos	},
-//		{		numVwrTimeHP2, APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER2,
+//		{		NumVwrTimeHP2, APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER2,
 //				APP_GUI_LAYER3,5,3,16,35,1,APP_GUI_NUM_FONDO_TEMPORIZADOR_HP_2,118,57,c047_FondoTemporizador,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c065_CaracterNegativo,c062_CaracterDosPuntos	},
-//		{		numVwrTimeHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER2,
+//		{		NumVwrTimeHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER2,
 //				APP_GUI_LAYER3,5,3,16,35,1,APP_GUI_NUM_FONDO_TEMPORIZADOR_HP_3,118,57,c047_FondoTemporizador,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c065_CaracterNegativo,c062_CaracterDosPuntos	},
-//		{		numVwrTimeHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER2,
+//		{		NumVwrTimeHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER2,
 //				APP_GUI_LAYER3,5,3,16,35,1,APP_GUI_NUM_FONDO_TEMPORIZADOR_HP_4,118,57,c047_FondoTemporizador,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c065_CaracterNegativo,c062_CaracterDosPuntos	},
 		
-//		{		butSelectTimeHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER4,
+//		{		ButSelectTimeHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER4,
 //				c048_RelojTemporizadorPress,c050_RelojTemporizadorMarcaAgua,APP_GUI_BUT_CLK_HP_1_TSR_COORD,129,45,
 //				CBKdummy,CBKbutSelectTime,CBKdummy,APP_GUI_BUT_CLK_HP_1_PRS_COORD,APP_GUI_BUT_CLK_HP_1_RLS_COORD,c051_TscrRelojTemporizador,
 //				0,0,0,0,0,0,0,0,0		},
-//		{		butSelectTimeHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER4,
+//		{		ButSelectTimeHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER4,
 //				c048_RelojTemporizadorPress,c050_RelojTemporizadorMarcaAgua,APP_GUI_BUT_CLK_HP_2_TSR_COORD,129,45,
 //				CBKdummy,CBKbutSelectTime,CBKdummy,APP_GUI_BUT_CLK_HP_2_PRS_COORD,APP_GUI_BUT_CLK_HP_2_RLS_COORD,c051_TscrRelojTemporizador,
 //				0,0,0,0,0,0,0,0,0		},
-//		{		butSelectTimeHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER4,
+//		{		ButSelectTimeHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER4,
 //				c048_RelojTemporizadorPress,c050_RelojTemporizadorMarcaAgua,APP_GUI_BUT_CLK_HP_3_TSR_COORD,129,45,
 //				CBKdummy,CBKbutSelectTime,CBKdummy,APP_GUI_BUT_CLK_HP_3_PRS_COORD,APP_GUI_BUT_CLK_HP_3_RLS_COORD,c051_TscrRelojTemporizador,
 //				0,0,0,0,0,0,0,0,0		},
-//		{		butSelectTimeHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER4,
+//		{		ButSelectTimeHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER4,
 //				c048_RelojTemporizadorPress,c050_RelojTemporizadorMarcaAgua,APP_GUI_BUT_CLK_HP_4_TSR_COORD,129,45,
 //				CBKdummy,CBKbutSelectTime,CBKdummy,APP_GUI_BUT_CLK_HP_4_PRS_COORD,APP_GUI_BUT_CLK_HP_4_RLS_COORD,c051_TscrRelojTemporizador,
 //				0,0,0,0,0,0,0,0,0		},
 				
-//		{		butVwrTemperatureHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER4,
+//		{		ButVwrTemperatureHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER4,
 //				c048_RelojTemporizadorPress,c050_RelojTemporizadorMarcaAgua,APP_GUI_NUM_FONDO_TEMPORIZADOR_HP_1,129,45,
 //				CBKdummy,CBKbutTemperatureVwr,CBKdummy,APP_GUI_NUM_FONDO_TEMPORIZADOR_HP_1,APP_GUI_NUM_FONDO_TEMPORIZADOR_HP_1,c051_TscrRelojTemporizador,
 //				0,0,0,0,0,0,0,0,0		},
-//		{		butVwrTemperatureHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER4,
+//		{		ButVwrTemperatureHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER4,
 //				c048_RelojTemporizadorPress,c050_RelojTemporizadorMarcaAgua,APP_GUI_NUM_FONDO_TEMPORIZADOR_HP_2,129,45,
 //				CBKdummy,CBKbutTemperatureVwr,CBKdummy,APP_GUI_NUM_FONDO_TEMPORIZADOR_HP_2,APP_GUI_NUM_FONDO_TEMPORIZADOR_HP_2,c051_TscrRelojTemporizador,
 //				0,0,0,0,0,0,0,0,0		},
-//		{		butVwrTemperatureHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER4,
+//		{		ButVwrTemperatureHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER4,
 //				c048_RelojTemporizadorPress,c050_RelojTemporizadorMarcaAgua,APP_GUI_NUM_FONDO_TEMPORIZADOR_HP_3,129,45,
 //				CBKdummy,CBKbutTemperatureVwr,CBKdummy,APP_GUI_NUM_FONDO_TEMPORIZADOR_HP_3,APP_GUI_NUM_FONDO_TEMPORIZADOR_HP_3,c051_TscrRelojTemporizador,
 //				0,0,0,0,0,0,0,0,0		},
-//		{		butVwrTemperatureHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER4,
+//		{		ButVwrTemperatureHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER4,
 //				c048_RelojTemporizadorPress,c050_RelojTemporizadorMarcaAgua,APP_GUI_NUM_FONDO_TEMPORIZADOR_HP_4,129,45,
 //				CBKdummy,CBKbutTemperatureVwr,CBKdummy,APP_GUI_NUM_FONDO_TEMPORIZADOR_HP_4,APP_GUI_NUM_FONDO_TEMPORIZADOR_HP_4,c051_TscrRelojTemporizador,
 //				0,0,0,0,0,0,0,0,0		},
 				
 //		//Visor numerico para contabilizar resucciones
-//		{		numVwrResucctionCountHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER2,
+//		{		NumVwrResucctionCountHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER2,
 //				APP_GUI_LAYER3,2,0,6,11,1,APP_GUI_NUM_FONDO_CUENTA_RESUCCIONES_HP_1,20,29,c510_resuccionindicador,
 //				c600_Number_0_ResucInd,c601_Number_1_ResucInd,c602_Number_2_ResucInd,c603_Number_3_ResucInd,c604_Number_4_ResucInd,
 //				c605_Number_5_ResucInd,c606_Number_6_ResucInd,c607_Number_7_ResucInd,c608_Number_8_ResucInd,c609_Number_9_ResucInd,
 //				c065_CaracterNegativo,c062_CaracterDosPuntos	},
-//		{		numVwrResucctionCountHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER2,
+//		{		NumVwrResucctionCountHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER2,
 //				APP_GUI_LAYER3,2,0,6,11,1,APP_GUI_NUM_FONDO_CUENTA_RESUCCIONES_HP_2,20,29,c510_resuccionindicador,
 //				c600_Number_0_ResucInd,c601_Number_1_ResucInd,c602_Number_2_ResucInd,c603_Number_3_ResucInd,c604_Number_4_ResucInd,
 //				c605_Number_5_ResucInd,c606_Number_6_ResucInd,c607_Number_7_ResucInd,c608_Number_8_ResucInd,c609_Number_9_ResucInd,
 //				c065_CaracterNegativo,c062_CaracterDosPuntos	},
-//		{		numVwrResucctionCountHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER2,
+//		{		NumVwrResucctionCountHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER2,
 //				APP_GUI_LAYER3,2,0,6,11,1,APP_GUI_NUM_FONDO_CUENTA_RESUCCIONES_HP_3,20,29,c510_resuccionindicador,
 //				c600_Number_0_ResucInd,c601_Number_1_ResucInd,c602_Number_2_ResucInd,c603_Number_3_ResucInd,c604_Number_4_ResucInd,
 //				c605_Number_5_ResucInd,c606_Number_6_ResucInd,c607_Number_7_ResucInd,c608_Number_8_ResucInd,c609_Number_9_ResucInd,
 //				c065_CaracterNegativo,c062_CaracterDosPuntos	},
-//		{		numVwrResucctionCountHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER2,
+//		{		NumVwrResucctionCountHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER2,
 //				APP_GUI_LAYER3,2,0,6,11,1,APP_GUI_NUM_FONDO_CUENTA_RESUCCIONES_HP_4,20,29,c510_resuccionindicador,
 //				c600_Number_0_ResucInd,c601_Number_1_ResucInd,c602_Number_2_ResucInd,c603_Number_3_ResucInd,c604_Number_4_ResucInd,
 //				c605_Number_5_ResucInd,c606_Number_6_ResucInd,c607_Number_7_ResucInd,c608_Number_8_ResucInd,c609_Number_9_ResucInd,
@@ -1353,50 +1353,50 @@ tAppGUIPopUpDisplayed APP_GUI_POPUP_DISPLAYED_MAP[APP_GUI_POPUP_DISPLAYED_MAP_NU
 				
 		
 //		//Boton con la imagen e imagen con el texto del modelo
-//		{		imgModelTextHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER2,
+//		{		ImgModelTextHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER2,
 //				c233_ImgPixelBlanco,APP_GUI_IMG_TYPE_NAME_HP_1,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
-//		{		imgModelTextHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER2,
+//		{		ImgModelTextHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER2,
 //				c233_ImgPixelBlanco,APP_GUI_IMG_TYPE_NAME_HP_2,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
-//		{		imgModelTextHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER2,
+//		{		ImgModelTextHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER2,
 //				c233_ImgPixelBlanco,APP_GUI_IMG_TYPE_NAME_HP_3,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
-//		{		imgModelTextHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER2,
+//		{		ImgModelTextHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER2,
 //				c233_ImgPixelBlanco,APP_GUI_IMG_TYPE_NAME_HP_4,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
 				
-//		{		butModelImageHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER2,
+//		{		ButModelImageHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER2,
 //				c233_ImgPixelBlanco,c233_ImgPixelBlanco,APP_GUI_BUT_TYPE_HP_1_TSR_COORD,105,105,
 //				CBKdummy,CBKbutModelImage,CBKdummy,APP_GUI_BUT_TYPE_HP_1_PRS_COORD,APP_GUI_BUT_TYPE_HP_1_RLS_COORD,c111_TscImgMan,
 //				0,0,0,0,0,0,0,0,0		},
-//		{		butModelImageHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER2,
+//		{		ButModelImageHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER2,
 //				c233_ImgPixelBlanco,c233_ImgPixelBlanco,APP_GUI_BUT_TYPE_HP_2_TSR_COORD,105,105,
 //				CBKdummy,CBKbutModelImage,CBKdummy,APP_GUI_BUT_TYPE_HP_2_PRS_COORD,APP_GUI_BUT_TYPE_HP_2_RLS_COORD,c111_TscImgMan,
 //				0,0,0,0,0,0,0,0,0		},
-//		{		butModelImageHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER2,
+//		{		ButModelImageHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER2,
 //				c233_ImgPixelBlanco,c233_ImgPixelBlanco,APP_GUI_BUT_TYPE_HP_3_TSR_COORD,105,105,
 //				CBKdummy,CBKbutModelImage,CBKdummy,APP_GUI_BUT_TYPE_HP_3_PRS_COORD,APP_GUI_BUT_TYPE_HP_3_RLS_COORD,c111_TscImgMan,
 //				0,0,0,0,0,0,0,0,0		},
-//		{		butModelImageHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER2,
+//		{		ButModelImageHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER2,
 //				c233_ImgPixelBlanco,c233_ImgPixelBlanco,APP_GUI_BUT_TYPE_HP_4_TSR_COORD,105,105,
 //				CBKdummy,CBKbutModelImage,CBKdummy,APP_GUI_BUT_TYPE_HP_4_PRS_COORD,APP_GUI_BUT_TYPE_HP_4_RLS_COORD,c111_TscImgMan,
 //				0,0,0,0,0,0,0,0,0		},
 				
 //		//Botonoes de recogida y despliegue del panel de control
-//		{		butHideControlPanelHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER1,
+//		{		ButHideControlPanelHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER1,
 //				c202_BotonGuardarMenuLeftPress,c203_BotonGuardarMenuLeftRls,APP_GUI_BUT_MENU_TRT_HP_1_TSR_COORD,47,48,
 //				CBKbutHideCtrlPnl,CBKdummy,CBKdummy,APP_GUI_BUT_MENU_TRT_HP_1_PRS_COORD,APP_GUI_BUT_MENU_TRT_HP_1_RLS_COORD,b011_TscSwMenuPress,
 //				0,0,0,0,0,0,0,0,0		},
-//		{		butHideControlPanelHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER1,
+//		{		ButHideControlPanelHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER1,
 //				c199_BotonGuardarMenuRightPress,c200_BotonGuardarMenuRightRls,APP_GUI_BUT_MENU_TRT_HP_2_TSR_COORD,47,48,
 //				CBKbutHideCtrlPnl,CBKdummy,CBKdummy,APP_GUI_BUT_MENU_TRT_HP_2_PRS_COORD,APP_GUI_BUT_MENU_TRT_HP_2_RLS_COORD,b011_TscSwMenuPress,
 //				0,0,0,0,0,0,0,0,0		},
-//		{		butHideControlPanelHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER1,
+//		{		ButHideControlPanelHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER1,
 //				c202_BotonGuardarMenuLeftPress,c203_BotonGuardarMenuLeftRls,APP_GUI_BUT_MENU_TRT_HP_3_TSR_COORD,47,48,
 //				CBKbutHideCtrlPnl,CBKdummy,CBKdummy,APP_GUI_BUT_MENU_TRT_HP_3_PRS_COORD,APP_GUI_BUT_MENU_TRT_HP_3_RLS_COORD,b011_TscSwMenuPress,
 //				0,0,0,0,0,0,0,0,0		},
-//		{		butHideControlPanelHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER1,
+//		{		ButHideControlPanelHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER1,
 //				c199_BotonGuardarMenuRightPress,c200_BotonGuardarMenuRightRls,APP_GUI_BUT_MENU_TRT_HP_4_TSR_COORD,47,48,
 //				CBKbutHideCtrlPnl,CBKdummy,CBKdummy,APP_GUI_BUT_MENU_TRT_HP_4_PRS_COORD,APP_GUI_BUT_MENU_TRT_HP_4_RLS_COORD,b011_TscSwMenuPress,
 //				0,0,0,0,0,0,0,0,0		},
@@ -1419,93 +1419,93 @@ tAppGUIPopUpDisplayed APP_GUI_POPUP_DISPLAYED_MAP[APP_GUI_POPUP_DISPLAYED_MAP_NU
 				
 //		//Botones Areas Cuerpo entero
 
-//		{		butFullBodyTorso,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER2,
+//		{		ButFullBodyTorso,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER2,
 //				c233_ImgPixelBlanco,c113_BotonTorsoPressMujer,APP_GUI_BUT_TORSO_MUJER_TSR_COORD,89,133,
 //				CBKdummy,CBKbutFullBodyArea,CBKdummy,APP_GUI_BUT_TORSO_MUJER_PRS_COORD,APP_GUI_BUT_TORSO_MUJER_RLS_COORD,c114_TscBotonTorsoMujer,
 //				0,0,0,0,0,0,0,0,0		},
-//		{		butFullBodyPiernas,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER2,
+//		{		ButFullBodyPiernas,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER2,
 //				c233_ImgPixelBlanco,c115_BotonPiernasRlsMujer,APP_GUI_BUT_PIERNAS_MUJER_TSR_COORD,83,193,
 //				CBKdummy,CBKbutFullBodyArea,CBKdummy,APP_GUI_BUT_PIERNAS_MUJER_PRS_COORD,APP_GUI_BUT_PIERNAS_MUJER_RLS_COORD,c117_TscBotonPiernasMujer,
 //				0,0,0,0,0,0,0,0,0		},
-//		{		butFullBodyBrazos,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER2,
+//		{		ButFullBodyBrazos,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER2,
 //				c233_ImgPixelBlanco,c118_BotonBrazosRlsMujer,APP_GUI_BUT_BRAZOS_MUJER_TSR_COORD,130,167,
 //				CBKdummy,CBKbutFullBodyArea,CBKdummy,APP_GUI_BUT_BRAZOS_MUJER_PRS_COORD,APP_GUI_BUT_BRAZOS_MUJER_RLS_COORD,c120_TscBotonBrazosMujer,
 //				0,0,0,0,0,0,0,0,0		},
-//		{		butFullBodyEspalda,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER2,
+//		{		ButFullBodyEspalda,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER2,
 //				c233_ImgPixelBlanco,c121_BotonEspaldaRlsMujer,APP_GUI_BUT_ESPALDA_MUJER_TSR_COORD,130,167,
 //				CBKdummy,CBKbutFullBodyArea,CBKdummy,APP_GUI_BUT_ESPALDA_MUJER_PRS_COORD,APP_GUI_BUT_ESPALDA_MUJER_RLS_COORD,c123_TscBotonEspladaMujer,
 //				0,0,0,0,0,0,0,0,0		},
-//		{		butFullBodyPiernaMuslo,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER2,
+//		{		ButFullBodyPiernaMuslo,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER2,
 //				c233_ImgPixelBlanco,c124_BotonPiernaMusloRlsMujer,APP_GUI_BUT_MUSLO_MUJER_TSR_COORD,133,232,
 //				CBKdummy,CBKbutFullBodyArea,CBKdummy,APP_GUI_BUT_MUSLO_MUJER_PRS_COORD,APP_GUI_BUT_MUSLO_MUJER_RLS_COORD,c126_TscBotonPiernaMusloMujer,
 //				0,0,0,0,0,0,0,0,0		},
-//		{		butFullBodyCuello,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER2,
+//		{		ButFullBodyCuello,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER2,
 //				c233_ImgPixelBlanco,c127_BotonCuelloRlsMujer,APP_GUI_BUT_CUELLO_MUJER_TSR_COORD,57,74,
 //				CBKdummy,CBKbutFullBodyArea,CBKdummy,APP_GUI_BUT_CUELLO_MUJER_PRS_COORD,APP_GUI_BUT_CUELLO_MUJER_RLS_COORD,c129_TscBotonCuelloMujer,
 //				0,0,0,0,0,0,0,0,0		},
 
 //		// Switches con los puntos de las zonas seleccionables
-//		{		swDotZone0,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
+//		{		SwDotZone0,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
 //				c149_ZonaAplicacionManipPuntoSelected,c148_ZonaAplicacionManipPunto,c149_ZonaAplicacionManipPuntoSelected,c148_ZonaAplicacionManipPunto,
 //				0, 0, 32, 32, CBKswDotZoneOn, CBKswDotZoneOff, 0, 0, 0, 0, 0, 0, 0, 0, c150_TscZonaAplicacionManipPunto },
-//		{		swDotZone1,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
+//		{		SwDotZone1,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
 //				c149_ZonaAplicacionManipPuntoSelected,c148_ZonaAplicacionManipPunto,c149_ZonaAplicacionManipPuntoSelected,c148_ZonaAplicacionManipPunto,
 //				0, 0, 32, 32, CBKswDotZoneOn, CBKswDotZoneOff, 0, 0, 0, 0, 0, 0, 0, 0, c150_TscZonaAplicacionManipPunto },
-//		{		swDotZone2,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
+//		{		SwDotZone2,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
 //				c149_ZonaAplicacionManipPuntoSelected,c148_ZonaAplicacionManipPunto,c149_ZonaAplicacionManipPuntoSelected,c148_ZonaAplicacionManipPunto,
 //				0, 0, 32, 32, CBKswDotZoneOn, CBKswDotZoneOff, 0, 0, 0, 0, 0, 0, 0, 0, c150_TscZonaAplicacionManipPunto },
-//		{		swDotZone3,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
+//		{		SwDotZone3,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
 //				c149_ZonaAplicacionManipPuntoSelected,c148_ZonaAplicacionManipPunto,c149_ZonaAplicacionManipPuntoSelected,c148_ZonaAplicacionManipPunto,
 //				0, 0, 32, 32, CBKswDotZoneOn, CBKswDotZoneOff, 0, 0, 0, 0, 0, 0, 0, 0, c150_TscZonaAplicacionManipPunto },
-//		{		swDotZone4,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
+//		{		SwDotZone4,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
 //				c149_ZonaAplicacionManipPuntoSelected,c148_ZonaAplicacionManipPunto,c149_ZonaAplicacionManipPuntoSelected,c148_ZonaAplicacionManipPunto,
 //				0, 0, 32, 32, CBKswDotZoneOn, CBKswDotZoneOff, 0, 0, 0, 0, 0, 0, 0, 0, c150_TscZonaAplicacionManipPunto },
-//		{		swDotZone5,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
+//		{		SwDotZone5,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
 //				c149_ZonaAplicacionManipPuntoSelected,c148_ZonaAplicacionManipPunto,c149_ZonaAplicacionManipPuntoSelected,c148_ZonaAplicacionManipPunto,
 //				0, 0, 32, 32, CBKswDotZoneOn, CBKswDotZoneOff, 0, 0, 0, 0, 0, 0, 0, 0, c150_TscZonaAplicacionManipPunto },
-//		{		swDotZone6,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
+//		{		SwDotZone6,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
 //				c149_ZonaAplicacionManipPuntoSelected,c148_ZonaAplicacionManipPunto,c149_ZonaAplicacionManipPuntoSelected,c148_ZonaAplicacionManipPunto,
 //				0, 0, 32, 32, CBKswDotZoneOn, CBKswDotZoneOff, 0, 0, 0, 0, 0, 0, 0, 0, c150_TscZonaAplicacionManipPunto },
-//		{		swDotZone7,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
+//		{		SwDotZone7,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
 //				c149_ZonaAplicacionManipPuntoSelected,c148_ZonaAplicacionManipPunto,c149_ZonaAplicacionManipPuntoSelected,c148_ZonaAplicacionManipPunto,
 //				0, 0, 32, 32, CBKswDotZoneOn, CBKswDotZoneOff, 0, 0, 0, 0, 0, 0, 0, 0, c150_TscZonaAplicacionManipPunto },
-//		{		swDotZone8,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
+//		{		SwDotZone8,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
 //				c149_ZonaAplicacionManipPuntoSelected,c148_ZonaAplicacionManipPunto,c149_ZonaAplicacionManipPuntoSelected,c148_ZonaAplicacionManipPunto,
 //				0, 0, 32, 32, CBKswDotZoneOn, CBKswDotZoneOff, 0, 0, 0, 0, 0, 0, 0, 0, c150_TscZonaAplicacionManipPunto },
-//		{		swDotZone9,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
+//		{		SwDotZone9,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
 //				c149_ZonaAplicacionManipPuntoSelected,c148_ZonaAplicacionManipPunto,c149_ZonaAplicacionManipPuntoSelected,c148_ZonaAplicacionManipPunto,
 //				0, 0, 32, 32, CBKswDotZoneOn, CBKswDotZoneOff, 0, 0, 0, 0, 0, 0, 0, 0, c150_TscZonaAplicacionManipPunto },
-//		{		swDotZone10,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
+//		{		SwDotZone10,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
 //				c149_ZonaAplicacionManipPuntoSelected,c148_ZonaAplicacionManipPunto,c149_ZonaAplicacionManipPuntoSelected,c148_ZonaAplicacionManipPunto,
 //				0, 0, 32, 32, CBKswDotZoneOn, CBKswDotZoneOff, 0, 0, 0, 0, 0, 0, 0, 0, c150_TscZonaAplicacionManipPunto },
-//		{		swDotZone11,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
+//		{		SwDotZone11,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
 //				c149_ZonaAplicacionManipPuntoSelected,c148_ZonaAplicacionManipPunto,c149_ZonaAplicacionManipPuntoSelected,c148_ZonaAplicacionManipPunto,
 //				0, 0, 32, 32, CBKswDotZoneOn, CBKswDotZoneOff, 0, 0, 0, 0, 0, 0, 0, 0, c150_TscZonaAplicacionManipPunto },
-//		{		swDotZone12,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
+//		{		SwDotZone12,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
 //				c149_ZonaAplicacionManipPuntoSelected,c148_ZonaAplicacionManipPunto,c149_ZonaAplicacionManipPuntoSelected,c148_ZonaAplicacionManipPunto,
 //				0, 0, 32, 32, CBKswDotZoneOn, CBKswDotZoneOff, 0, 0, 0, 0, 0, 0, 0, 0, c150_TscZonaAplicacionManipPunto },
-//		{		swDotZone13,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
+//		{		SwDotZone13,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
 //				c149_ZonaAplicacionManipPuntoSelected,c148_ZonaAplicacionManipPunto,c149_ZonaAplicacionManipPuntoSelected,c148_ZonaAplicacionManipPunto,
 //				0, 0, 32, 32, CBKswDotZoneOn, CBKswDotZoneOff, 0, 0, 0, 0, 0, 0, 0, 0, c150_TscZonaAplicacionManipPunto },
-//		{		swDotZone14,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
+//		{		SwDotZone14,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
 //				c149_ZonaAplicacionManipPuntoSelected,c148_ZonaAplicacionManipPunto,c149_ZonaAplicacionManipPuntoSelected,c148_ZonaAplicacionManipPunto,
 //				0, 0, 32, 32, CBKswDotZoneOn, CBKswDotZoneOff, 0, 0, 0, 0, 0, 0, 0, 0, c150_TscZonaAplicacionManipPunto },
 				
 //		//Punto seleccionado para tratamiento con ese HP a mostrar en full body
 		
-//		{		imgSelectedTrtZoneHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER3,
+//		{		ImgSelectedTrtZoneHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER3,
 //			    c160_ZonaSeleccionadaHP1,APP_GUI_IMG_ZONA_SELECCIONADA_HP_1,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
 				
-//		{		imgSelectedTrtZoneHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER3,
+//		{		ImgSelectedTrtZoneHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER3,
 //			    c161_ZonaSeleccionadaHP2,APP_GUI_IMG_ZONA_SELECCIONADA_HP_2,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
 	
-//		{		imgSelectedTrtZoneHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER3,
+//		{		ImgSelectedTrtZoneHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER3,
 //			   	c162_ZonaSeleccionadaHP3,APP_GUI_IMG_ZONA_SELECCIONADA_HP_3,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
 	
-//		{		imgSelectedTrtZoneHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER3,
+//		{		ImgSelectedTrtZoneHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,1,0,APP_GUI_LAYER3,
 //			    c163_ZonaSeleccionadaHP4,APP_GUI_IMG_ZONA_SELECCIONADA_HP_4,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
 ////
@@ -1521,7 +1521,7 @@ tAppGUIPopUpDisplayed APP_GUI_POPUP_DISPLAYED_MAP[APP_GUI_POPUP_DISPLAYED_MAP_NU
 ////				c158_OkeyPress2,c157_OkeyRls,APP_GUI_BUT_OKEY_POPUP_TSR_COORD,48,46,
 ////				CBKdummy,CBKbutPopUpOK,CBKdummy,APP_GUI_BUT_OKEY_POPUP_PRS_COORD,APP_GUI_BUT_OKEY_POPUP_RLS_COORD,c159_TscOkey_Retroceso,
 ////				0,0,0,0,0,0,0,0,0		},
-//		{		butPopUpReturn,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER4,
+//		{		ButPopUpReturn,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER4,
 //				c156_RetrocesoPress,c155_RetrocesoRls,APP_GUI_BUT_RETURN_TSR_COORD,48,46,
 //				CBKdummy,CBKbutPopUpReturn,CBKdummy,APP_GUI_BUT_RETURN_PRS_COORD,APP_GUI_BUT_RETURN_RLS_COORD,c159_TscOkey_Retroceso,
 //				0,0,0,0,0,0,0,0,0		},
@@ -1530,7 +1530,7 @@ tAppGUIPopUpDisplayed APP_GUI_POPUP_DISPLAYED_MAP[APP_GUI_POPUP_DISPLAYED_MAP_NU
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
 			
 //		//PopUp Time widgets
-//		{		popUpTime,APP_GUI_TREATMENT_SCREEN, APP_GUI_POPUP_ID ,1,0,0, APP_GUI_LAYER4,
+//		{		PopUpTime,APP_GUI_TREATMENT_SCREEN, APP_GUI_POPUP_ID ,1,0,0, APP_GUI_LAYER4,
 //				0, 0, APP_GUI_POPUP_TIME_WIDGET_LIST_NUM,0,APP_GUI_POPUP_DISABLE_ALL_WIDGETS,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
 //		{		butPopUpTime50min,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER6,
@@ -1549,7 +1549,7 @@ tAppGUIPopUpDisplayed APP_GUI_POPUP_DISPLAYED_MAP[APP_GUI_POPUP_DISPLAYED_MAP_NU
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
 
 //		//PopUp Test Vacum widgets
-//		{		popUpTstVac,APP_GUI_TREATMENT_SCREEN, APP_GUI_POPUP_ID ,1,0,0,APP_GUI_LAYER4,
+//		{		PopUpTstVac,APP_GUI_TREATMENT_SCREEN, APP_GUI_POPUP_ID ,1,0,0,APP_GUI_LAYER4,
 //				0 , 0, APP_GUI_POPUP_TST_VAC_WIDGET_LIST_NUM,0,APP_GUI_POPUP_DISABLE_ALL_WIDGETS,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
 //		{		imgPopUpTstVacBckGnd,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER4,
@@ -1588,17 +1588,17 @@ tAppGUIPopUpDisplayed APP_GUI_POPUP_DISPLAYED_MAP[APP_GUI_POPUP_DISPLAYED_MAP_NU
 //				c221_PopUpBotonAutoPress,c220_PopUpBotonAuto,APP_GUI_BUT_AUTO_MODE_VAC_TSR_COORD,108,54,
 //				CBKdummy,CBKbutPopUpTstVacAuto,CBKdummy,APP_GUI_BUT_AUTO_MODE_VAC_PRS_COORD,APP_GUI_BUT_AUTO_MODE_VAC_RLS_COORD,c178_TscPopUpBotonTest,
 //				0,0,0,0,0,0,0,0,0		},
-//		{		swPopUpTstVacLowLvl,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER5,
+//		{		SwPopUpTstVacLowLvl,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER5,
 //				c180_PopupBotonActivarPress,c179_PopupBotonActivarRls,c180_PopupBotonActivarPress,c179_PopupBotonActivarRls,
 //				APP_GUI_IMG_LOW_VACUUM_TSC_COORD, 53,31, CBKswPopUpTstVacLvlOn, CBKswPopUpTstVacLvlOff,APP_GUI_IMG_LOW_VACUUM_SEL,
 //				APP_GUI_IMG_LOW_VACUUM_TEST_DONE,APP_GUI_IMG_LOW_VACUUM_SEL,APP_GUI_IMG_LOW_VACUUM_TEST_DONE, c181_PopupBotonActivarTsc,
 //				0,0,0,0},
-//		{		swPopUpTstVacMidLvl,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER5,
+//		{		SwPopUpTstVacMidLvl,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER5,
 //				c180_PopupBotonActivarPress,c179_PopupBotonActivarRls,c180_PopupBotonActivarPress,c179_PopupBotonActivarRls,
 //				APP_GUI_IMG_MED_VACUUM_TSC_COORD, 53,31, CBKswPopUpTstVacLvlOn, CBKswPopUpTstVacLvlOff,APP_GUI_IMG_MED_VACUUM_SEL,
 //				APP_GUI_IMG_MED_VACUUM_TEST_DONE,APP_GUI_IMG_MED_VACUUM_SEL,APP_GUI_IMG_MED_VACUUM_TEST_DONE,c181_PopupBotonActivarTsc,
 //				0,0,0,0},
-//		{		swPopUpTstVacHighLvl,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER5,
+//		{		SwPopUpTstVacHighLvl,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER5,
 //				c180_PopupBotonActivarPress,c179_PopupBotonActivarRls,c180_PopupBotonActivarPress,c179_PopupBotonActivarRls,
 //				APP_GUI_IMG_HIGH_VACUUM_TSC_COORD, 53,31, CBKswPopUpTstVacLvlOn, CBKswPopUpTstVacLvlOff,APP_GUI_IMG_HIGH_VACUUM_SEL,
 //				APP_GUI_IMG_HIGH_VACUUM_TEST_DONE,APP_GUI_IMG_HIGH_VACUUM_SEL,APP_GUI_IMG_HIGH_VACUUM_TEST_DONE,c181_PopupBotonActivarTsc,
@@ -1609,7 +1609,7 @@ tAppGUIPopUpDisplayed APP_GUI_POPUP_DISPLAYED_MAP[APP_GUI_POPUP_DISPLAYED_MAP_NU
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
 				
 //		//PopUp Test Vacum SMALL widgets
-//		{		popUpTstVacSmall,APP_GUI_TREATMENT_SCREEN, APP_GUI_POPUP_ID ,1,0,0,APP_GUI_LAYER4,
+//		{		PopUpTstVacSmall,APP_GUI_TREATMENT_SCREEN, APP_GUI_POPUP_ID ,1,0,0,APP_GUI_LAYER4,
 //				0 , 0, APP_GUI_POPUP_TST_VAC_SMALL_WIDGET_LIST_NUM,0,APP_GUI_POPUP_DISABLE_ALL_WIDGETS,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
 //		{		imgPopUpVacSelBck,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER5,
@@ -1629,7 +1629,7 @@ tAppGUIPopUpDisplayed APP_GUI_POPUP_DISPLAYED_MAP[APP_GUI_POPUP_DISPLAYED_MAP_NU
 //				0,0,0,0,0,0,0,0,0		},
 				
 //		//PopUp RFID widgets
-//		{		popUpRFID,APP_GUI_TREATMENT_SCREEN, APP_GUI_POPUP_ID ,1,0,0, APP_GUI_LAYER4,
+//		{		PopUpRFID,APP_GUI_TREATMENT_SCREEN, APP_GUI_POPUP_ID ,1,0,0, APP_GUI_LAYER4,
 //				0, 0, APP_GUI_POPUP_RFID_WIDGET_LIST_NUM,0,APP_GUI_POPUP_DISABLE_ALL_WIDGETS,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
 //		{		imgPopUpRFIDbckGnd,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER4,
@@ -1646,50 +1646,50 @@ tAppGUIPopUpDisplayed APP_GUI_POPUP_DISPLAYED_MAP[APP_GUI_POPUP_DISPLAYED_MAP_NU
 //				c233_ImgPixelBlanco,c233_ImgPixelBlanco,APP_GUI_BUT_REUSE_LABEL,121,51,
 //				CBKdummy,CBKbutReuseRFIDlabel,CBKdummy,APP_GUI_BUT_REUSE_LABEL,APP_GUI_BUT_REUSE_LABEL,c051_TscrRelojTemporizador,
 //				0,0,0,0,0,0,0,0,0		},
-//		{		numVwrPopUpRFIDrestTime,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER5,
+//		{		NumVwrPopUpRFIDrestTime,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER5,
 //				APP_GUI_LAYER6,5,3,16,35,1,APP_GUI_NUMVWR_TIME_REUSE_LABEL,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c065_CaracterNegativo,c062_CaracterDosPuntos	},
 						
 //		//SWITCH INFO
-//		{		swPopUpRecommInfo,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER4,
+//		{		SwPopUpRecommInfo,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER4,
 //				c282_InfoPress,c281_InfoRls,c282_InfoPress,c281_InfoRls,
 //				APP_GUI_BUT_INFO_POPUP_RECOMMENDATIONS_TSC, 52,60, CBKbutInfoZoneSelectedOn, CBKbutInfoZoneSelectedOff,APP_GUI_BUT_INFO_POPUP_RECOMMENDATIONS_ON,
 //				APP_GUI_BUT_INFO_POPUP_RECOMMENDATIONS_OFF,APP_GUI_BUT_INFO_POPUP_RECOMMENDATIONS_ON,APP_GUI_BUT_INFO_POPUP_RECOMMENDATIONS_OFF, c283_TscInfo,
 //				0,0,0,0},
 				
 //		//PopUp Recommended HP widgets
-//		{		popUpRecomm,APP_GUI_TREATMENT_SCREEN, APP_GUI_POPUP_ID ,1,0,0, APP_GUI_LAYER4,
+//		{		PopUpRecomm,APP_GUI_TREATMENT_SCREEN, APP_GUI_POPUP_ID ,1,0,0, APP_GUI_LAYER4,
 //				0, 0, APP_GUI_POPUP_RECOMMENDATION_WIDGET_LIST_NUM,0,APP_GUI_POPUP_DISABLE_ALL_WIDGETS,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
 //		{		imgPopUpRecommbckGnd,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER4,
 //				c284_PopUpSugerenciasFondo_03,APP_GUI_IMG_FONDO_POPUP_RECOMMENDATION_HP,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
 				
-//		{		imgPopUpRecommCurved,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER5,
+//		{		ImgPopUpRecommCurved,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER5,
 //				c285_PopUpMarcaaguaCurved,APP_GUI_IMG_RECOMM_CURVED_HP_COORD,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
-//		{		imgPopUpRecommTight,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER5,
+//		{		ImgPopUpRecommTight,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER5,
 //				c286_PopUpMarcaaguaTight,APP_GUI_IMG_RECOMM_TIGHT_HP_COORD,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
-//		{		imgPopUpRecommStright,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER5,
+//		{		ImgPopUpRecommStright,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER5,
 //				c287_PopUpMarcaaguaStraight,APP_GUI_IMG_RECOMM_STRIGHT_HP_COORD,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
-//		{		imgPopUpRecommTiny,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER5,
+//		{		ImgPopUpRecommTiny,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER5,
 //				c288_PopUpMarcaaguaTiny,APP_GUI_IMG_RECOMM_TINY_HP_COORD,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
-//		{		imgPopUpRecommTinyCurved,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER5,
+//		{		ImgPopUpRecommTinyCurved,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER5,
 //				c289_PopUpMarcaaguaTinyCurved,APP_GUI_IMG_RECOMM_TINY_CURVED_HP_COORD,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
-//		{		imgPopUpRecommDouble,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER5,
+//		{		ImgPopUpRecommDouble,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER5,
 //				c290_PopUpMarcaaguaDouble,APP_GUI_IMG_RECOMM_DOUBLE_HP_COORD,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
-//		{		imgPopUpRecommOval,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER5,
+//		{		ImgPopUpRecommOval,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER5,
 //				c291_PopUpMarcaaguaOval,APP_GUI_IMG_RECOMM_OVAL_HP_COORD,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
-//		{		imgPopUpRecommOvalCurved,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER5,
+//		{		ImgPopUpRecommOvalCurved,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER5,
 //				c292_PopUpMarcaaguaOvalCurved,APP_GUI_IMG_RECOMM_OVAL_CURVED_HP_COORD,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
-//		{		imgPopUpRecommAngled,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER5,
+//		{		ImgPopUpRecommAngled,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER5,
 //				c293_PopUpMarcaaguaAngled,APP_GUI_IMG_RECOMM_ANGLED_HP_COORD,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
 					 
@@ -1702,15 +1702,15 @@ tAppGUIPopUpDisplayed APP_GUI_POPUP_DISPLAYED_MAP[APP_GUI_POPUP_DISPLAYED_MAP_NU
 //				b010_SwMenuPress,b010_SwMenuPress,APP_GUI_BUT_MENU_GLOBAL_2_TSR_COORD,47,48,
 //				CBKdummy,CBKbutMainMenuHide,CBKdummy,APP_GUI_BUT_MENU_GLOBAL_2_PRS_COORD,APP_GUI_BUT_MENU_GLOBAL_2_RLS_COORD,b011_TscSwMenuPress,
 //				0,0,0,0,0,0,0,0,0		},
-//		{		butTrtScrHome,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER3,
+//		{		ButTrtScrHome,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER3,
 //				b013_BotonHomePress,b014_BotonHomeRls,APP_GUI_BUT_HOME_GLOBAL_TSR_COORD,67,69,
 //				CBKdummy,CBKbutHome,CBKdummy,APP_GUI_BUT_HOME_GLOBAL_PRS_COORD,APP_GUI_BUT_HOME_GLOBAL_RLS_COORD,b015_TscBotonHome,
 //				0,0,0,0,0,0,0,0,0		},
-//		{		butTrtScrCfg,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER3,
+//		{		ButTrtScrCfg,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER3,
 //				b016_BotonConfigPress,b017_BotonConfigRls,APP_GUI_BUT_CONFIG_GLOBAL_TSR_COORD,67,69,
 //				CBKdummy,CBKbutConfig,CBKdummy,APP_GUI_BUT_CONFIG_GLOBAL_PRS_COORD,APP_GUI_BUT_CONFIG_GLOBAL_RLS_COORD,b019_TscBotonConfig,
 //				0,0,0,0,0,0,0,0,0		},
-//		{		butTrtScrCalc,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER3,
+//		{		ButTrtScrCalc,APP_GUI_TREATMENT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER3,
 //				b021_BotonCalculadoraPress,b022_BotonCalculadoraRls,APP_GUI_BUT_CALCULADORA_GLOBAL_TSR_COORD,67,69,
 //				CBKdummy,CBKbutCalc,CBKdummy,APP_GUI_BUT_CALCULADORA_GLOBAL_PRS_COORD,APP_GUI_BUT_CALCULADORA_GLOBAL_RLS_COORD,b023_TscBotonCalculadora,
 //				0,0,0,0,0,0,0,0,0		},
@@ -1720,16 +1720,16 @@ tAppGUIPopUpDisplayed APP_GUI_POPUP_DISPLAYED_MAP[APP_GUI_POPUP_DISPLAYED_MAP_NU
 //				0,0,0,0,0,0,0,0,0		},
 //		//avisos
 		
-//		{		swTrtScrAvisos,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
+//		{		SwTrtScrAvisos,APP_GUI_TREATMENT_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
 //				b029_BotonAvisosPress,b030_BotonAvisosRls,b029_BotonAvisosPress,b030_BotonAvisosRls,
 //				APP_GUI_BUT_AVISOS_GLOBAL_TSR_COORD, 62,62, CBKbutWarningOn, CBKbutWarningOff,APP_GUI_BUT_AVISOS_GLOBAL_PRS_COORD,
 //				APP_GUI_BUT_AVISOS_GLOBAL_PRS_COORD,APP_GUI_BUT_AVISOS_GLOBAL_PRS_COORD,APP_GUI_BUT_AVISOS_GLOBAL_PRS_COORD, b031_TscBotonAvisos,
 //				0,0,0,0},
-//		{		imgTrtScrNotificacion,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER3,
+//		{		ImgTrtScrNotificacion,APP_GUI_TREATMENT_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER3,
 //				b032_ImgNotificacion,APP_GUI_IMG_AVISO_PENDIENTE_COORD,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
 				
-//		{		popupTrtScrAvisos,APP_GUI_TREATMENT_SCREEN, APP_GUI_POPUP_ID ,1,0,0, APP_GUI_LAYER4,
+//		{		PopupTrtScrAvisos,APP_GUI_TREATMENT_SCREEN, APP_GUI_POPUP_ID ,1,0,0, APP_GUI_LAYER4,
 //				0, 0, APP_GUI_POPUP_AVISOS_WIDGET_LIST_NUM,0,APP_GUI_POPUP_DISABLE_ALL_WIDGETS,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
 
@@ -1773,19 +1773,19 @@ tAppGUIPopUpDisplayed APP_GUI_POPUP_DISPLAYED_MAP[APP_GUI_POPUP_DISPLAYED_MAP_NU
 //				c234_AlarmaFondoCentral2,APP_GUI_IMG_ERR_BCKGND_COORD_UC,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
 				
-//		{		numVwrPopUpErrHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER8,
+//		{		NumVwrPopUpErrHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER8,
 //				APP_GUI_LAYER9,5,2,17,21,1,APP_GUI_NUM_VWR_ERR_COORD_HP1,105,42,c461_FondoNumVwrError,
 //				c461_Numero0,c461_Numero1,c461_Numero2,c461_Numero3,c461_Numero4,c461_Numero5,c461_Numero6,c461_Numero7,c461_Numero8,c461_Numero9,c461_CaracterNegativo,c461_CaracterDosPuntos	},
-//		{		numVwrPopUpErrHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER8,
+//		{		NumVwrPopUpErrHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER8,
 //				APP_GUI_LAYER9,5,2,17,21,1,APP_GUI_NUM_VWR_ERR_COORD_HP2,105,42,c461_FondoNumVwrError,
 //				c461_Numero0,c461_Numero1,c461_Numero2,c461_Numero3,c461_Numero4,c461_Numero5,c461_Numero6,c461_Numero7,c461_Numero8,c461_Numero9,c461_CaracterNegativo,c461_CaracterDosPuntos	},
-//		{		numVwrPopUpErrHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER8,
+//		{		NumVwrPopUpErrHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER8,
 //				APP_GUI_LAYER9,5,2,17,21,1,APP_GUI_NUM_VWR_ERR_COORD_HP3,105,42,c461_FondoNumVwrError,
 //				c461_Numero0,c461_Numero1,c461_Numero2,c461_Numero3,c461_Numero4,c461_Numero5,c461_Numero6,c461_Numero7,c461_Numero8,c461_Numero9,c461_CaracterNegativo,c461_CaracterDosPuntos	},
-//		{		numVwrPopUpErrHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER8,
+//		{		NumVwrPopUpErrHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER8,
 //				APP_GUI_LAYER9,5,2,17,21,1,APP_GUI_NUM_VWR_ERR_COORD_HP4,105,42,c461_FondoNumVwrError,
 //				c461_Numero0,c461_Numero1,c461_Numero2,c461_Numero3,c461_Numero4,c461_Numero5,c461_Numero6,c461_Numero7,c461_Numero8,c461_Numero9,c461_CaracterNegativo,c461_CaracterDosPuntos	},
-//		{		numVwrPopUpErrUC,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER8,
+//		{		NumVwrPopUpErrUC,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER8,
 //				APP_GUI_LAYER9,4,2,17,21,1,APP_GUI_NUM_VWR_ERR_COORD_UC,101,42,c461_FondoNumVwrError,
 //				c461_Numero0,c461_Numero1,c461_Numero2,c461_Numero3,c461_Numero4,c461_Numero5,c461_Numero6,c461_Numero7,c461_Numero8,c461_Numero9,c461_CaracterNegativo,c461_CaracterDosPuntos	},
 																				
@@ -1826,16 +1826,16 @@ tAppGUIPopUpDisplayed APP_GUI_POPUP_DISPLAYED_MAP[APP_GUI_POPUP_DISPLAYED_MAP_NU
 //				CBKdummy,CBKbutPopUpErrOk,CBKdummy,APP_GUI_BUT_ERR_OK_COORD_UC,APP_GUI_BUT_ERR_OK_COORD_UC,c358_BotonAlarmaCentralOkTsc,
 //				0,0,0,0,0,0,0,0,0		},
 					
-//		{		numVwrPopUpErrTRTtimeHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER8,
+//		{		NumVwrPopUpErrTRTtimeHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER8,
 //				APP_GUI_LAYER9,5,1/*2*/,10/*17*/,21,1,APP_GUI_NUM_VWR_ERR_TRT_TIMR_COORD_HP1,105,42,c465_Menu_error_lectortiempo,
 //				c465_tiempo_Numero0,c465_tiempo_Numero1,c465_tiempo_Numero2,c465_tiempo_Numero3,c465_tiempo_Numero4,c465_tiempo_Numero5,c465_tiempo_Numero6,c465_tiempo_Numero7,c465_tiempo_Numero8,c465_tiempo_Numero9,c465_tiempo_CaracterDosPuntos,c465_tiempo_CaracterDosPuntos	},
-//		{		numVwrPopUpErrTRTtimeHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER8,
+//		{		NumVwrPopUpErrTRTtimeHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER8,
 //				APP_GUI_LAYER9,5,1/*2*/,10/*17*/,21,1,APP_GUI_NUM_VWR_ERR_TRT_TIMR_COORD_HP2,105,42,c465_Menu_error_lectortiempo,
 //				c465_tiempo_Numero0,c465_tiempo_Numero1,c465_tiempo_Numero2,c465_tiempo_Numero3,c465_tiempo_Numero4,c465_tiempo_Numero5,c465_tiempo_Numero6,c465_tiempo_Numero7,c465_tiempo_Numero8,c465_tiempo_Numero9,c465_tiempo_CaracterDosPuntos,c465_tiempo_CaracterDosPuntos	},
-//		{		numVwrPopUpErrTRTtimeHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER8,
+//		{		NumVwrPopUpErrTRTtimeHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER8,
 //				APP_GUI_LAYER9,5,1/*2*/,10/*17*/,21,1,APP_GUI_NUM_VWR_ERR_TRT_TIMR_COORD_HP3,105,42,c465_Menu_error_lectortiempo,
 //				c465_tiempo_Numero0,c465_tiempo_Numero1,c465_tiempo_Numero2,c465_tiempo_Numero3,c465_tiempo_Numero4,c465_tiempo_Numero5,c465_tiempo_Numero6,c465_tiempo_Numero7,c465_tiempo_Numero8,c465_tiempo_Numero9,c465_tiempo_CaracterDosPuntos,c465_tiempo_CaracterDosPuntos	},
-//		{		numVwrPopUpErrTRTtimeHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER8,
+//		{		NumVwrPopUpErrTRTtimeHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER8,
 //				APP_GUI_LAYER9,5,1/*2*/,10/*17*/,21,1,APP_GUI_NUM_VWR_ERR_TRT_TIMR_COORD_HP4,105,42,c465_Menu_error_lectortiempo,
 //				c465_tiempo_Numero0,c465_tiempo_Numero1,c465_tiempo_Numero2,c465_tiempo_Numero3,c465_tiempo_Numero4,c465_tiempo_Numero5,c465_tiempo_Numero6,c465_tiempo_Numero7,c465_tiempo_Numero8,c465_tiempo_Numero9,c465_tiempo_CaracterDosPuntos,c465_tiempo_CaracterDosPuntos	},
 				
@@ -1854,16 +1854,16 @@ tAppGUIPopUpDisplayed APP_GUI_POPUP_DISPLAYED_MAP[APP_GUI_POPUP_DISPLAYED_MAP_NU
 //				c234_AlarmaFondoHP4,APP_GUI_IMG_CLEAN_BCKGND_COORD_HP4,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
 
-//		{		numVwrPopUpCleanHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER5,
+//		{		NumVwrPopUpCleanHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER5,
 //				APP_GUI_LAYER6,5,2,17,21,1,APP_GUI_NUM_VWR_CLEAN_COORD_HP1,101,42,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c065_CaracterNegativo,c062_CaracterDosPuntos	},
-//		{		numVwrPopUpCleanHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER5,
+//		{		NumVwrPopUpCleanHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER5,
 //				APP_GUI_LAYER6,5,2,17,21,1,APP_GUI_NUM_VWR_CLEAN_COORD_HP2,101,42,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c065_CaracterNegativo,c062_CaracterDosPuntos	},
-//		{		numVwrPopUpCleanHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER5,
+//		{		NumVwrPopUpCleanHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER5,
 //				APP_GUI_LAYER6,5,2,17,21,1,APP_GUI_NUM_VWR_CLEAN_COORD_HP3,101,42,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c065_CaracterNegativo,c062_CaracterDosPuntos	},
-//		{		numVwrPopUpCleanHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER5,
+//		{		NumVwrPopUpCleanHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER5,
 //				APP_GUI_LAYER6,5,2,17,21,1,APP_GUI_NUM_VWR_CLEAN_COORD_HP4,101,42,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c065_CaracterNegativo,c062_CaracterDosPuntos	},
 				
@@ -1948,16 +1948,16 @@ tAppGUIPopUpDisplayed APP_GUI_POPUP_DISPLAYED_MAP[APP_GUI_POPUP_DISPLAYED_MAP_NU
 //				CBKdummy,CBKbutPopUpCleanUpCancel,CBKdummy,APP_GUI_BUT_CLEAN_CANCEL_COORD_HP4,APP_GUI_BUT_CLEAN_CANCEL_COORD_HP4,b011_TscSwMenuPress,
 //				0,0,0,0,0,0,0,0,0		},
 				
-//		{		numVwrPopUpCleanNumCancelHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER5,
+//		{		NumVwrPopUpCleanNumCancelHP1,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER5,
 //				APP_GUI_LAYER6,3,0,9,24,1,APP_GUI_NUMVWR_CLEAN_CANCEL_COORD_HP1,30,35,c533_fondocontador,
 //				c465_tiempo_Numero0,c465_tiempo_Numero1,c465_tiempo_Numero2,c465_tiempo_Numero3,c465_tiempo_Numero4,c465_tiempo_Numero5,c465_tiempo_Numero6,c465_tiempo_Numero7,c465_tiempo_Numero8,c465_tiempo_Numero9,c465_tiempo_CaracterBarra,c465_tiempo_CaracterBarra	},
-//		{		numVwrPopUpCleanNumCancelHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER5,
+//		{		NumVwrPopUpCleanNumCancelHP2,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER5,
 //				APP_GUI_LAYER6,3,0,9,24,1,APP_GUI_NUMVWR_CLEAN_CANCEL_COORD_HP2,30,35,c533_fondocontador,
 //				c465_tiempo_Numero0,c465_tiempo_Numero1,c465_tiempo_Numero2,c465_tiempo_Numero3,c465_tiempo_Numero4,c465_tiempo_Numero5,c465_tiempo_Numero6,c465_tiempo_Numero7,c465_tiempo_Numero8,c465_tiempo_Numero9,c465_tiempo_CaracterBarra,c465_tiempo_CaracterBarra	},
-//		{		numVwrPopUpCleanNumCancelHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER5,
+//		{		NumVwrPopUpCleanNumCancelHP3,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER5,
 //				APP_GUI_LAYER6,3,0,9,24,1,APP_GUI_NUMVWR_CLEAN_CANCEL_COORD_HP3,30,35,c533_fondocontador,
 //				c465_tiempo_Numero0,c465_tiempo_Numero1,c465_tiempo_Numero2,c465_tiempo_Numero3,c465_tiempo_Numero4,c465_tiempo_Numero5,c465_tiempo_Numero6,c465_tiempo_Numero7,c465_tiempo_Numero8,c465_tiempo_Numero9,c465_tiempo_CaracterBarra,c465_tiempo_CaracterBarra	},
-//		{		numVwrPopUpCleanNumCancelHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER5,
+//		{		NumVwrPopUpCleanNumCancelHP4,APP_GUI_TREATMENT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER5,
 //				APP_GUI_LAYER6,3,0,9,24,1,APP_GUI_NUMVWR_CLEAN_CANCEL_COORD_HP4,30,35,c533_fondocontador,
 //				c465_tiempo_Numero0,c465_tiempo_Numero1,c465_tiempo_Numero2,c465_tiempo_Numero3,c465_tiempo_Numero4,c465_tiempo_Numero5,c465_tiempo_Numero6,c465_tiempo_Numero7,c465_tiempo_Numero8,c465_tiempo_Numero9,c465_tiempo_CaracterBarra,c465_tiempo_CaracterBarra	},
 
@@ -1971,56 +1971,56 @@ tAppGUIPopUpDisplayed APP_GUI_POPUP_DISPLAYED_MAP[APP_GUI_POPUP_DISPLAYED_MAP_NU
 //				c265_Calculadorafondo_03,APP_GUI_IMG_CUERPO_CALC_COORD,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
 				
-//		{		numVwrPantallaCalc,APP_GUI_CALCULATOR_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER2,
+//		{		NumVwrPantallaCalc,APP_GUI_CALCULATOR_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER2,
 //				APP_GUI_LAYER3,6,5,36,55,1,APP_GUI_NUM_VWR_PANTALLA_CALC_COORD,380,25,c233_ImgPixelBlanco,
 //				c258_Calculadoranumero0,c249_Calculadoranumero1,c250_Calculadoranumero2,c251_Calculadoranumero3,c252_Calculadoranumero4,c253_Calculadoranumero5,c254_Calculadoranumero6,c255_Calculadoranumero7,c256_Calculadoranumero8,c257_Calculadoranumero9,c233_ImgPixelBlanco,c233_ImgPixelBlanco	},
 				
-//		{		butNum0Calc,APP_GUI_CALCULATOR_SCREEN,APP_GUI_BUT_ID,1,1,1,APP_GUI_LAYER2,
+//		{		ButNum0Calc,APP_GUI_CALCULATOR_SCREEN,APP_GUI_BUT_ID,1,1,1,APP_GUI_LAYER2,
 //				c275_Calculadoraboton0Press,c247_Calculadoraboton0Rls,APP_GUI_BUT_CALC_NUM0_TSR_COORD,130,60,
 //				CBKbutNumCalc,CBKdummy,CBKdummy,APP_GUI_BUT_CALC_NUM0_PRS_COORD,APP_GUI_BUT_CALC_NUM0_RLS_COORD,c248_Calculadoraboton0Tsc,
 //				0,0,0,0,0,0,0,0,0		},
 				
-//		{		butNum1Calc,APP_GUI_CALCULATOR_SCREEN,APP_GUI_BUT_ID,1,1,1,APP_GUI_LAYER2,
+//		{		ButNum1Calc,APP_GUI_CALCULATOR_SCREEN,APP_GUI_BUT_ID,1,1,1,APP_GUI_LAYER2,
 //				c266_Calculadoraboton1Press,c237_Calculadoraboton1Rls,APP_GUI_BUT_CALC_NUM1_TSR_COORD,60,60,
 //				CBKbutNumCalc,CBKdummy,CBKdummy,APP_GUI_BUT_CALC_NUM1_PRS_COORD,APP_GUI_BUT_CALC_NUM1_RLS_COORD,c246_CalculadorabotonTsc,
 //				0,0,0,0,0,0,0,0,0		},
 
-//		{		butNum2Calc,APP_GUI_CALCULATOR_SCREEN,APP_GUI_BUT_ID,1,1,1,APP_GUI_LAYER2,
+//		{		ButNum2Calc,APP_GUI_CALCULATOR_SCREEN,APP_GUI_BUT_ID,1,1,1,APP_GUI_LAYER2,
 //				c267_Calculadoranumero2Press,c238_Calculadoraboton2Rls,APP_GUI_BUT_CALC_NUM2_TSR_COORD,60,60,
 //				CBKbutNumCalc,CBKdummy,CBKdummy,APP_GUI_BUT_CALC_NUM2_PRS_COORD,APP_GUI_BUT_CALC_NUM2_RLS_COORD,c246_CalculadorabotonTsc,
 //				0,0,0,0,0,0,0,0,0		},
 
-//		{		butNum3Calc,APP_GUI_CALCULATOR_SCREEN,APP_GUI_BUT_ID,1,1,1,APP_GUI_LAYER2,
+//		{		ButNum3Calc,APP_GUI_CALCULATOR_SCREEN,APP_GUI_BUT_ID,1,1,1,APP_GUI_LAYER2,
 //				c268_Calculadoraboton3Press,c239_Calculadoraboton3Rls,APP_GUI_BUT_CALC_NUM3_TSR_COORD,60,60,
 //				CBKbutNumCalc,CBKdummy,CBKdummy,APP_GUI_BUT_CALC_NUM3_PRS_COORD,APP_GUI_BUT_CALC_NUM3_RLS_COORD,c246_CalculadorabotonTsc,
 //				0,0,0,0,0,0,0,0,0		},
 
-//		{		butNum4Calc,APP_GUI_CALCULATOR_SCREEN,APP_GUI_BUT_ID,1,1,1,APP_GUI_LAYER2,
+//		{		ButNum4Calc,APP_GUI_CALCULATOR_SCREEN,APP_GUI_BUT_ID,1,1,1,APP_GUI_LAYER2,
 //				c269_Calculadoraboton4Press,c240_Calculadoraboton4Rls,APP_GUI_BUT_CALC_NUM4_TSR_COORD,60,60,
 //				CBKbutNumCalc,CBKdummy,CBKdummy,APP_GUI_BUT_CALC_NUM4_PRS_COORD,APP_GUI_BUT_CALC_NUM4_RLS_COORD,c246_CalculadorabotonTsc,
 //				0,0,0,0,0,0,0,0,0		},
 
-//		{		butNum5Calc,APP_GUI_CALCULATOR_SCREEN,APP_GUI_BUT_ID,1,1,1,APP_GUI_LAYER2,
+//		{		ButNum5Calc,APP_GUI_CALCULATOR_SCREEN,APP_GUI_BUT_ID,1,1,1,APP_GUI_LAYER2,
 //				c270_Calculadoraboton5Press,c241_Calculadoraboton5Rls,APP_GUI_BUT_CALC_NUM5_TSR_COORD,60,60,
 //				CBKbutNumCalc,CBKdummy,CBKdummy,APP_GUI_BUT_CALC_NUM5_PRS_COORD,APP_GUI_BUT_CALC_NUM5_RLS_COORD,c246_CalculadorabotonTsc,
 //				0,0,0,0,0,0,0,0,0		},
 
-//		{		butNum6Calc,APP_GUI_CALCULATOR_SCREEN,APP_GUI_BUT_ID,1,1,1,APP_GUI_LAYER2,
+//		{		ButNum6Calc,APP_GUI_CALCULATOR_SCREEN,APP_GUI_BUT_ID,1,1,1,APP_GUI_LAYER2,
 //				c271_Calculadoranumero6Press,c242_Calculadoraboton6Rls,APP_GUI_BUT_CALC_NUM6_TSR_COORD,60,60,
 //				CBKbutNumCalc,CBKdummy,CBKdummy,APP_GUI_BUT_CALC_NUM6_PRS_COORD,APP_GUI_BUT_CALC_NUM6_RLS_COORD,c246_CalculadorabotonTsc,
 //				0,0,0,0,0,0,0,0,0		},
 
-//		{		butNum7Calc,APP_GUI_CALCULATOR_SCREEN,APP_GUI_BUT_ID,1,1,1,APP_GUI_LAYER2,
+//		{		ButNum7Calc,APP_GUI_CALCULATOR_SCREEN,APP_GUI_BUT_ID,1,1,1,APP_GUI_LAYER2,
 //				c272_Calculadoraboton7Press,c243_Calculadoraboton7Rls,APP_GUI_BUT_CALC_NUM7_TSR_COORD,60,60,
 //				CBKbutNumCalc,CBKdummy,CBKdummy,APP_GUI_BUT_CALC_NUM7_PRS_COORD,APP_GUI_BUT_CALC_NUM7_RLS_COORD,c246_CalculadorabotonTsc,
 //				0,0,0,0,0,0,0,0,0		},
 
-//		{		butNum8Calc,APP_GUI_CALCULATOR_SCREEN,APP_GUI_BUT_ID,1,1,1,APP_GUI_LAYER2,
+//		{		ButNum8Calc,APP_GUI_CALCULATOR_SCREEN,APP_GUI_BUT_ID,1,1,1,APP_GUI_LAYER2,
 //				c273_Calculadoraboton8Press,c244_Calculadoraboton8Rls,APP_GUI_BUT_CALC_NUM8_TSR_COORD,60,60,
 //				CBKbutNumCalc,CBKdummy,CBKdummy,APP_GUI_BUT_CALC_NUM8_PRS_COORD,APP_GUI_BUT_CALC_NUM8_RLS_COORD,c246_CalculadorabotonTsc,
 //				0,0,0,0,0,0,0,0,0		},
 
-//		{		butNum9Calc,APP_GUI_CALCULATOR_SCREEN,APP_GUI_BUT_ID,1,1,1,APP_GUI_LAYER2,
+//		{		ButNum9Calc,APP_GUI_CALCULATOR_SCREEN,APP_GUI_BUT_ID,1,1,1,APP_GUI_LAYER2,
 //				c274_Calculadoranumero9Press,c245_Calculadoraboton9Rls,APP_GUI_BUT_CALC_NUM9_TSR_COORD,60,60,
 //				CBKbutNumCalc,CBKdummy,CBKdummy,APP_GUI_BUT_CALC_NUM9_PRS_COORD,APP_GUI_BUT_CALC_NUM9_RLS_COORD,c246_CalculadorabotonTsc,
 //				0,0,0,0,0,0,0,0,0		},
@@ -2036,12 +2036,12 @@ tAppGUIPopUpDisplayed APP_GUI_POPUP_DISPLAYED_MAP[APP_GUI_POPUP_DISPLAYED_MAP_NU
 //				CBKdummy,CBKdummy,CBKdummy,APP_GUI_BUT_CALC_MENOS_PRS_COORD,APP_GUI_BUT_CALC_MENOS_RLS_COORD,c246_CalculadorabotonTsc,
 //				0,0,0,0,0,0,0,0,0		},
 
-//		{		butEnterCalc,APP_GUI_CALCULATOR_SCREEN,APP_GUI_BUT_ID,1,1,1,APP_GUI_LAYER2,
+//		{		ButEnterCalc,APP_GUI_CALCULATOR_SCREEN,APP_GUI_BUT_ID,1,1,1,APP_GUI_LAYER2,
 //				c275_CalculadorabotonenterPress,c262_CalculadorabotonenterRls,APP_GUI_BUT_CALC_ENTER_TSR_COORD,101,60,
 //				CBKdummy,CBKbutEnterCalc,CBKdummy,APP_GUI_BUT_CALC_ENTER_PRS_COORD,APP_GUI_BUT_CALC_ENTER_RLS_COORD,c246_CalculadorabotonTsc,
 //				0,0,0,0,0,0,0,0,0		},
 
-//		{		butCECalc,APP_GUI_CALCULATOR_SCREEN,APP_GUI_BUT_ID,1,1,1,APP_GUI_LAYER2,
+//		{		ButCECalc,APP_GUI_CALCULATOR_SCREEN,APP_GUI_BUT_ID,1,1,1,APP_GUI_LAYER2,
 //				c279_CalculadorabotonCEPress,c261_CalculadorabotonCERls,APP_GUI_BUT_CALC_CE_TSR_COORD,60,60,
 //				CBKbutCECalc,CBKdummy,CBKdummy,APP_GUI_BUT_CALC_CE_PRS_COORD,APP_GUI_BUT_CALC_CE_RLS_COORD,c246_CalculadorabotonTsc,
 //				0,0,0,0,0,0,0,0,0		},
@@ -2078,16 +2078,16 @@ tAppGUIPopUpDisplayed APP_GUI_POPUP_DISPLAYED_MAP[APP_GUI_POPUP_DISPLAYED_MAP_NU
 				
 //		//avisos
 						
-//		{		swCalcScrAvisos,APP_GUI_CALCULATOR_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
+//		{		SwCalcScrAvisos,APP_GUI_CALCULATOR_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
 //				b029_BotonAvisosPress,b030_BotonAvisosRls,b029_BotonAvisosPress,b030_BotonAvisosRls,
 //				APP_GUI_BUT_AVISOS_GLOBAL_TSR_COORD, 62,62, CBKbutWarningOn, CBKbutWarningOff,APP_GUI_BUT_AVISOS_GLOBAL_PRS_COORD,
 //				APP_GUI_BUT_AVISOS_GLOBAL_PRS_COORD,APP_GUI_BUT_AVISOS_GLOBAL_PRS_COORD,APP_GUI_BUT_AVISOS_GLOBAL_PRS_COORD, b031_TscBotonAvisos,
 //				0,0,0,0},
-//		{		imgCalcScrNotificacion,APP_GUI_CALCULATOR_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER3,
+//		{		ImgCalcScrNotificacion,APP_GUI_CALCULATOR_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER3,
 //				b032_ImgNotificacion,APP_GUI_IMG_AVISO_PENDIENTE_COORD,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
 				
-//		{		popupCalcScrAvisos,APP_GUI_CALCULATOR_SCREEN, APP_GUI_POPUP_ID ,1,0,0, APP_GUI_LAYER1,
+//		{		PopupCalcScrAvisos,APP_GUI_CALCULATOR_SCREEN, APP_GUI_POPUP_ID ,1,0,0, APP_GUI_LAYER1,
 //				0, 0, APP_GUI_POPUP_AVISOS_WIDGET_LIST_NUM,0,APP_GUI_POPUP_DISABLE_ALL_WIDGETS,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
 
@@ -2128,11 +2128,11 @@ tAppGUIPopUpDisplayed APP_GUI_POPUP_DISPLAYED_MAP[APP_GUI_POPUP_DISPLAYED_MAP_NU
 //				c233_ImgPixelBlanco,APP_GUI_CONFIG_UPDATE_BAR_PROGRESSION_COORD,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
 				
-//		{		numVwrModeloMaqCfg,APP_GUI_CONFIGURATION_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER2,
+//		{		NumVwrModeloMaqCfg,APP_GUI_CONFIGURATION_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER2,
 //				APP_GUI_LAYER3,10,1,9,19,1,APP_GUI_NUM_VWR_MODELO_MAQ_CFG_COORD,101,42,c233_ImgPixelBlanco,
 //				c336_Configuracionnumero0,c326_Configuracionnumero1,c327_Configuracionnumero2,c328_Configuracionnumero3,c329_Configuracionnumero4,c330_Configuracionnumero5,c331_Configuracionnumero6,c332_Configuracionnumero7,c333_Configuracionnumero8,c334_Configuracionnumero9,c335_Configuracionguion,c335_Configuracionguion	},
 			
-//		{		numVwrVersionSoftwareCfg,APP_GUI_CONFIGURATION_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER2,
+//		{		NumVwrVersionSoftwareCfg,APP_GUI_CONFIGURATION_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER2,
 //				APP_GUI_LAYER3,6,1,9,19,1,APP_GUI_NUM_VWR_VERSION_SOFWARE_CFG_COORD,101,42,c233_ImgPixelBlanco,
 //				c336_Configuracionnumero0,c326_Configuracionnumero1,c327_Configuracionnumero2,c328_Configuracionnumero3,c329_Configuracionnumero4,c330_Configuracionnumero5,c331_Configuracionnumero6,c332_Configuracionnumero7,c333_Configuracionnumero8,c334_Configuracionnumero9,c335_Configuracionguion,c335_Configuracionguion	},
 
@@ -2141,13 +2141,13 @@ tAppGUIPopUpDisplayed APP_GUI_POPUP_DISPLAYED_MAP[APP_GUI_POPUP_DISPLAYED_MAP_NU
 //				CBKdummy,CBKbutRecargaCoolant,CBKdummy,APP_GUI_BUT_CFG_COOLANT_RECHARGE_PRS_COORD,APP_GUI_BUT_CFG_COOLANT_RECHARGE_RLS_COORD,c325_2_ConfigBotonRecargaCoolantTsc,
 //				0,0,0,0,0,0,0,0,0		},
 				
-//		{		swCfgResuctionViewer,APP_GUI_CONFIGURATION_SCREEN,APP_GUI_SW_ID,0,0,0,APP_GUI_LAYER2,
+//		{		SwCfgResuctionViewer,APP_GUI_CONFIGURATION_SCREEN,APP_GUI_SW_ID,0,0,0,APP_GUI_LAYER2,
 //				c513_resuccionboton_Press,c514_resuccionboton_Rls,c513_resuccionboton_Press,c514_resuccionboton_Rls,
 //				APP_GUI_BUT_CFG_RESUCTION_VIEWER_TSR_COORD, 62,62, CBKswResuctionsVierew, CBKswResuctionsVierew,APP_GUI_BUT_CFG_RESUCTION_VIEWER_PRS_COORD,
 //				APP_GUI_BUT_CFG_RESUCTION_VIEWER_PRS_COORD,APP_GUI_BUT_CFG_RESUCTION_VIEWER_PRS_COORD,APP_GUI_BUT_CFG_RESUCTION_VIEWER_PRS_COORD, c325_3_ConfigSwitchResuctionViewerTsc,
 //				0,0,0,0},
 				
-//		{		swCfgTemperatureViewer,APP_GUI_CONFIGURATION_SCREEN,APP_GUI_SW_ID,0,0,0,APP_GUI_LAYER2,
+//		{		SwCfgTemperatureViewer,APP_GUI_CONFIGURATION_SCREEN,APP_GUI_SW_ID,0,0,0,APP_GUI_LAYER2,
 //				c512_TempShowboton_Press,c512_TempShowboton_Rls,c512_TempShowboton_Press,c512_TempShowboton_Rls,
 //				APP_GUI_BUT_CFG_TEMPERATURE_VIEWER_TSR_COORD, 50,31, CBKswCfgTemperatureViewer, CBKswCfgTemperatureViewer,APP_GUI_BUT_CFG_TEMPERATURE_VIEWER_PRS_COORD,
 //				APP_GUI_BUT_CFG_TEMPERATURE_VIEWER_PRS_COORD,APP_GUI_BUT_CFG_TEMPERATURE_VIEWER_PRS_COORD,APP_GUI_BUT_CFG_TEMPERATURE_VIEWER_PRS_COORD, c325_3_ConfigSwitchResuctionViewerTsc,
@@ -2204,16 +2204,16 @@ tAppGUIPopUpDisplayed APP_GUI_POPUP_DISPLAYED_MAP[APP_GUI_POPUP_DISPLAYED_MAP_NU
 						
 //		//avisos
 						
-//		{		swCfgScrAvisos,APP_GUI_CONFIGURATION_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
+//		{		SwCfgScrAvisos,APP_GUI_CONFIGURATION_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
 //				b029_BotonAvisosPress,b030_BotonAvisosRls,b029_BotonAvisosPress,b030_BotonAvisosRls,
 //				APP_GUI_BUT_AVISOS_GLOBAL_TSR_COORD, 62,62, CBKbutWarningOn, CBKbutWarningOff,APP_GUI_BUT_AVISOS_GLOBAL_PRS_COORD,
 //				APP_GUI_BUT_AVISOS_GLOBAL_PRS_COORD,APP_GUI_BUT_AVISOS_GLOBAL_PRS_COORD,APP_GUI_BUT_AVISOS_GLOBAL_PRS_COORD, b031_TscBotonAvisos,
 //				0,0,0,0},
-//		{		imgCfgScrNotificacion,APP_GUI_CONFIGURATION_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER3,
+//		{		ImgCfgScrNotificacion,APP_GUI_CONFIGURATION_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER3,
 //				b032_ImgNotificacion,APP_GUI_IMG_AVISO_PENDIENTE_COORD,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
 				
-//		{		popupCfgScrAvisos,APP_GUI_CONFIGURATION_SCREEN, APP_GUI_POPUP_ID ,1,0,0, APP_GUI_LAYER1,
+//		{		PopupCfgScrAvisos,APP_GUI_CONFIGURATION_SCREEN, APP_GUI_POPUP_ID ,1,0,0, APP_GUI_LAYER1,
 //				0, 0, APP_GUI_POPUP_AVISOS_WIDGET_LIST_NUM,0,APP_GUI_POPUP_DISABLE_ALL_WIDGETS,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
 
@@ -2244,57 +2244,57 @@ tAppGUIPopUpDisplayed APP_GUI_POPUP_DISPLAYED_MAP[APP_GUI_POPUP_DISPLAYED_MAP_NU
 //				c280_BackCalculadorafondo,APP_GUI_IMG_FONDO_LAN_COORD,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
 								
-//		{		swLanFrances,APP_GUI_LANGUAGES_SCREEN,APP_GUI_SW_ID,1,1,1,APP_GUI_LAYER1,
+//		{		SwLanFrances,APP_GUI_LANGUAGES_SCREEN,APP_GUI_SW_ID,1,1,1,APP_GUI_LAYER1,
 //				c295_IdiomasfrancesPress,c294_IdiomasfrancesRls,c295_IdiomasfrancesPress,c294_IdiomasfrancesRls,
 //				APP_GUI_BUT_LAN_FRANCES_TSR_COORD, 114,122, CBKswLanguage, CBKdummy,APP_GUI_BUT_LAN_FRANCES_PRS_COORD,
 //				APP_GUI_BUT_LAN_FRANCES_PRS_COORD,APP_GUI_BUT_LAN_FRANCES_PRS_COORD,APP_GUI_BUT_LAN_FRANCES_PRS_COORD, c296_TscIdiomasgeneral,
 //				0,0,0,0},
-//		{		swLanCastellano,APP_GUI_LANGUAGES_SCREEN,APP_GUI_SW_ID,1,1,1,APP_GUI_LAYER1,
+//		{		SwLanCastellano,APP_GUI_LANGUAGES_SCREEN,APP_GUI_SW_ID,1,1,1,APP_GUI_LAYER1,
 //				c298_IdiomascastellanoPress,c297_IdiomascastellanoRls,c298_IdiomascastellanoPress,c297_IdiomascastellanoRls,
 //				APP_GUI_BUT_LAN_CASTELLANO_TSR_COORD, 114,122, CBKswLanguage, CBKdummy,APP_GUI_BUT_LAN_CASTELLANO_PRS_COORD,
 //				APP_GUI_BUT_LAN_CASTELLANO_PRS_COORD,APP_GUI_BUT_LAN_CASTELLANO_PRS_COORD,APP_GUI_BUT_LAN_CASTELLANO_PRS_COORD, c296_TscIdiomasgeneral,
 //				0,0,0,0},
-//		{		swLanIngles,APP_GUI_LANGUAGES_SCREEN,APP_GUI_SW_ID,1,1,1,APP_GUI_LAYER1,
+//		{		SwLanIngles,APP_GUI_LANGUAGES_SCREEN,APP_GUI_SW_ID,1,1,1,APP_GUI_LAYER1,
 //				c300_IdiomasinglesPress,c299_IdiomasinglesRls,c300_IdiomasinglesPress,c299_IdiomasinglesRls,
 //				APP_GUI_BUT_LAN_INGLES_TSR_COORD, 114,122, CBKswLanguage, CBKdummy,APP_GUI_BUT_LAN_INGLES_PRS_COORD,
 //				APP_GUI_BUT_LAN_INGLES_PRS_COORD,APP_GUI_BUT_LAN_INGLES_PRS_COORD,APP_GUI_BUT_LAN_INGLES_PRS_COORD, c296_TscIdiomasgeneral,
 //				0,0,0,0},
-//		{		swLanItaliano,APP_GUI_LANGUAGES_SCREEN,APP_GUI_SW_ID,1,1,1,APP_GUI_LAYER1,
+//		{		SwLanItaliano,APP_GUI_LANGUAGES_SCREEN,APP_GUI_SW_ID,1,1,1,APP_GUI_LAYER1,
 //				c302_IdiomasitalianoPress,c301_IdiomasitalianoRls,c302_IdiomasitalianoPress,c301_IdiomasitalianoRls,
 //				APP_GUI_BUT_LAN_ITALIANO_TSR_COORD, 114,122, CBKswLanguage, CBKdummy,APP_GUI_BUT_LAN_ITALIANO_PRS_COORD,
 //				APP_GUI_BUT_LAN_ITALIANO_PRS_COORD,APP_GUI_BUT_LAN_ITALIANO_PRS_COORD,APP_GUI_BUT_LAN_ITALIANO_PRS_COORD, c296_TscIdiomasgeneral,
 //				0,0,0,0},
-//		{		swLanAleman,APP_GUI_LANGUAGES_SCREEN,APP_GUI_SW_ID,1,1,1,APP_GUI_LAYER1,
+//		{		SwLanAleman,APP_GUI_LANGUAGES_SCREEN,APP_GUI_SW_ID,1,1,1,APP_GUI_LAYER1,
 //				c304_IdiomasalemanPress,c303_IdiomasalemanRls,c304_IdiomasalemanPress,c303_IdiomasalemanRls,
 //				APP_GUI_BUT_LAN_ALEMAN_TSR_COORD, 114,122, CBKswLanguage, CBKdummy,APP_GUI_BUT_LAN_ALEMAN_PRS_COORD,
 //				APP_GUI_BUT_LAN_ALEMAN_PRS_COORD,APP_GUI_BUT_LAN_ALEMAN_PRS_COORD,APP_GUI_BUT_LAN_ALEMAN_PRS_COORD, c296_TscIdiomasgeneral,
 //				0,0,0,0},
-//		{		swLanPolaco,APP_GUI_LANGUAGES_SCREEN,APP_GUI_SW_ID,1,1,1,APP_GUI_LAYER1,
+//		{		SwLanPolaco,APP_GUI_LANGUAGES_SCREEN,APP_GUI_SW_ID,1,1,1,APP_GUI_LAYER1,
 //				c306_IdiomaspolacoPress,c305_IdiomaspolacoRls,c306_IdiomaspolacoPress,c305_IdiomaspolacoRls,
 //				APP_GUI_BUT_LAN_POLACO_TSR_COORD, 114,122, CBKswLanguage, CBKdummy,APP_GUI_BUT_LAN_POLACO_PRS_COORD,
 //				APP_GUI_BUT_LAN_POLACO_PRS_COORD,APP_GUI_BUT_LAN_POLACO_PRS_COORD,APP_GUI_BUT_LAN_POLACO_PRS_COORD, c296_TscIdiomasgeneral,
 //				0,0,0,0},
-//		{		swLanRuso,APP_GUI_LANGUAGES_SCREEN,APP_GUI_SW_ID,1,1,1,APP_GUI_LAYER1,
+//		{		SwLanRuso,APP_GUI_LANGUAGES_SCREEN,APP_GUI_SW_ID,1,1,1,APP_GUI_LAYER1,
 //				c308_IdiomasrusoPress,c307_IdiomasrusoRls,c308_IdiomasrusoPress,c307_IdiomasrusoRls,
 //				APP_GUI_BUT_LAN_RUSO_TSR_COORD, 114,122, CBKswLanguage, CBKdummy,APP_GUI_BUT_LAN_RUSO_PRS_COORD,
 //				APP_GUI_BUT_LAN_RUSO_PRS_COORD,APP_GUI_BUT_LAN_RUSO_PRS_COORD,APP_GUI_BUT_LAN_RUSO_PRS_COORD, c296_TscIdiomasgeneral,
 //				0,0,0,0},
-//		{		swLanPortugues,APP_GUI_LANGUAGES_SCREEN,APP_GUI_SW_ID,1,1,1,APP_GUI_LAYER1,
+//		{		SwLanPortugues,APP_GUI_LANGUAGES_SCREEN,APP_GUI_SW_ID,1,1,1,APP_GUI_LAYER1,
 //				c310_IdiomasportuguesPress,c309_IdiomasportuguesRls,c310_IdiomasportuguesPress,c309_IdiomasportuguesRls,
 //				APP_GUI_BUT_LAN_PORTUGUES_TSR_COORD, 114,122, CBKswLanguage, CBKdummy,APP_GUI_BUT_LAN_PORTUGUES_PRS_COORD,
 //				APP_GUI_BUT_LAN_PORTUGUES_PRS_COORD,APP_GUI_BUT_LAN_PORTUGUES_PRS_COORD,APP_GUI_BUT_LAN_PORTUGUES_PRS_COORD, c296_TscIdiomasgeneral,
 //				0,0,0,0},
-//		{		swLanChino,APP_GUI_LANGUAGES_SCREEN,APP_GUI_SW_ID,1,1,1,APP_GUI_LAYER1,
+//		{		SwLanChino,APP_GUI_LANGUAGES_SCREEN,APP_GUI_SW_ID,1,1,1,APP_GUI_LAYER1,
 //				c312_IdiomaschinoPress,c311_IdiomaschinoRls,c312_IdiomaschinoPress,c311_IdiomaschinoRls,
 //				APP_GUI_BUT_LAN_CHINO_TSR_COORD, 114,122, CBKswLanguage, CBKdummy,APP_GUI_BUT_LAN_CHINO_PRS_COORD,
 //				APP_GUI_BUT_LAN_CHINO_PRS_COORD,APP_GUI_BUT_LAN_CHINO_PRS_COORD,APP_GUI_BUT_LAN_CHINO_PRS_COORD, c296_TscIdiomasgeneral,
 //				0,0,0,0},
-//		{		swLanJapones,APP_GUI_LANGUAGES_SCREEN,APP_GUI_SW_ID,1,1,1,APP_GUI_LAYER1,
+//		{		SwLanJapones,APP_GUI_LANGUAGES_SCREEN,APP_GUI_SW_ID,1,1,1,APP_GUI_LAYER1,
 //				c314_IdiomasjaponesPress,c313_IdiomasjaponesRls,c314_IdiomasjaponesPress,c313_IdiomasjaponesRls,
 //				APP_GUI_BUT_LAN_JAPONES_TSR_COORD, 114,122, CBKswLanguage, CBKdummy,APP_GUI_BUT_LAN_JAPONES_PRS_COORD,
 //				APP_GUI_BUT_LAN_JAPONES_PRS_COORD,APP_GUI_BUT_LAN_JAPONES_PRS_COORD,APP_GUI_BUT_LAN_JAPONES_PRS_COORD, c296_TscIdiomasgeneral,
 //				0,0,0,0},
-//		{		swLanCoreano,APP_GUI_LANGUAGES_SCREEN,APP_GUI_SW_ID,1,1,1,APP_GUI_LAYER1,
+//		{		SwLanCoreano,APP_GUI_LANGUAGES_SCREEN,APP_GUI_SW_ID,1,1,1,APP_GUI_LAYER1,
 //				c316_IdiomascoreanoPress,c315_IdiomascoreanoRls,c316_IdiomascoreanoPress,c315_IdiomascoreanoRls,
 //				APP_GUI_BUT_LAN_COREANO_TSR_COORD, 114,122, CBKswLanguage, CBKdummy,APP_GUI_BUT_LAN_COREANO_PRS_COORD,
 //				APP_GUI_BUT_LAN_COREANO_PRS_COORD,APP_GUI_BUT_LAN_COREANO_PRS_COORD,APP_GUI_BUT_LAN_COREANO_PRS_COORD, c296_TscIdiomasgeneral,
@@ -2329,16 +2329,16 @@ tAppGUIPopUpDisplayed APP_GUI_POPUP_DISPLAYED_MAP[APP_GUI_POPUP_DISPLAYED_MAP_NU
 				
 //		//avisos
 								
-//		{		swLanScrAvisos,APP_GUI_LANGUAGES_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
+//		{		SwLanScrAvisos,APP_GUI_LANGUAGES_SCREEN,APP_GUI_SW_ID,1,0,0,APP_GUI_LAYER2,
 //				b029_BotonAvisosPress,b030_BotonAvisosRls,b029_BotonAvisosPress,b030_BotonAvisosRls,
 //				APP_GUI_BUT_AVISOS_GLOBAL_TSR_COORD, 62,62, CBKbutWarningOn, CBKbutWarningOff,APP_GUI_BUT_AVISOS_GLOBAL_PRS_COORD,
 //				APP_GUI_BUT_AVISOS_GLOBAL_PRS_COORD,APP_GUI_BUT_AVISOS_GLOBAL_PRS_COORD,APP_GUI_BUT_AVISOS_GLOBAL_PRS_COORD, b031_TscBotonAvisos,
 //				0,0,0,0},
-//		{		imgLanScrNotificacion,APP_GUI_LANGUAGES_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER3,
+//		{		ImgLanScrNotificacion,APP_GUI_LANGUAGES_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER3,
 //				b032_ImgNotificacion,APP_GUI_IMG_AVISO_PENDIENTE_COORD,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
 				
-//		{		popupLanScrAvisos,APP_GUI_LANGUAGES_SCREEN, APP_GUI_POPUP_ID ,1,0,0, APP_GUI_LAYER1,
+//		{		PopupLanScrAvisos,APP_GUI_LANGUAGES_SCREEN, APP_GUI_POPUP_ID ,1,0,0, APP_GUI_LAYER1,
 //				0, 0, APP_GUI_POPUP_AVISOS_WIDGET_LIST_NUM,0,APP_GUI_POPUP_DISABLE_ALL_WIDGETS,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
 
@@ -2373,7 +2373,7 @@ tAppGUIPopUpDisplayed APP_GUI_POPUP_DISPLAYED_MAP[APP_GUI_POPUP_DISPLAYED_MAP_NU
 //				CBKdummy,CBKbutHome,CBKdummy,APP_GUI_BUT_HOME_SAT_SCREEN_PRS_COORD,APP_GUI_BUT_HOME_SAT_SCREEN_RLS_COORD,b015_TscBotonHome,
 //				0,0,0,0,0,0,0,0,0		},
 				
-//		{		numVwrPaginaSATscreen,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwrPaginaSATscreen,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER3,3,3,16,35,1,APP_GUI_NUMVWR_PAGE_SAT_SCREEN_COORD,91,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c065_CaracterNegativo,c065_CaracterNegativo	},
 				
@@ -2531,91 +2531,91 @@ tAppGUIPopUpDisplayed APP_GUI_POPUP_DISPLAYED_MAP[APP_GUI_POPUP_DISPLAYED_MAP_NU
 //				c059_Numero8,APP_GUI_NUMVWR_NUM_28_2_SAT_SCREEN_COORD,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
 				
-//		{		numVwr1,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwr1,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER3,6,3,16,35,1,APP_GUI_NUMVWR_1_SAT_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwr2,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwr2,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER3,6,3,16,35,1,APP_GUI_NUMVWR_2_SAT_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwr3,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwr3,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER3,6,3,16,35,1,APP_GUI_NUMVWR_3_SAT_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwr4,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwr4,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER3,6,3,16,35,1,APP_GUI_NUMVWR_4_SAT_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwr5,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwr5,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER3,6,3,16,35,1,APP_GUI_NUMVWR_5_SAT_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwr6,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwr6,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER3,6,3,16,35,1,APP_GUI_NUMVWR_6_SAT_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwr7,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwr7,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER3,6,3,16,35,1,APP_GUI_NUMVWR_7_SAT_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
 
-//		{		numVwr8,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwr8,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_8_SAT_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwr9,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwr9,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_9_SAT_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwr10,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwr10,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_10_SAT_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwr11,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwr11,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_11_SAT_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwr12,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwr12,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_12_SAT_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwr13,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwr13,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_13_SAT_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwr14,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwr14,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_14_SAT_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
 				
-//		{		numVwr15,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwr15,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_15_SAT_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwr16,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwr16,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_16_SAT_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwr17,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwr17,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_17_SAT_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwr18,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwr18,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_18_SAT_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwr19,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwr19,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_19_SAT_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwr20,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwr20,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_20_SAT_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwr21,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwr21,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_21_SAT_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
 
-//		{		numVwr22,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwr22,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_22_SAT_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwr23,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwr23,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_23_SAT_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwr24,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwr24,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_24_SAT_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwr25,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwr25,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_25_SAT_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwr26,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwr26,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_26_SAT_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwr27,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwr27,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_27_SAT_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwr28,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwr28,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_28_SAT_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
 
@@ -2638,27 +2638,27 @@ tAppGUIPopUpDisplayed APP_GUI_POPUP_DISPLAYED_MAP[APP_GUI_POPUP_DISPLAYED_MAP_NU
 //				b032_ImgNotificacion,APP_GUI_IMG_TEST_LED_RGB_COORD,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
 				
-//		{		swVacuum,APP_GUI_SAT_SCREEN,APP_GUI_SW_ID,1,1,1,APP_GUI_LAYER1,
+//		{		SwVacuum,APP_GUI_SAT_SCREEN,APP_GUI_SW_ID,1,1,1,APP_GUI_LAYER1,
 //				c044_BotonAutoPress,c045_BotonAutoRls,c044_BotonAutoPress,c045_BotonAutoRls,
 //				APP_GUI_SW_VACUUM_COORD, 62,32, CBKswSATVacOn, CBKswSATVacOff,APP_GUI_SW_VACUUM_COORD,
 //				APP_GUI_SW_VACUUM_COORD,APP_GUI_SW_VACUUM_COORD,APP_GUI_SW_VACUUM_COORD, c044_B_TscBotonAuto,
 //				0,0,0,0},
-//		{		swFrio,APP_GUI_SAT_SCREEN,APP_GUI_SW_ID,1,1,1,APP_GUI_LAYER1,
+//		{		SwFrio,APP_GUI_SAT_SCREEN,APP_GUI_SW_ID,1,1,1,APP_GUI_LAYER1,
 //				c044_BotonAutoPress,c045_BotonAutoRls,c044_BotonAutoPress,c045_BotonAutoRls,
 //				APP_GUI_SW_FRIO_COORD, 62,32, CBKswSATFrioOn, CBKswSATFrioOff,APP_GUI_SW_FRIO_COORD,
 //				APP_GUI_SW_FRIO_COORD,APP_GUI_SW_FRIO_COORD,APP_GUI_SW_FRIO_COORD, c044_B_TscBotonAuto,
 //				0,0,0,0},
-//		{		swRFID,APP_GUI_SAT_SCREEN,APP_GUI_SW_ID,1,1,1,APP_GUI_LAYER1,
+//		{		SwRFID,APP_GUI_SAT_SCREEN,APP_GUI_SW_ID,1,1,1,APP_GUI_LAYER1,
 //				c044_BotonAutoPress,c045_BotonAutoRls,c044_BotonAutoPress,c045_BotonAutoRls,
 //				APP_GUI_SW_RFID_COORD, 62,32, CBKswSATrfidOn, CBKswSATrfidOff,APP_GUI_SW_RFID_COORD,
 //				APP_GUI_SW_RFID_COORD,APP_GUI_SW_RFID_COORD,APP_GUI_SW_RFID_COORD, c044_B_TscBotonAuto,
 //				0,0,0,0},
-//		{		swTestLed,APP_GUI_SAT_SCREEN,APP_GUI_SW_ID,1,1,1,APP_GUI_LAYER1,
+//		{		SwTestLed,APP_GUI_SAT_SCREEN,APP_GUI_SW_ID,1,1,1,APP_GUI_LAYER1,
 //				c044_BotonAutoPress,c045_BotonAutoRls,c044_BotonAutoPress,c045_BotonAutoRls,
 //				APP_GUI_SW_TEST_LED_COORD, 62,32, CBKswSATtestLedOn, CBKswSATtestLedOff,APP_GUI_SW_TEST_LED_COORD,
 //				APP_GUI_SW_TEST_LED_COORD,APP_GUI_SW_TEST_LED_COORD,APP_GUI_SW_TEST_LED_COORD, c044_B_TscBotonAuto,
 //				0,0,0,0},
-//		{		swTestLedRGB,APP_GUI_SAT_SCREEN,APP_GUI_SW_ID,1,1,1,APP_GUI_LAYER1,
+//		{		SwTestLedRGB,APP_GUI_SAT_SCREEN,APP_GUI_SW_ID,1,1,1,APP_GUI_LAYER1,
 //				c044_BotonAutoPress,c045_BotonAutoRls,c044_BotonAutoPress,c045_BotonAutoRls,
 //				APP_GUI_SW_TEST_LED_RGB_COORD, 62,32, CBKswSATtestLedRGBOn, CBKswSATtestLedRGBOff,APP_GUI_SW_TEST_LED_RGB_COORD,
 //				APP_GUI_SW_TEST_LED_RGB_COORD,APP_GUI_SW_TEST_LED_RGB_COORD,APP_GUI_SW_TEST_LED_RGB_COORD, c044_B_TscBotonAuto,
@@ -2670,19 +2670,19 @@ tAppGUIPopUpDisplayed APP_GUI_POPUP_DISPLAYED_MAP[APP_GUI_POPUP_DISPLAYED_MAP_NU
 //		{		imgVwrFondoErrorSAT,APP_GUI_SAT_SCREEN,APP_GUI_IMG_VWR_ID,1,0,0,APP_GUI_LAYER3,
 //				c234_AlarmaFondoCentral2,APP_GUI_FONDO_POPUP_ERRORES_SAT_COORD,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
-//		{		numVwrError1,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER4,
+//		{		NumVwrError1,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER4,
 //				APP_GUI_LAYER5,6,3,16,35,1,APP_GUI_NUMVWR1_POPUP_ERRORES_SAT_COORD,108,57,c461_FondoNumVwrError,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwrError2,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER4,
+//		{		NumVwrError2,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER4,
 //				APP_GUI_LAYER5,6,3,16,35,1,APP_GUI_NUMVWR2_POPUP_ERRORES_SAT_COORD,108,57,c461_FondoNumVwrError,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwrError3,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER4,
+//		{		NumVwrError3,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER4,
 //				APP_GUI_LAYER5,6,3,16,35,1,APP_GUI_NUMVWR3_POPUP_ERRORES_SAT_COORD,108,57,c461_FondoNumVwrError,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwrError4,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER4,
+//		{		NumVwrError4,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER4,
 //				APP_GUI_LAYER5,6,3,16,35,1,APP_GUI_NUMVWR4_POPUP_ERRORES_SAT_COORD,108,57,c461_FondoNumVwrError,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwrError5,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER4,
+//		{		NumVwrError5,APP_GUI_SAT_SCREEN,APP_GUI_NUM_VWR_ID,1,0,0,APP_GUI_LAYER4,
 //				APP_GUI_LAYER5,6,3,16,35,1,APP_GUI_NUMVWR5_POPUP_ERRORES_SAT_COORD,108,57,c461_FondoNumVwrError,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
 //		{		butOkerr,APP_GUI_SAT_SCREEN,APP_GUI_BUT_ID,1,0,0,APP_GUI_LAYER4,
@@ -2761,55 +2761,55 @@ tAppGUIPopUpDisplayed APP_GUI_POPUP_DISPLAYED_MAP[APP_GUI_POPUP_DISPLAYED_MAP_NU
 //				c149_ZonaAplicacionManipPuntoSelected,APP_GUI_NUMVWR_STATUS_7_FATIGUE_SCREEN_COORD,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
 
-//		{		numVwrTempAmb,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwrTempAmb,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_FAT_TEMPAMB_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwrTempBomba,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwrTempBomba,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_FAT_TEMPBOMBA_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwrTempRetorno,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwrTempRetorno,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,6,16,35,1,APP_GUI_NUMVWR_FAT_TEMPRETORNO_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwrCaudalRetorno,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwrCaudalRetorno,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_FAT_CAUDALRETORNO_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwrVtobera,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwrVtobera,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_FAT_VTOBERA_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwrRth,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwrRth,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_FAT_RTH_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwrCPI,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwrCPI,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_FAT_CPI_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
 		
-//		{		numVwrCaudalRetornoHP1,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwrCaudalRetornoHP1,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_FAT_CAUDALRETORNO_HP1_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwrCaudalRetornoHP2,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwrCaudalRetornoHP2,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_FAT_CAUDALRETORNO_HP2_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwrCaudalRetornoHP3,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwrCaudalRetornoHP3,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_FAT_CAUDALRETORNO_HP3_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwrCaudalRetornoHP4,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwrCaudalRetornoHP4,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_FAT_CAUDALRETORNO_HP4_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
 
-//		{		numVwrVacuumHP1,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwrVacuumHP1,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_FAT_VACUUM_HP1_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwrVacuumHP2,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwrVacuumHP2,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_FAT_VACUUM_HP2_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwrVacuumHP3,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwrVacuumHP3,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_FAT_VACUUM_HP3_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwrVacuumHP4,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwrVacuumHP4,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_FAT_VACUUM_HP4_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
 				
-//		{		numVwrFatigaTime,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwrFatigaTime,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_FAT_TIME_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
 				
@@ -2859,23 +2859,23 @@ tAppGUIPopUpDisplayed APP_GUI_POPUP_DISPLAYED_MAP[APP_GUI_POPUP_DISPLAYED_MAP_NU
 //				c058_Numero7,APP_GUI_IMGVWR_FAT_CPI_SCREEN_COORD,
 //				0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		},
 
-//		{		numVwrErrFatiga1,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwrErrFatiga1,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_FAT_ERR_1_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwrErrFatiga2,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwrErrFatiga2,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_FAT_ERR_2_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwrErrFatiga3,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwrErrFatiga3,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_FAT_ERR_3_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwrErrFatiga4,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwrErrFatiga4,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_FAT_ERR_4_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
-//		{		numVwrErrFatiga5,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
+//		{		NumVwrErrFatiga5,APP_GUI_FATIGUE_SCREEN,APP_GUI_NUM_VWR_ID,1,1,1,APP_GUI_LAYER1,
 //				APP_GUI_LAYER2,6,3,16,35,1,APP_GUI_NUMVWR_FAT_ERR_5_SCREEN_COORD,108,57,c047_FondoNumVwrBlanco,
 //				c061_Numero0,c052_Numero1,c053_Numero2,c054_Numero3,c055_Numero4,c056_Numero5,c057_Numero6,c058_Numero7,c059_Numero8,c060_Numero9,c064_CaracterPunto,c064_CaracterPunto	},
 				
-//		{		swFatigueFailBeep,APP_GUI_FATIGUE_SCREEN,APP_GUI_SW_ID,1,0,1,APP_GUI_LAYER1,
+//		{		SwFatigueFailBeep,APP_GUI_FATIGUE_SCREEN,APP_GUI_SW_ID,1,0,1,APP_GUI_LAYER1,
 //				b028_BotonAvisosMarcaAgua,b028_BotonAvisosMarcaAgua,b028_BotonAvisosMarcaAgua,b028_BotonAvisosMarcaAgua,
 //				APP_GUI_BUT_FATIGUE_FAIL_BELL_FATIGUE_SCREEN_RLS_COORD, 62,32, CBKswFATIGUEfailBelloff, CBKswFATIGUEfailBelloff,APP_GUI_BUT_FATIGUE_FAIL_BELL_FATIGUE_SCREEN_RLS_COORD,
 //				APP_GUI_BUT_FATIGUE_FAIL_BELL_FATIGUE_SCREEN_RLS_COORD,APP_GUI_BUT_FATIGUE_FAIL_BELL_FATIGUE_SCREEN_RLS_COORD,APP_GUI_BUT_FATIGUE_FAIL_BELL_FATIGUE_SCREEN_RLS_COORD, b027_TscBotonIdiomas,
