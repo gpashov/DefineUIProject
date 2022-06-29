@@ -12,7 +12,6 @@ Item {
     property alias codesButtonState: codesButton.state
     property alias languagesButtonState: languagesButton.state
     property alias configurationButtonState: configurationButton.state
-    property alias warningsButtonState: warningsButton.switchState
 
     Image {
         id: openMenuImage
@@ -100,8 +99,9 @@ Item {
         x: 439
         y: 63
         offStateImageSource: "images/b030_BotonAvisosRls.png"
-        onStateImageSource: "images/b029_BotonAvisosPress.png"
-        switchState: false
+        offPressedStateImageSource: "images/b029_BotonAvisosPress.png"
+        onStateImageSource: "images/b030_BotonAvisosRls.png"
+        onPressedStateImageSource: "images/b029_BotonAvisosPress.png"
         onOnAction: cbkWpr.butWarningOn()
         onOffAction: cbkWpr.butWarningOff()
     }

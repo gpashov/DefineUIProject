@@ -10,7 +10,7 @@ Item {
 
     Connections {
         target: wdgWpr
-        onBodyZoomed: (zoomed) => { console.log("zoomed: ", zoomed); bodySilhouette.visible = !zoomed; bodyAreaZoomed.visible = zoomed }
+        onBodyZoomed: (zoomed) => { bodySilhouette.visible = !zoomed; bodyAreaZoomed.visible = zoomed }
     }
 
     Connections {
@@ -261,15 +261,11 @@ Item {
         x: 778
         y: 352
         onStateImageSource: "images/c282_InfoPress.png"
+        onPressedStateImageSource: "images/c281_InfoRls.png"
         offStateImageSource: "images/c281_InfoRls.png"
-        onSwitchStateChanged: {
-            if (switchState) {
-                cbkWpr.butInfoZoneSelectedOn()
-            }
-            else {
-                cbkWpr.butInfoZoneSelectedOff()
-            }
-        }
+        offPressedStateImageSource: "images/c282_InfoPress.png"
+        onOnAction: cbkWpr.butInfoZoneSelectedOn()
+        onOffAction: cbkWpr.butInfoZoneSelectedOff()
 
         Connections {
             target: wdgWpr

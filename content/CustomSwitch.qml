@@ -8,7 +8,8 @@ Item {
     state: "offState"
     property alias offStateImageSource: switchOffImg.source
     property alias onStateImageSource: switchOnImg.source
-    property alias switchState: switchButton.switchState
+    property alias offPressedStateImageSource: switchOffPressedImg.source
+    property alias onPressedStateImageSource: switchOnPressedImg.source
 
     signal onAction
     signal offAction
@@ -17,7 +18,7 @@ Item {
         id: switchOffImg
         source: "images/c045_BotonAutoRls.png"
         fillMode: Image.PreserveAspectFit
-        visible: true
+        visible: false
     }
 
     Image {
@@ -27,17 +28,45 @@ Item {
         visible: false
     }
 
+    Image {
+        id: switchOffPressedImg
+        source: "images/c044_BotonAutoPress.png"
+        fillMode: Image.PreserveAspectFit
+        visible: false
+    }
+
+    Image {
+        id: switchOnPressedImg
+        source: "images/c045_BotonAutoRls.png"
+        fillMode: Image.PreserveAspectFit
+        visible: false
+    }
+
     Button {
         id: switchButton
         width: switchOffImg.width
         height: switchOffImg.height
         opacity: 0
-        property bool switchState: false
+        onPressed: {
+            // Change switch state
+            if (parent.state === "offState") {
+                parent.state = "offPressedState"
+            }
+            else {
+                parent.state = "onPressedState"
+            }
+        }
         onReleased: {
             // Change switch state
-//            switchState = !switchState
+            if (parent.state === "offPressedState") {
+                parent.state = "onState"
+            }
+            else {
+                parent.state = "offState"
+            }
+
             // Execute switch action by emitting a signal
-            if (switchState == false /*true*/ ) {
+            if (parent.state === "onState" ) {
                 onAction()
             }
             else {
@@ -49,20 +78,34 @@ Item {
     states: [
         State {
             name: "offState"
-            when: !switchButton.switchState
+
+            PropertyChanges {
+                target: switchOffImg
+                visible: true
+            }
         },
         State {
             name: "onState"
-            when: switchButton.switchState
 
             PropertyChanges {
                 target: switchOnImg
                 visible: true
             }
+        },
+        State {
+            name: "offPressedState"
 
             PropertyChanges {
-                target: switchOffImg
-                visible: false
+                target: switchOffPressedImg
+                visible: true
+            }
+        },
+        State {
+            name: "onPressedState"
+
+            PropertyChanges {
+                target: switchOnPressedImg
+                visible: true
             }
         }
     ]

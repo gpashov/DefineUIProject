@@ -26,7 +26,7 @@ qt6_add_qml_module(content
         LoadingIndicator.qml
         LanguagesScreen.qml
         InitialScreen.qml
-        InfoSwitch.qml
+        #InfoSwitch.qml
         HpVacuumButton.qml
         HPTypeNameRight.qml
         HPTypeNameLeft.qml
