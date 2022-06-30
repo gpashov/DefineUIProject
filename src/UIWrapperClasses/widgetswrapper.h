@@ -48,6 +48,7 @@ public:
     void GUIUpdateTimeButton(EAppGUI_HPsIDs HPindex, EAppGUITimeButStates butt_states);
     void GUIactivePopUp(EAppGUIwidgetIDlist popupWidgetId);
     void GUIdisablePopUp(EAppGUIwidgetIDlist popupWidgetId);
+    void GUIsetTimePopUp(EAppGUI_HPsIDs HPindex, EAppGUITimePopUpState popupState);
 
 signals:
     void changeScreenSignal(AppEnumsNs::EAppGUIscreen screenId);
@@ -116,9 +117,10 @@ signals:
     void warningsPopupDisplayed(bool isDisplayed);
     void warningActivated(AppEnumsNs::EAppGUImachineWarnings warningId, bool isActivated);
     void recommendedHpsPopupActivated(bool isActivated);
-    void suggestedHpWatermarkDisplayed(EAppGUIwidgetIDlist typeWidgetId, bool isDispalyed);
+    void suggestedHpWatermarkDisplayed(AppEnumsNs::EAppGUIwidgetIDlist typeWidgetId, bool isDispalyed);
     void rfidPopupActivated(bool isActivated);
     void testVacuumPopupActivated(bool isActivated);
+    void timePopUpSet(AppEnumsNs::EAppGUI_HPsIDs HPindex, AppEnumsNs::EAppGUITimePopUpState popupState);
 
 private:
     void float_to_string(double f, char r[], uint8 dec);

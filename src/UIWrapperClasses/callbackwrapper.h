@@ -38,7 +38,7 @@ public:
     Q_INVOKABLE void popUpVisibleChanged( EAppGUIwidgetIDlist widgetId, bool visible );
     Q_INVOKABLE void butPopUpReturn();
     Q_INVOKABLE void butReuseRFIDlabel ();
-    Q_INVOKABLE void butPopUpTimeValue();
+    Q_INVOKABLE void butPopUpTimeValue(EAppGUI_HPsIDs hpId, EAppGUIwidgetIDlist buttonId);
     Q_INVOKABLE void butPopUpTstVacManual();
     Q_INVOKABLE void butPopUpTstVacAuto();
     Q_INVOKABLE void butPopUpVacSmallLvl();

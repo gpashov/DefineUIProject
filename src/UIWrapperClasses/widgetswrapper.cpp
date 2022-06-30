@@ -1469,6 +1469,11 @@ void WidgetsWrapper::GUIdisablePopUp(EAppGUIwidgetIDlist popupWidgetId)
     }
 }
 
+void WidgetsWrapper::GUIsetTimePopUp(EAppGUI_HPsIDs HPindex, EAppGUITimePopUpState popupState)
+{
+    emit timePopUpSet(HPindex, popupState);
+}
+
 QString WidgetsWrapper::calcNumber()
 {
     return calcNumberStr;

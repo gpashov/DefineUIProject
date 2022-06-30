@@ -212,9 +212,10 @@ void CallbackWrapper::butReuseRFIDlabel()
 
 }
 
-void CallbackWrapper::butPopUpTimeValue()
+void CallbackWrapper::butPopUpTimeValue(EAppGUI_HPsIDs hpId, EAppGUIwidgetIDlist buttonId)
 {
-
+    argWidget.id = buttonId;
+    CBKbutPopUpTimeValueF(&argWidget);
 }
 
 void CallbackWrapper::butPopUpTstVacManual()

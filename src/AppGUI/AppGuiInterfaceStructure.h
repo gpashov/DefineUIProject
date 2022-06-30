@@ -195,15 +195,16 @@ namespace AppEnumsNs
     }cAppGUIVacSmallPopUpwidgetsCoordinates;
 //    Q_ENUM_NS(EAppGUIVacSmallPopUpwidgetsCoordinates)
 
-    typedef enum EAppGUITimePopUpwidgetsCoordinates
+    typedef enum EAppGUITimePopUpState
     {
-        App_GUI_1selTime,
-        App_GUI_2selTime,
-        AppGUI_selector,
+        TimePopUpHidden,
+        TimePopUpSelectedTimeNone,
+        TimePopUpSelectedTime50,
+        TimePopUpSelectedTime70,
 
-        App_GUI_PopUpTimeWidgetCoordinates
-    }cAppGUITimePopUpwidgetsCoordinates;
-//    Q_ENUM_NS(EAppGUITimePopUpwidgetsCoordinates)
+        TimePopUpSelectedTimeCount
+    }cAppGUITimePopUpState;
+    Q_ENUM_NS(EAppGUITimePopUpState)
 
     typedef enum EAppGUIctrMenuBut
     {
@@ -1776,7 +1777,7 @@ extern const uint32 APP_GUI_TRT_SCR_FULL_BODY_SELECTED_ZONE_WIDGETS[APP_GUI_MAXN
 //extern const uint32 APP_GUI_TRT_SCR_POPUP_TST_VAC_LVL_IMAGES[APP_GUI_MAX_TST_VAC_DONE][HP_CRYO_VAC_LVL_NUM];
 extern const uint32 APP_GUI_TRT_SCR_POPUP_TST_VAC_SW_LIST[HP_CRYO_VAC_LVL_NUM];
 //extern const uint32 APP_GUI_TRT_SCR_POPUP_TST_VAC_IMG_LIST[HP_CRYO_VAC_LVL_NUM];
-//extern const uint32 APP_GUI_TRT_SCR_POPUP_TIME_SW_LIST[HP_CRYO_MAX_TIME_LIST];
+extern const uint32 APP_GUI_TRT_SCR_POPUP_TIME_SW_LIST[HP_CRYO_MAX_TIME_LIST];
 //extern const uint16 APP_GUI_POPUP_TIME_COORDINATES_PER_HP[App_GUI_PopUpTimeWidgetCoordinates][APP_GUI_MAXNUM_HP][Max_coordinates];
 //extern const uint32 APP_GUI_POPUP_TST_VAC_SMALL_WIDGET_LIST[APP_GUI_POPUP_TST_VAC_SMALL_WIDGET_LIST_NUM];
 //extern const uint32 APP_GUI_POPUP_TST_VAC_SMALL_BUT_IMAGES[HP_CRYO_VAC_LVL_NUM][App_GUI_but_max];

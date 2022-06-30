@@ -178,10 +178,12 @@ Item {
         visible: false
     }
 
-
-
-
-
+    PopupTime {
+        id: popupTime
+        x: 62
+        y: 165
+        state: "hiddenState"
+    }
 
 
     states: [
@@ -282,6 +284,11 @@ Item {
                 x: 5
                 visible: true
             }
+
+            PropertyChanges {
+                target: popupTime
+                x: 66
+            }
         },
         State {
             name: "hp3State"
@@ -363,6 +370,11 @@ Item {
                 target: imageButtonHp3
                 x: 152
                 visible: true
+            }
+
+            PropertyChanges {
+                target: popupTime
+                y: 198
             }
         },
         State {
@@ -451,8 +463,24 @@ Item {
                 x: 6
                 visible: true
             }
+
+            PropertyChanges {
+                target: popupTime
+                x: 66
+                y: 198
+            }
         }
     ]
+
+    onStateChanged: {
+        switch(state) {
+            case "hp1State": popupTime.hpIndex = AppEnumsNs.APP_GUI_HP1_ID; break;
+            case "hp2State": popupTime.hpIndex = AppEnumsNs.APP_GUI_HP2_ID; break;
+            case "hp3State": popupTime.hpIndex = AppEnumsNs.APP_GUI_HP3_ID; break;
+            case "hp4State": popupTime.hpIndex = AppEnumsNs.APP_GUI_HP4_ID; break;
+            default: popupTime.hpIndex = AppEnumsNs.APP_GUI_MAXNUM_HP; break;
+        }
+    }
 
     Connections {
         target: wdgWpr
@@ -729,6 +757,20 @@ Item {
                                       }
                                   }
     }
+
+    Connections {
+        target: wdgWpr
+        onTimePopUpSet: (HPindex, popupState) => {
+                            switch(HPindex) {
+                                case AppEnumsNs.APP_GUI_HP1_ID: if(state === "hp1State") { popupTime.state = popupTime.states[popupState].name } break;
+                                case AppEnumsNs.APP_GUI_HP2_ID: if(state === "hp2State") { popupTime.state = popupTime.states[popupState].name } break;
+                                case AppEnumsNs.APP_GUI_HP3_ID: if(state === "hp3State") { popupTime.state = popupTime.states[popupState].name } break;
+                                case AppEnumsNs.APP_GUI_HP4_ID: if(state === "hp4State") { popupTime.state = popupTime.states[popupState].name } break;
+                                default: break;
+                            }
+                        }
+    }
+
 }
 
 

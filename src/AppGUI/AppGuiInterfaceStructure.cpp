@@ -285,11 +285,11 @@ const uint32 APP_GUI_TRT_SCR_POPUP_TST_VAC_SW_LIST[HP_CRYO_VAC_LVL_NUM] =
 //		imgPopUpTstVacLowLvl, 	imgPopUpTstVacMidLvl, 	imgPopUpTstVacHighLvl
 //};
 
-//const uint32 APP_GUI_TRT_SCR_POPUP_TIME_SW_LIST[HP_CRYO_MAX_TIME_LIST] =
-//{
-//		//45 min, 50 min, 70 min
-//		APP_GUI_NUM_WIDGETS, butPopUpTime50min, butPopUpTime70min,
-//};
+const uint32 APP_GUI_TRT_SCR_POPUP_TIME_SW_LIST[HP_CRYO_MAX_TIME_LIST] =
+{
+        //45 min, 50 min, 70 min
+        APP_GUI_NUM_WIDGETS, ButPopUpTime50min, ButPopUpTime70min,
+};
 
 const uint32 APP_GUI_TRT_SCR_BLINK_INDICATORS_WIDGETS[APP_GUI_MAXNUM_HP][APP_GUI_MAX_BLINK_INDICATORS] =
 {

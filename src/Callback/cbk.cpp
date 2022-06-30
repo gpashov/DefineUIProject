@@ -874,43 +874,43 @@ void CBKbutPopUpReturnF()
 
 void CBKbutPopUpTimeValueF( void *widget)
 {
-//	uint8 HPindex;
-//	tHPcryoData *HP;
-//	tPRFdata *PRF;
-//	uint8 i;
+    uint8 HPindex;
+    tHPcryoData *HP;
+    tPRFdata *PRF;
+    uint8 i;
 	
-//	/* Casteamos al tipo widget */
-//	stWidget *w = ( stWidget *)widget;
+    /* Casteamos al tipo widget */
+    stWidget *w = ( stWidget *)widget;
 	
-//	/* Seleccionamos el tiempo según el id del widget */
-//	i = HP_CRYO_TIME_45_MIN;
-//	while( i < HP_CRYO_MAX_TIME_LIST && APP_GUI_TRT_SCR_POPUP_TIME_SW_LIST[i] != w->id){ i++;}
-//	if( i >= HP_CRYO_MAX_TIME_LIST){ AppGUIdata.timeHdlr.selTime = APP_GUI_NO_TIME_SELECTED;}
-//	else
-//	{
-//		AppGUIdata.timeHdlr.selTime = i;
-//		/* Es el popUp de tiempo, tenemos que asignar el tiempo seleccionado */
-//		AppGUIdata.slot[AppGUIdata.timeHdlr.HPindex].selTime = AppGUIdata.timeHdlr.selTime;
-//		AppGUIdata.trtZoneHdlr.timeGroupZones[APP_GUI_TRT_ZONES_GROUP_ASSOCIATION[AppGUIdata.slot[AppGUIdata.timeHdlr.HPindex].selTrtArea][AppGUIdata.slot[AppGUIdata.timeHdlr.HPindex].selTrtDot]] = AppGUIdata.timeHdlr.selTime;
-//	}
+    /* Seleccionamos el tiempo según el id del widget */
+    i = HP_CRYO_TIME_45_MIN;
+    while( i < HP_CRYO_MAX_TIME_LIST && APP_GUI_TRT_SCR_POPUP_TIME_SW_LIST[i] != w->id){ i++;}
+    if( i >= HP_CRYO_MAX_TIME_LIST){ AppGUIdata.timeHdlr.selTime = APP_GUI_NO_TIME_SELECTED;}
+    else
+    {
+        AppGUIdata.timeHdlr.selTime = (cHPcryoTrtTimes)i;
+        /* Es el popUp de tiempo, tenemos que asignar el tiempo seleccionado */
+        AppGUIdata.slot[AppGUIdata.timeHdlr.HPindex].selTime = AppGUIdata.timeHdlr.selTime;
+        AppGUIdata.trtZoneHdlr.timeGroupZones[APP_GUI_TRT_ZONES_GROUP_ASSOCIATION[AppGUIdata.slot[AppGUIdata.timeHdlr.HPindex].selTrtArea][AppGUIdata.slot[AppGUIdata.timeHdlr.HPindex].selTrtDot]] = AppGUIdata.timeHdlr.selTime;
+    }
 
-//	/* Desactivamos el popUp de tiempo */
-//	AppGUIhandleTimePopUp( 0, AppGUIdata.timeHdlr.HPindex);
+    /* Desactivamos el popUp de tiempo */
+    AppGUIhandleTimePopUp( 0, AppGUIdata.timeHdlr.HPindex);
 	
 	
-//	//Actualizamos el panel de control
-//	for( HPindex=0;HPindex<APP_GUI_MAXNUM_HP;HPindex++)
-//	{
-//		AppGUIhandleCtrlPanel(AppGUIdata.slot[HPindex].isCtrlPnlShow, HPindex);
+    //Actualizamos el panel de control
+    for( HPindex=0;HPindex<APP_GUI_MAXNUM_HP;HPindex++)
+    {
+        AppGUIhandleCtrlPanel(AppGUIdata.slot[HPindex].isCtrlPnlShow, HPindex);
 		
-//		/* Actualizamos el tiempo de tratamiento */
-//		if( HPcryoGetFromSlot( APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
-//		{
-//			AppGUIdata.slot[HPindex].trtTime = AppGUIcalcTrtTime( HPindex, HPcryoTrtGetTimeSeconds( HP, PRF),
-//																  HPcryoTrtGetTreatmentTotalTimeSeconds( HP, PRF));
-//		}
+        /* Actualizamos el tiempo de tratamiento */
+        if( HPcryoGetFromSlot( (cPRFslot)APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
+        {
+            AppGUIdata.slot[HPindex].trtTime = AppGUIcalcTrtTime( HPindex, HPcryoTrtGetTimeSeconds( HP, PRF),
+                                                                  HPcryoTrtGetTreatmentTotalTimeSeconds( HP, PRF));
+        }
 			
-//	}
+    }
 }
 
 void CBKbutPopUpTstVacManualF( void *widget)

@@ -14,7 +14,7 @@ qt6_add_qml_module(content
         ThreeStateButton.qml
         SATValue.qml
         SATScreen.qml
-        PopupTimer.qml
+        PopupTime.qml
         PopupTestVacuumSmall.qml
         PopupTestVacuum.qml
         PopupSystemWarnings.qml

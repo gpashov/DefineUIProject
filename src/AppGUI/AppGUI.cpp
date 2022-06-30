@@ -801,107 +801,38 @@ void AppGUIhandleTrtZone( void)
 
 void AppGUIhandleTimePopUp( uint8 show, uint8 HPindex)
 {
-//    GUIstRect areaTS;
-    cAppGUIwidgetIDlist time_widget;
-
-//    areaTS.h = APP_GUI_POPUP_TIME_BUT_HEIGHT;
-//    areaTS.w = APP_GUI_POPUP_TIME_BUT_WIDTH;
-//    areaTS.posx = 0;
-//    areaTS.posy = 0;
+    cAppGUITimePopUpState timePopupState = AppEnumsNs::TimePopUpSelectedTimeCount;
 	
-//    /* Según si se quiere mostrar o no */
-//    if( show)
-//    {
-//        /* Activar el popUp */
-//        GUIactivePopUp( PopUpTime);
+    /* Según si se quiere mostrar o no */
+    if( show)
+    {
+        /* Activar el popUp */
 		
-//        /* Configuramos el estado de los switches de seleccion si es la primera vez */
-//        if( AppGUIdata.slot[HPindex].selTime == APP_GUI_NO_TIME_SELECTED)
-//        {
-//            //Asignamos las coordenadas al fondo del selector de tiempo
-//            GUIsetImgViewerPosition( imgPopUpTime2sel,
-//                                    APP_GUI_POPUP_TIME_COORDINATES_PER_HP[AppGUI_selector][HPindex][Coordinate_X],
-//                                    APP_GUI_POPUP_TIME_COORDINATES_PER_HP[AppGUI_selector][HPindex][Coordinate_Y]);
-			
-//            //Asignamos las coordenadas X e Y en función del manipulo que haya activado el popup de tiempo. Si no hay tiempo seleccionado se presentarán las dos opciones de tiempo
-//            areaTS.posx = APP_GUI_POPUP_TIME_COORDINATES_PER_HP[App_GUI_1selTime][HPindex][Coordinate_X];
-//            areaTS.posy = APP_GUI_POPUP_TIME_COORDINATES_PER_HP[App_GUI_1selTime][HPindex][Coordinate_Y];
-//            GUIsetButonPosition( butPopUpTime50min,
-//                                APP_GUI_POPUP_TIME_COORDINATES_PER_HP[App_GUI_1selTime][HPindex][Coordinate_X],
-//                                APP_GUI_POPUP_TIME_COORDINATES_PER_HP[App_GUI_1selTime][HPindex][Coordinate_Y],
-//                                APP_GUI_POPUP_TIME_COORDINATES_PER_HP[App_GUI_1selTime][HPindex][Coordinate_X],
-//                                APP_GUI_POPUP_TIME_COORDINATES_PER_HP[App_GUI_1selTime][HPindex][Coordinate_Y],
-//                                 areaTS);
-			
-//            //En el caso de la segunda opción, le sumamos la altura del 1º widget para que no se solapen (solo en la coordenada Y)
-//            areaTS.posx = APP_GUI_POPUP_TIME_COORDINATES_PER_HP[App_GUI_2selTime][HPindex][Coordinate_X];
-//            areaTS.posy = APP_GUI_POPUP_TIME_COORDINATES_PER_HP[App_GUI_2selTime][HPindex][Coordinate_Y];
-//            GUIsetButonPosition( butPopUpTime70min,
-//                                APP_GUI_POPUP_TIME_COORDINATES_PER_HP[App_GUI_2selTime][HPindex][Coordinate_X],
-//                                APP_GUI_POPUP_TIME_COORDINATES_PER_HP[App_GUI_2selTime][HPindex][Coordinate_Y],
-//                                APP_GUI_POPUP_TIME_COORDINATES_PER_HP[App_GUI_2selTime][HPindex][Coordinate_X],
-//                                APP_GUI_POPUP_TIME_COORDINATES_PER_HP[App_GUI_2selTime][HPindex][Coordinate_Y],
-//                                 areaTS);
-//            GUIsetWidgetVisibility( butPopUpTime50min, 1);	//Se ponen ambos widgets visibles
-//            GUIsetWidgetVisibility( butPopUpTime70min, 1);
-//            GUIsetWidgetVisibility( imgPopUpTime2sel, 1);
-//            GUIsetWidgetVisibility( imgPopUpTime1sel, 0);
-//        }
-//        else
-//        {
-//            if (AppGUIdata.slot[AppGUIdata.timeHdlr.HPindex].selTime == HP_CRYO_TIME_50_MIN)	//Si hay tiempo seleccionado y son los 50min
-//            {
-//                time_widget = butPopUpTime70min;					//Mostraremos la opción de los 70 min
-//                GUIsetWidgetVisibility( butPopUpTime50min, 0);
-//                GUIsetWidgetEnable( butPopUpTime50min, 0);
-//            }
-//            else													//Si el caso es el opuesto, mostramos los 50 min
-//            {
-//                time_widget = butPopUpTime50min;
-//                GUIsetWidgetVisibility( butPopUpTime70min, 0);
-//                GUIsetWidgetEnable( butPopUpTime70min, 0);
-//            }
-			
-//            //Asignamos las coordenadas al fondo del selector de tiempo
-//            GUIsetImgViewerPosition( imgPopUpTime1sel,
-//                                    APP_GUI_POPUP_TIME_COORDINATES_PER_HP[AppGUI_selector][HPindex][Coordinate_X],
-//                                    APP_GUI_POPUP_TIME_COORDINATES_PER_HP[AppGUI_selector][HPindex][Coordinate_Y]);
-			
-//            //Asignamos las coordenadas en función del HP que ha activado el popup
-//            areaTS.posx = APP_GUI_POPUP_TIME_COORDINATES_PER_HP[App_GUI_1selTime][HPindex][Coordinate_X];
-//            areaTS.posy = APP_GUI_POPUP_TIME_COORDINATES_PER_HP[App_GUI_1selTime][HPindex][Coordinate_Y];
-//            GUIsetButonPosition( time_widget,
-//                                APP_GUI_POPUP_TIME_COORDINATES_PER_HP[App_GUI_1selTime][HPindex][Coordinate_X],
-//                                APP_GUI_POPUP_TIME_COORDINATES_PER_HP[App_GUI_1selTime][HPindex][Coordinate_Y],
-//                                APP_GUI_POPUP_TIME_COORDINATES_PER_HP[App_GUI_1selTime][HPindex][Coordinate_X],
-//                                APP_GUI_POPUP_TIME_COORDINATES_PER_HP[App_GUI_1selTime][HPindex][Coordinate_Y],
-//                                 areaTS);
+        /* Configuramos el estado de los switches de seleccion si es la primera vez */
+        if( AppGUIdata.slot[HPindex].selTime == APP_GUI_NO_TIME_SELECTED)
+        {
+            timePopupState = AppEnumsNs::TimePopUpSelectedTimeNone;
+        }
+        else
+        {
+            if (AppGUIdata.slot[AppGUIdata.timeHdlr.HPindex].selTime == HP_CRYO_TIME_50_MIN)	//Si hay tiempo seleccionado y son los 50min
+            {
+                timePopupState = AppEnumsNs::TimePopUpSelectedTime50;
+            }
+            else													//Si el caso es el opuesto, mostramos los 50 min
+            {
+                timePopupState = AppEnumsNs::TimePopUpSelectedTime70;
+            }
+        }
+    }
+    else
+    {
+        /* Desactivamos el popUp */
+        timePopupState = AppEnumsNs::TimePopUpHidden;
+//		AppGUIhandleTrtZone();
+    }
 
-//            GUIsetWidgetVisibility( time_widget, 1);		//Y se pone visible el widget
-//            GUIsetWidgetVisibility( imgPopUpTime1sel, 1);
-//            GUIsetWidgetVisibility( imgPopUpTime2sel, 0);
-//        }
-//    }
-//    else
-//    {
-//        /* Desactivamos el popUp */
-//        GUIdisablePopUp( PopUpTime);
-		
-//        //Quitamos la visibilidad y deshabilitamos los widgets
-//        GUIsetWidgetVisibility( butPopUpTime50min, 0);
-//        GUIsetWidgetEnable( butPopUpTime50min, 0);
-//        GUIsetWidgetVisibility( butPopUpTime70min, 0);
-//        GUIsetWidgetEnable( butPopUpTime70min, 0);
-//        GUIsetWidgetVisibility( imgPopUpTime1sel, 0);
-//        GUIsetWidgetVisibility( imgPopUpTime2sel, 0);
-		
-//        /* Si la gestión de zona de tratamiento esta en zoom tenemos un glitch de un refresco en
-//         * el que el boton "Return" desaparece ya que el popUp lo deshabilita al quitarse pero
-//         * el handle de la zona de tratamiento lo volvera a poner. Para evitar esto ponemos el estado
-//         * del boton de return a visible y habilitado si la zona de tratamiento esta en zoom. Lo mas facil es
-//         * forzar un update de la zona */
-////		AppGUIhandleTrtZone();
-//    }
+    wdgWpr.GUIsetTimePopUp((EAppGUI_HPsIDs)HPindex, timePopupState);
 }
 
 void AppGUIhandleTstVacPopUp( uint8 show, uint8 HPindex)
