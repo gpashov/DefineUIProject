@@ -78,27 +78,31 @@ Item {
     ]
 
 
-    TwoStateButton {
-        id: button
-//        imageSourcePressed: positionIsRight ? prsImagesRight[ vacuumLevel * vacuumLevelMax + buttonState ] : prsImagesLeft[ vacuumLevel * vacuumLevelMax + buttonState ]
-//        imageSourceReleased: positionIsRight ? rlsImagesRight[ vacuumLevel * vacuumLevelMax + buttonState ] : rlsImagesLeft[ vacuumLevel * vacuumLevelMax + buttonState ]
+    CustomSwitch {
+        id: customSwitch
+        onStateImageSource: "images/c042_BotonVacuum1MarcaAguaLeft.png"
+        offPressedStateImageSource: "images/c042_BotonVacuum1MarcaAguaLeft.png"
+        offStateImageSource: "images/c042_BotonVacuum1MarcaAguaLeft.png"
+        onPressedStateImageSource: "images/c042_BotonVacuum1MarcaAguaLeft.png"
     }
 
-    onButtonStateChanged: setButtonImages()
-    onVacuumLevelChanged: setButtonImages()
+    onButtonStateChanged: setSwitchImages()
+    onVacuumLevelChanged: setSwitchImages()
 
-    function setButtonImages() {
+    function setSwitchImages() {
         if (buttonState !== AppEnumsNs.App_GUI_Vac_but_disabled) {
             if (vacuumLevel < vacuumLevelMax && buttonState < AppEnumsNs.App_GUI_Max_Vac_but_states ) { // Check if the values are not out of range
-                button.imageSourcePressed = positionIsRight ? prsImagesRight[ vacuumLevel * vacuumLevelMax + buttonState ] : prsImagesLeft[ vacuumLevel * vacuumLevelMax + buttonState ]
-                button.imageSourceReleased = positionIsRight ? rlsImagesRight[ vacuumLevel * vacuumLevelMax + buttonState ] : rlsImagesLeft[ vacuumLevel * vacuumLevelMax + buttonState ]
+                customSwitch.onStateImageSource = positionIsRight ? prsImagesRight[ vacuumLevel * vacuumLevelMax + buttonState ] : prsImagesLeft[ vacuumLevel * vacuumLevelMax + buttonState ]
+                customSwitch.offPressedStateImageSource = customSwitch.onStateImageSource
+                customSwitch.offStateImageSource = positionIsRight ? rlsImagesRight[ vacuumLevel * vacuumLevelMax + buttonState ] : rlsImagesLeft[ vacuumLevel * vacuumLevelMax + buttonState ]
+                customSwitch.onPressedStateImageSource = customSwitch.offStateImageSource
             }
 
-            button.enabled = true
+            customSwitch.enabled = true
         }
         else
         {
-            button.enabled = false
+            customSwitch.enabled = false
         }
     }
 }
