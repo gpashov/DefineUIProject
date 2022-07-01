@@ -822,7 +822,6 @@ void CBKbutPopUpReturnF()
     /* El comportamiento depende de que popUp esta activo o si ninguno lo esta entender que es el zoom de la
      * zona de tratamiento */
     /* -- PopUp's tiempo, test vacum y RFID se desactivan */
-//    popUp = GUIgetWidget( PopUpRFID);
     if( AppGUIisRFIDPopUpActive() )
     {
         /* Paramos el tratamiento en curso */

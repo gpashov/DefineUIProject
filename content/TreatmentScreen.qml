@@ -32,7 +32,6 @@ Item {
         id: bodyAreaZoomed
         areaState: 1
         genderState: "maleState"
-        visible: !bodySilhouette.visible
     }
 
     Image {
@@ -260,41 +259,43 @@ Item {
         id: infoSwitch
         x: 778
         y: 352
+        visible: false
         onStateImageSource: "images/c282_InfoPress.png"
         onPressedStateImageSource: "images/c281_InfoRls.png"
         offStateImageSource: "images/c281_InfoRls.png"
         offPressedStateImageSource: "images/c282_InfoPress.png"
         onOnAction: cbkWpr.butInfoZoneSelectedOn()
         onOffAction: cbkWpr.butInfoZoneSelectedOff()
+    }
 
-        Connections {
-            target: wdgWpr
-            onInfoSwitchVisibilityChanged: (newVisibility) => visible = newVisibility
-        }
+    Connections {
+        target: wdgWpr
+        onInfoSwitchVisibilityChanged: (newVisibility) => infoSwitch.visible = newVisibility
+    }
 
-        Connections {
-            target: wdgWpr
-            onInfoSwitchEnabled: (enable) => enabled = enable
-        }
+    Connections {
+        target: wdgWpr
+        onInfoSwitchEnabled: (enable) => infoSwitch.enabled = enable
     }
 
     TwoStateButton {
         id: returnButton
         x: 189
         y: 352
+        visible: false
         imageSourcePressed: "images/c156_RetrocesoPress.png"
         imageSourceReleased: "images/c155_RetrocesoRls.png"
         button.onReleased: cbkWpr.butPopUpReturn()
+    }
 
-        Connections {
-            target: wdgWpr
-            onReturnButtonVisibilityChanged: (newVisibility) => visible = newVisibility
-        }
+    Connections {
+        target: wdgWpr
+        onReturnButtonVisibilityChanged: (newVisibility) => returnButton.visible = newVisibility
+    }
 
-        Connections {
-            target: wdgWpr
-            onReturnButtonEnabled: (enable) => enabled = enable
-        }
+    Connections {
+        target: wdgWpr
+        onReturnButtonEnabled: (enable) => returnButton.enabled = enable
     }
 
     PopupRecommendedHps {
@@ -350,8 +351,10 @@ Item {
 
 
 
-/*##^##
-Designer {
-    D{i:0;autoSize:true;height:480;width:640}
-}
-##^##*/
+
+
+
+
+
+
+
