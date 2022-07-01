@@ -246,19 +246,19 @@ uint16 WidgetsWrapper::GUIsetWidgetVisibility(uint32 id, uint8 vis)
     case ImgCtrlPnlRFIDblinkHP1: emit indicatorRfidVisibilityChanged(APP_GUI_HP1_ID, vis); break;
     case ImgCtrlPnlRFIDblinkHP2: emit indicatorRfidVisibilityChanged(APP_GUI_HP2_ID, vis); break;
     case ImgCtrlPnlRFIDblinkHP3: emit indicatorRfidVisibilityChanged(APP_GUI_HP3_ID, vis); break;
-    case ImgCtrlPnlRFIDblinkHP4: emit indicatorRfidVisibilityChanged(APP_GUI_HP1_ID, vis); break;
+    case ImgCtrlPnlRFIDblinkHP4: emit indicatorRfidVisibilityChanged(APP_GUI_HP4_ID, vis); break;
     case ImgCtrlPnlPulBlinkHP1: emit indicatorButtonVisibilityChanged(APP_GUI_HP1_ID, vis); break;
     case ImgCtrlPnlPulBlinkHP2: emit indicatorButtonVisibilityChanged(APP_GUI_HP2_ID, vis); break;
     case ImgCtrlPnlPulBlinkHP3: emit indicatorButtonVisibilityChanged(APP_GUI_HP3_ID, vis); break;
-    case ImgCtrlPnlPulBlinkHP4: emit indicatorButtonVisibilityChanged(APP_GUI_HP1_ID, vis); break;
+    case ImgCtrlPnlPulBlinkHP4: emit indicatorButtonVisibilityChanged(APP_GUI_HP4_ID, vis); break;
     case ImgCtrlPnlVacBlinkHP1: emit indicatorVacuumVisibilityChanged(APP_GUI_HP1_ID, vis); break;
     case ImgCtrlPnlVacBlinkHP2: emit indicatorVacuumVisibilityChanged(APP_GUI_HP2_ID, vis); break;
     case ImgCtrlPnlVacBlinkHP3: emit indicatorVacuumVisibilityChanged(APP_GUI_HP3_ID, vis); break;
-    case ImgCtrlPnlVacBlinkHP4: emit indicatorVacuumVisibilityChanged(APP_GUI_HP1_ID, vis); break;
+    case ImgCtrlPnlVacBlinkHP4: emit indicatorVacuumVisibilityChanged(APP_GUI_HP4_ID, vis); break;
     case ImgCtrlPnlCoolingBlinkHP1: emit indicatorCoolingVisibilityChanged(APP_GUI_HP1_ID, vis); break;
     case ImgCtrlPnlCoolingBlinkHP2: emit indicatorCoolingVisibilityChanged(APP_GUI_HP2_ID, vis); break;
     case ImgCtrlPnlCoolingBlinkHP3: emit indicatorCoolingVisibilityChanged(APP_GUI_HP3_ID, vis); break;
-    case ImgCtrlPnlCoolingBlinkHP4: emit indicatorCoolingVisibilityChanged(APP_GUI_HP1_ID, vis); break;
+    case ImgCtrlPnlCoolingBlinkHP4: emit indicatorCoolingVisibilityChanged(APP_GUI_HP4_ID, vis); break;
 
 //    //Botones del panel de control de PLAY y Test Vacum
 //    case ButCtrlPnlPlayHP1,
@@ -280,7 +280,7 @@ uint16 WidgetsWrapper::GUIsetWidgetVisibility(uint32 id, uint8 vis)
     case NumVwrTimeHP1: emit timeRemainingVisibilityChanged(APP_GUI_HP1_ID, vis); break;
     case NumVwrTimeHP2: emit timeRemainingVisibilityChanged(APP_GUI_HP2_ID, vis); break;
     case NumVwrTimeHP3: emit timeRemainingVisibilityChanged(APP_GUI_HP3_ID, vis); break;
-    case NumVwrTimeHP4: emit timeRemainingVisibilityChanged(APP_GUI_HP1_ID, vis); break;
+    case NumVwrTimeHP4: emit timeRemainingVisibilityChanged(APP_GUI_HP4_ID, vis); break;
     case ButSelectTimeHP1: emit timeSelectButtonVisibilityChanged(APP_GUI_HP1_ID, vis); break;
     case ButSelectTimeHP2: emit timeSelectButtonVisibilityChanged(APP_GUI_HP2_ID, vis); break;
     case ButSelectTimeHP3: emit timeSelectButtonVisibilityChanged(APP_GUI_HP3_ID, vis); break;
@@ -855,11 +855,11 @@ uint16 WidgetsWrapper::GUIsetWidgetEnable(uint32 id, uint8 enable)
     case ButCtrlPnlPlayHP1: emit controlPanelPlayButtonEnabled(APP_GUI_HP1_ID, enable); break;
     case ButCtrlPnlPlayHP2: emit controlPanelPlayButtonEnabled(APP_GUI_HP2_ID, enable); break;
     case ButCtrlPnlPlayHP3: emit controlPanelPlayButtonEnabled(APP_GUI_HP3_ID, enable); break;
-    case ButCtrlPnlPlayHP4: emit controlPanelPlayButtonEnabled(APP_GUI_HP1_ID, enable); break;
+    case ButCtrlPnlPlayHP4: emit controlPanelPlayButtonEnabled(APP_GUI_HP4_ID, enable); break;
     case SwCtrlPnlTstVacHP1: emit controlPanelVacuumButtonEnabled(APP_GUI_HP1_ID, enable); break;
     case SwCtrlPnlTstVacHP2: emit controlPanelVacuumButtonEnabled(APP_GUI_HP2_ID, enable); break;
     case SwCtrlPnlTstVacHP3: emit controlPanelVacuumButtonEnabled(APP_GUI_HP3_ID, enable); break;
-    case SwCtrlPnlTstVacHP4: emit controlPanelVacuumButtonEnabled(APP_GUI_HP1_ID, enable); break;
+    case SwCtrlPnlTstVacHP4: emit controlPanelVacuumButtonEnabled(APP_GUI_HP4_ID, enable); break;
 
 //    //Botones (switch) que permite seleccionar modo de tratamiento AUTO o MANUAL
 //    case ButSwtchModeAutoManualHP1,
@@ -873,13 +873,13 @@ uint16 WidgetsWrapper::GUIsetWidgetEnable(uint32 id, uint8 enable)
 //    case NumVwrTimeHP3
 //    case NumVwrTimeHP4
     case ButSelectTimeHP1: emit controlPanelTimeButtonEnabled(APP_GUI_HP1_ID, enable); break;
-    case ButSelectTimeHP2: emit controlPanelTimeButtonEnabled(APP_GUI_HP3_ID, enable); break;
-    case ButSelectTimeHP3: emit controlPanelTimeButtonEnabled(APP_GUI_HP2_ID, enable); break;
-    case ButSelectTimeHP4: emit controlPanelTimeButtonEnabled(APP_GUI_HP1_ID, enable); break;
+    case ButSelectTimeHP2: emit controlPanelTimeButtonEnabled(APP_GUI_HP2_ID, enable); break;
+    case ButSelectTimeHP3: emit controlPanelTimeButtonEnabled(APP_GUI_HP3_ID, enable); break;
+    case ButSelectTimeHP4: emit controlPanelTimeButtonEnabled(APP_GUI_HP4_ID, enable); break;
     case ButVwrTemperatureHP1: emit temperatureButtonEnabled(APP_GUI_HP1_ID, enable); break;
     case ButVwrTemperatureHP2: emit temperatureButtonEnabled(APP_GUI_HP2_ID, enable); break;
     case ButVwrTemperatureHP3: emit temperatureButtonEnabled(APP_GUI_HP3_ID, enable); break;
-    case ButVwrTemperatureHP4: emit temperatureButtonEnabled(APP_GUI_HP1_ID, enable); break;
+    case ButVwrTemperatureHP4: emit temperatureButtonEnabled(APP_GUI_HP4_ID, enable); break;
 
 //    //Visor numerico para contabilizar resucciones
 //    case NumVwrResucctionCountHP1,
@@ -895,13 +895,13 @@ uint16 WidgetsWrapper::GUIsetWidgetEnable(uint32 id, uint8 enable)
     case ButModelImageHP1: emit hpImageButtonEnabled(APP_GUI_HP1_ID, enable); break;
     case ButModelImageHP2: emit hpImageButtonEnabled(APP_GUI_HP2_ID, enable); break;
     case ButModelImageHP3: emit hpImageButtonEnabled(APP_GUI_HP3_ID, enable); break;
-    case ButModelImageHP4: emit hpImageButtonEnabled(APP_GUI_HP1_ID, enable); break;
+    case ButModelImageHP4: emit hpImageButtonEnabled(APP_GUI_HP4_ID, enable); break;
 
     //Botonoes de recogida y despliegue del panel de control
     case ButHideControlPanelHP1: emit controlPanelHideButtonEnabled(APP_GUI_HP1_ID, enable); break;
     case ButHideControlPanelHP2: emit controlPanelHideButtonEnabled(APP_GUI_HP2_ID, enable); break;
     case ButHideControlPanelHP3: emit controlPanelHideButtonEnabled(APP_GUI_HP3_ID, enable); break;
-    case ButHideControlPanelHP4: emit controlPanelHideButtonEnabled(APP_GUI_HP1_ID, enable); break;
+    case ButHideControlPanelHP4: emit controlPanelHideButtonEnabled(APP_GUI_HP4_ID, enable); break;
 //    case butShowControlPanelHP1,
 //    case butShowControlPanelHP2,
 //    case butShowControlPanelHP3,
@@ -1368,8 +1368,8 @@ void WidgetsWrapper::GUIsetImgViewerImage(uint32 id, uint32 idImg)
     case ImgModelTextHP2: emit hpControlPanelModelTextSet( AppEnumsNs::APP_GUI_HP2_ID, (EAppGUIimageIDlist)idImg ); break;
     case ImgModelTextHP3: emit hpControlPanelModelTextSet( AppEnumsNs::APP_GUI_HP3_ID, (EAppGUIimageIDlist)idImg ); break;
     case ImgModelTextHP4: emit hpControlPanelModelTextSet( AppEnumsNs::APP_GUI_HP4_ID, (EAppGUIimageIDlist)idImg ); break;
-    case ImgColourCtrlPnlBckGndHP2: emit hpControlPanelColorSet(AppEnumsNs::APP_GUI_HP2_ID, (uint8)idImg); break;
     case ImgColourCtrlPnlBckGndHP1: emit hpControlPanelColorSet(AppEnumsNs::APP_GUI_HP1_ID, (uint8)idImg); break;
+    case ImgColourCtrlPnlBckGndHP2: emit hpControlPanelColorSet(AppEnumsNs::APP_GUI_HP2_ID, (uint8)idImg); break;
     case ImgColourCtrlPnlBckGndHP3: emit hpControlPanelColorSet(AppEnumsNs::APP_GUI_HP3_ID, (uint8)idImg); break;
     case ImgColourCtrlPnlBckGndHP4: emit hpControlPanelColorSet(AppEnumsNs::APP_GUI_HP4_ID, (uint8)idImg); break;
     default: break;

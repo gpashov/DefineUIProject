@@ -152,6 +152,7 @@ void CBKswSATtestLedRGBOnF ( void *widget);
 void CBKswSATtestLedRGBOffF ( void *widget);
 void CBKswFATIGUEfailBelloffF ( void *widget);
 void CBKbutOkSATerrF ( void *widget);
+void CBKLoadAnimationEnd();
 
 
 #endif /* CBK_H_ */

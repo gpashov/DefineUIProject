@@ -74,6 +74,7 @@ public:
     Q_INVOKABLE void swSATtestLedRGBOff ();
     Q_INVOKABLE void swFATIGUEfailBelloff ();
     Q_INVOKABLE void butOkSATerr ();
+    Q_INVOKABLE void loadAnimationEnd();
 
 signals:
 

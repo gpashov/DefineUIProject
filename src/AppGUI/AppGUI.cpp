@@ -1484,20 +1484,23 @@ uint8 AppGUIisInitRunning( uint8 HPindex)
 /* Funciones privadas */
 void AppGUIloadScrInit( void)
 {
-//    uint8 i;
+    uint8 i;
 	
-//    /* Asignamos la pantalla actual */
-//    AppGUIdata.screen = APP_GUI_LOAD_SCREEN;
+    /* Asignamos la pantalla actual */
+    AppGUIdata.screen = APP_GUI_LOAD_SCREEN;
 		
 //    /* Inicializamos las variables de la animación a ocultas para poder ejecutarla */
 //    for( i = 0; i < APP_GUI_LOAD_SCR_ANIM_IMG_NUM; i++)
 //    {
 //        GUIsetWidgetVisibility( APP_GUI_LOAD_SCR_ANIM_IMG_LIST[i], APP_GUI_WIDGET_NOT_VISIBLE);
 //    }
+    wdgWpr.changeScreen(APP_GUI_LOAD_SCREEN);
 }
 
 void AppGUIloadScrUpdate( void)
 {
+    // The logic from this function is implemented in LoadIndicator.qml
+
 //    static uint8 loadScrIndex = 0;
 //    static uint32 animTmr = 0;
 	

@@ -21,10 +21,11 @@ Item {
             TimelineAnimation {
                 id: timelineAnimation
                 running: true
-                duration: 1200
+                duration: 4000
                 loops: 1
                 to: 9
                 from: 0
+                onFinished: cbkWpr.loadAnimationEnd()
             }
         ]
         enabled: true
@@ -147,7 +148,7 @@ Item {
     Image {
         id: a002_CargaLogotipo8
         x: 394
-        y: 210
+        y: 211
         visible: true
         source: "images/a009_CargaLogotipo8.png"
         fillMode: Image.PreserveAspectFit
@@ -164,7 +165,7 @@ Item {
     Image {
         id: a002_CargaLogotipo6
         x: 339
-        y: 381
+        y: 382
         source: "images/a007_CargaLogotipo6.png"
         fillMode: Image.PreserveAspectFit
     }
@@ -172,7 +173,7 @@ Item {
     Image {
         id: a002_CargaLogotipo5
         x: 394
-        y: 483
+        y: 484
         source: "images/a006_CargaLogotipo5.png"
         fillMode: Image.PreserveAspectFit
     }
@@ -187,16 +188,16 @@ Item {
 
     Image {
         id: a002_CargaLogotipo3
-        x: 609
-        y: 381
+        x: 610
+        y: 383
         source: "images/a004_CargaLogotipo3.png"
         fillMode: Image.PreserveAspectFit
     }
 
     Image {
         id: a002_CargaLogotipo2
-        x: 609
-        y: 266
+        x: 610
+        y: 268
         source: "images/a003_CargaLogotipo2.png"
         fillMode: Image.PreserveAspectFit
     }
@@ -213,7 +214,7 @@ Item {
 
 /*##^##
 Designer {
-    D{i:0;formeditorZoom:0.75}
+    D{i:0;height:400;width:400}D{i:2}
 }
 ##^##*/
 

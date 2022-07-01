@@ -1803,3 +1803,8 @@ void CBKbutReuseRFIDlabelF ( void *widget)
 //		HP->trt.Label_reuse = 1;
 //	}
 }
+
+void CBKLoadAnimationEnd()
+{
+    AppGUIupdate(); AppGUIchangeScreen( APP_GUI_INIT_SCREEN);
+}

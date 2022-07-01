@@ -112,8 +112,4 @@ Item {
 
 
 
-/*##^##
-Designer {
-    D{i:0;height:114;width:165}
-}
-##^##*/
+

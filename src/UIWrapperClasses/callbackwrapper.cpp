@@ -409,3 +409,8 @@ void CallbackWrapper::butOkSATerr()
 {
 
 }
+
+void CallbackWrapper::loadAnimationEnd()
+{
+    CBKLoadAnimationEnd();
+}

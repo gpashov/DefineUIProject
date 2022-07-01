@@ -38,6 +38,7 @@
 #include "UIWrapperClasses/callbackwrapper.h"
 #include "UIWrapperClasses/widgetswrapper.h"
 #include "AppGUI/AppGuiInterfaceStructure.h"
+#include "AppGUI/AppGUI.h"
 
 WidgetsWrapper wdgWpr;
 
@@ -71,6 +72,12 @@ int main(int argc, char *argv[])
     if (engine.rootObjects().isEmpty()) {
         return -1;
     }
+// TODO Begin
+// Temporary call to AppGUIInit
+// The code from the main function must be moved somehow to App.c:APP_Main(). Maybe rework of switch(motorAppPrincipal )
+    AppGUIinit();
+    AppGUIupdate();
+// TODO End
 
     return app.exec();
 }
