@@ -140,21 +140,21 @@ void WidgetsWrapper::GUIsetSwitchStatus(uint32 id, uint8 OnOff)
     case SwCtrlPnlTstVacHP2: break;
     case SwCtrlPnlTstVacHP3: break;
     case SwCtrlPnlTstVacHP4: break;
-    case SwDotZone0: break;
-    case SwDotZone1: break;
-    case SwDotZone2: break;
-    case SwDotZone3: break;
-    case SwDotZone4: break;
-    case SwDotZone5: break;
-    case SwDotZone6: break;
-    case SwDotZone7: break;
-    case SwDotZone8: break;
-    case SwDotZone9: break;
-    case SwDotZone10: break;
-    case SwDotZone11: break;
-    case SwDotZone12: break;
-    case SwDotZone13: break;
-    case SwDotZone14: break;
+    case SwDotZone0:
+    case SwDotZone1:
+    case SwDotZone2:
+    case SwDotZone3:
+    case SwDotZone4:
+    case SwDotZone5:
+    case SwDotZone6:
+    case SwDotZone7:
+    case SwDotZone8:
+    case SwDotZone9:
+    case SwDotZone10:
+    case SwDotZone11:
+    case SwDotZone12:
+    case SwDotZone13:
+    case SwDotZone14: dotZoneSelected((EAppGUIwidgetIDlist)id, (bool)OnOff); break;
     case SwPopUpTstVacLowLvl: break;
     case SwPopUpTstVacMidLvl: break;
     case SwPopUpTstVacHighLvl: break;

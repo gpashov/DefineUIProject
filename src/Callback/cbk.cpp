@@ -765,7 +765,10 @@ void CBKswDotZoneOnF( void *widget)
     i = 0;
     while( i < APP_GUI_MAX_DOTS_PER_AREA && APP_GUI_TRT_SCR_DOT_ZONES_WIDGETS[i] != w->id){ i++;}
     if( i >= APP_GUI_MAX_DOTS_PER_AREA){ AppGUIdata.trtZoneHdlr.selTrtDot = APP_GUI_NO_TRT_DOT_SELECTED;}
-    else{ AppGUIdata.trtZoneHdlr.selTrtDot = i;}
+    else{
+        AppGUIdata.trtZoneHdlr.selTrtDot = i;
+        wdgWpr.GUIsetSwitchStatus( w->id, 1);
+    }
 	
     for( i = 0; i < APP_GUI_MAX_DOTS_PER_AREA; i++)
     {
@@ -789,6 +792,7 @@ void CBKswDotZoneOffF( void *widget)
     if( APP_GUI_TRT_SCR_DOT_ZONES_WIDGETS[AppGUIdata.trtZoneHdlr.selTrtDot] == w->id)
     {
         AppGUIdata.trtZoneHdlr.selTrtDot = APP_GUI_NO_TRT_DOT_SELECTED;
+        wdgWpr.GUIsetSwitchStatus( w->id, 0);
     }
 
     /* Refrescamos la zona de selección de tratamiento */

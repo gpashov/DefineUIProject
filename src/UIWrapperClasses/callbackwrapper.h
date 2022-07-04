@@ -35,7 +35,7 @@ public:
     Q_INVOKABLE void swDotZoneOn(EAppGUIwidgetIDlist widgetId);
     Q_INVOKABLE void swDotZoneOff(EAppGUIwidgetIDlist widgetId);
     //Q_INVOKABLE void CBKbutPopUpOK();
-    Q_INVOKABLE void popUpVisibleChanged( EAppGUIwidgetIDlist widgetId, bool visible );
+    Q_INVOKABLE void popupVisibleChanged( EAppGUIwidgetIDlist widgetId, bool visible );
     Q_INVOKABLE void butPopUpReturn();
     Q_INVOKABLE void butReuseRFIDlabel ();
     Q_INVOKABLE void butPopUpTimeValue(EAppGUI_HPsIDs hpId, EAppGUIwidgetIDlist buttonId);

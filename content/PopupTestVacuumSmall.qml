@@ -79,7 +79,7 @@ Item {
         }
     ]
 
-    onVisibleChanged: cbkWpr.popUpVisibleChanged(AppEnumsNs.PopUpTstVacSmall, visible)
+    onVisibleChanged: cbkWpr.popupVisibleChanged(AppEnumsNs.PopUpTstVacSmall, visible)
 }
 
 

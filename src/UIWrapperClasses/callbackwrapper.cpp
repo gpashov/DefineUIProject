@@ -196,7 +196,7 @@ void CallbackWrapper::swDotZoneOff(EAppGUIwidgetIDlist widgetId)
     CBKswDotZoneOffF(&argWidget);
 }
 
-void CallbackWrapper::popUpVisibleChanged( EAppGUIwidgetIDlist widgetId, bool visible )
+void CallbackWrapper::popupVisibleChanged( EAppGUIwidgetIDlist widgetId, bool visible )
 {
     argWidget.id = widgetId;
     CBKpopUpDisplayedF( &argWidget, visible );

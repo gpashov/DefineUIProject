@@ -30,8 +30,6 @@ Item {
 
     BodyAreaZoomed {
         id: bodyAreaZoomed
-        areaState: 1
-        genderState: "maleState"
     }
 
     Image {
@@ -286,16 +284,16 @@ Item {
         imageSourcePressed: "images/c156_RetrocesoPress.png"
         imageSourceReleased: "images/c155_RetrocesoRls.png"
         button.onReleased: cbkWpr.butPopUpReturn()
-    }
 
-    Connections {
-        target: wdgWpr
-        onReturnButtonVisibilityChanged: (newVisibility) => returnButton.visible = newVisibility
-    }
+        Connections {
+            target: wdgWpr
+            onReturnButtonVisibilityChanged: (newVisibility) => returnButton.visible = newVisibility
+        }
 
-    Connections {
-        target: wdgWpr
-        onReturnButtonEnabled: (enable) => returnButton.enabled = enable
+        Connections {
+            target: wdgWpr
+            onReturnButtonEnabled: (enable) => returnButton.enabled = enable
+        }
     }
 
     PopupRecommendedHps {
@@ -304,8 +302,10 @@ Item {
 
         Connections {
             target: wdgWpr
-            onRecommendedHpsPopupActivated: (isActivated) => visible = isActivated
+            onRecommendedHpsPopupActivated: (isActivated) => popupRecommendedHps.visible = isActivated
         }
+
+        onVisibleChanged: cbkWpr.popupVisibleChanged(AppEnumsNs.PopUpRecomm, visible)
     }
 
     PopupRfid {

@@ -57,7 +57,7 @@ Item {
         font.family: "Verdana"
     }
 
-    onVisibleChanged: cbkWpr.popUpVisibleChanged(AppEnumsNs.PopUpRFID, visible)
+    onVisibleChanged: cbkWpr.popupVisibleChanged(AppEnumsNs.PopUpRFID, visible)
 }
 
 

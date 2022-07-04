@@ -534,7 +534,7 @@ Item {
                                     case AppEnumsNs.AppGUIfullBodyTorso: state = "torsoState"; break;
                                     case AppEnumsNs.AppGUIfullBodyPiernas: state = "legsState"; break;
                                     case AppEnumsNs.AppGUIfullBodyEspalda: state = "backState"; break;
-                                    case AppEnumsNs.AppGUIfullBodyPiernasMuslo: state = "legsThighsoState"; break;
+                                    case AppEnumsNs.AppGUIfullBodyPiernasMuslo: state = "legsThighsState"; break;
                                     case AppEnumsNs.AppGUIfullBodyBrazos: state = "armsState"; break;
                                     case AppEnumsNs.AppGUIfullBodyCuello: state = "neckState"; break;
                                     default: break;

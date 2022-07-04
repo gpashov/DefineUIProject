@@ -7,21 +7,16 @@ Item {
     id: item1
     width: Constants.width
     height: Constants.height
-    property alias genderState: item1.state
-    //property string areaState: "torsoState"
-    property int areaState: 1
 
     Connections {
         target: wdgWpr
         onBodyGenderSelected: (gender) => {
                                 switch (gender) {
                                 case AppEnumsNs.AppGUIbodyFemale:
-                                      bodyAreaFemale.visible = true;
-                                      bodyAreaMale.visible = false;
+                                      state = "femaleState"
                                       break;
                                 case AppEnumsNs.AppGUIbodyMale:
-                                      bodyAreaFemale.visible = false;
-                                      bodyAreaMale.visible = true;
+                                      state = "maleState"
                                       break;
                                 }
                             }
@@ -29,13 +24,14 @@ Item {
 
     BodyAreaZoomedMale {
         id: bodyAreaMale
-        state: states[areaState].name
+        visible: false
     }
 
     BodyAreaZoomedFemale {
         id: bodyAreaFemale
-        state: states[areaState].name
+        visible: false
     }
+
     states: [
         State {
             name: "maleState"
@@ -59,3 +55,11 @@ Item {
 }
 
 
+
+
+
+/*##^##
+Designer {
+    D{i:0;autoSize:true;height:480;width:640}
+}
+##^##*/

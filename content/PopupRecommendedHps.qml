@@ -7,15 +7,6 @@ Item {
     id: item1
     width: Constants.width
     height: Constants.height
-//    property alias tinyCurvedVisible: watermarkTinyCurvedImg.visible
-//    property alias tinyVisible: watermarkTinyImg.visible
-//    property alias angledVisible: watermarkAngledImg.visible
-//    property alias straightVisible: watermarkStraightImg.visible
-//    property alias ovalCurvedVisible: watermarkOvalCurvedImg.visible
-//    property alias tightVisible: watermarkTightImg.visible
-//    property alias doubleVisible: watermarkDoubleImg.visible
-//    property alias ovalVisible: watermarkOvalImg.visible
-//    property alias curvedVisible: watermarkCurvedImg.visible
 
     Image {
         id: recommendedHpBackgroundImg
@@ -114,8 +105,6 @@ Item {
                                              }
         }
     }
-
-    onVisibleChanged: cbkWpr.popupVisibleChanged(AppEnumsNs.PopUpRecomm, visible)
 }
 
 
@@ -124,6 +113,6 @@ Item {
 
 /*##^##
 Designer {
-    D{i:0;height:0;width:0}
+    D{i:0;autoSize:true;height:480;width:640}
 }
 ##^##*/

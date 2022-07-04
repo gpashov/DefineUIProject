@@ -119,7 +119,7 @@ Item {
         imageSourcePressed: "images/c221_PopUpBotonAutoPress.png"
     }
 
-    onVisibleChanged: cbkWpr.popUpVisibleChanged(AppEnumsNs.PopUpTstVac, visible)
+    onVisibleChanged: cbkWpr.popupVisibleChanged(AppEnumsNs.PopUpTstVac, visible)
 }
 
 

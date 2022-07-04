@@ -107,7 +107,7 @@ Item {
         }
     ]
 
-    onStateChanged: cbkWpr.popUpVisibleChanged(AppEnumsNs.PopUpTime, (state !== "hiddenState"))
+    onStateChanged: cbkWpr.popupVisibleChanged(AppEnumsNs.PopUpTime, (state !== "hiddenState"))
 }
 
 

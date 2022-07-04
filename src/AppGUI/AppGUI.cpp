@@ -680,8 +680,8 @@ void AppGUIhandleTrtZone( void)
 //                GUIsetSwitchTscImg( widID, APP_GUI_AREA_ZOOM_DOTS[body][area][i].IDimgTS);
 				
                 /* Segun el resultado de la busqueda */
-//                if( HPindex >= APP_GUI_MAXNUM_HP)
-//                {
+                if( HPindex >= APP_GUI_MAXNUM_HP)
+                {
                     /* No lo tiene ningun HP asociado, colocamos las imagenes y coordenadas correspondientes */
 //                    xOn = APP_GUI_AREA_ZOOM_DOTS[body][area][i].imgOnOffX;
 //                    yOn = APP_GUI_AREA_ZOOM_DOTS[body][area][i].imgOnOffY;
@@ -689,9 +689,9 @@ void AppGUIhandleTrtZone( void)
 //                    yOff = APP_GUI_AREA_ZOOM_DOTS[body][area][i].imgOnOffY;
 //                    imgOn = APP_GUI_AREA_ZOOM_DOTS[body][area][i].IDimgOn;
 //                    imgOff = APP_GUI_AREA_ZOOM_DOTS[body][area][i].IDimgOff;
-//                }
-//                else
-//                {
+                }
+                else
+                {
                     /* Si esta asociado a un HP, dependiendo de cual asignamos las imagenes */
 //                    xOn = APP_GUI_AREA_ZOOM_DOTS[body][area][i].imgHPzoomOn_X;
 //                    yOn = APP_GUI_AREA_ZOOM_DOTS[body][area][i].imgHPzoomOn_Y;
@@ -699,14 +699,14 @@ void AppGUIhandleTrtZone( void)
 //                    yOff = APP_GUI_AREA_ZOOM_DOTS[body][area][i].imgHPzoomOff_Y;
 //                    imgOn = APP_GUI_AREA_ZOOM_DOTS[body][area][i].IDimgHPzoomOn[HPindex];
 //                    imgOff = APP_GUI_AREA_ZOOM_DOTS[body][area][i].IDimgHPzoomOff[HPindex];
-//                }
+                    wdgWpr.dotZoneAssignHp((EAppGUIwidgetIDlist)widID, (EAppGUI_HPsIDs)HPindex);
+                }
 
 				
                 /* Finalmente configuramos el widget */
 //                GUIsetSwitchPosition( widID, xOn, yOn, xOff, yOff, xOn, yOn, xOff, yOff, areaTS);
 //                GUIsetSwitchImg( widID, imgOn, imgOff, imgOn, imgOff);
 
-                wdgWpr.dotZoneAssignHp((EAppGUIwidgetIDlist)i, (EAppGUI_HPsIDs)HPindex);
             }
         }
     }
