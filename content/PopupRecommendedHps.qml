@@ -1,7 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import DefineUIProject 1.0
-import define.enums 1.0
+//import define.enums 1.0
 
 Item {
     id: item1
@@ -18,8 +18,8 @@ Item {
 
     Image {
         id: watermarkCurvedImg
-        x: 357
-        y: 214
+        x: 356
+        y: 213
         source: "images/c285_PopUpMarcaaguaCurved.png"
         fillMode: Image.PreserveAspectFit
     }
@@ -58,7 +58,7 @@ Item {
 
     Image {
         id: watermarkDoubleImg
-        x: 577
+        x: 575
         anchors.top: watermarkCurvedImg.top
         source: "images/c290_PopUpMarcaaguaDouble.png"
         fillMode: Image.PreserveAspectFit
@@ -66,7 +66,7 @@ Item {
 
     Image {
         id: watermarkOvalImg
-        x: 468
+        x: 467
         anchors.top: watermarkCurvedImg.top
         source: "images/c291_PopUpMarcaaguaOval.png"
         fillMode: Image.PreserveAspectFit
@@ -82,7 +82,7 @@ Item {
 
     Image {
         id: watermarkAngledImg
-        y: 477
+        y: 476
         anchors.left: watermarkCurvedImg.left
         source: "images/c293_PopUpMarcaaguaAngled.png"
         fillMode: Image.PreserveAspectFit
