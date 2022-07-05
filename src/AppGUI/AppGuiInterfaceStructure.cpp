@@ -986,7 +986,7 @@ const tAppGUIareaZoomDotsTableFields APP_GUI_AREA_ZOOM_DOTS[APP_GUI_NUM_BODYS][A
 
 tAppGUIPopUpDisplayed APP_GUI_POPUP_DISPLAYED_MAP[APP_GUI_POPUP_DISPLAYED_MAP_NUM] =
 {
-    { PopupInitScrAvisos, false },
+    { PopupInitScrAvisos, false },  // Use only this value for the warning popup in all screens
     { PopUpTime, false },
     { PopUpTstVac, false },
     { PopUpTstVacSmall, false },

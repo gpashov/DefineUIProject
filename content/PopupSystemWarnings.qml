@@ -80,6 +80,8 @@ Item {
         onWarningsPopupDisplayed: (isDisplayed) => { visible = isDisplayed }
     }
 
+    onVisibleChanged: cbkWpr.popupVisibleChanged(AppEnumsNs.PopupInitScrAvisos, visible)
+
     Connections {
         target: wdgWpr
         onWarningActivated: (warningId, isActivated) => {
@@ -98,3 +100,9 @@ Item {
 
 
 
+
+/*##^##
+Designer {
+    D{i:0;autoSize:true;height:480;width:640}
+}
+##^##*/
