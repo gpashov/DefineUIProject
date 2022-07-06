@@ -233,22 +233,18 @@ void CBKbutDataF( void *widget)
 
 void CBKbutWarningOnF ()
 {
-// TODO Check if the popup is hidden
-//    stWidget *popUp;
-
-//    popUp = GUIgetWidget( APP_GUI_AVISOS_POPUP_WIDGET_SCREENS[AppGUIdata.screen]);
-//    if( popUp->enable == 0)
+    if(!AppGUIisWarningPopUpActive())
+    {
         AppGUIhandleWarningPopUp( 1);
+    }
 }
 
 void CBKbutWarningOffF ()
 {
-// TODO Check if the popup is shown
-//    stWidget *popUp;
-
-//    popUp = GUIgetWidget( APP_GUI_AVISOS_POPUP_WIDGET_SCREENS[AppGUIdata.screen]);
-//    if ( popUp->enable != 0)
+    if(AppGUIisWarningPopUpActive())
+    {
         AppGUIhandleWarningPopUp( 0);
+    }
 }
 
 void CBKbutCtrlPnlPlayF( void *widget)

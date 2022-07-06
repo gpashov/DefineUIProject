@@ -2735,12 +2735,18 @@ uint8 AppGUIisErrorPopUpActive( uint8 HPindex)
 
 uint8 AppGUIisWarningPopUpActive (void)		//Comprueba si el PopUp de avisos está activo
 {
-//	stWidget *popUp;
-	
-//	popUp = GUIgetWidget( PopupTrtScrAvisos);
-//	if( popUp->enable != 0){ return 1;}
-	
-    return 0;
+    // Look for the popup visible state
+    for ( int i = 0; i < APP_GUI_POPUP_DISPLAYED_MAP_NUM; i++ )
+    {
+        // Warning popup found
+        if( PopupInitScrAvisos == APP_GUI_POPUP_DISPLAYED_MAP[i].id )
+        {
+            // Return the popup state
+            return APP_GUI_POPUP_DISPLAYED_MAP[i].displayed;
+        }
+    }
+
+    return 0;   // This line should be unreachable
 }
 
 void AppGUIpanelCtrlColourBlink(void)
