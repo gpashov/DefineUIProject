@@ -69,7 +69,7 @@ void CallbackWrapper::butCalc()
 
 void CallbackWrapper::butData()
 {
-
+    CBKbutDataF(&argWidget);
 }
 
 void CallbackWrapper::butWarningOn()
@@ -95,14 +95,30 @@ void CallbackWrapper::butCtrlPnlPlay(EAppGUI_HPsIDs hpId)
     CBKbutCtrlPnlPlayF(&argWidget);
 }
 
-void CallbackWrapper::swCtrlPnlTstVacOn()
+void CallbackWrapper::swCtrlPnlTstVacOn(EAppGUI_HPsIDs hpId)
 {
+    switch(hpId) {
+    case APP_GUI_HP1_ID:argWidget.id = SwCtrlPnlTstVacHP1; break;
+    case APP_GUI_HP2_ID:argWidget.id = SwCtrlPnlTstVacHP2; break;
+    case APP_GUI_HP3_ID:argWidget.id = SwCtrlPnlTstVacHP3; break;
+    case APP_GUI_HP4_ID:argWidget.id = SwCtrlPnlTstVacHP4; break;
+    default: argWidget.id = APP_GUI_NUM_WIDGETS; break;
+    }
 
+    CBKswCtrlPnlTstVacOnF(&argWidget);
 }
 
-void CallbackWrapper::swCtrlPnlTstVacOff()
+void CallbackWrapper::swCtrlPnlTstVacOff(EAppGUI_HPsIDs hpId)
 {
+    switch(hpId) {
+    case APP_GUI_HP1_ID:argWidget.id = SwCtrlPnlTstVacHP1; break;
+    case APP_GUI_HP2_ID:argWidget.id = SwCtrlPnlTstVacHP2; break;
+    case APP_GUI_HP3_ID:argWidget.id = SwCtrlPnlTstVacHP3; break;
+    case APP_GUI_HP4_ID:argWidget.id = SwCtrlPnlTstVacHP4; break;
+    default: argWidget.id = APP_GUI_NUM_WIDGETS; break;
+    }
 
+    CBKswCtrlPnlTstVacOffF(&argWidget);
 }
 
 void CallbackWrapper::butSelectTime(EAppGUI_HPsIDs hpId)

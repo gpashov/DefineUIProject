@@ -194,7 +194,6 @@ Rectangle {
         x: 264
         y: 289
         visible: false
-        onVisibleChanged: mainMenu.warningsButtonState = visible ? true : false
     }
 }
 

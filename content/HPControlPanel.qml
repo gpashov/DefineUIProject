@@ -18,6 +18,25 @@ Item {
         id: vacuumButton
         x: 146
         y: 45
+        customSwitch.onOnAction: {
+            switch (parent.state) {
+            case "hp1State": cbkWpr.swCtrlPnlTstVacOn(AppEnumsNs.APP_GUI_HP1_ID); break;
+            case "hp2State": cbkWpr.swCtrlPnlTstVacOn(AppEnumsNs.APP_GUI_HP2_ID); break;
+            case "hp3State": cbkWpr.swCtrlPnlTstVacOn(AppEnumsNs.APP_GUI_HP3_ID); break;
+            case "hp4State": cbkWpr.swCtrlPnlTstVacOn(AppEnumsNs.APP_GUI_HP4_ID); break;
+            default: break;
+            }
+        }
+
+        customSwitch.onOffAction: {
+            switch (parent.state) {
+            case "hp1State": cbkWpr.swCtrlPnlTstVacOff(AppEnumsNs.APP_GUI_HP1_ID); break;
+            case "hp2State": cbkWpr.swCtrlPnlTstVacOff(AppEnumsNs.APP_GUI_HP2_ID); break;
+            case "hp3State": cbkWpr.swCtrlPnlTstVacOff(AppEnumsNs.APP_GUI_HP3_ID); break;
+            case "hp4State": cbkWpr.swCtrlPnlTstVacOff(AppEnumsNs.APP_GUI_HP4_ID); break;
+            default: break;
+            }
+        }
     }
 
     HpPlayButton {

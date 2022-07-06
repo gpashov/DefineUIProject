@@ -8,6 +8,7 @@ Item {
     property int vacuumLevel: 0
     property int buttonState: AppEnumsNs.App_GUI_Max_Vac_but_states
     property bool positionIsRight: false  // false - left, true - right
+    property alias customSwitch: customSwitch
 
     property var prsImagesLeft: [
         // Vacuum level 1
@@ -109,3 +110,9 @@ Item {
 
 
 
+
+/*##^##
+Designer {
+    D{i:0;autoSize:true;height:480;width:640}
+}
+##^##*/

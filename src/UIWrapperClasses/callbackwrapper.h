@@ -21,8 +21,8 @@ public:
     Q_INVOKABLE void butWarningOn ();
     Q_INVOKABLE void butWarningOff ();
     Q_INVOKABLE void butCtrlPnlPlay(EAppGUI_HPsIDs hpId);
-    Q_INVOKABLE void swCtrlPnlTstVacOn();
-    Q_INVOKABLE void swCtrlPnlTstVacOff();
+    Q_INVOKABLE void swCtrlPnlTstVacOn(EAppGUI_HPsIDs hpId);
+    Q_INVOKABLE void swCtrlPnlTstVacOff(EAppGUI_HPsIDs hpId);
     Q_INVOKABLE void butSelectTime(EAppGUI_HPsIDs hpId);
     Q_INVOKABLE void butTemperatureVwr (EAppGUI_HPsIDs hpId);
     Q_INVOKABLE void butTRTmodeAutoManual ();

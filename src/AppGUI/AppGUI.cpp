@@ -57,15 +57,6 @@ void AppGUIsetHPstatusFlags( cAppGUIstatusFlagshdlr RFID, cAppGUIstatusFlagshdlr
                              cAppGUIstatusFlagshdlr vacum, cAppGUIstatusFlagshdlr cooling,
                              uint8 HPindex);
 
-uint8 AppGUIisPopUpActive( void);
-uint8 AppGUIisRecommPopUpActive (void);
-uint8 AppGUIisTimePopUpActive (void);
-uint8 AppGUIisVacPopUpActive (void);
-uint8 AppGUIisVacSmallPopUpActive (void);
-uint8 AppGUIisCleanUpPopUpActive( uint8 HPindex);
-uint8 AppGUIisErrorPopUpActive( uint8 HPindex);
-uint8 AppGUIisWarningPopUpActive (void);
-
 void AppGUIpanelCtrlColourBlink(void);
 float AppGUIsecondsToClock( uint32 seconds);
 void AppGUIupdateWarningFlags(void);
