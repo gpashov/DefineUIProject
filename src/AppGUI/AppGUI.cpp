@@ -297,24 +297,14 @@ void AppGUIhandleCtrlPanel( uint8 show, uint8 HPindex)
             show = 0;
         }
     }
-	
+
     /* Gestion widgets panel de control cuando desplegado */
-    for( i = 0; i < APP_GUI_TRT_SCR_CTRL_PNL_WID_WHEN_SHOW_NUM; i++)
-    {
-//        GUIsetWidgetVisibility( APP_GUI_TRT_SCR_CTRL_PNL_WID_WHEN_SHOW[HPindex][i], ( show != 0));
-// TODO        GUIsetWidgetEnable( APP_GUI_TRT_SCR_CTRL_PNL_WID_WHEN_SHOW[HPindex][i], ( show != 0) && !isPopUp);
-    }
-		
-    /* Gestion widgets panel de control cuando oculto */
-    for( i = 0; i < APP_GUI_TRT_SCR_CTRL_PNL_WID_WHEN_HIDE_NUM; i++)
-    {
-//        GUIsetWidgetVisibility( APP_GUI_TRT_SCR_CTRL_PNL_WID_WHEN_HIDE[HPindex][i], ( show == 0));
-// TODO        GUIsetWidgetEnable( APP_GUI_TRT_SCR_CTRL_PNL_WID_WHEN_HIDE[HPindex][i], ( show == 0) && !isPopUp);
-    }
+    wdgWpr.GUIshowControlPanel((EAppGUI_HPsIDs)HPindex, show);
+    wdgWpr.GUIenableControlPanels((show != 0) && !isPopUp);
 	
     if (HPcryoGetFromSlot( (cPRFslot)APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
     {
-// TODO        if (AppGUIisHPaDoubleDummy( HP, PRF)){	GUIsetWidgetEnable( butShowControlPanelHP1 + HPindex, 0);}
+        if (AppGUIisHPaDoubleDummy( HP, PRF)){	wdgWpr.GUIsetWidgetEnable( ButShowControlPanelHP1 + HPindex, 0);}
     }
 	
     /* Si toca mostrar gestionamos según el estado de diversas variables, si toca ocultar ya esta todo
@@ -1110,7 +1100,7 @@ void AppGUIhandleWarningPopUp( uint8 show)
     }
     else
     {
-        wdgWpr.GUIdisableWarningsPopUp();
+        wdgWpr.GUIdeactivateWarningsPopUp();
 //        /* Para bloquear el boton de idiomas*/
 //        AppGUIhandleMainMenu(AppGUIdata.mainMenuHdlr.isUp, AppGUIdata.screen);
     }

@@ -41,7 +41,7 @@ public:
     void GUIsetHpControlPanelImgButton(uint32 id,EAppGUIimageIDlist idImg);
     void GUISetTreatmentTimerBackground(EAppGUI_HPsIDs hpIndex, bool isSelectable);
     void GUIactiveWarningsPopUp();
-    void GUIdisableWarningsPopUp();
+    void GUIdeactivateWarningsPopUp();
     void GUIWarningIconActivate(EAppGUImachineWarnings warningId, bool isActive);
     void GUIUpdateVacuumButton(EAppGUI_HPsIDs HPindex, EAppGUIVacButStates butt_states, int vacuumLevel);
     void GUIUpdatePlayButton(EAppGUI_HPsIDs HPindex, EAppGUIPlayButStates butt_states);
@@ -49,6 +49,8 @@ public:
     void GUIactivePopUp(EAppGUIwidgetIDlist popupWidgetId);
     void GUIdisablePopUp(EAppGUIwidgetIDlist popupWidgetId);
     void GUIsetTimePopUp(EAppGUI_HPsIDs HPindex, EAppGUITimePopUpState popupState);
+    void GUIshowControlPanel(EAppGUI_HPsIDs HPindex, bool show);
+    void GUIenableControlPanels(bool isEnabled);
 
 signals:
     void changeScreenSignal(AppEnumsNs::EAppGUIscreen screenId);
@@ -64,6 +66,7 @@ signals:
     void infoSwitchEnabled(bool enable);
     void returnButtonEnabled(bool enable);
     void hpImageButtonEnabled(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool enable);
+    void controlPanelShowButtonEnabled(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool isEnabled);
     void controlPanelHideButtonEnabled(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool isEnabled);
     void controlPanelVacuumButtonEnabled(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool isEnabled);
     void controlPanelPlayButtonEnabled(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool isEnabled);
@@ -97,6 +100,8 @@ signals:
     void dotZoneSelected(AppEnumsNs::EAppGUIwidgetIDlist dot, bool isSelected);
 
     // Control panels widgets
+    void hpControlPanelShown(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool isShown);
+    void hpControlPanelsEnabled(bool isEnabled);
     void treatmentTimerSet(AppEnumsNs::EAppGUI_HPsIDs hpIndex, QString newTime);
     void treatmentTimerBackgroundSet(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool isSelectable);
     void temperatureButtonEnabled(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool isEnabled);

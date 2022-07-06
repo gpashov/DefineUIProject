@@ -687,50 +687,50 @@ void CBKbutModelImageF( void *widget)
 
 void CBKbutHideCtrlPnlF( void *widget)
 {
-//	uint8 HPindex;
+    uint8 HPindex;
 	
-//	/* Casteamos al tipo widget */
-//	stWidget *w = ( stWidget *)widget;
+    /* Casteamos al tipo widget */
+    stWidget *w = ( stWidget *)widget;
 	
-//	/* Obtenemos el indice del HP en función del widget */
-//	switch( w->id)
-//	{
-//		case ButHideControlPanelHP1: HPindex = 0; break;
-//		case ButHideControlPanelHP2: HPindex = 1; break;
-//		case ButHideControlPanelHP3: HPindex = 2; break;
-//		case ButHideControlPanelHP4: HPindex = 3; break;
-//		default: return;
-//	}
+    /* Obtenemos el indice del HP en función del widget */
+    switch( w->id)
+    {
+        case ButHideControlPanelHP1: HPindex = 0; break;
+        case ButHideControlPanelHP2: HPindex = 1; break;
+        case ButHideControlPanelHP3: HPindex = 2; break;
+        case ButHideControlPanelHP4: HPindex = 3; break;
+        default: return;
+    }
 	
-//	/* Indicamos que el panel de control se esta ocultando */
-//	AppGUIdata.slot[HPindex].isCtrlPnlShow = 0;
+    /* Indicamos que el panel de control se esta ocultando */
+    AppGUIdata.slot[HPindex].isCtrlPnlShow = 0;
 			
-//	/* Ocultamos el panel de control */
-//	AppGUIhandleCtrlPanel( 0, HPindex);
+    /* Ocultamos el panel de control */
+    AppGUIhandleCtrlPanel( 0, HPindex);
 }
 
 void CBKbutShowCtrlPnlF( void *widget)
 {
-//	uint8 HPindex;
+    uint8 HPindex;
 	
-//	/* Casteamos al tipo widget */
-//	stWidget *w = ( stWidget *)widget;
+    /* Casteamos al tipo widget */
+    stWidget *w = ( stWidget *)widget;
 	
-//	/* Obtenemos el indice del HP en función del widget */
-//	switch( w->id)
-//	{
-//		case butShowControlPanelHP1: HPindex = 0; break;
-//		case butShowControlPanelHP2: HPindex = 1; break;
-//		case butShowControlPanelHP3: HPindex = 2; break;
-//		case butShowControlPanelHP4: HPindex = 3; break;
-//		default: return;
-//	}
+    /* Obtenemos el indice del HP en función del widget */
+    switch( w->id)
+    {
+        case ButShowControlPanelHP1: HPindex = 0; break;
+        case ButShowControlPanelHP2: HPindex = 1; break;
+        case ButShowControlPanelHP3: HPindex = 2; break;
+        case ButShowControlPanelHP4: HPindex = 3; break;
+        default: return;
+    }
 	
-//	/* Indicamos que el panel de control se esta mostrando */
-//	AppGUIdata.slot[HPindex].isCtrlPnlShow = 1;
+    /* Indicamos que el panel de control se esta mostrando */
+    AppGUIdata.slot[HPindex].isCtrlPnlShow = 1;
 	
-//	/* Mostramos el panel de control */
-//	AppGUIhandleCtrlPanel( 1, HPindex);
+    /* Mostramos el panel de control */
+    AppGUIhandleCtrlPanel( 1, HPindex);
 }
 
 void CBKbutFullBodyAreaF( void *widget)

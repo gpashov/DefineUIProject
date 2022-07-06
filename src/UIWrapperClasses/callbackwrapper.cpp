@@ -175,14 +175,30 @@ void CallbackWrapper::butModelImage(EAppGUI_HPsIDs hpId)
     CBKbutModelImageF(&argWidget);
 }
 
-void CallbackWrapper::butHideCtrlPnl()
+void CallbackWrapper::butHideCtrlPnl(EAppGUI_HPsIDs hpId)
 {
+    switch(hpId) {
+    case APP_GUI_HP1_ID:argWidget.id = ButHideControlPanelHP1; break;
+    case APP_GUI_HP2_ID:argWidget.id = ButHideControlPanelHP2; break;
+    case APP_GUI_HP3_ID:argWidget.id = ButHideControlPanelHP3; break;
+    case APP_GUI_HP4_ID:argWidget.id = ButHideControlPanelHP4; break;
+    default: argWidget.id = APP_GUI_NUM_WIDGETS; break;
+    }
 
+    CBKbutHideCtrlPnlF(&argWidget);
 }
 
-void CallbackWrapper::butShowCtrlPnl()
+void CallbackWrapper::butShowCtrlPnl(EAppGUI_HPsIDs hpId)
 {
+    switch(hpId) {
+    case APP_GUI_HP1_ID:argWidget.id = ButShowControlPanelHP1; break;
+    case APP_GUI_HP2_ID:argWidget.id = ButShowControlPanelHP2; break;
+    case APP_GUI_HP3_ID:argWidget.id = ButShowControlPanelHP3; break;
+    case APP_GUI_HP4_ID:argWidget.id = ButShowControlPanelHP4; break;
+    default: argWidget.id = APP_GUI_NUM_WIDGETS; break;
+    }
 
+    CBKbutShowCtrlPnlF(&argWidget);
 }
 
 void CallbackWrapper::butFullBodyArea(EAppGUIfullBodyAreas bodyArea)

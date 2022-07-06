@@ -43,20 +43,7 @@ Item {
             id: hidePanelHp1Button
             anchors.fill: parent
             opacity: 0
-            onPressed: {
-                controlPanelHp1.visible = false
-                hidePanelButtonHp1Img.visible = false
-                showPanelButtonHp1Img.visible = true
-            }
-        }
-
-        Connections {
-            target: wdgWpr
-            onControlPanelHideButtonEnabled: (hpIndex, isEnabled) => {
-                                                 if (hpIndex === AppEnumsNs.APP_GUI_HP1_ID) {
-                                                     hidePanelHp1Button.enabled = isEnabled
-                                                 }
-                                             }
+            onReleased: cbkWpr.butHideCtrlPnl(AppEnumsNs.APP_GUI_HP1_ID)
         }
     }
 
@@ -72,11 +59,7 @@ Item {
             id: showPanelHp1Button
             anchors.fill: parent
             opacity: 0
-            onPressed: {
-                controlPanelHp1.visible = true
-                hidePanelButtonHp1Img.visible = true
-                showPanelButtonHp1Img.visible = false
-            }
+            onReleased: cbkWpr.butShowCtrlPnl(AppEnumsNs.APP_GUI_HP1_ID)
         }
     }
 
@@ -91,20 +74,7 @@ Item {
             id: hidePanelHp2Button
             anchors.fill: parent
             opacity: 0
-            onPressed: {
-                controlPanelHp2.visible = false
-                hidePanelButtonHp2Img.visible = false
-                showPanelButtonHp2Img.visible = true
-            }
-        }
-
-        Connections {
-            target: wdgWpr
-            onControlPanelHideButtonEnabled: (hpIndex, isEnabled) => {
-                                                 if (hpIndex === AppEnumsNs.APP_GUI_HP2_ID) {
-                                                     hidePanelHp2Button.enabled = isEnabled
-                                                 }
-                                             }
+            onReleased: cbkWpr.butHideCtrlPnl(AppEnumsNs.APP_GUI_HP2_ID)
         }
     }
 
@@ -120,11 +90,7 @@ Item {
             id: showPanelHp2Button
             anchors.fill: parent
             opacity: 0
-            onPressed: {
-                controlPanelHp2.visible = true
-                hidePanelButtonHp2Img.visible = true
-                showPanelButtonHp2Img.visible = false
-            }
+            onReleased: cbkWpr.butShowCtrlPnl(AppEnumsNs.APP_GUI_HP2_ID)
         }
     }
 
@@ -139,20 +105,7 @@ Item {
             id: hidePanelHp3Button
             anchors.fill: parent
             opacity: 0
-            onPressed: {
-                controlPanelHp3.visible = false
-                hidePanelButtonHp3Img.visible = false
-                showPanelButtonHp3Img.visible = true
-            }
-        }
-
-        Connections {
-            target: wdgWpr
-            onControlPanelHideButtonEnabled: (hpIndex, isEnabled) => {
-                                                 if (hpIndex === AppEnumsNs.APP_GUI_HP3_ID) {
-                                                     hidePanelHp3Button.enabled = isEnabled
-                                                 }
-                                             }
+            onReleased: cbkWpr.butHideCtrlPnl(AppEnumsNs.APP_GUI_HP3_ID)
         }
     }
 
@@ -169,11 +122,7 @@ Item {
             id: showPanelHp3Button
             anchors.fill: parent
             opacity: 0
-            onPressed: {
-                controlPanelHp3.visible = true
-                hidePanelButtonHp3Img.visible = true
-                showPanelButtonHp3Img.visible = false
-            }
+            onReleased: cbkWpr.butShowCtrlPnl(AppEnumsNs.APP_GUI_HP3_ID)
         }
     }
 
@@ -188,20 +137,7 @@ Item {
             id: hidePanelHp4Button
             anchors.fill: parent
             opacity: 0
-            onPressed: {
-                controlPanelHp4.visible = false
-                hidePanelButtonHp4Img.visible = false
-                showPanelButtonHp4Img.visible = true
-            }
-        }
-
-        Connections {
-            target: wdgWpr
-            onControlPanelHideButtonEnabled: (hpIndex, isEnabled) => {
-                                                 if (hpIndex === AppEnumsNs.APP_GUI_HP4_ID) {
-                                                     hidePanelHp4Button.enabled = isEnabled
-                                                 }
-                                             }
+            onReleased: cbkWpr.butHideCtrlPnl(AppEnumsNs.APP_GUI_HP4_ID)
         }
     }
 
@@ -217,12 +153,47 @@ Item {
             id: showPanelHp4Button
             anchors.fill: parent
             opacity: 0
-            onPressed: {
-                controlPanelHp4.visible = true
-                hidePanelButtonHp4Img.visible = true
-                showPanelButtonHp4Img.visible = false
-            }
+            onReleased: cbkWpr.butShowCtrlPnl(AppEnumsNs.APP_GUI_HP4_ID)
         }
+    }
+
+    Connections {
+        target: wdgWpr
+        onControlPanelHideButtonEnabled: (hpIndex, isEnabled) => {
+                                             switch (hpIndex) {
+                                                 case AppEnumsNs.APP_GUI_HP1_ID:
+                                                     hidePanelHp1Button.enabled = isEnabled
+                                                     break;
+                                                 case AppEnumsNs.APP_GUI_HP2_ID:
+                                                     hidePanelHp2Button.enabled = isEnabled
+                                                     break;
+                                                 case AppEnumsNs.APP_GUI_HP3_ID:
+                                                     hidePanelHp3Button.enabled = isEnabled
+                                                     break;
+                                                 case AppEnumsNs.APP_GUI_HP4_ID:
+                                                     hidePanelHp4Button.enabled = isEnabled
+                                                     break;
+                                                 default: break;
+                                             }
+                                         }
+
+        onControlPanelShowButtonEnabled: (hpIndex, isEnabled) => {
+                                             switch (hpIndex) {
+                                                 case AppEnumsNs.APP_GUI_HP1_ID:
+                                                     showPanelHp1Button.enabled = isEnabled
+                                                     break;
+                                                 case AppEnumsNs.APP_GUI_HP2_ID:
+                                                     showPanelHp2Button.enabled = isEnabled
+                                                     break;
+                                                 case AppEnumsNs.APP_GUI_HP3_ID:
+                                                     showPanelHp3Button.enabled = isEnabled
+                                                     break;
+                                                 case AppEnumsNs.APP_GUI_HP4_ID:
+                                                     showPanelHp4Button.enabled = isEnabled
+                                                     break;
+                                                 default: break;
+                                             }
+                                         }
     }
 
     HPControlPanel {
@@ -251,6 +222,63 @@ Item {
         anchors.right: parent.right
         anchors.bottom: parent.bottom
         state: "hp4State"
+    }
+
+    Connections {
+        target: wdgWpr
+        onHpControlPanelShown: (hpIndex, isShown) => {
+                                   if (isShown) {
+                                       switch (hpIndex) {
+                                           case AppEnumsNs.APP_GUI_HP1_ID:
+                                               controlPanelHp1.visible = true
+                                               hidePanelButtonHp1Img.visible = true
+                                               showPanelButtonHp1Img.visible = false
+                                               break;
+                                           case AppEnumsNs.APP_GUI_HP2_ID:
+                                               controlPanelHp2.visible = true
+                                               hidePanelButtonHp2Img.visible = true
+                                               showPanelButtonHp2Img.visible = false
+                                               break;
+                                           case AppEnumsNs.APP_GUI_HP3_ID:
+                                               controlPanelHp3.visible = true
+                                               hidePanelButtonHp3Img.visible = true
+                                               showPanelButtonHp3Img.visible = false
+                                               break;
+                                           case AppEnumsNs.APP_GUI_HP4_ID:
+                                               controlPanelHp4.visible = true
+                                               hidePanelButtonHp4Img.visible = true
+                                               showPanelButtonHp4Img.visible = false
+                                               break;
+                                           default: break;
+                                       }
+                                   }
+                                   else
+                                   {
+                                       switch (hpIndex) {
+                                           case AppEnumsNs.APP_GUI_HP1_ID:
+                                               controlPanelHp1.visible = false
+                                               hidePanelButtonHp1Img.visible = false
+                                               showPanelButtonHp1Img.visible = true
+                                               break;
+                                           case AppEnumsNs.APP_GUI_HP2_ID:
+                                               controlPanelHp2.visible = false
+                                               hidePanelButtonHp2Img.visible = false
+                                               showPanelButtonHp2Img.visible = true
+                                               break;
+                                           case AppEnumsNs.APP_GUI_HP3_ID:
+                                               controlPanelHp3.visible = false
+                                               hidePanelButtonHp3Img.visible = false
+                                               showPanelButtonHp3Img.visible = true
+                                               break;
+                                           case AppEnumsNs.APP_GUI_HP4_ID:
+                                               controlPanelHp4.visible = false
+                                               hidePanelButtonHp4Img.visible = false
+                                               showPanelButtonHp4Img.visible = true
+                                               break;
+                                           default: break;
+                                       }
+                                   }
+                               }
     }
 
     CustomSwitch {
@@ -342,6 +370,8 @@ Item {
 
 
 }
+
+
 
 
 

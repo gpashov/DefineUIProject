@@ -29,8 +29,8 @@ public:
     Q_INVOKABLE void butInfoZoneSelectedOn ();
     Q_INVOKABLE void butInfoZoneSelectedOff ();
     Q_INVOKABLE void butModelImage(EAppGUI_HPsIDs hpId);
-    Q_INVOKABLE void butHideCtrlPnl();
-    Q_INVOKABLE void butShowCtrlPnl();
+    Q_INVOKABLE void butHideCtrlPnl(EAppGUI_HPsIDs hpId);
+    Q_INVOKABLE void butShowCtrlPnl(EAppGUI_HPsIDs hpId);
     Q_INVOKABLE void butFullBodyArea(EAppGUIfullBodyAreas bodyArea);
     Q_INVOKABLE void swDotZoneOn(EAppGUIwidgetIDlist widgetId);
     Q_INVOKABLE void swDotZoneOff(EAppGUIwidgetIDlist widgetId);

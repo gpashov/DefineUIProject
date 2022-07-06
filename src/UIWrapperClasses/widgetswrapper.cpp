@@ -902,10 +902,10 @@ uint16 WidgetsWrapper::GUIsetWidgetEnable(uint32 id, uint8 enable)
     case ButHideControlPanelHP2: emit controlPanelHideButtonEnabled(APP_GUI_HP2_ID, enable); break;
     case ButHideControlPanelHP3: emit controlPanelHideButtonEnabled(APP_GUI_HP3_ID, enable); break;
     case ButHideControlPanelHP4: emit controlPanelHideButtonEnabled(APP_GUI_HP4_ID, enable); break;
-//    case butShowControlPanelHP1,
-//    case butShowControlPanelHP2,
-//    case butShowControlPanelHP3,
-//    case butShowControlPanelHP4,
+    case ButShowControlPanelHP1: emit controlPanelShowButtonEnabled(APP_GUI_HP1_ID, enable); break;
+    case ButShowControlPanelHP2: emit controlPanelShowButtonEnabled(APP_GUI_HP2_ID, enable); break;
+    case ButShowControlPanelHP3: emit controlPanelShowButtonEnabled(APP_GUI_HP3_ID, enable); break;
+    case ButShowControlPanelHP4: emit controlPanelShowButtonEnabled(APP_GUI_HP4_ID, enable); break;
 
 //    //Botones de selección de Full body
 //    case ButFullBodyTorso,
@@ -1424,7 +1424,7 @@ void WidgetsWrapper::GUIactiveWarningsPopUp()
     emit warningsPopupDisplayed(true);
 }
 
-void WidgetsWrapper::GUIdisableWarningsPopUp()
+void WidgetsWrapper::GUIdeactivateWarningsPopUp()
 {
     emit warningsPopupDisplayed(false);
 }
@@ -1472,6 +1472,16 @@ void WidgetsWrapper::GUIdisablePopUp(EAppGUIwidgetIDlist popupWidgetId)
 void WidgetsWrapper::GUIsetTimePopUp(EAppGUI_HPsIDs HPindex, EAppGUITimePopUpState popupState)
 {
     emit timePopUpSet(HPindex, popupState);
+}
+
+void WidgetsWrapper::GUIshowControlPanel(EAppGUI_HPsIDs HPindex, bool show)
+{
+    emit hpControlPanelShown(HPindex, show);
+}
+
+void WidgetsWrapper::GUIenableControlPanels(bool isEnabled)
+{
+    emit hpControlPanelsEnabled(isEnabled);
 }
 
 QString WidgetsWrapper::calcNumber()
