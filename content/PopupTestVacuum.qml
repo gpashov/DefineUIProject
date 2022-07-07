@@ -59,49 +59,73 @@ Item {
     TwoStateButton {
         id: testVacuumLvl1Button
         x: 463
-        y: 489
+        y: 487
         imageSourcePressed: "images/c177_PopUpBotonTestPress.png"
         imageSourceReleased: "images/c176_PopUpBotonTestRls.png"
+        button.onReleased: cbkWpr.butPopUpTstVacManual(AppEnumsNs.ButPopUpTstVacManualLowLvl)
     }
 
     TwoStateButton {
         id: testVacuumLvl2Button
         x: testVacuumLvl1Button.x
-        y: 422
+        y: 420
         imageSourcePressed: "images/c177_PopUpBotonTestPress.png"
         imageSourceReleased: "images/c176_PopUpBotonTestRls.png"
+        button.onReleased: cbkWpr.butPopUpTstVacManual(AppEnumsNs.ButPopUpTstVacManualMidLvl)
     }
 
     TwoStateButton {
         id: testVacuumLvl3Button
         x: testVacuumLvl1Button.x
-        y: 356
+        y: 353
         imageSourcePressed: "images/c177_PopUpBotonTestPress.png"
         imageSourceReleased: "images/c176_PopUpBotonTestRls.png"
+        button.onReleased: cbkWpr.butPopUpTstVacManual(AppEnumsNs.ButPopUpTstVacManualHighLvl)
     }
 
-    TwoStateButton {
+    CustomSwitch {
         id: testVacuumLvl1Switch
         x: 582
         y: 486
-        imageSourcePressed: "images/c180_PopupBotonActivarPress"
-        imageSourceReleased: "images/c179_PopupBotonActivarRls"
+        offStateImageSource: "images/c179_PopupBotonActivarRls"
+        onStateImageSource: "images/c180_PopupBotonActivarPress"
+        offPressedStateImageSource: "images/c180_PopupBotonActivarPress"
+        onPressedStateImageSource: "images/c179_PopupBotonActivarRls"
+        onOnAction: {
+            cbkWpr.swPopUpTstVacLvlOn(AppEnumsNs.SwPopUpTstVacLowLvl)
+            testVacuumLvl2Switch.state = "offState"
+            testVacuumLvl3Switch.state = "offState"
+        }
     }
 
-    TwoStateButton {
+    CustomSwitch {
         id: testVacuumLvl2Switch
         x: testVacuumLvl1Switch.x
         y: 421
-        imageSourcePressed: "images/c180_PopupBotonActivarPress"
-        imageSourceReleased: "images/c179_PopupBotonActivarRls"
+        offStateImageSource: "images/c179_PopupBotonActivarRls"
+        onStateImageSource: "images/c180_PopupBotonActivarPress"
+        offPressedStateImageSource: "images/c180_PopupBotonActivarPress"
+        onPressedStateImageSource: "images/c179_PopupBotonActivarRls"
+        onOnAction: {
+            cbkWpr.swPopUpTstVacLvlOn(AppEnumsNs.SwPopUpTstVacMidLvl)
+            testVacuumLvl1Switch.state = "offState"
+            testVacuumLvl3Switch.state = "offState"
+        }
     }
 
-    TwoStateButton {
+    CustomSwitch {
         id: testVacuumLvl3Switch
         x: testVacuumLvl1Switch.x
         y: 352
-        imageSourcePressed: "images/c180_PopupBotonActivarPress"
-        imageSourceReleased: "images/c179_PopupBotonActivarRls"
+        offStateImageSource: "images/c179_PopupBotonActivarRls"
+        onStateImageSource: "images/c180_PopupBotonActivarPress"
+        offPressedStateImageSource: "images/c180_PopupBotonActivarPress"
+        onPressedStateImageSource: "images/c179_PopupBotonActivarRls"
+        onOnAction: {
+            cbkWpr.swPopUpTstVacLvlOn(AppEnumsNs.SwPopUpTstVacHighLvl)
+            testVacuumLvl1Switch.state = "offState"
+            testVacuumLvl2Switch.state = "offState"
+        }
     }
 
     PopupHpColorBar {
@@ -112,11 +136,12 @@ Item {
     }
 
     TwoStateButton {
-        id: twoStateButton
+        id: autoButton
         x: 457
         y: 531
         imageSourceReleased: "images/c220_PopUpBotonAuto.png"
         imageSourcePressed: "images/c221_PopUpBotonAutoPress.png"
+        button.onReleased: cbkWpr.butPopUpTstVacAuto()
     }
 
     onVisibleChanged: cbkWpr.popupVisibleChanged(AppEnumsNs.PopUpTstVac, visible)
@@ -124,8 +149,10 @@ Item {
 
 
 
+
+
 /*##^##
 Designer {
-    D{i:0;formeditorZoom:0.5;height:0;width:0}
+    D{i:0;formeditorZoom:1.66}
 }
 ##^##*/

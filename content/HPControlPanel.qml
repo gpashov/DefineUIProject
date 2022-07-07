@@ -37,6 +37,19 @@ Item {
             default: break;
             }
         }
+
+        Connections {
+            target: wdgWpr
+            onVacuumButtonSwitchStateChanged: (HPindex, switchState) => {
+                                                  switch (parent.state) {
+                                                  case "hp1State": vacuumButton.customSwitch.state = switchState ? "onState": "offState"; break;
+                                                  case "hp2State": vacuumButton.customSwitch.state = switchState ? "onState": "offState"; break;
+                                                  case "hp3State": vacuumButton.customSwitch.state = switchState ? "onState": "offState"; break;
+                                                  case "hp4State": vacuumButton.customSwitch.state = switchState ? "onState": "offState"; break;
+                                                  default: break;
+                                                  }
+                                              }
+        }
     }
 
     HpPlayButton {

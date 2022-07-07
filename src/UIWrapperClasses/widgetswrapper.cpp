@@ -136,10 +136,10 @@ void WidgetsWrapper::GUIsetSwitchStatus(uint32 id, uint8 OnOff)
 {
     switch (id) {
     case SwInitScrAvisos: break;
-    case SwCtrlPnlTstVacHP1: break;
-    case SwCtrlPnlTstVacHP2: break;
-    case SwCtrlPnlTstVacHP3: break;
-    case SwCtrlPnlTstVacHP4: break;
+    case SwCtrlPnlTstVacHP1: emit vacuumButtonSwitchStateChanged(APP_GUI_HP1_ID, OnOff); break;
+    case SwCtrlPnlTstVacHP2: emit vacuumButtonSwitchStateChanged(APP_GUI_HP2_ID, OnOff); break;
+    case SwCtrlPnlTstVacHP3: emit vacuumButtonSwitchStateChanged(APP_GUI_HP3_ID, OnOff); break;
+    case SwCtrlPnlTstVacHP4: emit vacuumButtonSwitchStateChanged(APP_GUI_HP4_ID, OnOff); break;
     case SwDotZone0:
     case SwDotZone1:
     case SwDotZone2:

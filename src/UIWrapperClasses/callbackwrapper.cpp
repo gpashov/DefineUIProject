@@ -250,34 +250,39 @@ void CallbackWrapper::butPopUpTimeValue(EAppGUI_HPsIDs hpId, EAppGUIwidgetIDlist
     CBKbutPopUpTimeValueF(&argWidget);
 }
 
-void CallbackWrapper::butPopUpTstVacManual()
+void CallbackWrapper::butPopUpTstVacManual(EAppGUIwidgetIDlist widgetId)
 {
-
+    argWidget.id = widgetId;
+    CBKbutPopUpTstVacManualF(&argWidget);
 }
 
 void CallbackWrapper::butPopUpTstVacAuto()
 {
-
+    CBKbutPopUpTstVacAutoF(&argWidget);
 }
 
-void CallbackWrapper::butPopUpVacSmallLvl()
+void CallbackWrapper::butPopUpVacSmallLvl(EAppGUIwidgetIDlist widgetId)
 {
-
+    argWidget.id = widgetId;
+    CBKbutPopUpVacSmallLvlF(&argWidget);
 }
 
-void CallbackWrapper::swPopUpTstVacLvlOn()
+void CallbackWrapper::swPopUpTstVacLvlOn(EAppGUIwidgetIDlist widgetId)
 {
-
+    argWidget.id = widgetId;
+    CBKswPopUpTstVacLvlOnF(&argWidget);
 }
 
-void CallbackWrapper::swPopUpTstVacLvlOff()
+void CallbackWrapper::swPopUpTstVacLvlOff(EAppGUIwidgetIDlist widgetId)
 {
-
+    argWidget.id = widgetId;
+    CBKswPopUpTstVacLvlOffF(&argWidget);
 }
 
-void CallbackWrapper::butPopUpErrOk()
+void CallbackWrapper::butPopUpErrOk(EAppGUIwidgetIDlist widgetId)
 {
-
+    argWidget.id = widgetId;
+    CBKbutPopUpErrOkF(&argWidget);
 }
 
 void CallbackWrapper::buttonNumCalc(uint8 calcNumber)
@@ -314,7 +319,7 @@ void CallbackWrapper::buttonCECalc()
 
 void CallbackWrapper::butSoftUpdateCfg()
 {
-
+    CBKbutSoftUpdateCfgF(&argWidget);
 }
 
 void CallbackWrapper::butRecargaCoolant()

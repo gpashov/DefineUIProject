@@ -15,7 +15,7 @@
 #include "Perifericos/HPcryo.h"
 //#include "../../Perifericos/Perifericos.h"
 //#include "../../Expansora/Expansora.h"
-//#include "../../Error/gestionError.h"
+#include "Error/gestionError.h"
 //#include "../../App.h"
 #include "AppLOG/AppLOG.h"
 #include "GPRS/AppGPRS.h"
@@ -910,185 +910,168 @@ void CBKbutPopUpTimeValueF( void *widget)
 
 void CBKbutPopUpTstVacManualF( void *widget)
 {
-//	tHPcryoData *HP;
-//	tPRFdata *PRF;
-//	uint8 HPindex = AppGUIdata.tstVacHdlr.HPindex;
+    tHPcryoData *HP;
+    tPRFdata *PRF;
+    uint8 HPindex = AppGUIdata.tstVacHdlr.HPindex;
 	
-//	/* Casteamos al tipo widget */
-//	stWidget *w = ( stWidget *)widget;
+    /* Casteamos al tipo widget */
+    stWidget *w = ( stWidget *)widget;
 	
-//	/* Obtenemos el indice del HP en función del widget */
-//	switch( w->id)
-//	{
-//		case butPopUpTstVacManualLowLvl: AppGUIdata.tstVacHdlr.Tst_vac_but = HP_CRYO_VAC_LVL_0; break;
-//		case butPopUpTstVacManualMidLvl: AppGUIdata.tstVacHdlr.Tst_vac_but = HP_CRYO_VAC_LVL_1; break;
-//		case butPopUpTstVacManualHighLvl: AppGUIdata.tstVacHdlr.Tst_vac_but = HP_CRYO_VAC_LVL_2; break;
-//		default: return;
-//	}
+    /* Obtenemos el indice del HP en función del widget */
+    switch( w->id)
+    {
+        case ButPopUpTstVacManualLowLvl: AppGUIdata.tstVacHdlr.Tst_vac_but = HP_CRYO_VAC_LVL_0; break;
+        case ButPopUpTstVacManualMidLvl: AppGUIdata.tstVacHdlr.Tst_vac_but = HP_CRYO_VAC_LVL_1; break;
+        case ButPopUpTstVacManualHighLvl: AppGUIdata.tstVacHdlr.Tst_vac_but = HP_CRYO_VAC_LVL_2; break;
+        default: return;
+    }
 	
 	
-//	/* Lanzamos test de vacum si esta todo seleccionado correctamente y hay HP */
-//	if( HPcryoGetFromSlot( APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF) &&
-//		AppGUIdata.tstVacHdlr.selVacLvl != APP_GUI_NO_VAC_LVL_SELECTED &&
-//		AppGUIdata.slot[HPindex].selTrtDot != APP_GUI_NO_TRT_DOT_SELECTED &&
-//		AppGUIdata.slot[HPindex].selTrtArea != AppGUIfullBodyNO_AREA)
-//	{
-//		/* Hay manípulo y tiene test configurado */
-//		HPcryoTestVacumStartDflt( HP_CRYO_TEST_VAC_MODE_MANUAL, AppGUIdata.tstVacHdlr.Tst_vac_but, 1, HP, PRF);
-//	}
-//	else
-//	{
-//		/* Posible pitido indicando que no se ha podido iniciar */
-//	}
+    /* Lanzamos test de vacum si esta todo seleccionado correctamente y hay HP */
+    if( HPcryoGetFromSlot( (cPRFslot)APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF) &&
+        AppGUIdata.tstVacHdlr.selVacLvl != APP_GUI_NO_VAC_LVL_SELECTED &&
+        AppGUIdata.slot[HPindex].selTrtDot != APP_GUI_NO_TRT_DOT_SELECTED &&
+        AppGUIdata.slot[HPindex].selTrtArea != AppGUIfullBodyNO_AREA)
+    {
+        /* Hay manípulo y tiene test configurado */
+        HPcryoTestVacumStartDflt( HP_CRYO_TEST_VAC_MODE_MANUAL, (cHPcryoTrtVacLvls)AppGUIdata.tstVacHdlr.Tst_vac_but, 1, HP, PRF);
+    }
+    else
+    {
+        /* Posible pitido indicando que no se ha podido iniciar */
+    }
 	
-//	//Actualizamos el panel de control
-//	for( HPindex=0;HPindex<APP_GUI_MAXNUM_HP;HPindex++)	AppGUIhandleCtrlPanel(AppGUIdata.slot[HPindex].isCtrlPnlShow, HPindex);
+    //Actualizamos el panel de control
+    for( HPindex=0;HPindex<APP_GUI_MAXNUM_HP;HPindex++)	AppGUIhandleCtrlPanel(AppGUIdata.slot[HPindex].isCtrlPnlShow, HPindex);
 }
 
 void CBKbutPopUpTstVacAutoF( void *widget)
 {
-//	tHPcryoData *HP;
-//	tPRFdata *PRF;
-//	uint8 HPindex = AppGUIdata.tstVacHdlr.HPindex;
+    tHPcryoData *HP;
+    tPRFdata *PRF;
+    uint8 HPindex = AppGUIdata.tstVacHdlr.HPindex;
 	
-//	/* Lanzamos test de vacum si esta todo seleccionado correctamente y hay HP */
-//	if( HPcryoGetFromSlot( APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF) &&
-//		AppGUIdata.tstVacHdlr.selVacLvl != APP_GUI_NO_VAC_LVL_SELECTED &&
-//		AppGUIdata.slot[HPindex].selTrtDot != APP_GUI_NO_TRT_DOT_SELECTED &&
-//		AppGUIdata.slot[HPindex].selTrtArea != AppGUIfullBodyNO_AREA)
-//	{
-//		/* Hay manípulo y tiene test configurado */
-//		if (HPcryoIsAutoModeAvaible(HP, PRF))	{HPcryoTestVacumStartDflt( HP_CRYO_TEST_VAC_MODE_AUTO, AppGUIdata.tstVacHdlr.selVacLvl, 1, HP, PRF);}
-//	}
-//	else
-//	{
-//		/* Posible pitido indicando que no se ha podido iniciar */
-//	}
+    /* Lanzamos test de vacum si esta todo seleccionado correctamente y hay HP */
+    if( HPcryoGetFromSlot( (cPRFslot)APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF) &&
+        AppGUIdata.tstVacHdlr.selVacLvl != APP_GUI_NO_VAC_LVL_SELECTED &&
+        AppGUIdata.slot[HPindex].selTrtDot != APP_GUI_NO_TRT_DOT_SELECTED &&
+        AppGUIdata.slot[HPindex].selTrtArea != AppGUIfullBodyNO_AREA)
+    {
+        /* Hay manípulo y tiene test configurado */
+        if (HPcryoIsAutoModeAvaible(HP, PRF))	{HPcryoTestVacumStartDflt( HP_CRYO_TEST_VAC_MODE_AUTO, AppGUIdata.tstVacHdlr.selVacLvl, 1, HP, PRF);}
+    }
+    else
+    {
+        /* Posible pitido indicando que no se ha podido iniciar */
+    }
 }
 
 void CBKbutPopUpVacSmallLvlF( void *widget)
 {
-//	cHPcryoTrtVacLvls vac_level;
-//	//uint8 HPindex;
-//	tHPcryoData *HP;
-//	tPRFdata *PRF;
+    cHPcryoTrtVacLvls vac_level;
+    //uint8 HPindex;
+    tHPcryoData *HP;
+    tPRFdata *PRF;
 	
-//	HPcryoGetFromSlot( APP_GUI_SLOT_DISTRIBUTION[AppGUIdata.tstVacHdlr.HPindex], &HP, &PRF);
+    HPcryoGetFromSlot( (cPRFslot)APP_GUI_SLOT_DISTRIBUTION[AppGUIdata.tstVacHdlr.HPindex], &HP, &PRF);
 	
-//	/* Casteamos al tipo widget */
-//	stWidget *w = ( stWidget *)widget;
+    /* Casteamos al tipo widget */
+    stWidget *w = ( stWidget *)widget;
 	
-//	/* Obtenemos el indice del HP en función del widget */
-//	switch( w->id)
+    /* Obtenemos el indice del HP en función del widget */
+    switch( w->id)
+    {
+        case ButPopUpTstVacSmallLowLvl: vac_level = HP_CRYO_VAC_LVL_0; break;
+        case ButPopUpTstVacSmallMedLvl: vac_level = HP_CRYO_VAC_LVL_1; break;
+        case ButPopUpTstVacSmallHighLvl: vac_level = HP_CRYO_VAC_LVL_2; break;
+        default: return;
+    }
+	
+    AppGUIdata.tstVacHdlr.selVacLvl = vac_level;
+	
+    /* Ajustamos al nuevo nivel de vacum si es un valor válido */
+    if( AppGUIdata.slot[AppGUIdata.tstVacHdlr.HPindex].selVacLvl != APP_GUI_NO_VAC_LVL_SELECTED)
+    {
+        if( HPcryoTrtAdjustVacumDflt( AppGUIdata.tstVacHdlr.selVacLvl, HP, PRF))
+        {
+            AppGUIdata.slot[AppGUIdata.tstVacHdlr.HPindex].selVacLvl = vac_level;
+        }
+    }
+	
+    /* Desactivamos el popUp de test de vacum */
+    AppGUIhandleTstVacSMALLPopUp( 0, AppGUIdata.tstVacHdlr.HPindex);
+    wdgWpr.GUIsetSwitchStatus( APP_GUI_TRT_SCR_BUT_TSTVAC_WIDGETS[AppGUIdata.tstVacHdlr.HPindex], 0);
+	
+//	for( HPindex = 0; HPindex < APP_GUI_MAXNUM_HP; HPindex++)
 //	{
-//		case butPopUpTstVacSmallLowLvl: vac_level = HP_CRYO_VAC_LVL_0; break;
-//		case butPopUpTstVacSmallMedLvl: vac_level = HP_CRYO_VAC_LVL_1; break;
-//		case butPopUpTstVacSmallHighLvl: vac_level = HP_CRYO_VAC_LVL_2; break;
-//		default: return;
-//	}
-	
-//	AppGUIdata.tstVacHdlr.selVacLvl = vac_level;
-	
-//	/* Ajustamos al nuevo nivel de vacum si es un valor válido */
-//	if( AppGUIdata.slot[AppGUIdata.tstVacHdlr.HPindex].selVacLvl != APP_GUI_NO_VAC_LVL_SELECTED)
-//	{
-//		if( HPcryoTrtAdjustVacumDflt( AppGUIdata.tstVacHdlr.selVacLvl, HP, PRF))
+//		if (HPcryoGetFromSlot( APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF)  && (AppGUIdata.slot[HPindex].selTrtArea != APP_GUI_NUM_FULL_BODY_AREAS) && (AppGUIdata.slot[HPindex].selTrtDot != APP_GUI_NO_TRT_DOT_SELECTED))
 //		{
-//			AppGUIdata.slot[AppGUIdata.tstVacHdlr.HPindex].selVacLvl = vac_level;
+//			AppGUIapplyTimeRestriction(HPindex, HP, PRF);
+//			AppGUIdata.slot[HPindex].trtTime = AppGUIcalcTrtTime( HPindex, HPcryoTrtGetTimeSeconds( HP, PRF),
+//																  HPcryoTrtGetTreatmentTotalTimeSeconds( HP, PRF));
 //		}
+//		AppGUIhandleCtrlPanel( 1, HPindex);		//Se usaba cuando se ponian todos los botones en marca de agua al activar un popup
 //	}
-	
-//	/* Desactivamos el popUp de test de vacum */
-//	AppGUIhandleTstVacSMALLPopUp( 0, AppGUIdata.tstVacHdlr.HPindex);
-//	GUIsetSwitchStatus( APP_GUI_TRT_SCR_BUT_TSTVAC_WIDGETS[AppGUIdata.tstVacHdlr.HPindex], 0);
-	
-////	for( HPindex = 0; HPindex < APP_GUI_MAXNUM_HP; HPindex++)
-////	{
-////		if (HPcryoGetFromSlot( APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF)  && (AppGUIdata.slot[HPindex].selTrtArea != APP_GUI_NUM_FULL_BODY_AREAS) && (AppGUIdata.slot[HPindex].selTrtDot != APP_GUI_NO_TRT_DOT_SELECTED))
-////		{
-////			AppGUIapplyTimeRestriction(HPindex, HP, PRF);
-////			AppGUIdata.slot[HPindex].trtTime = AppGUIcalcTrtTime( HPindex, HPcryoTrtGetTimeSeconds( HP, PRF),
-////																  HPcryoTrtGetTreatmentTotalTimeSeconds( HP, PRF));
-////		}
-////		AppGUIhandleCtrlPanel( 1, HPindex);		//Se usaba cuando se ponian todos los botones en marca de agua al activar un popup
-////	}
-//	//Se revisan las zonas de tratamiento ya que también gestiona el botón de info (para que se quite al activar otro popup
-//	AppGUIhandleTrtZone();
+    //Se revisan las zonas de tratamiento ya que también gestiona el botón de info (para que se quite al activar otro popup
+    AppGUIhandleTrtZone();
 }
 
 void CBKswPopUpTstVacLvlOnF( void *widget)
 {
-//	uint8 i;
+    uint8 i;
 		
-//	/* Casteamos al tipo widget */
-//	stWidget *w = ( stWidget *)widget;
+    /* Casteamos al tipo widget */
+    stWidget *w = ( stWidget *)widget;
 	
-//	/* Seleccionamos el nivel de vacum según el id del widget */
-//	i = HP_CRYO_VAC_LVL_0;
-//	while( i < HP_CRYO_VAC_LVL_NUM && APP_GUI_TRT_SCR_POPUP_TST_VAC_SW_LIST[i] != w->id){ i++;}
-//	if( i >= HP_CRYO_VAC_LVL_NUM){ AppGUIdata.tstVacHdlr.selVacLvl = APP_GUI_NO_VAC_LVL_SELECTED;}
-//	else{ AppGUIdata.tstVacHdlr.selVacLvl = i;}
+    /* Seleccionamos el nivel de vacum según el id del widget */
+    i = HP_CRYO_VAC_LVL_0;
+    while( i < HP_CRYO_VAC_LVL_NUM && APP_GUI_TRT_SCR_POPUP_TST_VAC_SW_LIST[i] != w->id){ i++;}
+    if( i >= HP_CRYO_VAC_LVL_NUM){ AppGUIdata.tstVacHdlr.selVacLvl = APP_GUI_NO_VAC_LVL_SELECTED;}
+    else{ AppGUIdata.tstVacHdlr.selVacLvl = (cHPcryoTrtVacLvls)i;}
 	
-//	AppGUIdata.slot[AppGUIdata.tstVacHdlr.HPindex].selVacLvl = AppGUIdata.tstVacHdlr.selVacLvl;
-	
-//	/* Hacemos los switches excluyentes */
-//	for( i = HP_CRYO_VAC_LVL_0; i < HP_CRYO_VAC_LVL_NUM; i++)
-//	{
-//		/* Todos los switches que no sean el que ha llamado a estado OFF */
-//		if( APP_GUI_TRT_SCR_POPUP_TST_VAC_SW_LIST[i] != w->id)
-//		{
-//			GUIsetSwitchStatus( APP_GUI_TRT_SCR_POPUP_TST_VAC_SW_LIST[i], 0);
-//		}
-//	}
+    AppGUIdata.slot[AppGUIdata.tstVacHdlr.HPindex].selVacLvl = AppGUIdata.tstVacHdlr.selVacLvl;
 		
-//	/* Refrescamos el popUp */
-//	AppGUIhandleTstVacPopUp( 1, AppGUIdata.tstVacHdlr.HPindex);
+    /* Refrescamos el popUp */
+    AppGUIhandleTstVacPopUp( 1, AppGUIdata.tstVacHdlr.HPindex);
 }
 
 void CBKswPopUpTstVacLvlOffF( void *widget)
 {
-//	/* Casteamos al tipo widget */
-//	stWidget *w = ( stWidget *)widget;
+    /* Casteamos al tipo widget */
+    stWidget *w = ( stWidget *)widget;
 	
-//	/* Si es el tiempo actualmente seleccionado lo mantenemos seleccionado */
-//	if( APP_GUI_TRT_SCR_POPUP_TST_VAC_SW_LIST[AppGUIdata.tstVacHdlr.selVacLvl] == w->id)
-//	{
-//		GUIsetSwitchStatus( w->id, 1);
-//		//AppGUIdata.tstVacHdlr.selVacLvl = APP_GUI_NO_VAC_LVL_SELECTED;
-//	}
-	
-//	/* Refrescamos el popUp */
-//	AppGUIhandleTstVacPopUp( 1, AppGUIdata.tstVacHdlr.HPindex);
+    /* Refrescamos el popUp */
+    AppGUIhandleTstVacPopUp( 1, AppGUIdata.tstVacHdlr.HPindex);
 }
 
 void CBKbutPopUpErrOkF( void *widget)
 {
-//	uint8 HPindex = 0;
+    uint8 HPindex = 0;
 	
-//	/* Casteamos al tipo widget */
-//	stWidget *w = ( stWidget *)widget;
+    /* Casteamos al tipo widget */
+    stWidget *w = ( stWidget *)widget;
 	
-//	/* En función del widget que sea hacemos clear del error */
-//	if( w->id == butPopUpErrOkUC){ ERR_clear( Maq);}
-//	else
-//	{
-//		switch( w->id)
-//		{
-//			case butPopUpErrOkHP1: HPindex = APP_GUI_HP1_ID; break;
-//			case butPopUpErrOkHP2: HPindex = APP_GUI_HP2_ID; break;
-//			case butPopUpErrOkHP3: HPindex = APP_GUI_HP3_ID; break;
-//			case butPopUpErrOkHP4: HPindex = APP_GUI_HP4_ID; break;
-//		}
+    /* En función del widget que sea hacemos clear del error */
+    if( w->id == ButPopUpErrOkUC){ ERR_clear( Maq);}
+    else
+    {
+        switch( w->id)
+        {
+            case ButPopUpErrOkHP1: HPindex = APP_GUI_HP1_ID; break;
+            case ButPopUpErrOkHP2: HPindex = APP_GUI_HP2_ID; break;
+            case ButPopUpErrOkHP3: HPindex = APP_GUI_HP3_ID; break;
+            case ButPopUpErrOkHP4: HPindex = APP_GUI_HP4_ID; break;
+        }
 	
-//		/* Error clear según la distribución de slots */
-//		ERR_clear( APP_GUI_SLOT_DISTRIBUTION[HPindex]);
-//	}
+        /* Error clear según la distribución de slots */
+        ERR_clear( (perif_to_manage)APP_GUI_SLOT_DISTRIBUTION[HPindex]);
+    }
 	
-//	//Actualizamos el panel de control
-//	for( HPindex=0;HPindex<APP_GUI_MAXNUM_HP;HPindex++)	AppGUIhandleCtrlPanel(AppGUIdata.slot[HPindex].isCtrlPnlShow, HPindex);
+    //Actualizamos el panel de control
+    for( HPindex=0;HPindex<APP_GUI_MAXNUM_HP;HPindex++)	AppGUIhandleCtrlPanel(AppGUIdata.slot[HPindex].isCtrlPnlShow, HPindex);
 	
-//	/* Actualizamos el estado grafico de los popUp de error */
-//	AppGUIhandleErrPopUps();
+    /* Actualizamos el estado grafico de los popUp de error */
+    AppGUIhandleErrPopUps();
 }
 
 void CBKbutNumCalcF( void *widget)
@@ -1369,10 +1352,10 @@ void CBKbutCECalcF( void *widget)
 
 void CBKbutSoftUpdateCfgF ( void *widget)
 {
-//	BUZZ_Configure(1, 100, PATRO_SO_BUT_SW_PULSED );
-//	AppGUIdata.CfgHandler.BOOT_rqst = 1;
-//	BOOT_Enable();
-//	BOOT_Write();
+    BUZZ_Configure(1, 100, PATRO_SO_BUT_SW_PULSED );
+    AppGUIdata.CfgHandler.BOOT_rqst = 1;
+    BOOT_Enable();
+    BOOT_Write();
 }
 
 void CBKbutRecargaCoolantF ( void *widget)

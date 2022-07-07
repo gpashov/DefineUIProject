@@ -19,9 +19,10 @@ Item {
     TwoStateButton {
         id: updateSoftwareButton
         x: 429
-        y: 139
+        y: 119
         imageSourcePressed: "images/c324_ConfgBotondownloadPress.png"
         imageSourceReleased: "images/c323_ConfgBotondownloadRls.png"
+        button.onReleased: cbkWpr.butSoftUpdateCfg()
     }
 
     Text {
@@ -51,7 +52,7 @@ Item {
     TwoStateButton {
         id: refillCoolantButton
         x: 423
-        y: 228
+        y: 215
         imageSourceReleased: "images/c323_2_ConfigBotonRecargaCoolantRls.png"
         imageSourcePressed: "images/c324_2_ConfigBotonRecargaCoolantPress.png"
     }
@@ -119,6 +120,6 @@ Item {
 
 /*##^##
 Designer {
-    D{i:0;height:545;width:581}
+    D{i:0;formeditorZoom:1.66;height:545;width:581}
 }
 ##^##*/

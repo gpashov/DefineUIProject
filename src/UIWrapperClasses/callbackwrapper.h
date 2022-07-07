@@ -39,12 +39,12 @@ public:
     Q_INVOKABLE void butPopUpReturn();
     Q_INVOKABLE void butReuseRFIDlabel ();
     Q_INVOKABLE void butPopUpTimeValue(EAppGUI_HPsIDs hpId, EAppGUIwidgetIDlist buttonId);
-    Q_INVOKABLE void butPopUpTstVacManual();
+    Q_INVOKABLE void butPopUpTstVacManual(EAppGUIwidgetIDlist widgetId);
     Q_INVOKABLE void butPopUpTstVacAuto();
-    Q_INVOKABLE void butPopUpVacSmallLvl();
-    Q_INVOKABLE void swPopUpTstVacLvlOn();
-    Q_INVOKABLE void swPopUpTstVacLvlOff();
-    Q_INVOKABLE void butPopUpErrOk();
+    Q_INVOKABLE void butPopUpVacSmallLvl(EAppGUIwidgetIDlist widgetId);
+    Q_INVOKABLE void swPopUpTstVacLvlOn(EAppGUIwidgetIDlist widgetId);
+    Q_INVOKABLE void swPopUpTstVacLvlOff(EAppGUIwidgetIDlist widgetId);
+    Q_INVOKABLE void butPopUpErrOk(EAppGUIwidgetIDlist widgetId);
     Q_INVOKABLE void buttonNumCalc(uint8 calcNumber);
     Q_INVOKABLE void buttonEnterCalc();
     Q_INVOKABLE void buttonCECalc();

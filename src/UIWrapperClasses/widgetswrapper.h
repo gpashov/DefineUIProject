@@ -115,6 +115,7 @@ signals:
     void hpControlPanelModelTextSet(AppEnumsNs::EAppGUI_HPsIDs hpIndex, AppEnumsNs::EAppGUIimageIDlist idImg);
     void hpControlPanelColorSet(AppEnumsNs::EAppGUI_HPsIDs hpIndex, uint8 colorState);
     void vacuumButtonUpdated(AppEnumsNs::EAppGUI_HPsIDs HPindex, AppEnumsNs::EAppGUIVacButStates butt_state, int vacuumLevel);
+    void vacuumButtonSwitchStateChanged(AppEnumsNs::EAppGUI_HPsIDs HPindex, bool switchState);
     void playButtonUpdated(AppEnumsNs::EAppGUI_HPsIDs HPindex, AppEnumsNs::EAppGUIPlayButStates butt_state);
     void timeButtonUpdated(AppEnumsNs::EAppGUI_HPsIDs HPindex, AppEnumsNs::EAppGUITimeButStates butt_state);
 

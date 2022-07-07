@@ -30,6 +30,7 @@ Item {
         y: 14
         imageSourcePressed: "images/c344_BotonVacuumSmall1Prs.png"
         imageSourceReleased: "images/c343_BotonVacuumSmall1Rls.png"
+        button.onReleased: cbkWpr.butPopUpVacSmallLvl(AppEnumsNs.ButPopUpTstVacSmallLowLvl)
     }
 
     TwoStateButton {
@@ -38,6 +39,7 @@ Item {
         y: 14
         imageSourcePressed: "images/c346_BotonVacuumSmall2Prs.png"
         imageSourceReleased: "images/c346_BotonVacuumSmall2MarcaAgua.png"
+        button.onReleased: cbkWpr.butPopUpVacSmallLvl(AppEnumsNs.ButPopUpTstVacSmallMedLvl)
     }
 
     TwoStateButton {
@@ -46,6 +48,7 @@ Item {
         y: 14
         imageSourcePressed: "images/c348_BotonVacuumSmall3Prs.png"
         imageSourceReleased: "images/c347_BotonVacuumSmall3Rls.png"
+        button.onReleased: cbkWpr.butPopUpVacSmallLvl(AppEnumsNs.ButPopUpTstVacSmallHighLvl)
     }
 
     states: [

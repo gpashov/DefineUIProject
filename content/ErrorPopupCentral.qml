@@ -1,5 +1,6 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
+import define.enums 1.0
 
 Item {
     id: item1
@@ -40,6 +41,7 @@ Item {
         y: 127
         imageSourceReleased: "images/c356_BotonAlarmaCentralOkRls.png"
         imageSourcePressed: "images/c357_BotonAlarmaCentralOkPress.png"
+        button.onReleased: cbkWpr.butPopUpErrOk(AppEnumsNs.ButPopUpErrOkUC)
     }
 }
 

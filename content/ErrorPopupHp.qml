@@ -40,6 +40,15 @@ Item {
         y: 205
         imageSourceReleased: "images/c356_BotonAlarmaCentralOkRls.png"
         imageSourcePressed: "images/c357_BotonAlarmaCentralOkPress.png"
+        button.onReleased: {
+            switch(state) {
+            case "hp1State": cbkWpr.butPopUpErrOk(AppEnumsNs.ButPopUpErrOkHP1); break;
+            case "hp2State": cbkWpr.butPopUpErrOk(AppEnumsNs.ButPopUpErrOkHP2); break;
+            case "hp3State": cbkWpr.butPopUpErrOk(AppEnumsNs.ButPopUpErrOkHP3); break;
+            case "hp4State": cbkWpr.butPopUpErrOk(AppEnumsNs.ButPopUpErrOkHP4); break;
+            default: break;
+            }
+        }
     }
 
     Text {
