@@ -1073,12 +1073,12 @@ void HPcryoSATallTestStop( tHPcryoData *HP, tPRFdata *PRF);
 uint8 HPcryoReconfigHP( cHPcryoModels model2cfg, tHPcryoData *HP, tPRFdata *PRF);
 //RECONFIG HP
 
-////CleanUp Cancellation
-//void HPcryoCleanUpCancelledTimesSentToHP ( uint8 cancelled_times, tHPcryoData *HP, tPRFdata *PRF);
-//uint8 HPcryoCleanUpCancelledTimesReceiveFromHP ( tHPcryoData *HP, tPRFdata *PRF);
-//uint8 HPcryoCleanUpCancelAllowed ( uint8 slot);
-//uint8 HPcryoCleanUpNumberOfCancellations ( cPRFslot slot);
-////CleanUp Cancellation
+//CleanUp Cancellation
+void HPcryoCleanUpCancelledTimesSentToHP ( uint8 cancelled_times, tHPcryoData *HP, tPRFdata *PRF);
+uint8 HPcryoCleanUpCancelledTimesReceiveFromHP ( tHPcryoData *HP, tPRFdata *PRF);
+uint8 HPcryoCleanUpCancelAllowed ( uint8 slot);
+uint8 HPcryoCleanUpNumberOfCancellations ( cPRFslot slot);
+//CleanUp Cancellation
 
 //Show Temperature
 float HPcryoHPtemperature ( cPRFslot slot);

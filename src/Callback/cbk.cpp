@@ -1475,105 +1475,105 @@ void CBKswCountryF ( void *widget)		//V7790 - DISCLAIMER
 
 void CBKbutPopUpCleanUpF ( void *widget)
 {
-//	tHPcryoData *HP;
-//	tPRFdata *PRF;
-//	uint8 HPindex;
+    tHPcryoData *HP;
+    tPRFdata *PRF;
+    uint8 HPindex;
 	
-//	/* Casteamos al tipo widget */
-//	stWidget *w = ( stWidget *)widget;
+    /* Casteamos al tipo widget */
+    stWidget *w = ( stWidget *)widget;
 	
-//	/* Obtenemos el indice del HP en función del widget */
-//	switch( w->id)
-//	{
-//		case butPopUpCleanHP1: HPindex = 0; break;
-//		case butPopUpCleanHP2: HPindex = 1; break;
-//		case butPopUpCleanHP3: HPindex = 2; break;
-//		case butPopUpCleanHP4: HPindex = 3; break;
-//		default: return;
-//	}
+    /* Obtenemos el indice del HP en función del widget */
+    switch( w->id)
+    {
+        case ButPopUpCleanHP1: HPindex = 0; break;
+        case ButPopUpCleanHP2: HPindex = 1; break;
+        case ButPopUpCleanHP3: HPindex = 2; break;
+        case ButPopUpCleanHP4: HPindex = 3; break;
+        default: return;
+    }
 	
-//	if( HPcryoGetFromSlot( APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
-//	{
-//		HPcryoCleanUpFinishCountDown( HP, PRF);
-//	}
+    if( HPcryoGetFromSlot( (cPRFslot)APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
+    {
+        HPcryoCleanUpFinishCountDown( HP, PRF);
+    }
 }
 
 void CBKbutPopUpCleanUpYESF ( void *widget)
 {
-//	tHPcryoData *HP;
-//	tPRFdata *PRF;
-//	uint8 HPindex;
+    tHPcryoData *HP;
+    tPRFdata *PRF;
+    uint8 HPindex;
 	
-//	/* Casteamos al tipo widget */
-//	stWidget *w = ( stWidget *)widget;
+    /* Casteamos al tipo widget */
+    stWidget *w = ( stWidget *)widget;
 	
-//	/* Obtenemos el indice del HP en función del widget */
-//	switch( w->id)
-//	{
-//		case butPopUpCleanYESHP1: HPindex = 0; break;
-//		case butPopUpCleanYESHP2: HPindex = 1; break;
-//		case butPopUpCleanYESHP3: HPindex = 2; break;
-//		case butPopUpCleanYESHP4: HPindex = 3; break;
-//		default: return;
-//	}
+    /* Obtenemos el indice del HP en función del widget */
+    switch( w->id)
+    {
+        case ButPopUpCleanYESHP1: HPindex = 0; break;
+        case ButPopUpCleanYESHP2: HPindex = 1; break;
+        case ButPopUpCleanYESHP3: HPindex = 2; break;
+        case ButPopUpCleanYESHP4: HPindex = 3; break;
+        default: return;
+    }
 	
-//	if( HPcryoGetFromSlot( APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
-//	{
-//		HPcryoCleanUpAllowClean( 1, HP, PRF);
-//	}
+    if( HPcryoGetFromSlot( (cPRFslot)APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
+    {
+        HPcryoCleanUpAllowClean( 1, HP, PRF);
+    }
 }
 
 void CBKbutPopUpCleanUpNOF ( void *widget)
 {
-//	tHPcryoData *HP;
-//	tPRFdata *PRF;
-//	uint8 HPindex;
+    tHPcryoData *HP;
+    tPRFdata *PRF;
+    uint8 HPindex;
 	
-//	/* Casteamos al tipo widget */
-//	stWidget *w = ( stWidget *)widget;
+    /* Casteamos al tipo widget */
+    stWidget *w = ( stWidget *)widget;
 	
-//	/* Obtenemos el indice del HP en función del widget */
-//	switch( w->id)
-//	{
-//		case butPopUpCleanNOHP1: HPindex = 0; break;
-//		case butPopUpCleanNOHP2: HPindex = 1; break;
-//		case butPopUpCleanNOHP3: HPindex = 2; break;
-//		case butPopUpCleanNOHP4: HPindex = 3; break;
-//		default: return;
-//	}
+    /* Obtenemos el indice del HP en función del widget */
+    switch( w->id)
+    {
+        case ButPopUpCleanNOHP1: HPindex = 0; break;
+        case ButPopUpCleanNOHP2: HPindex = 1; break;
+        case ButPopUpCleanNOHP3: HPindex = 2; break;
+        case ButPopUpCleanNOHP4: HPindex = 3; break;
+        default: return;
+    }
 	
-//	if( HPcryoGetFromSlot( APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
-//	{
-//		HPcryoCleanUpAllowClean( 0, HP, PRF);
-//	}
+    if( HPcryoGetFromSlot( (cPRFslot)APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
+    {
+        HPcryoCleanUpAllowClean( 0, HP, PRF);
+    }
 }
 
 void CBKbutPopUpCleanUpCancelF ( void *widget)
 {
-//	tHPcryoData *HP;
-//	tPRFdata *PRF;
-//	uint8 HPindex;
+    tHPcryoData *HP;
+    tPRFdata *PRF;
+    uint8 HPindex;
 	
-//	/* Casteamos al tipo widget */
-//	stWidget *w = ( stWidget *)widget;
+    /* Casteamos al tipo widget */
+    stWidget *w = ( stWidget *)widget;
 	
-//	/* Obtenemos el indice del HP en función del widget */
-//	switch( w->id)
-//	{
-//		case butPopUpCleanCancelHP1: HPindex = 0; break;
-//		case butPopUpCleanCancelHP2: HPindex = 1; break;
-//		case butPopUpCleanCancelHP3: HPindex = 2; break;
-//		case butPopUpCleanCancelHP4: HPindex = 3; break;
-//		default: return;
-//	}
+    /* Obtenemos el indice del HP en función del widget */
+    switch( w->id)
+    {
+        case ButPopUpCleanCancelHP1: HPindex = 0; break;
+        case ButPopUpCleanCancelHP2: HPindex = 1; break;
+        case ButPopUpCleanCancelHP3: HPindex = 2; break;
+        case ButPopUpCleanCancelHP4: HPindex = 3; break;
+        default: return;
+    }
 	
-//	if(HPcryoGetFromSlot( APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
-//	{
-//		/* Cancelar el tratamiento e incrementar el contador y guardarlo en la memoria del aplicador */
-//		HP->cleanUp.cancelled_times++;
-//		HPcryoCleanUpCancelledTimesSentToHP(HP->cleanUp.cancelled_times, HP, PRF);
-//		HPcryoCleanUpStop(HP, PRF);
-//	}
+    if(HPcryoGetFromSlot( (cPRFslot)APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
+    {
+        /* Cancelar el tratamiento e incrementar el contador y guardarlo en la memoria del aplicador */
+        HP->cleanUp.cancelled_times++;
+        HPcryoCleanUpCancelledTimesSentToHP(HP->cleanUp.cancelled_times, HP, PRF);
+        HPcryoCleanUpStop(HP, PRF);
+    }
 }
 
 void CBKbutSATnextPageF ( void *widget)

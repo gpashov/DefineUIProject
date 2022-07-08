@@ -383,24 +383,60 @@ void CallbackWrapper::swCountry()
     CBKswCountryF(&argWidget);
 }
 
-void CallbackWrapper::butPopUpCleanUp()
+void CallbackWrapper::butPopUpCleanUp(EAppGUI_HPsIDs hpIndex)
 {
+    switch(hpIndex)
+    {
+    case APP_GUI_HP1_ID: argWidget.id = ButPopUpCleanHP1; break;
+    case APP_GUI_HP2_ID: argWidget.id = ButPopUpCleanHP2; break;
+    case APP_GUI_HP3_ID: argWidget.id = ButPopUpCleanHP3; break;
+    case APP_GUI_HP4_ID: argWidget.id = ButPopUpCleanHP4; break;
+    default: argWidget.id = APP_GUI_NUM_WIDGETS; break;
+    }
 
+    CBKbutPopUpCleanUpF(&argWidget);
 }
 
-void CallbackWrapper::butPopUpCleanUpYES()
+void CallbackWrapper::butPopUpCleanUpYES(EAppGUI_HPsIDs hpIndex)
 {
+    switch(hpIndex)
+    {
+    case APP_GUI_HP1_ID: argWidget.id = ButPopUpCleanYESHP1; break;
+    case APP_GUI_HP2_ID: argWidget.id = ButPopUpCleanYESHP2; break;
+    case APP_GUI_HP3_ID: argWidget.id = ButPopUpCleanYESHP3; break;
+    case APP_GUI_HP4_ID: argWidget.id = ButPopUpCleanYESHP4; break;
+    default: argWidget.id = APP_GUI_NUM_WIDGETS; break;
+    }
 
+    CBKbutPopUpCleanUpYESF(&argWidget);
 }
 
-void CallbackWrapper::butPopUpCleanUpNO()
+void CallbackWrapper::butPopUpCleanUpNO(EAppGUI_HPsIDs hpIndex)
 {
+    switch(hpIndex)
+    {
+    case APP_GUI_HP1_ID: argWidget.id = ButPopUpCleanNOHP1; break;
+    case APP_GUI_HP2_ID: argWidget.id = ButPopUpCleanNOHP2; break;
+    case APP_GUI_HP3_ID: argWidget.id = ButPopUpCleanNOHP3; break;
+    case APP_GUI_HP4_ID: argWidget.id = ButPopUpCleanNOHP4; break;
+    default: argWidget.id = APP_GUI_NUM_WIDGETS; break;
+    }
 
+    CBKbutPopUpCleanUpNOF(&argWidget);
 }
 
-void CallbackWrapper::butPopUpCleanUpCancel()
+void CallbackWrapper::butPopUpCleanUpCancel(EAppGUI_HPsIDs hpIndex)
 {
+    switch(hpIndex)
+    {
+    case APP_GUI_HP1_ID: argWidget.id = ButPopUpCleanCancelHP1; break;
+    case APP_GUI_HP2_ID: argWidget.id = ButPopUpCleanCancelHP2; break;
+    case APP_GUI_HP3_ID: argWidget.id = ButPopUpCleanCancelHP3; break;
+    case APP_GUI_HP4_ID: argWidget.id = ButPopUpCleanCancelHP4; break;
+    default: argWidget.id = APP_GUI_NUM_WIDGETS; break;
+    }
 
+    CBKbutPopUpCleanUpCancelF(&argWidget);
 }
 
 void CallbackWrapper::butSATnextPage()

@@ -34,6 +34,15 @@ Item {
         y: 178
         imageSourceReleased: "images/c456_MenuLimpiezaClean_Rls.png"
         imageSourcePressed: "images/c457_MenuLimpiezaClean_Press.png"
+        button.onReleased:  {
+            switch (parent.state) {
+            case "hp1State": cbkWpr.butPopUpCleanUp(AppEnumsNs.APP_GUI_HP1_ID); break;
+            case "hp2State": cbkWpr.butPopUpCleanUp(AppEnumsNs.APP_GUI_HP2_ID); break;
+            case "hp3State": cbkWpr.butPopUpCleanUp(AppEnumsNs.APP_GUI_HP3_ID); break;
+            case "hp4State": cbkWpr.butPopUpCleanUp(AppEnumsNs.APP_GUI_HP4_ID); break;
+            default: break;
+            }
+        }
     }
 
     TwoStateButton {
@@ -42,6 +51,15 @@ Item {
         y: 101
         imageSourceReleased: "images/c453_MenuAlarmaOK_rls.png"
         imageSourcePressed: "images/c452_MenuAlarmaOK_press.png"
+        button.onReleased:  {
+            switch (parent.state) {
+            case "hp1State": cbkWpr.butPopUpCleanUpYES(AppEnumsNs.APP_GUI_HP1_ID); break;
+            case "hp2State": cbkWpr.butPopUpCleanUpYES(AppEnumsNs.APP_GUI_HP2_ID); break;
+            case "hp3State": cbkWpr.butPopUpCleanUpYES(AppEnumsNs.APP_GUI_HP3_ID); break;
+            case "hp4State": cbkWpr.butPopUpCleanUpYES(AppEnumsNs.APP_GUI_HP4_ID); break;
+            default: break;
+            }
+        }
     }
 
     TwoStateButton {
@@ -50,6 +68,15 @@ Item {
         y: 101
         imageSourceReleased: "images/c455_MenuAlarmaNO_rls.png"
         imageSourcePressed: "images/c454_MenuAlarmaNO_press.png"
+        button.onReleased:  {
+            switch (parent.state) {
+            case "hp1State": cbkWpr.butPopUpCleanUpNO(AppEnumsNs.APP_GUI_HP1_ID); break;
+            case "hp2State": cbkWpr.butPopUpCleanUpNO(AppEnumsNs.APP_GUI_HP2_ID); break;
+            case "hp3State": cbkWpr.butPopUpCleanUpNO(AppEnumsNs.APP_GUI_HP3_ID); break;
+            case "hp4State": cbkWpr.butPopUpCleanUpNO(AppEnumsNs.APP_GUI_HP4_ID); break;
+            default: break;
+            }
+        }
     }
 
     TwoStateButton {
@@ -58,6 +85,15 @@ Item {
         y: 252
         imageSourceReleased: "images/c532_botoncancel_Press.png"
         imageSourcePressed: "images/c531_botoncancel_Rls.png"
+        button.onReleased:  {
+            switch (parent.state) {
+            case "hp1State": cbkWpr.butPopUpCleanUpCancel(AppEnumsNs.APP_GUI_HP1_ID); break;
+            case "hp2State": cbkWpr.butPopUpCleanUpCancel(AppEnumsNs.APP_GUI_HP2_ID); break;
+            case "hp3State": cbkWpr.butPopUpCleanUpCancel(AppEnumsNs.APP_GUI_HP3_ID); break;
+            case "hp4State": cbkWpr.butPopUpCleanUpCancel(AppEnumsNs.APP_GUI_HP4_ID); break;
+            default: break;
+            }
+        }
     }
 
     Image {
@@ -236,6 +272,6 @@ Item {
 
 /*##^##
 Designer {
-    D{i:0;formeditorZoom:1.5;height:334;width:284}D{i:9}
+    D{i:0;height:334;width:284}
 }
 ##^##*/
