@@ -39,6 +39,8 @@ qt_add_executable(DefineUIProjectApp
     src/Buzzer/Buzzer.cpp
     src/BOOT/boot.h
     src/BOOT/boot.cpp
+    scr/RTC/RTC.h
+    scr/RTC/RTC.cpp
 )
 
 qt_add_resources(DefineUIProjectApp "configuration"

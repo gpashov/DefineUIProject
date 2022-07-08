@@ -19,6 +19,7 @@
 //#include "../../App.h"
 #include "AppLOG/AppLOG.h"
 #include "GPRS/AppGPRS.h"
+#include "RTC/RTC.h"
 
 /* Variables globales */
 extern WidgetsWrapper wdgWpr;
@@ -1360,116 +1361,116 @@ void CBKbutSoftUpdateCfgF ( void *widget)
 
 void CBKbutRecargaCoolantF ( void *widget)
 {
-//	if(AppGUIdata.CfgHandler.FillingWater_flag == 0)
-//	{	AppGUIdata.CfgHandler.FillingWater_flag = 1;	}
-//	else
-//	{	AppGUIdata.CfgHandler.FillingWater_flag = 0;	}
+    if(AppGUIdata.CfgHandler.FillingWater_flag == 0)
+    {	AppGUIdata.CfgHandler.FillingWater_flag = 1;	}
+    else
+    {	AppGUIdata.CfgHandler.FillingWater_flag = 0;	}
 }
 
 void CBKswResuctionsVierewF ( void *widget)
 {
-//	if(EXPdata.UC.Config_Param.data.ModeResuctionsViewer == 1)
-//	{
-//		EXPdata.UC.Config_Param.data.ModeResuctionsViewer = 0;
-//		while(BOOT_SaveConfigParamSerialFlash (EXPdata.UC.Config_Param.vector) != BOOT_SerialFlash_EscrituraCorrecta);
-//		BUZZ_Configure(1, 100, PATRO_SO_RFID_KO );
-//	}
-//	else
-//	{
-//		EXPdata.UC.Config_Param.data.ModeResuctionsViewer = 1;
-//		while(BOOT_SaveConfigParamSerialFlash (EXPdata.UC.Config_Param.vector) != BOOT_SerialFlash_EscrituraCorrecta);
-//		BUZZ_Configure(1, 100, PATRO_SO_RFID_OK );
-//	}
+    if(EXPdata.UC.Config_Param.data.ModeResuctionsViewer == 1)
+    {
+        EXPdata.UC.Config_Param.data.ModeResuctionsViewer = 0;
+        while(BOOT_SaveConfigParamSerialFlash (EXPdata.UC.Config_Param.vector) != BOOT_SerialFlash_EscrituraCorrecta);
+        BUZZ_Configure(1, 100, PATRO_SO_RFID_KO );
+    }
+    else
+    {
+        EXPdata.UC.Config_Param.data.ModeResuctionsViewer = 1;
+        while(BOOT_SaveConfigParamSerialFlash (EXPdata.UC.Config_Param.vector) != BOOT_SerialFlash_EscrituraCorrecta);
+        BUZZ_Configure(1, 100, PATRO_SO_RFID_OK );
+    }
 }
 
 void CBKswCfgTemperatureViewerF ( void *widget)
 {
-//	if(EXPdata.UC.Config_Param.data.ModeTemperatureViewer == 1)
-//	{
-//		EXPdata.UC.Config_Param.data.ModeTemperatureViewer = 0;
-//		while(BOOT_SaveConfigParamSerialFlash (EXPdata.UC.Config_Param.vector) != BOOT_SerialFlash_EscrituraCorrecta);
-//		BUZZ_Configure(1, 100, PATRO_SO_RFID_KO );
-//	}
-//	else
-//	{
-//		EXPdata.UC.Config_Param.data.ModeTemperatureViewer = 1;
-//		while(BOOT_SaveConfigParamSerialFlash (EXPdata.UC.Config_Param.vector) != BOOT_SerialFlash_EscrituraCorrecta);
-//		BUZZ_Configure(1, 100, PATRO_SO_RFID_OK );
-//	}
+    if(EXPdata.UC.Config_Param.data.ModeTemperatureViewer == 1)
+    {
+        EXPdata.UC.Config_Param.data.ModeTemperatureViewer = 0;
+        while(BOOT_SaveConfigParamSerialFlash (EXPdata.UC.Config_Param.vector) != BOOT_SerialFlash_EscrituraCorrecta);
+        BUZZ_Configure(1, 100, PATRO_SO_RFID_KO );
+    }
+    else
+    {
+        EXPdata.UC.Config_Param.data.ModeTemperatureViewer = 1;
+        while(BOOT_SaveConfigParamSerialFlash (EXPdata.UC.Config_Param.vector) != BOOT_SerialFlash_EscrituraCorrecta);
+        BUZZ_Configure(1, 100, PATRO_SO_RFID_OK );
+    }
 }
 
 void CBKbutCleanUpHPF ( void *widget)
 {
-//	tHPcryoData *HP;
-//	tPRFdata *PRF;
-//	uint8 HPindex;
+    tHPcryoData *HP;
+    tPRFdata *PRF;
+    uint8 HPindex;
 	
-//	/* Casteamos al tipo widget */
-//	stWidget *w = ( stWidget *)widget;
+    /* Casteamos al tipo widget */
+    stWidget *w = ( stWidget *)widget;
 	
-//	/* Obtenemos el indice del HP en función del widget */
-//	switch( w->id)
-//	{
-//		case butCfgCleanUpHP1: HPindex = 0; break;
-//		case butCfgCleanUpHP2: HPindex = 1; break;
-//		case butCfgCleanUpHP3: HPindex = 2; break;
-//		case butCfgCleanUpHP4: HPindex = 3; break;
-//		default: return;
-//	}
+    /* Obtenemos el indice del HP en función del widget */
+    switch( w->id)
+    {
+        case ButCfgCleanUpHP1: HPindex = 0; break;
+        case ButCfgCleanUpHP2: HPindex = 1; break;
+        case ButCfgCleanUpHP3: HPindex = 2; break;
+        case ButCfgCleanUpHP4: HPindex = 3; break;
+        default: return;
+    }
 	
-//	if( HPcryoGetFromSlot( APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
-//	{
-//		if(HP->cleanUp.status == HP_CRYO_CLEAN_UP_DONE)
-//		{
-//			HP->cleanUpRqst = HP_CRYO_CLEAN_UP_RQST_FORCED;
-//			HP->cleanUpInitOrEnd = HP_CRYO_CLEAN_UP_INIT_OF_TRT;
-//		}
-//	}
+    if( HPcryoGetFromSlot( (cPRFslot)APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
+    {
+        if(HP->cleanUp.status == HP_CRYO_CLEAN_UP_DONE)
+        {
+            HP->cleanUpRqst = HP_CRYO_CLEAN_UP_RQST_FORCED;
+            HP->cleanUpInitOrEnd = HP_CRYO_CLEAN_UP_INIT_OF_TRT;
+        }
+    }
 }
 
 void CBKbutCleanUpHProundF ( void *widget)
 {
-//	tHPcryoData *HP;
-//	tPRFdata *PRF;
-//	uint8 HPindex;
+    tHPcryoData *HP;
+    tPRFdata *PRF;
+    uint8 HPindex;
 	
-//	for (HPindex=0;HPindex<APP_GUI_MAXNUM_HP;HPindex++)
-//	{
-//		if( HPcryoGetFromSlot( APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
-//		{
-//			if((HP->cleanUp.cancelled_times>0) && (HP->cleanUp.status == HP_CRYO_CLEAN_UP_DONE))
-//			{
-//				HP->cleanUpRqst = HP_CRYO_CLEAN_UP_RQST_FORCED;
-//				HP->cleanUpInitOrEnd = HP_CRYO_CLEAN_UP_INIT_OF_TRT;
-//			}
-//		}
-//	}
+    for (HPindex=0;HPindex<APP_GUI_MAXNUM_HP;HPindex++)
+    {
+        if( HPcryoGetFromSlot( (cPRFslot)APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
+        {
+            if((HP->cleanUp.cancelled_times>0) && (HP->cleanUp.status == HP_CRYO_CLEAN_UP_DONE))
+            {
+                HP->cleanUpRqst = HP_CRYO_CLEAN_UP_RQST_FORCED;
+                HP->cleanUpInitOrEnd = HP_CRYO_CLEAN_UP_INIT_OF_TRT;
+            }
+        }
+    }
 }
 
 void CBKswLanguageF ( void *widget)
 {		
-//	//	/* Casteamos al tipo widget */
-//	//	stWidget *w = ( stWidget *)widget;
-//	//
-//	//	/* Se almacena el lenguaje seleccionado */
-//	//	EXP_UC_set_Language (w->id - APP_GUI_LANG_SW_WIDGET_LANG_LIST[App_GUI_Frances] + 1);
-//	//	while(BOOT_SaveConfigParamSerialFlash(EXPdata.UC.Config_Param.vector)!= BOOT_SerialFlash_EscrituraCorrecta );
+    //	/* Casteamos al tipo widget */
+    //	stWidget *w = ( stWidget *)widget;
+    //
+    //	/* Se almacena el lenguaje seleccionado */
+    //	EXP_UC_set_Language (w->id - APP_GUI_LANG_SW_WIDGET_LANG_LIST[App_GUI_Frances] + 1);
+    //	while(BOOT_SaveConfigParamSerialFlash(EXPdata.UC.Config_Param.vector)!= BOOT_SerialFlash_EscrituraCorrecta );
 }
 
 void CBKswCountryF ( void *widget)		//V7790 - DISCLAIMER
 {		
-//	LDD_RTC_TTime Time;
-//	/* Casteamos al tipo widget */
-//	stWidget *w = ( stWidget *)widget;
+    LDD_RTC_TTime Time;
+    /* Casteamos al tipo widget */
+    stWidget *w = ( stWidget *)widget;
 	
-//	RTC_get_time (&Time);
+    RTC_get_time (&Time);
 	
-//	/* Se almacena el lenguaje seleccionado */
-//	/*
-//	EXP_UC_set_Country (w->id - APP_GUI_LANG_SW_WIDGET_COUNTRY_LIST[App_GUI_USA] + 1);
-//	EXP_UC_set_Month_REF((uint8)Time.Month);
-//	while(BOOT_SaveConfigParamSerialFlash(EXPdata.UC.Config_Param.vector)!= BOOT_SerialFlash_EscrituraCorrecta );
-//	*/
+    /* Se almacena el lenguaje seleccionado */
+    /*
+    EXP_UC_set_Country (w->id - APP_GUI_LANG_SW_WIDGET_COUNTRY_LIST[App_GUI_USA] + 1);
+    EXP_UC_set_Month_REF((uint8)Time.Month);
+    while(BOOT_SaveConfigParamSerialFlash(EXPdata.UC.Config_Param.vector)!= BOOT_SerialFlash_EscrituraCorrecta );
+    */
 }
 
 void CBKbutPopUpCleanUpF ( void *widget)

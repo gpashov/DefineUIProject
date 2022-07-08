@@ -52,9 +52,9 @@ public:
     Q_INVOKABLE void butRecargaCoolant ();
     Q_INVOKABLE void swResuctionsVierew ();
     Q_INVOKABLE void swCfgTemperatureViewer ();
-    Q_INVOKABLE void butCleanUpHP ();
+    Q_INVOKABLE void butCleanUpHP (EAppGUI_HPsIDs hpIndex);
     Q_INVOKABLE void butCleanUpHPround ();
-    Q_INVOKABLE void swLanguage ();
+    Q_INVOKABLE void swLanguage (EApp_GUI_differentLanguages languageId);
     Q_INVOKABLE void swCountry ();
     Q_INVOKABLE void butPopUpCleanUp ();
     Q_INVOKABLE void butPopUpCleanUpYES ();

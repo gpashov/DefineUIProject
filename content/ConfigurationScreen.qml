@@ -55,24 +55,33 @@ Item {
         y: 215
         imageSourceReleased: "images/c323_2_ConfigBotonRecargaCoolantRls.png"
         imageSourcePressed: "images/c324_2_ConfigBotonRecargaCoolantPress.png"
+        button.onReleased: cbkWpr.butRecargaCoolant()
     }
 
-    TwoStateButton {
+    CustomSwitch {
         id: vacuumSwitch
         y: 292
         anchors.left: refillCoolantButton.left
         anchors.leftMargin: 0
-        imageSourcePressed: "images/c513_resuccionboton_Press.png"
-        imageSourceReleased: "images/c514_resuccionboton_Rls.png"
+        offStateImageSource: "images/c514_resuccionboton_Rls.png"
+        onStateImageSource: "images/c513_resuccionboton_Press.png"
+        offPressedStateImageSource: "images/c513_resuccionboton_Press.png"
+        onPressedStateImageSource: "images/c514_resuccionboton_Rls.png"
+        onOnAction: cbkWpr.swResuctionsVierew()
+        onOffAction: cbkWpr.swResuctionsVierew()
     }
 
-    TwoStateButton {
+    CustomSwitch {
         id: temperatureSwitch
         y: 369
         anchors.left: refillCoolantButton.left
-        imageSourcePressed: "images/c512_TempShowboton_Press.png"
         anchors.leftMargin: 0
-        imageSourceReleased: "images/c512_TempShowboton_Rls.png"
+        offStateImageSource: "images/c512_TempShowboton_Rls.png"
+        onStateImageSource: "images/c512_TempShowboton_Press.png"
+        offPressedStateImageSource: "images/c512_TempShowboton_Press.png"
+        onPressedStateImageSource: "images/c512_TempShowboton_Rls.png"
+        onOnAction: cbkWpr.swCfgTemperatureViewer()
+        onOffAction: cbkWpr.swCfgTemperatureViewer()
     }
 
     TwoStateButton {
@@ -81,6 +90,7 @@ Item {
         y: 228
         imageSourceReleased: "images/c521_LimpiezamanipuloHP1_Rls.png"
         imageSourcePressed: "images/c522LimpiezamanipuloHP1_Press.png"
+        button.onReleased: cbkWpr.butCleanUpHP(APP_GUI_HP1_ID)
     }
 
     TwoStateButton {
@@ -89,6 +99,7 @@ Item {
         anchors.top: cleanUpHP1Button.top
         imageSourceReleased: "images/c524_LimpiezamanipuloHP2_Rls.png"
         imageSourcePressed: "images/c525_LimpiezamanipuloHP2_Press.png"
+        button.onReleased: cbkWpr.butCleanUpHP(APP_GUI_HP2_ID)
     }
 
     TwoStateButton {
@@ -97,6 +108,7 @@ Item {
         anchors.left: cleanUpHP1Button.left
         imageSourceReleased: "images/c518_LimpiezamanipuloHP3_Rls.png"
         imageSourcePressed: "images/c520_LimpiezamanipuloHP3_Press.png"
+        button.onReleased: cbkWpr.butCleanUpHP(APP_GUI_HP3_ID)
     }
 
     TwoStateButton {
@@ -105,6 +117,7 @@ Item {
         anchors.top: cleanUpHP3Button.top
         imageSourceReleased: "images/c527_LimpiezamanipuloHP4_Rls.png"
         imageSourcePressed: "images/c528_LimpiezamanipuloHP4_Press.png"
+        button.onReleased: cbkWpr.butCleanUpHP(APP_GUI_HP4_ID)
     }
 
     TwoStateButton {
@@ -113,6 +126,7 @@ Item {
         y: 294
         imageSourceReleased: "images/c516_Limpiezamanipulox4_Rls.png"
         imageSourcePressed: "images/c515_Limpiezamanipulox4_Press.png"
+        button.onReleased: cbkWpr.butCleanUpHPround()
     }
 }
 
@@ -120,6 +134,6 @@ Item {
 
 /*##^##
 Designer {
-    D{i:0;formeditorZoom:1.66;height:545;width:581}
+    D{i:0;height:545;width:581}
 }
 ##^##*/

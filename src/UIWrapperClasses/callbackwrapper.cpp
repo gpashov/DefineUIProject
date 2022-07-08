@@ -324,37 +324,63 @@ void CallbackWrapper::butSoftUpdateCfg()
 
 void CallbackWrapper::butRecargaCoolant()
 {
-
+    CBKbutRecargaCoolantF(&argWidget);
 }
 
 void CallbackWrapper::swResuctionsVierew()
 {
-
+    CBKswResuctionsVierewF(&argWidget);
 }
 
 void CallbackWrapper::swCfgTemperatureViewer()
 {
-
+    CBKswCfgTemperatureViewerF(&argWidget);
 }
 
-void CallbackWrapper::butCleanUpHP()
+void CallbackWrapper::butCleanUpHP(EAppGUI_HPsIDs hpIndex)
 {
+    switch(hpIndex)
+    {
+    case APP_GUI_HP1_ID: argWidget.id = ButCfgCleanUpHP1; break;
+    case APP_GUI_HP2_ID: argWidget.id = ButCfgCleanUpHP2; break;
+    case APP_GUI_HP3_ID: argWidget.id = ButCfgCleanUpHP3; break;
+    case APP_GUI_HP4_ID: argWidget.id = ButCfgCleanUpHP4; break;
+    default: argWidget.id = APP_GUI_NUM_WIDGETS; break;
+    }
 
+    CBKbutCleanUpHPF(&argWidget);
 }
 
 void CallbackWrapper::butCleanUpHPround()
 {
-
+    CBKbutCleanUpHProundF(&argWidget);
 }
 
-void CallbackWrapper::swLanguage()
+void CallbackWrapper::swLanguage(EApp_GUI_differentLanguages languageId)
 {
+    switch(languageId)
+    {
+    case App_GUI_Frances: argWidget.id =    SwLanFrances; break;
+    case App_GUI_Castellano: argWidget.id = SwLanCastellano; break;
+    case App_GUI_Ingles: argWidget.id =     SwLanIngles; break;
+    case App_GUI_Italiano: argWidget.id =   SwLanItaliano; break;
+    case App_GUI_Aleman: argWidget.id =     SwLanAleman; break;
+    case App_GUI_Polaco: argWidget.id =     SwLanPolaco; break;
+    case App_GUI_Ruso: argWidget.id =       SwLanRuso; break;
+    case App_GUI_Portugues: argWidget.id =  SwLanPortugues; break;
+    case App_GUI_Chino: argWidget.id =      SwLanChino; break;
+    case App_GUI_Japones: argWidget.id =    SwLanJapones; break;
+    case App_GUI_Coreano: argWidget.id =    SwLanCoreano; break;
+    default: argWidget.id = APP_GUI_NUM_WIDGETS; break;
+    }
 
+    CBKswLanguageF(&argWidget);
 }
 
 void CallbackWrapper::swCountry()
 {
-
+    argWidget.id = APP_GUI_NUM_WIDGETS;
+    CBKswCountryF(&argWidget);
 }
 
 void CallbackWrapper::butPopUpCleanUp()

@@ -13,6 +13,7 @@ Item {
         y: 141
         backgroundImageSource: "images/c294_IdiomasfrancesRls.png"
         indicatorImageSource: "images/c295_IdiomasfrancesPress.png"
+        onReleased: cbkWpr.swLanguage(AppEnumsNs.App_GUI_Frances)
     }
 
     CustomRadioButton {
@@ -21,6 +22,7 @@ Item {
         anchors.top: langFrenchButton.top
         backgroundImageSource: "images/c297_IdiomascastellanoRls.png"
         indicatorImageSource: "images/c298_IdiomascastellanoPress.png"
+        onReleased: cbkWpr.swLanguage(AppEnumsNs.App_GUI_Castellano)
     }
 
     CustomRadioButton {
@@ -29,6 +31,7 @@ Item {
         anchors.top: langFrenchButton.top
         backgroundImageSource: "images/c299_IdiomasinglesRls.png"
         indicatorImageSource: "images/c300_IdiomasinglesPress.png"
+        onReleased: cbkWpr.swLanguage(AppEnumsNs.App_GUI_Ingles)
     }
 
     CustomRadioButton {
@@ -37,6 +40,7 @@ Item {
         anchors.top: langFrenchButton.top
         backgroundImageSource: "images/c301_IdiomasitalianoRls.png"
         indicatorImageSource: "images/c302_IdiomasitalianoPress.png"
+        onReleased: cbkWpr.swLanguage(AppEnumsNs.App_GUI_Italiano)
     }
 
     CustomRadioButton {
@@ -45,6 +49,7 @@ Item {
         anchors.left: langFrenchButton.left
         backgroundImageSource: "images/c303_IdiomasalemanRls.png"
         indicatorImageSource: "images/c304_IdiomasalemanPress.png"
+        onReleased: cbkWpr.swLanguage(AppEnumsNs.App_GUI_Aleman)
     }
 
     CustomRadioButton {
@@ -53,6 +58,7 @@ Item {
         anchors.top: langGermanButton.top
         backgroundImageSource: "images/c305_IdiomaspolacoRls.png"
         indicatorImageSource: "images/c306_IdiomaspolacoPress.png"
+        onReleased: cbkWpr.swLanguage(AppEnumsNs.App_GUI_Polaco)
     }
 
     CustomRadioButton {
@@ -61,6 +67,7 @@ Item {
         anchors.top: langGermanButton.top
         backgroundImageSource: "images/c307_IdiomasrusoRls.png"
         indicatorImageSource: "images/c308_IdiomasrusoPress.png"
+        onReleased: cbkWpr.swLanguage(AppEnumsNs.App_GUI_Ruso)
     }
 
     CustomRadioButton {
@@ -69,6 +76,7 @@ Item {
         anchors.top: langGermanButton.top
         backgroundImageSource: "images/c309_IdiomasportuguesRls.png"
         indicatorImageSource: "images/c310_IdiomasportuguesPress.png"
+        onReleased: cbkWpr.swLanguage(AppEnumsNs.App_GUI_Portugues)
     }
 
     CustomRadioButton {
@@ -77,6 +85,7 @@ Item {
         anchors.left: langFrenchButton.left
         backgroundImageSource: "images/c311_IdiomaschinoRls.png"
         indicatorImageSource: "images/c312_IdiomaschinoPress.png"
+        onReleased: cbkWpr.swLanguage(AppEnumsNs.App_GUI_Chino)
     }
 
     CustomRadioButton {
@@ -85,6 +94,7 @@ Item {
         anchors.top: langChineseButton.top
         backgroundImageSource: "images/c313_IdiomasjaponesRls.png"
         indicatorImageSource: "images/c314_IdiomasjaponesPress.png"
+        onReleased: cbkWpr.swLanguage(AppEnumsNs.App_GUI_Japones)
     }
 
     CustomRadioButton {
@@ -93,6 +103,7 @@ Item {
         anchors.top: langChineseButton.top
         backgroundImageSource: "images/c315_IdiomascoreanoRls.png"
         indicatorImageSource: "images/c316_IdiomascoreanoPress.png"
+        onReleased: cbkWpr.swLanguage(AppEnumsNs.App_GUI_Coreano)
     }
 //    CustomSwitch {
 //        id: langFrenchButton

@@ -161,7 +161,7 @@ namespace AppEnumsNs
 
         App_GUI_Different_Languages
     }cApp_GUI_differentLanguages;
-//    Q_ENUM_NS(EApp_GUI_differentLanguages)
+    Q_ENUM_NS(EApp_GUI_differentLanguages)
 
     typedef enum EApp_GUI_differentCountries
     {
@@ -429,6 +429,7 @@ namespace AppEnumsNs
         APP_GUI_CLEAN_UP_WAIT_VACUM,
         APP_GUI_CLEAN_UP_N_STATUS
     }cAppGUIcleanUpStatus;
+    Q_ENUM_NS(EAppGUIcleanUpStatus)
 
     //Zonas de seleccion del tratamiento
     typedef enum

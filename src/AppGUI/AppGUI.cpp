@@ -13,6 +13,7 @@
 #include "../UART/UART.h"
 #include "../AppLOG/AppLOG.h"
 #include "../GPRS/AppGPRS.h"
+#include "RTC/RTC.h"
 
 /* Constantes */
  typedef enum
