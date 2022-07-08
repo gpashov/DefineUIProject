@@ -71,126 +71,6 @@ Item {
     }
 
     Image {
-        id: vac1Img
-        x: 269
-        anchors.top: step1Img.top
-        source: "images/c052_Numero1.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: vac2Img
-        anchors.left: vac1Img.left
-        anchors.top: step2Img.top
-        source: "images/c053_Numero2.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: vac3Img
-        anchors.left: vac1Img.left
-        anchors.top: step3Img.top
-        source: "images/c054_Numero3.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: vac4Img
-        anchors.left: vac1Img.left
-        anchors.top: step4Img.top
-        source: "images/c055_Numero4.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: flow1Img
-        x: 806
-        anchors.top: step1Img.top
-        source: "images/c052_Numero1.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: flow2Img
-        anchors.left: flow1Img.left
-        anchors.top: step2Img.top
-        source: "images/c053_Numero2.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: flow3Img
-        anchors.left: flow1Img.left
-        anchors.top: step3Img.top
-        source: "images/c054_Numero3.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: flow4Img
-        anchors.left: flow1Img.left
-        anchors.top: step4Img.top
-        source: "images/c055_Numero4.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: tampAmbImg
-        x: 550
-        anchors.top: step1Img.top
-        source: "images/c052_Numero1.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: tempPumpImg
-        anchors.left: tampAmbImg.left
-        anchors.top: step2Img.top
-        source: "images/c053_Numero2.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: tempReturnImg
-        anchors.left: tampAmbImg.left
-        anchors.top: step3Img.top
-        source: "images/c054_Numero3.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: flowReturnImg
-        anchors.left: tampAmbImg.left
-        anchors.top: step4Img.top
-        source: "images/c055_Numero4.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: vNozzleImg
-        anchors.left: tampAmbImg.left
-        anchors.top: step5Img.top
-        source: "images/c056_Numero5.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: rthImg
-        anchors.left: tampAmbImg.left
-        anchors.top: step6Img.top
-        source: "images/c057_Numero6.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: cpiImg
-        anchors.left: tampAmbImg.left
-        anchors.top: step7Img.top
-        source: "images/c058_Numero7.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
         id: step1StatusImg
         x: 51
         y: 74
@@ -298,9 +178,7 @@ Item {
         id: tempAmbNum
         x: 529
         anchors.top: step1Img.top
-        anchors.topMargin: -1
-        //y: 76
-        number: ""
+        number: "1"
         value: "0.0"
     }
 
@@ -309,7 +187,7 @@ Item {
         anchors.left: tempAmbNum.left
         anchors.top: step2Img.top
         anchors.topMargin: -1
-        number: ""
+        number: "2"
         value: "0.0"
     }
 
@@ -317,8 +195,7 @@ Item {
         id: tempReturnNum
         anchors.left: tempAmbNum.left
         anchors.top: step3Img.top
-        anchors.topMargin: -1
-        number: ""
+        number: "3"
         value: "0.0"
     }
 
@@ -326,8 +203,7 @@ Item {
         id: flowReturnNum
         anchors.left: tempAmbNum.left
         anchors.top: step4Img.top
-        anchors.topMargin: -1
-        number: ""
+        number: "4"
         value: "0.0"
     }
 
@@ -335,8 +211,7 @@ Item {
         id: vNozzleNum
         anchors.left: tempAmbNum.left
         anchors.top: step5Img.top
-        anchors.topMargin: -1
-        number: ""
+        number: "5"
         value: "0.0"
     }
 
@@ -344,8 +219,7 @@ Item {
         id: rthNum
         anchors.left: tempAmbNum.left
         anchors.top: step6Img.top
-        anchors.topMargin: -1
-        number: ""
+        number: "6"
         value: "0.0"
     }
 
@@ -353,8 +227,7 @@ Item {
         id: cpiNum
         anchors.left: tempAmbNum.left
         anchors.top: step7Img.top
-        anchors.topMargin: -1
-        number: ""
+        number: "7"
         value: "0.0"
     }
 
@@ -362,8 +235,7 @@ Item {
         id: flowReturnHP1Num
         x: 785
         anchors.top: step1Img.top
-        anchors.topMargin: -1
-        number: ""
+        number: "1"
         value: "0.0"
     }
 
@@ -371,8 +243,7 @@ Item {
         id: flowReturnHP2Num
         anchors.left: flowReturnHP1Num.left
         anchors.top: step2Img.top
-        anchors.topMargin: -1
-        number: ""
+        number: "2"
         value: "0.0"
     }
 
@@ -380,8 +251,7 @@ Item {
         id: flowReturnHP3Num
         anchors.left: flowReturnHP1Num.left
         anchors.top: step3Img.top
-        anchors.topMargin: -1
-        number: ""
+        number: "3"
         value: "0.0"
     }
 
@@ -389,8 +259,7 @@ Item {
         id: flowReturnHP4Num
         anchors.left: flowReturnHP1Num.left
         anchors.top: step4Img.top
-        anchors.topMargin: -1
-        number: ""
+        number: "4"
         value: "0.0"
     }
 
@@ -398,8 +267,7 @@ Item {
         id: vacuumHP1Num
         x: 273
         anchors.top: step1Img.top
-        anchors.topMargin: -1
-        number: ""
+        number: "1"
         value: "0.0"
     }
 
@@ -407,8 +275,7 @@ Item {
         id: vacuumHP2Num
         anchors.left: vacuumHP1Num.left
         anchors.top: step2Img.top
-        anchors.topMargin: -1
-        number: ""
+        number: "2"
         value: "0.0"
     }
 
@@ -416,8 +283,7 @@ Item {
         id: vacuumHP3Num
         anchors.left: vacuumHP1Num.left
         anchors.top: step3Img.top
-        anchors.topMargin: -1
-        number: ""
+        number: "3"
         value: "0.0"
     }
 
@@ -425,8 +291,7 @@ Item {
         id: vacuumHP4Num
         anchors.left: vacuumHP1Num.left
         anchors.top: step4Img.top
-        anchors.topMargin: -1
-        number: ""
+        number: "4"
         value: "0.0"
     }
 
@@ -434,7 +299,6 @@ Item {
         id: fatigueTimeNum
         x: 64
         y: 512
-        anchors.topMargin: -1
         number: ""
         value: "0.0"
     }
@@ -443,7 +307,6 @@ Item {
         id: fatigueErr1Num
         x: 128
         y: 691
-        anchors.topMargin: -1
         number: ""
         value: "0.0"
     }
@@ -452,7 +315,6 @@ Item {
         id: fatigueErr2Num
         x: 294
         anchors.top: fatigueErr1Num.top
-        anchors.topMargin: -1
         number: ""
         value: "0.0"
     }
@@ -461,7 +323,6 @@ Item {
         id: fatigueErr3Num
         x: 461
         anchors.top: fatigueErr1Num.top
-        anchors.topMargin: -1
         number: ""
         value: "0.0"
     }
@@ -470,7 +331,6 @@ Item {
         id: fatigueErr4Num
         x: 627
         anchors.top: fatigueErr1Num.top
-        anchors.topMargin: -1
         number: ""
         value: "0.0"
     }
@@ -479,7 +339,6 @@ Item {
         id: fatigueErr5Num
         x: 794
         anchors.top: fatigueErr1Num.top
-        anchors.topMargin: -1
         number: ""
         value: "0.0"
     }
@@ -490,6 +349,8 @@ Item {
         y: 602
         onStateImageSource: "images/b028_BotonAvisosMarcaAgua.png"
         offStateImageSource: "images/b029_BotonAvisosPress.png"
+        offPressedStateImageSource: "images/b028_BotonAvisosMarcaAgua.png"
+        onPressedStateImageSource: "images/b029_BotonAvisosPress.png"
     }
 }
 
