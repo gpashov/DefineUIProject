@@ -4,11 +4,12 @@ import QtQuick.Controls 2.15
 Item {
     property alias number: numberText.text
     property alias value: valueText.text
+    property alias valueTextHorizontalAlignment: valueText.horizontalAlignment
 
     Text {
         id: numberText
         x: 0
-        y: 4
+        y: 6
         width: 45
         height: 48
         text: "0"
@@ -29,7 +30,7 @@ Item {
     Text {
         id: valueText
         x: 77
-        y: 6
+        y: 5
         width: 125
         height: 48
         text: "0.0"
@@ -42,6 +43,6 @@ Item {
 
 /*##^##
 Designer {
-    D{i:0;autoSize:true;height:0;width:0}
+    D{i:0;autoSize:true;height:68;width:160}
 }
 ##^##*/

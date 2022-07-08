@@ -69,6 +69,7 @@ void CallbackWrapper::butCalc()
 
 void CallbackWrapper::butData()
 {
+    argWidget.id = APP_GUI_NUM_WIDGETS; // Set it to an unused value
     CBKbutDataF(&argWidget);
 }
 
@@ -258,6 +259,7 @@ void CallbackWrapper::butPopUpTstVacManual(EAppGUIwidgetIDlist widgetId)
 
 void CallbackWrapper::butPopUpTstVacAuto()
 {
+    argWidget.id = APP_GUI_NUM_WIDGETS; // Set it to an unused value
     CBKbutPopUpTstVacAutoF(&argWidget);
 }
 
@@ -319,21 +321,25 @@ void CallbackWrapper::buttonCECalc()
 
 void CallbackWrapper::butSoftUpdateCfg()
 {
+    argWidget.id = APP_GUI_NUM_WIDGETS; // Set it to an unused value
     CBKbutSoftUpdateCfgF(&argWidget);
 }
 
 void CallbackWrapper::butRecargaCoolant()
 {
+    argWidget.id = APP_GUI_NUM_WIDGETS; // Set it to an unused value
     CBKbutRecargaCoolantF(&argWidget);
 }
 
 void CallbackWrapper::swResuctionsVierew()
 {
+    argWidget.id = APP_GUI_NUM_WIDGETS; // Set it to an unused value
     CBKswResuctionsVierewF(&argWidget);
 }
 
 void CallbackWrapper::swCfgTemperatureViewer()
 {
+    argWidget.id = APP_GUI_NUM_WIDGETS; // Set it to an unused value
     CBKswCfgTemperatureViewerF(&argWidget);
 }
 
@@ -353,6 +359,7 @@ void CallbackWrapper::butCleanUpHP(EAppGUI_HPsIDs hpIndex)
 
 void CallbackWrapper::butCleanUpHPround()
 {
+    argWidget.id = APP_GUI_NUM_WIDGETS; // Set it to an unused value
     CBKbutCleanUpHProundF(&argWidget);
 }
 
@@ -441,62 +448,74 @@ void CallbackWrapper::butPopUpCleanUpCancel(EAppGUI_HPsIDs hpIndex)
 
 void CallbackWrapper::butSATnextPage()
 {
-
+    argWidget.id = APP_GUI_NUM_WIDGETS; // Set it to an unused value
+    CBKbutSATnextPageF(&argWidget);
 }
 
 void CallbackWrapper::butSATprevPage()
 {
-
+    argWidget.id = APP_GUI_NUM_WIDGETS; // Set it to an unused value
+    CBKbutSATprevPageF(&argWidget);
 }
 
 void CallbackWrapper::swSATVacOn()
 {
-
+    argWidget.id = APP_GUI_NUM_WIDGETS; // Set it to an unused value
+    CBKswSATVacOnF(&argWidget);
 }
 
 void CallbackWrapper::swSATVacOff()
 {
-
+    argWidget.id = APP_GUI_NUM_WIDGETS; // Set it to an unused value
+    CBKswSATVacOffF(&argWidget);
 }
 
 void CallbackWrapper::swSATFrioOn()
 {
-
+    argWidget.id = APP_GUI_NUM_WIDGETS; // Set it to an unused value
+    CBKswSATFrioOnF(&argWidget);
 }
 
 void CallbackWrapper::swSATFrioOff()
 {
-
+    argWidget.id = APP_GUI_NUM_WIDGETS; // Set it to an unused value
+    CBKswSATFrioOffF(&argWidget);
 }
 
 void CallbackWrapper::swSATrfidOn()
 {
-
+    argWidget.id = APP_GUI_NUM_WIDGETS; // Set it to an unused value
+    CBKswSATrfidOnF(&argWidget);
 }
 
 void CallbackWrapper::swSATrfidOff()
 {
-
+    argWidget.id = APP_GUI_NUM_WIDGETS; // Set it to an unused value
+    CBKswSATrfidOffF(&argWidget);
 }
 
 void CallbackWrapper::swSATtestLedOn()
 {
-
+    argWidget.id = APP_GUI_NUM_WIDGETS; // Set it to an unused value
+    CBKswSATtestLedOnF(&argWidget);
 }
 
 void CallbackWrapper::swSATtestLedOff()
 {
-
+    argWidget.id = APP_GUI_NUM_WIDGETS; // Set it to an unused value
+    CBKswSATtestLedOffF(&argWidget);
 }
 
 void CallbackWrapper::swSATtestLedRGBOn()
 {
-
+    argWidget.id = APP_GUI_NUM_WIDGETS; // Set it to an unused value
+    CBKswSATtestLedRGBOnF(&argWidget);
 }
 
 void CallbackWrapper::swSATtestLedRGBOff()
 {
-
+    argWidget.id = APP_GUI_NUM_WIDGETS; // Set it to an unused value
+    CBKswSATtestLedRGBOffF(&argWidget);
 }
 
 void CallbackWrapper::swFATIGUEfailBelloff()

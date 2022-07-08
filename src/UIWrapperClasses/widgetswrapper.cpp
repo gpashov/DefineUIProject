@@ -154,7 +154,7 @@ void WidgetsWrapper::GUIsetSwitchStatus(uint32 id, uint8 OnOff)
     case SwDotZone11:
     case SwDotZone12:
     case SwDotZone13:
-    case SwDotZone14: dotZoneSelected((EAppGUIwidgetIDlist)id, (bool)OnOff); break;
+    case SwDotZone14: emit dotZoneSelected((EAppGUIwidgetIDlist)id, (bool)OnOff); break;
     case SwPopUpTstVacLowLvl: break;
     case SwPopUpTstVacMidLvl: break;
     case SwPopUpTstVacHighLvl: break;
@@ -176,11 +176,11 @@ void WidgetsWrapper::GUIsetSwitchStatus(uint32 id, uint8 OnOff)
     case SwLanJapones: break;
     case SwLanCoreano: break;
     case SwLanScrAvisos: break;
-    case SwVacuum: break;
-    case SwFrio: break;
+    case SwVacuum: emit satScreenSwVacuumSet(OnOff); break;
+    case SwFrio: emit satScreenSwFrioSet(OnOff); break;
     case SwRFID: break;
-    case SwTestLed: break;
-    case SwTestLedRGB: break;
+    case SwTestLed: emit satScreenSwTestLedSet(OnOff); break;
+    case SwTestLedRGB: emit satScreenSwTestLedRGBSet(OnOff); break;
     case SwFatigueFailBeep: break;
     default: /* Do nothing */ break;
     }

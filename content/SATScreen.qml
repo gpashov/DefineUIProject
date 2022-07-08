@@ -6,23 +6,16 @@ Item {
     width: 1024
     height: 768
 
-    TwoStateButton {
-        id: homeButton
-        y: 678
-        imageSourceReleased: "images/b013_BotonHomePress.png"
-        imageSourcePressed: "images/b014_BotonHomeRls.png"
-        button.onReleased: cbkWpr.butHome()
-    }
 
-    Text {
+    SATValue {
         id: pageText
-        x: 141
+        x: 79
         y: 691
-        color: "#015e76"
-        text: "0"
-        font.pixelSize: 24
-        horizontalAlignment: Text.AlignHCenter
-        font.family: "Verdana"
+        width: 160
+        height: 68
+        number: ""
+        value: "0-9"
+        valueTextHorizontalAlignment: Text.AlignHCenter
     }
 
     TwoStateButton {
@@ -41,890 +34,15 @@ Item {
         imageSourceReleased: "images/c202_BotonGuardarMenuLeftPress.png"
         imageSourcePressed: "images/c203_BotonGuardarMenuLeftRls.png"
     }
-/*
-    Image {
-        id: num1
-        x: 26
-        y: 77
-        source: "images/c052_Numero1.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num2
-        y: 166
-        anchors.left: num1.left
-        source: "images/c053_Numero2.png"
-        anchors.leftMargin: 0
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num3
-        y: 256
-        anchors.left: num1.left
-        source: "images/c054_Numero3.png"
-        anchors.leftMargin: 0
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num4
-        y: 346
-        anchors.left: num1.left
-        source: "images/c055_Numero4.png"
-        anchors.leftMargin: 0
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num5
-        y: 435
-        anchors.left: num1.left
-        source: "images/c056_Numero5.png"
-        anchors.leftMargin: 0
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num6
-        y: 525
-        anchors.left: num1.left
-        source: "images/c057_Numero6.png"
-        anchors.leftMargin: 0
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num7
-        y: 614
-        anchors.left: num1.left
-        source: "images/c058_Numero7.png"
-        anchors.leftMargin: 0
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num8
-        x: 269
-        anchors.top: num1.top
-        source: "images/c059_Numero8.png"
-        anchors.topMargin: 0
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num9
-        anchors.left: num8.left
-        anchors.top: num2.top
-        source: "images/c060_Numero9.png"
-        anchors.leftMargin: 0
-        anchors.topMargin: 0
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num10_1
-        x: 236
-        anchors.top: num3.top
-        source: "images/c052_Numero1.png"
-        anchors.topMargin: 0
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num10_2
-        anchors.left: num8.left
-        anchors.top: num3.top
-        source: "images/c061_Numero0.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num11_1
-        anchors.left: num10_1.left
-        anchors.top: num4.top
-        source: "images/c052_Numero1.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num11_2
-        anchors.left: num8.left
-        anchors.top: num4.top
-        source: "images/c052_Numero1.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num12_1
-        anchors.left: num10_1.left
-        anchors.top: num5.top
-        source: "images/c052_Numero1.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num12_2
-        anchors.left: num8.left
-        anchors.top: num5.top
-        source: "images/c053_Numero2.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num13_1
-        anchors.left: num10_1.left
-        anchors.top: num6.top
-        source: "images/c052_Numero1.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num13_2
-        anchors.left: num8.left
-        anchors.top: num6.top
-        source: "images/c054_Numero3.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num14_1
-        anchors.left: num10_1.left
-        anchors.top: num7.top
-        source: "images/c052_Numero1.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num14_2
-        anchors.left: num8.left
-        anchors.top: num7.top
-        source: "images/c055_Numero4.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num15_1
-        x: 517
-        anchors.top: num1.top
-        source: "images/c052_Numero1.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num15_2
-        x: 550
-        anchors.top: num1.top
-        source: "images/c056_Numero5.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num16_1
-        anchors.left: num15_1.left
-        anchors.top: num2.top
-        source: "images/c052_Numero1.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num16_2
-        anchors.left: num15_2.left
-        anchors.top: num2.top
-        source: "images/c057_Numero6.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num17_1
-        anchors.left: num15_1.left
-        anchors.top: num3.top
-        source: "images/c052_Numero1.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num17_2
-        anchors.left: num15_2.left
-        anchors.top: num3.top
-        source: "images/c058_Numero7.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num18_1
-        anchors.left: num15_1.left
-        anchors.top: num4.top
-        source: "images/c052_Numero1.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num18_2
-        anchors.left: num15_2.left
-        anchors.top: num4.top
-        source: "images/c059_Numero8.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num19_1
-        anchors.left: num15_1.left
-        anchors.top: num5.top
-        source: "images/c052_Numero1.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num19_2
-        anchors.left: num15_2.left
-        anchors.top: num5.top
-        source: "images/c060_Numero9.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num20_1
-        anchors.left: num15_1.left
-        anchors.top: num6.top
-        source: "images/c053_Numero2.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num20_2
-        anchors.left: num15_2.left
-        anchors.top: num6.top
-        source: "images/c061_Numero0.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num21_1
-        anchors.left: num15_1.left
-        anchors.top: num7.top
-        source: "images/c053_Numero2.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num21_2
-        anchors.left: num15_2.left
-        anchors.top: num7.top
-        source: "images/c052_Numero1.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num22_1
-        x: 773
-        anchors.top: num1.top
-        source: "images/c053_Numero2.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num22_2
-        x: 806
-        anchors.top: num1.top
-        source: "images/c053_Numero2.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num23_1
-        anchors.left: num22_1.left
-        anchors.top: num2.top
-        source: "images/c053_Numero2.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num23_2
-        anchors.left: num22_2.left
-        anchors.top: num2.top
-        source: "images/c054_Numero3.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num24_1
-        anchors.left: num22_1.left
-        anchors.top: num3.top
-        source: "images/c053_Numero2.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num24_2
-        anchors.left: num22_2.left
-        anchors.top: num3.top
-        source: "images/c055_Numero4.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num25_1
-        anchors.left: num22_1.left
-        anchors.top: num4.top
-        source: "images/c053_Numero2.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num25_2
-        anchors.left: num22_2.left
-        anchors.top: num4.top
-        source: "images/c056_Numero5.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num26_1
-        anchors.left: num22_1.left
-        anchors.top: num5.top
-        source: "images/c053_Numero2.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num26_2
-        anchors.left: num22_2.left
-        anchors.top: num5.top
-        source: "images/c057_Numero6.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num27_1
-        anchors.left: num22_1.left
-        anchors.top: num6.top
-        source: "images/c053_Numero2.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num27_2
-        anchors.left: num22_2.left
-        anchors.top: num6.top
-        source: "images/c058_Numero7.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num28_1
-        anchors.left: num22_1.left
-        anchors.top: num7.top
-        source: "images/c053_Numero2.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: num28_2
-        anchors.left: num22_2.left
-        anchors.top: num7.top
-        source: "images/c059_Numero8.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
-    Image {
-        id: valueBackgroundImg01
-        anchors.left: val01.left
-        anchors.top: val01.top
-        source: "images/c047_FondoNumVwrBlanco.png"
-    }
-
-    Text {
-        id: val01
-        x: 64
-        y: 64
-        width: 138
-        height: 59
-        text: "0.0"
-        color: "#015e76"
-        font.pixelSize: 36
-        horizontalAlignment: Text.AlignRight
-        verticalAlignment: Text.AlignVCenter
-        font.family: "Verdana"
-    }
-
-    Image {
-        id: valueBackgroundImg02
-        anchors.left: val01.left
-        anchors.top: val02.top
-        source: "images/c047_FondoNumVwrBlanco.png"
-    }
-
-    Text {
-        id: val02
-        anchors.left: val01.left
-        y: 154
-        width: 138
-        height: 59
-        text: "0.0"
-        color: "#015e76"
-        font.pixelSize: 36
-        horizontalAlignment: Text.AlignRight
-        verticalAlignment: Text.AlignVCenter
-        font.family: "Verdana"
-    }
-
-    Image {
-        id: valueBackgroundImg03
-        anchors.left: val01.left
-        anchors.top: val03.top
-        source: "images/c047_FondoNumVwrBlanco.png"
-    }
-
-    Text {
-        id: val03
-        anchors.left: val01.left
-        y: 243
-        width: 138
-        height: 59
-        text: "0.0"
-        color: "#015e76"
-        font.pixelSize: 36
-        horizontalAlignment: Text.AlignRight
-        verticalAlignment: Text.AlignVCenter
-        font.family: "Verdana"
-    }
-
-    Image {
-        id: valueBackgroundImg04
-        anchors.left: val01.left
-        anchors.top: val04.top
-        source: "images/c047_FondoNumVwrBlanco.png"
-    }
-
-    Text {
-        id: val04
-        anchors.left: val01.left
-        y: 333
-        width: 138
-        height: 59
-        text: "0.0"
-        color: "#015e76"
-        font.pixelSize: 36
-        horizontalAlignment: Text.AlignRight
-        verticalAlignment: Text.AlignVCenter
-        font.family: "Verdana"
-    }
-
-    Image {
-        id: valueBackgroundImg05
-        anchors.left: val01.left
-        anchors.top: val05.top
-        source: "images/c047_FondoNumVwrBlanco.png"
-    }
-
-    Text {
-        id: val05
-        anchors.left: val01.left
-        y: 422
-        width: 138
-        height: 59
-        text: "0.0"
-        color: "#015e76"
-        font.pixelSize: 36
-        horizontalAlignment: Text.AlignRight
-        verticalAlignment: Text.AlignVCenter
-        font.family: "Verdana"
-    }
-
-    Image {
-        id: valueBackgroundImg06
-        anchors.left: val01.left
-        anchors.top: val06.top
-        source: "images/c047_FondoNumVwrBlanco.png"
-    }
-
-    Text {
-        id: val06
-        anchors.left: val01.left
-        y: 512
-        width: 138
-        height: 59
-        text: "0.0"
-        color: "#015e76"
-        font.pixelSize: 36
-        horizontalAlignment: Text.AlignRight
-        verticalAlignment: Text.AlignVCenter
-        font.family: "Verdana"
-    }
-
-    Image {
-        id: valueBackgroundImg07
-        anchors.left: val01.left
-        anchors.top: val07.top
-        source: "images/c047_FondoNumVwrBlanco.png"
-    }
-
-    Text {
-        id: val07
-        anchors.left: val01.left
-        y: 602
-        width: 138
-        height: 59
-        text: "0.0"
-        color: "#015e76"
-        font.pixelSize: 36
-        horizontalAlignment: Text.AlignRight
-        verticalAlignment: Text.AlignVCenter
-        font.family: "Verdana"
-    }
-
-    Image {
-        id: valueBackgroundImg08
-        anchors.left: val08.left
-        anchors.top: val08.top
-        source: "images/c047_FondoNumVwrBlanco.png"
-    }
-
-    Text {
-        id: val08
-        x: 307
-        anchors.top: val01.top
-        width: 138
-        height: 59
-        text: "0.0"
-        color: "#015e76"
-        font.pixelSize: 36
-        horizontalAlignment: Text.AlignRight
-        verticalAlignment: Text.AlignVCenter
-        font.family: "Verdana"
-    }
-
-    Image {
-        id: valueBackgroundImg09
-        anchors.left: val08.left
-        anchors.top: val09.top
-        source: "images/c047_FondoNumVwrBlanco.png"
-    }
-
-    Text {
-        id: val09
-        anchors.left: val08.left
-        anchors.top: val02.top
-        width: 138
-        height: 59
-        text: "0.0"
-        color: "#015e76"
-        font.pixelSize: 36
-        horizontalAlignment: Text.AlignRight
-        verticalAlignment: Text.AlignVCenter
-        font.family: "Verdana"
-    }
-
-    Image {
-        id: valueBackgroundImg10
-        anchors.left: val08.left
-        anchors.top: val10.top
-        source: "images/c047_FondoNumVwrBlanco.png"
-    }
-
-    Text {
-        id: val10
-        anchors.left: val08.left
-        anchors.top: val03.top
-        width: 138
-        height: 59
-        text: "0.0"
-        color: "#015e76"
-        font.pixelSize: 36
-        horizontalAlignment: Text.AlignRight
-        verticalAlignment: Text.AlignVCenter
-        font.family: "Verdana"
-    }
-
-    Image {
-        id: valueBackgroundImg11
-        anchors.left: val08.left
-        anchors.top: val11.top
-        source: "images/c047_FondoNumVwrBlanco.png"
-    }
-
-    Text {
-        id: val11
-        anchors.left: val08.left
-        anchors.top: val04.top
-        width: 138
-        height: 59
-        text: "0.0"
-        color: "#015e76"
-        font.pixelSize: 36
-        horizontalAlignment: Text.AlignRight
-        verticalAlignment: Text.AlignVCenter
-        font.family: "Verdana"
-    }
-
-    Image {
-        id: valueBackgroundImg12
-        anchors.left: val08.left
-        anchors.top: val12.top
-        source: "images/c047_FondoNumVwrBlanco.png"
-    }
-
-    Text {
-        id: val12
-        anchors.left: val08.left
-        anchors.top: val05.top
-        width: 138
-        height: 59
-        text: "0.0"
-        color: "#015e76"
-        font.pixelSize: 36
-        horizontalAlignment: Text.AlignRight
-        verticalAlignment: Text.AlignVCenter
-        font.family: "Verdana"
-    }
-
-    Image {
-        id: valueBackgroundImg13
-        anchors.left: val08.left
-        anchors.top: val13.top
-        source: "images/c047_FondoNumVwrBlanco.png"
-    }
-
-    Text {
-        id: val13
-        anchors.left: val08.left
-        anchors.top: val06.top
-        width: 138
-        height: 59
-        text: "0.0"
-        color: "#015e76"
-        font.pixelSize: 36
-        horizontalAlignment: Text.AlignRight
-        verticalAlignment: Text.AlignVCenter
-        font.family: "Verdana"
-    }
-
-    Image {
-        id: valueBackgroundImg14
-        anchors.left: val08.left
-        anchors.top: val14.top
-        source: "images/c047_FondoNumVwrBlanco.png"
-    }
-
-    Text {
-        id: val14
-        anchors.left: val08.left
-        anchors.top: val07.top
-        width: 138
-        height: 59
-        text: "0.0"
-        color: "#015e76"
-        font.pixelSize: 36
-        horizontalAlignment: Text.AlignRight
-        verticalAlignment: Text.AlignVCenter
-        font.family: "Verdana"
-    }
-
-    Image {
-        id: valueBackgroundImg15
-        anchors.left: val15.left
-        anchors.top: val15.top
-        source: "images/c047_FondoNumVwrBlanco.png"
-    }
-
-    Text {
-        id: val15
-        x: 559
-        anchors.top: val01.top
-        width: 138
-        height: 59
-        text: "0.0"
-        color: "#015e76"
-        font.pixelSize: 36
-        horizontalAlignment: Text.AlignRight
-        verticalAlignment: Text.AlignVCenter
-        font.family: "Verdana"
-    }
-
-    Text {
-        id: val16
-        anchors.left: val15.left
-        anchors.top: val02.top
-        width: 138
-        height: 59
-        text: "0.0"
-        color: "#015e76"
-        font.pixelSize: 36
-        horizontalAlignment: Text.AlignRight
-        verticalAlignment: Text.AlignVCenter
-        font.family: "Verdana"
-    }
-
-    Text {
-        id: val17
-        anchors.left: val15.left
-        anchors.top: val03.top
-        width: 138
-        height: 59
-        text: "0.0"
-        color: "#015e76"
-        font.pixelSize: 36
-        horizontalAlignment: Text.AlignRight
-        verticalAlignment: Text.AlignVCenter
-        font.family: "Verdana"
-    }
-
-    Text {
-        id: val18
-        anchors.left: val15.left
-        anchors.top: val04.top
-        width: 138
-        height: 59
-        text: "0.0"
-        color: "#015e76"
-        font.pixelSize: 36
-        horizontalAlignment: Text.AlignRight
-        verticalAlignment: Text.AlignVCenter
-        font.family: "Verdana"
-    }
-
-    Text {
-        id: val19
-        anchors.left: val16.left
-        anchors.top: val05.top
-        width: 138
-        height: 59
-        text: "0.0"
-        color: "#015e76"
-        font.pixelSize: 36
-        horizontalAlignment: Text.AlignRight
-        verticalAlignment: Text.AlignVCenter
-        font.family: "Verdana"
-    }
-
-    Text {
-        id: val20
-        anchors.left: val17.left
-        anchors.top: val06.top
-        width: 138
-        height: 59
-        text: "0.0"
-        color: "#015e76"
-        font.pixelSize: 36
-        horizontalAlignment: Text.AlignRight
-        verticalAlignment: Text.AlignVCenter
-        font.family: "Verdana"
-    }
-
-    Text {
-        id: val21
-        anchors.left: val18.left
-        anchors.top: val07.top
-        width: 138
-        height: 59
-        text: "0.0"
-        color: "#015e76"
-        font.pixelSize: 36
-        horizontalAlignment: Text.AlignRight
-        verticalAlignment: Text.AlignVCenter
-        font.family: "Verdana"
-    }
 
-    Text {
-        id: val22
-        x: 845
-        anchors.top: val01.top
-        width: 138
-        height: 59
-        text: "0.0"
-        color: "#015e76"
-        font.pixelSize: 36
-        horizontalAlignment: Text.AlignRight
-        verticalAlignment: Text.AlignVCenter
-        font.family: "Verdana"
+    TwoStateButton {
+        id: homeButton
+        y: 678
+        imageSourceReleased: "images/b013_BotonHomePress.png"
+        imageSourcePressed: "images/b014_BotonHomeRls.png"
+        button.onReleased: cbkWpr.butHome()
     }
 
-    Text {
-        id: val23
-        anchors.left: val22.left
-        anchors.top: val02.top
-        width: 138
-        height: 59
-        text: "0.0"
-        color: "#015e76"
-        font.pixelSize: 36
-        horizontalAlignment: Text.AlignRight
-        verticalAlignment: Text.AlignVCenter
-        font.family: "Verdana"
-    }
-
-    Text {
-        id: val24
-        anchors.left: val22.left
-        anchors.top: val03.top
-        width: 138
-        height: 59
-        text: "0.0"
-        color: "#015e76"
-        font.pixelSize: 36
-        horizontalAlignment: Text.AlignRight
-        verticalAlignment: Text.AlignVCenter
-        font.family: "Verdana"
-    }
-
-    Text {
-        id: val25
-        anchors.left: val22.left
-        anchors.top: val04.top
-        width: 138
-        height: 59
-        text: "0.0"
-        color: "#015e76"
-        font.pixelSize: 36
-        horizontalAlignment: Text.AlignRight
-        verticalAlignment: Text.AlignVCenter
-        font.family: "Verdana"
-    }
-
-    Text {
-        id: val26
-        anchors.left: val22.left
-        anchors.top: val05.top
-        width: 138
-        height: 59
-        text: "0.0"
-        color: "#015e76"
-        font.pixelSize: 36
-        horizontalAlignment: Text.AlignRight
-        verticalAlignment: Text.AlignVCenter
-        font.family: "Verdana"
-    }
-
-    Text {
-        id: val27
-        anchors.left: val22.left
-        anchors.top: val06.top
-        width: 138
-        height: 59
-        text: "0.0"
-        color: "#015e76"
-        font.pixelSize: 36
-        horizontalAlignment: Text.AlignRight
-        verticalAlignment: Text.AlignVCenter
-        font.family: "Verdana"
-    }
-
-    Text {
-        id: val28
-        anchors.left: val22.left
-        anchors.top: val07.top
-        width: 138
-        height: 59
-        text: "0.0"
-        color: "#015e76"
-        font.pixelSize: 36
-        horizontalAlignment: Text.AlignRight
-        verticalAlignment: Text.AlignVCenter
-        font.family: "Verdana"
-    }
-*/
     Image {
         id: coolImg
         x: 397
@@ -953,7 +71,7 @@ Item {
         id: testLedImg
         x: 730
         y: 653
-        source: "images/c184_IndicadorBotonHP1Off.png"
+        source: "images/c438_HPalarmaPlicainsuficiente.png"
         fillMode: Image.PreserveAspectFit
     }
 
@@ -961,7 +79,7 @@ Item {
         id: testLedStatusImg
         x: 755
         y: 678
-        source: "images/c184_IndicadorBotonHP1Off.png"
+        source: "images/c453_MenuAlarmaOK_MarcaAgua.png"
         fillMode: Image.PreserveAspectFit
     }
 
@@ -979,6 +97,10 @@ Item {
         y: 717
         offStateImageSource: "images/c045_BotonAutoRls.png"
         onStateImageSource: "images/c044_BotonAutoPress.png"
+        offPressedStateImageSource: "images/c044_BotonAutoPress.png"
+        onPressedStateImageSource: "images/c045_BotonAutoRls.png"
+        onOnAction: cbkWpr.swSATFrioOn()
+        onOffAction: cbkWpr.swSATFrioOff()
     }
 
     CustomSwitch {
@@ -987,6 +109,10 @@ Item {
         y: 717
         offStateImageSource: "images/c045_BotonAutoRls.png"
         onStateImageSource: "images/c044_BotonAutoPress.png"
+        offPressedStateImageSource: "images/c044_BotonAutoPress.png"
+        onPressedStateImageSource: "images/c045_BotonAutoRls.png"
+        onOnAction: cbkWpr.swSATVacOn()
+        onOffAction: cbkWpr.swSATVacOff()
     }
 
     CustomSwitch {
@@ -995,6 +121,10 @@ Item {
         y: 717
         offStateImageSource: "images/c045_BotonAutoRls.png"
         onStateImageSource: "images/c044_BotonAutoPress.png"
+        offPressedStateImageSource: "images/c044_BotonAutoPress.png"
+        onPressedStateImageSource: "images/c045_BotonAutoRls.png"
+        onOnAction: cbkWpr.swSATrfidOn()
+        onOffAction: cbkWpr.swSATrfidOff()
     }
 
     CustomSwitch {
@@ -1003,6 +133,10 @@ Item {
         y: 704
         offStateImageSource: "images/c045_BotonAutoRls.png"
         onStateImageSource: "images/c044_BotonAutoPress.png"
+        offPressedStateImageSource: "images/c044_BotonAutoPress.png"
+        onPressedStateImageSource: "images/c045_BotonAutoRls.png"
+        onOnAction: cbkWpr.swSATtestLedOn()
+        onOffAction: cbkWpr.swSATtestLedOff()
     }
 
     CustomSwitch {
@@ -1011,6 +145,16 @@ Item {
         y: 717
         offStateImageSource: "images/c045_BotonAutoRls.png"
         onStateImageSource: "images/c044_BotonAutoPress.png"
+        offPressedStateImageSource: "images/c044_BotonAutoPress.png"
+        onPressedStateImageSource: "images/c045_BotonAutoRls.png"
+    }
+
+    Connections {
+        target: wdgWpr
+        onSatScreenSwVacuumSet: (OnOff) => vacuumSwitch.state = OnOff ? "onState" : "offState"
+        onSatScreenSwFrioSet: (OnOff) => coolSwitch.state = OnOff ? "onState" : "offState"
+        onSatScreenSwTestLedSet: (OnOff) => testLedSwitch.state = OnOff ? "onState" : "offState"
+        onSatScreenSwTestLedRGBSet: (OnOff) => testLedRgbSwitch.state = OnOff ? "onState" : "offState"
     }
 
     SATValue {
@@ -1262,6 +406,6 @@ Item {
 
 /*##^##
 Designer {
-    D{i:0;formeditorZoom:0.2;height:0;width:0}
+    D{i:0;formeditorZoom:0.66;height:0;width:0}
 }
 ##^##*/

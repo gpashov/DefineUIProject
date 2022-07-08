@@ -1578,172 +1578,172 @@ void CBKbutPopUpCleanUpCancelF ( void *widget)
 
 void CBKbutSATnextPageF ( void *widget)
 {
-//	uint8 HPindex = 0;
+    uint8 HPindex = 0;
 	
-//	AppGUIdata.SATHandler.Page++;
-//	AppGUIdata.SATHandler.PageNum++;
+    AppGUIdata.SATHandler.Page = (cAppGUI_SATscreen_Pages)(AppGUIdata.SATHandler.Page + 1); // Increment an enumeration value
+    AppGUIdata.SATHandler.PageNum++;
 	
-//	switch(AppGUIdata.SATHandler.Page)
-//	{
-//		case HP1_Page:	HPindex = APP_GUI_HP1_ID;	break;
-//		case HP2_Page:	HPindex = APP_GUI_HP2_ID;	break;
-//		case HP3_Page:	HPindex = APP_GUI_HP3_ID;	break;
-//		case HP4_Page:	HPindex = APP_GUI_HP4_ID;	break;
-//		default:	break;
-//	}
+    switch(AppGUIdata.SATHandler.Page)
+    {
+        case HP1_Page:	HPindex = APP_GUI_HP1_ID;	break;
+        case HP2_Page:	HPindex = APP_GUI_HP2_ID;	break;
+        case HP3_Page:	HPindex = APP_GUI_HP3_ID;	break;
+        case HP4_Page:	HPindex = APP_GUI_HP4_ID;	break;
+        default:	break;
+    }
 	
-//	GUIsetSwitchStatus(SwVacuum, AppGUIdata.SATHandler.VacuumSwitch[HPindex]);
-//	GUIsetSwitchStatus(SwFrio, AppGUIdata.SATHandler.FrioSwitch[HPindex]);
-//	GUIsetSwitchStatus(SwTestLed, AppGUIdata.SATHandler.TestLedSwitch[HPindex]);
-//	GUIsetSwitchStatus(SwTestLedRGB, AppGUIdata.SATHandler.TestLedRGBSwitch[HPindex]);
+    wdgWpr.GUIsetSwitchStatus(SwVacuum, AppGUIdata.SATHandler.VacuumSwitch[HPindex]);
+    wdgWpr.GUIsetSwitchStatus(SwFrio, AppGUIdata.SATHandler.FrioSwitch[HPindex]);
+    wdgWpr.GUIsetSwitchStatus(SwTestLed, AppGUIdata.SATHandler.TestLedSwitch[HPindex]);
+    wdgWpr.GUIsetSwitchStatus(SwTestLedRGB, AppGUIdata.SATHandler.TestLedRGBSwitch[HPindex]);
 }
 
 void CBKbutSATprevPageF ( void *widget)
 {
-//	uint8 HPindex = 0;
+    uint8 HPindex = 0;
 	
-//	AppGUIdata.SATHandler.Page--;
-//	AppGUIdata.SATHandler.PageNum--;
+    AppGUIdata.SATHandler.Page = (cAppGUI_SATscreen_Pages)(AppGUIdata.SATHandler.Page - 1); // Decrement an enumeration value
+    AppGUIdata.SATHandler.PageNum--;
 	
-//	switch(AppGUIdata.SATHandler.Page)
-//	{
-//		case HP1_Page:	HPindex = APP_GUI_HP1_ID;	break;
-//		case HP2_Page:	HPindex = APP_GUI_HP2_ID;	break;
-//		case HP3_Page:	HPindex = APP_GUI_HP3_ID;	break;
-//		case HP4_Page:	HPindex = APP_GUI_HP4_ID;	break;
-//		default:	break;
-//	}
+    switch(AppGUIdata.SATHandler.Page)
+    {
+        case HP1_Page:	HPindex = APP_GUI_HP1_ID;	break;
+        case HP2_Page:	HPindex = APP_GUI_HP2_ID;	break;
+        case HP3_Page:	HPindex = APP_GUI_HP3_ID;	break;
+        case HP4_Page:	HPindex = APP_GUI_HP4_ID;	break;
+        default:	break;
+    }
 	
-//	GUIsetSwitchStatus(SwVacuum, AppGUIdata.SATHandler.VacuumSwitch[HPindex]);
-//	GUIsetSwitchStatus(SwFrio, AppGUIdata.SATHandler.FrioSwitch[HPindex]);
-//	GUIsetSwitchStatus(SwTestLed, AppGUIdata.SATHandler.TestLedSwitch[HPindex]);
-//	GUIsetSwitchStatus(SwTestLedRGB, AppGUIdata.SATHandler.TestLedRGBSwitch[HPindex]);
+    wdgWpr.GUIsetSwitchStatus(SwVacuum, AppGUIdata.SATHandler.VacuumSwitch[HPindex]);
+    wdgWpr.GUIsetSwitchStatus(SwFrio, AppGUIdata.SATHandler.FrioSwitch[HPindex]);
+    wdgWpr.GUIsetSwitchStatus(SwTestLed, AppGUIdata.SATHandler.TestLedSwitch[HPindex]);
+    wdgWpr.GUIsetSwitchStatus(SwTestLedRGB, AppGUIdata.SATHandler.TestLedRGBSwitch[HPindex]);
 }
 
 void CBKswSATVacOnF ( void *widget)
 {
-//	tHPcryoData *HP;
-//	tPRFdata *PRF;
-//	uint8 HPindex = 0;
-//	switch(AppGUIdata.SATHandler.Page)
-//	{
-//		case HP1_Page:	HPindex = APP_GUI_HP1_ID;	break;
-//		case HP2_Page:	HPindex = APP_GUI_HP2_ID;	break;
-//		case HP3_Page:	HPindex = APP_GUI_HP3_ID;	break;
-//		case HP4_Page:	HPindex = APP_GUI_HP4_ID;	break;
-//		default:	break;
-//	}
-//	AppGUIdata.SATHandler.VacuumSwitch[HPindex] = 1;
-//	AppGUIdata.SATHandler.FrioSwitch[HPindex] = 0;
-//	GUIsetSwitchStatus(SwFrio, AppGUIdata.SATHandler.FrioSwitch[HPindex]);
+    tHPcryoData *HP;
+    tPRFdata *PRF;
+    uint8 HPindex = 0;
+    switch(AppGUIdata.SATHandler.Page)
+    {
+        case HP1_Page:	HPindex = APP_GUI_HP1_ID;	break;
+        case HP2_Page:	HPindex = APP_GUI_HP2_ID;	break;
+        case HP3_Page:	HPindex = APP_GUI_HP3_ID;	break;
+        case HP4_Page:	HPindex = APP_GUI_HP4_ID;	break;
+        default:	break;
+    }
+    AppGUIdata.SATHandler.VacuumSwitch[HPindex] = 1;
+    AppGUIdata.SATHandler.FrioSwitch[HPindex] = 0;
+    wdgWpr.GUIsetSwitchStatus(SwFrio, AppGUIdata.SATHandler.FrioSwitch[HPindex]);
 	
-//	if(HPcryoGetFromSlot(HPindex+1, &HP, &PRF)){	HPcryoSATcoolingTestStop(HP, PRF);	}
+    if(HPcryoGetFromSlot((cPRFslot)(HPindex+1), &HP, &PRF)){	HPcryoSATcoolingTestStop(HP, PRF);	}
 }
 void CBKswSATVacOffF ( void *widget)
 {
-//	tHPcryoData *HP;
-//	tPRFdata *PRF;
-//	uint8 HPindex = 0;
-//	switch(AppGUIdata.SATHandler.Page)
-//	{
-//		case HP1_Page:	HPindex = APP_GUI_HP1_ID;	break;
-//		case HP2_Page:	HPindex = APP_GUI_HP2_ID;	break;
-//		case HP3_Page:	HPindex = APP_GUI_HP3_ID;	break;
-//		case HP4_Page:	HPindex = APP_GUI_HP4_ID;	break;
-//		default:	break;
-//	}
-//	AppGUIdata.SATHandler.VacuumSwitch[HPindex] = 0;
+    tHPcryoData *HP;
+    tPRFdata *PRF;
+    uint8 HPindex = 0;
+    switch(AppGUIdata.SATHandler.Page)
+    {
+        case HP1_Page:	HPindex = APP_GUI_HP1_ID;	break;
+        case HP2_Page:	HPindex = APP_GUI_HP2_ID;	break;
+        case HP3_Page:	HPindex = APP_GUI_HP3_ID;	break;
+        case HP4_Page:	HPindex = APP_GUI_HP4_ID;	break;
+        default:	break;
+    }
+    AppGUIdata.SATHandler.VacuumSwitch[HPindex] = 0;
 	
-//	if(HPcryoGetFromSlot(HPindex+1, &HP, &PRF)){	HPcryoSATvacumTestStop(HP, PRF);	}
+    if(HPcryoGetFromSlot((cPRFslot)(HPindex+1), &HP, &PRF)){	HPcryoSATvacumTestStop(HP, PRF);	}
 }
 void CBKswSATFrioOnF ( void *widget)
 {
-//	tHPcryoData *HP;
-//	tPRFdata *PRF;
-//	uint8 HPindex = 0;
-//	switch(AppGUIdata.SATHandler.Page)
-//	{
-//		case HP1_Page:	HPindex = APP_GUI_HP1_ID;	break;
-//		case HP2_Page:	HPindex = APP_GUI_HP2_ID;	break;
-//		case HP3_Page:	HPindex = APP_GUI_HP3_ID;	break;
-//		case HP4_Page:	HPindex = APP_GUI_HP4_ID;	break;
-//		default:	break;
-//	}
-//	AppGUIdata.SATHandler.VacuumSwitch[HPindex] = 0;
-//	AppGUIdata.SATHandler.FrioSwitch[HPindex] = 1;
-//	GUIsetSwitchStatus(SwVacuum, AppGUIdata.SATHandler.VacuumSwitch[HPindex]);
+    tHPcryoData *HP;
+    tPRFdata *PRF;
+    uint8 HPindex = 0;
+    switch(AppGUIdata.SATHandler.Page)
+    {
+        case HP1_Page:	HPindex = APP_GUI_HP1_ID;	break;
+        case HP2_Page:	HPindex = APP_GUI_HP2_ID;	break;
+        case HP3_Page:	HPindex = APP_GUI_HP3_ID;	break;
+        case HP4_Page:	HPindex = APP_GUI_HP4_ID;	break;
+        default:	break;
+    }
+    AppGUIdata.SATHandler.VacuumSwitch[HPindex] = 0;
+    AppGUIdata.SATHandler.FrioSwitch[HPindex] = 1;
+    wdgWpr.GUIsetSwitchStatus(SwVacuum, AppGUIdata.SATHandler.VacuumSwitch[HPindex]);
 	
-//	if(HPcryoGetFromSlot(HPindex+1, &HP, &PRF)){	HPcryoSATvacumTestStop(HP, PRF);	}
+    if(HPcryoGetFromSlot((cPRFslot)(HPindex+1), &HP, &PRF)){	HPcryoSATvacumTestStop(HP, PRF);	}
 }
 void CBKswSATFrioOffF ( void *widget)
 {
-//	tHPcryoData *HP;
-//	tPRFdata *PRF;
-//	uint8 HPindex = 0;
-//	switch(AppGUIdata.SATHandler.Page)
-//	{
-//		case HP1_Page:	HPindex = APP_GUI_HP1_ID;	break;
-//		case HP2_Page:	HPindex = APP_GUI_HP2_ID;	break;
-//		case HP3_Page:	HPindex = APP_GUI_HP3_ID;	break;
-//		case HP4_Page:	HPindex = APP_GUI_HP4_ID;	break;
-//		default:	break;
-//	}
-//	AppGUIdata.SATHandler.FrioSwitch[HPindex] = 0;
+    tHPcryoData *HP;
+    tPRFdata *PRF;
+    uint8 HPindex = 0;
+    switch(AppGUIdata.SATHandler.Page)
+    {
+        case HP1_Page:	HPindex = APP_GUI_HP1_ID;	break;
+        case HP2_Page:	HPindex = APP_GUI_HP2_ID;	break;
+        case HP3_Page:	HPindex = APP_GUI_HP3_ID;	break;
+        case HP4_Page:	HPindex = APP_GUI_HP4_ID;	break;
+        default:	break;
+    }
+    AppGUIdata.SATHandler.FrioSwitch[HPindex] = 0;
 	
-//	if(HPcryoGetFromSlot(HPindex+1, &HP, &PRF)){	HPcryoSATcoolingTestStop(HP, PRF);	}
+    if(HPcryoGetFromSlot((cPRFslot)(HPindex+1), &HP, &PRF)){	HPcryoSATcoolingTestStop(HP, PRF);	}
 }
 void CBKswSATrfidOnF ( void *widget)
 {
-//	AppGUIdata.SATHandler.RFIDSwitch = 1;
+    AppGUIdata.SATHandler.RFIDSwitch = 1;
 }
 void CBKswSATrfidOffF ( void *widget)
 {
-//	AppGUIdata.SATHandler.RFIDSwitch = 0;
+    AppGUIdata.SATHandler.RFIDSwitch = 0;
 }
 
 void CBKswSATtestLedOnF ( void *widget)
 {
-//	uint8 HPindex = 0;
-//	switch(AppGUIdata.SATHandler.Page)
-//	{
-//		case HP1_Page:	HPindex = APP_GUI_HP1_ID;	break;
-//		case HP2_Page:	HPindex = APP_GUI_HP2_ID;	break;
-//		case HP3_Page:	HPindex = APP_GUI_HP3_ID;	break;
-//		case HP4_Page:	HPindex = APP_GUI_HP4_ID;	break;
-//		default:	break;
-//	}
+    uint8 HPindex = 0;
+    switch(AppGUIdata.SATHandler.Page)
+    {
+        case HP1_Page:	HPindex = APP_GUI_HP1_ID;	break;
+        case HP2_Page:	HPindex = APP_GUI_HP2_ID;	break;
+        case HP3_Page:	HPindex = APP_GUI_HP3_ID;	break;
+        case HP4_Page:	HPindex = APP_GUI_HP4_ID;	break;
+        default:	break;
+    }
 	
-//	AppGUIdata.SATHandler.TestLedSwitch[HPindex] = 1;
+    AppGUIdata.SATHandler.TestLedSwitch[HPindex] = 1;
 }
 
 void CBKswSATtestLedOffF ( void *widget)
 {
-//	uint8 HPindex = 0;
-//	switch(AppGUIdata.SATHandler.Page)
-//	{
-//		case HP1_Page:	HPindex = APP_GUI_HP1_ID;	break;
-//		case HP2_Page:	HPindex = APP_GUI_HP2_ID;	break;
-//		case HP3_Page:	HPindex = APP_GUI_HP3_ID;	break;
-//		case HP4_Page:	HPindex = APP_GUI_HP4_ID;	break;
-//		default:	break;
-//	}
+    uint8 HPindex = 0;
+    switch(AppGUIdata.SATHandler.Page)
+    {
+        case HP1_Page:	HPindex = APP_GUI_HP1_ID;	break;
+        case HP2_Page:	HPindex = APP_GUI_HP2_ID;	break;
+        case HP3_Page:	HPindex = APP_GUI_HP3_ID;	break;
+        case HP4_Page:	HPindex = APP_GUI_HP4_ID;	break;
+        default:	break;
+    }
 	
-//	AppGUIdata.SATHandler.TestLedSwitch[HPindex] = 0;
+    AppGUIdata.SATHandler.TestLedSwitch[HPindex] = 0;
 }
 
 void CBKswSATtestLedRGBOnF ( void *widget)
 {
-//	uint8 HPindex = 0;
-//	switch(AppGUIdata.SATHandler.Page)
-//	{
-//		case HP1_Page:	HPindex = APP_GUI_HP1_ID;	break;
-//		case HP2_Page:	HPindex = APP_GUI_HP2_ID;	break;
-//		case HP3_Page:	HPindex = APP_GUI_HP3_ID;	break;
-//		case HP4_Page:	HPindex = APP_GUI_HP4_ID;	break;
-//		default:	break;
-//	}
+    uint8 HPindex = 0;
+    switch(AppGUIdata.SATHandler.Page)
+    {
+        case HP1_Page:	HPindex = APP_GUI_HP1_ID;	break;
+        case HP2_Page:	HPindex = APP_GUI_HP2_ID;	break;
+        case HP3_Page:	HPindex = APP_GUI_HP3_ID;	break;
+        case HP4_Page:	HPindex = APP_GUI_HP4_ID;	break;
+        default:	break;
+    }
 	
-//	AppGUIdata.SATHandler.TestLedRGBSwitch[HPindex] = 1;
+    AppGUIdata.SATHandler.TestLedRGBSwitch[HPindex] = 1;
 }
 void CBKswSATtestLedRGBOffF ( void *widget)
 {

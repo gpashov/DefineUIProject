@@ -80,6 +80,12 @@ signals:
     void confModelChanged(QString text);
     void confVersionChanged(QString text);
 
+    // SAT screen
+    void satScreenSwVacuumSet(bool OnOff);
+    void satScreenSwFrioSet(bool OnOff);
+    void satScreenSwTestLedSet(bool OnOff);
+    void satScreenSwTestLedRGBSet(bool OnOff);
+
     // Main menu
     void mainMenuOpened(bool menuOpened);
     void mainMenuEnabled(bool menuEnabled);
