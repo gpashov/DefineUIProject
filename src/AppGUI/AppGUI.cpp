@@ -943,61 +943,60 @@ void AppGUIhandleTstVacSMALLPopUp( uint8 show, uint8 HPindex)
 
 void AppGUIhandleRFIDpopUp( uint8 show, uint8 HPindex)
 {
-//    tPRFdata *PRF;
-//    tHPcryoData *HP;
-//    uint8 i;	//auxiliar
+    tPRFdata *PRF;
+    tHPcryoData *HP;
+    uint8 i;	//auxiliar
 	
-//    /* Según si se quiere mostrar o no */
-//    if( show)
-//    {
-//        /* Activar el popUp */
-//        GUIactivePopUp( PopUpRFID);
+    /* Según si se quiere mostrar o no */
+    if( show)
+    {
+        /* Activar el popUp */
+        wdgWpr.GUIactivePopUp( PopUpRFID);
 		
-//        /* Poner en la barra de color de HP la imagen adecuada */
-//        GUIsetImgViewerImage( imgPopUpHPcolorBar, APP_GUI_TRT_SCR_POPUP_COLOR_BAR_IMAGES[HPindex]);
+        /* Poner en la barra de color de HP la imagen adecuada */
+        wdgWpr.GUIrfidPopupChangeColorBar((EAppGUI_HPsIDs)HPindex);
 		
-//        /* Poner la imagen de la etiqueta que requiere */
-//        HPcryoGetFromSlot( APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF);
+        /* Poner la imagen de la etiqueta que requiere */
+        HPcryoGetFromSlot( (cPRFslot)APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF);
 		
-//        for (i = HP_CRYO_LABEL_ZO; i<HP_CRYO_NUM_LABELS; i++) 	//Recorremos todas las etiquetas
-//        {
-//            if (HP_CYRO_LABEL_REQUESTED[i][HPcryoGetModel( HP, PRF)] == HP_CRYO_DEFAULT)		//Una vez encontramos la etiqueta predeterminada para el manipulo en cuestión, la guardamos como solicitada
-//            {
-//                GUIsetImgViewerImage( imgPopUpRFIDlabel, APP_GUI_TRT_SCR_POPUP_RFID_LABELS_IMGS[i]);
-//            }
-//        }
+        for (i = HP_CRYO_LABEL_ZO; i<HP_CRYO_NUM_LABELS; i++) 	//Recorremos todas las etiquetas
+        {
+            if (HP_CYRO_LABEL_REQUESTED[i][HPcryoGetModel( HP, PRF)] == HP_CRYO_DEFAULT)		//Una vez encontramos la etiqueta predeterminada para el manipulo en cuestión, la guardamos como solicitada
+            {
+                wdgWpr.GUIsetImgViewerImage( ImgPopUpRFIDlabel, APP_GUI_TRT_SCR_POPUP_RFID_LABELS_IMGS[i]);
+            }
+        }
 		
-//        /* Poner si se ha leido si es Ok o no Ok la etiqueta leida */
-//        GUIsetImgViewerImage( imgPopUpRFIDresult, APP_GUI_TRT_SCR_POPUP_RFID_STATUS_IMGS[HP->trt.RFID_read_label]);
+        /* Poner si se ha leido si es Ok o no Ok la etiqueta leida */
+        wdgWpr.GUIsetImgViewerImage( ImgPopUpRFIDresult, APP_GUI_TRT_SCR_POPUP_RFID_STATUS_IMGS[HP->trt.RFID_read_label]);
 		
-//        if(AppGUIdata.RFIDhdlr.show_reuse_option)
-//        {
-//            GUIsetWidgetVisibility( NumVwrPopUpRFIDrestTime, EXP_UCreuseLabelAllow(PRF->IDperifHW));
-//            GUIsetNumViewerNum( NumVwrPopUpRFIDrestTime, AppGUIsecondsToClock(EXP_UCreuseLabelTRTtime(PRF->IDperifHW)), 2);
-//            GUIsetWidgetEnable( butPopUpRFIDreuseLabel, EXP_UCreuseLabelAllow(PRF->IDperifHW));
-//        }
-//        else
-//        {
-//            GUIsetWidgetVisibility( NumVwrPopUpRFIDrestTime, 0);
-//            GUIsetWidgetEnable( butPopUpRFIDreuseLabel, 0);
-//        }
+        if(AppGUIdata.RFIDhdlr.show_reuse_option)
+        {
+            wdgWpr.GUIsetWidgetVisibility( NumVwrPopUpRFIDrestTime, EXP_UCreuseLabelAllow(PRF->IDperifHW));
+            wdgWpr.GUIsetNumViewerNum( NumVwrPopUpRFIDrestTime, AppGUIsecondsToClock(EXP_UCreuseLabelTRTtime(PRF->IDperifHW)), 2);
+            wdgWpr.GUIsetWidgetEnable( ButPopUpRFIDreuseLabel, EXP_UCreuseLabelAllow(PRF->IDperifHW));
+        }
+        else
+        {
+            wdgWpr.GUIsetWidgetVisibility( NumVwrPopUpRFIDrestTime, 0);
+            wdgWpr.GUIsetWidgetEnable( ButPopUpRFIDreuseLabel, 0);
+        }
 			
-//    }
-//    else
-//    {
-//        /* Desactivamos el popUp */
-//        GUIdisablePopUp( PopUpRFID);
-//        if(HPcryoGetFromSlot( APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF)){	HP->trt.RFID_read_label = RFID_NO_LABEL;	}
-//        AppGUIdata.RFIDhdlr.show_reuse_option = 0;
-//        GUIsetWidgetVisibility( NumVwrPopUpRFIDrestTime, 0);
-//        GUIsetWidgetEnable( butPopUpRFIDreuseLabel, 0);
-//        /* Si la gestión de zona de tratamiento esta en zoom tenemos un glitch de un refresco en
-//         * el que el boton "Return" desaparece ya que el popUp lo deshabilita al quitarse pero
-//         * el handle de la zona de tratamiento lo volvera a poner. Para evitar esto ponemos el estado
-//         * del boton de return a visible y habilitado si la zona de tratamiento esta en zoom. Lo mas facil es
-//         * forzar un update de la zona */
-////		AppGUIhandleTrtZone();
-//    }
+    }
+    else
+    {
+        /* Desactivamos el popUp */
+        wdgWpr.GUIdisablePopUp( PopUpRFID);
+        if(HPcryoGetFromSlot( (cPRFslot)APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF)){	HP->trt.RFID_read_label = RFID_NO_LABEL;	}
+        AppGUIdata.RFIDhdlr.show_reuse_option = 0;
+
+        /* Si la gestión de zona de tratamiento esta en zoom tenemos un glitch de un refresco en
+         * el que el boton "Return" desaparece ya que el popUp lo deshabilita al quitarse pero
+         * el handle de la zona de tratamiento lo volvera a poner. Para evitar esto ponemos el estado
+         * del boton de return a visible y habilitado si la zona de tratamiento esta en zoom. Lo mas facil es
+         * forzar un update de la zona */
+//		AppGUIhandleTrtZone();
+    }
 }
 
 void AppGUIhandleRecommendationpopUp( uint8 show, uint8 selTrtDot, cAppGUIfullBodyAreas selTrtArea)

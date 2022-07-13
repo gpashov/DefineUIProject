@@ -1775,12 +1775,12 @@ void CBKbutOkSATerrF ( void *widget)
 
 void CBKbutReuseRFIDlabelF ( void *widget)
 {
-//	tHPcryoData *HP;
-//	tPRFdata *PRF;
-//	if(HPcryoGetFromSlot( APP_GUI_SLOT_DISTRIBUTION[AppGUIdata.RFIDhdlr.HPindex], &HP, &PRF))
-//	{
-//		HP->trt.Label_reuse = 1;
-//	}
+    tHPcryoData *HP;
+    tPRFdata *PRF;
+    if(HPcryoGetFromSlot( (cPRFslot)APP_GUI_SLOT_DISTRIBUTION[AppGUIdata.RFIDhdlr.HPindex], &HP, &PRF))
+    {
+        HP->trt.Label_reuse = 1;
+    }
 }
 
 void CBKLoadAnimationEnd()

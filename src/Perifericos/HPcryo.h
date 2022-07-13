@@ -388,7 +388,7 @@ typedef enum
 //extern const float HP_CRYO_TRT_TEMP_SET_POINT_FEATURES[HP_CRYO_NUM_HP_MODELS][HP_CRYO_TEMPERATURE_FEATURES];
 extern const uint32 HP_CRYO_TIME_LIST[HP_CRYO_MAX_TIME_LIST];
 //extern const cHPcryoTrtTimes HP_CRYO_TIME_LIST_PER_HP[HP_CRYO_NUM_HP_MODELS][HP_CRYO_MAX_TIME_LIST];
-//extern const uint8 HP_CYRO_LABEL_REQUESTED[HP_CRYO_NUM_LABELS][HP_CRYO_RFID_LABEL_AND_HP_TABLE_ELEMENTS];
+extern const uint8 HP_CYRO_LABEL_REQUESTED[HP_CRYO_NUM_LABELS][HP_CRYO_RFID_LABEL_AND_HP_TABLE_ELEMENTS];
 
 //extern const char HP_CRYO_LABEL_CODE [HP_CRYO_NUM_LABELS][HP_CRYO_RFID_LABELS_CODE_NUM_CHAR];	//V7790 - LOG
 
@@ -804,7 +804,7 @@ typedef struct
     uint8 RFID_reserved;
     returnstatus_t RFIDstatus;
     uint32 RFIDpopupTimer;
-//    K70_RFID_Read_result RFID_read_label;
+    K70_RFID_Read_result RFID_read_label;
     uint32 startTime;
     uint32 pauseTime;
     uint32 trtTime_s;

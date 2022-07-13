@@ -23,6 +23,19 @@ Item {
         y: 334
         source: "images/c182_PopUpRFIDlabelDM.png"
         fillMode: Image.PreserveAspectFit
+
+        Connections {
+            target: wdgWpr
+            onRfidPopupLabelChanged: (idImg) => {
+                                         switch(idImg) {
+                                             case AppEnumsNs.C182_PopUpRFIDlabelZ0: labelImg.source = "images/c182_PopUpRFIDlabelZ0.png"; break;
+                                             case AppEnumsNs.C182_PopUpRFIDlabelZ1: labelImg.source = "images/c182_PopUpRFIDlabelZ1.png"; break;
+                                             case AppEnumsNs.C182_PopUpRFIDlabelZ2: labelImg.source = "images/c182_PopUpRFIDlabelZ2.png"; break;
+                                             case AppEnumsNs.C182_PopUpRFIDlabelZ3: labelImg.source = "images/c182_PopUpRFIDlabelZ3.png"; break;
+                                             case AppEnumsNs.C182_PopUpRFIDlabelDM: labelImg.source = "images/c182_PopUpRFIDlabelDM.png"; break;
+                                         }
+                                     }
+        }
     }
 
     Image {
@@ -31,6 +44,19 @@ Item {
         y: 484
         source: "images/c182_PopUpRFIDsuccess.png"
         fillMode: Image.PreserveAspectFit
+
+        Connections {
+            target: wdgWpr
+            onRfidPopupStatusChanged: (idImg) => {
+                                         switch(idImg) {
+                                             case AppEnumsNs.C182_PopUpRFIDsuccess: statusImg.source = "images/c182_PopUpRFIDsuccess.png"; break;
+                                             case AppEnumsNs.C182_PopUpRFIDfail:    statusImg.source = "images/c182_PopUpRFIDfail.png"; break;
+                                             case AppEnumsNs.C182_PopUpRFIDunknown: statusImg.source = "images/c182_PopUpRFIDunknown.png"; break;
+                                             case AppEnumsNs.C182_PopUpRFIDwrong:   statusImg.source = "images/c182_PopUpRFIDwrong.png"; break;
+                                             case AppEnumsNs.C233_ImgPixelBlanco:   statusImg.source = "images/c233_ImgPixelBlanco.png"; break;
+                                         }
+                                     }
+        }
     }
 
     Button {
@@ -41,6 +67,12 @@ Item {
         height: 64
         text: ""
         opacity: 0
+        onReleased: cbkWpr.butReuseRFIDlabel()
+
+        Connections {
+            target: wdgWpr
+            onRfidPopupReuseLabelEnabled: (isEnabled) => button.enabled = isEnabled
+        }
     }
 
     Text {
@@ -55,6 +87,24 @@ Item {
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
         font.family: "Verdana"
+
+        Connections {
+            target: wdgWpr
+            onRfidPopupRestTimeVisibilityChanged: (newVisibility) => restTimeText.visible = newVisibility
+            onRfidPopupRestTimeUpdated: (newTime) => restTimeText.text = newTime
+        }
+    }
+
+    PopupHpColorBar {
+        id: popupHpColorBar
+        x: 0
+        y: 0
+        state: "hp1State"
+
+        Connections {
+            target: wdgWpr
+            onRfidPopupColorBarChanged: (hpIndex) => popupHpColorBar.state = popupHpColorBar.states[hpIndex]
+        }
     }
 
     onVisibleChanged: cbkWpr.popupVisibleChanged(AppEnumsNs.PopUpRFID, visible)
@@ -62,8 +112,4 @@ Item {
 
 
 
-/*##^##
-Designer {
-    D{i:0;formeditorZoom:0.33;height:0;width:0}
-}
-##^##*/
+

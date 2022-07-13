@@ -52,7 +52,7 @@ void WidgetsWrapper::GUIsetNumViewerNum(uint32 id, double num, uint8 dec)
     case NumVwrResucctionCountHP2: emit resuctionCountChanged(APP_GUI_HP2_ID, num); break;
     case NumVwrResucctionCountHP3: emit resuctionCountChanged(APP_GUI_HP3_ID, num); break;
     case NumVwrResucctionCountHP4: emit resuctionCountChanged(APP_GUI_HP4_ID, num); break;
-    case NumVwrPopUpRFIDrestTime: break;
+    case NumVwrPopUpRFIDrestTime: emit rfidPopupRestTimeUpdated(prova); break;
     case NumVwrPopUpErrHP1: break;
     case NumVwrPopUpErrHP2: break;
     case NumVwrPopUpErrHP3: break;
@@ -389,7 +389,7 @@ uint16 WidgetsWrapper::GUIsetWidgetVisibility(uint32 id, uint8 vis)
 //    case imgPopUpRFIDlabel,
 //    case imgPopUpRFIDresult,
 //    case butPopUpRFIDreuseLabel,
-//    case NumVwrPopUpRFIDrestTime,
+    case NumVwrPopUpRFIDrestTime: emit rfidPopupRestTimeVisibilityChanged(vis); break;
 
 //    //PopUp Recommendation widgets
     case SwPopUpRecommInfo: emit infoSwitchVisibilityChanged(vis); break;
@@ -979,7 +979,7 @@ uint16 WidgetsWrapper::GUIsetWidgetEnable(uint32 id, uint8 enable)
 //    case imgPopUpRFIDbckGnd,
 //    case imgPopUpRFIDlabel,
 //    case imgPopUpRFIDresult,
-//    case butPopUpRFIDreuseLabel,
+    case ButPopUpRFIDreuseLabel: emit rfidPopupReuseLabelEnabled(enable); break;
 //    case NumVwrPopUpRFIDrestTime,
 
 //    //PopUp Recommendation widgets
@@ -1373,6 +1373,8 @@ void WidgetsWrapper::GUIsetImgViewerImage(uint32 id, uint32 idImg)
     case ImgColourCtrlPnlBckGndHP3: emit hpControlPanelColorSet(AppEnumsNs::APP_GUI_HP3_ID, (uint8)idImg); break;
     case ImgColourCtrlPnlBckGndHP4: emit hpControlPanelColorSet(AppEnumsNs::APP_GUI_HP4_ID, (uint8)idImg); break;
     case ImgPopUpTstVacAUTOstatus: emit testVacuumPopupAutoStatusImageChanged((EAppGUIimageIDlist)idImg); break;
+    case ImgPopUpRFIDlabel:emit rfidPopupLabelChanged((EAppGUIimageIDlist)idImg); break;
+    case ImgPopUpRFIDresult: emit rfidPopupStatusChanged((EAppGUIimageIDlist)idImg); break;
     default: break;
     }
 }
@@ -1509,6 +1511,11 @@ void WidgetsWrapper::GUItestVacuumPopupSetLevelImage(EAppGUIwidgetIDlist imageWi
 void WidgetsWrapper::GUItestVacuumPopupChangeColorBar(EAppGUI_HPsIDs hpIndex)
 {
     emit testVacuumPopupColorBarChanged(hpIndex);
+}
+
+void WidgetsWrapper::GUIrfidPopupChangeColorBar(EAppGUI_HPsIDs hpIndex)
+{
+    emit rfidPopupColorBarChanged(hpIndex);
 }
 
 QString WidgetsWrapper::calcNumber()
