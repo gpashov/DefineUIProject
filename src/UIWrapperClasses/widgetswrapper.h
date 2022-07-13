@@ -51,6 +51,8 @@ public:
     void GUIsetTimePopUp(EAppGUI_HPsIDs HPindex, EAppGUITimePopUpState popupState);
     void GUIshowControlPanel(EAppGUI_HPsIDs HPindex, bool show);
     void GUIenableControlPanels(bool isEnabled);
+    void GUItestVacuumPopupSetLevelImage(EAppGUIwidgetIDlist imageWidgetId, EAppGUItstVacDone status);
+    void GUItestVacuumPopupChangeColorBar(EAppGUI_HPsIDs hpIndex);
 
 signals:
     void changeScreenSignal(AppEnumsNs::EAppGUIscreen screenId);
@@ -132,6 +134,17 @@ signals:
     void suggestedHpWatermarkDisplayed(AppEnumsNs::EAppGUIwidgetIDlist typeWidgetId, bool isDispalyed);
     void rfidPopupActivated(bool isActivated);
     void testVacuumPopupActivated(bool isActivated);
+    void testVacuumPopupSwitchStateChanged(AppEnumsNs::EAppGUIwidgetIDlist widgetId, bool OnOff);
+    void testVacuumPopupSwitchEnabled(AppEnumsNs::EAppGUIwidgetIDlist widgetId, bool isEnabled);
+    void testVacuumPopupManualTestButtonEnabled(AppEnumsNs::EAppGUIwidgetIDlist widgetId, bool isEnabled);
+    void testVacuumPopupAutoTestButtonEnabled(bool isEnabled);
+    void testVacuumPopupPressHandVisibilityChanged(bool newVisibility);
+    void testVacuumPopupPressHandX2VisibilityChanged(bool newVisibility);
+    void testVacuumPopupAutoStatusVisibilityChanged(bool newVisibility);
+    void testVacuumPopupAutoButtonVisibilityChanged(bool newVisibility);
+    void testVacuumPopupAutoStatusImageChanged(AppEnumsNs::EAppGUIimageIDlist idImg);
+    void testVacuumPopupLevelImageSet(AppEnumsNs::EAppGUIwidgetIDlist imageWidgetId, AppEnumsNs::EAppGUItstVacDone status);
+    void testVacuumPopupColorBarChanged(AppEnumsNs::EAppGUI_HPsIDs hpIndex);
     void timePopUpSet(AppEnumsNs::EAppGUI_HPsIDs HPindex, AppEnumsNs::EAppGUITimePopUpState popupState);
 
 private:

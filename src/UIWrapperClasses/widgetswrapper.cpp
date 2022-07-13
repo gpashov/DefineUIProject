@@ -155,9 +155,9 @@ void WidgetsWrapper::GUIsetSwitchStatus(uint32 id, uint8 OnOff)
     case SwDotZone12:
     case SwDotZone13:
     case SwDotZone14: emit dotZoneSelected((EAppGUIwidgetIDlist)id, (bool)OnOff); break;
-    case SwPopUpTstVacLowLvl: break;
-    case SwPopUpTstVacMidLvl: break;
-    case SwPopUpTstVacHighLvl: break;
+    case SwPopUpTstVacLowLvl:
+    case SwPopUpTstVacMidLvl:
+    case SwPopUpTstVacHighLvl: emit testVacuumPopupSwitchStateChanged((EAppGUIwidgetIDlist)id, (bool)OnOff); break;
     case SwPopUpRecommInfo: break;
     case SwTrtScrAvisos: break;
     case SwCalcScrAvisos: break;
@@ -365,16 +365,16 @@ uint16 WidgetsWrapper::GUIsetWidgetVisibility(uint32 id, uint8 vis)
 //    case imgPopUpTstVacLowLvl,
 //    case imgPopUpTstVacMidLvl,
 //    case imgPopUpTstVacHighLvl,
-//    case imgPopUpTstVacPulHand,
-//    case imgPopUpTstVacPulHandx2,
+    case ImgPopUpTstVacPulHand: emit testVacuumPopupPressHandVisibilityChanged(vis); break;
+    case ImgPopUpTstVacPulHandx2: emit testVacuumPopupPressHandX2VisibilityChanged(vis); break;
 //    case butPopUpTstVacManualLowLvl,
 //    case butPopUpTstVacManualMidLvl,
 //    case butPopUpTstVacManualHighLvl,
-//    case butPopUpTstVacAuto,
+    case ButPopUpTstVacAuto: emit testVacuumPopupAutoButtonVisibilityChanged(vis); break;
 //    case SwPopUpTstVacLowLvl,
 //    case SwPopUpTstVacMidLvl,
 //    case SwPopUpTstVacHighLvl,
-//    case imgPopUpTstVacAUTOstatus,
+    case ImgPopUpTstVacAUTOstatus: emit testVacuumPopupAutoStatusVisibilityChanged(vis); break;
 
 //    //PopUp Test Vacuum 2 widgets
 //    case PopUpTstVacSmall,
@@ -958,13 +958,13 @@ uint16 WidgetsWrapper::GUIsetWidgetEnable(uint32 id, uint8 enable)
 //    case imgPopUpTstVacHighLvl,
 //    case imgPopUpTstVacPulHand,
 //    case imgPopUpTstVacPulHandx2,
-//    case butPopUpTstVacManualLowLvl,
-//    case butPopUpTstVacManualMidLvl,
-//    case butPopUpTstVacManualHighLvl,
-//    case butPopUpTstVacAuto,
-//    case SwPopUpTstVacLowLvl,
-//    case SwPopUpTstVacMidLvl,
-//    case SwPopUpTstVacHighLvl,
+    case ButPopUpTstVacManualLowLvl:
+    case ButPopUpTstVacManualMidLvl:
+    case ButPopUpTstVacManualHighLvl: emit testVacuumPopupManualTestButtonEnabled((EAppGUIwidgetIDlist)id, enable); break;
+    case ButPopUpTstVacAuto: emit testVacuumPopupAutoTestButtonEnabled(enable); break;
+    case SwPopUpTstVacLowLvl:
+    case SwPopUpTstVacMidLvl:
+    case SwPopUpTstVacHighLvl: emit testVacuumPopupSwitchEnabled((EAppGUIwidgetIDlist)id, enable); break;
 //    case imgPopUpTstVacAUTOstatus,
 
 //    //PopUp Test Vacuum 2 widgets
@@ -1372,6 +1372,7 @@ void WidgetsWrapper::GUIsetImgViewerImage(uint32 id, uint32 idImg)
     case ImgColourCtrlPnlBckGndHP2: emit hpControlPanelColorSet(AppEnumsNs::APP_GUI_HP2_ID, (uint8)idImg); break;
     case ImgColourCtrlPnlBckGndHP3: emit hpControlPanelColorSet(AppEnumsNs::APP_GUI_HP3_ID, (uint8)idImg); break;
     case ImgColourCtrlPnlBckGndHP4: emit hpControlPanelColorSet(AppEnumsNs::APP_GUI_HP4_ID, (uint8)idImg); break;
+    case ImgPopUpTstVacAUTOstatus: emit testVacuumPopupAutoStatusImageChanged((EAppGUIimageIDlist)idImg); break;
     default: break;
     }
 }
@@ -1482,6 +1483,16 @@ void WidgetsWrapper::GUIshowControlPanel(EAppGUI_HPsIDs HPindex, bool show)
 void WidgetsWrapper::GUIenableControlPanels(bool isEnabled)
 {
     emit hpControlPanelsEnabled(isEnabled);
+}
+
+void WidgetsWrapper::GUItestVacuumPopupSetLevelImage(EAppGUIwidgetIDlist imageWidgetId, EAppGUItstVacDone status)
+{
+    emit testVacuumPopupLevelImageSet(imageWidgetId, status);
+}
+
+void WidgetsWrapper::GUItestVacuumPopupChangeColorBar(EAppGUI_HPsIDs hpIndex)
+{
+    emit testVacuumPopupColorBarChanged(hpIndex);
 }
 
 QString WidgetsWrapper::calcNumber()

@@ -827,97 +827,97 @@ void AppGUIhandleTstVacPopUp( uint8 show, uint8 HPindex)
     tPRFdata *PRF;
     tHPcryoData *HP;
 	
-//    HPcryoGetFromSlot( APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF);
+    HPcryoGetFromSlot( (cPRFslot)APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF);
 	
-//    /* Según si se quiere mostrar o no */
-//    if( show)
-//    {
-//        /* Activar el popUp */
-//        GUIactivePopUp( PopUpTstVac);
+    /* Según si se quiere mostrar o no */
+    if( show)
+    {
+        /* Activar el popUp */
+        wdgWpr.GUIactivePopUp( PopUpTstVac);
 
-//        /* Configuramos el estado de los switches de seleccion y sus imagenes según se haya realizado ya el
-//         * test o no. tambien los deshabilitamos si hay un test de vacum en marcha para el HP en cuestion */
-//        for( i = 0; i < HP_CRYO_VAC_LVL_NUM; i++)
-//        {
-//            /* Estado On Off solo si es la primera vez que entramos para esta aparición del popUp */
-//            if( isFirstTime)
-//            {
-//                GUIsetSwitchStatus( APP_GUI_TRT_SCR_POPUP_TST_VAC_SW_LIST[i], AppGUIdata.tstVacHdlr.selVacLvl == i);
-//            }
+        /* Configuramos el estado de los switches de seleccion y sus imagenes según se haya realizado ya el
+         * test o no. tambien los deshabilitamos si hay un test de vacum en marcha para el HP en cuestion */
+        for( i = 0; i < HP_CRYO_VAC_LVL_NUM; i++)
+        {
+            /* Estado On Off solo si es la primera vez que entramos para esta aparición del popUp */
+            if( isFirstTime)
+            {
+                wdgWpr.GUIsetSwitchStatus( APP_GUI_TRT_SCR_POPUP_TST_VAC_SW_LIST[i], AppGUIdata.tstVacHdlr.selVacLvl == i);
+            }
 			
-//            /* Imagenes de test done o not done */
-//            if (HPcryoTestVacumStatus( HP, PRF) != HP_CRYO_TEST_VAC_RUN_VACUM) GUIsetImgViewerImage(APP_GUI_TRT_SCR_POPUP_TST_VAC_IMG_LIST[i], APP_GUI_TRT_SCR_POPUP_TST_VAC_LVL_IMAGES[AppGUIdata.slot[HPindex].testedVacLvls[i]][i]);
+            /* Imagenes de test done o not done */
+            if (HPcryoTestVacumStatus( HP, PRF) != HP_CRYO_TEST_VAC_RUN_VACUM) wdgWpr.GUItestVacuumPopupSetLevelImage((EAppGUIwidgetIDlist)APP_GUI_TRT_SCR_POPUP_TST_VAC_IMG_LIST[i], (EAppGUItstVacDone)AppGUIdata.slot[HPindex].testedVacLvls[i]);
 			
-//            /* Habilitacion segun haya test en marcha o no */
-//            isTstRunning = AppGUIisTstVacRunning( HPindex, NULL);
-//            GUIsetWidgetEnable( APP_GUI_TRT_SCR_POPUP_TST_VAC_SW_LIST[i], !isTstRunning);
-//        }
+            /* Habilitacion segun haya test en marcha o no */
+            isTstRunning = AppGUIisTstVacRunning( HPindex, NULL);
+            wdgWpr.GUIsetWidgetEnable( APP_GUI_TRT_SCR_POPUP_TST_VAC_SW_LIST[i], !isTstRunning);
+        }
 		
-//        /* Estado de la mano de pulsación de boton Inicio de succión*/
-//        if (AppGUIdata.tstVacHdlr.waitingUserStart == 1)		//Si estamos esperando al usuario para que pulse el HP
-//        {
-//            GUIsetWidgetVisibility( imgPopUpTstVacPulHand, AppGUIdata.slot[HPindex].statusFlagsOnOff[AppGUIblinkPul]);
-//        }
-//        else{	GUIsetWidgetVisibility( imgPopUpTstVacPulHand, 0);	}		//En cualquier otro caso (no esperando al usuario...) entonces dejamos invisible el widget
+        /* Estado de la mano de pulsación de boton Inicio de succión*/
+        if (AppGUIdata.tstVacHdlr.waitingUserStart == 1)		//Si estamos esperando al usuario para que pulse el HP
+        {
+            wdgWpr.GUIsetWidgetVisibility( ImgPopUpTstVacPulHand, AppGUIdata.slot[HPindex].statusFlagsOnOff[AppGUIblinkPul]);
+        }
+        else{	wdgWpr.GUIsetWidgetVisibility( ImgPopUpTstVacPulHand, 0);	}		//En cualquier otro caso (no esperando al usuario...) entonces dejamos invisible el widget
 		
-//        /* Estado de la mano de pulsación de boton Final de succión*/
-//        if (AppGUIdata.tstVacHdlr.waitingUserEnd == 1)		//Si estamos esperando al usuario para que pulse el HP
-//        {
-//            GUIsetWidgetVisibility( imgPopUpTstVacPulHandx2, AppGUIdata.slot[HPindex].statusFlagsOnOff[AppGUIblinkPul]);
+        /* Estado de la mano de pulsación de boton Final de succión*/
+        if (AppGUIdata.tstVacHdlr.waitingUserEnd == 1)		//Si estamos esperando al usuario para que pulse el HP
+        {
+            wdgWpr.GUIsetWidgetVisibility( ImgPopUpTstVacPulHandx2, AppGUIdata.slot[HPindex].statusFlagsOnOff[AppGUIblinkPul]);
 			
-//            /* Si es modo auto tenemos que gestionar el indicador de plica OK - V7760*/
-//            HPcryoTestVacumIsInAutoAndOK( &autoIsOK, HP, PRF);
-//            GUIsetWidgetVisibility(imgPopUpTstVacAUTOstatus, HPcryoTestVacIsAuto(HP, PRF));
-//            if( autoIsOK != 0){ GUIsetImgViewerImage( imgPopUpTstVacAUTOstatus, c439_HPalarmaPlicaOK);}
-//            else{ GUIsetImgViewerImage( imgPopUpTstVacAUTOstatus, c438_HPalarmaPlicainsuficiente);}
-//        }
-//        else
-//        {
-//            GUIsetWidgetVisibility( imgPopUpTstVacPulHandx2, 0);
-//            GUIsetWidgetVisibility(imgPopUpTstVacAUTOstatus, 0);
-//        }		//En cualquier otro caso (no esperando al usuario...) entonces dejamos invisible el widget
+            /* Si es modo auto tenemos que gestionar el indicador de plica OK - V7760*/
+            HPcryoTestVacumIsInAutoAndOK( &autoIsOK, HP, PRF);
+            wdgWpr.GUIsetWidgetVisibility(ImgPopUpTstVacAUTOstatus, HPcryoTestVacIsAuto(HP, PRF));
+            if( autoIsOK != 0){ wdgWpr.GUIsetImgViewerImage( ImgPopUpTstVacAUTOstatus, C439_HPalarmaPlicaOK);}
+            else{ wdgWpr.GUIsetImgViewerImage( ImgPopUpTstVacAUTOstatus, C438_HPalarmaPlicainsuficiente);}
+        }
+        else
+        {
+            wdgWpr.GUIsetWidgetVisibility( ImgPopUpTstVacPulHandx2, 0);
+            wdgWpr.GUIsetWidgetVisibility(ImgPopUpTstVacAUTOstatus, 0);
+        }		//En cualquier otro caso (no esperando al usuario...) entonces dejamos invisible el widget
 		
 		
-//        if (HPcryoTestVacumStatus( HP, PRF) == HP_CRYO_TEST_VAC_RUN_VACUM && (!HPcryoTestVacIsAuto(HP, PRF)))			//Si el estado del test de vacum es running
-//        {
-//            if (AppGUIdata.slot[HPindex].statusFlagsOnOff[AppGUIblinkVac])	GUIsetImgViewerImage( APP_GUI_TRT_SCR_POPUP_TST_VAC_IMG_LIST[AppGUIdata.tstVacHdlr.Tst_vac_but], APP_GUI_TRT_SCR_POPUP_TST_VAC_LVL_IMAGES[AppGUItstVacDone][AppGUIdata.tstVacHdlr.Tst_vac_but]);
-//            else	GUIsetImgViewerImage( APP_GUI_TRT_SCR_POPUP_TST_VAC_IMG_LIST[AppGUIdata.tstVacHdlr.Tst_vac_but], APP_GUI_TRT_SCR_POPUP_TST_VAC_LVL_IMAGES[AppGUItstVacNotDone][AppGUIdata.tstVacHdlr.Tst_vac_but]);
-//        }
+        if (HPcryoTestVacumStatus( HP, PRF) == HP_CRYO_TEST_VAC_RUN_VACUM && (!HPcryoTestVacIsAuto(HP, PRF)))			//Si el estado del test de vacum es running
+        {
+            if (AppGUIdata.slot[HPindex].statusFlagsOnOff[AppGUIblinkVac])	wdgWpr.GUItestVacuumPopupSetLevelImage( (EAppGUIwidgetIDlist)APP_GUI_TRT_SCR_POPUP_TST_VAC_IMG_LIST[AppGUIdata.tstVacHdlr.Tst_vac_but], AppGUItstVacDone);
+            else	wdgWpr.GUItestVacuumPopupSetLevelImage( (EAppGUIwidgetIDlist)APP_GUI_TRT_SCR_POPUP_TST_VAC_IMG_LIST[AppGUIdata.tstVacHdlr.Tst_vac_but], AppGUItstVacNotDone);
+        }
 		
-//        GUIsetWidgetEnable( butPopUpTstVacManualLowLvl, !(AppGUIdata.tstVacHdlr.waitingUserStart | AppGUIdata.tstVacHdlr.waitingUserEnd));
-//        GUIsetWidgetEnable( butPopUpTstVacManualMidLvl, !(AppGUIdata.tstVacHdlr.waitingUserStart | AppGUIdata.tstVacHdlr.waitingUserEnd));
-//        GUIsetWidgetEnable( butPopUpTstVacManualHighLvl, !(AppGUIdata.tstVacHdlr.waitingUserStart | AppGUIdata.tstVacHdlr.waitingUserEnd));
-//        GUIsetWidgetEnable( SwPopUpTstVacLowLvl, (!(AppGUIdata.tstVacHdlr.waitingUserStart | AppGUIdata.tstVacHdlr.waitingUserEnd) && (AppGUIdata.slot[HPindex].TrtMode == HP_CRYO_TRT_MODE_MANUAL)));
-//        GUIsetWidgetEnable( SwPopUpTstVacMidLvl, (!(AppGUIdata.tstVacHdlr.waitingUserStart | AppGUIdata.tstVacHdlr.waitingUserEnd) && (AppGUIdata.slot[HPindex].TrtMode == HP_CRYO_TRT_MODE_MANUAL)));
-//        GUIsetWidgetEnable( SwPopUpTstVacHighLvl, ( !(AppGUIdata.tstVacHdlr.waitingUserStart | AppGUIdata.tstVacHdlr.waitingUserEnd) && (AppGUIdata.slot[HPindex].TrtMode == HP_CRYO_TRT_MODE_MANUAL)));
-//        GUIsetWidgetEnable( APP_GUI_TRT_SCR_BUT_TSTVAC_WIDGETS[HPindex], !(AppGUIdata.tstVacHdlr.waitingUserStart | AppGUIdata.tstVacHdlr.waitingUserEnd));
-//        GUIsetWidgetEnable( butPopUpTstVacAuto, (!(AppGUIdata.tstVacHdlr.waitingUserStart | AppGUIdata.tstVacHdlr.waitingUserEnd) && HPcryoIsAutoModeAvaible( HP, PRF)));
+        wdgWpr.GUIsetWidgetEnable( ButPopUpTstVacManualLowLvl, !(AppGUIdata.tstVacHdlr.waitingUserStart | AppGUIdata.tstVacHdlr.waitingUserEnd));
+        wdgWpr.GUIsetWidgetEnable( ButPopUpTstVacManualMidLvl, !(AppGUIdata.tstVacHdlr.waitingUserStart | AppGUIdata.tstVacHdlr.waitingUserEnd));
+        wdgWpr.GUIsetWidgetEnable( ButPopUpTstVacManualHighLvl, !(AppGUIdata.tstVacHdlr.waitingUserStart | AppGUIdata.tstVacHdlr.waitingUserEnd));
+        wdgWpr.GUIsetWidgetEnable( SwPopUpTstVacLowLvl, (!(AppGUIdata.tstVacHdlr.waitingUserStart | AppGUIdata.tstVacHdlr.waitingUserEnd) && (AppGUIdata.slot[HPindex].TrtMode == HP_CRYO_TRT_MODE_MANUAL)));
+        wdgWpr.GUIsetWidgetEnable( SwPopUpTstVacMidLvl, (!(AppGUIdata.tstVacHdlr.waitingUserStart | AppGUIdata.tstVacHdlr.waitingUserEnd) && (AppGUIdata.slot[HPindex].TrtMode == HP_CRYO_TRT_MODE_MANUAL)));
+        wdgWpr.GUIsetWidgetEnable( SwPopUpTstVacHighLvl, ( !(AppGUIdata.tstVacHdlr.waitingUserStart | AppGUIdata.tstVacHdlr.waitingUserEnd) && (AppGUIdata.slot[HPindex].TrtMode == HP_CRYO_TRT_MODE_MANUAL)));
+        wdgWpr.GUIsetWidgetEnable( APP_GUI_TRT_SCR_BUT_TSTVAC_WIDGETS[HPindex], !(AppGUIdata.tstVacHdlr.waitingUserStart | AppGUIdata.tstVacHdlr.waitingUserEnd));
+        wdgWpr.GUIsetWidgetEnable( ButPopUpTstVacAuto, (!(AppGUIdata.tstVacHdlr.waitingUserStart | AppGUIdata.tstVacHdlr.waitingUserEnd) && HPcryoIsAutoModeAvaible( HP, PRF)));
 		
-//        /* Poner en la barra de color de HP la imagen adecuada */
-//        GUIsetImgViewerImage( imgPopUpHPcolorBar, APP_GUI_TRT_SCR_POPUP_COLOR_BAR_IMAGES[HPindex]);
+        /* Poner en la barra de color de HP la imagen adecuada */
+        wdgWpr.GUItestVacuumPopupChangeColorBar((EAppGUI_HPsIDs)HPindex);
 
-//        GUIsetWidgetVisibility(butPopUpTstVacAuto, HPcryoIsAutoModeAvaible( HP, PRF));	//Poner visible el boton test AUTO si está disponible
+        wdgWpr.GUIsetWidgetVisibility(ButPopUpTstVacAuto, HPcryoIsAutoModeAvaible( HP, PRF));	//Poner visible el boton test AUTO si está disponible
 
-//        /* Indicamos que ya no es la primera vez */
-//        isFirstTime = 0;
-//    }
-//    else
-//    {
-//        /* Desactivamos el popUp */
-//        GUIdisablePopUp( PopUpTstVac);
+        /* Indicamos que ya no es la primera vez */
+        isFirstTime = 0;
+    }
+    else
+    {
+        /* Desactivamos el popUp */
+        wdgWpr.GUIdisablePopUp( PopUpTstVac);
 		
-//        /* Indicamos que la próxima vez que se llame a esta función para activar el popUp
-//         * será la primera vez del caso "show" para esa aparición */
-//        isFirstTime = 1;
+        /* Indicamos que la próxima vez que se llame a esta función para activar el popUp
+         * será la primera vez del caso "show" para esa aparición */
+        isFirstTime = 1;
 				
-//        /* Si la gestión de zona de tratamiento esta en zoom tenemos un glitch de un refresco en
-//         * el que el boton "Return" desaparece ya que el popUp lo deshabilita al quitarse pero
-//         * el handle de la zona de tratamiento lo volvera a poner. Para evitar esto ponemos el estado
-//         * del boton de return a visible y habilitado si la zona de tratamiento esta en zoom. Lo mas facil es
-//         * forzar un update de la zona */
-////		AppGUIhandleTrtZone();
-//    }
-//    AppGUIhandleCtrlPanel( 1, HPindex);
+        /* Si la gestión de zona de tratamiento esta en zoom tenemos un glitch de un refresco en
+         * el que el boton "Return" desaparece ya que el popUp lo deshabilita al quitarse pero
+         * el handle de la zona de tratamiento lo volvera a poner. Para evitar esto ponemos el estado
+         * del boton de return a visible y habilitado si la zona de tratamiento esta en zoom. Lo mas facil es
+         * forzar un update de la zona */
+//		AppGUIhandleTrtZone();
+    }
+    AppGUIhandleCtrlPanel( 1, HPindex);
 }
 
 void AppGUIhandleTstVacSMALLPopUp( uint8 show, uint8 HPindex)

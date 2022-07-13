@@ -18,8 +18,8 @@ Item {
 
     Image {
         id: popupColorHp2Img
-        x: popupColorHp1Img.x
-        y: popupColorHp1Img.y
+        x: 323
+        y: 573
         visible: false
         source: "images/c217_PopUpManipHP2.png"
         fillMode: Image.PreserveAspectFit
@@ -27,8 +27,8 @@ Item {
 
     Image {
         id: popupColorHp3Img
-        x: popupColorHp1Img.x
-        y: popupColorHp1Img.y
+        x: 323
+        y: 573
         visible: false
         source: "images/c218_PopUpManipHP3.png"
         fillMode: Image.PreserveAspectFit
@@ -36,8 +36,8 @@ Item {
 
     Image {
         id: popupColorHp4Img
-        x: popupColorHp1Img.x
-        y: popupColorHp1Img.y
+        x: 323
+        y: 573
         visible: false
         source: "images/c219_PopUpManipHP4.png"
         fillMode: Image.PreserveAspectFit
@@ -56,6 +56,8 @@ Item {
 
             PropertyChanges {
                 target: popupColorHp2Img
+                x: 321
+                y: 572
                 visible: true
             }
         },
@@ -64,6 +66,8 @@ Item {
 
             PropertyChanges {
                 target: popupColorHp3Img
+                x: 322
+                y: 574
                 visible: true
             }
         },
@@ -77,3 +81,9 @@ Item {
         }
     ]
 }
+
+/*##^##
+Designer {
+    D{i:0;formeditorZoom:1.5}
+}
+##^##*/

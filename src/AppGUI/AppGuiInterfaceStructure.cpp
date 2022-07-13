@@ -279,11 +279,11 @@ const uint32 APP_GUI_TRT_SCR_POPUP_TST_VAC_SW_LIST[HP_CRYO_VAC_LVL_NUM] =
         SwPopUpTstVacLowLvl, SwPopUpTstVacMidLvl, SwPopUpTstVacHighLvl
 };
 
-//const uint32 APP_GUI_TRT_SCR_POPUP_TST_VAC_IMG_LIST[HP_CRYO_VAC_LVL_NUM] =
-//{
-//		//lvl 0, 				lvl 1,					lvl 2
-//		imgPopUpTstVacLowLvl, 	imgPopUpTstVacMidLvl, 	imgPopUpTstVacHighLvl
-//};
+const uint32 APP_GUI_TRT_SCR_POPUP_TST_VAC_IMG_LIST[HP_CRYO_VAC_LVL_NUM] =
+{
+        //lvl 0, 				lvl 1,					lvl 2
+        ImgPopUpTstVacLowLvl, 	ImgPopUpTstVacMidLvl, 	ImgPopUpTstVacHighLvl
+};
 
 const uint32 APP_GUI_TRT_SCR_POPUP_TIME_SW_LIST[HP_CRYO_MAX_TIME_LIST] =
 {
