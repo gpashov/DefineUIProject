@@ -922,79 +922,23 @@ void AppGUIhandleTstVacPopUp( uint8 show, uint8 HPindex)
 
 void AppGUIhandleTstVacSMALLPopUp( uint8 show, uint8 HPindex)
 {
-//    GUIstRect areaTS;
-//    areaTS.h = APP_GUI_POPUP_VAC_SMALL_BUT_HEIGHT;
-//    areaTS.w = APP_GUI_POPUP_VAC_SMALL_BUT_WIDTH;
-//    areaTS.posx = 0;
-//    areaTS.posy = 0;
+    if( show)
+    {
+        /* Activar el popUp */
+        wdgWpr.GUIcontrolPanelActivatePopUp((EAppGUI_HPsIDs)HPindex, PopUpTstVacSmall);
 		
-//    if( show)
-//    {
-//        areaTS.posx = APP_GUI_POPUP_TST_VAC_SMALL_COORDINATES_PER_HP[HPindex][App_GUI_VacLowLevel][Coordinate_X];
-//        areaTS.posy = APP_GUI_POPUP_TST_VAC_SMALL_COORDINATES_PER_HP[HPindex][App_GUI_VacLowLevel][Coordinate_Y];
-//        GUIsetButonPosition( butPopUpTstVacSmallLowLvl,
-//                            APP_GUI_POPUP_TST_VAC_SMALL_COORDINATES_PER_HP[HPindex][App_GUI_VacLowLevel][Coordinate_X],
-//                            APP_GUI_POPUP_TST_VAC_SMALL_COORDINATES_PER_HP[HPindex][App_GUI_VacLowLevel][Coordinate_Y],
-//                            APP_GUI_POPUP_TST_VAC_SMALL_COORDINATES_PER_HP[HPindex][App_GUI_VacLowLevel][Coordinate_X],
-//                            APP_GUI_POPUP_TST_VAC_SMALL_COORDINATES_PER_HP[HPindex][App_GUI_VacLowLevel][Coordinate_Y],
-//                            areaTS);
-		
-//        areaTS.posx = APP_GUI_POPUP_TST_VAC_SMALL_COORDINATES_PER_HP[HPindex][App_GUI_VacMedLevel][Coordinate_X];
-//        areaTS.posy = APP_GUI_POPUP_TST_VAC_SMALL_COORDINATES_PER_HP[HPindex][App_GUI_VacMedLevel][Coordinate_Y];
-//        GUIsetButonPosition( butPopUpTstVacSmallMedLvl,
-//                            APP_GUI_POPUP_TST_VAC_SMALL_COORDINATES_PER_HP[HPindex][App_GUI_VacMedLevel][Coordinate_X],
-//                            APP_GUI_POPUP_TST_VAC_SMALL_COORDINATES_PER_HP[HPindex][App_GUI_VacMedLevel][Coordinate_Y],
-//                            APP_GUI_POPUP_TST_VAC_SMALL_COORDINATES_PER_HP[HPindex][App_GUI_VacMedLevel][Coordinate_X],
-//                            APP_GUI_POPUP_TST_VAC_SMALL_COORDINATES_PER_HP[HPindex][App_GUI_VacMedLevel][Coordinate_Y],
-//                            areaTS);
-		
-//        areaTS.posx = APP_GUI_POPUP_TST_VAC_SMALL_COORDINATES_PER_HP[HPindex][AppGUI_VacHighLevel][Coordinate_X];
-//        areaTS.posy = APP_GUI_POPUP_TST_VAC_SMALL_COORDINATES_PER_HP[HPindex][AppGUI_VacHighLevel][Coordinate_Y];
-//        GUIsetButonPosition( butPopUpTstVacSmallHighLvl,
-//                            APP_GUI_POPUP_TST_VAC_SMALL_COORDINATES_PER_HP[HPindex][AppGUI_VacHighLevel][Coordinate_X],
-//                            APP_GUI_POPUP_TST_VAC_SMALL_COORDINATES_PER_HP[HPindex][AppGUI_VacHighLevel][Coordinate_Y],
-//                            APP_GUI_POPUP_TST_VAC_SMALL_COORDINATES_PER_HP[HPindex][AppGUI_VacHighLevel][Coordinate_X],
-//                            APP_GUI_POPUP_TST_VAC_SMALL_COORDINATES_PER_HP[HPindex][AppGUI_VacHighLevel][Coordinate_Y],
-//                            areaTS);
-		
-//        //Colocamos la imagen de fondo del selector en función del manipulo
-//        GUIsetImgViewerImage( imgPopUpVacSelBck, APP_GUI_TRT_SCR_POPUP_VAC_SMALL_BCK_IMG[HPindex]);
-//        //Asignamos las coordenadas al fondo del selector de vacuum
-//        GUIsetImgViewerPosition( imgPopUpVacSelBck,
-//                                APP_GUI_POPUP_TST_VAC_SMALL_COORDINATES_PER_HP[HPindex][AppGUI_VacLevelSelector][Coordinate_X],
-//                                APP_GUI_POPUP_TST_VAC_SMALL_COORDINATES_PER_HP[HPindex][AppGUI_VacLevelSelector][Coordinate_Y]);
-		
-//        /* Activar el popUp */
-//        GUIactivePopUp( PopUpTstVacSmall);
-		
-//        GUIsetImgButton(butPopUpTstVacSmallLowLvl, APP_GUI_POPUP_TST_VAC_SMALL_BUT_IMAGES[HP_CRYO_VAC_LVL_0][AppGUIdata.tstVacHdlr.selVacLvl==HP_CRYO_VAC_LVL_0], 0);
-//        GUIsetWidgetVisibility( butPopUpTstVacSmallLowLvl, 1);	//Se ponen los widgets visibles
-//        GUIsetWidgetEnable( butPopUpTstVacSmallLowLvl, (AppGUIdata.tstVacHdlr.selVacLvl!=HP_CRYO_VAC_LVL_0));
-//        GUIsetImgButton(butPopUpTstVacSmallMedLvl, APP_GUI_POPUP_TST_VAC_SMALL_BUT_IMAGES[HP_CRYO_VAC_LVL_1][AppGUIdata.tstVacHdlr.selVacLvl==HP_CRYO_VAC_LVL_1], 0);
-//        GUIsetWidgetVisibility( butPopUpTstVacSmallMedLvl, 1);
-//        GUIsetWidgetEnable( butPopUpTstVacSmallMedLvl, (AppGUIdata.tstVacHdlr.selVacLvl!=HP_CRYO_VAC_LVL_1));
-//        GUIsetImgButton(butPopUpTstVacSmallHighLvl, APP_GUI_POPUP_TST_VAC_SMALL_BUT_IMAGES[HP_CRYO_VAC_LVL_2][AppGUIdata.tstVacHdlr.selVacLvl==HP_CRYO_VAC_LVL_2], 0);
-//        GUIsetWidgetVisibility( butPopUpTstVacSmallHighLvl, 1);
-//        GUIsetWidgetEnable( butPopUpTstVacSmallHighLvl, (AppGUIdata.tstVacHdlr.selVacLvl!=HP_CRYO_VAC_LVL_2));
-		
-//        GUIsetWidgetVisibility( imgPopUpVacSelBck, 1);
-//    }
-//    else
-//    {
-//        /* Desactivamos el popUp */
-//        GUIdisablePopUp( PopUpTstVacSmall);
-		
-//        //Quitamos la visibilidad y deshabilitamos los widgets
-//        GUIsetWidgetVisibility( butPopUpTstVacSmallLowLvl, 0);
-//        GUIsetWidgetEnable( butPopUpTstVacSmallLowLvl, 0);
-//        GUIsetWidgetVisibility( butPopUpTstVacSmallMedLvl, 0);
-//        GUIsetWidgetEnable( butPopUpTstVacSmallMedLvl, 0);
-//        GUIsetWidgetVisibility( butPopUpTstVacSmallHighLvl, 0);
-//        GUIsetWidgetEnable( butPopUpTstVacSmallHighLvl, 0);
-//        GUIsetWidgetVisibility( imgPopUpVacSelBck, 0);
-//    }
-//    AppGUIhandleCtrlPanel( 1, HPindex);
-////	AppGUIhandleTrtZone();
+        //
+        wdgWpr.GUIsetWidgetEnable( ButPopUpTstVacSmallLowLvl, (AppGUIdata.tstVacHdlr.selVacLvl!=HP_CRYO_VAC_LVL_0));
+        wdgWpr.GUIsetWidgetEnable( ButPopUpTstVacSmallMedLvl, (AppGUIdata.tstVacHdlr.selVacLvl!=HP_CRYO_VAC_LVL_1));
+        wdgWpr.GUIsetWidgetEnable( ButPopUpTstVacSmallHighLvl, (AppGUIdata.tstVacHdlr.selVacLvl!=HP_CRYO_VAC_LVL_2));
+    }
+    else
+    {
+        /* Desactivamos el popUp */
+        wdgWpr.GUIcontrolPanelDisablePopUp((EAppGUI_HPsIDs)HPindex, PopUpTstVacSmall);
+    }
+    AppGUIhandleCtrlPanel( 1, HPindex);
+//	AppGUIhandleTrtZone();
 }
 
 void AppGUIhandleRFIDpopUp( uint8 show, uint8 HPindex)

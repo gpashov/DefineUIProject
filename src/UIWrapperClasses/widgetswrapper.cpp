@@ -970,9 +970,9 @@ uint16 WidgetsWrapper::GUIsetWidgetEnable(uint32 id, uint8 enable)
 //    //PopUp Test Vacuum 2 widgets
 //    case PopUpTstVacSmall,
 //    case imgPopUpVacSelBck,
-//    case butPopUpTstVacSmallLowLvl,
-//    case butPopUpTstVacSmallMedLvl,
-//    case butPopUpTstVacSmallHighLvl,
+    case ButPopUpTstVacSmallLowLvl:
+    case ButPopUpTstVacSmallMedLvl:
+    case ButPopUpTstVacSmallHighLvl: emit testVacuumPopupSmallButtonEnabled((EAppGUIwidgetIDlist)id, enable); break;
 
 //    //PopUp RFID widgets
 //    case PopUpRFID,
@@ -1466,6 +1466,22 @@ void WidgetsWrapper::GUIdisablePopUp(EAppGUIwidgetIDlist popupWidgetId)
     case PopUpRecomm: emit recommendedHpsPopupActivated(false); break;
     case PopUpRFID: emit rfidPopupActivated(false); break;
     case PopUpTstVac: emit testVacuumPopupActivated(false); break;
+    default: break;
+    }
+}
+
+void WidgetsWrapper::GUIcontrolPanelActivatePopUp(EAppGUI_HPsIDs HPindex, EAppGUIwidgetIDlist popupWidgetId)
+{
+    switch (popupWidgetId) {
+    case PopUpTstVacSmall: emit testVacuumPopupSmallActivated(HPindex, true); break;
+    default: break;
+    }
+}
+
+void WidgetsWrapper::GUIcontrolPanelDisablePopUp(EAppGUI_HPsIDs HPindex, EAppGUIwidgetIDlist popupWidgetId)
+{
+    switch (popupWidgetId) {
+    case PopUpTstVacSmall: emit testVacuumPopupSmallActivated(HPindex, false); break;
     default: break;
     }
 }

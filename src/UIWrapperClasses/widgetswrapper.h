@@ -48,6 +48,8 @@ public:
     void GUIUpdateTimeButton(EAppGUI_HPsIDs HPindex, EAppGUITimeButStates butt_states);
     void GUIactivePopUp(EAppGUIwidgetIDlist popupWidgetId);
     void GUIdisablePopUp(EAppGUIwidgetIDlist popupWidgetId);
+    void GUIcontrolPanelActivatePopUp(EAppGUI_HPsIDs HPindex, EAppGUIwidgetIDlist popupWidgetId);
+    void GUIcontrolPanelDisablePopUp(EAppGUI_HPsIDs HPindex, EAppGUIwidgetIDlist popupWidgetId);
     void GUIsetTimePopUp(EAppGUI_HPsIDs HPindex, EAppGUITimePopUpState popupState);
     void GUIshowControlPanel(EAppGUI_HPsIDs HPindex, bool show);
     void GUIenableControlPanels(bool isEnabled);
@@ -126,6 +128,10 @@ signals:
     void vacuumButtonSwitchStateChanged(AppEnumsNs::EAppGUI_HPsIDs HPindex, bool switchState);
     void playButtonUpdated(AppEnumsNs::EAppGUI_HPsIDs HPindex, AppEnumsNs::EAppGUIPlayButStates butt_state);
     void timeButtonUpdated(AppEnumsNs::EAppGUI_HPsIDs HPindex, AppEnumsNs::EAppGUITimeButStates butt_state);
+
+    // Control panel popups
+    void testVacuumPopupSmallActivated(EAppGUI_HPsIDs HPindex, bool isActivated);
+    void testVacuumPopupSmallButtonEnabled(AppEnumsNs::EAppGUIwidgetIDlist typeWidgetId, bool isEnabled);
 
     // Popups
     void warningsPopupDisplayed(bool isDisplayed);

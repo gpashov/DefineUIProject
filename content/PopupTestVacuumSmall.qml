@@ -31,6 +31,7 @@ Item {
         imageSourcePressed: "images/c344_BotonVacuumSmall1Prs.png"
         imageSourceReleased: "images/c343_BotonVacuumSmall1Rls.png"
         button.onReleased: cbkWpr.butPopUpVacSmallLvl(AppEnumsNs.ButPopUpTstVacSmallLowLvl)
+        onEnabledChanged: imageSourceReleased = enabled ? "images/c343_BotonVacuumSmall1Rls.png": "images/c344_BotonVacuumSmall1MarcaAgua.png"
     }
 
     TwoStateButton {
@@ -38,8 +39,9 @@ Item {
         x: 83
         y: 14
         imageSourcePressed: "images/c346_BotonVacuumSmall2Prs.png"
-        imageSourceReleased: "images/c346_BotonVacuumSmall2MarcaAgua.png"
+        imageSourceReleased: "images/c345_BotonVacuumSmall2Rls.png"
         button.onReleased: cbkWpr.butPopUpVacSmallLvl(AppEnumsNs.ButPopUpTstVacSmallMedLvl)
+        onEnabledChanged: imageSourceReleased = enabled ? "images/c345_BotonVacuumSmall2Rls.png": "images/c346_BotonVacuumSmall2MarcaAgua.png"
     }
 
     TwoStateButton {
@@ -49,6 +51,18 @@ Item {
         imageSourcePressed: "images/c348_BotonVacuumSmall3Prs.png"
         imageSourceReleased: "images/c347_BotonVacuumSmall3Rls.png"
         button.onReleased: cbkWpr.butPopUpVacSmallLvl(AppEnumsNs.ButPopUpTstVacSmallHighLvl)
+        onEnabledChanged: imageSourceReleased = enabled ? "images/c347_BotonVacuumSmall3Rls.png": "images/c348_BotonVacuumSmall3MarcaAgua.png"
+    }
+
+    Connections {
+        target: wdgWpr
+        onTestVacuumPopupSmallButtonEnabled: (typeWidgetId, isEnabled) => {
+                                                 switch(typeWidgetId) {
+                                                 case AppEnumsNs.ButPopUpTstVacSmallLowLvl: testVacuumLowLevelButton.enabled = isEnabled; break;
+                                                 case AppEnumsNs.ButPopUpTstVacSmallMedLvl: testVacuumMediumLevelButton.enabled = isEnabled; break;
+                                                 case AppEnumsNs.ButPopUpTstVacSmallHighLvl: testVacuumHighLevelButton.enabled = isEnabled; break;
+                                                 }
+                                             }
     }
 
     states: [
@@ -84,5 +98,7 @@ Item {
 
     onVisibleChanged: cbkWpr.popupVisibleChanged(AppEnumsNs.PopUpTstVacSmall, visible)
 }
+
+
 
 
