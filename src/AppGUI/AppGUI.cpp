@@ -1162,90 +1162,66 @@ void AppGUIclearSlotData( uint8 HPindex)
 
 void AppGUIhandleErrPopUps( void)
 {
-//    uint8 errMsg, wrnMsg;
-//    uint32 errCode, wrnCode;
-//    static uint8 isErrUp[Max_perifs];
-//    uint8 dev, i;
-//    uint32 widID;
-//    uint8 HPindex;
-//    tHPcryoData *HP;
-//    tPRFdata *PRF;
+    uint8 errMsg, wrnMsg;
+    uint32 errCode, wrnCode;
+    static uint8 isErrUp[Max_perifs];
+    uint8 dev, i;
+    uint32 widID;
+    uint8 HPindex;
+    tHPcryoData *HP;
+    tPRFdata *PRF;
 	
-//    /* Miramos si hay algún error activo para cada uno de los manipulos */
-//    for( dev = Manip1; dev < Maq; dev++)
-//    {
-//        /* Obtenemso el error */
-//        isErrUp[dev] = ERR_interface_msg( dev, &errCode, &errMsg, &wrnCode, &wrnMsg);
-//        isErrUp[dev] = ( errCode != Error_ok);
+    /* Miramos si hay algún error activo para cada uno de los manipulos */
+    for( dev = Manip1; dev < Maq; dev++)
+    {
+        /* Obtenemso el error */
+        isErrUp[dev] = ERR_interface_msg( (perif_to_manage)dev, &errCode, (errors_messages *)&errMsg, &wrnCode, (warning_messages *)&wrnMsg);
+        isErrUp[dev] = ( errCode != Error_ok);
 		
-//        /* Obtenemos el HPindex a partir del slot (dev) */
-//        for( i = 0; i < APP_GUI_MAXNUM_HP; i++)
-//        {
-//            if( APP_GUI_SLOT_DISTRIBUTION[i] == dev){ HPindex = i;}
-//        }
+        /* Obtenemos el HPindex a partir del slot (dev) */
+        for( i = 0; i < APP_GUI_MAXNUM_HP; i++)
+        {
+            if( APP_GUI_SLOT_DISTRIBUTION[i] == dev){ HPindex = i;}
+        }
 		
-//        if (!AppGUIdata.slot[HPindex].ErrorBeep && isErrUp[dev]) { AppGUIdata.slot[HPindex].ErrorBeep = 1;	BUZZ_Configure(1, 100, PATRO_SO_ERROR );	}
-//        if (!isErrUp[dev])	{	AppGUIdata.slot[HPindex].ErrorBeep = 0;	}
+        if (!AppGUIdata.slot[HPindex].ErrorBeep && isErrUp[dev]) { AppGUIdata.slot[HPindex].ErrorBeep = 1;	BUZZ_Configure(1, 100, PATRO_SO_ERROR );	}
+        if (!isErrUp[dev])	{	AppGUIdata.slot[HPindex].ErrorBeep = 0;	}
 		
-//        /* Habilitamos y hacemos visibles los widgets de error */
-//        for( i = 0; i < APP_GUI_NUM_ERR_WIDGETS_WHEN_HP; i++)
-//        {
-//            widID = APP_GUI_TRT_SCR_HP_ERR_WIDGETS[HPindex][i];
-//            GUIsetWidgetVisibility( widID, isErrUp[dev]);
-//            GUIsetWidgetEnable( widID, isErrUp[dev]);
-//        }
+        wdgWpr.GUIShowErrorPopup(dev, isErrUp[dev]);
 		
-//        /* Deshabilitamos los widgets del panel de control solo si hay error */
-//        for( i = 0; i < APP_GUI_TRT_SCR_CTRL_PNL_WID_WHEN_SHOW_NUM; i++)
-//        {
-//            widID = APP_GUI_TRT_SCR_CTRL_PNL_WID_WHEN_SHOW[HPindex][i];
-//            if( isErrUp[dev]){ GUIsetWidgetEnable( widID, 0);}
-//        }
-//        for( i = 0; i < APP_GUI_TRT_SCR_CTRL_PNL_WID_WHEN_HIDE_NUM; i++)
-//        {
-//            widID = APP_GUI_TRT_SCR_CTRL_PNL_WID_WHEN_HIDE[HPindex][i];
-//            if( isErrUp[dev]){ GUIsetWidgetEnable( widID, 0);}
-//        }
 		
-//        /* Ponemos el codigo de error */
-//        GUIsetNumViewerNum( APP_GUI_TRT_SCR_HP_ERR_WIDGETS[HPindex][1], (float)errCode, 0);
+        /* Ponemos el codigo de error */
+        wdgWpr.GUIsetNumViewerNum( APP_GUI_TRT_SCR_HP_ERR_WIDGETS[HPindex][1], (float)errCode, 0);
 		
-//        /* Ponemos el tiempo de tratamiento */			//V7750
-//        if(HPcryoGetFromSlot(APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
-//        {
-//            if (HPcryoGetStatus(HP, PRF) == HP_CRYO_TREATMENT)
-//            {
-//                GUIsetNumViewerNum( APP_GUI_TRT_SCR_HP_ERR_WIDGETS[HPindex][4], AppGUIdata.slot[HPindex].trtTime, 2);
-//            }
-//        }
+        /* Ponemos el tiempo de tratamiento */			//V7750
+        if(HPcryoGetFromSlot((cPRFslot)APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
+        {
+            if (HPcryoGetStatus(HP, PRF) == HP_CRYO_TREATMENT)
+            {
+                wdgWpr.GUIsetNumViewerNum( APP_GUI_TRT_SCR_HP_ERR_WIDGETS[HPindex][4], AppGUIdata.slot[HPindex].trtTime, 2);
+            }
+        }
 				
-//        /* Ponemos el mensaje de error */
-//        GUIsetImgViewerImage( APP_GUI_TRT_SCR_HP_ERR_WIDGETS[HPindex][2],
-//                              APP_GUI_TRT_SCR_HP_ERR_MSG_IMAGES[errMsg]);
-//    }
+        /* Ponemos el mensaje de error */
+        wdgWpr.GUIsetImgViewerImage( APP_GUI_TRT_SCR_HP_ERR_WIDGETS[HPindex][2],
+                              APP_GUI_TRT_SCR_HP_ERR_MSG_IMAGES[errMsg]);
+    }
 	
-//    /* Miramos para la maquina */
-//    isErrUp[Maq] = ERR_interface_msg( Maq, &errCode, &errMsg, &wrnCode, &wrnMsg);
-//    isErrUp[Maq] = ( errCode != Error_ok);
+    /* Miramos para la maquina */
+    isErrUp[Maq] = ERR_interface_msg( Maq, &errCode, (errors_messages *)&errMsg, &wrnCode, (warning_messages *)&wrnMsg);
+    isErrUp[Maq] = ( errCode != Error_ok);
 	
-//    if (!AppGUIdata.MachineErrorBeep && isErrUp[Maq]) { AppGUIdata.MachineErrorBeep = 1;	BUZZ_Configure(1, 100, PATRO_SO_ERROR );	}
-//    if (!isErrUp[Maq])	{	AppGUIdata.MachineErrorBeep = 0;	}
+    if (!AppGUIdata.MachineErrorBeep && isErrUp[Maq]) { AppGUIdata.MachineErrorBeep = 1;	BUZZ_Configure(1, 100, PATRO_SO_ERROR );	}
+    if (!isErrUp[Maq])	{	AppGUIdata.MachineErrorBeep = 0;	}
 	
-//    /* Habilitamos y hacemos visibles los widgets de error de la maquina */
-//    for( i = 0; i < APP_GUI_NUM_ERR_WIDGETS_WHEN_UC; i++)
-//    {
-//        widID = APP_GUI_TRT_SCR_UC_ERR_WIDGETS[i];
-//        GUIsetWidgetVisibility( widID, isErrUp[Maq]);
-//        GUIsetWidgetEnable( widID, isErrUp[Maq]);
-//    }
 	
-//    /* Para la maquina no deshabilitamos nada mas */
+    /* Para la maquina no deshabilitamos nada mas */
 	
-//    /* Ponemos el codigo de error */
-//    GUIsetNumViewerNum( NumVwrPopUpErrUC, (float)errCode, 0);
+    /* Ponemos el codigo de error */
+    wdgWpr.GUIsetNumViewerNum( NumVwrPopUpErrUC, (float)errCode, 0);
 	
-//    /* Ponemos el mensaje de error */
-//    GUIsetImgViewerImage( imgPopUpErrMsgUC, APP_GUI_TRT_SCR_HP_ERR_MSG_IMAGES[errMsg]);
+    /* Ponemos el mensaje de error */
+    wdgWpr.GUIsetImgViewerImage( ImgPopUpErrMsgUC, APP_GUI_TRT_SCR_HP_ERR_MSG_IMAGES[errMsg]);
 }
 
 void AppGUIhandleCleanUpPopUps( uint8 show, uint8 HPindex)

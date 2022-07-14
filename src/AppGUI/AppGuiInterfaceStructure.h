@@ -14,7 +14,7 @@
 //#include "PE_Types.h"
 #include "../Perifericos/HPcryo.h"
 //#include "../GUI/K70_GUI.h"
-//#include "../Error/gestionError.h"
+#include "../Error/gestionError.h"
 
 #define APP_GUI_NO_TIME_SELECTED 						((cHPcryoTrtTimes)0xFF)
 #define APP_GUI_NO_VAC_LVL_SELECTED						((cHPcryoTrtVacLvls)0xFF)
@@ -1751,8 +1751,8 @@ extern const uint32 APP_GUI_TRT_SCR_BUT_MODE_TRT_WIDGETS[APP_GUI_MAXNUM_HP];
 //extern const uint32 APP_GUI_TRT_SCR_CTRL_PNL_COLOUR_IMGS [APP_GUI_MAXNUM_HP][APP_GUI_TRT_SCR_CTRL_PNL_COLOUR_STATES_IMGS];
 extern const uint32 APP_GUI_TRT_SCR_CTRL_PNL_COLOUR_WIDGETS [APP_GUI_MAXNUM_HP];
 
-//extern const uint32 APP_GUI_TRT_SCR_HP_ERR_WIDGETS[APP_GUI_MAXNUM_HP][APP_GUI_NUM_ERR_WIDGETS_WHEN_HP];
-//extern const uint32 APP_GUI_TRT_SCR_HP_ERR_MSG_IMAGES[Err_msg_max];
+extern const uint32 APP_GUI_TRT_SCR_HP_ERR_WIDGETS[APP_GUI_MAXNUM_HP][APP_GUI_NUM_ERR_WIDGETS_WHEN_HP];
+extern const uint32 APP_GUI_TRT_SCR_HP_ERR_MSG_IMAGES[Err_msg_max];
 //extern const uint32 APP_GUI_TRT_SCR_UC_ERR_WIDGETS[APP_GUI_NUM_ERR_WIDGETS_WHEN_UC];
 //extern const uint32 APP_GUI_TRT_SCR_UC_ERR_MSG_IMAGES[Err_msg_max];
 

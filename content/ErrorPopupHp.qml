@@ -5,6 +5,9 @@ Item {
     id: item1
     width: backgroundImg.width
     height: backgroundImg.height
+    property alias errorMessageImgState: errorMessageImg.state
+    property alias treatmentTimeTxtText: treatmentTimeTxt.text
+    property alias errorCodeTxtText: errorCodeTxt.text
 
     Image {
         id: backgroundImg

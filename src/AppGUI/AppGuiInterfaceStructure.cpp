@@ -145,27 +145,27 @@ const uint32 APP_GUI_TRT_SCR_CTRL_PNL_COLOUR_WIDGETS [APP_GUI_MAXNUM_HP] =
 //	{ c029_MenuTrtHP4_Aro1, c029_MenuTrtHP4_Aro2}	//HP4
 //};
 
-///* Listado de widgets que componen los popUps de error. Los widgets a deshabilitar son los del
-// * panel de control */
-//const uint32 APP_GUI_TRT_SCR_HP_ERR_WIDGETS[APP_GUI_MAXNUM_HP][APP_GUI_NUM_ERR_WIDGETS_WHEN_HP] =
-//{
-//		{ imgPopUpErrBckGndHP1, NumVwrPopUpErrHP1, imgPopUpErrMsgHP1, butPopUpErrOkHP1, NumVwrPopUpErrTRTtimeHP1},
-//		{ imgPopUpErrBckGndHP2, NumVwrPopUpErrHP2, imgPopUpErrMsgHP2, butPopUpErrOkHP2, NumVwrPopUpErrTRTtimeHP2},
-//		{ imgPopUpErrBckGndHP3, NumVwrPopUpErrHP3, imgPopUpErrMsgHP3, butPopUpErrOkHP3, NumVwrPopUpErrTRTtimeHP3},
-//		{ imgPopUpErrBckGndHP4, NumVwrPopUpErrHP4, imgPopUpErrMsgHP4, butPopUpErrOkHP4, NumVwrPopUpErrTRTtimeHP4}
-//};
+/* Listado de widgets que componen los popUps de error. Los widgets a deshabilitar son los del
+ * panel de control */
+const uint32 APP_GUI_TRT_SCR_HP_ERR_WIDGETS[APP_GUI_MAXNUM_HP][APP_GUI_NUM_ERR_WIDGETS_WHEN_HP] =
+{
+        { ImgPopUpErrBckGndHP1, NumVwrPopUpErrHP1, ImgPopUpErrMsgHP1, ButPopUpErrOkHP1, NumVwrPopUpErrTRTtimeHP1},
+        { ImgPopUpErrBckGndHP2, NumVwrPopUpErrHP2, ImgPopUpErrMsgHP2, ButPopUpErrOkHP2, NumVwrPopUpErrTRTtimeHP2},
+        { ImgPopUpErrBckGndHP3, NumVwrPopUpErrHP3, ImgPopUpErrMsgHP3, ButPopUpErrOkHP3, NumVwrPopUpErrTRTtimeHP3},
+        { ImgPopUpErrBckGndHP4, NumVwrPopUpErrHP4, ImgPopUpErrMsgHP4, ButPopUpErrOkHP4, NumVwrPopUpErrTRTtimeHP4}
+};
 
-//const uint32 APP_GUI_TRT_SCR_HP_ERR_MSG_IMAGES[Err_msg_max] =
-//{
-//		//standard			No_msg			release_HP					Obstruction				SETA				temperatura				  Resucciones
-//		c355_signoalarma, c355_signoalarma, c436_HPalarmaDesconexion, c427_HPalarmaObstruccion, c429_HPalarmaBoton, c435_HPalarmaTemperatura, c460_LimiteResuccionesSuperado,
-//		//SPI		Com485			Caudal			Power			RFID		Insifucuentes NTC	Tout Vacc
-//		c550_SPIerr, c551_Com485err, c552_Caudalerr, c553_PowerErr, c554_RFIDerr, c555_InsfNTC, c556_ToutVacc,
-//		//SinTramasMain		Desconocido			TemperaturaInterna	SensoresInternos	HP desconfigurado	HP Alarma		PCB dañada
-//		c557_SinTramasMain, c558_ErrDesconocido, c559_InternalTemp, c560_InternalSensors, c561_HPdesconfig, c562_HPalarma, c563_PCBdanada,
-//		//Test Inicial
-//		c564_TestInicialFallo,
-//};
+const uint32 APP_GUI_TRT_SCR_HP_ERR_MSG_IMAGES[Err_msg_max] =
+{
+        //standard			No_msg			release_HP					Obstruction				SETA				temperatura				  Resucciones
+        C355_signoalarma, C355_signoalarma, C436_HPalarmaDesconexion, C427_HPalarmaObstruccion, C429_HPalarmaBoton, C435_HPalarmaTemperatura, C460_LimiteResuccionesSuperado,
+        //SPI		Com485			Caudal			Power			RFID		Insifucuentes NTC	Tout Vacc
+        C550_SPIerr, C551_Com485err, C552_Caudalerr, C553_PowerErr, C554_RFIDerr, C555_InsfNTC, C556_ToutVacc,
+        //SinTramasMain		Desconocido			TemperaturaInterna	SensoresInternos	HP desconfigurado	HP Alarma		PCB dañada
+        C557_SinTramasMain, C558_ErrDesconocido, C559_InternalTemp, C560_InternalSensors, C561_HPdesconfig, C562_HPalarma, C563_PCBdanada,
+        //Test Inicial
+        C564_TestInicialFallo,
+};
 
 //const uint32 APP_GUI_TRT_SCR_UC_ERR_WIDGETS[APP_GUI_NUM_ERR_WIDGETS_WHEN_UC] =
 //{

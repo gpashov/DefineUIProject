@@ -53,15 +53,15 @@ void WidgetsWrapper::GUIsetNumViewerNum(uint32 id, double num, uint8 dec)
     case NumVwrResucctionCountHP3: emit resuctionCountChanged(APP_GUI_HP3_ID, num); break;
     case NumVwrResucctionCountHP4: emit resuctionCountChanged(APP_GUI_HP4_ID, num); break;
     case NumVwrPopUpRFIDrestTime: emit rfidPopupRestTimeUpdated(prova); break;
-    case NumVwrPopUpErrHP1: break;
-    case NumVwrPopUpErrHP2: break;
-    case NumVwrPopUpErrHP3: break;
-    case NumVwrPopUpErrHP4: break;
-    case NumVwrPopUpErrUC: break;
-    case NumVwrPopUpErrTRTtimeHP1: break;
-    case NumVwrPopUpErrTRTtimeHP2: break;
-    case NumVwrPopUpErrTRTtimeHP3: break;
-    case NumVwrPopUpErrTRTtimeHP4: break;
+    case NumVwrPopUpErrHP1: emit errorPopupErrorCodeSet(APP_GUI_HP1_ID, prova); break;
+    case NumVwrPopUpErrHP2: emit errorPopupErrorCodeSet(APP_GUI_HP2_ID, prova); break;
+    case NumVwrPopUpErrHP3: emit errorPopupErrorCodeSet(APP_GUI_HP3_ID, prova); break;
+    case NumVwrPopUpErrHP4: emit errorPopupErrorCodeSet(APP_GUI_HP4_ID, prova); break;
+    case NumVwrPopUpErrUC:  emit errorPopupErrorCodeSet(APP_GUI_MAXNUM_HP, prova); break;
+    case NumVwrPopUpErrTRTtimeHP1: emit errorPopupTreatmentTimeSet(APP_GUI_HP1_ID, prova); break;
+    case NumVwrPopUpErrTRTtimeHP2: emit errorPopupTreatmentTimeSet(APP_GUI_HP2_ID, prova); break;
+    case NumVwrPopUpErrTRTtimeHP3: emit errorPopupTreatmentTimeSet(APP_GUI_HP3_ID, prova); break;
+    case NumVwrPopUpErrTRTtimeHP4: emit errorPopupTreatmentTimeSet(APP_GUI_HP4_ID, prova); break;
     case NumVwrPopUpCleanHP1: break;
     case NumVwrPopUpCleanHP2: break;
     case NumVwrPopUpCleanHP3: break;
@@ -1375,6 +1375,11 @@ void WidgetsWrapper::GUIsetImgViewerImage(uint32 id, uint32 idImg)
     case ImgPopUpTstVacAUTOstatus: emit testVacuumPopupAutoStatusImageChanged((EAppGUIimageIDlist)idImg); break;
     case ImgPopUpRFIDlabel:emit rfidPopupLabelChanged((EAppGUIimageIDlist)idImg); break;
     case ImgPopUpRFIDresult: emit rfidPopupStatusChanged((EAppGUIimageIDlist)idImg); break;
+    case ImgPopUpErrMsgHP1: emit errorPopupErrorMessageImageSet(APP_GUI_HP1_ID, (EAppGUIimageIDlist)idImg); break;
+    case ImgPopUpErrMsgHP2: emit errorPopupErrorMessageImageSet(APP_GUI_HP2_ID, (EAppGUIimageIDlist)idImg); break;
+    case ImgPopUpErrMsgHP3: emit errorPopupErrorMessageImageSet(APP_GUI_HP3_ID, (EAppGUIimageIDlist)idImg); break;
+    case ImgPopUpErrMsgHP4: emit errorPopupErrorMessageImageSet(APP_GUI_HP4_ID, (EAppGUIimageIDlist)idImg); break;
+    case ImgPopUpErrMsgUC: emit errorPopupErrorMessageImageSet(APP_GUI_MAXNUM_HP, (EAppGUIimageIDlist)idImg); break;
     default: break;
     }
 }
@@ -1516,6 +1521,11 @@ void WidgetsWrapper::GUItestVacuumPopupChangeColorBar(EAppGUI_HPsIDs hpIndex)
 void WidgetsWrapper::GUIrfidPopupChangeColorBar(EAppGUI_HPsIDs hpIndex)
 {
     emit rfidPopupColorBarChanged(hpIndex);
+}
+
+void WidgetsWrapper::GUIShowErrorPopup(uint8 hpIndex, bool isErrorActive)
+{
+    emit errorPopupActivated((EAppGUI_HPsIDs)hpIndex, isErrorActive);
 }
 
 QString WidgetsWrapper::calcNumber()

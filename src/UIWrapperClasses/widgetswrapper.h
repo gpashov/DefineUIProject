@@ -56,6 +56,7 @@ public:
     void GUItestVacuumPopupSetLevelImage(EAppGUIwidgetIDlist imageWidgetId, EAppGUItstVacDone status);
     void GUItestVacuumPopupChangeColorBar(EAppGUI_HPsIDs hpIndex);
     void GUIrfidPopupChangeColorBar(EAppGUI_HPsIDs hpIndex);
+    void GUIShowErrorPopup(uint8 hpIndex, bool isErrorActive);
 
 signals:
     void changeScreenSignal(AppEnumsNs::EAppGUIscreen screenId);
@@ -159,6 +160,12 @@ signals:
     void testVacuumPopupLevelImageSet(AppEnumsNs::EAppGUIwidgetIDlist imageWidgetId, AppEnumsNs::EAppGUItstVacDone status);
     void testVacuumPopupColorBarChanged(AppEnumsNs::EAppGUI_HPsIDs hpIndex);
     void timePopUpSet(AppEnumsNs::EAppGUI_HPsIDs HPindex, AppEnumsNs::EAppGUITimePopUpState popupState);
+
+    // Error popups
+    void errorPopupActivated(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool isErrorActive);    // We use APP_GUI_MAXNUM_HP for the central error popup
+    void errorPopupErrorCodeSet(AppEnumsNs::EAppGUI_HPsIDs hpIndex, QString errorCode);
+    void errorPopupTreatmentTimeSet(AppEnumsNs::EAppGUI_HPsIDs hpIndex, QString time);
+    void errorPopupErrorMessageImageSet(AppEnumsNs::EAppGUI_HPsIDs hpIndex, AppEnumsNs::EAppGUIimageIDlist idImg);
 
 private:
     void float_to_string(double f, char r[], uint8 dec);

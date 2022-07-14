@@ -1,11 +1,12 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
-import define.enums 1.0
 
 Item {
     id: item1
     width: backgroundImg.width
     height: backgroundImg.height
+    property alias errorMessageImgState: errorMessageImg.state
+    property alias errorCodeTxtText: errorCodeTxt.text
 
     Image {
         id: backgroundImg
@@ -47,8 +48,4 @@ Item {
 
 
 
-/*##^##
-Designer {
-    D{i:0;height:334;width:284}
-}
-##^##*/
+
