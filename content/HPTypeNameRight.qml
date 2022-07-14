@@ -3,6 +3,8 @@ import QtQuick.Controls 2.15
 
 Item {
     id: name
+    width: curvedImg.width
+    height: curvedImg.height
 
     Image {
         id: curvedImg

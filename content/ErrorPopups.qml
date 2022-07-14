@@ -71,11 +71,11 @@ Item {
         target: wdgWpr
         onErrorPopupActivated: (hpIndex, isErrorActive) => {
                                    switch(hpIndex) {
-                                   case APP_GUI_HP1_ID: errorPopupHp1.visible = isErrorActive; break;
-                                   case APP_GUI_HP2_ID: errorPopupHp2.visible = isErrorActive; break;
-                                   case APP_GUI_HP3_ID: errorPopupHp3.visible = isErrorActive; break;
-                                   case APP_GUI_HP4_ID: errorPopupHp4.visible = isErrorActive; break;
-                                   case APP_GUI_MAXNUM_HP: errorPopupCentral.visible = isErrorActive; break;
+                                   case AppEnumsNs.APP_GUI_HP1_ID: errorPopupHp1.visible = isErrorActive; break;
+                                   case AppEnumsNs.APP_GUI_HP2_ID: errorPopupHp2.visible = isErrorActive; break;
+                                   case AppEnumsNs.APP_GUI_HP3_ID: errorPopupHp3.visible = isErrorActive; break;
+                                   case AppEnumsNs.APP_GUI_HP4_ID: errorPopupHp4.visible = isErrorActive; break;
+                                   case AppEnumsNs.APP_GUI_MAXNUM_HP: errorPopupCentral.visible = isErrorActive; break;
                                    }
 
                                    maskUserInteraction()
@@ -83,19 +83,19 @@ Item {
 
         onErrorPopupErrorCodeSet: (hpIndex, errorCode) => {
                                       switch(hpIndex) {
-                                      case APP_GUI_HP1_ID: errorPopupHp1.errorCodeTxtText = errorCode; break;
-                                      case APP_GUI_HP2_ID: errorPopupHp2.errorCodeTxtText = errorCode; break;
-                                      case APP_GUI_HP3_ID: errorPopupHp3.errorCodeTxtText = errorCode; break;
-                                      case APP_GUI_HP4_ID: errorPopupHp4.errorCodeTxtText = errorCode; break;
-                                      case APP_GUI_MAXNUM_HP: errorPopupCentral.errorCodeTxtText = errorCode; break;
+                                      case AppEnumsNs.APP_GUI_HP1_ID: errorPopupHp1.errorCodeTxtText = errorCode; break;
+                                      case AppEnumsNs.APP_GUI_HP2_ID: errorPopupHp2.errorCodeTxtText = errorCode; break;
+                                      case AppEnumsNs.APP_GUI_HP3_ID: errorPopupHp3.errorCodeTxtText = errorCode; break;
+                                      case AppEnumsNs.APP_GUI_HP4_ID: errorPopupHp4.errorCodeTxtText = errorCode; break;
+                                      case AppEnumsNs.APP_GUI_MAXNUM_HP: errorPopupCentral.errorCodeTxtText = errorCode; break;
                                       }
                                   }
         onErrorPopupTreatmentTimeSet: (hpIndex, time) => {
                                           switch(hpIndex) {
-                                          case APP_GUI_HP1_ID: errorPopupHp1.treatmentTimeTxtText = errorCode; break;
-                                          case APP_GUI_HP2_ID: errorPopupHp2.treatmentTimeTxtText = errorCode; break;
-                                          case APP_GUI_HP3_ID: errorPopupHp3.treatmentTimeTxtText = errorCode; break;
-                                          case APP_GUI_HP4_ID: errorPopupHp4.treatmentTimeTxtText = errorCode; break;
+                                          case AppEnumsNs.APP_GUI_HP1_ID: errorPopupHp1.treatmentTimeTxtText = errorCode; break;
+                                          case AppEnumsNs.APP_GUI_HP2_ID: errorPopupHp2.treatmentTimeTxtText = errorCode; break;
+                                          case AppEnumsNs.APP_GUI_HP3_ID: errorPopupHp3.treatmentTimeTxtText = errorCode; break;
+                                          case AppEnumsNs.APP_GUI_HP4_ID: errorPopupHp4.treatmentTimeTxtText = errorCode; break;
                                           }
                                       }
         onErrorPopupErrorMessageImageSet: (hpIndex, idImg) => {
@@ -127,11 +127,11 @@ Item {
                                               }
 
                                               switch(hpIndex) {
-                                              case APP_GUI_HP1_ID: errorPopupHp1.errorMessageImgState = errImgState; break;
-                                              case APP_GUI_HP2_ID: errorPopupHp2.errorMessageImgState = errImgState; break;
-                                              case APP_GUI_HP3_ID: errorPopupHp3.errorMessageImgState = errImgState; break;
-                                              case APP_GUI_HP4_ID: errorPopupHp4.errorMessageImgState = errImgState; break;
-                                              case APP_GUI_MAXNUM_HP: errorPopupCentral.errorMessageImgState = errImgState; break;
+                                              case AppEnumsNs.APP_GUI_HP1_ID: errorPopupHp1.errorMessageImgState = errImgState; break;
+                                              case AppEnumsNs.APP_GUI_HP2_ID: errorPopupHp2.errorMessageImgState = errImgState; break;
+                                              case AppEnumsNs.APP_GUI_HP3_ID: errorPopupHp3.errorMessageImgState = errImgState; break;
+                                              case AppEnumsNs.APP_GUI_HP4_ID: errorPopupHp4.errorMessageImgState = errImgState; break;
+                                              case AppEnumsNs.APP_GUI_MAXNUM_HP: errorPopupCentral.errorMessageImgState = errImgState; break;
                                               }
                                           }
     }

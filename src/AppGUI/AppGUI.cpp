@@ -1327,21 +1327,21 @@ uint8 AppGUIisTrtRunning( uint8 HPindex, cHPcryoTreatmentStatus *status)
 
 uint8 AppGUIisTstVacRunning( uint8 HPindex, cHPcryoTestVacumStatus *status)
 {
-//    tPRFdata *PRF;
-//    tHPcryoData *HP;
+    tPRFdata *PRF;
+    tHPcryoData *HP;
 	
-//    /* Comprobamos si el HP indicado esta en test vacum y si lo está devolvemos el status */
-//    if( HPcryoGetFromSlot( APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
-//    {
-//        /* Hay HP, vamos a ver si esta en test vacum */
-//        if( HPcryoGetStatus( HP, PRF) == HP_CRYO_TEST_VACUM)
-//        {
-//            /* Esta en test vacum, devolvemos cierto y guardamos el estado de test si el
-//             * puntero pasado no es NULL */
-//            if( status != NULL){ ( *status) = HPcryoTestVacumStatus( HP, PRF);}
-//            return 1;
-//        }
-//    }
+    /* Comprobamos si el HP indicado esta en test vacum y si lo está devolvemos el status */
+    if( HPcryoGetFromSlot( (cPRFslot)APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
+    {
+        /* Hay HP, vamos a ver si esta en test vacum */
+        if( HPcryoGetStatus( HP, PRF) == HP_CRYO_TEST_VACUM)
+        {
+            /* Esta en test vacum, devolvemos cierto y guardamos el estado de test si el
+             * puntero pasado no es NULL */
+            if( status != NULL){ ( *status) = HPcryoTestVacumStatus( HP, PRF);}
+            return 1;
+        }
+    }
 	
     /* Si llegamos aqui es que no esta en test vacum */
     return 0;
@@ -1368,15 +1368,15 @@ uint8 AppGUIisHPconnected( uint8 HPindex, cHPcryoModels *model)
 
 uint8 AppGUIisInitRunning( uint8 HPindex)
 {
-//    tPRFdata *PRF;
-//    tHPcryoData *HP;
+    tPRFdata *PRF;
+    tHPcryoData *HP;
 	
-//    /* Comprobamos si el HP indicado esta en inicialización */
-//    if( HPcryoGetFromSlot( APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
-//    {
-//        /* Hay HP, vamos a ver si esta en tratamiento */
-//        if(( HPcryoGetStatus( HP, PRF) == HP_CRYO_TEST_INIT)||(PRF->status == PRF_STATUS_INIT))		return 1;
-//    }
+    /* Comprobamos si el HP indicado esta en inicialización */
+    if( HPcryoGetFromSlot( (cPRFslot)APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF))
+    {
+        /* Hay HP, vamos a ver si esta en tratamiento */
+        if(( HPcryoGetStatus( HP, PRF) == HP_CRYO_TEST_INIT)||(PRF->status == PRF_STATUS_INIT))		return 1;
+    }
 	
     /* Si llegamos aqui es que no esta en inicialización */
     return 0;
