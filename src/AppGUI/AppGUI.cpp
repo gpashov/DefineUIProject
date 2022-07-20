@@ -1165,7 +1165,7 @@ void AppGUIhandleErrPopUps( void)
     uint8 errMsg, wrnMsg;
     uint32 errCode, wrnCode;
     static uint8 isErrUp[Max_perifs];
-    uint8 dev, i;
+    uint8 dev=0, i;
     uint32 widID;
     uint8 HPindex;
     tHPcryoData *HP;
@@ -1175,7 +1175,8 @@ void AppGUIhandleErrPopUps( void)
     for( dev = Manip1; dev < Maq; dev++)
     {
         /* Obtenemso el error */
-        isErrUp[dev] = ERR_interface_msg( (perif_to_manage)dev, &errCode, (errors_messages *)&errMsg, &wrnCode, (warning_messages *)&wrnMsg);
+        perif_to_manage devTmp = (perif_to_manage)dev;  // This line solves a problem of variable dev changing to 0 when used as the first argument on the following line.
+        isErrUp[dev] = ERR_interface_msg( devTmp, &errCode, (errors_messages *)&errMsg, &wrnCode, (warning_messages *)&wrnMsg);
         isErrUp[dev] = ( errCode != Error_ok);
 		
         /* Obtenemos el HPindex a partir del slot (dev) */
