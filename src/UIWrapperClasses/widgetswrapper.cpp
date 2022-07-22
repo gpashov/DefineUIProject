@@ -62,14 +62,14 @@ void WidgetsWrapper::GUIsetNumViewerNum(uint32 id, double num, uint8 dec)
     case NumVwrPopUpErrTRTtimeHP2: emit errorPopupTreatmentTimeSet(APP_GUI_HP2_ID, prova); break;
     case NumVwrPopUpErrTRTtimeHP3: emit errorPopupTreatmentTimeSet(APP_GUI_HP3_ID, prova); break;
     case NumVwrPopUpErrTRTtimeHP4: emit errorPopupTreatmentTimeSet(APP_GUI_HP4_ID, prova); break;
-    case NumVwrPopUpCleanHP1: break;
-    case NumVwrPopUpCleanHP2: break;
-    case NumVwrPopUpCleanHP3: break;
-    case NumVwrPopUpCleanHP4: break;
-    case NumVwrPopUpCleanNumCancelHP1: break;
-    case NumVwrPopUpCleanNumCancelHP2: break;
-    case NumVwrPopUpCleanNumCancelHP3: break;
-    case NumVwrPopUpCleanNumCancelHP4: break;
+    case NumVwrPopUpCleanHP1: emit cleanUpTimeSet(APP_GUI_HP1_ID, prova); break;
+    case NumVwrPopUpCleanHP2: emit cleanUpTimeSet(APP_GUI_HP2_ID, prova); break;
+    case NumVwrPopUpCleanHP3: emit cleanUpTimeSet(APP_GUI_HP3_ID, prova); break;
+    case NumVwrPopUpCleanHP4: emit cleanUpTimeSet(APP_GUI_HP4_ID, prova); break;
+    case NumVwrPopUpCleanNumCancelHP1: emit cleanUpCancelCountSet(APP_GUI_HP4_ID, prova); break;
+    case NumVwrPopUpCleanNumCancelHP2: emit cleanUpCancelCountSet(APP_GUI_HP3_ID, prova); break;
+    case NumVwrPopUpCleanNumCancelHP3: emit cleanUpCancelCountSet(APP_GUI_HP2_ID, prova); break;
+    case NumVwrPopUpCleanNumCancelHP4: emit cleanUpCancelCountSet(APP_GUI_HP1_ID, prova); break;
     case NumVwrPantallaCalc:        setCalcNumber(qstr); break;
     case NumVwrModeloMaqCfg:        setConfModel(qstr); break;
     case NumVwrVersionSoftwareCfg:  setConfVersion(qstr); break;
@@ -1050,26 +1050,26 @@ uint16 WidgetsWrapper::GUIsetWidgetEnable(uint32 id, uint8 enable)
 //    case NumVwrPopUpCleanHP2,
 //    case NumVwrPopUpCleanHP3,
 //    case NumVwrPopUpCleanHP4,
-//    case butPopUpCleanHP1,
-//    case butPopUpCleanHP2,
-//    case butPopUpCleanHP3,
-//    case butPopUpCleanHP4,
-//    case butPopUpCleanYESHP1,
-//    case butPopUpCleanYESHP2,
-//    case butPopUpCleanYESHP3,
-//    case butPopUpCleanYESHP4,
-//    case butPopUpCleanNOHP1,
-//    case butPopUpCleanNOHP2,
-//    case butPopUpCleanNOHP3,
-//    case butPopUpCleanNOHP4,
+    case ButPopUpCleanHP1: emit cleanUpCleanButtonEnabled(APP_GUI_HP1_ID, enable); break;
+    case ButPopUpCleanHP2: emit cleanUpCleanButtonEnabled(APP_GUI_HP2_ID, enable); break;
+    case ButPopUpCleanHP3: emit cleanUpCleanButtonEnabled(APP_GUI_HP3_ID, enable); break;
+    case ButPopUpCleanHP4: emit cleanUpCleanButtonEnabled(APP_GUI_HP4_ID, enable); break;
+    case ButPopUpCleanYESHP1: emit cleanUpYesButtonEnabled(APP_GUI_HP1_ID, enable); break;
+    case ButPopUpCleanYESHP2: emit cleanUpYesButtonEnabled(APP_GUI_HP2_ID, enable); break;
+    case ButPopUpCleanYESHP3: emit cleanUpYesButtonEnabled(APP_GUI_HP3_ID, enable); break;
+    case ButPopUpCleanYESHP4: emit cleanUpYesButtonEnabled(APP_GUI_HP4_ID, enable); break;
+    case ButPopUpCleanNOHP1: emit cleanUpNoButtonEnabled(APP_GUI_HP1_ID, enable); break;
+    case ButPopUpCleanNOHP2: emit cleanUpNoButtonEnabled(APP_GUI_HP2_ID, enable); break;
+    case ButPopUpCleanNOHP3: emit cleanUpNoButtonEnabled(APP_GUI_HP3_ID, enable); break;
+    case ButPopUpCleanNOHP4: emit cleanUpNoButtonEnabled(APP_GUI_HP4_ID, enable); break;
 //    case imgPopUpCleanHP1,
 //    case imgPopUpCleanHP2,
 //    case imgPopUpCleanHP3,
 //    case imgPopUpCleanHP4,
-//    case butPopUpCleanCancelHP1,
-//    case butPopUpCleanCancelHP2,
-//    case butPopUpCleanCancelHP3,
-//    case butPopUpCleanCancelHP4,
+    case ButPopUpCleanCancelHP1: emit cleanUpCancelButtonEnabled(APP_GUI_HP1_ID, enable); break;
+    case ButPopUpCleanCancelHP2: emit cleanUpCancelButtonEnabled(APP_GUI_HP2_ID, enable); break;
+    case ButPopUpCleanCancelHP3: emit cleanUpCancelButtonEnabled(APP_GUI_HP3_ID, enable); break;
+    case ButPopUpCleanCancelHP4: emit cleanUpCancelButtonEnabled(APP_GUI_HP4_ID, enable); break;
 //    case NumVwrPopUpCleanNumCancelHP1,
 //    case NumVwrPopUpCleanNumCancelHP2,
 //    case NumVwrPopUpCleanNumCancelHP3,
@@ -1380,6 +1380,10 @@ void WidgetsWrapper::GUIsetImgViewerImage(uint32 id, uint32 idImg)
     case ImgPopUpErrMsgHP3: emit errorPopupErrorMessageImageSet(APP_GUI_HP3_ID, (EAppGUIimageIDlist)idImg); break;
     case ImgPopUpErrMsgHP4: emit errorPopupErrorMessageImageSet(APP_GUI_HP4_ID, (EAppGUIimageIDlist)idImg); break;
     case ImgPopUpErrMsgUC: emit errorPopupErrorMessageImageSet(APP_GUI_MAXNUM_HP, (EAppGUIimageIDlist)idImg); break;
+    case ImgPopUpCleanHP1: emit cleanUpPopupImageSet(APP_GUI_HP1_ID, (EAppGUIimageIDlist)idImg); break;
+    case ImgPopUpCleanHP2: emit cleanUpPopupImageSet(APP_GUI_HP2_ID, (EAppGUIimageIDlist)idImg); break;
+    case ImgPopUpCleanHP3: emit cleanUpPopupImageSet(APP_GUI_HP3_ID, (EAppGUIimageIDlist)idImg); break;
+    case ImgPopUpCleanHP4: emit cleanUpPopupImageSet(APP_GUI_HP4_ID, (EAppGUIimageIDlist)idImg); break;
     default: break;
     }
 }
@@ -1526,6 +1530,11 @@ void WidgetsWrapper::GUIrfidPopupChangeColorBar(EAppGUI_HPsIDs hpIndex)
 void WidgetsWrapper::GUIShowErrorPopup(uint8 hpIndex, bool isErrorActive)
 {
     emit errorPopupActivated((EAppGUI_HPsIDs)hpIndex, isErrorActive);
+}
+
+void WidgetsWrapper::GUIShowCleanUpPopup(uint8 hpIndex, bool isActive)
+{
+    emit cleanUpPopupDisplayed((EAppGUI_HPsIDs)hpIndex, isActive);
 }
 
 QString WidgetsWrapper::calcNumber()

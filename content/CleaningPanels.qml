@@ -1,6 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import DefineUIProject 1.0
+import define.enums 1.0
 
 Item {
     id: item1
@@ -37,6 +38,18 @@ Item {
         anchors.right: parent.right
         anchors.bottom: parent.bottom
         state: states[3].name
+    }
+
+    Connections {
+        target: wdgWpr
+        onCleanUpPopupDisplayed: (hpIndex, isDispalyed) => {
+                                     switch(hpIndex) {
+                                         case AppEnumsNs.APP_GUI_HP1_ID: cleaningHp1.visible = isDisplayed; break;
+                                         case AppEnumsNs.APP_GUI_HP2_ID: cleaningHp2.visible = isDisplayed; break;
+                                         case AppEnumsNs.APP_GUI_HP3_ID: cleaningHp3.visible = isDisplayed; break;
+                                         case AppEnumsNs.APP_GUI_HP4_ID: cleaningHp4.visible = isDisplayed; break;
+                                     }
+                                 }
     }
 }
 

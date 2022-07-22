@@ -71,6 +71,7 @@ Rectangle {
         y: 700
         source: "images/c610_GPRS_no_coverage.png"
         fillMode: Image.PreserveAspectFit
+        visible: false
     }
 
     states: [

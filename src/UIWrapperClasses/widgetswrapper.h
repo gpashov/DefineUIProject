@@ -57,6 +57,7 @@ public:
     void GUItestVacuumPopupChangeColorBar(EAppGUI_HPsIDs hpIndex);
     void GUIrfidPopupChangeColorBar(EAppGUI_HPsIDs hpIndex);
     void GUIShowErrorPopup(uint8 hpIndex, bool isErrorActive);
+    void GUIShowCleanUpPopup(uint8 hpIndex, bool isActive);
 
 signals:
     void changeScreenSignal(AppEnumsNs::EAppGUIscreen screenId);
@@ -160,6 +161,16 @@ signals:
     void testVacuumPopupLevelImageSet(AppEnumsNs::EAppGUIwidgetIDlist imageWidgetId, AppEnumsNs::EAppGUItstVacDone status);
     void testVacuumPopupColorBarChanged(AppEnumsNs::EAppGUI_HPsIDs hpIndex);
     void timePopUpSet(AppEnumsNs::EAppGUI_HPsIDs HPindex, AppEnumsNs::EAppGUITimePopUpState popupState);
+
+    // Clean up popups
+    void cleanUpPopupDisplayed(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool isDispalyed);
+    void cleanUpPopupImageSet(AppEnumsNs::EAppGUI_HPsIDs hpIndex, AppEnumsNs::EAppGUIimageIDlist idImg);
+    void cleanUpTimeSet(AppEnumsNs::EAppGUI_HPsIDs hpIndex, QString time);
+    void cleanUpCancelCountSet(AppEnumsNs::EAppGUI_HPsIDs hpIndex, QString cancelCount);
+    void cleanUpCleanButtonEnabled(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool isEnabled);
+    void cleanUpYesButtonEnabled(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool isEnabled);
+    void cleanUpNoButtonEnabled(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool isEnabled);
+    void cleanUpCancelButtonEnabled(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool isEnabled);
 
     // Error popups
     void errorPopupActivated(AppEnumsNs::EAppGUI_HPsIDs hpIndex, bool isErrorActive);    // We use APP_GUI_MAXNUM_HP for the central error popup

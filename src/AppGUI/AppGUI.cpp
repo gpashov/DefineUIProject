@@ -1187,10 +1187,10 @@ void AppGUIhandleErrPopUps( void)
 		
         if (!AppGUIdata.slot[HPindex].ErrorBeep && isErrUp[dev]) { AppGUIdata.slot[HPindex].ErrorBeep = 1;	BUZZ_Configure(1, 100, PATRO_SO_ERROR );	}
         if (!isErrUp[dev])	{	AppGUIdata.slot[HPindex].ErrorBeep = 0;	}
-		
+
         wdgWpr.GUIShowErrorPopup(dev, isErrUp[dev]);
 		
-		
+
         /* Ponemos el codigo de error */
         wdgWpr.GUIsetNumViewerNum( APP_GUI_TRT_SCR_HP_ERR_WIDGETS[HPindex][1], (float)errCode, 0);
 		
@@ -1227,81 +1227,65 @@ void AppGUIhandleErrPopUps( void)
 
 void AppGUIhandleCleanUpPopUps( uint8 show, uint8 HPindex)
 {
-//    tPRFdata *PRF;
-//    tHPcryoData *HP;
-//    uint8 isWaitingUser, isCountDown;
+    tPRFdata *PRF;
+    tHPcryoData *HP;
+    uint8 isWaitingUser, isCountDown;
 			
-//    isWaitingUser = ( AppGUIdata.slot[HPindex].CleanUPhdlr.status == APP_GUI_CLEAN_UP_WAIT_USER);
-//    isCountDown = ( AppGUIdata.slot[HPindex].CleanUPhdlr.status == APP_GUI_CLEAN_UP_COUNTDOWN);
-//    if( HPcryoGetFromSlot( APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF)) {AppGUIdata.slot[HPindex].CleanUPhdlr.HP_clean_init_or_end = HPcryoCleanUpInitOrEnd( HP, PRF);}
+    isWaitingUser = ( AppGUIdata.slot[HPindex].CleanUPhdlr.status == APP_GUI_CLEAN_UP_WAIT_USER);
+    isCountDown = ( AppGUIdata.slot[HPindex].CleanUPhdlr.status == APP_GUI_CLEAN_UP_COUNTDOWN);
+    if( HPcryoGetFromSlot( (cPRFslot)APP_GUI_SLOT_DISTRIBUTION[HPindex], &HP, &PRF)) {AppGUIdata.slot[HPindex].CleanUPhdlr.HP_clean_init_or_end = HPcryoCleanUpInitOrEnd( HP, PRF);}
 	
+    wdgWpr.GUIShowCleanUpPopup(HPindex, show);
 
-//    if((AppGUIdata.slot[HPindex].CleanUPhdlr.HP_clean_init_or_end == HP_CRYO_CLEAN_UP_END_OF_TRT) || (show==0))
-//    {
-//        //Fondo
-//        GUIsetWidgetVisibility( APP_GUI_TRT_SCR_CLEANUP_BCKGND_WIDGETS[HPindex], show);
-//        GUIsetWidgetEnable( APP_GUI_TRT_SCR_CLEANUP_BCKGND_WIDGETS[HPindex], show);
+    if((AppGUIdata.slot[HPindex].CleanUPhdlr.HP_clean_init_or_end == HP_CRYO_CLEAN_UP_END_OF_TRT) || (show==0))
+    {
+        //Fondo
 		
-//        //Imagen
-//        GUIsetWidgetVisibility( APP_GUI_TRT_SCR_CLEANUP_IMAGES_WIDGETS[HPindex], show);
-//        GUIsetWidgetEnable( APP_GUI_TRT_SCR_CLEANUP_IMAGES_WIDGETS[HPindex], show);
-//        GUIsetImgViewerImage( APP_GUI_TRT_SCR_CLEANUP_IMAGES_WIDGETS[HPindex],
-//                              APP_GUI_TRT_SCR_CLEANUP_STATUS_IMAGES[AppGUIdata.slot[HPindex].CleanUPhdlr.status]);
+        //Imagen
+        wdgWpr.GUIsetImgViewerImage( APP_GUI_TRT_SCR_CLEANUP_IMAGES_WIDGETS[HPindex],
+                              APP_GUI_TRT_SCR_CLEANUP_STATUS_IMAGES[AppGUIdata.slot[HPindex].CleanUPhdlr.status]);
 	
-//        //Visor numerico
-//        GUIsetWidgetVisibility( APP_GUI_TRT_SCR_CLEANUP_NUM_VIEWER_WIDGETS[HPindex], show);
-//        GUIsetWidgetEnable( APP_GUI_TRT_SCR_CLEANUP_NUM_VIEWER_WIDGETS[HPindex], show);
-//        GUIsetNumViewerNum(APP_GUI_TRT_SCR_CLEANUP_NUM_VIEWER_WIDGETS[HPindex],
-//                           AppGUIdata.slot[HPindex].CleanUPhdlr.Timer_count, 2);
+        //Visor numerico
+        wdgWpr.GUIsetNumViewerNum(APP_GUI_TRT_SCR_CLEANUP_NUM_VIEWER_WIDGETS[HPindex],
+                           AppGUIdata.slot[HPindex].CleanUPhdlr.Timer_count, 2);
 		
-//        //Boton YES
-//        GUIsetWidgetVisibility( APP_GUI_TRT_SCR_CLEANUP_BUTTON_YES_WIDGETS[HPindex], show);		//Solo si hay pregunta
-//        GUIsetWidgetEnable( APP_GUI_TRT_SCR_CLEANUP_BUTTON_YES_WIDGETS[HPindex], show && isWaitingUser);
-//        GUIsetImgButton( APP_GUI_TRT_SCR_CLEANUP_BUTTON_YES_WIDGETS[HPindex], APP_GUI_TRT_SCR_CLEANUP_BUTTON_YES_IMAGES[isWaitingUser], 0);
+        //Boton YES
+        wdgWpr.GUIsetWidgetEnable( APP_GUI_TRT_SCR_CLEANUP_BUTTON_YES_WIDGETS[HPindex], show && isWaitingUser);
 		
-//        //Boton NO
-//        GUIsetWidgetVisibility( APP_GUI_TRT_SCR_CLEANUP_BUTTON_NO_WIDGETS[HPindex], show);			//Solo si hay pregunta
-//        GUIsetWidgetEnable( APP_GUI_TRT_SCR_CLEANUP_BUTTON_NO_WIDGETS[HPindex], show && isWaitingUser);
-//        GUIsetImgButton( APP_GUI_TRT_SCR_CLEANUP_BUTTON_NO_WIDGETS[HPindex], APP_GUI_TRT_SCR_CLEANUP_BUTTON_NO_IMAGES[isWaitingUser], 0);
+        //Boton NO
+        wdgWpr.GUIsetWidgetEnable( APP_GUI_TRT_SCR_CLEANUP_BUTTON_NO_WIDGETS[HPindex], show && isWaitingUser);
 	
-//        //Boton CLEAN
-//        GUIsetWidgetVisibility( APP_GUI_TRT_SCR_CLEANUP_BUTTON_CLEAN_WIDGETS[HPindex], show);
-//        GUIsetWidgetEnable( APP_GUI_TRT_SCR_CLEANUP_BUTTON_CLEAN_WIDGETS[HPindex], show && isCountDown);
-//        GUIsetImgButton( APP_GUI_TRT_SCR_CLEANUP_BUTTON_CLEAN_WIDGETS[HPindex], APP_GUI_TRT_SCR_CLEANUP_BUTTON_CLEAN_IMAGES[isCountDown], 0);
+        //Boton CLEAN
+        wdgWpr.GUIsetWidgetEnable( APP_GUI_TRT_SCR_CLEANUP_BUTTON_CLEAN_WIDGETS[HPindex], show && isCountDown);
 
-//#ifdef APP_SW_VER_NEW_CLEANUP_MODE
-//        //Boton CANCEL
-//        GUIsetWidgetVisibility( APP_GUI_TRT_SCR_CLEANUP_BURTTON_CANCEL_WIDGETS[HPindex], show);
-//        GUIsetWidgetEnable( APP_GUI_TRT_SCR_CLEANUP_BURTTON_CANCEL_WIDGETS[HPindex], (show && HPcryoCleanUpCancelAllowed(APP_GUI_SLOT_DISTRIBUTION[HPindex])));
+#ifdef APP_SW_VER_NEW_CLEANUP_MODE
+        //Boton CANCEL
+        wdgWpr.GUIsetWidgetEnable( APP_GUI_TRT_SCR_CLEANUP_BURTTON_CANCEL_WIDGETS[HPindex], (show && HPcryoCleanUpCancelAllowed(APP_GUI_SLOT_DISTRIBUTION[HPindex])));
 		
-//        //Visor numerico de cancelaciones
-//        GUIsetWidgetVisibility( APP_GUI_TRT_SCR_CLEANUP_NUMVWR_CANCELLED_TIMES_WIDGET[HPindex], show);
-//        GUIsetWidgetEnable( APP_GUI_TRT_SCR_CLEANUP_NUMVWR_CANCELLED_TIMES_WIDGET[HPindex], show);
-//        GUIsetNumViewerNum(APP_GUI_TRT_SCR_CLEANUP_NUMVWR_CANCELLED_TIMES_WIDGET[HPindex],
-//                            (HPcryoCleanUpNumberOfCancellations(APP_GUI_SLOT_DISTRIBUTION[HPindex]) + (HP_CRYO_CLEAN_UP_MAX_TIMES_CANCEL/10)), 1);
-//        /* Para representar el número de cancelaciones referenciado a un total (3-5), se sustituye el caracter del punto por la barra, y se calcula para obtener de decimal
-//         * el número máximo de cancelaciones (3.5) */
-//#else
-//        //Boton CANCEL
-//        GUIsetWidgetVisibility( APP_GUI_TRT_SCR_CLEANUP_BURTTON_CANCEL_WIDGETS[HPindex], 0);
-//        GUIsetWidgetEnable( APP_GUI_TRT_SCR_CLEANUP_BURTTON_CANCEL_WIDGETS[HPindex], 0);
+        //Visor numerico de cancelaciones
+        wdgWpr.GUIsetNumViewerNum(APP_GUI_TRT_SCR_CLEANUP_NUMVWR_CANCELLED_TIMES_WIDGET[HPindex],
+                            (HPcryoCleanUpNumberOfCancellations((cPRFslot)(APP_GUI_SLOT_DISTRIBUTION[HPindex])) + (HP_CRYO_CLEAN_UP_MAX_TIMES_CANCEL/10)), 1);
+        /* Para representar el número de cancelaciones referenciado a un total (3-5), se sustituye el caracter del punto por la barra, y se calcula para obtener de decimal
+         * el número máximo de cancelaciones (3.5) */
+#else
+        //Boton CANCEL
+        GUIsetWidgetVisibility( APP_GUI_TRT_SCR_CLEANUP_BURTTON_CANCEL_WIDGETS[HPindex], 0);
+        GUIsetWidgetEnable( APP_GUI_TRT_SCR_CLEANUP_BURTTON_CANCEL_WIDGETS[HPindex], 0);
 		
-//        //Visor numerico de cancelaciones
-//        GUIsetWidgetVisibility( APP_GUI_TRT_SCR_CLEANUP_NUMVWR_CANCELLED_TIMES_WIDGET[HPindex], 0);
-//        GUIsetWidgetEnable( APP_GUI_TRT_SCR_CLEANUP_NUMVWR_CANCELLED_TIMES_WIDGET[HPindex], 0);
-//        GUIsetNumViewerNum(APP_GUI_TRT_SCR_CLEANUP_NUMVWR_CANCELLED_TIMES_WIDGET[HPindex],
-//                            0.0, 1);
-//#endif
+        //Visor numerico de cancelaciones
+        GUIsetWidgetVisibility( APP_GUI_TRT_SCR_CLEANUP_NUMVWR_CANCELLED_TIMES_WIDGET[HPindex], 0);
+        GUIsetWidgetEnable( APP_GUI_TRT_SCR_CLEANUP_NUMVWR_CANCELLED_TIMES_WIDGET[HPindex], 0);
+        GUIsetNumViewerNum(APP_GUI_TRT_SCR_CLEANUP_NUMVWR_CANCELLED_TIMES_WIDGET[HPindex],
+                            0.0, 1);
+#endif
 
-//    }
-//    else if(AppGUIdata.slot[HPindex].CleanUPhdlr.HP_clean_init_or_end == HP_CRYO_CLEAN_UP_INIT_OF_TRT)
-//    {
-//        //Imagen
-//        GUIsetWidgetVisibility( APP_GUI_TRT_SCR_CLEANUP_IMAGES_WIDGETS[HPindex], show);
-//        GUIsetWidgetEnable( APP_GUI_TRT_SCR_CLEANUP_IMAGES_WIDGETS[HPindex], show);
-//        GUIsetImgViewerImage( APP_GUI_TRT_SCR_CLEANUP_IMAGES_WIDGETS[HPindex],
-//                              APP_GUI_TRT_SCR_CLEANUP_STATUS_IMAGES[AppGUIdata.slot[HPindex].CleanUPhdlr.status]);
-//    }
+    }
+    else if(AppGUIdata.slot[HPindex].CleanUPhdlr.HP_clean_init_or_end == HP_CRYO_CLEAN_UP_INIT_OF_TRT)
+    {
+        //Imagen
+        wdgWpr.GUIsetImgViewerImage( APP_GUI_TRT_SCR_CLEANUP_IMAGES_WIDGETS[HPindex],
+                              APP_GUI_TRT_SCR_CLEANUP_STATUS_IMAGES[AppGUIdata.slot[HPindex].CleanUPhdlr.status]);
+    }
 }
 
 uint8 AppGUIisTrtRunning( uint8 HPindex, cHPcryoTreatmentStatus *status)

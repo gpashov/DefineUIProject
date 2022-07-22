@@ -183,57 +183,57 @@ const uint32 APP_GUI_TRT_SCR_HP_ERR_MSG_IMAGES[Err_msg_max] =
 //		imgPopUpCleanBckGndHP1, imgPopUpCleanBckGndHP2, imgPopUpCleanBckGndHP3, imgPopUpCleanBckGndHP4
 //};
 
-//const uint32 APP_GUI_TRT_SCR_CLEANUP_IMAGES_WIDGETS[APP_GUI_MAXNUM_HP] =
-//{
-//		imgPopUpCleanHP1, imgPopUpCleanHP2, imgPopUpCleanHP3, imgPopUpCleanHP4
-//};
+const uint32 APP_GUI_TRT_SCR_CLEANUP_IMAGES_WIDGETS[APP_GUI_MAXNUM_HP] =
+{
+        ImgPopUpCleanHP1, ImgPopUpCleanHP2, ImgPopUpCleanHP3, ImgPopUpCleanHP4
+};
 
-//const uint32 APP_GUI_TRT_SCR_CLEANUP_NUM_VIEWER_WIDGETS[APP_GUI_MAXNUM_HP] =
-//{
-//		NumVwrPopUpCleanHP1, NumVwrPopUpCleanHP2, NumVwrPopUpCleanHP3, NumVwrPopUpCleanHP4
-//};
+const uint32 APP_GUI_TRT_SCR_CLEANUP_NUM_VIEWER_WIDGETS[APP_GUI_MAXNUM_HP] =
+{
+        NumVwrPopUpCleanHP1, NumVwrPopUpCleanHP2, NumVwrPopUpCleanHP3, NumVwrPopUpCleanHP4
+};
 
-//const uint32 APP_GUI_TRT_SCR_CLEANUP_BUTTON_YES_WIDGETS[APP_GUI_MAXNUM_HP] =
-//{
-//		butPopUpCleanYESHP1, butPopUpCleanYESHP2, butPopUpCleanYESHP3, butPopUpCleanYESHP4
-//};
+const uint32 APP_GUI_TRT_SCR_CLEANUP_BUTTON_YES_WIDGETS[APP_GUI_MAXNUM_HP] =
+{
+        ButPopUpCleanYESHP1, ButPopUpCleanYESHP2, ButPopUpCleanYESHP3, ButPopUpCleanYESHP4
+};
 
-//const uint32 APP_GUI_TRT_SCR_CLEANUP_BUTTON_NO_WIDGETS[APP_GUI_MAXNUM_HP] =
-//{
-//		butPopUpCleanNOHP1, butPopUpCleanNOHP2, butPopUpCleanNOHP3, butPopUpCleanNOHP4
-//};
+const uint32 APP_GUI_TRT_SCR_CLEANUP_BUTTON_NO_WIDGETS[APP_GUI_MAXNUM_HP] =
+{
+        ButPopUpCleanNOHP1, ButPopUpCleanNOHP2, ButPopUpCleanNOHP3, ButPopUpCleanNOHP4
+};
 
-//const uint32 APP_GUI_TRT_SCR_CLEANUP_BUTTON_CLEAN_WIDGETS[APP_GUI_MAXNUM_HP] =
-//{
-//		butPopUpCleanHP1, butPopUpCleanHP2, butPopUpCleanHP3, butPopUpCleanHP4
-//};
+const uint32 APP_GUI_TRT_SCR_CLEANUP_BUTTON_CLEAN_WIDGETS[APP_GUI_MAXNUM_HP] =
+{
+        ButPopUpCleanHP1, ButPopUpCleanHP2, ButPopUpCleanHP3, ButPopUpCleanHP4
+};
 
-//const uint32 APP_GUI_TRT_SCR_CLEANUP_BURTTON_CANCEL_WIDGETS [APP_GUI_MAXNUM_HP] =
-//{
-//		butPopUpCleanCancelHP1, butPopUpCleanCancelHP2, butPopUpCleanCancelHP3, butPopUpCleanCancelHP4
-//};
+const uint32 APP_GUI_TRT_SCR_CLEANUP_BURTTON_CANCEL_WIDGETS [APP_GUI_MAXNUM_HP] =
+{
+        ButPopUpCleanCancelHP1, ButPopUpCleanCancelHP2, ButPopUpCleanCancelHP3, ButPopUpCleanCancelHP4
+};
 
-//const uint32 APP_GUI_TRT_SCR_CLEANUP_NUMVWR_CANCELLED_TIMES_WIDGET[APP_GUI_MAXNUM_HP] =
-//{
-//		NumVwrPopUpCleanNumCancelHP1, NumVwrPopUpCleanNumCancelHP2, NumVwrPopUpCleanNumCancelHP3, NumVwrPopUpCleanNumCancelHP4
-//};
+const uint32 APP_GUI_TRT_SCR_CLEANUP_NUMVWR_CANCELLED_TIMES_WIDGET[APP_GUI_MAXNUM_HP] =
+{
+        NumVwrPopUpCleanNumCancelHP1, NumVwrPopUpCleanNumCancelHP2, NumVwrPopUpCleanNumCancelHP3, NumVwrPopUpCleanNumCancelHP4
+};
 
-//const uint32 APP_GUI_TRT_SCR_CLEANUP_STATUS_IMAGES[APP_GUI_CLEAN_UP_N_STATUS] =
-//{
-//		c434_HPalarmaLimpiezacolocar1, c433_HPalarmaLimpiezacolocar0, c432_HPalarmaLimpieza1, c431_HPalarmaLimpieza0
-//};
+const uint32 APP_GUI_TRT_SCR_CLEANUP_STATUS_IMAGES[APP_GUI_CLEAN_UP_N_STATUS] =
+{
+        C434_HPalarmaLimpiezacolocar1, C433_HPalarmaLimpiezacolocar0, C432_HPalarmaLimpieza1, C431_HPalarmaLimpieza0
+};
 
 //const uint32 APP_GUI_TRT_SCR_CLEANUP_BUTTON_YES_IMAGES[APP_GUI_MAX_ON_OFF] =
 //{
-//		c453_MenuAlarmaOK_MarcaAgua, c453_MenuAlarmaOK_rls,
+//        C453_MenuAlarmaOK_MarcaAgua, C453_MenuAlarmaOK_rls,
 //};
 //const uint32 APP_GUI_TRT_SCR_CLEANUP_BUTTON_NO_IMAGES[APP_GUI_MAX_ON_OFF] =
 //{
-//		c455_MenuAlarmaNO_MarcaAgua, c455_MenuAlarmaNO_rls,
+//        C455_MenuAlarmaNO_MarcaAgua, C455_MenuAlarmaNO_rls,
 //};
 //const uint32 APP_GUI_TRT_SCR_CLEANUP_BUTTON_CLEAN_IMAGES[APP_GUI_MAX_ON_OFF] =
 //{
-//		c458_MenuLimpiezaClean_MarcaAgua, c456_MenuLimpiezaClean_Rls
+//        C458_MenuLimpiezaClean_MarcaAgua, C456_MenuLimpiezaClean_Rls
 //};
 
 /* Vector con los widgets para representar los puntos "DOTS" de zona seleccionable */

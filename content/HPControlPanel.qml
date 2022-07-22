@@ -118,29 +118,29 @@ Item {
 
     HP1ImageButton {
         id: imageButtonHp1
-        x: 151
-        y: 194
+        x: 150
+        y: 193
         visible: false
     }
 
     HP2ImageButton {
         id: imageButtonHp2
-        x: imageButtonHp1.x
+        x: 5
         y: imageButtonHp1.y
         visible: false
     }
 
     HP3ImageButton {
         id: imageButtonHp3
-        x: imageButtonHp1.x
-        y: imageButtonHp1.y
+        x: 152
+        y: 13
         visible: false
     }
 
     HP4ImageButton {
         id: imageButtonHp4
-        x: imageButtonHp1.x
-        y: imageButtonHp1.y
+        x: 6
+        y: 11
         visible: false
     }
 
@@ -239,8 +239,6 @@ Item {
 
             PropertyChanges {
                 target: imageButtonHp1
-                x: 150
-                y: 193
                 visible: true
             }
 
@@ -277,12 +275,6 @@ Item {
             }
 
             PropertyChanges {
-                target: imageButtonHp1
-                x: 4
-                y: 194
-            }
-
-            PropertyChanges {
                 target: timerButton
                 x: 70
             }
@@ -313,7 +305,6 @@ Item {
 
             PropertyChanges {
                 target: imageButtonHp2
-                x: 5
                 visible: true
             }
 
@@ -382,11 +373,6 @@ Item {
             }
 
             PropertyChanges {
-                target: imageButtonHp1
-                y: 11
-            }
-
-            PropertyChanges {
                 target: hpResuctionCount
                 y: 270
             }
@@ -400,7 +386,6 @@ Item {
 
             PropertyChanges {
                 target: imageButtonHp3
-                x: 152
                 visible: true
             }
 
@@ -472,12 +457,6 @@ Item {
             }
 
             PropertyChanges {
-                target: imageButtonHp1
-                x: 4
-                y: 11
-            }
-
-            PropertyChanges {
                 target: hpResuctionCount
                 x: 57
                 y: 270
@@ -492,7 +471,6 @@ Item {
 
             PropertyChanges {
                 target: imageButtonHp4
-                x: 6
                 visible: true
             }
 

@@ -1,6 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import DefineUIProject 1.0
+import define.enums 1.0
 
 Item {
     id: item1
@@ -90,7 +91,7 @@ Item {
         y: 228
         imageSourceReleased: "images/c521_LimpiezamanipuloHP1_Rls.png"
         imageSourcePressed: "images/c522LimpiezamanipuloHP1_Press.png"
-        button.onReleased: cbkWpr.butCleanUpHP(APP_GUI_HP1_ID)
+        button.onReleased: cbkWpr.butCleanUpHP(AppEnumsNs.APP_GUI_HP1_ID)
     }
 
     TwoStateButton {
@@ -99,7 +100,7 @@ Item {
         anchors.top: cleanUpHP1Button.top
         imageSourceReleased: "images/c524_LimpiezamanipuloHP2_Rls.png"
         imageSourcePressed: "images/c525_LimpiezamanipuloHP2_Press.png"
-        button.onReleased: cbkWpr.butCleanUpHP(APP_GUI_HP2_ID)
+        button.onReleased: cbkWpr.butCleanUpHP(AppEnumsNs.APP_GUI_HP2_ID)
     }
 
     TwoStateButton {
@@ -108,7 +109,7 @@ Item {
         anchors.left: cleanUpHP1Button.left
         imageSourceReleased: "images/c518_LimpiezamanipuloHP3_Rls.png"
         imageSourcePressed: "images/c520_LimpiezamanipuloHP3_Press.png"
-        button.onReleased: cbkWpr.butCleanUpHP(APP_GUI_HP3_ID)
+        button.onReleased: cbkWpr.butCleanUpHP(AppEnumsNs.APP_GUI_HP3_ID)
     }
 
     TwoStateButton {
@@ -117,7 +118,7 @@ Item {
         anchors.top: cleanUpHP3Button.top
         imageSourceReleased: "images/c527_LimpiezamanipuloHP4_Rls.png"
         imageSourcePressed: "images/c528_LimpiezamanipuloHP4_Press.png"
-        button.onReleased: cbkWpr.butCleanUpHP(APP_GUI_HP4_ID)
+        button.onReleased: cbkWpr.butCleanUpHP(AppEnumsNs.APP_GUI_HP4_ID)
     }
 
     TwoStateButton {

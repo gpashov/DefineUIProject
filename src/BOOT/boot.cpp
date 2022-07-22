@@ -1516,7 +1516,7 @@ Boot_SerialFlashConfig_t BOOT_SaveConfigParamSerialFlash (uint8 *Buff)
 	uint8 size;
 	
 	/* Inicialización */
-	status_return = BOOT_SerialFlash_Running;
+    status_return = BOOT_SerialFlash_EscrituraCorrecta;//BOOT_SerialFlash_Running;
 	
 //	switch(Motor)
 //	{
