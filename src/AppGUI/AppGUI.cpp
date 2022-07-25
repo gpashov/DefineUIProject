@@ -14,6 +14,7 @@
 #include "../AppLOG/AppLOG.h"
 #include "../GPRS/AppGPRS.h"
 #include "RTC/RTC.h"
+#include "Cpu.h"
 
 /* Constantes */
  typedef enum
@@ -1877,130 +1878,127 @@ void AppGUIcfgScrInit( void)
 }
 void AppGUIcfgScrUpdate( void)
 {
-//    uint8 i;
-//    stWidget *popUp;
+    uint8 i;
 		
-//    AppGUIwarningNotification();
-//    AppGUIupdateWarningFlags();
+    AppGUIwarningNotification();
+    AppGUIupdateWarningFlags();
 	
-//    /* Actualizamos el popUp de Avisos según esté activado o no*/
-//    popUp = GUIgetWidget( APP_GUI_AVISOS_POPUP_WIDGET_SCREENS[AppGUIdata.screen]);
-//    AppGUIhandleWarningPopUp( popUp->enable != 0);
+    /* Actualizamos el popUp de Avisos según esté activado o no*/
+    AppGUIhandleWarningPopUp( AppGUIIsPopupDisplayed((cAppGUIwidgetIDlist)APP_GUI_AVISOS_POPUP_WIDGET_SCREENS[AppGUIdata.screen]) != 0);
 	
-//    if(AppGUIdata.CfgHandler.BOOT_rqst)
-//    {
+    if(AppGUIdata.CfgHandler.BOOT_rqst)
+    {
 //        for (i=0;i<APP_GUI_MAIN_MENU_WID_WHEN_SHOW_NUM;i++){		GUIsetWidgetEnable(APP_GUI_MAIN_MENU_WID_WHEN_SHOW[APP_GUI_CONFIGURATION_SCREEN][i],0); }
-//        GUIsetWidgetEnable(butCfgScrShowMainMenu,0);
-//        GUIsetWidgetEnable(butCfgScrHideMainMenu,0);
-//        GUIsetWidgetEnable(butCfgActualizarSoftware,0);
-//        GUIsetWidgetEnable(butCfgRecargaCoolant,0);
-//        GUIsetWidgetEnable(butCfgCleanUpHP1,0);
-//        GUIsetWidgetEnable(butCfgCleanUpHP2,0);
-//        GUIsetWidgetEnable(butCfgCleanUpHP3,0);
-//        GUIsetWidgetEnable(butCfgCleanUpHP4,0);
-//        GUIsetWidgetEnable(butCfgCleanUpRoundHP,0);
+//        GUIsetWidgetEnable(ButCfgScrShowMainMenu,0);
+//        GUIsetWidgetEnable(ButCfgScrHideMainMenu,0);
+//        GUIsetWidgetEnable(ButCfgActualizarSoftware,0);
+//        GUIsetWidgetEnable(ButCfgRecargaCoolant,0);
+//        GUIsetWidgetEnable(ButCfgCleanUpHP1,0);
+//        GUIsetWidgetEnable(ButCfgCleanUpHP2,0);
+//        GUIsetWidgetEnable(ButCfgCleanUpHP3,0);
+//        GUIsetWidgetEnable(ButCfgCleanUpHP4,0);
+//        GUIsetWidgetEnable(ButCfgCleanUpRoundHP,0);
 		
-////		GUIsetWidgetVisibility (imgSoftwareProgressionUpdateBar, 1);
-////
-////		if (TICKS_DiffTicks(AppGUIdata.CfgHandler.Boot_animation_tout) > 2000)
-////		{
-////			GUIsetImgViewerImage (imgSoftwareProgressionUpdateBar, APP_GUI_CFG_SCR_LOADING_NEW_FW_ANIMATION[AppGUIdata.CfgHandler.BootAnimationImg]);
-////
-////			AppGUIdata.CfgHandler.BootAnimationImg++;
-////			if(AppGUIdata.CfgHandler.BootAnimationImg > App_GUI_CfgScr_FW_loading_100)		AppGUIdata.CfgHandler.BootAnimationImg = App_GUI_CfgScr_FW_loading_0;
-////			AppGUIdata.CfgHandler.Boot_animation_tout = TICKS_GetTicks();
-////		}
+//		GUIsetWidgetVisibility (imgSoftwareProgressionUpdateBar, 1);
+//
+//		if (TICKS_DiffTicks(AppGUIdata.CfgHandler.Boot_animation_tout) > 2000)
+//		{
+//			GUIsetImgViewerImage (imgSoftwareProgressionUpdateBar, APP_GUI_CFG_SCR_LOADING_NEW_FW_ANIMATION[AppGUIdata.CfgHandler.BootAnimationImg]);
+//
+//			AppGUIdata.CfgHandler.BootAnimationImg++;
+//			if(AppGUIdata.CfgHandler.BootAnimationImg > App_GUI_CfgScr_FW_loading_100)		AppGUIdata.CfgHandler.BootAnimationImg = App_GUI_CfgScr_FW_loading_0;
+//			AppGUIdata.CfgHandler.Boot_animation_tout = TICKS_GetTicks();
+//		}
 		
-//        switch(BOOT_Motor())
-//        {
-//            case BootIDLE:
-//            case BootERROR:
-//            case NOTFOUNDFILE:
-//            case BootSUCCESS:			Cpu_SystemReset();	break;
-//            case BootRUNNING: 			break;
-//            case BootCheckSectorNand:	break;
-////				AppGUIdata.CfgHandler.BOOT_rqst = 0;
-////				if(AppGUIdata.mainMenuHdlr.isUp)
-////				{
-////					for (i=0;i<APP_GUI_MAIN_MENU_WID_WHEN_SHOW_NUM;i++){		GUIsetWidgetEnable(APP_GUI_MAIN_MENU_WID_WHEN_SHOW[APP_GUI_CONFIGURATION_SCREEN][i],1); }
-////					GUIsetWidgetEnable(butCfgScrHideMainMenu,1);
-////				}
-////				else {	GUIsetWidgetEnable(butCfgScrShowMainMenu,1);	}
-////				GUIsetWidgetEnable(butCfgActualizarSoftware,1);
-////				break;
-//            default: break;
-//        }
-//    }
-//    else
-//    {
-//        GUIsetWidgetVisibility (imgSoftwareProgressionUpdateBar, 0);
-//    }
+        switch(BOOT_Motor())
+        {
+            case BootIDLE:
+            case BootERROR:
+            case NOTFOUNDFILE:
+            case BootSUCCESS:			Cpu_SystemReset();	break;
+            case BootRUNNING: 			break;
+            case BootCheckSectorNand:	break;
+//				AppGUIdata.CfgHandler.BOOT_rqst = 0;
+//				if(AppGUIdata.mainMenuHdlr.isUp)
+//				{
+//					for (i=0;i<APP_GUI_MAIN_MENU_WID_WHEN_SHOW_NUM;i++){		GUIsetWidgetEnable(APP_GUI_MAIN_MENU_WID_WHEN_SHOW[APP_GUI_CONFIGURATION_SCREEN][i],1); }
+//					GUIsetWidgetEnable(butCfgScrHideMainMenu,1);
+//				}
+//				else {	GUIsetWidgetEnable(butCfgScrShowMainMenu,1);	}
+//				GUIsetWidgetEnable(butCfgActualizarSoftware,1);
+//				break;
+            default: break;
+        }
+    }
+    else
+    {
+        // It looks like this image is not used at all. So no implementation in the QML was done.
+//        GUIsetWidgetVisibility (ImgSoftwareProgressionUpdateBar, 0);
+    }
 	
-//    if(AppGUIdata.CfgHandler.FillingWater_flag == 1)
-//    {
-//        /* Abrir electrovalvula */
-//        /*if (!EXP_UCgetLevelHighWater()){*/ EXP_UChandleVentEV( 1);/*}*/
+    if(AppGUIdata.CfgHandler.FillingWater_flag == 1)
+    {
+        /* Abrir electrovalvula */
+        /*if (!EXP_UCgetLevelHighWater()){*/ EXP_UChandleVentEV( 1);/*}*/
 		
-//        /* Pita cuando se ha llegado a detectar que se ha llenado el deposito hasta arriba */
-//        if (EXP_UCgetLevelHighWater())
-//        {
-//            BUZZ_Configure(1, 100, PATRO_SO_FINAL_TRT);
-//            //AppGUIdata.CalcHandler.FillingWater_flag = 0;
+        /* Pita cuando se ha llegado a detectar que se ha llenado el deposito hasta arriba */
+        if (EXP_UCgetLevelHighWater())
+        {
+            BUZZ_Configure(1, 100, PATRO_SO_FINAL_TRT);
+            //AppGUIdata.CalcHandler.FillingWater_flag = 0;
 			
-//            /* Cerrar electrovalvula */
-//            /*if( EXP_UChandleVentEV( 0) == SUCCESS){ AppGUIdata.CalcHandler.FillingWater_flag = 0;}*/
-//        }
-//    }
+            /* Cerrar electrovalvula */
+            /*if( EXP_UChandleVentEV( 0) == SUCCESS){ AppGUIdata.CalcHandler.FillingWater_flag = 0;}*/
+        }
+    }
 
-//    /* Ajustar el estado del interruptor al valor registrado en memoria */
-//    //GUIsetSwitchStatus( SwCfgResuctionViewer, EXP_UCresuctionsViewer());
+    /* Ajustar el estado del interruptor al valor registrado en memoria */
+    //GUIsetSwitchStatus( SwCfgResuctionViewer, EXP_UCresuctionsViewer());
 
 	
-//    /*Incluir la gestión de la limpieza para los distintos aplicadores*/
+    /*Incluir la gestión de la limpieza para los distintos aplicadores*/
 	
-//    /*Incluir la activación/desactivación de la limpieza automática*/
+    /*Incluir la activación/desactivación de la limpieza automática*/
 	
 }
 
 void AppGUIdataScrInit( void)
 {
-//    /* Inicializamos las variables de control */
-//    AppGUIclearData();
+    /* Inicializamos las variables de control */
+    AppGUIclearData();
 	
-//    /* Asignamos la pantalla actual */
-//    AppGUIdata.screen = APP_GUI_LANGUAGES_SCREEN;
+    /* Asignamos la pantalla actual */
+    AppGUIdata.screen = APP_GUI_LANGUAGES_SCREEN;
 	
-//    AppGUIhandleWarningPopUp( 0);
-//    AppGUIwarningNotification();
+    AppGUIhandleWarningPopUp( 0);
+    AppGUIwarningNotification();
 	
-//    /* Ponemos a ON el idioma que esté seleccionado y deshabilitamos el widget */
-////	if(EXP_UC_get_Language() != App_GUI_Sin_idioma)
-////	{
-////		GUIsetSwitchStatus((EXP_UC_get_Language() + APP_GUI_LANG_SW_WIDGET_LANG_LIST[0]), 1);
-////		GUIsetWidgetEnable((EXP_UC_get_Language() + APP_GUI_LANG_SW_WIDGET_LANG_LIST[0]), 0);
-////	}
+    /* Ponemos a ON el idioma que esté seleccionado y deshabilitamos el widget */
+//	if(EXP_UC_get_Language() != App_GUI_Sin_idioma)
+//	{
+//		GUIsetSwitchStatus((EXP_UC_get_Language() + APP_GUI_LANG_SW_WIDGET_LANG_LIST[0]), 1);
+//		GUIsetWidgetEnable((EXP_UC_get_Language() + APP_GUI_LANG_SW_WIDGET_LANG_LIST[0]), 0);
+//	}
 	
-//    /* Inicializamos el menu principal a oculto */
-//    AppGUIhandleMainMenu( 0, AppGUIdata.screen);
+    /* Inicializamos el menu principal a oculto */
+    AppGUIhandleMainMenu( 0 );
 }
 void AppGUIdataScrUpdate( void)
 {
-////	uint8 i;		//Variable auxiliar
-//    stWidget *popUp;
+//	uint8 i;		//Variable auxiliar
 	
-//    AppGUIwarningNotification();
-//    AppGUIupdateWarningFlags();
+    AppGUIwarningNotification();
+    AppGUIupdateWarningFlags();
 	
-//    /* Actualizamos el popUp de Avisos según esté activado o no*/
-//    popUp = GUIgetWidget( APP_GUI_AVISOS_POPUP_WIDGET_SCREENS[AppGUIdata.screen]);
-//    AppGUIhandleWarningPopUp( popUp->enable != 0);
+    /* Actualizamos el popUp de Avisos según esté activado o no*/
+    AppGUIhandleWarningPopUp( AppGUIIsPopupDisplayed((cAppGUIwidgetIDlist)APP_GUI_AVISOS_POPUP_WIDGET_SCREENS[AppGUIdata.screen]) != 0 );
 	
-//    /* Todos los demas switches los pasamos a OFF y pasan a habilitados*/
-////	for(i = 0; i < App_GUI_Sin_idioma; i++)
-////	{
-////		GUIsetSwitchStatus((i+APP_GUI_LANG_SW_WIDGET_LANG_LIST[0]), (EXP_UC_get_Language() == i));
-////		GUIsetWidgetEnable((i+APP_GUI_LANG_SW_WIDGET_LANG_LIST[0]), (EXP_UC_get_Language() != i));
-////	}
+    /* Todos los demas switches los pasamos a OFF y pasan a habilitados*/
+//	for(i = 0; i < App_GUI_Sin_idioma; i++)
+//	{
+//		GUIsetSwitchStatus((i+APP_GUI_LANG_SW_WIDGET_LANG_LIST[0]), (EXP_UC_get_Language() == i));
+//		GUIsetWidgetEnable((i+APP_GUI_LANG_SW_WIDGET_LANG_LIST[0]), (EXP_UC_get_Language() != i));
+//	}
 }
 
 void AppGUIfat0ScrInit( void)

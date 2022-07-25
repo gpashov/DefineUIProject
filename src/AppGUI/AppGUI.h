@@ -13,7 +13,7 @@
 #include "Perifericos/Perifericos.h"
 #include "AppGuiInterfaceStructure.h"
 //#include "../RTC/RTC.h"
-//#include "../BOOT/boot.h"
+#include "../BOOT/boot.h"
 //#include "../GUI/K70_GUI.h"
 //#include "../GUI/NumberViewer/numV.h"
 

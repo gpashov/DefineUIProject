@@ -41,6 +41,8 @@ qt_add_executable(DefineUIProjectApp
     src/BOOT/boot.cpp
     src/RTC/RTC.h
     src/RTC/RTC.cpp
+    Generated_Code/Cpu.h
+    Generated_Code/Cpu.cpp
 )
 
 qt_add_resources(DefineUIProjectApp "configuration"

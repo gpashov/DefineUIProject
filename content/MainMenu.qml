@@ -6,7 +6,6 @@ Item {
     id: item1
     width: openMenuImage.width
     height: openMenuImage.height
-    //state: "openState"
 
     property alias homeButtonState: homeButton.state
     property alias codesButtonState: codesButton.state
@@ -78,7 +77,6 @@ Item {
         buttonReleasedSource: "images/b026_BotonIdiomasRls.png"
         buttonInactiveSource: "images/b024_BotonIdiomasMarcaAgua.png"
         interactiveArea.onReleased: { /*Languages are not implemented*/ }
-        buttonState: "stateInactive"
     }
 
     MainMenuButtonTemplate
@@ -105,6 +103,8 @@ Item {
         onOnAction: cbkWpr.butWarningOn()
         onOffAction: cbkWpr.butWarningOff()
 
+        // When screen is changed, the warnings popup is hidded.
+        // The warnings switch has to be set to OFF.
         Connections {
             target: wdgWpr
             onScreenChanged: warningsButton.state = "offState"
