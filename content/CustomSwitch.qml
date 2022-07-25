@@ -55,6 +55,14 @@ Item {
             else {
                 parent.state = "onPressedState"
             }
+
+            // Execute switch action by emitting a signal
+            if (parent.state === "offPressedState" ) {
+                onAction()
+            }
+            else {
+                offAction()
+            }
         }
         onReleased: {
             // Change switch state
@@ -63,14 +71,6 @@ Item {
             }
             else {
                 parent.state = "offState"
-            }
-
-            // Execute switch action by emitting a signal
-            if (parent.state === "onState" ) {
-                onAction()
-            }
-            else {
-                offAction()
             }
         }
     }

@@ -8,7 +8,7 @@ WidgetsWrapper::WidgetsWrapper(QObject *parent)
 
 void WidgetsWrapper::changeScreen(EAppGUIscreen screenId)
 {
-    emit changeScreenSignal(screenId);
+    emit screenChanged(screenId);
 }
 
 void WidgetsWrapper::bodyZoom(bool zoomed)

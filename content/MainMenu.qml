@@ -100,10 +100,15 @@ Item {
         y: 63
         offStateImageSource: "images/b030_BotonAvisosRls.png"
         offPressedStateImageSource: "images/b029_BotonAvisosPress.png"
-        onStateImageSource: "images/b030_BotonAvisosRls.png"
-        onPressedStateImageSource: "images/b029_BotonAvisosPress.png"
+        onStateImageSource: "images/b029_BotonAvisosPress.png"
+        onPressedStateImageSource: "images/b030_BotonAvisosRls.png"
         onOnAction: cbkWpr.butWarningOn()
         onOffAction: cbkWpr.butWarningOff()
+
+        Connections {
+            target: wdgWpr
+            onScreenChanged: warningsButton.state = "offState"
+        }
     }
 
     Image {

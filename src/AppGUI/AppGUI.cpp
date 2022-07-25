@@ -1374,36 +1374,12 @@ void AppGUIloadScrInit( void)
 	
     /* Asignamos la pantalla actual */
     AppGUIdata.screen = APP_GUI_LOAD_SCREEN;
-		
-//    /* Inicializamos las variables de la animación a ocultas para poder ejecutarla */
-//    for( i = 0; i < APP_GUI_LOAD_SCR_ANIM_IMG_NUM; i++)
-//    {
-//        GUIsetWidgetVisibility( APP_GUI_LOAD_SCR_ANIM_IMG_LIST[i], APP_GUI_WIDGET_NOT_VISIBLE);
-//    }
     wdgWpr.changeScreen(APP_GUI_LOAD_SCREEN);
 }
 
 void AppGUIloadScrUpdate( void)
 {
     // The logic from this function is implemented in LoadIndicator.qml
-
-//    static uint8 loadScrIndex = 0;
-//    static uint32 animTmr = 0;
-	
-//    /* Comprobamos si ha pasado un ciclo de animacion */
-//    if( TICKS_DiffTicks( animTmr) > APP_GUI_LOAD_SCR_ANIM_TIME)
-//    {
-//        /* Ejecutamos un ciclo de animación */
-//        animTmr = TICKS_GetTicks();
-//        GUIsetWidgetVisibility( APP_GUI_LOAD_SCR_ANIM_IMG_LIST[loadScrIndex], 1);
-		
-//        /* Pasamos al siguiente ciclo para la siguiente vuelta */
-//        loadScrIndex = ( loadScrIndex + 1) % APP_GUI_LOAD_SCR_ANIM_IMG_NUM;
-		
-//        /* Si ya hemos terminado pasamos a la pantalla de inicio y reseteamos el temporizador.
-//         * Hacemos un update para que se vea el ultimo tramo de la barra */
-//        if( loadScrIndex == 0){ AppGUIupdate(); AppGUIchangeScreen( APP_GUI_INIT_SCREEN);}
-//    }
 }
 
 void AppGUIinitScrInit( void)
@@ -1421,17 +1397,15 @@ void AppGUIinitScrInit( void)
 
 void AppGUIinitScrUpdate( void)
 {
-//    stWidget *popUp;
-//    /* Nada que hacer */
-//    //PDTE
-//    //GUIsetNumViewerNum( numVwrSWversion, APP_SW_VERSION, 1);
+    /* Nada que hacer */
+    //PDTE
+    //GUIsetNumViewerNum( numVwrSWversion, APP_SW_VERSION, 1);
 	
-//    AppGUIwarningNotification();
-//    AppGUIupdateWarningFlags();
+    AppGUIwarningNotification();
+    AppGUIupdateWarningFlags();
 	
-//    /* Actualizamos el popUp de Avisos según esté activado o no*/
-//    popUp = GUIgetWidget( APP_GUI_AVISOS_POPUP_WIDGET_SCREENS[AppGUIdata.screen]);
-//    AppGUIhandleWarningPopUp( popUp->enable != 0);
+    /* Actualizamos el popUp de Avisos según esté activado o no*/
+    AppGUIhandleWarningPopUp(AppGUIIsPopupDisplayed((cAppGUIwidgetIDlist)APP_GUI_AVISOS_POPUP_WIDGET_SCREENS[AppGUIdata.screen]) != 0);
 }
 
 
@@ -1821,55 +1795,52 @@ void AppGUIcalcScrInit( void)
 }
 void AppGUIcalcScrUpdate( void)
 {
-//    LDD_RTC_TTime AppGUI_RTC_TIME_and_DATE;
-//    uint32 AppGUI_RTC_time;
-//    uint32 AppGUI_RTC_date;
-//    stWidget *popUp;
+    LDD_RTC_TTime AppGUI_RTC_TIME_and_DATE;
+    uint32 AppGUI_RTC_time;
+    uint32 AppGUI_RTC_date;
 	
-//    AppGUIwarningNotification();
-//    AppGUIupdateWarningFlags();
+    AppGUIwarningNotification();
+    AppGUIupdateWarningFlags();
 	
-//    /* Actualizamos el popUp de Avisos según esté activado o no*/
-//    popUp = GUIgetWidget( APP_GUI_AVISOS_POPUP_WIDGET_SCREENS[AppGUIdata.screen]);
-//    AppGUIhandleWarningPopUp( popUp->enable != 0);
+    /* Actualizamos el popUp de Avisos según esté activado o no*/
+    AppGUIhandleWarningPopUp( AppGUIIsPopupDisplayed((cAppGUIwidgetIDlist)APP_GUI_AVISOS_POPUP_WIDGET_SCREENS[AppGUIdata.screen]) != 0 );
+		
 	
-	
-	
-//    if(AppGUIdata.CalcHandler.RTC_time_flag == 1)		//En caso de haberse introducido el código para la lectura del tiempo del RTD
-//    {
-//        RTC_get_time (&AppGUI_RTC_TIME_and_DATE);		//Se toma el tiempo registrado
+    if(AppGUIdata.CalcHandler.RTC_time_flag == 1)		//En caso de haberse introducido el código para la lectura del tiempo del RTD
+    {
+        RTC_get_time (&AppGUI_RTC_TIME_and_DATE);		//Se toma el tiempo registrado
 		
-//        AppGUI_RTC_time = AppGUI_RTC_TIME_and_DATE.Second;							//Se van concatenando los números del tiempo (segundos, minutos y horas) para su representación
-//        AppGUI_RTC_time = AppGUI_RTC_time + (AppGUI_RTC_TIME_and_DATE.Minute*100);
-//        AppGUI_RTC_time = AppGUI_RTC_time + (AppGUI_RTC_TIME_and_DATE.Hour*10000);
+        AppGUI_RTC_time = AppGUI_RTC_TIME_and_DATE.Second;							//Se van concatenando los números del tiempo (segundos, minutos y horas) para su representación
+        AppGUI_RTC_time = AppGUI_RTC_time + (AppGUI_RTC_TIME_and_DATE.Minute*100);
+        AppGUI_RTC_time = AppGUI_RTC_time + (AppGUI_RTC_TIME_and_DATE.Hour*10000);
 		
-//        GUIsetNumViewerNum( NumVwrPantallaCalc, (float)AppGUI_RTC_time, 0);			//Se representa el tiempo en el visor numerico de la calculadora
-//    }
-//    if(AppGUIdata.CalcHandler.RTC_date_flag == 1)		//En caso de haberse introducido el código para la lectura de la fecha del RTD
-//    {
-//        RTC_get_time (&AppGUI_RTC_TIME_and_DATE);		//Se toma el tiempo registrado
+        wdgWpr.GUIsetNumViewerNum( NumVwrPantallaCalc, (float)AppGUI_RTC_time, 0);			//Se representa el tiempo en el visor numerico de la calculadora
+    }
+    if(AppGUIdata.CalcHandler.RTC_date_flag == 1)		//En caso de haberse introducido el código para la lectura de la fecha del RTD
+    {
+        RTC_get_time (&AppGUI_RTC_TIME_and_DATE);		//Se toma el tiempo registrado
 		
-//        AppGUI_RTC_date = AppGUI_RTC_TIME_and_DATE.Year % 100;						//Se van concatenando los números de la fecha (año, mes y día) para su representación
-//        AppGUI_RTC_date = AppGUI_RTC_date + (AppGUI_RTC_TIME_and_DATE.Month*100);
-//        AppGUI_RTC_date = AppGUI_RTC_date + (AppGUI_RTC_TIME_and_DATE.Day*10000);
+        AppGUI_RTC_date = AppGUI_RTC_TIME_and_DATE.Year % 100;						//Se van concatenando los números de la fecha (año, mes y día) para su representación
+        AppGUI_RTC_date = AppGUI_RTC_date + (AppGUI_RTC_TIME_and_DATE.Month*100);
+        AppGUI_RTC_date = AppGUI_RTC_date + (AppGUI_RTC_TIME_and_DATE.Day*10000);
 		
-//        GUIsetNumViewerNum( NumVwrPantallaCalc, (float)AppGUI_RTC_date, 0);			//Se representa la fecha en el visor numerico de la calculadora
-//    }
-//    if(AppGUIdata.CalcHandler.FillingWater_flag == 1)
-//    {
-//        /* Abrir electrovalvula */
-//        /*if (!EXP_UCgetLevelHighWater()){*/ EXP_UChandleVentEV( 1);/*}*/
+        wdgWpr.GUIsetNumViewerNum( NumVwrPantallaCalc, (float)AppGUI_RTC_date, 0);			//Se representa la fecha en el visor numerico de la calculadora
+    }
+    if(AppGUIdata.CalcHandler.FillingWater_flag == 1)
+    {
+        /* Abrir electrovalvula */
+        /*if (!EXP_UCgetLevelHighWater()){*/ EXP_UChandleVentEV( 1);/*}*/
 		
-//        /* Pita cuando se ha llegado a detectar que se ha llenado el deposito hasta arriba */
-//        if (EXP_UCgetLevelHighWater())
-//        {
-//            BUZZ_Configure(1, 100, PATRO_SO_FINAL_TRT);
-//            //AppGUIdata.CalcHandler.FillingWater_flag = 0;
+        /* Pita cuando se ha llegado a detectar que se ha llenado el deposito hasta arriba */
+        if (EXP_UCgetLevelHighWater())
+        {
+            BUZZ_Configure(1, 100, PATRO_SO_FINAL_TRT);
+            //AppGUIdata.CalcHandler.FillingWater_flag = 0;
 			
-//            /* Cerrar electrovalvula */
-//            /*if( EXP_UChandleVentEV( 0) == SUCCESS){ AppGUIdata.CalcHandler.FillingWater_flag = 0;}*/
-//        }
-//    }
+            /* Cerrar electrovalvula */
+            /*if( EXP_UChandleVentEV( 0) == SUCCESS){ AppGUIdata.CalcHandler.FillingWater_flag = 0;}*/
+        }
+    }
 }
 
 void AppGUIcfgScrInit( void)

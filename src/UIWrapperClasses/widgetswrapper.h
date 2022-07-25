@@ -60,7 +60,7 @@ public:
     void GUIShowCleanUpPopup(uint8 hpIndex, bool isActive);
 
 signals:
-    void changeScreenSignal(AppEnumsNs::EAppGUIscreen screenId);
+    void screenChanged(AppEnumsNs::EAppGUIscreen screenId);
 
     // Widgets visibility signals
 

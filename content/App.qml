@@ -41,7 +41,7 @@ Window {
     // Screens changes
     Connections {
         target: wdgWpr
-        onChangeScreenSignal: (screenId) => mainScreen.state = mainScreen.states[screenId].name
+        onScreenChanged: (screenId) => mainScreen.state = mainScreen.states[screenId].name
     }
 
     DefineScreen {
